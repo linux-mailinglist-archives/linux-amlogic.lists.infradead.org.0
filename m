@@ -2,8 +2,8 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2C4F5B360
-	for <lists+linux-amlogic@lfdr.de>; Sat, 27 Apr 2019 14:53:41 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 96A85B367
+	for <lists+linux-amlogic@lfdr.de>; Sat, 27 Apr 2019 14:53:54 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,59 +11,60 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=IXcjSEB1RIYMEeUKwhZJjwT1UGVtPT6Wc11fLtsgO+4=; b=b7cEpToWTrUX16UAPcZBBQtopt
-	tiX8Om2u8eFc4CVCsvdXwyDrYvlMyLTIb5JfvlsFw3APvSX1UDCknnWGkS7nHR++tZ3JQLANNFBUG
-	jotcFzSxzESkurpVZhbUkHtbL5R69SRFpcs9Hq/+DxNtL+1QYRgr644MKMxtwVcr2n4Tud6xxgan/
-	qf8wL2KmJ6VZ8xzb1xlviGNf8uI0/3yRDJWq9cfSn15dWIxXAFOAO22HSgns2EC4HtOdQEtqinuyP
-	mYlxQF+DwrAZBiuL1wkqUkzyes0rX2P1rOguGEhOrVFGZMCrrO9XNpWuo5cCzsb4ZyvqLSdm44Px8
-	37Ulwj4w==;
+	bh=VEjX6hIByGVl3uLjbtAvveO3c5uSM80WiDbfusJJGTo=; b=GZ8imB0hGw8MO3MfDd9CJyg/Ct
+	7QzAOqsck57245SCdFWGCqUCm6qynx9W3X5s5Hh9Uby4n+db2g42Y8J4TAgJYacFG1+U4CVHvZSAW
+	UwXar9kZ7khSNTc1pHMA1LixWx0B17o6VvRX5IWt/gV+dTyF6jvseOPBkz7MRq8RmItHhj4HGaMC6
+	Cmk49XCBZbtZvVi8FXeXW/lv3CjOjWzq6EcERhMQiHB9GpXNlimLoVISuX2Ys6unuu6aD91VA4WTL
+	cTpgFiPeyRuCrIPeASfTRoSdaBVwsGd0jnGsvuFPr+Rc0ppg2J05fywtYt4Wf1ya7YmQCdL5upYDG
+	k+hNvJoA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hKMpm-0001Pq-UQ; Sat, 27 Apr 2019 12:53:38 +0000
-Received: from mout.kundenserver.de ([212.227.126.187])
+	id 1hKMq0-0001in-64; Sat, 27 Apr 2019 12:53:52 +0000
+Received: from mout.kundenserver.de ([212.227.126.135])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hKMpE-0000fT-Mv
- for linux-amlogic@lists.infradead.org; Sat, 27 Apr 2019 12:53:10 +0000
+ id 1hKMpI-0000jh-Hj
+ for linux-amlogic@lists.infradead.org; Sat, 27 Apr 2019 12:53:15 +0000
 Received: from orion.localdomain ([77.2.90.210]) by mrelayeu.kundenserver.de
  (mreue009 [212.227.15.167]) with ESMTPSA (Nemesis) id
- 1MQ5nE-1h75AP44I4-00M2Ff; Sat, 27 Apr 2019 14:52:50 +0200
+ 1MPooN-1h7uVt3Uzj-00MrCK; Sat, 27 Apr 2019 14:52:51 +0200
 From: "Enrico Weigelt, metux IT consult" <info@metux.net>
 To: linux-kernel@vger.kernel.org
-Subject: [PATCH 19/41] drivers: tty: serial: apbuart: fix code formatting
-Date: Sat, 27 Apr 2019 14:52:00 +0200
-Message-Id: <1556369542-13247-20-git-send-email-info@metux.net>
+Subject: [PATCH 20/41] drivers: tty: serial: cpm_uart: use
+ dev_err()/dev_warn() instead of printk()
+Date: Sat, 27 Apr 2019 14:52:01 +0200
+Message-Id: <1556369542-13247-21-git-send-email-info@metux.net>
 X-Mailer: git-send-email 1.9.1
 In-Reply-To: <1556369542-13247-1-git-send-email-info@metux.net>
 References: <1556369542-13247-1-git-send-email-info@metux.net>
-X-Provags-ID: V03:K1:pjIAjAgne4QqCMX+FIhXRp8twk2qiMY/VorT1FzzAauzfUv0f0K
- SouwmsHqH8JyEbDuRqNFwbEIDs+EyWcnB64N7nh/mWQM9zuPT5456futLRKhnzo2DzzmTAO
- S02Mck6t77pqC6132Z833rEpWkrhCHTZd9aBV6r93jE4Lyyveee4Vx4PENyVvPDGn5fzADC
- T1cnBnEc7a4HKVi45SoRA==
+X-Provags-ID: V03:K1:gPxg0pvaNEeq5x+UwAsDbHdgypnsGOsK9o3j3foMhaID5KFRvEv
+ 8AvtdT3OHQsnwoPSUVUVgaG7uGVOSNulOF2BUp5euWPO4xOffryfhmOQh75bfkqTrattPsp
+ QFI8+vQMDSRQJ10o81AgQsbvofwXHCA01N/KdcAMGoHFdvQFXnI8JYKNCiQeBe0EpQIxX+K
+ rRBN+WvzZqwD0ZWGZ/IRQ==
 X-Spam-Flag: NO
-X-UI-Out-Filterresults: notjunk:1;V03:K0:hEOSQVkrBtY=:E2i1fxkjmB++cF1pgysgSC
- 8hsAb0Aq860XW0owLqBwUm2y5DJXO+V/Is8mFh4c9ru3QfeD9ojJIKExeE/gQMx2UOQEJgGRb
- nvrMAXOkXd1qYP1gKihMwQy9DHsjWbR3wxj+hp709JVyhiYnLw9UAD3t+5PPNn6ETAr98RQP2
- gHqDm/XUrKMU6kMIkWzlIgqfxdvTEA7d7CYJRA9+zsUFW6w+/kxNsRVEd2YH5fKzEWDZTB6mG
- AA1v18dy6/1w/Ta8+c1Z5r88c2mCOFG/kzIKZoFOpF02Re1cfPJiHtMPLpESpqBGkPJuT0pan
- wj5zbHmx+ec2NOcEAFhVUHZLEz20D89Udi/Cyt1T8qV0CmOeHhNQKA82G64fYOI5+TUIzx7QC
- obIBCK9wl1bRvMCTV4E/U6sBvRSiFWt5BcFHib/PhsHSUGo1Qoyf0VIUK6oReuSkCDZLub+8G
- Ob+eIhsXiwLKrxHAPOJ3mKdJEWu46k9EuJVL6xT+/FJe8XJTXXYFVmn8//sRTXHE9xnvp8m1O
- 1hpfUx4oFrpuxlBsYSu4W9shD60EHF2Zw/7FCtDHNOWT3igcd4Kn+PwMo93U88O8Llhwj4qEi
- 0CfcgMV9NBLuRd7LB5vp6/0Y+IfZe9HXOS6bEacBXOvat8PAAolbzxQuW8puvfRpBKG0XLB8X
- ofUclwTQPMphcmiPqlFXZf2nDhQxa57xuFpm3v4alrdRoOJx+GnGdJbV+E65VwyS+7GmnAy5B
- A0stBq2sqAbOn5qtmttutC8+4NSushVi0gD3aA==
+X-UI-Out-Filterresults: notjunk:1;V03:K0:2ju8YRhuhXY=:onNlvZ0aDrqH1/5VH3xxRk
+ 97sCatc+DPnq24Zb7ZJM6qAh6b3iT6iWeaqZSLN5g857Y4q/gZkpStxTSY0y7/0vVZ2W2K8eN
+ hrg8KTsBqdMCfc4qz0COMhhaiMomIx6Ezqf1jP899W3P6VFeOiJceFdEaDUqJ2x0mkdvjcSjR
+ P3IZevKXifgjbgM0+HGLwqyrJOuozz0fGHG6voJYrbtD0tdC2lAYE9WFwuLR1ujJzxSkwStdT
+ lkylIMBo9lhsNzylPGYzyv4UI8ZZMZrpvojOg3lgZ0vpcI+NQUoteI0P+Wz5lfIyPfcI+6QP5
+ bcBDKc9LVTJUAbZrZZUPykDkm6du6zW2r19As2FmM093PScDZCbPR2np4C9780LIVQFScmK7B
+ cS6pvNLxOjZG7VrdBAeBHYqG35dNFeg7Y4G/O2pavGZMM/m9VfYlslnOpQpaOA7biLCwDiZ3g
+ ORABcZsNz/R1affuaIPOyjUXod5AymqWkBo/t+ZeZW+oS7GqagtrFM+tD6HiEmEJQjSZyfhnf
+ bbhVVvk5eNalCXzlFJXa8G2brsHEUR05O/eTzVUCsjKTbU69zjG5Y9jitLl1WIhvZoR1wWDxa
+ R6dA3fagJAV0pXITce+DpVexGE7gqSXQvcl0BHe49TekWK+zRLUg8fQRepiwCRKCXuJeJeQ5m
+ uDJWEO3RV24ra1DasOhJ8L4Y3zxtMI650z5aczoHnbcvIKn7BzWRl4VXH6ecpN1d35iAhdifu
+ qDIdgE2pptfSyvUIDQnzvzrSEC1fksYnQ5U6ig==
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190427_055305_302357_196A1432 
-X-CRM114-Status: GOOD (  10.63  )
+X-CRM114-CacheID: sfid-20190427_055309_121512_17E83449 
+X-CRM114-Status: GOOD (  10.40  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [212.227.126.187 listed in list.dnswl.org]
+ no trust [212.227.126.135 listed in list.dnswl.org]
  -0.2 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [212.227.126.187 listed in wl.mailspike.net]
+ [212.227.126.135 listed in wl.mailspike.net]
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -89,141 +90,59 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Fix checkpatch warnings:
-
-    WARNING: line over 80 characters
-    #9: FILE: drivers/tty/serial/apbuart.c:9:
-    + *  Copyright (C) 2006 Daniel Hellstrom <daniel@gaisler.com>, Aeroflex Gaisler AB
-
-    WARNING: line over 80 characters
-    #11: FILE: drivers/tty/serial/apbuart.c:11:
-    + *  Copyright (C) 2009 Kristoffer Glembo <kristoffer@gaisler.com>, Aeroflex Gaisler AB
-
-    WARNING: line over 80 characters
-    #16: FILE: drivers/tty/serial/apbuart.c:16:
-    +#if defined(CONFIG_SERIAL_GRLIB_GAISLER_APBUART_CONSOLE) && defined(CONFIG_MAGIC_SYSRQ)
-
-    WARNING: labels should not be indented
-    #122: FILE: drivers/tty/serial/apbuart.c:122:
-    +	      ignore_char:
-
-    WARNING: Missing a blank line after declarations
-    #186: FILE: drivers/tty/serial/apbuart.c:186:
-    +	unsigned int status = UART_GET_STATUS(port);
-    +	return status & UART_STATUS_THE ? TIOCSER_TEMT : 0;
-
-    WARNING: Missing a blank line after declarations
-    #322: FILE: drivers/tty/serial/apbuart.c:322:
-    +	int ret = 0;
-    +	if (ser->type != PORT_UNKNOWN && ser->type != PORT_APBUART)
-
-    WARNING: Missing a blank line after declarations
-    #427: FILE: drivers/tty/serial/apbuart.c:427:
-    +	unsigned int status;
-    +	do {
-
-    WARNING: Missing a blank line after declarations
-    #463: FILE: drivers/tty/serial/apbuart.c:463:
-    +		unsigned int quot, status;
-    +		status = UART_GET_STATUS(port);
-
-    WARNING: line over 80 characters
-    #627: FILE: drivers/tty/serial/apbuart.c:627:
-    +		port->membase = ioremap(addr, sizeof(struct grlib_apbuart_regs_map));
-
-    WARNING: line over 80 characters
-    #634: FILE: drivers/tty/serial/apbuart.c:634:
-    +		port->fifosize = apbuart_scan_fifo_size((struct uart_port *) port, line);
+Using dev_err()/dev_warn() instead of printk() for more consistent output.
+(prints device name, etc).
 
 Signed-off-by: Enrico Weigelt <info@metux.net>
 ---
- drivers/tty/serial/apbuart.c | 22 +++++++++++++++-------
- 1 file changed, 15 insertions(+), 7 deletions(-)
+ drivers/tty/serial/cpm_uart/cpm_uart_core.c | 6 +++---
+ drivers/tty/serial/cpm_uart/cpm_uart_cpm2.c | 2 +-
+ 2 files changed, 4 insertions(+), 4 deletions(-)
 
-diff --git a/drivers/tty/serial/apbuart.c b/drivers/tty/serial/apbuart.c
-index 89e19b6..515a562 100644
---- a/drivers/tty/serial/apbuart.c
-+++ b/drivers/tty/serial/apbuart.c
-@@ -6,12 +6,15 @@
-  *
-  *  Copyright (C) 2000 Deep Blue Solutions Ltd.
-  *  Copyright (C) 2003 Konrad Eisele <eiselekd@web.de>
-- *  Copyright (C) 2006 Daniel Hellstrom <daniel@gaisler.com>, Aeroflex Gaisler AB
-+ *  Copyright (C) 2006 Daniel Hellstrom <daniel@gaisler.com>,
-+ *                     Aeroflex Gaisler AB
-  *  Copyright (C) 2008 Gilead Kutnick <kutnickg@zin-tech.com>
-- *  Copyright (C) 2009 Kristoffer Glembo <kristoffer@gaisler.com>, Aeroflex Gaisler AB
-+ *  Copyright (C) 2009 Kristoffer Glembo <kristoffer@gaisler.com>,
-+ *                     Aeroflex Gaisler AB
-  */
+diff --git a/drivers/tty/serial/cpm_uart/cpm_uart_core.c b/drivers/tty/serial/cpm_uart/cpm_uart_core.c
+index b929c7a..374b8bb 100644
+--- a/drivers/tty/serial/cpm_uart/cpm_uart_core.c
++++ b/drivers/tty/serial/cpm_uart/cpm_uart_core.c
+@@ -265,7 +265,7 @@ static void cpm_uart_int_rx(struct uart_port *port)
+ 		 * later, which will be the next rx-interrupt or a timeout
+ 		 */
+ 		if (tty_buffer_request_room(tport, i) < i) {
+-			printk(KERN_WARNING "No room in flip buffer\n");
++			dev_warn(port->dev, "No room in flip buffer\n");
+ 			return;
+ 		}
  
--#if defined(CONFIG_SERIAL_GRLIB_GAISLER_APBUART_CONSOLE) && defined(CONFIG_MAGIC_SYSRQ)
-+#if defined(CONFIG_SERIAL_GRLIB_GAISLER_APBUART_CONSOLE) \
-+	&& defined(CONFIG_MAGIC_SYSRQ)
- #define SUPPORT_SYSRQ
- #endif
+@@ -1155,7 +1155,7 @@ static int cpm_uart_init_port(struct device_node *np,
+ 	if (!pinfo->clk) {
+ 		data = of_get_property(np, "fsl,cpm-brg", &len);
+ 		if (!data || len != 4) {
+-			printk(KERN_ERR "CPM UART %pOFn has no/invalid "
++			dev_err(port->dev, "CPM UART %pOFn has no/invalid "
+ 			                "fsl,cpm-brg property.\n", np);
+ 			return -EINVAL;
+ 		}
+@@ -1164,7 +1164,7 @@ static int cpm_uart_init_port(struct device_node *np,
  
-@@ -116,8 +119,7 @@ static void apbuart_rx_chars(struct uart_port *port)
- 
- 		uart_insert_char(port, rsr, UART_STATUS_OE, ch, flag);
- 
--
--	      ignore_char:
-+ignore_char:
- 		status = UART_GET_STATUS(port);
+ 	data = of_get_property(np, "fsl,cpm-command", &len);
+ 	if (!data || len != 4) {
+-		printk(KERN_ERR "CPM UART %pOFn has no/invalid "
++		dev_err(port->dev, "CPM UART %pOFn has no/invalid "
+ 		                "fsl,cpm-command property.\n", np);
+ 		return -EINVAL;
  	}
+diff --git a/drivers/tty/serial/cpm_uart/cpm_uart_cpm2.c b/drivers/tty/serial/cpm_uart/cpm_uart_cpm2.c
+index 6a1cd03..ef1ae08 100644
+--- a/drivers/tty/serial/cpm_uart/cpm_uart_cpm2.c
++++ b/drivers/tty/serial/cpm_uart/cpm_uart_cpm2.c
+@@ -67,7 +67,7 @@ void __iomem *cpm_uart_map_pram(struct uart_cpm_port *port,
+ 		return pram;
  
-@@ -181,6 +183,7 @@ static irqreturn_t apbuart_int(int irq, void *dev_id)
- static unsigned int apbuart_tx_empty(struct uart_port *port)
- {
- 	unsigned int status = UART_GET_STATUS(port);
-+
- 	return status & UART_STATUS_THE ? TIOCSER_TEMT : 0;
- }
- 
-@@ -317,6 +320,7 @@ static int apbuart_verify_port(struct uart_port *port,
- 			       struct serial_struct *ser)
- {
- 	int ret = 0;
-+
- 	if (ser->type != PORT_UNKNOWN && ser->type != PORT_APBUART)
- 		ret = -EINVAL;
- 	if (ser->irq < 0 || ser->irq >= NR_IRQS)
-@@ -422,6 +426,7 @@ static void apbuart_flush_fifo(struct uart_port *port)
- static void apbuart_console_putchar(struct uart_port *port, int ch)
- {
- 	unsigned int status;
-+
- 	do {
- 		status = UART_GET_STATUS(port);
- 	} while (!UART_TX_READY(status));
-@@ -458,6 +463,7 @@ static void apbuart_console_putchar(struct uart_port *port, int ch)
- 	if (UART_GET_CTRL(port) & (UART_CTRL_RE | UART_CTRL_TE)) {
- 
- 		unsigned int quot, status;
-+
- 		status = UART_GET_STATUS(port);
- 
- 		*parity = 'n';
-@@ -622,14 +628,16 @@ static int __init grlib_apbuart_configure(void)
- 		port = &grlib_apbuart_ports[line];
- 
- 		port->mapbase = addr;
--		port->membase = ioremap(addr, sizeof(struct grlib_apbuart_regs_map));
-+		port->membase = ioremap(addr,
-+			sizeof(struct grlib_apbuart_regs_map));
- 		port->irq = 0;
- 		port->iotype = UPIO_MEM;
- 		port->ops = &grlib_apbuart_ops;
- 		port->flags = UPF_BOOT_AUTOCONF;
- 		port->line = line;
- 		port->uartclk = *freq_hz;
--		port->fifosize = apbuart_scan_fifo_size((struct uart_port *) port, line);
-+		port->fifosize = apbuart_scan_fifo_size(
-+			(struct uart_port *) port, line);
- 		line++;
- 
- 		/* We support maximum UART_NR uarts ... */
+ 	if (len != 2) {
+-		printk(KERN_WARNING "cpm_uart[%d]: device tree references "
++		dev_warn(port->dev, "cpm_uart[%d]: device tree references "
+ 			"SMC pram, using boot loader/wrapper pram mapping. "
+ 			"Please fix your device tree to reference the pram "
+ 			"base register instead.\n",
 -- 
 1.9.1
 
