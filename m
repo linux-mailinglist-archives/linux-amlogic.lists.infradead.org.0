@@ -2,74 +2,75 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2634AB471
-	for <lists+linux-amlogic@lfdr.de>; Sat, 27 Apr 2019 22:09:33 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 663FAB472
+	for <lists+linux-amlogic@lfdr.de>; Sat, 27 Apr 2019 22:09:46 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
 	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=8SQgan+bG0Gjtfq8aZggPa233D/MPYjWRruiwo4Sk78=; b=TIFqF2cahgNEHj
-	lf9jMS9RYxs9UbyfiW/nVDWnvyGxGyZBRgGRnYKicDNUmP3l3gtoVNgKFB6Eo7oUhCF6mG4GIyjl0
-	NtqlL1wCNmreaRKFptUfx9Fe+gcu5Rs+veEnwm24wNXn3hHNH63SIe6PXrzLicX/VnQ1vWHiowz32
-	KO9WpThdc0nRZQWUqLc+V/5BjttqkEdy+EDBJqGWMrZffxXQPkNXPzXbn9gs93LV6RFqufTsj3tyg
-	yZbVghkI+qBQwE8aUHo4J5eD9dUBINgUhBW+Xsoj9KIvjS7Sdn4ZSE9uD87IK00RgNltXYQeXTlSF
-	bpXc8NiF+lOjeBkJvxzw==;
+	List-Owner; bh=bBVxevj4kYbJjIckkUJRrAqDY5bWwz5ixBGgIbAnsug=; b=SkjumZoVlVKKpg
+	p+nm4SvQkKLWErcuBZLakHmp/OK2Fe+3bfmrm6jxCsk0XDf3DIkM9EJDiZUsYy1ziWec/c+h2X/wZ
+	EihaL0Lk5S2nPiXmX8YD4Q0aep96ZhQBgZb++yyrFgj0Ot7jEBH9rcVUkerBUxH1P9DNZSUaSD4aq
+	qLPlZ5LK6ib+ZjocfBt5/ofsWCUuMpsN5zCAM/1C5stqNTOT71C2v1+Dp3gdn6fsKYX1p1PUEOTtv
+	5btmIGRrdb2n4mUguZd28rEpwhlKguYpovriP7woxLV7USmCTZCF0+4x0/XQ9aD1gdI9m0aL4aEYF
+	7LHi/5HMJxv/jXJXUpXw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hKTda-0005jy-9A; Sat, 27 Apr 2019 20:09:30 +0000
-Received: from mail-oi1-x243.google.com ([2607:f8b0:4864:20::243])
+	id 1hKTdo-0005nT-So; Sat, 27 Apr 2019 20:09:44 +0000
+Received: from mail-oi1-x229.google.com ([2607:f8b0:4864:20::229])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hKTdX-0005jb-9R
- for linux-amlogic@lists.infradead.org; Sat, 27 Apr 2019 20:09:28 +0000
-Received: by mail-oi1-x243.google.com with SMTP id k9so2529495oig.9
- for <linux-amlogic@lists.infradead.org>; Sat, 27 Apr 2019 13:09:26 -0700 (PDT)
+ id 1hKTdm-0005n9-7N
+ for linux-amlogic@lists.infradead.org; Sat, 27 Apr 2019 20:09:43 +0000
+Received: by mail-oi1-x229.google.com with SMTP id t70so1160oif.5
+ for <linux-amlogic@lists.infradead.org>; Sat, 27 Apr 2019 13:09:42 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=googlemail.com; s=20161025;
  h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=pHMz3rI79/njeGoNvnnMmMVDwBZ8a5Z9yd2P7n1PACg=;
- b=DvqO45eVQbl8Y73TLqa6O5+0+o3mHgTDKvR2x3Iwr9wLCJ14YwevFy65FiH6HhIF3f
- +5xX+2cWer4C9CZenWMzgHjGR3gDQ4BkcWphcK6xtMJzCcERPhGeMJp9EjnfKtwVfEBI
- UqXtzu+B6psyWnH2+oOXYZmxnm19gStvCs/y0deWVhhB7YC+dqSM2LGr7Nu6rgy0Q3qZ
- +I1la49F6qKZ2HjkK8RYTTauKxdn08/w9WdIAte+ORs9CMwe73H01oKnRcyW0ugW774Z
- rCPZ70c2AtAJtjtcr2wo6WIr5VjcHOVYEAe5Nla9e+OMX6piG5W+bZ4kYN4+A73ma0ym
- 3Flg==
+ :cc; bh=hhsMH/X03raw9aMWA8APU3MELLU8bVy7VgvUJ5xTuQQ=;
+ b=ahByQctc83TUY/CQh/dPlAaavJHHUyzHS85EJUSSaZs/0yKXkeaH+KC0K5EeJlmJlP
+ /GnMqEVO/GvrdLsJ0x1xW461cPFCXN1k6KRSAU2GZJNpFYDZJfn4A4UoLNdbF5acfyar
+ UaymDSi8P6LDrBAnvvqK8GQ/5Vt7kdhyhz+yvRvhdwUSwOOSVhfaafpzeZiCb67mi6j5
+ YvyblL0MKBnXryvzfZe8Wlon1UnfUFgbP/HWh7ejJjiqBl/WPKk1z7K6Deg3fAci+ctN
+ mH1w0W7+V6uQXw/uWu+CicN9AUQSLLCmeoKR9KQzqqmNvagiqkv1Bf2fsPF/v99XoS71
+ f4SQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:mime-version:references:in-reply-to:from:date
  :message-id:subject:to:cc;
- bh=pHMz3rI79/njeGoNvnnMmMVDwBZ8a5Z9yd2P7n1PACg=;
- b=Wq7Zhsh8Iw9HVsC6ApsmGLBeXVE5xV1VYZLKEdlncaRkddk/M3AJJ0sZT231P4sJoH
- poYNT5NMTgTIGbd1XpbQvM9+x+V7e4l/AvswI5uiVjJt05fobWZQJyGfQIkLhsaZghJ2
- 22BAUdPpuxcW8vIv25D1MyJyD7NiQ9g9y59JiLlokFfCH0JSN34Xlarg6NppI3ayEwTR
- GgIMJfhne2KbSl5NR7C+ftiPbNfRBT/ozC12AQwvlYHjs4V+N2KgZDWvx0kUb86jxwg0
- QbftlCSkVGY2ubsSoXLCu14R95oJiZyhfJT9e2lVGFs+IB5JeV3A43HnZjJdA+EkLcoB
- Ow2w==
-X-Gm-Message-State: APjAAAVvIzikZ05JVuUCa5845FMheNR248xnBWb6ygZmG8UVgnqSeK3v
- yHRtAx/SQh4s3yNcm7BeGJ+OEzj4vXIxxShho2A=
-X-Google-Smtp-Source: APXvYqzfmzyNX5EQjlFONRG3rDdocVivj9UxvNPZm/Ddo3brrImV3Mp//aQ2akfeA4VPpyUaP0LWrbT2w5Mp5flc7v4=
-X-Received: by 2002:aca:b905:: with SMTP id j5mr11145937oif.15.1556395765620; 
- Sat, 27 Apr 2019 13:09:25 -0700 (PDT)
+ bh=hhsMH/X03raw9aMWA8APU3MELLU8bVy7VgvUJ5xTuQQ=;
+ b=ZTbZTnMt8ZlQh4BNF9vCeyDBI0SXtIeSKx7gxkTDlWW9NMNIlzShDYqjubR0qHX/tJ
+ BvdXqI0QuHk6/yfIWPW67/wKVkv2FRaygOPmZFzA11iP4zF6U2qTBjbV68nHSLZ9w7J1
+ kX+EdFLs+F/FB3jLf4Q71mdLXSBMQ2aZW3E6Hz7jDR+DkDlEydvxbm4uVaIMhi/O1LFF
+ 1DXnPj5UQokwO3ylU1F5WxuQL62v+IAf6K/U7QnqQmgcDe6GJ9Ud5oHRW+delBRmrned
+ DFh1jYt+uIXXbM0BP5cdi2efacFixgDmgybWHJJfucWh1nEIZGqCKhyOtRgEEjUXlvN8
+ RQxw==
+X-Gm-Message-State: APjAAAVbgBDbVqZNVPFEKwHE+4RfLfAxnzK9B9rsCOejjOMkUD86Spk6
+ exHdU9RI4nb2sdRZyGkvxKkUwif0LlxSnYc4X038OKtl
+X-Google-Smtp-Source: APXvYqyw/N9NTESkuor+2z/IpAyy1XeCCxc+w0NMyAXNuozuD5lok5KS2ZvFbHDoVbRRbeeopt3j5qvzedSocw82urg=
+X-Received: by 2002:aca:5b06:: with SMTP id p6mr10591975oib.129.1556395781412; 
+ Sat, 27 Apr 2019 13:09:41 -0700 (PDT)
 MIME-Version: 1.0
 References: <20190423090235.17244-1-jbrunet@baylibre.com>
- <20190423090235.17244-7-jbrunet@baylibre.com>
-In-Reply-To: <20190423090235.17244-7-jbrunet@baylibre.com>
+ <20190423090235.17244-8-jbrunet@baylibre.com>
+In-Reply-To: <20190423090235.17244-8-jbrunet@baylibre.com>
 From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-Date: Sat, 27 Apr 2019 22:09:14 +0200
-Message-ID: <CAFBinCDJZ2B_1_DdTRN+P9ter7kOgUHegMT-7pVODwKp7mkTKw@mail.gmail.com>
-Subject: Re: [PATCH v2 6/7] mmc: meson-gx: remove Rx phase tuning
+Date: Sat, 27 Apr 2019 22:09:30 +0200
+Message-ID: <CAFBinCB4BC01=ryTPAc77RbKucMRhQNUN-9C++=pM_u=dFYK6w@mail.gmail.com>
+Subject: Re: [PATCH v2 7/7] mmc: meson-gx: add signal resampling tuning
 To: Jerome Brunet <jbrunet@baylibre.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190427_130927_356952_655BB610 
-X-CRM114-Status: GOOD (  10.33  )
+X-CRM114-CacheID: sfid-20190427_130942_359880_D2B3C1C2 
+X-CRM114-Status: UNSURE (   7.18  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:243 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:229 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
@@ -102,14 +103,12 @@ Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
 On Tue, Apr 23, 2019 at 11:03 AM Jerome Brunet <jbrunet@baylibre.com> wrote:
 >
-> This remove all the code related to phase settings. Using the Rx phase
-> for tuning has not been reliable. We had several issues over the past
-> months, on both v2 and v3 mmc chips After discussing the issue matter
-> with Amlogic, They suggested to set a phase shift of 180 between Core and
-> Tx and use signal resampling for the tuning.
+> Use signal resampling tuning for the UHS and HS200 modes.
+> Instead of trying to get the *best* resampling setting with complex
+> window calculation, we just stop on the first working setting.
 >
-> Since we won't be playing with the phase anymore, let's remove all the
-> clock code related to it and set the appropriate value on init.
+> If the tuning setting later proves unstable, we will just continue the
+> tuning where we left it.
 >
 > Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
 [Khadas VIM now shows the HS200 eMMC]
