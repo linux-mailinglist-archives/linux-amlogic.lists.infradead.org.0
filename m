@@ -2,8 +2,8 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D539BB35C
-	for <lists+linux-amlogic@lfdr.de>; Sat, 27 Apr 2019 14:53:29 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8440FB36C
+	for <lists+linux-amlogic@lfdr.de>; Sat, 27 Apr 2019 14:54:02 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,51 +11,50 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=zndgKEgUfRwPBzhIhcJJgctCxoJbWf8YyWUIQ+Haegk=; b=SuzkHRGAsBhxPOGDni1+VY7XV4
-	zUWIk8Nooitvr4GOwArqa4cL22jp4KAdGXrh0zQQJZLcDUtgW6qlqSt88+J2PFn2/LxSL/NhcTPa5
-	INCVQ8NX1JtsDWKkRSWpvzblWY3R/HxYRkMNqef/wgCCNUjCK3jMCiNwjPbeN/UnilRQesePVHlrW
-	DCZ0hpFswAttxlterWDYTZTd08PoKaiGWftibHg8OQ1VvpWYuYtUOogHH8C3V0pmtY+aztbq7oMyM
-	6Bpe9Osr432RtilMH4k+A4YUCc7+iZJhYCit2zhLkIMSz8ctY/6xG7ZjgmVMpv0waJDFjmFXjc4nL
-	rNpuWqLA==;
+	bh=i2xogtxCdVH75NHLqv/rz1y/3NCL7dF+72Tt5ANGa8s=; b=k9AmP4lU37ch+VTmIbZLdjQUoL
+	E0nEaUcYxO54uX9ygMsY3YmR6hmz9WrLtg1u3anIPGcqm7gudIsJeWq/ay0dxJfz1SSyQ/KPFOm3w
+	LvKxCgsiuTnKeanXYUQgK0IqcdYQi/2dWAAdycSnK18OQip5z83mkkIKqLOKqNbSHHb2wgFVuptYV
+	4vScN579bFAa+vcHhsNBOdeVw+TuMnQJN4j/2wSwp3Nz68rAHwiFwFItJs/c4iS1J+Os3xGbS40Pv
+	11SoizqIBf5LErxhF0mFFHzd1C7ePdaovyQtumQyx2e1XWGekjMKhUYtSbo5mvag6brIQY4ufPXM6
+	9KkUMOyQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hKMpa-0001Bp-Vk; Sat, 27 Apr 2019 12:53:27 +0000
+	id 1hKMq8-0001x3-9V; Sat, 27 Apr 2019 12:54:00 +0000
 Received: from mout.kundenserver.de ([212.227.126.187])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hKMpC-0000cv-F9
- for linux-amlogic@lists.infradead.org; Sat, 27 Apr 2019 12:53:08 +0000
+ id 1hKMpO-0000sW-G0
+ for linux-amlogic@lists.infradead.org; Sat, 27 Apr 2019 12:53:21 +0000
 Received: from orion.localdomain ([77.2.90.210]) by mrelayeu.kundenserver.de
  (mreue009 [212.227.15.167]) with ESMTPSA (Nemesis) id
- 1M72wZ-1hQgsG1F7v-008djg; Sat, 27 Apr 2019 14:52:35 +0200
+ 1N49Yn-1gckUf0Xp3-0101lS; Sat, 27 Apr 2019 14:52:36 +0200
 From: "Enrico Weigelt, metux IT consult" <info@metux.net>
 To: linux-kernel@vger.kernel.org
-Subject: [PATCH 02/41] drivers: tty: serial: dz: include <linux/io.h> instead
- of <asm/io.h>
-Date: Sat, 27 Apr 2019 14:51:43 +0200
-Message-Id: <1556369542-13247-3-git-send-email-info@metux.net>
+Subject: [PATCH 03/41] drivers: tty: serial: dz: fix missing parentheses
+Date: Sat, 27 Apr 2019 14:51:44 +0200
+Message-Id: <1556369542-13247-4-git-send-email-info@metux.net>
 X-Mailer: git-send-email 1.9.1
 In-Reply-To: <1556369542-13247-1-git-send-email-info@metux.net>
 References: <1556369542-13247-1-git-send-email-info@metux.net>
-X-Provags-ID: V03:K1:vWpyHvDheL6gbLjo3etBs2JZ/UueJUyOwv5jXuZL9y2wfL1t2Sz
- Q/+Nt5v3237WzwYwrkHtvh8CdRpqwPqpHpcjERpTIKU+EcAYTF+qBG0cw4jXtPhcJu5L1xP
- kkBztdWdJQKAWhxdJmybmuQlVUbgmAr1fvOkc6orv3ghX86g6ax2Ao2WppX1ubS4UHmC3BK
- omfMVJUQwR4EJT11yTj+A==
+X-Provags-ID: V03:K1:DCKi2YoTk5F832OQUdu63uCQyxtOturAok1rJyvr3Cj1aB4PytR
+ 39oykOLn/6maTSaugkdLtAO+JW6mtXKXNyEKmjf/LfUX+UrtldHzEn6VJRT6Ai5Wmv6fPJu
+ zDbdAsnAWjMsVY/Lfxtu7H3H0VD9b6vzG1KkGY93toXvi1amjf/kUGN1jMaJH9MM+TdtJWy
+ 6Qq+l2SfPMMVa3xrX3Dhg==
 X-Spam-Flag: NO
-X-UI-Out-Filterresults: notjunk:1;V03:K0:PWTU6h30wog=:g3KXzB9M32PW8Kl8vCIU73
- qJ8Hw/X5UhMxHr5PXZ5NJLP8zF+n5L1AYhbxdz0HkWq3pRijKJD3ZZgMPMXT5AC0MCjgTwTnG
- BKB6ehulTwMDvn0rk/0UWp57hVY8n65jpID29G2/RtuijyesvETIRsoOmsEDDklXWWrpv6Hvq
- J5ApyjRxjwebOu+2DLtzw/iHyVZjoSBSJ3tfl+uRrcbirei0rvO8pIPPAp9hShgt6wvsRCnWy
- 69Nm4xD9n73QNYwZz1WgLz31zuE/AXQbiEv14NTsptf7xQB3TMb47qEcLeEIXQttLDlssfrUu
- sUnzAbwiXa9qXMynpyfRG2WmHpKy3Sb57NCyp79kJVZNqzTeWy5rJ580LJtiNOnKV5l0NEl4P
- ft43B9g3QEw0dE2RA1G9sPuGJvuILiXEPeqUqYjhTT+UmVrLG83+OrotnH1YPjhkzWg9WZGyl
- ZsMxaVC5zUJY8olqHlPJl3lfAv4fxzGIBE75jKtOJwB61iyMmTGCbLZT9aUnRGj+9CHDKLe70
- r7+eZMXeXJ9eT1W7HDMQibFCPL6QSTKhCVVawhfq7GZkd2tcZx4GWCO7RGRNgouXD8JVSy7qz
- m5Wbs2AH+EWnYtwKwE+ERMHMsz/tgMtlUXwgbizNPnSQPzD9LYY+Bqrq0DeP+AXy3VjT0jaZn
- /zPlxBehxOKrsnCjM3aDW+YERQBO5njRt7YPdL+ImY78ofqqhgs0vMjuBK7/voIREnYQyHmyR
- QiZRIDUO7YShRpDwljxwkZ//0pWuawyNDeyJ3w==
+X-UI-Out-Filterresults: notjunk:1;V03:K0:hCaJcuTMeuA=:EB4ux1IA7Tt2VnO5QHlgjW
+ pkbxMpPw2nta4CmIKC1kcgXZ8R3PVqr7ziHZCtHeUGvHHk9Qk9raYRBGZaF5IqaPVm6CNMnxr
+ 9vty1/D38JGFJJSTwt3NFvurWC70JuBjH/BKAB8yESh6+wLopafjQqQPN8l2KX8SGQjfwv2xO
+ TyzFvmsYNx3rtFuVJ/pJ1vV56+pzzVMgAzd7E0EpyYgb7DGVVlUR2LG1dxWjJ2Hof/It2Rmfz
+ p9izFHquGUwtbxHeqxGGWvM4ijYINTbcCUZVJjV5oJC9/JYWT730WUlA9JIbF2xjIF7PBRVXX
+ kASrSTWn7c2M2sc3c6bB50GRDqBH6dH94gztdOwsPoZ4cj+JQkPM6uX86/TUJ8e4WJY2B5iGU
+ HP7+HVB4tQVuFWqAHT2uGAz6varlOIJ5yKrTIJx6feesH62tAViO17zmGulcYNIxOP3eNPMOD
+ Hmet1YF6m/ZGilYNo9SR/pjTIMz1EyH8o7eL4CQcuBZ9FwhDFRYTxTY15EVLqHyCvQkPg27Rb
+ 8uO0aVYpOJ/qo2qK8zbTnZCXXNRXdpe5e3F/ivKBz+b1Oa+zghaMw2mbTc4DrgKSeZzP1LTNm
+ teKvpXO2ByNWbSgSgXOBtzriQtZsC2TVemyVqTtaDrQpo+R6tvq8EoDpEQZIo8UeRCmxfnM7Q
+ CuTeQ7zz0fUVVIk54pr5H16riYLFpjz7OQg7RqO6kuwjj9BxIwYM6AphowGhGxOWdsrYDcB8I
+ YsZWUl7WRUQ4eG9segmrTeI0ta1XPj9nf9dvOw==
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190427_055302_843379_B32A9A69 
-X-CRM114-Status: UNSURE (   9.22  )
+X-CRM114-CacheID: sfid-20190427_055315_226634_ADBF550B 
+X-CRM114-Status: UNSURE (   9.55  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -91,11 +90,11 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-fixing checkpatch warning:
+Fix checkpatch warning:
 
-  WARNING: Use #include <linux/io.h> instead of <asm/io.h>
-  #55: FILE: dz.c:55:
-  +#include <asm/io.h>
+  ERROR: Macros with complex values should be enclosed in parentheses
+  #912: FILE: dz.c:912:
+  +#define SERIAL_DZ_CONSOLE	&dz_console
 
 Signed-off-by: Enrico Weigelt <info@metux.net>
 ---
@@ -103,18 +102,18 @@ Signed-off-by: Enrico Weigelt <info@metux.net>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/tty/serial/dz.c b/drivers/tty/serial/dz.c
-index 96e35af..fd4f0cc 100644
+index fd4f0cc..b3e9313 100644
 --- a/drivers/tty/serial/dz.c
 +++ b/drivers/tty/serial/dz.c
-@@ -52,7 +52,7 @@
+@@ -909,7 +909,7 @@ static int __init dz_serial_console_init(void)
  
- #include <linux/atomic.h>
- #include <asm/bootinfo.h>
--#include <asm/io.h>
-+#include <linux/io.h>
+ console_initcall(dz_serial_console_init);
  
- #include <asm/dec/interrupts.h>
- #include <asm/dec/kn01.h>
+-#define SERIAL_DZ_CONSOLE	&dz_console
++#define SERIAL_DZ_CONSOLE	(&dz_console)
+ #else
+ #define SERIAL_DZ_CONSOLE	NULL
+ #endif /* CONFIG_SERIAL_DZ_CONSOLE */
 -- 
 1.9.1
 
