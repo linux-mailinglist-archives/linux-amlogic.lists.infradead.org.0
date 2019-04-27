@@ -2,8 +2,8 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E1E0AB36D
-	for <lists+linux-amlogic@lfdr.de>; Sat, 27 Apr 2019 14:54:02 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 22181B36E
+	for <lists+linux-amlogic@lfdr.de>; Sat, 27 Apr 2019 14:54:06 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,60 +11,59 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=i79epSsEzzCLCP3FCad/oqxV9sr4wZjTT8+R8zfw2ew=; b=j015ltcsgkxAE365lCCLFi5Ms8
-	3bWZG1dWWf0rR9s5VMiASLwKc1ozO51c7p+ni7JofejeVRZywVWWpI9kPKdq4Mb0yaz/hgCOTlshs
-	DDiovMUt0ycIyJ90i2AM6SRqDdy2alKJAUPzri3nDc1NFhyLHZEoqexjq9wB36YMs3QBwdqtQSwJf
-	xf9CVfCuP5xU4n+GWRsMFhMljmcf2r9bAUcbx5//OoxEU83v0Uipsp2Sv9EuZtDi3vzonBXupq+09
-	+gEfghSA5+PUqy2I/tGHVOu0Zlte1NjThta6MSY2ZJbT2+nuFpOis/HQvFwjbyE1IQ9TmHLDtypoG
-	IGYyWPIA==;
+	bh=uqDElhZEE1PJXCpNS8MTYlWdUXyS0ZCMyugVU/QXJ+c=; b=s4+lG+eMhP9Gbx3tTdC/xfdSdD
+	AYJgQmXZ3eb6p5/mCdD1cBeRZi05mm7g5BEq4Zg0OnLfBsQKf2vZtQZnBM8XlX6C5cC89h4M8zLNK
+	WbjywI+b6BdTORocl4f/gdph0F6ug2/hnFdSXJRXDpqM3PuGhPewG7AHZ1k8t67zgeMyjMY9ir2yr
+	lX1aiz5eskKg5hR+NOeWCJAQErvbFNG4GnMXYrqazWS9tq2c7Bs3K6OlVKxnpkCd8N4op5mRazAbR
+	ZIKU75jqNAtjSUfWd5lrILReC+omlwk2HvWB3hi/DJDECUaZF69/MKY4ZgCY7jk4xuqK4ptizNkL8
+	twWeJOLQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hKMq7-0001tn-0e; Sat, 27 Apr 2019 12:53:59 +0000
-Received: from mout.kundenserver.de ([212.227.126.130])
+	id 1hKMq9-0001z3-SZ; Sat, 27 Apr 2019 12:54:01 +0000
+Received: from mout.kundenserver.de ([212.227.126.131])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hKMpN-0000r4-Kk
- for linux-amlogic@lists.infradead.org; Sat, 27 Apr 2019 12:53:21 +0000
+ id 1hKMpO-0000s4-8F
+ for linux-amlogic@lists.infradead.org; Sat, 27 Apr 2019 12:53:22 +0000
 Received: from orion.localdomain ([77.2.90.210]) by mrelayeu.kundenserver.de
  (mreue009 [212.227.15.167]) with ESMTPSA (Nemesis) id
- 1N5G1V-1gbeYR2mc1-0118EA; Sat, 27 Apr 2019 14:52:58 +0200
+ 1MVNF1-1hBGYO2EDP-00SLNE; Sat, 27 Apr 2019 14:52:59 +0200
 From: "Enrico Weigelt, metux IT consult" <info@metux.net>
 To: linux-kernel@vger.kernel.org
-Subject: [PATCH 29/41] drivers: tty: serial: sunzilog: cleanup logging
-Date: Sat, 27 Apr 2019 14:52:10 +0200
-Message-Id: <1556369542-13247-30-git-send-email-info@metux.net>
+Subject: [PATCH 30/41] drivers: tty: serial: ioc4_serial: use dev_warn()
+ instead of printk()
+Date: Sat, 27 Apr 2019 14:52:11 +0200
+Message-Id: <1556369542-13247-31-git-send-email-info@metux.net>
 X-Mailer: git-send-email 1.9.1
 In-Reply-To: <1556369542-13247-1-git-send-email-info@metux.net>
 References: <1556369542-13247-1-git-send-email-info@metux.net>
-X-Provags-ID: V03:K1:uxxvCa66CYSGi3Em4nuMPvtSzL45VE6ce5qM7EP5uZ2jwnJH/Rf
- VzWdbFvPirBwCJNu9f+Jwyc9lVwLpUGhejFkC7ldZJdxwR7DA2BRn+Vl0BQckBceQIF7qXC
- WyxgtztRffigF7v1SzndzvbVeMKNS2DbGfpYfH4EV+kNq293CGWXupsg6VWK6tqIR7aTFMf
- +tRlOKQpyia0QglzkJKNA==
+X-Provags-ID: V03:K1:feZjQEPGewpWSo2bykBkAQkXP9Lb/ZtVsJ70Hc9aX4own7v09FA
+ e65s7fBpQb+RWeo/XsvBCLQDRKkUOdSWYbg6QCmXdWbNheYrxgq5Ys1L3nrokeJAVzT8JZ+
+ 6QZ7hrXczsjiQ2m1ogHA/r87Uy8zuLwqRpXTsIxH63Kg2ZR+GURXbvN2XWzuqCWUQaBZhlg
+ o8S6PJbm8wTsqW6D1wobQ==
 X-Spam-Flag: NO
-X-UI-Out-Filterresults: notjunk:1;V03:K0:y11A1qYqUqI=:8rPS9vSRvAXoCM5mb5BhuI
- WjE5yIVWUmfvDmA/AQ4ypZ+srkteIQs198t/oJOqUwZx5Rp3SPAGlO++llU7eG0RNjUsALBZq
- ZUvb6zw3f9sYxfEGhrGcIODhWtEO5jSQT4jIVhGurbVttXmC6195bA40SA690OEhhnFI/qCEi
- WSwQCTE70G9mH5ZlezP2NFueEhbG7kWFhxlgd96LRp1M9Nb1RFDllOpLiSlWwuEgrwYc/txEZ
- Jz5ZQj7Ur9cWxizBCpYX6lQ8MA/6iwg/+OwOBQFBaO9/oRTiS2RJak0h4ldhbLbwq2zihGidG
- 1rGx2U2IrRbLZ4JMDQtJAaneQYfRx5ecqZDD3UkLCP4Ei05fNui5iI8OpZLsbkAWQMiKsryvO
- 2kCFC0VRHePJTFZPqt9Ik9I0+gIoWPxwpdB8LfjEbEvj6k6/XPYQgonaBdL12TN97JkTvX7X2
- zPhIz62y5IwAPzLzViaQBeYU5gJWmkOIO+mcjozxcMghEPjcS0OHpgnDA8TYNsChOcClWQN5U
- ZTY0rQijbKo7+Fr6crZw1sEjpHfTqC53E74pOXaRvnpUsI/uBenbneEDtTlLAdpaHpm6wTBvF
- WLYWF5qQwW7fPx/YeqvLiajUl4U2/pvABrvxsQRwW6Zi/tOfEaKerfDWvrHkfNX97OpQ9rjqO
- aqTj8y5/k3NSG39yLJhNMUwbIOnBHg3Ua0eJn7jjxkxpYM82/aUzhOuEWTDJOxHkTsenB2gj8
- mCkokTH7YsmuOy7tzDvemUKChz641N4UkAKV+w==
+X-UI-Out-Filterresults: notjunk:1;V03:K0:8TG/EySvt9A=:VKahn7CYd/R5vatknv4CIz
+ CuHG0PZc2i5j9rVD60N2maMJL4Ee3r65/zW8DaiDk+zAPuKZD49EeMp7iaffcOumkyFaqiM8t
+ +luCUaXSLZIf7RHuNFPwRYcBWNJ43cJi7sjf0EHHDGmub/EKExgGhgCrjEfa0v+n+448YXMgE
+ lGF3w6/V6Mgt1QZ5pNXeWF0kTQsNJjAb7Y4RqIw7ZbAc+O3V+I9zXf7nSK2JbDaCL8Him2L7f
+ l8QQc+xgVlpNQR0jiD9vdU52hQtY39fI4sqfbvjUsfJnu4SqVjwhNe4jH1PXOZTv5gTw84KBZ
+ NkibSYlQFV3awhW8T9jAFhE9jtPnkYU0Vs7Ac1Oe4MMGZFJvBTZRRyNkitSl8XQbZ1WJfAlbB
+ QS1OAIo9avolslFua/Nuq/y/iOLsNuT9C2ZFuqk4vJzoHfqjcS7qf3z/aagtWWj2Cq7D07Jvt
+ HRLmuFLEuheS+vbBf2jp8nw1xQnRmOgDpcdn5L0cxoJx5Y57gx7DwS6uPN2nKaFxix4vbFLNZ
+ AfH6XBWoj2lDLI2NKOg+owgscan6/eCmalRceowjyuyrdih0blP0ytyJ94NiELQlWc6HPoOGw
+ OFryiG/2U3f/JVqdBhE2/2V0LKzJG1PwuuFYf5G3HVrAhwcwAJIDkFusy40yS4hP/fLgStVPA
+ +nzeqpksFBXQvdpgCQwJ1DcGyWuv+kODQ2uT2nLMPRKYF2bVBXURnsDyBNucI4/XBJ4wnPMl7
+ 6d+ueE0QRBCjWMFi9IaYeMV9hXPhSTm8QIcgHQ==
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190427_055314_623174_EB37F96C 
-X-CRM114-Status: UNSURE (   9.00  )
+X-CRM114-CacheID: sfid-20190427_055315_253183_ED4E1B45 
+X-CRM114-Status: UNSURE (   9.90  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [212.227.126.130 listed in list.dnswl.org]
- -0.2 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [212.227.126.130 listed in wl.mailspike.net]
+ no trust [212.227.126.131 listed in list.dnswl.org]
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -90,54 +89,27 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Fix checkpatch warning:
-
-    WARNING: Prefer [subsystem eg: netdev]_info([subsystem]dev, ... then dev_info(dev, ... then pr_info(...  to printk(KERN_INFO ...
-    #1238: FILE: drivers/tty/serial/sunzilog.c:1238:
-    +	printk(KERN_INFO "Console: ttyS%d (SunZilog zs%d)\n",
+Using dev_warn() instead of printk() for more consistent output.
+(prints device name, etc).
 
 Signed-off-by: Enrico Weigelt <info@metux.net>
 ---
- drivers/tty/serial/sunzilog.c | 12 +++++-------
- 1 file changed, 5 insertions(+), 7 deletions(-)
+ drivers/tty/serial/ioc4_serial.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/drivers/tty/serial/sunzilog.c b/drivers/tty/serial/sunzilog.c
-index 85edb0d..dba723c 100644
---- a/drivers/tty/serial/sunzilog.c
-+++ b/drivers/tty/serial/sunzilog.c
-@@ -1235,7 +1235,7 @@ static int __init sunzilog_console_setup(struct console *con, char *options)
- 	if (up->port.type != PORT_SUNZILOG)
- 		return -1;
- 
--	printk(KERN_INFO "Console: ttyS%d (SunZilog zs%d)\n",
-+	pr_info("Console: ttyS%d (SunZilog zs%d)\n",
- 	       (sunzilog_reg.minor - 64) + con->index, con->index);
- 
- 	/* Get firmware console settings.  */
-@@ -1615,9 +1615,8 @@ static int __init sunzilog_init(void)
- 		while (up) {
- 			struct zilog_channel __iomem *channel;
- 
--			/* printk(KERN_INFO
--			 *        "Enable IRQ for ZILOG Hardware %p\n",
--			 *        up);
-+			/* pr_info("Enable IRQ for ZILOG Hardware %p\n",
-+			 *         up);
- 			 */
- 			channel          = ZILOG_CHANNEL_FROM_PORT(&up->port);
- 			up->flags       |= SUNZILOG_FLAG_ISR_HANDLER;
-@@ -1655,9 +1654,8 @@ static void __exit sunzilog_exit(void)
- 		while (up) {
- 			struct zilog_channel __iomem *channel;
- 
--			/* printk(KERN_INFO
--			 *        "Disable IRQ for ZILOG Hardware %p\n",
--			 *        up);
-+			/* pr_info("Disable IRQ for ZILOG Hardware %p\n",
-+			 *         up);
- 			 */
- 			channel          = ZILOG_CHANNEL_FROM_PORT(&up->port);
- 			up->flags       &= ~SUNZILOG_FLAG_ISR_HANDLER;
+diff --git a/drivers/tty/serial/ioc4_serial.c b/drivers/tty/serial/ioc4_serial.c
+index db5b979..21c1b8f 100644
+--- a/drivers/tty/serial/ioc4_serial.c
++++ b/drivers/tty/serial/ioc4_serial.c
+@@ -2752,7 +2752,7 @@ static int ioc4_serial_remove_one(struct ioc4_driver_data *idd)
+ 		the_port->dev = &pdev->dev;
+ 		spin_lock_init(&the_port->lock);
+ 		if (uart_add_one_port(u_driver, the_port) < 0) {
+-			printk(KERN_WARNING
++			dev_warn(&pdev->dev,
+ 		           "%s: unable to add port %d bus %d\n",
+ 			       __func__, the_port->line, pdev->bus->number);
+ 		} else {
 -- 
 1.9.1
 
