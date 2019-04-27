@@ -2,7 +2,7 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E1BFFB379
+	by mail.lfdr.de (Postfix) with ESMTPS id C0179B378
 	for <lists+linux-amlogic@lfdr.de>; Sat, 27 Apr 2019 14:54:22 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
@@ -11,60 +11,61 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=pSVjdjwn8xhkolX/O2cuBPkN37vImJ53p95dR6kxsrA=; b=dJ22mMhooAkGJkdNhoKUteFt47
-	Evxrb/9lqTLxLXUokmHEgr3ARjjaH16kOaGMrzMCCNhUBBNUhBhXLcmn2DBoe+VNZ+iUQze7L0UAi
-	a1j8ilejsPwTWgImSGY+P6r93QrCHmrY79GS0DCopbcTi2DE48gd13O8KEA2WTOYWxrz7eFvjt6fG
-	SKn9ABrqxFDfMukHVQS2ngD6yIpeN8eZZXlK1kKyhyvO87+qsH1kyIM1dpc0WxXoICxS8fBFvLgLK
-	/WpyVLMQ/9DoqBaFvNKLT0Y0tOKBz2/GqYIxUV5YsGBZaswnmA11iBSP5o2aRT8+tBT2jj7N942D2
-	LjnCFQnQ==;
+	bh=14IAOMQE99cIVCPi62fEhihSOGS91f077z0V4roK6V8=; b=I5LUu7+8TdwjX1c/5Abk38rtPk
+	WJXi48QrAaTZMsfXeXC88yjjQDZKjXx/AWYvIWUGc+ArNb5VfOXxEEedw7HqKEHPIjOBP9td6CUaB
+	wcvVBeiM82XCC+lfPGJEjpmbn8plN0FsWhWic24Lly0RAwrv2YhugFizfZOfHOfn2XoCnAvGA8FTD
+	bifR8Acxav/BHzrOTQWpsw8gmGJx9si1u/kZtXdelASl0VLTXF1i2d+b2yBcVbmRpfumsZ28dghWB
+	mybqi0C3TibZLGG4dcJAkS3B/+a0YfS0JBe8EXEe+Cjfr+ZtSBc6fZRC1fE1cTL6y8GlvGrttsMfC
+	ihaRz1+A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hKMqQ-0002TO-PB; Sat, 27 Apr 2019 12:54:18 +0000
-Received: from mout.kundenserver.de ([212.227.126.130])
+	id 1hKMqS-0002Wq-C4; Sat, 27 Apr 2019 12:54:20 +0000
+Received: from mout.kundenserver.de ([212.227.126.187])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hKMpV-00014R-FT
+ id 1hKMpY-00018V-6t
  for linux-amlogic@lists.infradead.org; Sat, 27 Apr 2019 12:53:32 +0000
 Received: from orion.localdomain ([77.2.90.210]) by mrelayeu.kundenserver.de
  (mreue009 [212.227.15.167]) with ESMTPSA (Nemesis) id
- 1N1fei-1gegIM1SdE-011xhz; Sat, 27 Apr 2019 14:53:06 +0200
+ 1N0G5n-1gXkoO0kCt-00xITk; Sat, 27 Apr 2019 14:53:07 +0200
 From: "Enrico Weigelt, metux IT consult" <info@metux.net>
 To: linux-kernel@vger.kernel.org
-Subject: [PATCH 38/41] drivers: tty: serial: xilinx_uartps: fill mapsize and
- use it
-Date: Sat, 27 Apr 2019 14:52:19 +0200
-Message-Id: <1556369542-13247-39-git-send-email-info@metux.net>
+Subject: [PATCH 39/41] drivers: tty: serial: pmac_zilog: fill mapsize and use
+ it
+Date: Sat, 27 Apr 2019 14:52:20 +0200
+Message-Id: <1556369542-13247-40-git-send-email-info@metux.net>
 X-Mailer: git-send-email 1.9.1
 In-Reply-To: <1556369542-13247-1-git-send-email-info@metux.net>
 References: <1556369542-13247-1-git-send-email-info@metux.net>
-X-Provags-ID: V03:K1:VtPNlXzPCRVCI3k6aUN/2RTDRVtNySvUetW2m1i45Od16fYdx6y
- LS0k0V6K9tTbj9vRmp5ZCjL/mOHH5UpOiIqa//lNidg8lexGQDtGIijbeiQYs9a5ONTZ41P
- /QJB/7RWi0uO5xDMBNsrF+ru49A7jV2roH/XamiBQrb9q1XduKueamQiuyXwbKmDF6vMy65
- SexEhyAOG2uVr2I4z3nnw==
+X-Provags-ID: V03:K1:cAQG+0D3UvfMqv8b+CkNtVcswZtDqF2lX087MK9isXMtCtEuT0Z
+ +LMvw9S8Tc3gAW5AwMqdBeMVX80UXPgUiQX3GDAwydtKI18PtYqNh2qK8dQfa4yBEZlrd1g
+ VFeIauCytrNe9vDPPGAAhgPqYDFdooytbUCh1T2kC3df+mNQEgvvapvejEhIxI7xt++ViLv
+ FxMypxg9TvTXo+483DuLg==
 X-Spam-Flag: NO
-X-UI-Out-Filterresults: notjunk:1;V03:K0:vdDn587xvd4=:4RpbDZcbrZSWSyIEGlsv8U
- 0K/I8sTnMUV5V0+BjvOPaxxEwIozbULnFUa3IkYA47OU1n2ZzOGt7QzRwMPMuqMALSKhvyuAl
- t6yxt1msPA6kyUDppcf5bgSpylyoQ+W3C3CEite19ArJ0t2AwR6wilppKV3Jh+KUD0mfjD37s
- puKb7aoMCoZdZ9cOEaWpB8YfmHh2SeNm3SKcsAkE7vcrHhkRch80ahpP21xLnNLrzWFwCiTuU
- WSN3vp3JWGFtDHw/p2jQySYFGI9Vvh91eVlMxXKQnLF8yiehURKGk5Y9GEuaj9RXP5HmHyXjL
- lkZ4wlyKfUEpxD3Tl6j6hawA4nl7XcPNysl3Seys3+VcrP/aydSp4ueltBl6mcp8g5r8Iu5uk
- FkL08ODMZnsQE8pOye6cuMetb4LkUBCKcprXMYP3ryPqZt7eZBS2lqFiNuPM8xsH9a6WEgJYl
- I8UzUK30NOx46sp+1PsMg6yTempKzXES5ap5lEgIV0nJrAM21L0mN5/+t0oEjzTtfatOFX5uk
- M8KVoYNe+W+PKDYsTRSESAgizrPxXk4EkwtRVnV0jmEmUaN3alDd8SqnV0Gu3ROymNZhrZzjz
- UqyzBRlfWbCGoVNw2LXOb1DGrDLQx+dvJriCIMgZ17xzGKlGAboXpbywthlWS4UNNov0IADCk
- lffkQK22QhbX1XOmZDBYc2dE7NUMWkmiM2KbFwEs43p6iiUf7jDM/pMtGNBfUfwU5YV9haj7W
- AFEnEYlgHisqoTzmsKB1b9VQMJVErA9QCIapeg==
+X-UI-Out-Filterresults: notjunk:1;V03:K0:JbWJYl/z86Y=:AfUHXZyI0rYrTcXrDfF6qI
+ MsyI9ktNaqoSao04HUcu062H3AOny0fTjnjWXA4c4onYTcO/5YLu10OCXHb+J1m+g7hObnhRG
+ vs217EAPsMyd2cL9U16idxvqv6uEZhwiWKRc8xjoS1VopitogudmOcw65b78tGcQw7gYyWfwu
+ fX5DzFve0pRc0ZABVzrzmtBNgMB0ZAYvx/bGUxlsMZcQfXAswkv0MLKUtjDdssmXFHfPJc8a1
+ jUZ9gAcBppZWcNAh0pYeOZiFih2Ay5KEwtpMNRKs/FQhNJs9GQug75OpzNt1A0zP5pP/fCeeZ
+ EgxiCJvmRtBEE5+YbW7mPe/vZE8JPX/OMJLy0H2dX/BU8ns9ksGXUfJKrjBojS2H+N0TvNxD8
+ j4VOfUEuWnxcdYiVNPpSvgW2QW/kMAQTxaL/476BeIPYaCDPnor4iJXPadns1/FI4tOxuoXT7
+ 1HHoO9vDgLa2wum+e1Q5XzmgoL8LgaFiycERH7Vzj99V/AhXSPH8ekdU97upV/7AWYCP5A0s6
+ EBsMyIXgcS+mr5u5R/ywj1LKJhEOsu0eqGvDRvmXhKb99V7HgQv/m6JORXrB1LhNM9ntkwS74
+ rNqOAeaPVhYsUACPCG9hY4slXpfQwnv4hYc7X5zml1WIGtXaI4pg8Z/bkyyZ8UVzy/EeQvxEP
+ Mw2bqg3M8i7FRPOJ2mkqIDALRn2r7NYhG2CoCrKsNJA/wIZktd7vR8qgXT/4FPtJu76uzg6QN
+ phzqLuS3ZluJDPbcJL8gpTdmNCKe6Z/Zi0wWgw==
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190427_055322_288777_EF58E5C3 
-X-CRM114-Status: GOOD (  11.37  )
+X-CRM114-CacheID: sfid-20190427_055325_263714_BE9F61CA 
+X-CRM114-Status: UNSURE (   9.99  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [212.227.126.130 listed in list.dnswl.org]
+ no trust [212.227.126.187 listed in list.dnswl.org]
  -0.2 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [212.227.126.130 listed in wl.mailspike.net]
+ [212.227.126.187 listed in wl.mailspike.net]
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -100,49 +101,40 @@ iounmap+release combinations.
 
 Signed-off-by: Enrico Weigelt <info@metux.net>
 ---
- drivers/tty/serial/xilinx_uartps.c | 9 +++++----
- 1 file changed, 5 insertions(+), 4 deletions(-)
+ drivers/tty/serial/pmac_zilog.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
 
-diff --git a/drivers/tty/serial/xilinx_uartps.c b/drivers/tty/serial/xilinx_uartps.c
-index 74089f5..cf8ca66 100644
---- a/drivers/tty/serial/xilinx_uartps.c
-+++ b/drivers/tty/serial/xilinx_uartps.c
-@@ -953,15 +953,15 @@ static int cdns_uart_verify_port(struct uart_port *port,
-  */
- static int cdns_uart_request_port(struct uart_port *port)
- {
--	if (!request_mem_region(port->mapbase, CDNS_UART_REGISTER_SPACE,
-+	if (!request_mem_region(port->mapbase, port->mapsize,
- 					 CDNS_UART_NAME)) {
- 		return -ENOMEM;
- 	}
+diff --git a/drivers/tty/serial/pmac_zilog.c b/drivers/tty/serial/pmac_zilog.c
+index bcb5bf7..1fef014 100644
+--- a/drivers/tty/serial/pmac_zilog.c
++++ b/drivers/tty/serial/pmac_zilog.c
+@@ -88,6 +88,8 @@
+ #define PMACZILOG_NAME		"ttyPZ"
+ #endif
  
--	port->membase = ioremap(port->mapbase, CDNS_UART_REGISTER_SPACE);
-+	port->membase = ioremap(port->mapbase, port->mapsize);
- 	if (!port->membase) {
- 		dev_err(port->dev, "Unable to map registers\n");
--		release_mem_region(port->mapbase, CDNS_UART_REGISTER_SPACE);
-+		release_mem_region(port->mapbase, port->mapsize);
- 		return -ENOMEM;
- 	}
- 	return 0;
-@@ -976,7 +976,7 @@ static int cdns_uart_request_port(struct uart_port *port)
-  */
- static void cdns_uart_release_port(struct uart_port *port)
- {
--	release_mem_region(port->mapbase, CDNS_UART_REGISTER_SPACE);
-+	release_mem_region(port->mapbase, port->mapsize);
- 	iounmap(port->membase);
- 	port->membase = NULL;
- }
-@@ -1627,6 +1627,7 @@ static int cdns_uart_probe(struct platform_device *pdev)
- 	 * and triggers invocation of the config_port() entry point.
- 	 */
- 	port->mapbase = res->start;
-+	port->mapsize = CDNS_UART_REGISTER_SPACE;
- 	port->irq = irq;
- 	port->dev = &pdev->dev;
- 	port->uartclk = clk_get_rate(cdns_uart_data->uartclk);
++#define PMZ_MAPSIZE		0x1000
++
+ #define pmz_debug(fmt, arg...)	pr_debug("ttyPZ%d: " fmt, uap->port.line, ## arg)
+ #define pmz_error(fmt, arg...)	pr_err("ttyPZ%d: " fmt, uap->port.line, ## arg)
+ #define pmz_info(fmt, arg...)	pr_info("ttyPZ%d: " fmt, uap->port.line, ## arg)
+@@ -1411,7 +1413,8 @@ static int __init pmz_init_port(struct uart_pmac_port *uap)
+ 	if (of_address_to_resource(np, 0, &r_ports))
+ 		return -ENODEV;
+ 	uap->port.mapbase = r_ports.start;
+-	uap->port.membase = ioremap(uap->port.mapbase, 0x1000);
++	uap->port.mapsize = PMZ_MAPSIZE;
++	uap->port.membase = ioremap(uap->port.mapbase, uap->port.mapsize);
+ 
+ 	uap->control_reg = uap->port.membase;
+ 	uap->data_reg = uap->control_reg + 0x10;
+@@ -1709,6 +1712,7 @@ static int __init pmz_init_port(struct uart_pmac_port *uap)
+ 		return -ENODEV;
+ 
+ 	uap->port.mapbase  = r_ports->start;
++	uap->port.mapsize  = PMZ_MAPSIZE;
+ 	uap->port.membase  = (unsigned char __iomem *) r_ports->start;
+ 	uap->port.iotype   = UPIO_MEM;
+ 	uap->port.irq      = irq;
 -- 
 1.9.1
 
