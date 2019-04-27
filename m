@@ -2,8 +2,8 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6F493B356
-	for <lists+linux-amlogic@lfdr.de>; Sat, 27 Apr 2019 14:53:16 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3FCB5B368
+	for <lists+linux-amlogic@lfdr.de>; Sat, 27 Apr 2019 14:53:56 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,61 +11,59 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=/YTauQTU9xehj8TN/BfINjVBeSl4s+OiBh9zaIBcMK4=; b=B2IKAJvl9+53bBbhzKSk0yG8Hi
-	BavoUlYDgDB1sGiQYGc5CRFd35dY4QONm6ByGmsSwyXDVmWs8ldTuNMSu9QxKZsibEvcG3nb7qie1
-	EGIDHCyosH5QV9g4N1CGbnwFmQauiLJX7XxLpTbua7huzv8qOm1GHttdMADmkZIw9l87hw6ZGLW6T
-	EUBE7NLC3M6Ljh7+jgyIV+DAeBsfTopbGYJfjlBLl/xMJZRB4+vDar1e0+/TGLKM5oKfOdkcDuYbh
-	ryoyQehscq9YbpeAMxd65HhUhldsoyY2hJG8CuNVbC/yQ8TBhDGPqcPKbEP1K569CLxgmYm/HXHg6
-	t/Kz3b7Q==;
+	bh=DC9hs5ea16TrXsE5xDir+D12bDeH0+hjC8Osj4tPx0s=; b=EaeVOJv2o5LafUHw9ZKGTpvYR4
+	qW6g8sL1YeceHFXHtMXNR1ykfmy0bdBvMuoTYFTaEMsuo66Htl9uUgyi5Dna+LuAVEdAqaarGe29o
+	e6XoBVnVNxLa+biOy7p6+4vXZJqxdyOqBzjw0KPc1FKcrOmrLvSrGGGQbmM9iPjprcB0N/NbVg9Xa
+	obRUhm7NM8dRYbwtH2OxWebBOuxd6Lw8bPru9dhjt++OlPry+dUkwscneqrurdYQ2PSR4hr+wm/UN
+	cOXuaBkIalmGInpWeQMXV4KDlzbbJGa54Q4buZNgPadB30n4VDO0c9BlVJC10f1cgNj2DZPGDP6ZG
+	FP2+lu5Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hKMpL-0000nO-HI; Sat, 27 Apr 2019 12:53:11 +0000
-Received: from mout.kundenserver.de ([212.227.126.130])
+	id 1hKMpy-0001fE-4I; Sat, 27 Apr 2019 12:53:50 +0000
+Received: from mout.kundenserver.de ([212.227.126.131])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hKMpC-0000cd-4P
- for linux-amlogic@lists.infradead.org; Sat, 27 Apr 2019 12:53:04 +0000
+ id 1hKMpJ-0000l2-B0
+ for linux-amlogic@lists.infradead.org; Sat, 27 Apr 2019 12:53:14 +0000
 Received: from orion.localdomain ([77.2.90.210]) by mrelayeu.kundenserver.de
  (mreue009 [212.227.15.167]) with ESMTPSA (Nemesis) id
- 1Mzz6s-1gXTgh3Td8-00x1Ur; Sat, 27 Apr 2019 14:52:37 +0200
+ 1MQ5nE-1h759i2pEm-00M2Ff; Sat, 27 Apr 2019 14:52:38 +0200
 From: "Enrico Weigelt, metux IT consult" <info@metux.net>
 To: linux-kernel@vger.kernel.org
-Subject: [PATCH 05/41] drivers: tty: serial: dz: use pr_info() instead of
- incomplete printk()
-Date: Sat, 27 Apr 2019 14:51:46 +0200
-Message-Id: <1556369542-13247-6-git-send-email-info@metux.net>
+Subject: [PATCH 06/41] drivers: tty: serial: sb1250-duart: use dev_err()
+ instead of printk()
+Date: Sat, 27 Apr 2019 14:51:47 +0200
+Message-Id: <1556369542-13247-7-git-send-email-info@metux.net>
 X-Mailer: git-send-email 1.9.1
 In-Reply-To: <1556369542-13247-1-git-send-email-info@metux.net>
 References: <1556369542-13247-1-git-send-email-info@metux.net>
-X-Provags-ID: V03:K1:0divRPlMaEn/Gqkn0bF/qffr0mtJMzUIhhcgUCpKp3L8QfEx3BT
- Sct6DXQKPsKml0HbjLEbqZ0BVdAAcNgJ6gXOI6JC8K/1+PAe8EFl5Aq1lbdbexf9MvYSvJI
- wDh21F+qIQxeFuU3Myc3hkjl/lhNuC86c6zCO8DZIQRpkFEogbQN+oxEVR+QjYaXv/F2Er3
- D3Hg7fjgdOldNL+SYlAwQ==
+X-Provags-ID: V03:K1:virapGaLe72N04lun9WdAKkbszb/ggQMqOiOUSHBcLWgpMmeSap
+ mBYtyGLtkO8bfsb4eQ43Ka/Pvv/b4cCI/WGEqijtDJEFEcNTc93ifR7R/FI82p+Et0Hzuoy
+ 6Mqe+toYlTBM2KOFgvujwEBfyVHzntqNkA4zWfZ1M4ILi8IQFR+Hd6QOrw7CXV2bkioPk2/
+ 824zpPHm55RHdm67u7Kxw==
 X-Spam-Flag: NO
-X-UI-Out-Filterresults: notjunk:1;V03:K0:+RM97HlEygc=:XCYgbldeM4fHTujSYLo9ci
- ZNeOghoSWPCt1C8c6NBMLSfGNddK58lmCDc3rlfBH3ynfXNXoutb/zjRBWM8D3BIY49a4i4UE
- w61HuHHGGrE/nW055rXaTuGx9TatMuVoyD47DJXczfb3oO2GbP0EmAQmzpC+6kDBZdseEXdDC
- Q/7Dzh91Dv5viwhjSOg8QB3blGvc6npMCA3+LRAVdg7cmGKN+31NplbmdslmfdvUCt7Zt8txu
- wu1qVJ20ms6soMtiV40LnA1aD9QGbuHc7kSx8ChK0JcxawU9TBzFvD7nHcdQCkga/Pam6wIlh
- SozaRebsNHrmz6K0Nxx5GSTQPTFKcxIbQTjsZTv+UXWB6g6MdVA8xNYDMcxFB3I9a/OOa1+q6
- SDNeRbSCUbiTqPPGCr4Wlwd5pr0t1wGkI38yOimXepPKVf4067XO8agDegepX6eMqr1dnbVEl
- 7E6hKunNpdkhyB0sNKvUPq+uvwV2l/VdX95oOhRD4521oJmMRY3DJ+fuI9JwMF0+0d43RkioS
- NAq5fkYK+cja/PvgpcgRoKs9fOqvE/DvkG7oyD8aLe7kzR0MXQDK6+nm2GtMVAfo9rLlZIslt
- eYSqlXLx6iAbP5p7IGgKyS6G3mEq0IT3MizlVzwRrPBrTI6P7aSZVck/9N5HOec9ocrRvZ2zy
- eP3CmOH7ndIUhAxgSzvJujudRMq1laldwLQ9qL1Fz34ZpgICHygnXc7BQ2s/IBPS3Nvdokjth
- xKIhRxBJYIbWNhrxBOQ1AQzGdb2SfJPFzpfkeQ==
+X-UI-Out-Filterresults: notjunk:1;V03:K0:gJOyTKZqpIg=:tp2oVLfWX5tgJwhU7rJw/s
+ 5xC3YkCNU9Clc7T8duZDvMjLNAqv/hMeDkuQQSl0VFwB/77Xz/6uLhmENAywHnQ/tv5KQ7k+P
+ X9UWHtEtD0eICFfIuNQEVk8Q1vsrEuNpiCnIVQ6AMEHCRTcnAaveMmnXgfeMDyhFJuwk0nf9L
+ DQALyFq0RsHbgzwO4tPR+AHmL8LxevQNFrS6XnH3aHQhZHr2GCgH6P4TJOTYEtv/LqtPy4mVx
+ ZCTsD5oD1hBA+QVf0Pd0xggJm7VCPpuIHTXK3+8waBmtVcTiONHpiiLJ8LfXX5ZlVudpg3fJs
+ 7Km2WOt6iHbRSSP2BK9YWglzHwTAjjGfFFXZX5yZB2VBzzFOHrx8eh/DApk430FdXIzKK+KXW
+ CsVOucv0ERWvtQeWpdeOgZArjzFR+5/OAcw1rQ0/vzqSfqwgmxfG68VyYt/9gWidW+AZLD4IL
+ VuuJLLLY+/ieyyWwCeF54XzbHWRkg65H4yD9Gib1If0oHkvzZ5bsH78my7Ab2SNUDFkxkalbY
+ xRmVs2FRPXJhn3TaJlzs61kfXrxC4ykInMr4wqMqSVZwyFWNiCF9CyaKAQIV8R9zy8hHjFMKv
+ MtfTaICEo7G2x/KLhs20qcpKTe2pGkj5pAmeRCK2KtaY+K3mfJcJW4Cchqv6Cc3SbiOKg5Cyj
+ WIzWAlTpHhNJJdD/7UdFKP76U5ka0AcjgmnSylZj6f6d9Z3HzklBnnFCCZ0CvEuEzTICYXIxC
+ r7oQERNUs9tETo/js3nNih5wcVWQ8qeBOPu63Q==
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190427_055302_494052_E7723536 
-X-CRM114-Status: UNSURE (   9.59  )
+X-CRM114-CacheID: sfid-20190427_055310_002520_C5BE3F82 
+X-CRM114-Status: UNSURE (   9.34  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [212.227.126.130 listed in list.dnswl.org]
- -0.2 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [212.227.126.130 listed in wl.mailspike.net]
+ no trust [212.227.126.131 listed in list.dnswl.org]
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -91,30 +89,44 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Fix the checkpatch warning:
-
-    WARNING: printk() should include KERN_<LEVEL> facility level
-    #934: FILE: dz.c:934:
-    +	printk("%s%s\n", dz_name, dz_version);
+Using dev_err() instead of printk() for more consistent output.
+(prints device name, etc).
 
 Signed-off-by: Enrico Weigelt <info@metux.net>
 ---
- drivers/tty/serial/dz.c | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+ drivers/tty/serial/sb1250-duart.c | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
 
-diff --git a/drivers/tty/serial/dz.c b/drivers/tty/serial/dz.c
-index 559d076..e2670c4 100644
---- a/drivers/tty/serial/dz.c
-+++ b/drivers/tty/serial/dz.c
-@@ -931,7 +931,7 @@ static int __init dz_init(void)
- 	if (IOASIC)
- 		return -ENXIO;
+diff --git a/drivers/tty/serial/sb1250-duart.c b/drivers/tty/serial/sb1250-duart.c
+index 329aced..655961c 100644
+--- a/drivers/tty/serial/sb1250-duart.c
++++ b/drivers/tty/serial/sb1250-duart.c
+@@ -663,7 +663,6 @@ static void sbd_release_port(struct uart_port *uport)
  
--	printk("%s%s\n", dz_name, dz_version);
-+	pr_info("%s%s\n", dz_name, dz_version);
+ static int sbd_map_port(struct uart_port *uport)
+ {
+-	const char *err = KERN_ERR "sbd: Cannot map MMIO\n";
+ 	struct sbd_port *sport = to_sport(uport);
+ 	struct sbd_duart *duart = sport->duart;
  
- 	dz_init_ports();
+@@ -671,7 +670,7 @@ static int sbd_map_port(struct uart_port *uport)
+ 		uport->membase = ioremap_nocache(uport->mapbase,
+ 						 DUART_CHANREG_SPACING);
+ 	if (!uport->membase) {
+-		printk(err);
++		dev_err(uport->dev, "Cannot map MMIO (base)\n");
+ 		return -ENOMEM;
+ 	}
  
+@@ -679,7 +678,7 @@ static int sbd_map_port(struct uart_port *uport)
+ 		sport->memctrl = ioremap_nocache(duart->mapctrl,
+ 						 DUART_CHANREG_SPACING);
+ 	if (!sport->memctrl) {
+-		printk(err);
++		dev_err(uport->dev, "Cannot map MMIO (ctrl)\n");
+ 		iounmap(uport->membase);
+ 		uport->membase = NULL;
+ 		return -ENOMEM;
 -- 
 1.9.1
 
