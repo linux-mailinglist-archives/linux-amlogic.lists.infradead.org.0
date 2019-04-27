@@ -2,8 +2,8 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C566EB362
-	for <lists+linux-amlogic@lfdr.de>; Sat, 27 Apr 2019 14:53:44 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id BBF23B354
+	for <lists+linux-amlogic@lfdr.de>; Sat, 27 Apr 2019 14:53:11 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,58 +11,58 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=pTa2QHDG6pof08SNTMiyiCWq8YDOBELOpln+X0+nJJA=; b=BDIBr/mWvnpEC/vbgY2rTtrJZr
-	Axc9qbCamjwNYxGfAgcb9Gq5nKjzDRb+IVv/B1N0UjKMXXYEOFEGA7alg0m8gJCvFooKVzDmAf7++
-	/OIy9eQK01bk61VSOPkba2ZFqN3zEjVN3eXLb+LUaO9dBYNkhAyGauxOnWiHIjqVKRhxQiCRiEDr+
-	KIT3Sg5KlmR33eHq2SvxVl21AEhSXAqVHZRNB5uWUgwCiHXu8G49jsNPjOhExfj8wTq9XOSPSdeVl
-	QYamdPnA/xK2v9BN/dlkKecECyuadqZmKU4cx0JEeAlePVWYNWVm8/Vxh9qCPdorzwEGtlpXQ4Evt
-	WdglvNow==;
+	bh=2I1M23Qiw4BkTPIyruE76yOHwpAcj7+BvYy1T7AkCDM=; b=mCN1KWWx+5l3ZRiDuhjNm9tmaw
+	9Ouvj7FsCiCstqaABWC2c4kHZ9pYBSERJJyi44EmcSKhDZOZQu4tkkwDLmNs1nCuICzTXBreLKNg1
+	wK/VHNl2z116LWfYrqApUVCDujUFhVP51eX+g51RHbDtvLERWYgJ5I1gMt5eY+hMNgcd/twYZiVBr
+	T5kN2hq/x79/7qzmamrgC3rf16SghYDR1KIFzrXnqBXOQBbAwEdId11jCg0uzcd/ZXloM5DSEoloW
+	boTcfaHpWoZ+3F/e0yKL9KtbdkpnL5c0D0BVgKdzdAuGcYYzmOhhV3lH/K2SB20+0SeaLWaukvMKA
+	t67SHy1w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hKMpp-0001TZ-SW; Sat, 27 Apr 2019 12:53:41 +0000
-Received: from mout.kundenserver.de ([212.227.126.131])
+	id 1hKMpG-0000h7-N6; Sat, 27 Apr 2019 12:53:06 +0000
+Received: from mout.kundenserver.de ([212.227.126.133])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hKMpD-0000dC-PB
- for linux-amlogic@lists.infradead.org; Sat, 27 Apr 2019 12:53:08 +0000
+ id 1hKMpB-0000ci-VR
+ for linux-amlogic@lists.infradead.org; Sat, 27 Apr 2019 12:53:03 +0000
 Received: from orion.localdomain ([77.2.90.210]) by mrelayeu.kundenserver.de
  (mreue009 [212.227.15.167]) with ESMTPSA (Nemesis) id
- 1MmDAW-1gu8kq1m7s-00iDvn; Sat, 27 Apr 2019 14:52:40 +0200
+ 1MVNF1-1hBGZC1Cwp-00SLNE; Sat, 27 Apr 2019 14:52:41 +0200
 From: "Enrico Weigelt, metux IT consult" <info@metux.net>
 To: linux-kernel@vger.kernel.org
-Subject: [PATCH 08/41] drivers: tty: serial: sb1250-duart: fix checkpatch
- warning on printk()
-Date: Sat, 27 Apr 2019 14:51:49 +0200
-Message-Id: <1556369542-13247-9-git-send-email-info@metux.net>
+Subject: [PATCH 09/41] drivers: tty: serial: sb1250-duart: fill mapsize and
+ use it
+Date: Sat, 27 Apr 2019 14:51:50 +0200
+Message-Id: <1556369542-13247-10-git-send-email-info@metux.net>
 X-Mailer: git-send-email 1.9.1
 In-Reply-To: <1556369542-13247-1-git-send-email-info@metux.net>
 References: <1556369542-13247-1-git-send-email-info@metux.net>
-X-Provags-ID: V03:K1:9XC3q0bfB2HQ4mApDU4u33n5sD/YoC7EqQPmqP5NMOedGA7sE7R
- zQ+4UMW4bXxRANtgf2zvHO2GKXDxkdKE28JdO/iNudeY0F3mJ+xc3fTNvs7ITqMXpD+h9nY
- QJb/I3M0+a59qd+LyzEcKpCXtBXjQ/BRgErxc0fambEKaAP14TyYVth7y55V4vy+3k5d+oN
- x/fGxgcPqoZSgK+QJd3pA==
+X-Provags-ID: V03:K1:ZaCk4lb7tsU+VMSXb76laO+FYz7IB7DvruPd8DW8Z5VN86cLAXx
+ XoTjgpy1D4cW0l6Dtk8ovOsbJ8N9Wa/Bbip0AWVSYaXLx73ljAgB+eT7NLTxRv9yXwxk0n6
+ HH2/FDKHKTK7DJe3OrFZeO4xRkkEqT/D7RK5KNlvmu7PNcsk+uX5W9PhxlgNSIsAXElPf5S
+ ey1fWSh+9w6GIdr1VGyZQ==
 X-Spam-Flag: NO
-X-UI-Out-Filterresults: notjunk:1;V03:K0:KbQ0fHA3Nqk=:FuSxcrnKlCstL3CnqMetR8
- enSY2gm0q2GMzPD3zuPC8fZO7HmPN6yxLTvM8eVFp60ICRPcNK4tMFyvmEXAwQhCqV+QlhVfY
- /3SomP72AOXBFjUdm37A6u738T8AWaYhzD3ax41xd/91uO6TvCLXB01NFygTZ69KjGGvd6dHl
- J9lyE8nv3ouQZE4YSkwJ+QPVxRnzV+nPfZBZk/QPt3B8dqdrBa8sVikNqDUZSkcX6lYQS36SE
- LOscWWeMcd9cDI+xfMIg49C4I58k/YvzfJVXt4DERZ2OqnsDVF39SPQ6mxZd8kyZyvkWY68FT
- v4aBhQVWDfpD1t0GubgtmYzo8UOl2KV+/SB6VWAzR3um3S2sxVGVPm3DwToX97W+XO2x/IxZK
- Q6Pr1u8NIEMSywIsghBEkavAFQJyp6Kw1JS9qBGMdHI80KFXdjgfG+6C3hhkvcy6C1d4Y3nMS
- g+SUL9XMx7ynle+l8ySONYsf3S9/5LAeIgUVPU0xC0OjIcIwKL5yM7en/m6fRkNDK5yzev23m
- aXQatsJ5bHJbeQqA6Vbp/dppRd+sjlJA37mRBhWORrP0GnCiSK/iBZGK1z624u2RV/axQxVU8
- FgXt6VT4izE0gGVOenS522mBiI0JYa1/T+aqrIxVh2Mgd9NqSega9IxAQlHRGjbwRynjJt5Sg
- 1101agAP9tCRr5Tje2tMwCcYDgbVyx7BPu9adznbugp+wmE/O4zeZ31tCdtTIo7gfOhkLPJ0f
- XXLVpK9o1Fyph8MTqd6Mt+RVaDYvSrfKML+CcA==
+X-UI-Out-Filterresults: notjunk:1;V03:K0:bMjmK7y/pZk=:+AFfLGXZen+R/LjlG6zSk7
+ L8sUEG8PAms3y8zIqVAQwMY6qAqR82Lr0rV3bmYkKN7tHlDRaITbqgcrePCA9GhxzAAamUqAf
+ YwUlxTo4PLwjN1ylObX8wcBa9n6x6fJFhwBBYNjLMxo2rfYeunsf+B/mSAmul4qeuDFXvTiJR
+ rLJjI4Q5l7VTPJ5zet72iWe0Hlp6PHbzAvsjIEeuOp0SraT4dJbsI7FZwjziDhZxH+ATmIsbb
+ Kql4oUhkX+us1ZmJ42xUQasNo8zIArVrpR8vPsLM2jB/KzVDVkBjOTYmsByxB6ebMmMZFuPQd
+ Q1ynq6X0xmA9TnjqSxTZikf1QA00We/n674kmX1LPWfbLz9t1njHTRpVxCALOyNjl22t9oqC0
+ X5HvRIzJpn99vxUo1kTCGnHvD9Z8ouFu6TplGDfMsbVcUxgipevllxBYDC6h7bNmKhBjqnTMK
+ 06KakDCYlO0MY5EqGM2o5YxobEmB4gMoCiId14JTpNmX/F3DYudyaFLE0P+lWuFO7tUdgIZ/p
+ hgGMynJm3bUU5Gt08dqMxN+WABde7p7fXqouDHErv3RZaOoAz6dcjciU+wuCblZWxT0OC28oP
+ 2u+KrAW0cbW4rM3u3mhzvA4/EA+YrH3HZHdGpWT3e9DlT2ljYYgQBAHO0cTMM/hSp1MuYkjdS
+ 41dTTuSXboMqixDvStEni4kBMKHteWCKINqCGhSJZBVy3lEq2Rb9jsrRZemdRp4Vhj4RMcfhE
+ Fxrt899EKT3VTfQKp4V20bneFn76TA5cuj+Bcg==
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190427_055304_251771_A458966C 
-X-CRM114-Status: GOOD (  10.85  )
+X-CRM114-CacheID: sfid-20190427_055302_314592_87D03F8C 
+X-CRM114-Status: GOOD (  11.74  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [212.227.126.131 listed in list.dnswl.org]
+ no trust [212.227.126.133 listed in list.dnswl.org]
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -88,54 +88,67 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-checkpatch complaints:
+Fill the struct uart_port->mapsize field and use it, insteaf of
+hardcoded values in many places. This makes the code layout a bit
+more consistent and easily allows using generic helpers for the
+io memory handling.
 
-    WARNING: printk() should include KERN_<LEVEL> facility level
-    #698: FILE: drivers/tty/serial/sb1250-duart.c:698:
-    +		printk(err);
-
-    WARNING: printk() should include KERN_<LEVEL> facility level
-    #706: FILE: drivers/tty/serial/sb1250-duart.c:706:
-    +			printk(err);
-
-Even though it's a false alarm here (the string is already prefixed
-w/ KERN_ERR), it's nicer to use pr_err() here, which also makes
-checkpatch happy.
+Candidates for such helpers could be eg. the request+ioremap and
+iounmap+release combinations.
 
 Signed-off-by: Enrico Weigelt <info@metux.net>
 ---
- drivers/tty/serial/sb1250-duart.c | 6 +++---
- 1 file changed, 3 insertions(+), 3 deletions(-)
+ drivers/tty/serial/sb1250-duart.c | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
 
 diff --git a/drivers/tty/serial/sb1250-duart.c b/drivers/tty/serial/sb1250-duart.c
-index b4342c8..227af87 100644
+index 227af87..1184226 100644
 --- a/drivers/tty/serial/sb1250-duart.c
 +++ b/drivers/tty/serial/sb1250-duart.c
-@@ -689,13 +689,13 @@ static int sbd_map_port(struct uart_port *uport)
+@@ -658,7 +658,7 @@ static void sbd_release_port(struct uart_port *uport)
  
- static int sbd_request_port(struct uart_port *uport)
- {
--	const char *err = KERN_ERR "sbd: Unable to reserve MMIO resource\n";
-+	const char *err = "sbd: Unable to reserve MMIO resource\n";
+ 	if(refcount_dec_and_test(&duart->map_guard))
+ 		release_mem_region(duart->mapctrl, DUART_CHANREG_SPACING);
+-	release_mem_region(uport->mapbase, DUART_CHANREG_SPACING);
++	release_mem_region(uport->mapbase, uport->mapsize);
+ }
+ 
+ static int sbd_map_port(struct uart_port *uport)
+@@ -668,7 +668,7 @@ static int sbd_map_port(struct uart_port *uport)
+ 
+ 	if (!uport->membase)
+ 		uport->membase = ioremap_nocache(uport->mapbase,
+-						 DUART_CHANREG_SPACING);
++						 uport->mapsize);
+ 	if (!uport->membase) {
+ 		dev_err(uport->dev, "Cannot map MMIO (base)\n");
+ 		return -ENOMEM;
+@@ -693,7 +693,7 @@ static int sbd_request_port(struct uart_port *uport)
  	struct sbd_duart *duart = to_sport(uport)->duart;
  	int ret = 0;
  
- 	if (!request_mem_region(uport->mapbase, DUART_CHANREG_SPACING,
+-	if (!request_mem_region(uport->mapbase, DUART_CHANREG_SPACING,
++	if (!request_mem_region(uport->mapbase, uport->mapsize,
  				"sb1250-duart")) {
--		printk(err);
-+		pr_err(err);
+ 		pr_err(err);
  		return -EBUSY;
- 	}
- 	refcount_inc(&duart->map_guard);
-@@ -703,7 +703,7 @@ static int sbd_request_port(struct uart_port *uport)
- 		if (!request_mem_region(duart->mapctrl, DUART_CHANREG_SPACING,
- 					"sb1250-duart")) {
- 			refcount_dec(&duart->map_guard);
--			printk(err);
-+			pr_err(err);
- 			ret = -EBUSY;
+@@ -716,7 +716,7 @@ static int sbd_request_port(struct uart_port *uport)
  		}
  	}
+ 	if (ret) {
+-		release_mem_region(uport->mapbase, DUART_CHANREG_SPACING);
++		release_mem_region(uport->mapbase, uport->mapsize);
+ 		return ret;
+ 	}
+ 	return 0;
+@@ -812,6 +812,7 @@ static void __init sbd_probe_duarts(void)
+ 			uport->ops	= &sbd_ops;
+ 			uport->line	= line;
+ 			uport->mapbase	= SBD_CHANREGS(line);
++			uport->mapsize	= DUART_CHANREG_SPACING;
+ 		}
+ 	}
+ }
 -- 
 1.9.1
 
