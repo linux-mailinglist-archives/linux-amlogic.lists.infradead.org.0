@@ -2,8 +2,8 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9FF0CB364
-	for <lists+linux-amlogic@lfdr.de>; Sat, 27 Apr 2019 14:53:46 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 02153B365
+	for <lists+linux-amlogic@lfdr.de>; Sat, 27 Apr 2019 14:53:50 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,58 +11,60 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=VNuGWeeaHJwHKPCp2DyXDP4VRTDN4vocCKiZU6hBGQg=; b=lQ0wUdYDwkTTNZvl1/5FSgRRw4
-	3igMO4rhh1ualXAPg8emOXtgxnaBYD1xeseUM9TmIjCjSCYnpJbV8Ep08gA1PaGbLKMoghhTm9I2v
-	SxLYChC1LGkCK3Av5FafKR4apJQjUWs3QDx+rfHiRXxTInWtNRIa3WcEeHle0CUrW+J7Adr4tGkoM
-	ryV8d34goVAXpPWMQk6wpu15aJvpMMjxaFeVr1e13+da1rBsk/WIGPFOzOgGxVyE62vNgrB0dx0Kf
-	uKw2RW4nxpE9h4wX4YdHN1+G6CIYksXmI8I9NYo+nvEXU4Y7HsYUGKprHy5zvCy04PWP91c2++nep
-	EGDm59DQ==;
+	bh=80Ma5CGfVYSHhblpWvUSqq82cdqCwpIQxwpqJMEYHAo=; b=cRmDswLiJaDqN7FROiA4PZqKoY
+	UAg1/kPf01XiFy6FqJbO7Lqt0tU70qAhfUf28rfsip3dSGCpw8xJze3aE8fheznfpXgEvARadCZz3
+	K3dNNvmYPuSl3zXJblKyfBnnTHRntKcHdhe9V+IH+QH4P8naKtQ03bqDIIolA4Bfc9pigzxd8ZKIX
+	vcOQp1ojFjAWa17O7/Ta5tEMuaIsxIWwxT4dty0zlidsuF9s/oawXXP4kjcoDv3kj6OEYHasAmvf/
+	PExEc2KtMbhmKoj4ugi4Cg8+Uet/4fy4tTJymdIk4f1h6Da1BiIok4wBBptdrqcDVcSc9HL3vU7S2
+	UjXtEnSw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hKMpr-0001WN-Bg; Sat, 27 Apr 2019 12:53:43 +0000
-Received: from mout.kundenserver.de ([212.227.126.134])
+	id 1hKMpv-0001cR-Bu; Sat, 27 Apr 2019 12:53:47 +0000
+Received: from mout.kundenserver.de ([212.227.126.135])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hKMpG-0000hX-Fe
- for linux-amlogic@lists.infradead.org; Sat, 27 Apr 2019 12:53:11 +0000
+ id 1hKMpH-0000i5-0E
+ for linux-amlogic@lists.infradead.org; Sat, 27 Apr 2019 12:53:13 +0000
 Received: from orion.localdomain ([77.2.90.210]) by mrelayeu.kundenserver.de
  (mreue009 [212.227.15.167]) with ESMTPSA (Nemesis) id
- 1Mspy4-1gVqbT38iO-00tCHb; Sat, 27 Apr 2019 14:52:51 +0200
+ 1MhUDj-1gqW7b2XwJ-00efAG; Sat, 27 Apr 2019 14:52:52 +0200
 From: "Enrico Weigelt, metux IT consult" <info@metux.net>
 To: linux-kernel@vger.kernel.org
-Subject: [PATCH 21/41] drivers: tty: serial: cpm_uart: fix includes
-Date: Sat, 27 Apr 2019 14:52:02 +0200
-Message-Id: <1556369542-13247-22-git-send-email-info@metux.net>
+Subject: [PATCH 22/41] drivers: tty: serial: cpm_uart: fix logging calls
+Date: Sat, 27 Apr 2019 14:52:03 +0200
+Message-Id: <1556369542-13247-23-git-send-email-info@metux.net>
 X-Mailer: git-send-email 1.9.1
 In-Reply-To: <1556369542-13247-1-git-send-email-info@metux.net>
 References: <1556369542-13247-1-git-send-email-info@metux.net>
-X-Provags-ID: V03:K1:xQq23jU9i9rUL2fNQuvkwl6eGPDVSQvpkDbQ/zveful4zboC1HW
- oNd3D0zOYk84zfCJ0Xuzpmh6YQ79oPwoYvw/oeAO14yaLEcslLKcMENViWN+rlXtE9vM1qv
- 1jCwWuLOXgdLjw4fxAGT3BB8TcpKk2wNp9jWPWPgaYVVv0WEj/TEQ/U7sklnKXLuZSVuAgG
- ee5Mn3D1VCygJnSepJUyg==
+X-Provags-ID: V03:K1:6aniEe4uJcRcav5vVBfcQ4eLLFWMnqJpVC4vZyHJ9k0A6q/tn4j
+ b9DaJRxToUGOhrA8XctR1mPhJ0cf7Ttk2f4rAFWNa3fQjR7YkDeiN3gu2Jkvl9J2LTCqub4
+ NvWiLxdxAxFk1k9fhSMKs/EVAw4rvAGYukqY9dkQaz94+MijAkIVPXhEPMgivLXBUM8RACd
+ PwxeoNLw6M7rcZKmGYaIg==
 X-Spam-Flag: NO
-X-UI-Out-Filterresults: notjunk:1;V03:K0:xWgBbp/LG7s=:wi8MuLImVy2CGGeEYyoQB2
- KMmBNwIQx4fsztqkOwXtcxcWItI9eedJWvICvmKhOlHgaY8MtQ25FTCVmfHiYt3j9gS36aZaa
- q9Y5EIjEBd+qyl0GLPKh4hpFw2Y9xorJzSRbpppCWg9Lng+zZdTe/MiFG1F7kXNVSzq4lt2hL
- ezKmIOR+0ajJU88S0pj4Kvx7tgnm1+AxaE/XtB3sMY5Kc/X02sDkvp4m476q2eExmeEHf7yl3
- SS9ZDZappKf9esZiUUvzR4FWzO/lGAkyPEM5TbSsWcKPe4Hwz2W19UfQilH2TsF2+lwHqakd/
- 0zYcoNC9JBhT5LyMi+bJ4ixLs9s35MALlLW9l9uhuIfzTde5AJ+qVyxmXzjZs7+sgMLLy16T8
- wQ26qYtWIfsOeVfD03mLnlq295RwRXRcppjT2NdxNgQCjA8w3sUfILoNLj9Dn8itEgJAMtfl7
- V8Cx1WCsQKAgggypWMvmWuYLBZW9OCxv/vxSRFHvIZxRwPaRxNeKsu+/Fbb3nzWRANHyooXV/
- DsfRL+yilOXWQavlpzHDrWwcLFWzf4Q6C/lHFEf1NO221QjdJBnEIHiVYjdfQrgI7DXvLr6y0
- OOEW7gT7Kv/C1gTmxJIHJCzbWkK13YeuK27LFOraKAE3hMCkeL/cdQE0Eb+TGViA6xDeL5nsA
- 9JTsphma2cCsaVd+QVzhXQsK2WCBYwcJMcIA1O1vu+w/HuFJbyuBL4ArPqi6deE6sKSH4G7JK
- UZVfxUQPRjkUPT6CoClRC35MnUhRE+eqWHNnlA==
+X-UI-Out-Filterresults: notjunk:1;V03:K0:N1DUCAE49ps=:6Bg3z0yKDfbQlfXN15vFTK
+ CTXF7meBLhT1JFynkQvUub9OX3IH9Bn32MIrPU8KLGYu6xRSeeA/dv91WkdRSMB7jw5SdnYVU
+ fBjG6PFdpn1ZcQEzJLT3TEeYtiWNSTLLl+4olsmK1UCkntdxplgAH0cDkdqmRgBilTze2f7jr
+ yBoEZG/TEYQR7XOcNbzuiDrCWD/QGrMzOWGTHHxN6hQnmtCwz+JPrD3eLuSj6f48WAbwJlu1K
+ pi/aO1K/KDfh6fTnuKZ0wM3Rb509RDLGyiAS7Cq+EOzAfOuLQxlXxNmBU5uwfoZgNkZxLYXpG
+ LPA/VLSRM/do906EdV+T1SaqdwZoEwTB6TVOR/PMF8++fRGUXP3sVtBYfhqAlLOACU03kvhhT
+ e/wSlyyyIN8laaJjGbbkdmkScfnBHzxwxJJodWsT5x5MW2YdlWf5dVUI7B1fkpyAn6/3PpqHZ
+ ozeZgeiwzfUj7KdmcDro0QCipy3GpQh1Tv0Iq+NqFHBGaR3f3+cWDo3rDMych8CTVLTU1AVkl
+ 2XBtChbNXe7808yH+6vrzkl8qad8i15gpT2NYBjcGcbsv3Jx9SO4lLao075F0ckBuGvZ+84La
+ SuMyHOhs9Ph85GauTE8NUiSCnd851q5KRXd3jTIJoWrjlcnFeyNg6Od4d+LNqplzy1QwNfHER
+ tVlWKkonlZQPDNV6mjAqvrxGHz/Dn/JPo8WteDheS37jlKM3nioX2QkQZjoaYGONVb+tRUXJw
+ jl1OMAdapLwDVC/umjMb4TaNPso7exnunktkrQ==
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190427_055307_045128_6FBCAE36 
-X-CRM114-Status: UNSURE (   8.72  )
+X-CRM114-CacheID: sfid-20190427_055307_535404_15D4159C 
+X-CRM114-Status: UNSURE (   8.60  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.0 (/)
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [212.227.126.134 listed in list.dnswl.org]
+ no trust [212.227.126.135 listed in list.dnswl.org]
+ -0.2 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [212.227.126.135 listed in wl.mailspike.net]
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -88,55 +90,76 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Fixing checkpatch warning:
+Fix checkpatch warnings by using pr_err():
 
-    WARNING: Use #include <linux/io.h> instead of <asm/io.h>
-    #25: FILE: drivers/tty/serial/cpm_uart/cpm_uart_cpm2.c:25:
-    +#include <asm/io.h>
+    WARNING: Prefer [subsystem eg: netdev]_err([subsystem]dev, ... then dev_err(dev, ... then pr_err(...  to printk(KERN_ERR ...
+    #109: FILE: drivers/tty/serial/cpm_uart/cpm_uart_cpm2.c:109:
+    +		printk(KERN_ERR
 
-    WARNING: Use #include <linux/io.h> instead of <asm/io.h>
-    +#include <asm/io.h>
+    WARNING: Prefer [subsystem eg: netdev]_err([subsystem]dev, ... then dev_err(dev, ... then pr_err(...  to printk(KERN_ERR ...
+    #128: FILE: drivers/tty/serial/cpm_uart/cpm_uart_cpm2.c:128:
+    +		printk(KERN_ERR
 
-    WARNING: Use #include <linux/delay.h> instead of <asm/delay.h>
-    +#include <asm/delay.h>
+    WARNING: Prefer [subsystem eg: netdev]_err([subsystem]dev, ... then dev_err(dev, ... then pr_err(...  to printk(KERN_ERR ...
+    +           printk(KERN_ERR
+
+    WARNING: Prefer [subsystem eg: netdev]_err([subsystem]dev, ... then dev_err(dev, ... then pr_err(...  to printk(KERN_ERR ...
+    +           printk(KERN_ERR
 
 Signed-off-by: Enrico Weigelt <info@metux.net>
 ---
- drivers/tty/serial/cpm_uart/cpm_uart_core.c | 4 ++--
- drivers/tty/serial/cpm_uart/cpm_uart_cpm2.c | 2 +-
- 2 files changed, 3 insertions(+), 3 deletions(-)
+ drivers/tty/serial/cpm_uart/cpm_uart_cpm1.c | 6 ++----
+ drivers/tty/serial/cpm_uart/cpm_uart_cpm2.c | 6 ++----
+ 2 files changed, 4 insertions(+), 8 deletions(-)
 
-diff --git a/drivers/tty/serial/cpm_uart/cpm_uart_core.c b/drivers/tty/serial/cpm_uart/cpm_uart_core.c
-index 374b8bb..c831d31 100644
---- a/drivers/tty/serial/cpm_uart/cpm_uart_core.c
-+++ b/drivers/tty/serial/cpm_uart/cpm_uart_core.c
-@@ -33,10 +33,10 @@
- #include <linux/gpio.h>
- #include <linux/of_gpio.h>
- #include <linux/clk.h>
-+#include <linux/io.h>
-+#include <linux/delay.h>
+diff --git a/drivers/tty/serial/cpm_uart/cpm_uart_cpm1.c b/drivers/tty/serial/cpm_uart/cpm_uart_cpm1.c
+index 56fc527..aed61e9 100644
+--- a/drivers/tty/serial/cpm_uart/cpm_uart_cpm1.c
++++ b/drivers/tty/serial/cpm_uart/cpm_uart_cpm1.c
+@@ -71,8 +71,7 @@ int cpm_uart_allocbuf(struct uart_cpm_port *pinfo, unsigned int is_con)
+ 	dpmemsz = sizeof(cbd_t) * (pinfo->rx_nrfifos + pinfo->tx_nrfifos);
+ 	dp_offset = cpm_dpalloc(dpmemsz, 8);
+ 	if (IS_ERR_VALUE(dp_offset)) {
+-		printk(KERN_ERR
+-		       "cpm_uart_cpm1.c: could not allocate buffer descriptors\n");
++		pr_err("cpm_uart_cpm1.c: could not allocate buffer descriptors\n");
+ 		return -ENOMEM;
+ 	}
+ 	dp_mem = cpm_dpram_addr(dp_offset);
+@@ -90,8 +89,7 @@ int cpm_uart_allocbuf(struct uart_cpm_port *pinfo, unsigned int is_con)
  
--#include <asm/io.h>
- #include <asm/irq.h>
--#include <asm/delay.h>
- #include <asm/fs_pd.h>
- #include <asm/udbg.h>
+ 	if (mem_addr == NULL) {
+ 		cpm_dpfree(dp_offset);
+-		printk(KERN_ERR
+-		       "cpm_uart_cpm1.c: could not allocate coherent memory\n");
++		pr_err("cpm_uart_cpm1.c: could not allocate coherent memory\n");
+ 		return -ENOMEM;
+ 	}
  
 diff --git a/drivers/tty/serial/cpm_uart/cpm_uart_cpm2.c b/drivers/tty/serial/cpm_uart/cpm_uart_cpm2.c
-index ef1ae08..40cfcf4 100644
+index 40cfcf4..a0fccda 100644
 --- a/drivers/tty/serial/cpm_uart/cpm_uart_cpm2.c
 +++ b/drivers/tty/serial/cpm_uart/cpm_uart_cpm2.c
-@@ -21,8 +21,8 @@
- #include <linux/device.h>
- #include <linux/memblock.h>
- #include <linux/dma-mapping.h>
-+#include <linux/io.h>
+@@ -106,8 +106,7 @@ int cpm_uart_allocbuf(struct uart_cpm_port *pinfo, unsigned int is_con)
+ 	dpmemsz = sizeof(cbd_t) * (pinfo->rx_nrfifos + pinfo->tx_nrfifos);
+ 	dp_offset = cpm_dpalloc(dpmemsz, 8);
+ 	if (IS_ERR_VALUE(dp_offset)) {
+-		printk(KERN_ERR
+-		       "cpm_uart_cpm.c: could not allocate buffer descriptors\n");
++		pr_err("cpm_uart_cpm.c: could not allocate buffer descriptors\n");
+ 		return -ENOMEM;
+ 	}
  
--#include <asm/io.h>
- #include <asm/irq.h>
- #include <asm/fs_pd.h>
- #include <asm/prom.h>
+@@ -125,8 +124,7 @@ int cpm_uart_allocbuf(struct uart_cpm_port *pinfo, unsigned int is_con)
+ 
+ 	if (mem_addr == NULL) {
+ 		cpm_dpfree(dp_offset);
+-		printk(KERN_ERR
+-		       "cpm_uart_cpm.c: could not allocate coherent memory\n");
++		pr_err("cpm_uart_cpm.c: could not allocate coherent memory\n");
+ 		return -ENOMEM;
+ 	}
+ 
 -- 
 1.9.1
 
