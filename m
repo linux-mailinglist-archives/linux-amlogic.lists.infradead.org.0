@@ -2,8 +2,8 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id AA8D1B35E
-	for <lists+linux-amlogic@lfdr.de>; Sat, 27 Apr 2019 14:53:33 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 46C7EB363
+	for <lists+linux-amlogic@lfdr.de>; Sat, 27 Apr 2019 14:53:45 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,50 +11,50 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=5w3r2Ub5Z4l4WOcVKoy8mr2TRBwmoCfzfOuE8PHLHhg=; b=J1AgzpGsN5QhDyRWkXMTVhTvYq
-	YyVVFidPJRdxpBarwMxjC+volYt7RZR+jAxpCcSJtchl2tkZjGMM6O580xRsRPcp9x6UiROr3zMjy
-	XgdNamIHzgebHIOlDcGkM8JsIPB75pRyQ507J1x0sVTtO62kdR6hlkRL8i188UxGqIkTP7J43cnDu
-	oe/f36qxL3dhuvskjUI30SXpDRV/omiA9RWEFNSADUiTdbeznafcTcQDeVkpTlnq0Rlbjvdk2zib1
-	+Ym9aT/iu2RWdUVgQ9tXP57JrPYph8fLHR+i5a+KBHP5C5owoQtwJuJZvwpFRmSntpe+pcmH9jFPA
-	bB/WDBwg==;
+	bh=jzzqsXa+76Pp3uohVhg/jdX/SlE/VAx1Xmz5Fie+IfY=; b=EC0AO4i6xZdyzBeopUkLcu7CbO
+	GRrvGOno7SQSf+8yPgij99HbC//ngVjNvi/dWTEQsoseTODRenD9mL2uQD9H5nnAzonOEnieHoGg5
+	om0EmxJAhmHc4NqQG16qdDMmKJszBSjPZ5BuNfc+QbO5tLIX+ugGLOUWyrh23z5DVft/1eg1XRVjL
+	bzCVhdPOrmcp65+AZuaNOy/b2iYpAwoOxy6cZQBquNlmO+GXrVPLKaNGIn5SnV305MRLMzlCi//gg
+	nXDm96VY1i9Fy1FLfzN+qqSvL+0xuzXnpaAmhlczzA3LxYoMxqrkhiwhbVX7EzLmc8DWC64zLMqLf
+	WUjyqtxg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hKMpd-0001Ef-1r; Sat, 27 Apr 2019 12:53:29 +0000
-Received: from mout.kundenserver.de ([212.227.126.130])
+	id 1hKMpo-0001Rl-6i; Sat, 27 Apr 2019 12:53:40 +0000
+Received: from mout.kundenserver.de ([212.227.126.135])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hKMpC-0000dA-Gu
- for linux-amlogic@lists.infradead.org; Sat, 27 Apr 2019 12:53:08 +0000
+ id 1hKMpE-0000fS-Mt
+ for linux-amlogic@lists.infradead.org; Sat, 27 Apr 2019 12:53:10 +0000
 Received: from orion.localdomain ([77.2.90.210]) by mrelayeu.kundenserver.de
  (mreue009 [212.227.15.167]) with ESMTPSA (Nemesis) id
- 1MdeSn-1glaAQ1CHx-00ZjUI; Sat, 27 Apr 2019 14:52:47 +0200
+ 1Mdvyo-1gklM610Mw-00b6vt; Sat, 27 Apr 2019 14:52:48 +0200
 From: "Enrico Weigelt, metux IT consult" <info@metux.net>
 To: linux-kernel@vger.kernel.org
-Subject: [PATCH 16/41] drivers: tty: serial: uartlite: fix overlong lines
-Date: Sat, 27 Apr 2019 14:51:57 +0200
-Message-Id: <1556369542-13247-17-git-send-email-info@metux.net>
+Subject: [PATCH 17/41] drivers: tty: serial: apbuart: fix logging calls
+Date: Sat, 27 Apr 2019 14:51:58 +0200
+Message-Id: <1556369542-13247-18-git-send-email-info@metux.net>
 X-Mailer: git-send-email 1.9.1
 In-Reply-To: <1556369542-13247-1-git-send-email-info@metux.net>
 References: <1556369542-13247-1-git-send-email-info@metux.net>
-X-Provags-ID: V03:K1:Ck93dTfp9+M+xebhyVSLDIJuo4MjSGOjDhbkWBRUIflN7U9qSCe
- pUde8jE0w5A43JR5NuYza+AsYcjHeRQdVwFH5DfzOGQOqRZzgRch+fJcKukuNGfeEOytvZR
- 5/10Xwz0fpHNGToPKDV3mQbY+HwaGvDTud8ym7VEBca8ousV2I6zja+sNCKPIsmKUiAW4+V
- hJqAZT0gvkBV1/kztVb2Q==
+X-Provags-ID: V03:K1:74q7QZbgRgRsAUkPp9HoIcby/AiA8t4Mu2TUa7cvirQmdem+3Am
+ 8EQGnLshuK8zT/JT/rXJ1jMsYvUFcIBhmVWtNocXE1OdQlrcN6zxnc0lOKUkbKlCtWRyBOs
+ SfDclKxIBbTDIEFobqRgxh4RYW3wCVdlAW+GkkAV2vRB5P9CXtzp+iTfXlW2e2cAPKtq+p3
+ x9rgoBVikwGuHrHXLrrgQ==
 X-Spam-Flag: NO
-X-UI-Out-Filterresults: notjunk:1;V03:K0:lFLVA5ANqXA=:+nwoqH7LETA5l4ZD6Cy0by
- 9QQxF9w7JwL9dfUQLkTSklNQAm9TDaWBKAb/AK8KrfiMTcGzLt9Ee5RiujQGuJAuFYCa25OaW
- PsRCxkE462T85gSy8Pd/1exhcYQsoX46KyLQ4ZKSeHvVV8tbKS/OwkFfGrRHmBQ8UlBeXLZK5
- ebF4s0a/Z8QgHeSqLp8Mld3p8Su8UoV9Y8qvT6GUpcFbwp930569alSTM8wqnyrp9aFJ3bviY
- wC6Tzx19GZ9/leyIqE3JEmv02FWM4Ec4A6QWgiqsopsuDAzIuR2eWi4DxrYaPHzxccOjVXhW2
- RfH12CPwxeEkAGqjze7Djw/S5IYL86ng+BscK9UV3x0uudrqH2DvL3151YkbTo13FkHwqeNnW
- DIe1MAVVKDPOOe4QN7noYVLhRj71YKuN4gMT/LJ+u880TUoLEHCWMILbm5ZFZyvlzBG6K47hU
- 9N57YDdSPilc+UdCPlSqXcQ4hJByXjZkI6wRREnTfmyit5sfL61G8Cy9lTvJngnoKEflZ/q/D
- +VkFl7qZhum7WEPeks7u2yKFDTGflXCZYn2mA1tQq+cnqN0OJ85RJZpWS9w6/wqjPbVQmeHnX
- K1uOze3TXyWYC56Tqwpenyo+uVz9fCc59R4P6VjWRvoYFvUN2alVsNGhQFk7qhdBWZ+GW9efn
- J+EJarUbpowxoppGXDdCKd50A08hfJxVUT6cLO8NZbGm/sKEm6hc8cXIke/czqdZS6Z34iUaH
- iiO7jtF61oWxoOCw5a6wqJbKewrFO8VHKUZg/A==
+X-UI-Out-Filterresults: notjunk:1;V03:K0:eYy4U1g0WLc=:NNFGO3HSiL3iJ9KcFjVqxr
+ L5C8Q9zl9SvmSbmk/WXj0EtqOWebYE+T7FuU8NbONX8KrKJZIyetKuuIZvT8JMDBFYYByMJZS
+ ZsFYAvVpW3OFJvRwTYlig7Z7pR26iD35iZ9qIWBGrEIbU0eFvBZQ71UaNgyABlpQP25ws5FXx
+ zrLsNqdWLdTYHD+VbjQ2gcBFD+6RdC1lVS7GjBn6O6RXVwO/iyuYzHrqd5SEOWYe1mDV/xpcT
+ firFlNyM/Y3UYi3z9yFwOZm/mLwOjrKLozqyAUIs5Ee1Dmld6FQR8HBR0gglIETNeESeoBwlk
+ j+oqvl9LqtcoRzBeZIaDULJqLJ4PYBQl+ouSd6ruS0W1erDls6LCPPf+9fmou3wGiubPjT5zT
+ ZbgpAa+a1FPjCO83yXjVKgwftQDqhNYdtBRkumaxJv167CNq/8HacT+etLB6xjbv0OqTHED+j
+ UvHg77KbgPh+lW5z+3aUS+YSda3oF0cX02uC6pzmIguLQ6peLHzvjrLLNo+veCHi5xqdsuTc3
+ 1tIcr/FtqrUmGyJUAz09ZrsHVYJ13qXd7jVIIkZlpH+9sVbqBaFk0ImoQJTKOflNY7Mfb14LT
+ WYOkAkc2qSUAf3D4KAVdI2JRi0lez/a/5/g0MNrh/HEtZiDvSBJaDosnHksn31H+JuOZRTpBV
+ XhT4gdKHIwiv+Itmb2O00YCnnIBT4FoF90IGJGwKRMu7AvSI5rBVKeCNSHQbXqFGnfcMvGqVG
+ qH3e6Ibc4dkf9y2PyMnfIib4diOFSWqdZxE4aQ==
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190427_055302_897706_1F19B84E 
-X-CRM114-Status: UNSURE (   9.92  )
+X-CRM114-CacheID: sfid-20190427_055305_286716_6E236CA5 
+X-CRM114-Status: UNSURE (   9.30  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -62,9 +62,9 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [212.227.126.130 listed in list.dnswl.org]
+ no trust [212.227.126.135 listed in list.dnswl.org]
  -0.2 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [212.227.126.130 listed in wl.mailspike.net]
+ [212.227.126.135 listed in wl.mailspike.net]
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -92,63 +92,69 @@ Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
 Fix checkpatch warnings:
 
-    WARNING: line over 80 characters
-    #283: FILE: drivers/tty/serial/uartlite.c:283:
-    +	ret = request_irq(port->irq, ulite_isr, IRQF_SHARED | IRQF_TRIGGER_RISING,
+    WARNING: Prefer using '"%s...", __func__' to using 'apbuart_console_setup', this function's name, in a string
+    #491: FILE: drivers/tty/serial/apbuart.c:491:
+    +	pr_debug("apbuart_console_setup co=%p, co->index=%i, options=%s\n",
 
-    WARNING: Missing a blank line after declarations
-    #577: FILE: drivers/tty/serial/uartlite.c:577:
-    +	struct earlycon_device *device = console->data;
-    +	uart_console_write(&device->port, s, n, early_uartlite_putc);
+    WARNING: Prefer [subsystem eg: netdev]_info([subsystem]dev, ... then dev_info(dev, ... then pr_info(...  to printk(KERN_INFO ...
+    #661: FILE: drivers/tty/serial/apbuart.c:661:
+    +	printk(KERN_INFO "Serial: GRLIB APBUART driver\n");
 
-    WARNING: line over 80 characters
-    #590: FILE: drivers/tty/serial/uartlite.c:590:
-    +OF_EARLYCON_DECLARE(uartlite_b, "xlnx,opb-uartlite-1.00.b", early_uartlite_setup);
+    WARNING: Prefer [subsystem eg: netdev]_err([subsystem]dev, ... then dev_err(dev, ... then pr_err(...  to printk(KERN_ERR ...
+    #666: FILE: drivers/tty/serial/apbuart.c:666:
+    +		printk(KERN_ERR "%s: uart_register_driver failed (%i)\n",
 
-    WARNING: line over 80 characters
-    #591: FILE: drivers/tty/serial/uartlite.c:591:
-    +OF_EARLYCON_DECLARE(uartlite_a, "xlnx,xps-uartlite-1.00.a", early_uartlite_setup);
+    WARNING: Prefer [subsystem eg: netdev]_err([subsystem]dev, ... then dev_err(dev, ... then pr_err(...  to printk(KERN_ERR ...
+    #673: FILE: drivers/tty/serial/apbuart.c:673:
+    +		printk(KERN_ERR
 
 Signed-off-by: Enrico Weigelt <info@metux.net>
 ---
- drivers/tty/serial/uartlite.c | 10 +++++++---
- 1 file changed, 7 insertions(+), 3 deletions(-)
+ drivers/tty/serial/apbuart.c | 15 +++++++--------
+ 1 file changed, 7 insertions(+), 8 deletions(-)
 
-diff --git a/drivers/tty/serial/uartlite.c b/drivers/tty/serial/uartlite.c
-index 6f79353..0140cec 100644
---- a/drivers/tty/serial/uartlite.c
-+++ b/drivers/tty/serial/uartlite.c
-@@ -280,7 +280,8 @@ static int ulite_startup(struct uart_port *port)
+diff --git a/drivers/tty/serial/apbuart.c b/drivers/tty/serial/apbuart.c
+index 60cd133..d2b86f7 100644
+--- a/drivers/tty/serial/apbuart.c
++++ b/drivers/tty/serial/apbuart.c
+@@ -482,8 +482,8 @@ static int __init apbuart_console_setup(struct console *co, char *options)
+ 	int parity = 'n';
+ 	int flow = 'n';
+ 
+-	pr_debug("apbuart_console_setup co=%p, co->index=%i, options=%s\n",
+-		 co, co->index, options);
++	pr_debug("%s() co=%p, co->index=%i, options=%s\n",
++		 __func__, co, co->index, options);
+ 
+ 	/*
+ 	 * Check whether an invalid uart number has been specified, and
+@@ -650,21 +650,20 @@ static int __init grlib_apbuart_init(void)
+ 	if (ret)
+ 		return ret;
+ 
+-	printk(KERN_INFO "Serial: GRLIB APBUART driver\n");
++	pr_info("Serial: GRLIB APBUART driver\n");
+ 
+ 	ret = uart_register_driver(&grlib_apbuart_driver);
+ 
+ 	if (ret) {
+-		printk(KERN_ERR "%s: uart_register_driver failed (%i)\n",
+-		       __FILE__, ret);
++		pr_err("%s: uart_register_driver failed (%i)\n",
++		       __func__, ret);
  		return ret;
  	}
  
--	ret = request_irq(port->irq, ulite_isr, IRQF_SHARED | IRQF_TRIGGER_RISING,
-+	ret = request_irq(port->irq, ulite_isr,
-+			  IRQF_SHARED | IRQF_TRIGGER_RISING,
- 			  "uartlite", port);
- 	if (ret)
+ 	ret = platform_driver_register(&grlib_apbuart_of_driver);
+ 	if (ret) {
+-		printk(KERN_ERR
+-		       "%s: platform_driver_register failed (%i)\n",
+-		       __FILE__, ret);
++		pr_err("%s: platform_driver_register failed (%i)\n",
++		       __func__, ret);
+ 		uart_unregister_driver(&grlib_apbuart_driver);
  		return ret;
-@@ -574,6 +575,7 @@ static void early_uartlite_write(struct console *console,
- 				 const char *s, unsigned int n)
- {
- 	struct earlycon_device *device = console->data;
-+
- 	uart_console_write(&device->port, s, n, early_uartlite_putc);
- }
- 
-@@ -587,8 +589,10 @@ static int __init early_uartlite_setup(struct earlycon_device *device,
- 	return 0;
- }
- EARLYCON_DECLARE(uartlite, early_uartlite_setup);
--OF_EARLYCON_DECLARE(uartlite_b, "xlnx,opb-uartlite-1.00.b", early_uartlite_setup);
--OF_EARLYCON_DECLARE(uartlite_a, "xlnx,xps-uartlite-1.00.a", early_uartlite_setup);
-+OF_EARLYCON_DECLARE(uartlite_b, "xlnx,opb-uartlite-1.00.b",
-+		    early_uartlite_setup);
-+OF_EARLYCON_DECLARE(uartlite_a, "xlnx,xps-uartlite-1.00.a",
-+		    early_uartlite_setup);
- 
- #endif /* CONFIG_SERIAL_UARTLITE_CONSOLE */
- 
+ 	}
 -- 
 1.9.1
 
