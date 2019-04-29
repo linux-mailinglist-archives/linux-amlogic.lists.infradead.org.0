@@ -2,100 +2,74 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0DFB6DCE0
-	for <lists+linux-amlogic@lfdr.de>; Mon, 29 Apr 2019 09:31:02 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4A889DC2C
+	for <lists+linux-amlogic@lfdr.de>; Mon, 29 Apr 2019 08:49:34 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Ili6apw1F/bBH+XqPMDEXXn0zVNdqv7vPkfUaoQiCfU=; b=hmgg0tIh/WTNpI
-	2T0gTeXrbWte2UpwZRGXV9ifGJjPOBJitoS+X6fh29mbE9PkAQrfLSXNVfhvr2IrAv6jq3MzT2Zp9
-	PJXW5YSdeaidet9tsErB/FmYY0UJYMajMRk7R0REi/wSIjUPobkFZx3hQ7J9UIDBrjhiFh6w3NUEY
-	C6J0eYWypMiZGW1OH7Uf1sMHhW6coGOjTJMZKbRAJR9FdaqYt5D30PMlfmA8YstWc6U8UMnCAZC8O
-	bEJuJoVBUw+XQU3miU+41vJArX9DKQ8oxGVcxxtn86ycoE3DbaPicLHouhnpVkRp+rmEygBjk9Xts
-	DL18BW4XrudkMVFt+dMA==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
+	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=sl1DB1dr5PWdFwWqB8XdURxo5p4DP9Fhduj4u+pvejc=; b=nS8SDDSBbb9dIL
+	gpvlNRVE1S1V/6Nm7COu9mY+f0NrWjmXFtyHpamHKhnlxH+p5mBkexM7Vnoq81f+lF0bgbdexfu00
+	suI1OoTl55tD58WDy6wDxfGzDwWpFqrpIQtCrzbbgoPiGfjW22BPGGyiGYUpEBuIcx/7/zTmaSr4z
+	CPFC9+uJp+01nlVq8XuPLHw8EwBDQ4pn2xNbzj2axJss69n7HWNnzFGYQE7dkfzv2GZkYiyNuAVMz
+	uzqhOBouWjbOSyxfERHqlu2nSBVMnkJYOl3Bm+R0gv3oaIzZNkCMEcqSalLlqGw5U0BtjwUaUaaOA
+	3DsrWjiRY12GEpYuCrbA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hL0kd-0007I9-FO; Mon, 29 Apr 2019 07:30:59 +0000
-Received: from merlin.infradead.org ([2001:8b0:10b:1231::1])
+	id 1hL06U-0001dV-Ip; Mon, 29 Apr 2019 06:49:30 +0000
+Received: from mout.kundenserver.de ([217.72.192.75])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hL0kb-0007Hd-Vr
- for linux-amlogic@bombadil.infradead.org; Mon, 29 Apr 2019 07:30:57 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=infradead.org; s=merlin.20170209; h=In-Reply-To:Content-Type:MIME-Version:
- References:Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:
- Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:
- List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=cNiynyKRK+6NofuA5ESyTbqlxT6F8CVlPOs0I0hIaNY=; b=BApoV7mqK9QnA92wh5sfaOs8z
- WpmER7n7+ZiJ0D0vNdcmb7xuH69LvH71hNtuIQtPSTkAjcK8i206Au8fr0xkEOXsMr73DJDwWcRBo
- KcUF2JFZSdu+EQs6IcHN2AsVjEwWEp7HWNY/OPLfWyfihV+kKDMaz8w1R3oDudbD0bxfVcpFBMKPZ
- 6aECgJs1AlBeKtd469JGa6NWltSbiycw5m/2TDSC4ceXbonaC/ljNvU2bmZASf5FSv+VvzfGRuU/U
- xyTVRdIOhC9OQRoaHaWS4g2XvKXcl9V9oY+3uvFEzCkiok9OLjjCm6RMmg3K01gcjEy/kSReQtOXH
- RNe7va9mA==;
-Received: from mail-lj1-x244.google.com ([2a00:1450:4864:20::244])
- by merlin.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hL0DJ-0006EZ-PP
- for linux-amlogic@lists.infradead.org; Mon, 29 Apr 2019 06:56:34 +0000
-Received: by mail-lj1-x244.google.com with SMTP id y8so1902827ljd.3
- for <linux-amlogic@lists.infradead.org>; Sun, 28 Apr 2019 23:56:29 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=lixom-net.20150623.gappssmtp.com; s=20150623;
- h=date:from:to:cc:subject:message-id:references:mime-version
- :content-disposition:in-reply-to:user-agent;
- bh=cNiynyKRK+6NofuA5ESyTbqlxT6F8CVlPOs0I0hIaNY=;
- b=fZPAINdqdX5BVZp0syZ9egbOY4oyAfzmKcQER0uvV2G7c0R4FFxrs3HKnq/Xowrk0G
- YvHhGGkFKQhYL9Fie3epjCDwCfjbQqtwx0HRqlChob3vNuH1ZABZLA/DwXJFIzosayj4
- x369xndNWcdpnWR9zxM2ItQTZaudpvXx5tFAbll9QPWSe2hmZWq9BzIKV81h1Cv5a4Q3
- fILO5Qf/yx95Dm3V9hAI7EJ2uXF71x++9qZzoYi6ZfRxjyDhI4vxD7iUL6yiTv9bTjBG
- kRT9kPG0QatqdJY0Qhfi6NRAoLVkOowDi2ElXdYlEe3D2I7MfyFOH2NbSXbUEBBg26Tq
- Rakw==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=cNiynyKRK+6NofuA5ESyTbqlxT6F8CVlPOs0I0hIaNY=;
- b=Q/QmF3BdFukjWDNGzkFJnf4yeu4uDLIKdzt6BHfTV2ohSBhBwDrtiSUrCPATwNRyFg
- 8W6FdRTXhbxWwjldXHgdm3MERj8TVPLvC2WjGVf6CJ5xtcsgmXA4NY1IadLSFgkM0nib
- 3yqdAGzsINU6hNiRlqzoQWEf0dQHy3ZSz6Syy3GnCVCZsM/5Sow5MJjhBtYF6eVTEo28
- MZ4XB2IqHYWIGU0rVUaw5R8WNpW/waMCw5j65NgOiPmpTX6xpAgFqR+1cxcKkHY6aRee
- raEG2w2OYIPqeNvv/1qZsf7KuEAcJWK9vQP1iaPy4gFPqelivh7eNJT/GMtSd8K6j56U
- g1sw==
-X-Gm-Message-State: APjAAAUf1exQ4HUhF3weqQsnT6JWrtOjZTpSkxSFVxnr99fkvCFuyVUX
- S6DfOt8OHH2B1hfNSr3MtXvtrw==
-X-Google-Smtp-Source: APXvYqwiQ8deQZirgfFJHIjf/B0x0s4k0KDXPLq/du0lkV0l+EX0JlZhHGtP1SiU/DnV40iDGzeiHA==
-X-Received: by 2002:a2e:9dcb:: with SMTP id x11mr16048936ljj.123.1556520987023; 
- Sun, 28 Apr 2019 23:56:27 -0700 (PDT)
-Received: from localhost (h85-30-9-151.cust.a3fiber.se. [85.30.9.151])
- by smtp.gmail.com with ESMTPSA id e10sm136357ljf.5.2019.04.28.23.56.25
- (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
- Sun, 28 Apr 2019 23:56:25 -0700 (PDT)
-Date: Sun, 28 Apr 2019 23:44:30 -0700
-From: Olof Johansson <olof@lixom.net>
-To: Kevin Hilman <khilman@baylibre.com>
-Subject: Re: [GIT PULL] soc: amlogic: updates for v5.2, round 2
-Message-ID: <20190429064430.bmjs7q3x3smvbkw5@localhost>
-References: <7hy343a098.fsf@baylibre.com>
+ id 1hL06R-0001dD-8o
+ for linux-amlogic@lists.infradead.org; Mon, 29 Apr 2019 06:49:28 +0000
+Received: from [192.168.1.110] ([77.9.18.117]) by mrelayeu.kundenserver.de
+ (mreue106 [212.227.15.183]) with ESMTPSA (Nemesis) id
+ 1Mcp3E-1gl7730n7C-00ZzhK; Mon, 29 Apr 2019 08:48:59 +0200
+Subject: Re: [PATCH 37/41] drivers: tty: serial: 8250: simplify io resource
+ size computation
+To: Andy Shevchenko <andriy.shevchenko@linux.intel.com>,
+ "Enrico Weigelt, metux IT consult" <info@metux.net>
+References: <1556369542-13247-1-git-send-email-info@metux.net>
+ <1556369542-13247-38-git-send-email-info@metux.net>
+ <20190428152103.GP9224@smile.fi.intel.com>
+From: "Enrico Weigelt, metux IT consult" <lkml@metux.net>
+Organization: metux IT consult
+Message-ID: <431b36fe-3071-fcfd-b04e-b4b293e79a80@metux.net>
+Date: Mon, 29 Apr 2019 08:48:53 +0200
+User-Agent: Mozilla/5.0 (X11; Linux i686 on x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.2.1
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <7hy343a098.fsf@baylibre.com>
-User-Agent: NeoMutt/20170113 (1.7.2)
+In-Reply-To: <20190428152103.GP9224@smile.fi.intel.com>
+Content-Language: en-US
+X-Provags-ID: V03:K1:M88UFXLBX4VkHOON6uaOcOnE636KnuLI4S/ApACS+qnAPKvNe1+
+ 9MFUOX3DMU30BBIWozSwvAEA9pGnmBl6OGeXBQ8Y1viVSeN44w0UCqfu9VYX20rWKj/nkKL
+ vlvP3uU93E8RgsPKi9ujRFjje3G/Y2BUL7L9RvbqLvk4fuIny6ic9WkRhGLxllJ4DYLhyIb
+ wH0HgSJz+Bi+9teW53wMg==
+X-Spam-Flag: NO
+X-UI-Out-Filterresults: notjunk:1;V03:K0:UkSaLiNxTwM=:2TXPwgpE5+RBFRbyUqHOFQ
+ xeHDo/3j0Na0BnkC+0JTCEUa34sTmyQbRB7w4ugZtpJdoNSu1xdU+BMA09hadC91DTT1c0yzO
+ kuk7XpLkyI+N0+19kIGZ5gCjqYsD/gbKZ8Qyy9JocWvi4y1vEXHasSDdt8iTaU9VrQLQy8flK
+ qSDevaqy2gkfA3bR4BtjfkFZnSKHQtpDiqq3mXC+4IcTnAFIySQzIAlEJJiI55bqb+tSkbzKq
+ owQcCerB9D3TCNpnxqqLNVjWK+g79RDFMzNjrcbVvEkGniIRma6jIIKMCyNf42DVoMiMrhh0x
+ aXAPFtRiFh/GxROS/IxKSP4wV6B5wR/h27VqFY21bHhQofeIIGTmI0KiIabQGBsdW35kxOhxg
+ 1i/1jG+pgigRkOKnignHIi2N2wHB6JAqxpWKLNKvEGWP50G0wE8Z6ORBFJtpohgAXfmwiFBxW
+ 3n1pn+bbr+SvajsKMQUl3+ZkelGKovLL03+RClDxUZP2SUJsaCOHtLAKZGFiCfwViK8E8xgfT
+ G9pOuAh4EzKSrpcY52lyA+aZpShZ857A09XO01lj1MT/UIHMroXwGqPKTYB4pmEmeIzsrBOO+
+ 5T+0kwhObrwWG+hIxyGgBRbGwhYmyae04xr2e8gQMLYXfoA6nSOT3OsoSAIHPclTioTlxFhoE
+ Oa4DTHlLTaZWs27uSZAC9epbFBl9Fx2JmP26IreUA0ypMl3yx9fpLArWCrivScL7WAoEN62AS
+ VaOqKOyMslPbPSY1JUwq9qDAdgT3eIjQcZTeU8BmLykfVe2cq22dosTi4sw=
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190429_025633_850008_671B93EB 
-X-CRM114-Status: GOOD (  11.65  )
+X-CRM114-CacheID: sfid-20190428_234927_616830_30A0C156 
+X-CRM114-Status: UNSURE (   9.39  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
-X-Spam-Report: SpamAssassin version 3.4.2 on merlin.infradead.org summary:
+X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:244 listed in]
- [list.dnswl.org]
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
+ no trust [217.72.192.75 listed in list.dnswl.org]
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -107,35 +81,38 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: linux-amlogic@lists.infradead.org, arm@kernel.org,
- linux-arm-kernel@lists.infradead.org
+Cc: lorenzo.pieralisi@arm.com, linux-ia64@vger.kernel.org,
+ linux-serial@vger.kernel.org, andrew@aj.id.au, gregkh@linuxfoundation.org,
+ sudeep.holla@arm.com, liviu.dudau@arm.com, linux-kernel@vger.kernel.org,
+ vz@mleia.com, linux@prisktech.co.nz, sparclinux@vger.kernel.org,
+ khilman@baylibre.com, macro@linux-mips.org, slemieux.tyco@gmail.com,
+ matthias.bgg@gmail.com, jacmet@sunsite.dk, linux-amlogic@lists.infradead.org,
+ linux-mips@vger.kernel.org, linuxppc-dev@lists.ozlabs.org, davem@davemloft.net
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On Sun, Apr 21, 2019 at 07:41:55AM -0700, Kevin Hilman wrote:
-> The following changes since commit fdda0a6adc33536ad468f07db27325423703c5bc:
-> 
->   meson-gx-socinfo: add missing of_node_put after of_device_is_available (2019-03-18 09:07:32 -0700)
-> 
-> are available in the Git repository at:
-> 
->   https://git.kernel.org/pub/scm/linux/kernel/git/khilman/linux-amlogic.git tags/amlogic-drivers-2
-> 
-> for you to fetch changes up to bb1dca3a3900a00b881286c96340d6ab85eafe0c:
-> 
->   soc: amlogic: meson-gx-pwrc-vpu: Add support for G12A (2019-04-16 11:09:53 -0700)
-> 
-> ----------------------------------------------------------------
-> soc: amlogic: updates for v5.2, round 2
-> - VPU power domain: add supporg for G12A SoCs
-> - socinfo: add new SoC and package IDS.
+On 28.04.19 17:21, Andy Shevchenko wrote:
 
-Merged, thanks!
+> 
+>> +#define SERIAL_RT2880_IOSIZE	0x100
+> 
+> And why this is in the header file and not in corresponding C one?
+
+hmm, no particular reason, maybe just an old habit to put definitions
+into .h files ;-)
+
+I can move it to 8250_of.c if you like me to.
 
 
--Olof
+
+--mtx
+
+-- 
+Enrico Weigelt, metux IT consult
+Free software and Linux embedded engineering
+info@metux.net -- +49-151-27565287
 
 _______________________________________________
 linux-amlogic mailing list
