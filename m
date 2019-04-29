@@ -2,88 +2,75 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 10AA6E701
-	for <lists+linux-amlogic@lfdr.de>; Mon, 29 Apr 2019 17:56:26 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8D50CE713
+	for <lists+linux-amlogic@lfdr.de>; Mon, 29 Apr 2019 17:59:26 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
-	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=lRFEwF7B3RV6OCGwMRzbVApp3tLYfzPCwJ1FYoRNtCA=; b=Rck/PtXS8S8E+aLgaq/HVYGak
-	9eGfVqxYGR89SYAxJ5eRzjZkvYDubtG5dH/1toV81HbPrxV8SFcR2cilIGN6P5ZxcpUXb3uuXpwfz
-	X1kVNxqi7S9OOdX105ciOLD7X4rKhA6MIvRUrHJ/G8ekUJzhaCzxL2bRINjz0JtMxzmyBbF+AwflQ
-	PRGH38Wp/Tf8NRbRSjCU51vtAr056pUuTNSSMZgdC7e1ljSHrL8++oF2yCGehZbmt7oNpMgg7HaYc
-	4bBLBXGA951L8iPqjoRWtbH3i+azBmXWcl1CMG+9tW6AYMzY65EP1OM+FDAiympjdY7KKCJ0mQb2Q
-	Oh+IAZndg==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
+	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=5cMsBpQYp+9F/XU50SvSZdz6t6tglF08CDnRaDVRSY8=; b=qOqi5HPxST4f/3
+	gXe/jxNPkSVf8UZkK3xWENpZgGTg+BzXRIf6S0D4vO9QcniV81nhGeuvlNvv/u2n2D+G7p7XamFDy
+	fsiaVQLGL4cRtt46brbcE0cYrviHPqHRyokRz5sR4t6JqRPriHZdVPB/wkPKaLHanpFOubMs0lt1W
+	7krfGWJMbF913JRhS4x9ILfVUmFY4mOuF52oIyBymlmkGj59iNxIW1PgXk1bYjDtscxS+D0MbJeww
+	fgPtfrwq2q9RouTk2i57urE3JX0curfrykn9qK2aGhkcQvbsllJQdjURc3yE0OsKx3zS/mLu5qo7s
+	SNUDOJ+vToasatZ/fqUA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hL8di-00010k-Bc; Mon, 29 Apr 2019 15:56:22 +0000
-Received: from pegase1.c-s.fr ([93.17.236.30])
+	id 1hL8gf-0001M2-77; Mon, 29 Apr 2019 15:59:25 +0000
+Received: from mout.kundenserver.de ([212.227.17.13])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hL8dd-00010M-VN
- for linux-amlogic@lists.infradead.org; Mon, 29 Apr 2019 15:56:19 +0000
-Received: from localhost (mailhub1-int [192.168.12.234])
- by localhost (Postfix) with ESMTP id 44t8Qg1H7zz9vD3T;
- Mon, 29 Apr 2019 17:56:11 +0200 (CEST)
-Authentication-Results: localhost; dkim=pass
- reason="1024-bit key; insecure key"
- header.d=c-s.fr header.i=@c-s.fr header.b=TCJfhTf+; dkim-adsp=pass;
- dkim-atps=neutral
-X-Virus-Scanned: Debian amavisd-new at c-s.fr
-Received: from pegase1.c-s.fr ([192.168.12.234])
- by localhost (pegase1.c-s.fr [192.168.12.234]) (amavisd-new, port 10024)
- with ESMTP id e4zvibUn7XuO; Mon, 29 Apr 2019 17:56:11 +0200 (CEST)
-Received: from messagerie.si.c-s.fr (messagerie.si.c-s.fr [192.168.25.192])
- by pegase1.c-s.fr (Postfix) with ESMTP id 44t8Qg01MLz9vD3G;
- Mon, 29 Apr 2019 17:56:11 +0200 (CEST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=c-s.fr; s=mail;
- t=1556553371; bh=MAsrBDvhnJttPasnsN8gBilzLEIc1tXHx2VDi8YmxeA=;
- h=Subject:To:Cc:References:From:Date:In-Reply-To:From;
- b=TCJfhTf+GtIv6E3INZukOMu5Yh2lbbCEwQPfE+Jza9vNBWj1fGcVlvS9y5bh8WQEf
- A7u5vGY3+mSGrzSQnBl5pVv9YKko+vqC2/RZ1Df503Iz9uiAHImnTg5AE5lZEFW3ho
- 5D0sxY1tKt7QvFSa0C7DrgwII8Apaq2alR/vHwLs=
-Received: from localhost (localhost [127.0.0.1])
- by messagerie.si.c-s.fr (Postfix) with ESMTP id 325D98B8B4;
- Mon, 29 Apr 2019 17:56:16 +0200 (CEST)
-X-Virus-Scanned: amavisd-new at c-s.fr
-Received: from messagerie.si.c-s.fr ([127.0.0.1])
- by localhost (messagerie.si.c-s.fr [127.0.0.1]) (amavisd-new, port 10023)
- with ESMTP id lnR_i6xj-pyv; Mon, 29 Apr 2019 17:56:16 +0200 (CEST)
-Received: from PO15451 (po15451.idsi0.si.c-s.fr [172.25.231.6])
- by messagerie.si.c-s.fr (Postfix) with ESMTP id D48808B8B3;
- Mon, 29 Apr 2019 17:56:15 +0200 (CEST)
-Subject: Re: [PATCH 23/41] drivers: tty: serial: cpm_uart: fix styling issues
-To: "Enrico Weigelt, metux IT consult" <info@metux.net>,
+ id 1hL8gc-0001Jy-Bs
+ for linux-amlogic@lists.infradead.org; Mon, 29 Apr 2019 15:59:24 +0000
+Received: from [192.168.1.110] ([77.9.18.117]) by mrelayeu.kundenserver.de
+ (mreue106 [212.227.15.183]) with ESMTPSA (Nemesis) id
+ 1MauJJ-1gnRUd2VPH-00cTXC; Mon, 29 Apr 2019 17:59:00 +0200
+Subject: Re: [PATCH 37/41] drivers: tty: serial: 8250: simplify io resource
+ size computation
+To: John Paul Adrian Glaubitz <glaubitz@physik.fu-berlin.de>,
+ "Enrico Weigelt, metux IT consult" <info@metux.net>,
  linux-kernel@vger.kernel.org
 References: <1556369542-13247-1-git-send-email-info@metux.net>
- <1556369542-13247-24-git-send-email-info@metux.net>
-From: Christophe Leroy <christophe.leroy@c-s.fr>
-Message-ID: <df50792f-88bc-379a-d9e1-4f2dc1f4965a@c-s.fr>
-Date: Mon, 29 Apr 2019 17:56:15 +0200
-User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:60.0) Gecko/20100101
- Thunderbird/60.6.1
+ <1556369542-13247-38-git-send-email-info@metux.net>
+ <ba6dd5fa-36f1-902d-1ab4-c99e6a5ea3c2@physik.fu-berlin.de>
+From: "Enrico Weigelt, metux IT consult" <lkml@metux.net>
+Organization: metux IT consult
+Message-ID: <7cec8c1a-a0a1-e76c-5c1f-a93c591d38b1@metux.net>
+Date: Mon, 29 Apr 2019 17:58:54 +0200
+User-Agent: Mozilla/5.0 (X11; Linux i686 on x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.2.1
 MIME-Version: 1.0
-In-Reply-To: <1556369542-13247-24-git-send-email-info@metux.net>
-Content-Language: fr
+In-Reply-To: <ba6dd5fa-36f1-902d-1ab4-c99e6a5ea3c2@physik.fu-berlin.de>
+Content-Language: en-US
+X-Provags-ID: V03:K1:CLf6r+MSAE0A4USN6XIxWhLYiiz7bFAjEZVPWrDPzur1ECJt0Dg
+ WbYbQxU9nNzapCPvww6NjJvdrqK+oNAJiHa6aeJbsi2v+NNA3fVkvAbLsn9n9KHoQGVfEzu
+ N+fU79yInZYR1o784E8xzkrBIVHBDIoXmbRCOVD9oIABn/6VuVCGtjTlkSJlu3jg09HB7dD
+ Ufze2K3kEFv4OnGLo+gYw==
+X-Spam-Flag: NO
+X-UI-Out-Filterresults: notjunk:1;V03:K0:c27b6UNW+M4=:Grv1CtdyDBcKDa6l5mVHjZ
+ /D5eSBrMPo3nbal/qhD4JNTHZyIPmW+9PmXzwasR3bvmu01e4+e2/3REGNSHwZxpkqLIGKodv
+ ngYXgywcAOndcT8KE1/CuZofSYrmrAtEKQg5qlBJvr+2yLpZxHva3ZCySbjq4tELVZUuPdKzR
+ mEH6F8OQyT3xrEHoSc7e2QtCnWzxPxFbLx0iNnVNMfYEGoWKwVYyxWCWBQfwyRiy8Xls39WN3
+ SDVgbyj7EImrGH9tgrtGkiwmjLoL4/Rb+O7KV8WFUCUwFDWfAapwIjNLi4DG1uD5qSVby6tg8
+ xebSwSzH897s+7rcBH8fktM61frzzF2LtbCrjUQtxgWEGx8HmSycnqiNvsA8b9j7qHIY7PS2q
+ P7j9mNJIltvQ9EZfT6EKeoPPPiKUb7Qxnq/lT1j6urv1655S1aqXVqGiR52p6pxci7e3STqFq
+ WLToNwpFIBh0RZPtK0M9x1ljflXL2VYftmJO9JDAV7pDfMAtZq9tFP6PY8qaSELxX4LLivmvk
+ PYlcrryV6+L1vAC2u/2tmg4poWrAgzzJi7UHbVCRwJPsx/voMQs4qhjp/yoCaND9PsJR2WD75
+ Gi4sG/UZDQuUBmgY0L4oojNnw35PQrvO23nhJNHyzfGWEOdREVFSfAezaxcTHB6jH/olj6znw
+ FQyJnUtrLFo04vaUyAW1Ja2Z09d8ocw78d4WnTdL4e95OakfRdw1InQcZq+Ldjbg1Gd6rRu7c
+ KFOAwvaPDDf7d09bUPEBh9UlXxdk27dus0wWpVdGd3IBTsygMbjdJgUTyjA=
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190429_085618_305641_F011288F 
-X-CRM114-Status: GOOD (  15.59  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190429_085922_834450_3FA05A05 
+X-CRM114-Status: UNSURE (   7.36  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [93.17.236.30 listed in list.dnswl.org]
- -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
+ no trust [212.227.17.13 listed in list.dnswl.org]
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -95,60 +82,36 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: lorenzo.pieralisi@arm.com, linux-ia64@vger.kernel.org, macro@linux-mips.org,
- andrew@aj.id.au, gregkh@linuxfoundation.org, slemieux.tyco@gmail.com,
- liviu.dudau@arm.com, linux-mips@vger.kernel.org, vz@mleia.com,
- linux@prisktech.co.nz, matthias.bgg@gmail.com, khilman@baylibre.com,
- linux-serial@vger.kernel.org, sudeep.holla@arm.com, sparclinux@vger.kernel.org,
- jacmet@sunsite.dk, linux-amlogic@lists.infradead.org,
+Cc: lorenzo.pieralisi@arm.com, linux-ia64@vger.kernel.org,
+ linux-serial@vger.kernel.org, andrew@aj.id.au, gregkh@linuxfoundation.org,
+ sudeep.holla@arm.com, liviu.dudau@arm.com, linux-mips@vger.kernel.org,
+ vz@mleia.com, linux@prisktech.co.nz, sparclinux@vger.kernel.org,
+ khilman@baylibre.com, macro@linux-mips.org, slemieux.tyco@gmail.com,
+ matthias.bgg@gmail.com, jacmet@sunsite.dk, linux-amlogic@lists.infradead.org,
  andriy.shevchenko@linux.intel.com, linuxppc-dev@lists.ozlabs.org,
  davem@davemloft.net
-Content-Transfer-Encoding: base64
-Content-Type: text/plain; charset="utf-8"; Format="flowed"
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-CgpMZSAyNy8wNC8yMDE5IMOgIDE0OjUyLCBFbnJpY28gV2VpZ2VsdCwgbWV0dXggSVQgY29uc3Vs
-dCBhIMOpY3JpdMKgOgo+IEZpeCBjaGVja3BhdGNoIGVycm9yczoKCldoYXQgdGhlIG1haW4gcHVy
-cG9zZSBvZiB0aGlzIGNoYW5nZSA/CgpJZiB3ZSBhcHBseSB0aGlzLCBhbnkgZml4IHRvIHN0YWJs
-ZSB3aWxsIGJlIGEgbmlnaHRtYXJlIHRvIGJhY2twb3J0LiBJcyAKaXQgcmVhbGx5IHdvcnRoIGl0
-ID8KCkFueXdheSwgYSBjb3VwbGUgb2YgY29tbWVudHMgaW4gdGhlIHBhdGNoIGJlbG93CgpbLi4u
-XQoKPiAKPiAKPiBTaWduZWQtb2ZmLWJ5OiBFbnJpY28gV2VpZ2VsdCA8aW5mb0BtZXR1eC5uZXQ+
-Cj4gLS0tCj4gICBkcml2ZXJzL3R0eS9zZXJpYWwvY3BtX3VhcnQvY3BtX3VhcnQuaCAgICAgIHwg
-MTAgKy0tCj4gICBkcml2ZXJzL3R0eS9zZXJpYWwvY3BtX3VhcnQvY3BtX3VhcnRfY29yZS5jIHwg
-OTUgKysrKysrKysrKysrKysrKy0tLS0tLS0tLS0tLS0KPiAgIGRyaXZlcnMvdHR5L3NlcmlhbC9j
-cG1fdWFydC9jcG1fdWFydF9jcG0xLmggfCAgNCArLQo+ICAgZHJpdmVycy90dHkvc2VyaWFsL2Nw
-bV91YXJ0L2NwbV91YXJ0X2NwbTIuYyB8ICA2ICstCj4gICA0IGZpbGVzIGNoYW5nZWQsIDY0IGlu
-c2VydGlvbnMoKyksIDUxIGRlbGV0aW9ucygtKQoKWy4uLl0KCj4gCj4gQEAgLTEwNDgsOSArMTA1
-OCwxMCBAQCBzdGF0aWMgdm9pZCBjcG1fdWFydF9lYXJseV93cml0ZShzdHJ1Y3QgdWFydF9jcG1f
-cG9ydCAqcGluZm8sCj4gICBzdGF0aWMgaW50IHBvbGxfd2FpdF9rZXkoY2hhciAqb2J1Ziwgc3Ry
-dWN0IHVhcnRfY3BtX3BvcnQgKnBpbmZvKQo+ICAgewo+ICAgCXVfY2hhcgkJYywgKmNwOwo+IC0J
-dm9sYXRpbGUgY2JkX3QJKmJkcDsKPiAgIAlpbnQJCWk7Cj4gICAKPiArCXZvbGF0aWxlIGNiZF90
-CSpiZHA7Cj4gKwoKVGhpcyB3YXMgbGlrZWx5IGEgZmFsc2UgcG9zaXRpdmUgZnJvbSBjaGVja3Bh
-dGNoLiBUaGUgZm9ybWF0dGluZyB3YXMgCmdvb2QsIGFuZCBub3cgaXQgaXMgd3JvbmcgYXMgaXQg
-YWRkcyBhbiB1bm5lY2Vzc2FyeSBibGFuayBsaW5lLgoKPiAgIAkvKiBHZXQgdGhlIGFkZHJlc3Mg
-b2YgdGhlIGhvc3QgbWVtb3J5IGJ1ZmZlci4KPiAgIAkgKi8KPiAgIAliZHAgPSBwaW5mby0+cnhf
-Y3VyOwoKWy4uLl0KCj4gZGlmZiAtLWdpdCBhL2RyaXZlcnMvdHR5L3NlcmlhbC9jcG1fdWFydC9j
-cG1fdWFydF9jcG0yLmMgYi9kcml2ZXJzL3R0eS9zZXJpYWwvY3BtX3VhcnQvY3BtX3VhcnRfY3Bt
-Mi5jCj4gaW5kZXggYTBmY2NkYS4uMTU0YWMxOSAxMDA2NDQKPiAtLS0gYS9kcml2ZXJzL3R0eS9z
-ZXJpYWwvY3BtX3VhcnQvY3BtX3VhcnRfY3BtMi5jCj4gKysrIGIvZHJpdmVycy90dHkvc2VyaWFs
-L2NwbV91YXJ0L2NwbV91YXJ0X2NwbTIuYwo+IEBAIC0xMTcsOCArMTE3LDcgQEAgaW50IGNwbV91
-YXJ0X2FsbG9jYnVmKHN0cnVjdCB1YXJ0X2NwbV9wb3J0ICpwaW5mbywgdW5zaWduZWQgaW50IGlz
-X2NvbikKPiAgIAlpZiAoaXNfY29uKSB7Cj4gICAJCW1lbV9hZGRyID0ga3phbGxvYyhtZW1zeiwg
-R0ZQX05PV0FJVCk7Cj4gICAJCWRtYV9hZGRyID0gdmlydF90b19idXMobWVtX2FkZHIpOwo+IC0J
-fQo+IC0JZWxzZQo+ICsJfSBlbHNlCj4gICAJCW1lbV9hZGRyID0gZG1hX2FsbG9jX2NvaGVyZW50
-KHBpbmZvLT5wb3J0LmRldiwgbWVtc3osICZkbWFfYWRkciwKPiAgIAkJCQkJICAgICAgR0ZQX0tF
-Uk5FTCk7CgpDaGVja3BhdGNoIHNob3VsZCBoYXZlIHRvbGQgeW91IHRoYXQgaW4gY2FzZSBmaXJz
-dCBsZWcgaGFzIGJyYWNlcywgCnNlY29uZCBsZWcgbXVzdCBoYXZlIGJyYWNlcyB0b28gZXZlbiBp
-ZiBpdCdzIGEgc2luZ2xlIGxpbmUuCgpDaHJpc3RvcGhlCgoKPiAgIAo+IEBAIC0xNDgsNyArMTQ3
-LDggQEAgdm9pZCBjcG1fdWFydF9mcmVlYnVmKHN0cnVjdCB1YXJ0X2NwbV9wb3J0ICpwaW5mbykK
-PiAgIAlkbWFfZnJlZV9jb2hlcmVudChwaW5mby0+cG9ydC5kZXYsIEwxX0NBQ0hFX0FMSUdOKHBp
-bmZvLT5yeF9ucmZpZm9zICoKPiAgIAkJCQkJCQkgIHBpbmZvLT5yeF9maWZvc2l6ZSkgKwo+ICAg
-CQkJICBMMV9DQUNIRV9BTElHTihwaW5mby0+dHhfbnJmaWZvcyAqCj4gLQkJCQkJIHBpbmZvLT50
-eF9maWZvc2l6ZSksICh2b2lkIF9fZm9yY2UgKilwaW5mby0+bWVtX2FkZHIsCj4gKwkJCQkJIHBp
-bmZvLT50eF9maWZvc2l6ZSksCj4gKwkJCSAgKHZvaWQgX19mb3JjZSAqKXBpbmZvLT5tZW1fYWRk
-ciwKPiAgIAkJCSAgcGluZm8tPmRtYV9hZGRyKTsKPiAgIAo+ICAgCWNwbV9kcGZyZWUocGluZm8t
-PmRwX2FkZHIpOwo+IAoKX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
-X19fX18KbGludXgtYW1sb2dpYyBtYWlsaW5nIGxpc3QKbGludXgtYW1sb2dpY0BsaXN0cy5pbmZy
-YWRlYWQub3JnCmh0dHA6Ly9saXN0cy5pbmZyYWRlYWQub3JnL21haWxtYW4vbGlzdGluZm8vbGlu
-dXgtYW1sb2dpYwo=
+On 27.04.19 15:03, John Paul Adrian Glaubitz wrote:
+> On 4/27/19 2:52 PM, Enrico Weigelt, metux IT consult wrote:
+>> Simpily io resource size computation by setting mapsize field.
+>     ^^^^
+> Here's a typo
+
+thx. fixed.
+
+--mtx
+
+
+-- 
+Enrico Weigelt, metux IT consult
+Free software and Linux embedded engineering
+info@metux.net -- +49-151-27565287
+
+_______________________________________________
+linux-amlogic mailing list
+linux-amlogic@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-amlogic
