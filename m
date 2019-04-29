@@ -2,84 +2,100 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 12A24B698
-	for <lists+linux-amlogic@lfdr.de>; Sun, 28 Apr 2019 22:25:22 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 0DFB6DCE0
+	for <lists+linux-amlogic@lfdr.de>; Mon, 29 Apr 2019 09:31:02 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=WWNQlUKuQOxTouwQQaOQMmu8IloJMyLbRvir64Mn3fM=; b=X1bTP81hneP4zZ
-	jA1lOx6NqgYdNpeZjUphsqXF2XsibXhL75zMeBKdnqp8SiISRKEIiXfYwAqytZH7DFo2iGoQOujlP
-	/h5FxPSq+HspIkGsqXGAPDmJv5tZMoAnxNkrmQVLbiOtfLeM9//mPYZMfk0VL8r//5S0f6TmQB0Rn
-	gbiE3R1ba/WMcGHM9q7dTS/k5oXgFZfsaDVVtwh6LsKJU10LFODNoMChzPmm9CIGE2hCG7/1R0uhu
-	6h8OwwKor9kJmvh/rQkpZly2Iv5Cvyih/xk3cIMuzl4rkncyTJTFfmVEnuvB0d56yJ8YKlZC7A8qV
-	jGhr4LOJJIXiYr6bxzPA==;
+	List-Owner; bh=Ili6apw1F/bBH+XqPMDEXXn0zVNdqv7vPkfUaoQiCfU=; b=hmgg0tIh/WTNpI
+	2T0gTeXrbWte2UpwZRGXV9ifGJjPOBJitoS+X6fh29mbE9PkAQrfLSXNVfhvr2IrAv6jq3MzT2Zp9
+	PJXW5YSdeaidet9tsErB/FmYY0UJYMajMRk7R0REi/wSIjUPobkFZx3hQ7J9UIDBrjhiFh6w3NUEY
+	C6J0eYWypMiZGW1OH7Uf1sMHhW6coGOjTJMZKbRAJR9FdaqYt5D30PMlfmA8YstWc6U8UMnCAZC8O
+	bEJuJoVBUw+XQU3miU+41vJArX9DKQ8oxGVcxxtn86ycoE3DbaPicLHouhnpVkRp+rmEygBjk9Xts
+	DL18BW4XrudkMVFt+dMA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hKqMP-0008IN-NQ; Sun, 28 Apr 2019 20:25:17 +0000
-Received: from mail-lf1-x141.google.com ([2a00:1450:4864:20::141])
+	id 1hL0kd-0007I9-FO; Mon, 29 Apr 2019 07:30:59 +0000
+Received: from merlin.infradead.org ([2001:8b0:10b:1231::1])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hKqHM-0008Be-88
- for linux-amlogic@lists.infradead.org; Sun, 28 Apr 2019 20:20:06 +0000
-Received: by mail-lf1-x141.google.com with SMTP id h5so6373410lfm.1
- for <linux-amlogic@lists.infradead.org>; Sun, 28 Apr 2019 13:20:04 -0700 (PDT)
+ id 1hL0kb-0007Hd-Vr
+ for linux-amlogic@bombadil.infradead.org; Mon, 29 Apr 2019 07:30:57 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=infradead.org; s=merlin.20170209; h=In-Reply-To:Content-Type:MIME-Version:
+ References:Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:
+ Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:
+ List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=cNiynyKRK+6NofuA5ESyTbqlxT6F8CVlPOs0I0hIaNY=; b=BApoV7mqK9QnA92wh5sfaOs8z
+ WpmER7n7+ZiJ0D0vNdcmb7xuH69LvH71hNtuIQtPSTkAjcK8i206Au8fr0xkEOXsMr73DJDwWcRBo
+ KcUF2JFZSdu+EQs6IcHN2AsVjEwWEp7HWNY/OPLfWyfihV+kKDMaz8w1R3oDudbD0bxfVcpFBMKPZ
+ 6aECgJs1AlBeKtd469JGa6NWltSbiycw5m/2TDSC4ceXbonaC/ljNvU2bmZASf5FSv+VvzfGRuU/U
+ xyTVRdIOhC9OQRoaHaWS4g2XvKXcl9V9oY+3uvFEzCkiok9OLjjCm6RMmg3K01gcjEy/kSReQtOXH
+ RNe7va9mA==;
+Received: from mail-lj1-x244.google.com ([2a00:1450:4864:20::244])
+ by merlin.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
+ id 1hL0DJ-0006EZ-PP
+ for linux-amlogic@lists.infradead.org; Mon, 29 Apr 2019 06:56:34 +0000
+Received: by mail-lj1-x244.google.com with SMTP id y8so1902827ljd.3
+ for <linux-amlogic@lists.infradead.org>; Sun, 28 Apr 2019 23:56:29 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=lixom-net.20150623.gappssmtp.com; s=20150623;
  h=date:from:to:cc:subject:message-id:references:mime-version
  :content-disposition:in-reply-to:user-agent;
- bh=3dIVvC+MR+L0wsGCt/+00eAggIxbLnOsQ0t6cOQQvPM=;
- b=Xf0ngrkkqsbOgDazYS3iEaq416sGquHH/DhSQ/G3z+PRF/F7+vzSWMgYn62pgNU6Jt
- A1l227ntcOQFLLfrbg3oslHCwS0h87y6b1V8VPKDO5q3uTHr2QI5xGVXORkI5Q+0Wbc5
- irerdKY7aOIAIrnhAcILalbrLmGnnRqs/L+TtonPSfCsR/pxzQ9QIK8BH9LR7sJenmrt
- TaC90khKIvcwPX31v8HEm6ZT6eshdwzCsSkxaKqTaWLIQ3ayBv/Hvp3R8kCJPDK0otGl
- PHWntFWVnCWEDwJEKIhtI+srU8XIIi/HZMetm/MqoQe7qZWJKD1Q+cOmfhrPLbDmq5yI
- Gz0Q==
+ bh=cNiynyKRK+6NofuA5ESyTbqlxT6F8CVlPOs0I0hIaNY=;
+ b=fZPAINdqdX5BVZp0syZ9egbOY4oyAfzmKcQER0uvV2G7c0R4FFxrs3HKnq/Xowrk0G
+ YvHhGGkFKQhYL9Fie3epjCDwCfjbQqtwx0HRqlChob3vNuH1ZABZLA/DwXJFIzosayj4
+ x369xndNWcdpnWR9zxM2ItQTZaudpvXx5tFAbll9QPWSe2hmZWq9BzIKV81h1Cv5a4Q3
+ fILO5Qf/yx95Dm3V9hAI7EJ2uXF71x++9qZzoYi6ZfRxjyDhI4vxD7iUL6yiTv9bTjBG
+ kRT9kPG0QatqdJY0Qhfi6NRAoLVkOowDi2ElXdYlEe3D2I7MfyFOH2NbSXbUEBBg26Tq
+ Rakw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:date:from:to:cc:subject:message-id:references
  :mime-version:content-disposition:in-reply-to:user-agent;
- bh=3dIVvC+MR+L0wsGCt/+00eAggIxbLnOsQ0t6cOQQvPM=;
- b=Nk256sTXOb6hTtpeTEdvEVYSXimCf4xAYA/Zt+czrNsipjVb+6ignVqM6aIa6qcvYR
- Ubl5y0HC5ybF8eY8jTmQvrmrKAXyNaeuPFz8t0CVr9z/gAtymeDGz3dt8+ISQgFhLARG
- 4tA1Fm7/RyOcjKTglxoFoovLwD6gxh+dfsyZwPu1J3rUDWaZS70o95kLYRkeDGejS2gM
- +8ShaAWxwhwZJeOXHTSoQQMinBqs9GYarB7pCylgHkCgdZUaiYtYXZmWpIMCnpU3vbyf
- 5lp+wKoInQjxF5ZGLzW9DeIasahRtUd7PUCRM5IAKZKVPCDRhMTF1dWqkUCZgKGucM+k
- KHEg==
-X-Gm-Message-State: APjAAAXhEx3NZ5D09GtsG19cZborAcP3Ey5LOzBiQ29sAGs9KKw/2zGo
- e5rT35PK4ju8EXY0kWzM0Y5I9BVjrR2bCg==
-X-Google-Smtp-Source: APXvYqy4lzUtWieq0ZEpbdsrDR3oT5/do6l+w43pSGxubsDMKjiR7Xr0rZiizXiYc2//BsXYuAc1Ow==
-X-Received: by 2002:a19:cb09:: with SMTP id b9mr30862688lfg.55.1556482802553; 
- Sun, 28 Apr 2019 13:20:02 -0700 (PDT)
+ bh=cNiynyKRK+6NofuA5ESyTbqlxT6F8CVlPOs0I0hIaNY=;
+ b=Q/QmF3BdFukjWDNGzkFJnf4yeu4uDLIKdzt6BHfTV2ohSBhBwDrtiSUrCPATwNRyFg
+ 8W6FdRTXhbxWwjldXHgdm3MERj8TVPLvC2WjGVf6CJ5xtcsgmXA4NY1IadLSFgkM0nib
+ 3yqdAGzsINU6hNiRlqzoQWEf0dQHy3ZSz6Syy3GnCVCZsM/5Sow5MJjhBtYF6eVTEo28
+ MZ4XB2IqHYWIGU0rVUaw5R8WNpW/waMCw5j65NgOiPmpTX6xpAgFqR+1cxcKkHY6aRee
+ raEG2w2OYIPqeNvv/1qZsf7KuEAcJWK9vQP1iaPy4gFPqelivh7eNJT/GMtSd8K6j56U
+ g1sw==
+X-Gm-Message-State: APjAAAUf1exQ4HUhF3weqQsnT6JWrtOjZTpSkxSFVxnr99fkvCFuyVUX
+ S6DfOt8OHH2B1hfNSr3MtXvtrw==
+X-Google-Smtp-Source: APXvYqwiQ8deQZirgfFJHIjf/B0x0s4k0KDXPLq/du0lkV0l+EX0JlZhHGtP1SiU/DnV40iDGzeiHA==
+X-Received: by 2002:a2e:9dcb:: with SMTP id x11mr16048936ljj.123.1556520987023; 
+ Sun, 28 Apr 2019 23:56:27 -0700 (PDT)
 Received: from localhost (h85-30-9-151.cust.a3fiber.se. [85.30.9.151])
- by smtp.gmail.com with ESMTPSA id t9sm4108531lfk.20.2019.04.28.13.20.00
+ by smtp.gmail.com with ESMTPSA id e10sm136357ljf.5.2019.04.28.23.56.25
  (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
- Sun, 28 Apr 2019 13:20:01 -0700 (PDT)
-Date: Sun, 28 Apr 2019 12:50:22 -0700
+ Sun, 28 Apr 2019 23:56:25 -0700 (PDT)
+Date: Sun, 28 Apr 2019 23:44:30 -0700
 From: Olof Johansson <olof@lixom.net>
 To: Kevin Hilman <khilman@baylibre.com>
-Subject: Re: [GIT PULL] arm64: dts: Amlogic updates for v5.2, round 2
-Message-ID: <20190428195022.z2ig4vb23rgv4ryd@localhost>
-References: <7hmukj9zsw.fsf@baylibre.com>
+Subject: Re: [GIT PULL] soc: amlogic: updates for v5.2, round 2
+Message-ID: <20190429064430.bmjs7q3x3smvbkw5@localhost>
+References: <7hy343a098.fsf@baylibre.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <7hmukj9zsw.fsf@baylibre.com>
+In-Reply-To: <7hy343a098.fsf@baylibre.com>
 User-Agent: NeoMutt/20170113 (1.7.2)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190428_132004_499443_7B21017B 
-X-CRM114-Status: GOOD (  12.70  )
+X-CRM114-CacheID: sfid-20190429_025633_850008_671B93EB 
+X-CRM114-Status: GOOD (  11.65  )
 X-Spam-Score: 0.0 (/)
-X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
+X-Spam-Report: SpamAssassin version 3.4.2 on merlin.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:141 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:244 listed in]
  [list.dnswl.org]
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -98,36 +114,23 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On Sun, Apr 21, 2019 at 07:51:43AM -0700, Kevin Hilman wrote:
-> Olof, Arnd,
+On Sun, Apr 21, 2019 at 07:41:55AM -0700, Kevin Hilman wrote:
+> The following changes since commit fdda0a6adc33536ad468f07db27325423703c5bc:
 > 
-> Here's a 2nd round of changes for the 64-bit SoCs from Amlogic.
-> 
-> Note that in order to support display/gfx and USb on these, there's a
-> dependency on new clocks and resets also added this cycle.  Those
-> dependencies are already queued in the respecitive maintainer trees for
-> v5.2, and I've merged those tags into this branch as well to avoid any
-> build breakage.
-> 
-> Please pull,
-> 
-> Thanks,
-> 
-> Kevin
-> 
-> 
-> The following changes since commit e2cffeb398f4830b004774444809ee256b9bc653:
-> 
->   arm64: dts: meson-g12a: Add CMA reserved memory (2019-03-29 14:19:42 -0700)
+>   meson-gx-socinfo: add missing of_node_put after of_device_is_available (2019-03-18 09:07:32 -0700)
 > 
 > are available in the Git repository at:
 > 
->   https://git.kernel.org/pub/scm/linux/kernel/git/khilman/linux-amlogic.git tags/amlogic-dt64-2
+>   https://git.kernel.org/pub/scm/linux/kernel/git/khilman/linux-amlogic.git tags/amlogic-drivers-2
 > 
-> for you to fetch changes up to 659f2563d323b09ca12b0e70bb6a50c1b25af3ee:
+> for you to fetch changes up to bb1dca3a3900a00b881286c96340d6ab85eafe0c:
 > 
->   arm64: dts: meson-g12a-u200: Add support for Video Display (2019-04-16 11:21:46 -0700)
-
+>   soc: amlogic: meson-gx-pwrc-vpu: Add support for G12A (2019-04-16 11:09:53 -0700)
+> 
+> ----------------------------------------------------------------
+> soc: amlogic: updates for v5.2, round 2
+> - VPU power domain: add supporg for G12A SoCs
+> - socinfo: add new SoC and package IDS.
 
 Merged, thanks!
 
