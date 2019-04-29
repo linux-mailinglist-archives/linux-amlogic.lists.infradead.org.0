@@ -2,75 +2,84 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C78BCDCC2
-	for <lists+linux-amlogic@lfdr.de>; Mon, 29 Apr 2019 09:23:59 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 42891DD27
+	for <lists+linux-amlogic@lfdr.de>; Mon, 29 Apr 2019 09:52:55 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=nIGg5x8IRBjvaTIjQccxD6eof9cnTnniBTCHPyXSyZ8=; b=hrX+HNZ3H4F1Vg
-	ugUXOl2NsoAOnwZSF6NI82kA4wVQpmbIt3X9ne0xrM6slfXMdYWf6CSdCO2dvOlRsbW3HHwF+24Rh
-	GSoZZuXuyf91wsciH5QVdu4BcjqZ21WNxlyMEm9fgm5yIhyfRAxXKOr2EPgYZSUvf0MWDz2IoMTkZ
-	iibvcJnjc5Z2zH30oXjKG4UtPfYruZLLu/7kpbSv1s4kec2b1pOv5yaESJ1OuPkEMbk4SwJnwXCHG
-	hhdij1J5vRvOWh7PLfeN+VwpzexfOtiVruLObjvKgpSbBhWke88rfkQoHhVX5IMup2t0+deaqrhwU
-	oCiQazCzHIzZaAe+onFw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=X1e79sKbP7CmtmeXsv72/btp7WrABStQ2FJfRsffPvw=; b=JZGzUf9TZvXa8K
+	aR39+Dwnzc2+KBTaTqF4m4PbD+D7mj+gn1DzpluZ7kgkQ8g3+wiz91/lTiffpCqIz42LlLnELNhQ8
+	vGAVpsO5UG+qQxbTnDTkkXNQfhr4PdZgghFVOVMnI64V4VQtlJZF2V34gEoJIKisPRFiME0CiOH9h
+	OKXwuaaww6ifQhEW7dTpRDb/eyCBwmPmzN2gwiZzpcIkC2s/fOLU9dQ3kt+1QNVLpc0STh0aHI2JV
+	G2pT7Hf07SzCRqASrKEoraUmYwr2otMZezVGrVT/FneoyNFj2jgpIzR80IwL6xQVdUTzbkRLXr/cF
+	zz/Yd2OMJ2yraCnccRAA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hL0dp-00047J-0Z; Mon, 29 Apr 2019 07:23:57 +0000
-Received: from mout.kundenserver.de ([212.227.17.10])
+	id 1hL15o-0006D4-AH; Mon, 29 Apr 2019 07:52:52 +0000
+Received: from mail-wm1-x344.google.com ([2a00:1450:4864:20::344])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hL0dl-00043P-Pk
- for linux-amlogic@lists.infradead.org; Mon, 29 Apr 2019 07:23:55 +0000
-Received: from [192.168.1.110] ([77.9.18.117]) by mrelayeu.kundenserver.de
- (mreue106 [212.227.15.183]) with ESMTPSA (Nemesis) id
- 1N7AAk-1giQjU0jDY-017SZ2; Mon, 29 Apr 2019 09:23:28 +0200
-Subject: Re: [PATCH 01/41] drivers: tty: serial: dz: use dev_err() instead of
- printk()
-To: Greg KH <gregkh@linuxfoundation.org>,
- "Enrico Weigelt, metux IT consult" <info@metux.net>
-References: <1556369542-13247-1-git-send-email-info@metux.net>
- <1556369542-13247-2-git-send-email-info@metux.net>
- <20190427133117.GC11368@kroah.com>
-From: "Enrico Weigelt, metux IT consult" <lkml@metux.net>
-Organization: metux IT consult
-Message-ID: <721dc048-8b5f-e7f5-2dab-f0f328435e0c@metux.net>
-Date: Mon, 29 Apr 2019 09:23:21 +0200
-User-Agent: Mozilla/5.0 (X11; Linux i686 on x86_64; rv:60.0) Gecko/20100101
- Thunderbird/60.2.1
+ id 1hL15e-00065Z-KD
+ for linux-amlogic@lists.infradead.org; Mon, 29 Apr 2019 07:52:44 +0000
+Received: by mail-wm1-x344.google.com with SMTP id p21so10835518wmc.0
+ for <linux-amlogic@lists.infradead.org>; Mon, 29 Apr 2019 00:52:41 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=baylibre-com.20150623.gappssmtp.com; s=20150623;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=/+GdzCUbXbc9TnjbK+IzgC3Rn7LJK/U+L3O1XBIq//I=;
+ b=E8jD+2dgpZNlzi2mli6iSqHgtX8ej4k2fD+p50X7E9LOuOgNBJ8gjAiK/IBRlJ+3OM
+ /ezhla4lzKCiT7PZUIbPtAXYRSXzCpZOCkroWKcKrh8BWQv4R5GbvbhvcB1fx7/d8FSy
+ G4CAF6FAJedyge2rIG6AwicnNEPM8G73yQvzHGrBoS+jwiRcXIKSh6VbwpVAZ0l4VTNI
+ wok7bVcf5eQrVfmQTxDMGjxS30rWsNi12GwMpYTMAgbocRh2CqzeZWkF+rgUFVyywy24
+ Im77RGr1kKsu0YTlS+T2nujXKe01K7Q05lij2Nt6vydzWaZfM69r7GVKjGUj5UymDHbh
+ +GdQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=/+GdzCUbXbc9TnjbK+IzgC3Rn7LJK/U+L3O1XBIq//I=;
+ b=qRSIWSU9FW53r+Uoa9DlCFq71l1r0TOasSn5e1JsHQ3wUdA+wv8ihA5Pw2lq5apM0w
+ /tqwR0Gh0/OfSMDoNhUGlkeQWE9mPmKXY59t7yP0OHoUq5k1UB8zYKPuYouV/ycX1+FF
+ KdSC/TsB2zqaCGrClniBgn1rVXC/EplTYTP76nNOr8pfdHmDlXjtKI3LDRtNPdajDsxk
+ oZCdxBQod005wijf2z2IIfIl3vJm1MLYeMPjw5ujHR+P+YVVP1b9TGYjnT18FoZsbR23
+ X4/oLk3+UVYGxELNr4ZiRsi7NBPszWrTUA81lcfYrrqX+TS+H3Nwr/W2ahNTe1xc9FPe
+ /YmA==
+X-Gm-Message-State: APjAAAVsK923RXu9ISHc677t9EVhYPKOQLOLtK/whoiqqtPAaUVR54s5
+ 56F6EIhgS3KVb8qnsry3KzrqQA==
+X-Google-Smtp-Source: APXvYqyrm9gcWdptLmdNHOe30KFoldLfiJoNxGhNez9U3SHQHqIDbxiDVW0eb3kiP7omvUckOLprWA==
+X-Received: by 2002:a1c:495:: with SMTP id 143mr8270669wme.109.1556524360393; 
+ Mon, 29 Apr 2019 00:52:40 -0700 (PDT)
+Received: from bender.baylibre.local
+ (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
+ by smtp.gmail.com with ESMTPSA id q4sm5118457wrg.24.2019.04.29.00.52.39
+ (version=TLS1_2 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+ Mon, 29 Apr 2019 00:52:39 -0700 (PDT)
+From: Neil Armstrong <narmstrong@baylibre.com>
+To: dri-devel@lists.freedesktop.org
+Subject: [PATCH] drm/meson: Add support for XBGR8888 & ABGR8888 formats
+Date: Mon, 29 Apr 2019 09:52:38 +0200
+Message-Id: <20190429075238.7884-1-narmstrong@baylibre.com>
+X-Mailer: git-send-email 2.21.0
 MIME-Version: 1.0
-In-Reply-To: <20190427133117.GC11368@kroah.com>
-Content-Language: en-US
-X-Provags-ID: V03:K1:2yBsSwNlRemILw3qvHg+EUmYturt1pLcLjGTAKgJyue8kvRS4SA
- Ycg5vG+6X+ZgHuQ3PHVzy/Dv44Zuxjh37IHDyzF2jEvtvZGNvYkKtrnXVZYGUnPdIu0W46i
- 2IMqhI87Gg+pJeqQ6/ht5bwJVFkYWHqCEPoyT4ASEIm1+8v8y21GaFqc39ZCbGTdMT51cQj
- 0S+tKBdUy1LLCwqz09Z5Q==
-X-Spam-Flag: NO
-X-UI-Out-Filterresults: notjunk:1;V03:K0:hvct3rbX28g=:TmP05eZMgYa4HiZY4PnD/X
- 6m3IhBL+nEVPGdArSYiuiX7eZZXEk5U/K4fdA/5I69ZzNB+lgpMzTJARgTptylrCcsF+ec56R
- EcFsOKNj9r4+Pijm0w6PIOOCQR9sDUMsKWVVev1N7blGt5gqfEfHG3QYEEANluS9l3kZ85qbk
- LdiiJxi6KrmHyMeNDiFyYrsu6r5+ZF6VhCjr35ptTbfRr0e5WdHohtBwPezdwun0dBypwZywX
- L5iAIZgzdTo2KZXu+RTM7QCX25OsuIZNUK0fBx7MuFFqj8vtok69bXzmZ8j7mixBq7tx5Wrn6
- i/cdujidsg4MAPszgSCu03/hJyb8p1ELPZ5aG5Cw03pNubg+wvW0vv70xGJY2ux2SC5jfv/TZ
- 0kjKPYeKxFMu/0DII+t2N4c4ZCQJKTkCH/2d297RXIqJfaPcp0I+1ngc88j46FPAj7Y/CXSna
- oWFRjB2Mk47zKZTsVGCP+SZCjO+ppRHXdfWvy2WO2L47GwCItPGmDKR1G9/dkNJT/v4lSeMO9
- 8RlnxdMzk4uTIE1tZ0xj9SJNh31sjQNICyC1uJ5Jnx2LeKdeZw8Ultodwh9RHuzYigZGtEqtq
- +w5cJnlLXt6zOcX65xf+ZznoLz9/DKEE+bN1MafnjmBF5nahezF1Q9YFoj0JclEWAYzhUDE9C
- F62YYxCgxwvt3b48D5G4DMkXK5gD+OnF6o1vZQ8+QwLzMY/Vt77ayebi1+6HkKqsi3zgXZHmD
- 8+778zAcA9tvPs8yE7LGV7ixGCrb8ircrZMSmUQV9blo0HEhiHR6q028GOw=
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190429_002354_136213_456A5B6D 
-X-CRM114-Status: GOOD (  10.60  )
+X-CRM114-CacheID: sfid-20190429_005242_722905_D4539DC3 
+X-CRM114-Status: UNSURE (   9.25  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [212.227.17.10 listed in list.dnswl.org]
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [212.227.17.10 listed in wl.mailspike.net]
+ no trust [2a00:1450:4864:20:0:0:0:344 listed in]
+ [list.dnswl.org]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -82,41 +91,66 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: linux-ia64@vger.kernel.org, lorenzo.pieralisi@arm.com,
- linux-mips@vger.kernel.org, linux-serial@vger.kernel.org, andrew@aj.id.au,
- khilman@baylibre.com, sudeep.holla@arm.com, liviu.dudau@arm.com,
- linux-kernel@vger.kernel.org, vz@mleia.com, linux@prisktech.co.nz,
- sparclinux@vger.kernel.org, macro@linux-mips.org, slemieux.tyco@gmail.com,
- matthias.bgg@gmail.com, jacmet@sunsite.dk, linux-amlogic@lists.infradead.org,
- andriy.shevchenko@linux.intel.com, linuxppc-dev@lists.ozlabs.org,
- davem@davemloft.net
+Cc: linux-amlogic@lists.infradead.org, linux-kernel@vger.kernel.org,
+ linux-arm-kernel@lists.infradead.org, Neil Armstrong <narmstrong@baylibre.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On 27.04.19 15:31, Greg KH wrote:
-> On Sat, Apr 27, 2019 at 02:51:42PM +0200, Enrico Weigelt, metux IT consult wrote:
->> Using dev_err() instead of printk() for more consistent output.
->> (prints device name, etc).
->>
->> Signed-off-by: Enrico Weigelt <info@metux.net>
->> ---
->>  drivers/tty/serial/dz.c | 8 ++++----
-> 
-> Do you have this hardware to test any of these changes with?
+Add missing XBGR8888 & ABGR8888 formats variants from the primary plane.
 
-Unfortunately not :(
+Fixes: bbbe775ec5b5 ("drm: Add support for Amlogic Meson Graphic Controller")
+Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
+---
+ drivers/gpu/drm/meson/meson_plane.c | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
 
-Do you happen to know anybody who has ?
-
---mtx
-
-
+diff --git a/drivers/gpu/drm/meson/meson_plane.c b/drivers/gpu/drm/meson/meson_plane.c
+index bf8f1fab63aa..b8f6b08a89a6 100644
+--- a/drivers/gpu/drm/meson/meson_plane.c
++++ b/drivers/gpu/drm/meson/meson_plane.c
+@@ -165,6 +165,13 @@ static void meson_plane_atomic_update(struct drm_plane *plane,
+ 		priv->viu.osd1_blk0_cfg[0] |= OSD_BLK_MODE_32 |
+ 					      OSD_COLOR_MATRIX_32_ARGB;
+ 		break;
++	case DRM_FORMAT_XBGR8888:
++		/* For XRGB, replace the pixel's alpha by 0xFF */
++		writel_bits_relaxed(OSD_REPLACE_EN, OSD_REPLACE_EN,
++				    priv->io_base + _REG(VIU_OSD1_CTRL_STAT2));
++		priv->viu.osd1_blk0_cfg[0] |= OSD_BLK_MODE_32 |
++					      OSD_COLOR_MATRIX_32_ABGR;
++		break;
+ 	case DRM_FORMAT_ARGB8888:
+ 		/* For ARGB, use the pixel's alpha */
+ 		writel_bits_relaxed(OSD_REPLACE_EN, 0,
+@@ -172,6 +179,13 @@ static void meson_plane_atomic_update(struct drm_plane *plane,
+ 		priv->viu.osd1_blk0_cfg[0] |= OSD_BLK_MODE_32 |
+ 					      OSD_COLOR_MATRIX_32_ARGB;
+ 		break;
++	case DRM_FORMAT_ABGR8888:
++		/* For ARGB, use the pixel's alpha */
++		writel_bits_relaxed(OSD_REPLACE_EN, 0,
++				    priv->io_base + _REG(VIU_OSD1_CTRL_STAT2));
++		priv->viu.osd1_blk0_cfg[0] |= OSD_BLK_MODE_32 |
++					      OSD_COLOR_MATRIX_32_ABGR;
++		break;
+ 	case DRM_FORMAT_RGB888:
+ 		priv->viu.osd1_blk0_cfg[0] |= OSD_BLK_MODE_24 |
+ 					      OSD_COLOR_MATRIX_24_RGB;
+@@ -356,7 +370,9 @@ static const struct drm_plane_funcs meson_plane_funcs = {
+ 
+ static const uint32_t supported_drm_formats[] = {
+ 	DRM_FORMAT_ARGB8888,
++	DRM_FORMAT_ABGR8888,
+ 	DRM_FORMAT_XRGB8888,
++	DRM_FORMAT_XBGR8888,
+ 	DRM_FORMAT_RGB888,
+ 	DRM_FORMAT_RGB565,
+ };
 -- 
-Enrico Weigelt, metux IT consult
-Free software and Linux embedded engineering
-info@metux.net -- +49-151-27565287
+2.21.0
+
 
 _______________________________________________
 linux-amlogic mailing list
