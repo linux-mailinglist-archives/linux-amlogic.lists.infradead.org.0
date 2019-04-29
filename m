@@ -2,69 +2,64 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id BB840E371
-	for <lists+linux-amlogic@lfdr.de>; Mon, 29 Apr 2019 15:13:15 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id AF124E394
+	for <lists+linux-amlogic@lfdr.de>; Mon, 29 Apr 2019 15:19:44 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=JjEI6tew9I9/NxE+/9wDZUIUGLbCWjaxzctO7JQGN0w=; b=KfzvTE/XCe7KNq
-	A1IJOX8l8mzMibSSJu+x1syOjhsGiD4cvZXHKSCGtiAmXajV4xgzcIETubY4ejo0El5HzqTdegSU9
-	3X5b/YcMX9NPscBVNwYsS+ycGMZih4AeL4iHguqOIs30NpKI80UbZG+NUyh5mzCPAD+nZKizKsOBu
-	o5noGSm9qetHuvgM7T64Hdfh8krqVEUqbe3u/vt1BSE2gKRhjCCjRoDn62VavnnKZrXD3Glud1kXP
-	hEArk3pRj57IeSEh+QBqfyPUMcB6M6lWIKIVvTP2W89qu9AnH8Liw2g1NDwHBF63ydLVETmynWfuK
-	AZUAUDqAhfWnYM4biSFg==;
+	List-Owner; bh=g6dS6RqIh1WoYHHgwH/Asvskf8Hh91w9MYC66r7yosM=; b=WFlgR+7LY0KM6A
+	EU7zCgQsB0k8IwDQs6WRgApYHiLOe30KbAUll2gU1tSSf/vENR4K4H/UbSCYc9M26am+uycH3nb5z
+	F8ziUeKakLaAJCh40ywZcBAjzd4opvidn8yj+hScpUuUtNcnikOdgVY7VRlKY7Y5Rfse4O1dw94uq
+	No6Ar5LAntGCGY7DRHE800ewYrMpE7FJ0Ve8qyK+GWL5JsoE7dmev2kjHmnWU/DW3ykqRxsx+qz9S
+	p7f7c/aeF5ZJrcT9DhcAfe2lEojwDW5HNeDBUBE2/xB+xf3PGIuIcyj4gKoypy9hOjmR11nogs2v6
+	1vay0YmigvbpwiMuQ/7Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hL65n-0005Mi-NY; Mon, 29 Apr 2019 13:13:11 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1hL6C6-0007eW-OJ; Mon, 29 Apr 2019 13:19:42 +0000
+Received: from mga02.intel.com ([134.134.136.20])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hL656-0004Ui-Cx
- for linux-amlogic@lists.infradead.org; Mon, 29 Apr 2019 13:12:29 +0000
-Received: from localhost (83-86-89-107.cable.dynamic.v4.ziggo.nl
- [83.86.89.107])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
- (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 99818204EC;
- Mon, 29 Apr 2019 13:12:26 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1556543547;
- bh=J2idFfiKv+JvN0+HiaPQqLJ6pzBDj5cmW8lzCb3bYgI=;
- h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
- b=MzcdTgitQcDCbSwcxhk03M1tQV3J+moX/dmENcmLCtQYm92Fb1NTbcvBelaspwjS3
- 7EhZ/L64SyOs103Zx9B3noQSFfNQShEJSh1FnDlNFg0edwqYu8dCmQ7doTv9L+6hjk
- bimbOVRgVvccb3YuJyAJqFREv+JGOgKACuX6nLjs=
-Date: Mon, 29 Apr 2019 15:12:24 +0200
-From: Greg KH <gregkh@linuxfoundation.org>
+ id 1hL6C3-0007eA-9G
+ for linux-amlogic@lists.infradead.org; Mon, 29 Apr 2019 13:19:40 +0000
+X-Amp-Result: UNSCANNABLE
+X-Amp-File-Uploaded: False
+Received: from orsmga003.jf.intel.com ([10.7.209.27])
+ by orsmga101.jf.intel.com with ESMTP/TLS/DHE-RSA-AES256-GCM-SHA384;
+ 29 Apr 2019 06:19:38 -0700
+X-ExtLoop1: 1
+X-IronPort-AV: E=Sophos;i="5.60,409,1549958400"; d="scan'208";a="146675438"
+Received: from smile.fi.intel.com (HELO smile) ([10.237.72.86])
+ by orsmga003.jf.intel.com with ESMTP; 29 Apr 2019 06:19:32 -0700
+Received: from andy by smile with local (Exim 4.92)
+ (envelope-from <andriy.shevchenko@linux.intel.com>)
+ id 1hL6Bu-0008Ek-Oe; Mon, 29 Apr 2019 16:19:30 +0300
+Date: Mon, 29 Apr 2019 16:19:30 +0300
+From: Andy Shevchenko <andriy.shevchenko@linux.intel.com>
 To: "Enrico Weigelt, metux IT consult" <lkml@metux.net>
-Subject: Re: [PATCH 01/41] drivers: tty: serial: dz: use dev_err() instead of
- printk()
-Message-ID: <20190429131224.GA27385@kroah.com>
+Subject: Re: [PATCH 37/41] drivers: tty: serial: 8250: simplify io resource
+ size computation
+Message-ID: <20190429131930.GE9224@smile.fi.intel.com>
 References: <1556369542-13247-1-git-send-email-info@metux.net>
- <1556369542-13247-2-git-send-email-info@metux.net>
- <20190427133117.GC11368@kroah.com>
- <bae3f23b-8823-f089-c40e-024ba225555f@metux.net>
+ <1556369542-13247-38-git-send-email-info@metux.net>
+ <20190428152103.GP9224@smile.fi.intel.com>
+ <431b36fe-3071-fcfd-b04e-b4b293e79a80@metux.net>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <bae3f23b-8823-f089-c40e-024ba225555f@metux.net>
-User-Agent: Mutt/1.11.4 (2019-03-13)
+In-Reply-To: <431b36fe-3071-fcfd-b04e-b4b293e79a80@metux.net>
+Organization: Intel Finland Oy - BIC 0357606-4 - Westendinkatu 7, 02160 Espoo
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190429_061228_484319_7D408E69 
-X-CRM114-Status: GOOD (  10.64  )
-X-Spam-Score: -5.1 (-----)
+X-CRM114-CacheID: sfid-20190429_061939_370446_8D222875 
+X-CRM114-Status: GOOD (  10.51  )
+X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.1 points)
+ Content analysis details:   (-2.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
- -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [134.134.136.20 listed in list.dnswl.org]
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -76,40 +71,38 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: linux-ia64@vger.kernel.org, lorenzo.pieralisi@arm.com,
- linux-mips@vger.kernel.org, linux-serial@vger.kernel.org, andrew@aj.id.au,
- khilman@baylibre.com, sudeep.holla@arm.com, liviu.dudau@arm.com,
+Cc: sparclinux@vger.kernel.org, lorenzo.pieralisi@arm.com,
+ linux-ia64@vger.kernel.org, linux-serial@vger.kernel.org, andrew@aj.id.au,
+ gregkh@linuxfoundation.org, sudeep.holla@arm.com, liviu.dudau@arm.com,
  linux-kernel@vger.kernel.org, vz@mleia.com, linux@prisktech.co.nz,
- linuxppc-dev@lists.ozlabs.org, sparclinux@vger.kernel.org,
- macro@linux-mips.org, slemieux.tyco@gmail.com, matthias.bgg@gmail.com,
- jacmet@sunsite.dk, linux-amlogic@lists.infradead.org,
- andriy.shevchenko@linux.intel.com, "Enrico Weigelt,
+ linuxppc-dev@lists.ozlabs.org, khilman@baylibre.com, macro@linux-mips.org,
+ slemieux.tyco@gmail.com, matthias.bgg@gmail.com, jacmet@sunsite.dk,
+ linux-amlogic@lists.infradead.org, linux-mips@vger.kernel.org, "Enrico Weigelt,
  metux IT consult" <info@metux.net>, davem@davemloft.net
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On Mon, Apr 29, 2019 at 02:37:04PM +0200, Enrico Weigelt, metux IT consult wrote:
-> On 27.04.19 15:31, Greg KH wrote:
-> > On Sat, Apr 27, 2019 at 02:51:42PM +0200, Enrico Weigelt, metux IT consult wrote:
-> >> Using dev_err() instead of printk() for more consistent output.
-> >> (prints device name, etc).
-> >>
-> >> Signed-off-by: Enrico Weigelt <info@metux.net>
-> >> ---
-> >>  drivers/tty/serial/dz.c | 8 ++++----
+On Mon, Apr 29, 2019 at 08:48:53AM +0200, Enrico Weigelt, metux IT consult wrote:
+> On 28.04.19 17:21, Andy Shevchenko wrote:
+
+> >> +#define SERIAL_RT2880_IOSIZE	0x100
 > > 
-> > Do you have this hardware to test any of these changes with?
+> > And why this is in the header file and not in corresponding C one?
 > 
-> Unfortunately not :(
+> hmm, no particular reason, maybe just an old habit to put definitions
+> into .h files ;-)
+> 
+> I can move it to 8250_of.c if you like me to.
 
-Then I can take the "basic" types of patches for the driver (like this
-one), but not any others, sorry.
+Please, do.
 
-thanks,
+-- 
+With Best Regards,
+Andy Shevchenko
 
-greg k-h
+
 
 _______________________________________________
 linux-amlogic mailing list
