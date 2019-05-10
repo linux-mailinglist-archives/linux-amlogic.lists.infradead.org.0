@@ -2,81 +2,79 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 597F819A0E
-	for <lists+linux-amlogic@lfdr.de>; Fri, 10 May 2019 10:52:26 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id EA9941A097
+	for <lists+linux-amlogic@lfdr.de>; Fri, 10 May 2019 17:53:44 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=4736CYot3K3EcSqdlLBH+gMkFbGn/gKU/iqyYZdJcvY=; b=imct1J6ma9K2Ks
-	7zaGxJYAirDNQpq77W/fjeKL33epXInpub1ndZX8KaVcRm7mHDA62twDBu9fGwaXM+k99simcPPdu
-	vDYBvKrLTQixuKF+K2HW6bZQttNmUoAhBOpntWjsZKoyE34vngaFBaz5Oc9Dh8FwNsFoSVhRc4QRP
-	vIxG1R74cBS7qHs7DNYcteBfUmQP0F92txlaqwzXlWW9W3zW3WYDKf2lTFm47zbQ1azR1sjmRCTu7
-	vOmtbJhHpb/gbZrZHg5mKKKe44cfwqeq/areZ6B/IrA9nLyEyazGpOGf6iT5hBnCHPQXdF+XmUB74
-	pvJmRyJHYdn9CQ+CaVtQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=64kzUsjRFOH3c32U42bVT/NOj1unoJka8cw1brdzg7o=; b=BZqYEa27Psc3wx
+	rGBZN4UUsMDL2uncKZoqKH6IeBWyBbls4YCxkVV+OubaXTXduu785qgDMMVqiWfT9h8f3Ji7oTvv6
+	JQSFEYgoqAIXIWIu208VHCBfwsAmXopRWVdIBkFNpQ9+HH7dUC1RBI6X4QfybXD5tLus7iR/AfzNQ
+	YXv2Ww0mOr0IGWijJQShgIT3fhJ0qTji6TFBz9Sul44ctc7xfrxQouW01bwt7C6ACNnoTef1dzaoN
+	3j78+zW7SIgc/T0YnaoUL6oGndGeSu4cNYMT465r3WwmDiZ49ptGF83cb44nX8nY/ANHeZSLDz4HJ
+	R1KwMbgun9lOpAH3jQNg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hP1GN-0006na-Iu; Fri, 10 May 2019 08:52:19 +0000
-Received: from mail-wm1-x341.google.com ([2a00:1450:4864:20::341])
+	id 1hP7q6-0008Vf-4i; Fri, 10 May 2019 15:53:38 +0000
+Received: from mail-wr1-x429.google.com ([2a00:1450:4864:20::429])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hP1GF-0006mq-AB
- for linux-amlogic@lists.infradead.org; Fri, 10 May 2019 08:52:17 +0000
-Received: by mail-wm1-x341.google.com with SMTP id h11so6484447wmb.5
- for <linux-amlogic@lists.infradead.org>; Fri, 10 May 2019 01:52:10 -0700 (PDT)
+ id 1hP7q2-0008Tm-GT
+ for linux-amlogic@lists.infradead.org; Fri, 10 May 2019 15:53:36 +0000
+Received: by mail-wr1-x429.google.com with SMTP id w8so6049957wrl.6
+ for <linux-amlogic@lists.infradead.org>; Fri, 10 May 2019 08:53:31 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=message-id:subject:from:to:cc:date:in-reply-to:references
- :user-agent:mime-version:content-transfer-encoding;
- bh=aaM8432jFaEmhAAs5kJRzcW3PtFv9V/mPFGHY/gVINc=;
- b=HC9GwhY1KxcCvquoeRmAWTsEHBkGlMjC2GOSg6QgSOb4NqeO9tQazouSymWwoGOCjA
- 9JWrMkzWVeVEGra7oAVM1kJhEEZM/PhqiogQbhTl6twBJtLpQ0/MPg56TCYYAt+Nvv1o
- mCJg3YB/RHexlJfjgBa+KFzqJ5FvXDDHsnnWtvdJONcsi/MDywBvcfou5mimKwOEo1iZ
- aCqw/BkOF0tmUEWP1PK3VYzCYHdrfLvr1cLVaGotwWbUkfqHza9nLRXR4qX182qhGhEq
- TKz1aA9ZIVvYWW+B6qEF292a80KFSQDyuElD+0kAVBqsrRz195OMy7ClsyOwrwFgKNTG
- 4aNQ==
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=WmYcNnwfKVscZCmwdjK6jhJ9WBHb6BXwy0H5GLHZ/VU=;
+ b=C0hRRVJkS6zB+gVPwbTFLoQ/yrTJe0AdMUE73ja1XnESm9WmkHP+J9t1kL18F89+Ar
+ Egg+kK9TylG8JTm6oqDQCeiK74nWu62vsP4nIgEBc8KBnTx6Cf8K8cgtOQEyVzIVKj21
+ 6wnLy3HMAlGd7LjVvWStoqLs91EkMu4NqovsGbMkzOIo+ayRm8P3sVzd52760Q3bQ8Kv
+ NktQEj+r/gGlKKS/J2qED2hxbwxNRj/NjVGpeZxBbtTmR0nZxmetlLSK8lIbKSa9epcP
+ DSog5ymi+1RkFJTHrMV2sRa/tkMuTeaU3G/LXcDIoQ/5nEsU5Cgcr9F+RoM3IXjR52Pp
+ H/bA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:message-id:subject:from:to:cc:date:in-reply-to
- :references:user-agent:mime-version:content-transfer-encoding;
- bh=aaM8432jFaEmhAAs5kJRzcW3PtFv9V/mPFGHY/gVINc=;
- b=euovaTSmbAjK40Ggxdv8b26J5Yxwu/JPybWPjxXbPLqKQa5WQC4/U8fznrjU/k+6jP
- /gN1hZs+AXpfj0V5sc9/j4fNdMBZDscGL2lssKq5N3gVQK+JgyeFU1tOXl2QFaVabbwS
- OwACZL1Wg0w0hyynJ4BpnP6siin5Bv1uMjmOJUqrAe6tE9yOl4Zwg1OqPvTJTuj8Fi16
- buPsmve0AgdPTfbj+hZVzxujk7lGaQ5Yi2U5yyl9JjTTe82SCl8SUe7iykkZZYYeFROm
- XnGHtH96ozD/A/0+DhcABXYj7ia/lup2mY/eXih6RLS/1cCH+Jp16NLJeVO6OFMl5p2E
- fPVA==
-X-Gm-Message-State: APjAAAUA5GbSQidyPcfZ0RoUuiGwjBF1IH8SxCMw8o14Y9xZ9gyBQNOM
- y9aLtutLIaTDmFSp9KKNrK+VXw==
-X-Google-Smtp-Source: APXvYqykj1mHG44y8+cSJrOUjhNqzrgeo1uIXi5+tTVxFFhizSUvTXk2PbGt+OXdLaVSil5RdqYKuA==
-X-Received: by 2002:a1c:80d7:: with SMTP id b206mr5910297wmd.48.1557478328921; 
- Fri, 10 May 2019 01:52:08 -0700 (PDT)
-Received: from boomer.baylibre.com
- (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
- by smtp.gmail.com with ESMTPSA id d4sm12281121wrf.7.2019.05.10.01.52.07
- (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Fri, 10 May 2019 01:52:08 -0700 (PDT)
-Message-ID: <331673da2c1cad1c72d61b45e0c614961445ec90.camel@baylibre.com>
-Subject: Re: [PATCH v5 0/6] Add drive-strength in Meson pinctrl driver
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=WmYcNnwfKVscZCmwdjK6jhJ9WBHb6BXwy0H5GLHZ/VU=;
+ b=dASn+3XH6rGuBstDepiQmoaCAygTvdS2f8LLC2dtdxv376UmCVL3LYsBXllkAJBkJo
+ 6s9WmW02h0DmzxAxWWLQrJjXpiipxaJMKLYAwjyFh6xtSD9/8bH9mpFqafw82Hl2ecNi
+ AR/37xf3sq2hz58oUNVw6DXINgBy34IlzOf744zfpp0HN9AByNnWwB4D5cRoKyOfaY13
+ wQFKufdap42+OHBSHMQzfo/Ax7fxRKce2B2szPuCukRYgukRAqvhycboTtCko3KtSiW3
+ 8KYIA5rVJNUJF0Rj1dMCLIdcDmBUA1sjUGGDgp0cOmkO2L6VQLuEYrptubIQ5OU+vcK/
+ 9QwA==
+X-Gm-Message-State: APjAAAVXuVDLI2n+PyKaxvLkQpE6kODeAHhDDJAC7VvcTq88tx1dum+Z
+ l7hG0LsMArp6Pz7rk1FgfwVQ3ZvcqyM=
+X-Google-Smtp-Source: APXvYqxG++tIt5+P1saVu6V+j0sm+4hTQruPueDBJA4MZeuRgE44zFdvgStVURuvnv+y7381WMKuKA==
+X-Received: by 2002:adf:e5cc:: with SMTP id a12mr8663276wrn.78.1557503610457; 
+ Fri, 10 May 2019 08:53:30 -0700 (PDT)
+Received: from boomer.local (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr.
+ [90.63.244.31])
+ by smtp.googlemail.com with ESMTPSA id u14sm5333860wrn.30.2019.05.10.08.53.29
+ (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
+ Fri, 10 May 2019 08:53:29 -0700 (PDT)
 From: Jerome Brunet <jbrunet@baylibre.com>
-To: Guillaume La Roque <glaroque@baylibre.com>, linus.walleij@linaro.org, 
- khilman@baylibre.com
-Date: Fri, 10 May 2019 10:52:07 +0200
-In-Reply-To: <20190510082324.21181-1-glaroque@baylibre.com>
-References: <20190510082324.21181-1-glaroque@baylibre.com>
-User-Agent: Evolution 3.30.5 (3.30.5-1.fc29) 
+To: Kevin Hilman <khilman@baylibre.com>
+Subject: [PATCH 0/2] arm64: dts: meson: g12a board node order
+Date: Fri, 10 May 2019 17:53:25 +0200
+Message-Id: <20190510155327.5759-1-jbrunet@baylibre.com>
+X-Mailer: git-send-email 2.20.1
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190510_015211_352203_262C257C 
-X-CRM114-Status: GOOD (  18.27  )
+X-CRM114-CacheID: sfid-20190510_085334_689354_9FBE8674 
+X-CRM114-Status: UNSURE (   6.63  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:341 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:429 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
@@ -93,75 +91,28 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: linux-gpio@vger.kernel.org, linux-amlogic@lists.infradead.org,
- linux-kernel@vger.kernel.org, devicetree@vger.kernel.org
+Cc: linux-amlogic@lists.infradead.org, devicetree@vger.kernel.org,
+ linux-kernel@vger.kernel.org, Jerome Brunet <jbrunet@baylibre.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On Fri, 2019-05-10 at 10:23 +0200, Guillaume La Roque wrote:
-> The purpose of this patchset is to add drive-strength support in meson pinconf
-> driver. This is a new feature that was added on the g12a. It is critical for us
-> to support this since many functions are failing with default pad drive-strength.
-> 
-> The value achievable by the SoC are 0.5mA, 2.5mA, 3mA and 4mA and the DT property
-> 'drive-strength' is expressed in mA.
-> So this patch add another generic property "drive-strength-microamp". The change to do so
-> would be minimal and could be benefit to other platforms later on.
-> 
-> Cheers
-> Guillaume
+The order of the nodes in the u200 and sei510 is bit fancy.
+Order nodes by address, then node name, then aliases.
 
-Guillaume,
+This makes rebasing is little less painful
 
-Several tags, such as Acked-by, Reviewed-by or Tested-by have been given on this
-series.
+Jerome Brunet (2):
+  arm64: dts: meson: sei510: consistently order nodes
+  arm64: dts: meson: u200: consistently order nodes
 
-Please remember to collect and add them to the commit description when posting newer
-revision of a series
+ .../boot/dts/amlogic/meson-g12a-sei510.dts    | 92 +++++++++----------
+ .../boot/dts/amlogic/meson-g12a-u200.dts      | 50 +++++-----
+ 2 files changed, 72 insertions(+), 70 deletions(-)
 
-If you didn't already, please have a look at Documentation/process/submitting-patches.rst
-
-Thanks
-
-> 
-> Changes since v4:
-> - fix dt-binding documentation
-> - rename drive-strength-uA to drive-strength-microamp in coverletter
-> 
-> Changes since v3:
-> - remove dev_err in meson_get_drive_strength
-> - cleanup code
-> 
-> Changes since v2:
-> - rename driver-strength-uA property to drive-strength-microamp
-> - rework patch series for better understanding
-> - rework set_bias function
-> 
-> Changes since v1:
-> - fix missing break
-> - implement new pinctrl generic property "drive-strength-uA"
-> 
-> [1] https://lkml.kernel.org/r/20190314163725.7918-1-jbrunet@baylibre.com
-> 
-> Guillaume La Roque (6):
->   dt-bindings: pinctrl: add a 'drive-strength-microamp' property
->   pinctrl: generic: add new 'drive-strength-microamp' property support
->   dt-bindings: pinctrl: meson: Add drive-strength-microamp property
->   pinctrl: meson: Rework enable/disable bias part
->   pinctrl: meson: add support of drive-strength-microamp
->   pinctrl: meson: g12a: add DS bank value
-> 
->  .../bindings/pinctrl/meson,pinctrl.txt        |   4 +
->  .../bindings/pinctrl/pinctrl-bindings.txt     |   3 +
->  drivers/pinctrl/meson/pinctrl-meson-g12a.c    |  36 ++--
->  drivers/pinctrl/meson/pinctrl-meson.c         | 180 ++++++++++++++----
->  drivers/pinctrl/meson/pinctrl-meson.h         |  18 +-
->  drivers/pinctrl/pinconf-generic.c             |   2 +
->  include/linux/pinctrl/pinconf-generic.h       |   3 +
->  7 files changed, 193 insertions(+), 53 deletions(-)
-
+-- 
+2.20.1
 
 
 _______________________________________________
