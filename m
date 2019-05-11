@@ -2,84 +2,90 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id EDCDF1A8C0
-	for <lists+linux-amlogic@lfdr.de>; Sat, 11 May 2019 19:30:53 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id BD8131A8E2
+	for <lists+linux-amlogic@lfdr.de>; Sat, 11 May 2019 19:45:55 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=AsPMpKmsN9s+sti6gZNcJeLjH7g0MxJ8eRUekYxRD2E=; b=c4SLAJoVmCq7TT
-	vaGPsMzxvhlr685ibF+Me+C4JrHfAsKDHpNU4rvyYXFPGeR8/f5Tnu9FYogf88Uz6duHK0phiz7KA
-	I/Qz0LPIszMRxX2cLUlWBT+EnbE6pAkCJp3ef30qBQ8DxPAbpOBvD4/n43IkQNXMmWh942ZhOENPg
-	/FhjitHUeEuBNPz0+vp0krH24Dp0VC3WTQxTdyN/78N42Ko4UFYiMaEwOPa6b9BR4MppQom4QbHU/
-	gorayBokT8P9YUTcnn3hWIoQx7VfG8FupjhcyCqzNT+0vlELkTWOedX89o2kIVFgg2HC1rPw450EH
-	t6Jz0y6xb780djc1foUw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=nsYEr2ISlDjpx5pPMNpLkzQF+m7+sLR0QZ02pbLPGdI=; b=O+nLGTqkm6UabP
+	Pu7kr4MPuFtuXZxxKbUzAHelMcAmldWOMb498IdKJVoUmUd8gzVSf8yLZEmt9fOdNQCiPXwnLyR3m
+	ARg7HdOCOvyMzqRoeU24x4cm1Ks0NbbS4Z7VkFMJJHw0uxoDfrzojXHPUd1Iu6SMA592jLiaWOM1b
+	BD4jWz2RLiHO6vjxzktrLAzopTB1UjR2Vww2vyUqyWwm3DkfGPpPULjEJpyTTaeugjFUX5Aja+fQD
+	AL/TDBfgAJMduyM/22WvVMXiAZKNbtVj26bXDUDs4m8pYDr2mEavtZu8Vh/QU8Oo7QcSguzGCvO/z
+	sCiPM04+UtAlnVttRUGw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hPVpj-0004Jf-38; Sat, 11 May 2019 17:30:51 +0000
-Received: from mail-wr1-x441.google.com ([2a00:1450:4864:20::441])
+	id 1hPW4F-0002eo-N8; Sat, 11 May 2019 17:45:51 +0000
+Received: from mail-wm1-x342.google.com ([2a00:1450:4864:20::342])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hPVpg-0004JM-1U
- for linux-amlogic@lists.infradead.org; Sat, 11 May 2019 17:30:49 +0000
-Received: by mail-wr1-x441.google.com with SMTP id l2so10937758wrb.9
- for <linux-amlogic@lists.infradead.org>; Sat, 11 May 2019 10:30:47 -0700 (PDT)
+ id 1hPW4C-0002eJ-C8; Sat, 11 May 2019 17:45:49 +0000
+Received: by mail-wm1-x342.google.com with SMTP id y2so10211863wmi.5;
+ Sat, 11 May 2019 10:45:47 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=message-id:subject:from:to:cc:date:in-reply-to:references
- :user-agent:mime-version:content-transfer-encoding;
- bh=vwwZLPGcGAXR13vr6qy0UFO0DZOncduClPeRkEBWYFc=;
- b=iAAWQhmGoVZvhmuDcYtYlbKL2yPAIDiBKcRtQzrDY8/2tnIqUlmr2J9Lf9skmq/Yex
- 5wV1Wi3D7nRhS41ow4am5x29wFE5pKaU64fT0tP7xnRUuq8CYEnP+hRe9oDfMkJn8GqO
- 1Z2YzZChWks5KnM98Nt4DKa3CDhBdO2c2/nBJGJgd4UpNIYUa7efGJ7dVovZ8H/IH+QQ
- 3HAb9coU4zCQ9DHeA4Eci3/svDt3GHr7WJI/f+KGnmaI/5Mbw4LSSTe8LxiBsLrudTbm
- wb2XWTWaEqk53tfcLEEKyz1g0E2SZOl++duAqOvOpP/jWGcTZaMe4Yf1Pm4roSoj1T4l
- F9Ug==
+ d=googlemail.com; s=20161025;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=92ZA36IfdaOtsZw80t2M4+MXEzMldpioQlWAUTdSiyM=;
+ b=GNZ67HorQfYfzNJYPsTQiKiEZ1u9f9aUoZ/E1qQniEFWPFzxEhxkB6iTFfKGLmCiNV
+ 9wViPgp4PdVYAeU7i5PBjtHyBLZ1Qas6ehl9CBX7rmqCWHbwdRg88AK9ej6MlF2NH7Jr
+ FTrgMkhTdZUsvtmgGToQXOQh3i/VFjtjMM7SMUFQk+LO8naQb2HJx46EPKteI/Ksk3U6
+ M+0gr59EHZTEqmqajUq3dF+JLvcdmH5f2eN8YZ+cVX3mz7xvo9u4XvB1aM+CFjoSPRnQ
+ iKZ/zjq6j9vzEVscp7nT6rilo4X4L2g7oCVPrajeaP4ZIPpsW9MoBYclI5vndvwtFWj4
+ lF0A==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:message-id:subject:from:to:cc:date:in-reply-to
- :references:user-agent:mime-version:content-transfer-encoding;
- bh=vwwZLPGcGAXR13vr6qy0UFO0DZOncduClPeRkEBWYFc=;
- b=Ja52PENDhMpjc8STfvf+bYME9eI1u7z2JAeNCxjyMCkQPCB3HEI1COQDxY+fUHirZf
- 2zu5Mz2v2npmWTVSmdXyJR2wP+AkNhuTAKnYrg9EoEFXwBJNaexFnIiiyVJdrQ2XW7qS
- 6fpDiNI3mLgts9gip1DYzofCq7nyrdddnkPDgIlN8RFXwwalqUSMvJ5wX0px3lj7QrGr
- LYHdeMRjqiVdI3/nUAwXNAbTDcHUHzfptj6N47/O9MxloX2OgV2sFe4WD7Z+pN5W0nrr
- hdbQwbX1zD/5+dojGmjK8XI1Bt1g4SMczg5gvsmBxD75Bp/psKtyLKLbxChV7NtFJ8MA
- uF6Q==
-X-Gm-Message-State: APjAAAUu3UDQpJJJyRU2hJeswBbkMQ+hHl0OyL5KleTquYyLPcTzpht/
- M+BoMCbVyeO4ifntj7xgJ9Y3hA==
-X-Google-Smtp-Source: APXvYqzMfiElnxb5yZhB+kwVExSHOrKfOzubcaza7o466jpJjApJTMKSG1pFPkqd982U0sk3wi9Rnw==
-X-Received: by 2002:a5d:6145:: with SMTP id y5mr2072583wrt.96.1557595846109;
- Sat, 11 May 2019 10:30:46 -0700 (PDT)
-Received: from boomer.baylibre.com (cag06-3-82-243-161-21.fbx.proxad.net.
- [82.243.161.21])
- by smtp.gmail.com with ESMTPSA id d26sm5315078wmb.4.2019.05.11.10.30.44
- (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Sat, 11 May 2019 10:30:45 -0700 (PDT)
-Message-ID: <b14fef3d74c082a33e24702504bd5b362f6bd628.camel@baylibre.com>
-Subject: Re: [PATCH 3/5] arm64: dts: meson: g12a: add mdio multiplexer
-From: Jerome Brunet <jbrunet@baylibre.com>
-To: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-Date: Sat, 11 May 2019 19:30:44 +0200
-In-Reply-To: <CAFBinCAe3jd598MPLUGFEoBAOaeXovSz7_8Kn7ZMmSFvRLFSXg@mail.gmail.com>
-References: <20190510164940.13496-1-jbrunet@baylibre.com>
- <20190510164940.13496-4-jbrunet@baylibre.com>
- <CAFBinCAe3jd598MPLUGFEoBAOaeXovSz7_8Kn7ZMmSFvRLFSXg@mail.gmail.com>
-User-Agent: Evolution 3.30.5 (3.30.5-1.fc29) 
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=92ZA36IfdaOtsZw80t2M4+MXEzMldpioQlWAUTdSiyM=;
+ b=NjFZo9CitH1roUJyfsmXh1g4xnfZzC59oOXElOiHZJ77R57VotXw0kDsDYf3mRFMMw
+ 6zafxwqdg73eYLWwmly6t0RcwzHRD0g/XYycyOB7BmPeYdX2y07isOcg8XRCQ8w4q3Gz
+ kFXMDh4kr4L89QHmN+gUMyezm+pYnYlnEMcVQdh00OHiutmxQX9T07DtGBBLIhZUBBkk
+ rurMUYgWwUL/N2B67Wy6xLd/Cmt+Yp9+Rc2LZ2MLFSuGUcUM9h/soVESxBegkuYCQx1b
+ yrCPOBRnqO0y0Dp3jFNt7KQOf5JvFnf8Z1tfO1t3G+tQF/xaVPw0tpaopFcbJn7zR5cE
+ MPzw==
+X-Gm-Message-State: APjAAAXA2LsXzNyczeXkoTI6Z02Tm0BymZ04F+URdDDF2TtlwL68uONQ
+ y/6LYO9aQqzQSvYzJYqNUKE=
+X-Google-Smtp-Source: APXvYqyBv+xZzZ9rpWv+EUHwPoSsPYeaBjz1deSYDtLsTCx/vqUrbrwe8U8OOTlcrUM78XGzTpDYMw==
+X-Received: by 2002:a05:600c:2248:: with SMTP id
+ a8mr11140164wmm.75.1557596746018; 
+ Sat, 11 May 2019 10:45:46 -0700 (PDT)
+Received: from blackbox.darklights.net
+ (p200300F133C8AD0059E186517133DF77.dip0.t-ipconnect.de.
+ [2003:f1:33c8:ad00:59e1:8651:7133:df77])
+ by smtp.googlemail.com with ESMTPSA id
+ h188sm10309538wmf.48.2019.05.11.10.45.44
+ (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+ Sat, 11 May 2019 10:45:45 -0700 (PDT)
+From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+To: khilman@baylibre.com,
+	linux-amlogic@lists.infradead.org
+Subject: [PATCH] arm64: dts: amlogic: remove ethernet-phy-idAAAA.BBBB
+ compatible strings
+Date: Sat, 11 May 2019 19:45:34 +0200
+Message-Id: <20190511174534.2403-1-martin.blumenstingl@googlemail.com>
+X-Mailer: git-send-email 2.21.0
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190511_103048_101835_A94CDACC 
-X-CRM114-Status: GOOD (  24.20  )
-X-Spam-Score: -0.0 (/)
+X-CRM114-CacheID: sfid-20190511_104548_438582_02DE6E70 
+X-CRM114-Status: GOOD (  12.97  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:441 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:342 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (martin.blumenstingl[at]googlemail.com)
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
@@ -94,94 +100,92 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: Kevin Hilman <khilman@baylibre.com>, devicetree@vger.kernel.org,
- linux-kernel@vger.kernel.org, linux-amlogic@lists.infradead.org
+Cc: Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
+ devicetree@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
+ jbrunet@baylibre.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On Sat, 2019-05-11 at 18:59 +0200, Martin Blumenstingl wrote:
-> Hi Jerome,
-> 
-> On Fri, May 10, 2019 at 6:49 PM Jerome Brunet <jbrunet@baylibre.com> wrote:
-> > Add the g12a mdio multiplexer which allows to connect to either
-> > an external phy through the SoC pins or the internal 10/100 phy
-> > 
-> > Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
-> > ---
-> >  arch/arm64/boot/dts/amlogic/meson-g12a.dtsi | 32 +++++++++++++++++++++
-> >  1 file changed, 32 insertions(+)
-> > 
-> > diff --git a/arch/arm64/boot/dts/amlogic/meson-g12a.dtsi b/arch/arm64/boot/dts/amlogic/meson-g12a.dtsi
-> > index fe0f73730525..6e9587aafb5d 100644
-> > --- a/arch/arm64/boot/dts/amlogic/meson-g12a.dtsi
-> > +++ b/arch/arm64/boot/dts/amlogic/meson-g12a.dtsi
-> > @@ -460,6 +460,38 @@
-> >                                 assigned-clock-rates = <100000000>;
-> >                                 #phy-cells = <1>;
-> >                         };
-> > +
-> > +                       eth_phy: mdio-multiplexer@4c000 {
-> > +                               compatible = "amlogic,g12a-mdio-mux";
-> > +                               reg = <0x0 0x4c000 0x0 0xa4>;
-> > +                               clocks = <&clkc CLKID_ETH_PHY>,
-> > +                                        <&xtal>,
-> > +                                        <&clkc CLKID_MPLL_5OM>;
-> I haven't noticed that before but there's a typo in the MPLL_5OM clock
-> definition:
-> the O (capital o) should be a 0 (zero).
-> can you fix this typo in an additional clock patch for v5.2 - then we
-> don't have to do it in v5.3 where this .dtsi might already use it
-> 
-> > +                               clock-names = "pclk", "clkin0", "clkin1";
-> > +                               mdio-parent-bus = <&mdio0>;
-> > +                               #address-cells = <1>;
-> > +                               #size-cells = <0>;
-> > +
-> > +                               ext_mdio: mdio@0 {
-> > +                                       reg = <0>;
-> > +                                       #address-cells = <1>;
-> > +                                       #size-cells = <0>;
-> > +                               };
-> > +
-> > +                               int_mdio: mdio@1 {
-> > +                                       reg = <1>;
-> > +                                       #address-cells = <1>;
-> > +                                       #size-cells = <0>;
-> > +
-> > +                                       internal_ephy: ethernet_phy@8 {
-> > +                                               compatible = "ethernet-phy-id0180.3301",
-> > +                                                            "ethernet-phy-ieee802.3-c22";
-> please drop the compatible string and replace it with a comment (if
-> you feel that it's needed).
-> quote from Documentation/devicetree/bindings/net/phy.txt:
-> > If the PHY reports an incorrect ID (or none at all) then the
-> > "compatible" list may contain an entry with the correct PHY ID in the
-> > form: "ethernet-phy-idAAAA.BBBB"
+The Ethernet PHY documentation
+(Documentation/devicetree/bindings/net/phy.txt) states that:
+  If the PHY reports an incorrect ID (or none at all) then the
+  "compatible" list may contain an entry with the correct PHY ID in the
+  form: "ethernet-phy-idAAAA.BBBB"
 
-I would keep this for the internal phy. The id completely made up by the MDIO mux, so it
-is a lot weaker than the usual PHY.
+An older version of the documentation suggested that the compatible
+string can be used when the PHY ID is known.
 
-The fact is that I made a mistake (which I'm going to correct) in the g12a mdio mux and
-the id is incorrect. Thanks to this, we know the PHY the correct internal phy driver
-is picked up.
+Remove the ethernet-phy-id compatible string and add a comment with the
+PHY ID instead.
+This is a no-op on boards which are shipped with the PHY that was
+listed (= all known cases). However, if a board manufacturer decides to
+ship a different PHY we will now load and use the correct driver because
+we ask the PHY to identify itself.
 
-> 
-> I am going to send a patch for other Amlogic boards to remove any
-> ethernet-phy-id comaptible string
+Signed-off-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+---
+ arch/arm64/boot/dts/amlogic/meson-gxl-s905d-p230.dts | 2 +-
+ arch/arm64/boot/dts/amlogic/meson-gxm-nexbox-a1.dts  | 2 +-
+ arch/arm64/boot/dts/amlogic/meson-gxm-q200.dts       | 2 +-
+ arch/arm64/boot/dts/amlogic/meson-gxm-rbox-pro.dts   | 2 +-
+ 4 files changed, 4 insertions(+), 4 deletions(-)
 
-Make sense for the external phys but I think it is wiser to keep it for the internal ones.
-
-For external phys, A manufacturer could replace the device w/o any notice, so we should
-rely on the id to pick it up correctly. For a the PHY embedded in the SoC, we which one it
-is and it can't change (w/o notice at least)
-
-> 
-> 
-> Regards
-> Martin
-
+diff --git a/arch/arm64/boot/dts/amlogic/meson-gxl-s905d-p230.dts b/arch/arm64/boot/dts/amlogic/meson-gxl-s905d-p230.dts
+index 0c8e8305b1f3..767b1763a612 100644
+--- a/arch/arm64/boot/dts/amlogic/meson-gxl-s905d-p230.dts
++++ b/arch/arm64/boot/dts/amlogic/meson-gxl-s905d-p230.dts
+@@ -81,7 +81,7 @@
+ 
+ &external_mdio {
+ 	external_phy: ethernet-phy@0 {
+-		compatible = "ethernet-phy-id001c.c916", "ethernet-phy-ieee802.3-c22";
++		/* Realtek RTL8211F (0x001cc916) */
+ 		reg = <0>;
+ 		max-speed = <1000>;
+ 		interrupt-parent = <&gpio_intc>;
+diff --git a/arch/arm64/boot/dts/amlogic/meson-gxm-nexbox-a1.dts b/arch/arm64/boot/dts/amlogic/meson-gxm-nexbox-a1.dts
+index 8acfd40090d2..a99c1ba3131c 100644
+--- a/arch/arm64/boot/dts/amlogic/meson-gxm-nexbox-a1.dts
++++ b/arch/arm64/boot/dts/amlogic/meson-gxm-nexbox-a1.dts
+@@ -111,7 +111,7 @@
+ 
+ &external_mdio {
+ 	external_phy: ethernet-phy@0 {
+-		compatible = "ethernet-phy-id001c.c916", "ethernet-phy-ieee802.3-c22";
++		/* Realtek RTL8211F (0x001cc916) */
+ 		reg = <0>;
+ 		max-speed = <1000>;
+ 	};
+diff --git a/arch/arm64/boot/dts/amlogic/meson-gxm-q200.dts b/arch/arm64/boot/dts/amlogic/meson-gxm-q200.dts
+index 73d656e4aade..8939c0fc5b62 100644
+--- a/arch/arm64/boot/dts/amlogic/meson-gxm-q200.dts
++++ b/arch/arm64/boot/dts/amlogic/meson-gxm-q200.dts
+@@ -63,7 +63,7 @@
+ 
+ &external_mdio {
+ 	external_phy: ethernet-phy@0 {
+-		compatible = "ethernet-phy-id001c.c916", "ethernet-phy-ieee802.3-c22";
++		/* Realtek RTL8211F (0x001cc916) */
+ 		reg = <0>;
+ 		max-speed = <1000>;
+ 		interrupt-parent = <&gpio_intc>;
+diff --git a/arch/arm64/boot/dts/amlogic/meson-gxm-rbox-pro.dts b/arch/arm64/boot/dts/amlogic/meson-gxm-rbox-pro.dts
+index 7fa20a8ede17..acb4aaf9b956 100644
+--- a/arch/arm64/boot/dts/amlogic/meson-gxm-rbox-pro.dts
++++ b/arch/arm64/boot/dts/amlogic/meson-gxm-rbox-pro.dts
+@@ -113,7 +113,7 @@
+ 
+ &external_mdio {
+ 	external_phy: ethernet-phy@0 {
+-		compatible = "ethernet-phy-id001c.c916", "ethernet-phy-ieee802.3-c22";
++		/* Realtek RTL8211F (0x001cc916) */
+ 		reg = <0>;
+ 		max-speed = <1000>;
+ 	};
+-- 
+2.21.0
 
 
 _______________________________________________
