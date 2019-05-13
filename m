@@ -2,83 +2,85 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B55DD1B702
-	for <lists+linux-amlogic@lfdr.de>; Mon, 13 May 2019 15:26:51 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E2E701B9E4
+	for <lists+linux-amlogic@lfdr.de>; Mon, 13 May 2019 17:25:02 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=X7RxkMu0CDkOV5/gILhUTqigK+DUO8ToLWQWL26trXg=; b=TyQJh9qEQcYLfm
-	TkhdqIuZBpmYEpdlFMNxsPu9c9gDZj78Ld7wgDuJCd7cCp5wGbdxHdUACOY8IJ23AaNto/ToO1p+V
-	9rUiPfj5zl9QQk0BZ1OuSmmC8WEu2DNP0f42NzRXnGQF6N38r0Z5IPAETZ0Og/xnEV/A68XvYCedE
-	+x1Yb3bKeUK5C1ZGDUlUvpXlftp5i2/cyyfy1XUVKqYpUR9+dJW9sux7Gpl9VJu8G2wD/68PfUqXw
-	0xl05AUNCPaZJ+TD5QeWErHMTwnEjVXkle1W9/3fWoe6Jy+b+y5yClpNvouLLnzJpj6tl1O6XMW/Y
-	0g6UF4a4i2HWBjf5wU5A==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=Kv4kz/rh0Jghws+R9JDO7mJPmYO2upe4zFVDAzeLlEs=; b=gcRYDT6jgwwpJt
+	aoCJwC1NkUvoSOFIkl8TKep742eLpjCsgK1LIVPZzEL71d4uk4YYtWVe9AA2Jmyn+bQKCJcm5nOYh
+	3KXaiD+3YltIruM6cQDoGMC1AOP5Mh+hOuYJHKoexjlJciYrcxi+H5z8Wdey11bRaynYfp1gIIeTb
+	EeisOpn547x9XNK328KBmcmjN0qmNvikJghC9TSnJdMVvA0+DmSqEGjVDUln43iekRgz3ntaSJw9a
+	ZsGXmKr3uR4TxPrrXOQVlpJway4PAzSX7jn30OP+f/gD6JdMn0sEXjgp37IFp2eQHfasfBXdknYQ/
+	dxwI9T4aW8OkInPmsZMw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hQAyb-0002qd-Pz; Mon, 13 May 2019 13:26:45 +0000
-Received: from mail-wr1-x432.google.com ([2a00:1450:4864:20::432])
+	id 1hQCoy-00025H-A5; Mon, 13 May 2019 15:24:56 +0000
+Received: from mail-ot1-f66.google.com ([209.85.210.66])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hQAyX-0002px-W6
- for linux-amlogic@lists.infradead.org; Mon, 13 May 2019 13:26:43 +0000
-Received: by mail-wr1-x432.google.com with SMTP id v11so15284885wru.5
- for <linux-amlogic@lists.infradead.org>; Mon, 13 May 2019 06:26:41 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=vPE3jxCO3dCQR+ybH4Gy+efpIpySYIwlVy/qEuYWDIY=;
- b=g8eRb+2Ye5bChbQzqB5uao6VM8WXp8fKutdZSzNyT+KSAaYvR0EequtAtjOPxZAiPW
- geHXsBfDa5q4YSH7jEEHce3pQ480eBTmAVgtGKTksz96oPgnZ9sDb3kXpi5Rxx7MUKD6
- Q7x8NplJmezylTtJYTzw8t+vhFN0VRk93+whQ/cIJgosstN6HundDjINH409Xu2RTNn3
- W92hgrAd/KiabsLQaEtIbKXWSlJ/2TIf3ueJ/qyec6sVPaMTV0YbGapLgU0Ywyh2VyVG
- g/hPZvO9EVWWi4Uj6JvDdoVSzzu4JMRcTe3JaLFMj9aZpBmxMV7NdK18KkQysCDvKryy
- 29zw==
+ id 1hQCov-00024v-No
+ for linux-amlogic@lists.infradead.org; Mon, 13 May 2019 15:24:54 +0000
+Received: by mail-ot1-f66.google.com with SMTP id j49so4457262otc.13
+ for <linux-amlogic@lists.infradead.org>; Mon, 13 May 2019 08:24:53 -0700 (PDT)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=vPE3jxCO3dCQR+ybH4Gy+efpIpySYIwlVy/qEuYWDIY=;
- b=bkEwR0mQYbjgDHvCHKaFlY7JhJPStPZPqi95pp4semztyX1NJwgXm9HQrif/9CI97X
- /obUZZ2QioEEqrn+oK2fxxeXPUqIGhXwFTv8krR7LCu0h7WIqhBV0aFWze4ab7PfCDuw
- Iy6V53L+bBNAg8SxsHTkbHQuOlCU3n5+sRDGOecfKGeMGVIwQyO8VL1c4EaPjVbWaKYv
- 0FNMSPjvhlKkrCddFnEoJlwIgk10FmvC0oIUHQ1qyXtNEhzlqMflqWRA1UbI/ZHbqNB+
- 181DYwyBQA68zff8GrIx+JekcLoM49OUyfVxsLWLqqh1FbebMF7qE5KFUrzWhikmdopO
- nGOA==
-X-Gm-Message-State: APjAAAXpWWg7ZtPz9mfjtj4dfj98vPHxyS9GIuuxIKV7UBLQRJrmLnI8
- 6EGl+Zwax2CKzheAbWCE2QI4nw==
-X-Google-Smtp-Source: APXvYqySFgPHBjr/wKnTqEBG02gIwRobVpzN22Zu5VUMEwIG0+8bMfpops6VWDvfUHaJpt3uXuot2g==
-X-Received: by 2002:adf:f6cb:: with SMTP id y11mr18657626wrp.67.1557754000110; 
- Mon, 13 May 2019 06:26:40 -0700 (PDT)
-Received: from boomer.local (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr.
- [90.63.244.31])
- by smtp.googlemail.com with ESMTPSA id t13sm16400701wra.81.2019.05.13.06.26.39
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:in-reply-to:user-agent;
+ bh=Exa3++INrIvsO/2wwFbAr/g8BRRRca3wv4ypTrPlix8=;
+ b=KewMD48FiXQzkctZIE3dxVBqUN4cOY8k8O+RJZ+5WX/uOHbzSFimUUoallsFKGH5PP
+ bfjvPGFPQZqvWLJdVGDkGuh1iZzyc2jwlZRa+ay6p8ynWtbR79LYaE5qErCMF4rOY0l2
+ trvbPJc6T6Giz+iVtKFqw1YjI680BpLXnmPIDZWWLGaoCYCKFP3NBQSPhJM9aGbzVmjF
+ Brl9IA6DA5WY697hufxcQmbXpyhSk4MHA4yiJ4Bcq/emI2vrJ4Y4dwutmuIASgus2tyo
+ AWsivyZEMceCVlaRnrm5FfGqcNe2jq1i+dOcNbHIqmIQcQgWI0y89/vgjVgRsVZHeQou
+ lftQ==
+X-Gm-Message-State: APjAAAVMucZC4W511gcDlm61xNahw5Cdi7S7PDoDgcnIaKZYDA6Ka9GW
+ GoNI5Mva/VV6Hj168I1o7A==
+X-Google-Smtp-Source: APXvYqxD+j5Q4AEhVMyo/hXjCt0J0a+ijOKVDszq4Ce3lGoF83FSubFyFx1OarmubB6+GoPNGDdf3Q==
+X-Received: by 2002:a9d:3f61:: with SMTP id m88mr16458752otc.147.1557761092874; 
+ Mon, 13 May 2019 08:24:52 -0700 (PDT)
+Received: from localhost (24-155-109-49.dyn.grandenetworks.net.
+ [24.155.109.49])
+ by smtp.gmail.com with ESMTPSA id a24sm196287otd.37.2019.05.13.08.24.51
  (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
- Mon, 13 May 2019 06:26:39 -0700 (PDT)
-From: Jerome Brunet <jbrunet@baylibre.com>
-To: Kevin Hilman <khilman@baylibre.com>
-Subject: [PATCH/RFT] arm64: dts: meson: odroid-c2: add missing mmc modes
-Date: Mon, 13 May 2019 15:26:27 +0200
-Message-Id: <20190513132627.25149-1-jbrunet@baylibre.com>
-X-Mailer: git-send-email 2.20.1
+ Mon, 13 May 2019 08:24:52 -0700 (PDT)
+Date: Mon, 13 May 2019 10:24:51 -0500
+From: Rob Herring <robh@kernel.org>
+To: Guillaume La Roque <glaroque@baylibre.com>
+Subject: Re: [PATCH v5 1/6] dt-bindings: pinctrl: add a
+ 'drive-strength-microamp' property
+Message-ID: <20190513152451.GA25690@bogus>
+References: <20190510082324.21181-1-glaroque@baylibre.com>
+ <20190510082324.21181-2-glaroque@baylibre.com>
 MIME-Version: 1.0
+Content-Disposition: inline
+In-Reply-To: <20190510082324.21181-2-glaroque@baylibre.com>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190513_062642_027685_D9EF4053 
-X-CRM114-Status: GOOD (  13.73  )
-X-Spam-Score: -0.0 (/)
+X-CRM114-CacheID: sfid-20190513_082453_777461_FD77CA4D 
+X-CRM114-Status: UNSURE (   9.00  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.3 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.0 points)
+ Content analysis details:   (0.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:432 listed in]
- [list.dnswl.org]
+ no trust [209.85.210.66 listed in list.dnswl.org]
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (robherring2[at]gmail.com)
+ 0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit (robherring2[at]gmail.com)
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
+ 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+ [209.85.210.66 listed in wl.mailspike.net]
+ 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
+ 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -90,62 +92,24 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, linux-amlogic@lists.infradead.org,
- linux-kernel@vger.kernel.org, Jerome Brunet <jbrunet@baylibre.com>
+Cc: devicetree@vger.kernel.org, khilman@baylibre.com, linus.walleij@linaro.org,
+ linux-kernel@vger.kernel.org, linux-gpio@vger.kernel.org,
+ linux-amlogic@lists.infradead.org, jbrunet@baylibre.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Add sdcard uhs modes up to DDR50 and push eMMC up to 200Mhz
-With the new tuning method, these modes appear to be stable
+On Fri, 10 May 2019 10:23:19 +0200, Guillaume La Roque wrote:
+> This property allow drive-strength parameter in uA instead of mA.
+> 
+> Signed-off-by: Guillaume La Roque <glaroque@baylibre.com>
+> ---
+>  Documentation/devicetree/bindings/pinctrl/pinctrl-bindings.txt | 3 +++
+>  1 file changed, 3 insertions(+)
+> 
 
-Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
----
-
- This particular board has always been painful when it comes to
- its eMMC modules. While testing the new tuning method introduced
- in the last cycle, I have not seen any issue with HS200@200Mhz.
- That being said, I only have the 16GB module.
-
- In the past, problems have been reported with other modules while
- it was fine on the one I have. Clearly, I don't have the full
- picture.
-
- Kevin, I don't know how you prefer to proceed. I am personally in
- no rush to see this applied. I'm sending this mainly to make sure
- it is shared and give people a chance to report issues.
-
- arch/arm64/boot/dts/amlogic/meson-gxbb-odroidc2.dts | 6 +++++-
- 1 file changed, 5 insertions(+), 1 deletion(-)
-
-diff --git a/arch/arm64/boot/dts/amlogic/meson-gxbb-odroidc2.dts b/arch/arm64/boot/dts/amlogic/meson-gxbb-odroidc2.dts
-index 1cc9dc68ef00..5a139e7b1c60 100644
---- a/arch/arm64/boot/dts/amlogic/meson-gxbb-odroidc2.dts
-+++ b/arch/arm64/boot/dts/amlogic/meson-gxbb-odroidc2.dts
-@@ -255,6 +255,10 @@
- 
- 	bus-width = <4>;
- 	cap-sd-highspeed;
-+	sd-uhs-sdr12;
-+	sd-uhs-sdr25;
-+	sd-uhs-sdr50;
-+	sd-uhs-ddr50;
- 	max-frequency = <100000000>;
- 	disable-wp;
- 
-@@ -272,7 +276,7 @@
- 	pinctrl-names = "default", "clk-gate";
- 
- 	bus-width = <8>;
--	max-frequency = <100000000>;
-+	max-frequency = <200000000>;
- 	non-removable;
- 	disable-wp;
- 	cap-mmc-highspeed;
--- 
-2.20.1
-
+Reviewed-by: Rob Herring <robh@kernel.org>
 
 _______________________________________________
 linux-amlogic mailing list
