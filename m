@@ -2,82 +2,82 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 01E931B5EF
-	for <lists+linux-amlogic@lfdr.de>; Mon, 13 May 2019 14:31:42 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D48351B5F3
+	for <lists+linux-amlogic@lfdr.de>; Mon, 13 May 2019 14:31:44 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=4msddlzpiXZ06vfPhpJselgeZec9jOGX8CJoNY0DeL0=; b=U6Ut2WIdjp4KT9
-	GBt/3TnBw3dDUmhIaIN8ZLnx4lUcsGxstEBERR6nW/0dGSrCgw/Dxmm2hTYmikRsl5r++8N1y3s+P
-	Ad9CZX2HvHihl3lVDnIdEn2NZ5Gbh2BftkNZXYrtPbOXsunBU998OOqFIzk2K6VIiVrlxr4JwlNQh
-	6F6UTS5w0R5eTfWFmuEIbbzFUYTvfXADitXTC7PhVOkii9/i/fgWpSF2/8XqtHLY1CNLHj/nmAMzt
-	u3L/okGySrkVB4RpTWajUUvsyxO/n1MwttTxTLXA0fP7cMzS6SRRuM8B8UclJUXLFUkT0izhrH1w/
-	pQf0VtWNZHvyMXZi72qA==;
+	List-Owner; bh=VGKMrwcGIuLJ682sygx1gXNP6nnNE8JKy8bdWJqIrQc=; b=f3CvOmkP6TUiV6
+	l6D502W8OkMweK/L8yy7JudJgWb9D+FOkOkB9Sk2nS4Xi9OZkDD+xVjkTeRkH/tUiajSJ02LU3HIP
+	OVZWwkfvMr6gCMgLmPrn4xSD5sjAnbX71MwzuTYqE4hyLBAg1g6/8OWsAGqbTqWv86YNYdL2Ts1I7
+	a063ibUr5DQATQejdJ/xlwJc3qescyhsHtTs+ugPIz66r9n1IQmpNFhox5Kl7lsATqSkYu6pIYf3E
+	KPeslij82Cu8BjGXv1Z0AisSLLA0PENzk/jMB4oSfSDdiWGl2XCGgANEouqGNajVxpKH+It8viiPw
+	tBUbdRUok2ToCZZEeN+g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hQA7H-0007al-LB; Mon, 13 May 2019 12:31:39 +0000
-Received: from mail-wr1-x444.google.com ([2a00:1450:4864:20::444])
+	id 1hQA7J-0007cQ-7D; Mon, 13 May 2019 12:31:41 +0000
+Received: from mail-wm1-x342.google.com ([2a00:1450:4864:20::342])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hQA78-0007O9-R0
- for linux-amlogic@lists.infradead.org; Mon, 13 May 2019 12:31:33 +0000
-Received: by mail-wr1-x444.google.com with SMTP id o4so15079719wra.3
- for <linux-amlogic@lists.infradead.org>; Mon, 13 May 2019 05:31:30 -0700 (PDT)
+ id 1hQA7A-0007PZ-A7
+ for linux-amlogic@lists.infradead.org; Mon, 13 May 2019 12:31:36 +0000
+Received: by mail-wm1-x342.google.com with SMTP id h11so13448756wmb.5
+ for <linux-amlogic@lists.infradead.org>; Mon, 13 May 2019 05:31:31 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=fKq0Xmw2ntAqrTVNaEz/XqYkib9vFynLezQDvMrUHDU=;
- b=0wgYoQfY9TIqdwNaY/BkNPlr0XnHO48h33h8xoTL79c51HyaaofletIxDBjvzreQht
- 3HV9XeCUyMiQecWaAhnQ1239LeF8VIripVqhuFv2YBfC+L2KqP9AhRShrK/lswUtOiLg
- Y6Q9q5dfecPp9pJ2S7G/R9HBvejDxkZbOS8tPxTz3Rl1C21VYE1grO2WUew9BXfQF7mw
- ZQ8m91LMV8OdEQHmYFjmRZM0BlKZMS9rlwi00GfoeuZ9Kn+0k6OfQn7E5XSYLI6blUdU
- A42s1ISqhSRquPF7VtEhghQr7PT1hMZcqYaY9nIl3QheEk74eXZezq1xuhTKzsXCK7cd
- 3wRQ==
+ bh=qDWoUB9bcp7o6UKFktF9ACZ04OzawQuwNyVSxDs2oGM=;
+ b=FTChcYwy/64XxJA+Qdoi5SQTOLGXNUXjv+nlh1tRXwcJ5wHIr4YXrKpPSAYujuyCzp
+ nijO6vpU+0BTOBu0M8rH69Fy/BcRNzMsb9+QsY4mgYef5o5Py4Er/BU6A4UPldUHIUwm
+ 3N1VBhSmqFk12ex6lkH7nZ7A1wkbMpbp1wKpzXPxwEDHpUroEI1zCpg1SeMKQmrJ7goz
+ QVgAUjDQTPtot79cCw6omTqisZOw9lWoYiGfS0N3V6ax1/grApmnole0AFlAcoL9OJMk
+ k1xLXdk/GNS3KbD325KPkAfuHONMfgCR0ZXh4mu7cIH8/tJI20Q5P7EPet0TDqsWy1Jv
+ Dx4A==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=fKq0Xmw2ntAqrTVNaEz/XqYkib9vFynLezQDvMrUHDU=;
- b=jyTvH2g1mEEkrS8qOFW0CKkWQtVvsPNki3LqulSgNwu/+Ba7porM5aqPcbonV7Iea8
- uaHzwlBa+CePQnMOOjCFkSshmb7vr6kXugDIXiYna3qzzg8l8o+11puPVYO0ue9Yo+Bm
- K6F2vAWPFizHVO2izbTB0f8QjqKg04SjOB+bk1CUIt6dXzw7Uv/z4Q4dJHqD8p3XSqcW
- 2+vCpheb8D8HFxwfSEsoQYfXo/cuiV0Et5fJznEoa+xYotI5SnRs9kkrHzRaZe8L6W2Q
- wJjYwc0h26oUr9ZVAgxSUEmkQK+u4GWWbwp8zdTedctfV1/qjdwpjKOn+QskChXcjEcm
- ldng==
-X-Gm-Message-State: APjAAAV+u44mGOjLcoXJv9kAQSEzUwYHue5t5r7GgkQyeEhJbj8eOV8N
- j3XRqnPBbM6ytc8lsCobWcvlb27NLps=
-X-Google-Smtp-Source: APXvYqwzHLI7fugsJXC/aNnzGQOW5Fw4/jeXRTXUrlzZLCuvKph6sDV0Eyyp1mvIS9eOYmglUQwIiA==
-X-Received: by 2002:a5d:6a52:: with SMTP id t18mr15049885wrw.146.1557750689502; 
- Mon, 13 May 2019 05:31:29 -0700 (PDT)
+ bh=qDWoUB9bcp7o6UKFktF9ACZ04OzawQuwNyVSxDs2oGM=;
+ b=B7n3p0nc7sjqXN1eLLgaOLzNA4I+GmBrMMM4gbEHTbe5/8HFTzWWK1XDyEb0rdq8BX
+ wsz7LM8K+p+y4S6rGW2/9OxISZyo5NK0VTQY1117cgvVShd4HWgPk0KvWFRKLxShoN77
+ s61ll4w41Q1OBE1twZsuz7hV1RWDmD0QkZ0VXoDY7IlIVKLvqe50md3Fgrak4FPg2tWE
+ 8jjd5ZaEZv2BZVtEmsfXGNfLg8RzAPzCJpzU/WUfZZMzyfMTiNJbsq/Sms85I/cgebw6
+ nA0WhIP+knP/vdXs7iWoyf/wuyU4nWC8XLE+Vw268XpRRvZyP92LssOSOLCqijGpYd/S
+ 6NIw==
+X-Gm-Message-State: APjAAAUiPZKr4TuWDnvRMb2TSGQMEkSWEVNQ7LIhmohPlf1RirpLeiL1
+ tHXe6H8l9sL8h5+06Y1j4G3mAw==
+X-Google-Smtp-Source: APXvYqzS/G2YjzdOEaicaTu5qFCKLfkduSgGOTIkrGT+2VPcKPiv3XEJKguO/PiftHRHyxFE9Kutnw==
+X-Received: by 2002:a1c:1d4:: with SMTP id 203mr16339134wmb.76.1557750690506; 
+ Mon, 13 May 2019 05:31:30 -0700 (PDT)
 Received: from boomer.local (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr.
  [90.63.244.31])
- by smtp.googlemail.com with ESMTPSA id t13sm16175584wra.81.2019.05.13.05.31.28
+ by smtp.googlemail.com with ESMTPSA id t13sm16175584wra.81.2019.05.13.05.31.29
  (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
- Mon, 13 May 2019 05:31:29 -0700 (PDT)
+ Mon, 13 May 2019 05:31:30 -0700 (PDT)
 From: Jerome Brunet <jbrunet@baylibre.com>
 To: Neil Armstrong <narmstrong@baylibre.com>,
  Michael Turquette <mturquette@baylibre.com>,
  Stephen Boyd <sboyd@kernel.org>
-Subject: [PATCH v2 6/7] clk: meson: eeclk: add init regs
-Date: Mon, 13 May 2019 14:31:14 +0200
-Message-Id: <20190513123115.18145-7-jbrunet@baylibre.com>
+Subject: [PATCH v2 7/7] clk: meson: g12a: add controller register init
+Date: Mon, 13 May 2019 14:31:15 +0200
+Message-Id: <20190513123115.18145-8-jbrunet@baylibre.com>
 X-Mailer: git-send-email 2.20.1
 In-Reply-To: <20190513123115.18145-1-jbrunet@baylibre.com>
 References: <20190513123115.18145-1-jbrunet@baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190513_053131_069466_A04D7859 
-X-CRM114-Status: GOOD (  12.51  )
+X-CRM114-CacheID: sfid-20190513_053132_633118_8DCB5E19 
+X-CRM114-Status: GOOD (  10.98  )
 X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:444 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:342 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
@@ -102,46 +102,35 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Like the PLL and MPLL, the controller may require some magic setting to
-be applied on startup.
-
-This is needed when the initial setting is not applied by the boot ROM.
-The controller need to do it when the setting applies to several clock,
-like all the MPLLs in the case of g12a.
+Add the MPLL common register initial setting
 
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
 ---
- drivers/clk/meson/meson-eeclk.c | 3 +++
- drivers/clk/meson/meson-eeclk.h | 2 ++
- 2 files changed, 5 insertions(+)
+ drivers/clk/meson/g12a.c | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
 
-diff --git a/drivers/clk/meson/meson-eeclk.c b/drivers/clk/meson/meson-eeclk.c
-index 37a34c9c3885..6ba2094be257 100644
---- a/drivers/clk/meson/meson-eeclk.c
-+++ b/drivers/clk/meson/meson-eeclk.c
-@@ -34,6 +34,9 @@ int meson_eeclkc_probe(struct platform_device *pdev)
- 		return PTR_ERR(map);
- 	}
- 
-+	if (data->init_count)
-+		regmap_multi_reg_write(map, data->init_regs, data->init_count);
-+
- 	input = meson_clk_hw_register_input(dev, "xtal", IN_PREFIX "xtal", 0);
- 	if (IS_ERR(input)) {
- 		ret = PTR_ERR(input);
-diff --git a/drivers/clk/meson/meson-eeclk.h b/drivers/clk/meson/meson-eeclk.h
-index 1b809b1419fe..9ab5d6fa7ccb 100644
---- a/drivers/clk/meson/meson-eeclk.h
-+++ b/drivers/clk/meson/meson-eeclk.h
-@@ -17,6 +17,8 @@ struct platform_device;
- struct meson_eeclkc_data {
- 	struct clk_regmap *const	*regmap_clks;
- 	unsigned int			regmap_clk_num;
-+	const struct reg_sequence	*init_regs;
-+	unsigned int			init_count;
- 	struct clk_hw_onecell_data	*hw_onecell_data;
+diff --git a/drivers/clk/meson/g12a.c b/drivers/clk/meson/g12a.c
+index ef1d2e4c8fd2..d5aceb79a91a 100644
+--- a/drivers/clk/meson/g12a.c
++++ b/drivers/clk/meson/g12a.c
+@@ -2992,10 +2992,16 @@ static struct clk_regmap *const g12a_clk_regmaps[] = {
+ 	&g12a_vdec_hevcf,
  };
  
++static const struct reg_sequence g12a_init_regs[] = {
++	{ .reg = HHI_MPLL_CNTL0,	.def = 0x00000543 },
++};
++
+ static const struct meson_eeclkc_data g12a_clkc_data = {
+ 	.regmap_clks = g12a_clk_regmaps,
+ 	.regmap_clk_num = ARRAY_SIZE(g12a_clk_regmaps),
+-	.hw_onecell_data = &g12a_hw_onecell_data
++	.hw_onecell_data = &g12a_hw_onecell_data,
++	.init_regs = g12a_init_regs,
++	.init_count = ARRAY_SIZE(g12a_init_regs),
+ };
+ 
+ static const struct of_device_id clkc_match_table[] = {
 -- 
 2.20.1
 
