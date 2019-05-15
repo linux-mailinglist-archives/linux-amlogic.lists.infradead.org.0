@@ -2,104 +2,88 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id CBF441F568
-	for <lists+linux-amlogic@lfdr.de>; Wed, 15 May 2019 15:19:22 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1E83B1F56B
+	for <lists+linux-amlogic@lfdr.de>; Wed, 15 May 2019 15:19:30 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=bv+Ot+bMmR5eRUFo5aPqM7vo6MDcEKRTx9Y5Hd8N+uY=; b=IkWroau7mpwUZ2
-	6XiyzgxvhBOWU9QO2E/nffeYoJ3n+T2kuakU90THAi4EVjwQNOkFxA1DJV73momA2kNPKdPVhYGMw
-	Ee5OfW45dFxNc9UqIgCoUYbNxbFmxc74vTeFgq0Y7soo/c/ZSPBC2p8qkl9IGEXj+DDIYnwXJnQ3j
-	nFruOAtKosMkYqp38OAEc4Jkot5mfaf0fZYV+Q+In1H7eytbLW3UEUzQhOJIa2wpuP0y5ylAl28Yi
-	+9HDy3g6+piu0LZiIEuPYa6ra/pMcaj14eJt5OzLsmDGllLzy60Q5HIA1ZiwDD3cfGFmqdBtTXDbe
-	zToTnEwMGVMt9xf8iyUQ==;
+	List-Owner; bh=xnpY+Teq5EmcIVf0WK1AeSZ6JKv2wBycgniLV0s8DfI=; b=lf1UcGYmJCITue
+	qGz6Nm6YyaDxXxB8THEDqrzn9zf0CJxGWMRr+PGZamcpaW6AeCgi3DPKZqyIKWJxJNCOgxCbJJPiZ
+	ZYEcIRJIlSjEN/O3ypOPHomsxvjvT4s5eOoFKyKEJXQkg5eSItRz/O+67NnD0sKcqDabCELOuqKiP
+	EXXoRWZLG3CuQzT3e7vCptRGBFWjj4pUXajEzi2UsKE48WVDRMKkVEj8Vo/5VIUQRmBxEdOA9qaVn
+	UTATDJ/p/ZfoeNBxWaIJx1vOJX+UGxI5TfSaiZbF6LnNPIU0oCnEGaRXpPaeZRWvQzH8KkdbySZeM
+	BCBz4P0o7sFddawJa4tA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hQtoT-0004GQ-Fr; Wed, 15 May 2019 13:19:17 +0000
-Received: from merlin.infradead.org ([2001:8b0:10b:1231::1])
+	id 1hQtoa-0004Mx-NF; Wed, 15 May 2019 13:19:24 +0000
+Received: from mail-wr1-f66.google.com ([209.85.221.66])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hQtoN-0004Ch-T7
- for linux-amlogic@bombadil.infradead.org; Wed, 15 May 2019 13:19:11 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=infradead.org; s=merlin.20170209; h=Content-Transfer-Encoding:MIME-Version:
- References:In-Reply-To:Message-Id:Date:Subject:Cc:To:From:Sender:Reply-To:
- Content-Type:Content-ID:Content-Description:Resent-Date:Resent-From:
- Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:
- List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=2h106Z4/ATcPU1QRPJE9+ZrjCSAT+SxJpUGNW5+ypdI=; b=gNNGu9FDYfFQzKbprM7lQMoW7e
- 8L9psqIt9KyGBg28HQGUqtUvZF3UtJjACvinQgu0XnBJno26TwBRQCezubolOQmNfuSVnX5SO4QGg
- VetLwj2eDNVCdCcKKip2C8dUFsfaDHZtBUfLD5CZw+rfD0/RlVGwH2S14fShMUNPZfIkgtFPjMfsO
- AN18qP95uMQqpCrWjJe+N4D99ogb7T6i347xq1bq7LLMPTVSF6iza927DOZjIopri0eeXJwznbdGu
- yC5y/yIKh3GplTHYCXtFBckt8S/30iQCzXDuRBpPqcfsE38dx3Gd1tsfaDKF/qAjrVCerT3+YMKS+
- MB99vyWA==;
-Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
- by merlin.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hQtoK-0000SJ-OL
- for linux-amlogic@lists.infradead.org; Wed, 15 May 2019 13:19:09 +0000
-Received: by mail-wr1-x442.google.com with SMTP id r7so2621989wrr.13
+ id 1hQtoJ-000471-15
+ for linux-amlogic@lists.infradead.org; Wed, 15 May 2019 13:19:21 +0000
+Received: by mail-wr1-f66.google.com with SMTP id h4so2650813wre.7
  for <linux-amlogic@lists.infradead.org>; Wed, 15 May 2019 06:19:06 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=2h106Z4/ATcPU1QRPJE9+ZrjCSAT+SxJpUGNW5+ypdI=;
- b=X1lAu5ZHCCzjYghnscD0OX/jA0eMlPFEIG8XZk5dovfhL4UaTlEOtCBhFZFxVzm/Tx
- pAuVx3DJBiDzhUUHz/kN5GlFuAml795hgYaBtvabvfgbbSrUquNiIytC02wU6fj3fGpV
- INbx6MKpj3ZgfAYTSaDK2uVDCHND1QaFcBdR+pzG5vz7wuf9++VSiy/sSnyHl2lnRX4K
- iD8w9VgD4eEWjD7rTwGUzq2ueadZtVALe0cg3iNfzNm+P/LBrM1AkLpMcCw3Fcdvgogo
- fQ92LKWlhxnHDQLEc8iLHSjHlbisyKDTjc72ScH+sPXvyRVEgeAlm70JJ+g8h/ZGY0eW
- KeKg==
+ bh=Qs77ALhE/gKtnduPvCRtEn1+XaA68gtG693yCTv90Vk=;
+ b=zDGPkuHoA+3szCHGN82vW7BAjTdBaU1OEwV8QGKRxUxlc/CvIbHhm/IJhbrHViITb8
+ Msdp/fTbSM4btIYHBKCNaYVZ9n8AnJab4dM4x4ATaPA9r1roYVf93Xdo/bChCE+wWkEF
+ cGZtKlUI9OejPiIb8VyEOg8mXy/XHD6YGtjlzYGbKpIsVSJv5wl2PlyVRCqOl5BZHpN/
+ wTf4ruJlum1SBBQ948AXlntz0/Js3jMwR6yC+lrrFR/UGBPwf1KNKAnPJwoKaGlMcdUp
+ 2gKy5rNYaka0c8ojR19pSXOI0kOgsA8uDExnZ4ASqvPi2hzP4gUjXhCDeem7dIDTL5zT
+ wvTw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=2h106Z4/ATcPU1QRPJE9+ZrjCSAT+SxJpUGNW5+ypdI=;
- b=qyk1N2jaoLB0+bIL8SY4U5rHrG+1FjjhyYm66q/uV+M3eX5zlY0ePNPHYCwFIhN50n
- a+3ohOCDwZkU5Rnu/FXPNnsYTbr43fSYKHu6QBwmTzhg3zXdvH46sEZ0T82NhW/ZbOH4
- OvjZY84Kct3nhcTdOH1BNw1D6OYkkxENw5tWKny8CdtSk3LfQmOcaEjMOeIWYmzvafTm
- HyqZyLx5mLRtiuY8b/dd9y3eyzWFzSe+o0OOdSDfZBZmcTcJlEphThw3piTKt98DCrth
- KGrrTvHlSiNwXoYa+Eg2zNwc10YDAifNjEV6mlEDIg6v5Vr2C1F3KrkByAFafMOhWpcD
- wAdQ==
-X-Gm-Message-State: APjAAAVsVDM5axnfP2L9zxhwWaUo84+Ta0qYYj5CWz9vd/xLsIK/9qti
- vAsl7ueGldnXCmJEJbnMfXO+8g==
-X-Google-Smtp-Source: APXvYqz/lQB5wpF2+qRrJ4I1Hpnj5Nzq4JBpunwqfTjfsaJ/6TVlW1DUT56LRi4iginnZTHgAhAYZg==
-X-Received: by 2002:adf:f5d1:: with SMTP id k17mr25107467wrp.281.1557926344035; 
+ bh=Qs77ALhE/gKtnduPvCRtEn1+XaA68gtG693yCTv90Vk=;
+ b=o0UMK1ZfUOSggMvwlbLo3rPoTpdCAykPJ1VwRThmSISVdHiTLLSoz+EXcFg87eUawb
+ d1bTsbypSDSN81FDy4Jd2yqAmcKPqrEcqtnteZvFHUDRh428EFKcNSppN6uuFcP6t/4S
+ b+H6du1jbCfg4PMl83AA+qEyimU+mWgwZ9eGzlKTP6NbGEyffmoCCBRwFzYEI+jRHgwk
+ pfGeQX+3u0ck4/lamC4Kt1Jpdc7oy9QvyPoZUBd7CorHZHIKQGQJLQS2ttQ1zzh54PJj
+ zd0IPEoA8onBlONJKg7tbr07B67jVyERxvqznIAQ43WcEBzQickWpsMsGc3UyoLAqQBr
+ 7Jxg==
+X-Gm-Message-State: APjAAAX4lHaAWxaBjO9P5gP/t1Gh6tLMy9YtReMlC4T3ZYlepBVzsK31
+ Srcs3W6E40K87m0OXO8fwqB+tw==
+X-Google-Smtp-Source: APXvYqzm4ytAil3rojl8lYKukf8vaRhm+kH45f8n+v0RKH14Kw6A7pvAhM/MdQwtVNK4LuJ6xQgZOw==
+X-Received: by 2002:adf:b641:: with SMTP id i1mr25792669wre.288.1557926344965; 
  Wed, 15 May 2019 06:19:04 -0700 (PDT)
 Received: from boomer.local (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr.
  [90.63.244.31])
- by smtp.googlemail.com with ESMTPSA id b206sm2789848wmd.28.2019.05.15.06.19.02
+ by smtp.googlemail.com with ESMTPSA id b206sm2789848wmd.28.2019.05.15.06.19.04
  (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
- Wed, 15 May 2019 06:19:03 -0700 (PDT)
+ Wed, 15 May 2019 06:19:04 -0700 (PDT)
 From: Jerome Brunet <jbrunet@baylibre.com>
 To: Mark Brown <broonie@kernel.org>, Liam Girdwood <lgirdwood@gmail.com>,
  Kevin Hilman <khilman@baylibre.com>
-Subject: [PATCH 1/5] ASoC: meson: axg-card: set link name based on link node
- name
-Date: Wed, 15 May 2019 15:18:54 +0200
-Message-Id: <20190515131858.32130-2-jbrunet@baylibre.com>
+Subject: [PATCH 2/5] ASoC: dapm: allow muxes to force a disconnect
+Date: Wed, 15 May 2019 15:18:55 +0200
+Message-Id: <20190515131858.32130-3-jbrunet@baylibre.com>
 X-Mailer: git-send-email 2.20.1
 In-Reply-To: <20190515131858.32130-1-jbrunet@baylibre.com>
 References: <20190515131858.32130-1-jbrunet@baylibre.com>
 MIME-Version: 1.0
 X-Patchwork-Bot: notify
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190515_091908_794534_64400273 
-X-CRM114-Status: GOOD (  12.28  )
+X-CRM114-CacheID: sfid-20190515_061907_370672_30A5FFCB 
+X-CRM114-Status: GOOD (  12.38  )
 X-Spam-Score: -0.0 (/)
-X-Spam-Report: SpamAssassin version 3.4.2 on merlin.infradead.org summary:
+X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:442 listed in]
- [list.dnswl.org]
+ no trust [209.85.221.66 listed in list.dnswl.org]
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [209.85.221.66 listed in wl.mailspike.net]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -119,74 +103,32 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-So far the link names of the axg sound card was derived from the cpu name
-of the link. Since the dai link must be unique, it works as long as a
-device does not provide more than one cpu dai. However, the 'tohdmitx'
-does provide 2 dais used as cpu on codec-to-codec links
+Let soc_dapm_mux_update_power() accept NULL as 'e' enum.
 
-Instead of cpu name, use the node name of the dai link. DT already enforce
-the uniqueness of this name
+It makes the code a bit more robust and, more importantly, let the calling
+mux force a disconnect of the output path if necessary.
+
+This is useful if the dapm elements following the mux must be off
+while updating the mux, to avoid glitches or force a (re)configuration.
 
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
 ---
- sound/soc/meson/axg-card.c | 12 +++++++-----
- 1 file changed, 7 insertions(+), 5 deletions(-)
+ sound/soc/soc-dapm.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/sound/soc/meson/axg-card.c b/sound/soc/meson/axg-card.c
-index aa54d2c612c9..5c8deee8d512 100644
---- a/sound/soc/meson/axg-card.c
-+++ b/sound/soc/meson/axg-card.c
-@@ -80,10 +80,11 @@ static int axg_card_parse_dai(struct snd_soc_card *card,
- 
- static int axg_card_set_link_name(struct snd_soc_card *card,
- 				  struct snd_soc_dai_link *link,
-+				  struct device_node *node,
- 				  const char *prefix)
- {
- 	char *name = devm_kasprintf(card->dev, GFP_KERNEL, "%s.%s",
--				    prefix, link->cpu_of_node->full_name);
-+				    prefix, node->full_name);
- 	if (!name)
- 		return -ENOMEM;
- 
-@@ -474,7 +475,7 @@ static int axg_card_set_be_link(struct snd_soc_card *card,
- 		codec++;
- 	}
- 
--	ret = axg_card_set_link_name(card, link, "be");
-+	ret = axg_card_set_link_name(card, link, node, "be");
- 	if (ret)
- 		dev_err(card->dev, "error setting %pOFn link name\n", np);
- 
-@@ -483,6 +484,7 @@ static int axg_card_set_be_link(struct snd_soc_card *card,
- 
- static int axg_card_set_fe_link(struct snd_soc_card *card,
- 				struct snd_soc_dai_link *link,
-+				struct device_node *node,
- 				bool is_playback)
- {
- 	link->dynamic = 1;
-@@ -497,7 +499,7 @@ static int axg_card_set_fe_link(struct snd_soc_card *card,
- 	else
- 		link->dpcm_capture = 1;
- 
--	return axg_card_set_link_name(card, link, "fe");
-+	return axg_card_set_link_name(card, link, node, "fe");
- }
- 
- static int axg_card_cpu_is_capture_fe(struct device_node *np)
-@@ -527,9 +529,9 @@ static int axg_card_add_link(struct snd_soc_card *card, struct device_node *np,
- 		return ret;
- 
- 	if (axg_card_cpu_is_playback_fe(dai_link->cpu_of_node))
--		ret = axg_card_set_fe_link(card, dai_link, true);
-+		ret = axg_card_set_fe_link(card, dai_link, np, true);
- 	else if (axg_card_cpu_is_capture_fe(dai_link->cpu_of_node))
--		ret = axg_card_set_fe_link(card, dai_link, false);
-+		ret = axg_card_set_fe_link(card, dai_link, np, false);
- 	else
- 		ret = axg_card_set_be_link(card, dai_link, np);
- 
+diff --git a/sound/soc/soc-dapm.c b/sound/soc/soc-dapm.c
+index 81a7a12196ff..a4d6c068b545 100644
+--- a/sound/soc/soc-dapm.c
++++ b/sound/soc/soc-dapm.c
+@@ -2245,7 +2245,7 @@ static int soc_dapm_mux_update_power(struct snd_soc_card *card,
+ 	dapm_kcontrol_for_each_path(path, kcontrol) {
+ 		found = 1;
+ 		/* we now need to match the string in the enum to the path */
+-		if (!(strcmp(path->name, e->texts[mux])))
++		if (e && !(strcmp(path->name, e->texts[mux])))
+ 			connect = true;
+ 		else
+ 			connect = false;
 -- 
 2.20.1
 
