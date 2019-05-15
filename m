@@ -2,88 +2,104 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id CFEE11F56A
-	for <lists+linux-amlogic@lfdr.de>; Wed, 15 May 2019 15:19:28 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 79C751F5AA
+	for <lists+linux-amlogic@lfdr.de>; Wed, 15 May 2019 15:36:22 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=elfzzcUKg+zUiWG2lplWcv4huhuGhovxU7xUjkdmIfI=; b=th6HxE76aOdoFI
-	zuZuJ+S38XR7R41WMvAfEA+SESnq3bBIUnnVd1CmsNcxK+/RwmMusPL/KN0p038woF6IMDT+S5jbZ
-	T3IyhzdL83/YN54BUcwF2AWD5KYOhjrXs2XsTWkKjncTNudZVH3FOfX/Sy7fi+3C7VXQzjXF2M+85
-	Y+joAjJIY/cuKvclxvjPxja6ka/3+ulf/PcjGJtm87WxOyNTuyS4jErskQZf71Z8tseByVCdCCt0w
-	LukIG2e1c0uVjYSyB34M6JdQtlC5hWOmoj2auh4ZSWVFz78hRwahKth4NBPDfSo82IV710qKW5KdE
-	OGr5yhePsxokAHxK6wKA==;
+	List-Owner; bh=RhdLUmX6L6hguNfhvyt7oX9H//qqSdWbycFZesToFJk=; b=L6K2Jykc2lYamk
+	NqygPTGeRaWP/++HEVuQQJd8P8L0/4FG8PBkqEv3laRRtPi5aJXIUEXGTxpyXwz94bzWtJdjw9iUP
+	/sgObDr2mmFC6dgbonUo0G5s/9pe5F7bxBrTqLcHE+tDttFUxHJC8OkjNKXTiIaD+Etlril2KYC9f
+	FCsFJ7RvnBDtWiFj96+pe50+K9X03E+K4SYBhmdJIAtWHPvo0ejRmvtFgusJEMdm5GCEmk+hxnYiq
+	EgZLvups4Vu+GbJ9j9cpDLyAlPNkmpkhCx+O7xehuJC8s6htLmO9fsf5F4eOkh07rx7d3GGgy6wiQ
+	IK5TskMbUzzqdYT5lOWQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hQtoc-0004OI-K2; Wed, 15 May 2019 13:19:26 +0000
-Received: from mail-wr1-f68.google.com ([209.85.221.68])
+	id 1hQu4z-0004Ib-5S; Wed, 15 May 2019 13:36:21 +0000
+Received: from casper.infradead.org ([2001:8b0:10b:1236::1])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hQtoK-00048e-7K
- for linux-amlogic@lists.infradead.org; Wed, 15 May 2019 13:19:22 +0000
-Received: by mail-wr1-f68.google.com with SMTP id e15so2666601wrs.4
- for <linux-amlogic@lists.infradead.org>; Wed, 15 May 2019 06:19:07 -0700 (PDT)
+ id 1hQu4u-0002Oa-S6
+ for linux-amlogic@bombadil.infradead.org; Wed, 15 May 2019 13:36:16 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=infradead.org; s=casper.20170209; h=Content-Transfer-Encoding:MIME-Version:
+ References:In-Reply-To:Message-Id:Date:Subject:Cc:To:From:Sender:Reply-To:
+ Content-Type:Content-ID:Content-Description:Resent-Date:Resent-From:
+ Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:
+ List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=bgxe1GRX/w2wrtefgULdeMfRiILdFJq82pUWP1dCMsw=; b=gJyARx3VXEZm/50fXkRXPfo9/x
+ +qK10xzPWsQRdq4lfdGqIQZcb/5l3Z7Sw8uwDoscH2GEJ6lK841cpeNWb3EfBJEceNfN+V7eN7D4E
+ p22l9xu0BEFs02ZeMcDOtK2V+cLvomqsOoChCIfEq9kPXnueby9ItkRyTBNtWV63Cx0a6QCcZG6Tg
+ d0Dluze/lnFsiFHsKRheZVo3u3QgEzscljMkO/Cr7exr3+1Qoio06XVY5XF88l/TSco5HD6TFOWKi
+ rLl9aS168lvQY9YkQumbKK1rvpBdNEI4OU9j7kGqswJfq/t80I+ByFLcbYD4fBDY8dzy2tF2y4IRJ
+ H0EInDZw==;
+Received: from mail-wm1-x343.google.com ([2a00:1450:4864:20::343])
+ by casper.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
+ id 1hQtoK-0008QB-IJ
+ for linux-amlogic@lists.infradead.org; Wed, 15 May 2019 13:19:10 +0000
+Received: by mail-wm1-x343.google.com with SMTP id f204so28309wme.0
+ for <linux-amlogic@lists.infradead.org>; Wed, 15 May 2019 06:19:08 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=7q3OboSn1Utxth2w6fivo99umEKJDOfPqrO+oZXrXms=;
- b=tvLa8z4mV3sY8knydD6Essai3H/kETAk/KI6JrKEK9QfiMUVTA38wqcQXDTOKehNHs
- k2TtGeTDDK3LQqAzrQsZsVKG+2mpEueikBtU76P4zE2IQ7ycRuw+/V2kZN1vIjkAoDZx
- NlHijfa0NIjgCu5/dDXqGiAnen31TVrdqtPS/5/Ge6NBsVeuoW9yJu3WjwmfsDw6cWoV
- eaMTsRQEoQhINML/KY6ON9L3nrEsrG+HJLuqaGxbSmA2K6Kl2b6XMvxlRT8Et9gXPKTB
- BZGMAW4O/3zkOsw/gXXKQt0I0XanyVNSE1soMo7aCi3h/tlGAj/gk8KfrMo0eTgsRAxU
- N2Wg==
+ bh=bgxe1GRX/w2wrtefgULdeMfRiILdFJq82pUWP1dCMsw=;
+ b=yMl0eoA65BOO2y5I3UtLa9IGCL5g/V97Lh8F7pAYnMofU0OqB+DIOWkgA2URKybltp
+ H7qbZR+c/pQ5kg8Jh64jQWDo3qjvnPG5gXyHa1RJQEKTLZfVemrF0Ar/ngXN5HpkQa6X
+ 5KOSaON+QtfoQeSlXGJyzu0XWA3OzS1TPtloWRjxcSGfHYcOeaOhjxuJxfjypNfj0Qdb
+ ycBdmXHDROw1d4BPZCaRserlLAhGbSb+L1o3j1Ky7n9KyiOytriN3Pj+KsBu2u03vCX4
+ 0Lyf6UnNjgpbUvuHwezCqrLu9sFkfWKa0YzOGa1HjNyARC0N3+KMc6ai62nlzhSuD9uR
+ Pbrw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=7q3OboSn1Utxth2w6fivo99umEKJDOfPqrO+oZXrXms=;
- b=otzbYOraxe9/S3LBLjHGD9P7JvCisi1ng1Eh9HQvir+4/+lRLd0rtJdpLVDfQLAP9M
- DdtUqPdbLyDLgE83Uk25LHsNs0+drYC32peYQFwTN5czU7/RPZqiVdrl2h2KMZHAUEmi
- eECq0jhKRQ/aXvKDPiQhWQTWoX45dU+TkimrKlHHRcA+MrswKkNTcDuQP6HcqcTUOIJA
- 7pnBNowGNp8KR2eUPNLW7RpnrbU1r7x8ShrhdwJNoJZjnc9+4yYadNP+O/k3O8oJ2DQX
- 8UZMAb/FuIc69Lt/BrAeGtTf5DezfldI1c/fm5b2tP3EN3ssQzF0fCZgH5GuQIxMruJc
- 5uhA==
-X-Gm-Message-State: APjAAAVabUnJpRvTBIXz/fkWh0JAlD0ZvvPBhuDi2HlcJA7K6Eu8d1R3
- L+9ovJT0LP8khc1sxEFYBe2yuQ==
-X-Google-Smtp-Source: APXvYqzd0y4lCucxlNEcZkrCxWfuLOprdX+AerEPcc1L9Cd78ryiISSjyaQQLjM/Tnd5vmfnDB0Wfg==
-X-Received: by 2002:adf:ce90:: with SMTP id r16mr26304190wrn.156.1557926346200; 
- Wed, 15 May 2019 06:19:06 -0700 (PDT)
+ bh=bgxe1GRX/w2wrtefgULdeMfRiILdFJq82pUWP1dCMsw=;
+ b=bEhh610ng/bVzFKKgJt/6YARAj6gGwNpXONmgyOFlD9Qqob8DUAca0ERwPFOGQFCTd
+ EdBDswMdV53kIOKcO2QSWoXKupj4vu1ZjiL2Ha62rY/+h83u4M14fBrope2wUbm3zYrw
+ 5BEWM7uCZjtgRB5Qxk0E9wVgIU+XSAK4pnznx4VBHWn2nx/9H3PVDbBHKQIKTxDvGQ3K
+ 8sNrpbgK6fEnhkyrdwsQx7Oqq5XCXZ9JDdvzg7a8vqdvvGTXnP7jsa610lukeS3ALwxi
+ dAIUn8PjPw6kYiXTNOdeuWiWs4Gsccb+G3qi8k2Skioxq5ULNAxIOypU0jeYVvp2Z5Pg
+ B0rA==
+X-Gm-Message-State: APjAAAVLo/zlRjHsnIAE52zLDawmqyhR4Jn8+n0GjErnt4oauIlREGpk
+ VxQDYzR9pLCqHHQQYrX05OYf5g==
+X-Google-Smtp-Source: APXvYqxC3WiRwd3tKaX9tLKESnKaHtepk6/HtpPVFWaY2/GLrIXfw8TZB9PS3JtGTCSqZMvaoTXs/Q==
+X-Received: by 2002:a7b:c549:: with SMTP id j9mr722446wmk.122.1557926347157;
+ Wed, 15 May 2019 06:19:07 -0700 (PDT)
 Received: from boomer.local (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr.
  [90.63.244.31])
- by smtp.googlemail.com with ESMTPSA id b206sm2789848wmd.28.2019.05.15.06.19.05
+ by smtp.googlemail.com with ESMTPSA id b206sm2789848wmd.28.2019.05.15.06.19.06
  (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
- Wed, 15 May 2019 06:19:05 -0700 (PDT)
+ Wed, 15 May 2019 06:19:06 -0700 (PDT)
 From: Jerome Brunet <jbrunet@baylibre.com>
 To: Mark Brown <broonie@kernel.org>, Liam Girdwood <lgirdwood@gmail.com>,
  Kevin Hilman <khilman@baylibre.com>
-Subject: [PATCH 3/5] ASoC: meson: add tohdmitx DT bindings
-Date: Wed, 15 May 2019 15:18:56 +0200
-Message-Id: <20190515131858.32130-4-jbrunet@baylibre.com>
+Subject: [PATCH 4/5] ASoC: meson: axg-card: add basic codec-to-codec link
+ support
+Date: Wed, 15 May 2019 15:18:57 +0200
+Message-Id: <20190515131858.32130-5-jbrunet@baylibre.com>
 X-Mailer: git-send-email 2.20.1
 In-Reply-To: <20190515131858.32130-1-jbrunet@baylibre.com>
 References: <20190515131858.32130-1-jbrunet@baylibre.com>
 MIME-Version: 1.0
 X-Patchwork-Bot: notify
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190515_061908_488039_6E84A959 
-X-CRM114-Status: GOOD (  11.18  )
+X-CRM114-CacheID: sfid-20190515_141908_616937_987B1B52 
+X-CRM114-Status: GOOD (  12.60  )
 X-Spam-Score: -0.0 (/)
-X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.0 points)
+X-Spam-Report: SpamAssassin version 3.4.2 on casper.infradead.org summary:
+ Content analysis details:   (-0.0 points, 5.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.221.68 listed in list.dnswl.org]
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.221.68 listed in wl.mailspike.net]
+ no trust [2a00:1450:4864:20:0:0:0:343 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -103,97 +119,62 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Add the bindings and the related documentation for the audio hdmitx
-control glue of the Amlogic g12a SoC family
+Add basic support for codec-to-codec link in the axg sound card.
+The cpu side of these links is expected to properly set the hw_params
+and format of the link.
+
+ATM, only the tohdmitx glue is supported but others (like the
+internal DAC glue) should follow.
 
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
 ---
- .../bindings/sound/amlogic,g12a-tohdmitx.txt  | 55 +++++++++++++++++++
- .../dt-bindings/sound/meson-g12a-tohdmitx.h   | 13 +++++
- 2 files changed, 68 insertions(+)
- create mode 100644 Documentation/devicetree/bindings/sound/amlogic,g12a-tohdmitx.txt
- create mode 100644 include/dt-bindings/sound/meson-g12a-tohdmitx.h
+ sound/soc/meson/axg-card.c | 19 +++++++++++++++++++
+ 1 file changed, 19 insertions(+)
 
-diff --git a/Documentation/devicetree/bindings/sound/amlogic,g12a-tohdmitx.txt b/Documentation/devicetree/bindings/sound/amlogic,g12a-tohdmitx.txt
-new file mode 100644
-index 000000000000..aa6c35570d31
---- /dev/null
-+++ b/Documentation/devicetree/bindings/sound/amlogic,g12a-tohdmitx.txt
-@@ -0,0 +1,55 @@
-+* Amlogic HDMI Tx control glue
-+
-+Required properties:
-+- compatible: "amlogic,g12a-tohdmitx"
-+- reg: physical base address of the controller and length of memory
-+       mapped region.
-+- #sound-dai-cells: should be 1.
-+
-+Example on the S905X2 SoC:
-+
-+tohdmitx: audio-controller@744 {
-+	compatible = "amlogic,g12a-tohdmitx";
-+	reg = <0x0 0x744 0x0 0x4>;
-+	#sound-dai-cells = <1>;
+diff --git a/sound/soc/meson/axg-card.c b/sound/soc/meson/axg-card.c
+index 5c8deee8d512..db0a7fc18928 100644
+--- a/sound/soc/meson/axg-card.c
++++ b/sound/soc/meson/axg-card.c
+@@ -29,6 +29,18 @@ struct axg_dai_link_tdm_data {
+ 	struct axg_dai_link_tdm_mask *codec_masks;
+ };
+ 
++/*
++ * Base params for the codec to codec links
++ * Those will be over-written by the CPU side of the link
++ */
++static const struct snd_soc_pcm_stream codec_params = {
++	.formats = SNDRV_PCM_FMTBIT_S24_LE,
++	.rate_min = 5525,
++	.rate_max = 192000,
++	.channels_min = 1,
++	.channels_max = 8,
 +};
 +
-+Example of an 'amlogic,axg-sound-card':
+ #define PREFIX "amlogic,"
+ 
+ static int axg_card_reallocate_links(struct axg_card *priv,
+@@ -517,6 +529,11 @@ static int axg_card_cpu_is_tdm_iface(struct device_node *np)
+ 	return of_device_is_compatible(np, PREFIX "axg-tdm-iface");
+ }
+ 
++static int axg_card_cpu_is_codec(struct device_node *np)
++{
++	return of_device_is_compatible(np, PREFIX "g12a-tohdmitx");
++}
 +
-+sound {
-+	compatible = "amlogic,axg-sound-card";
-+
-+[...]
-+
-+	dai-link-x {
-+		sound-dai = <&tdmif_a>;
-+		dai-format = "i2s";
-+		dai-tdm-slot-tx-mask-0 = <1 1>;
-+
-+		codec-0 {
-+			sound-dai = <&tohdmitx TOHDMITX_I2S_IN_A>;
-+		};
-+
-+		codec-1 {
-+			sound-dai = <&external_dac>;
-+		};
-+	};
-+
-+	dai-link-y {
-+		sound-dai = <&tdmif_c>;
-+		dai-format = "i2s";
-+		dai-tdm-slot-tx-mask-0 = <1 1>;
-+
-+		codec {
-+			sound-dai = <&tohdmitx TOHDMITX_I2S_IN_C>;
-+		};
-+	};
-+
-+	dai-link-z {
-+		sound-dai = <&tohdmitx TOHDMITX_I2S_OUT>;
-+
-+		codec {
-+			sound-dai = <&hdmi_tx>;
-+		};
-+	};
-+};
-diff --git a/include/dt-bindings/sound/meson-g12a-tohdmitx.h b/include/dt-bindings/sound/meson-g12a-tohdmitx.h
-new file mode 100644
-index 000000000000..c5e1f48d30d0
---- /dev/null
-+++ b/include/dt-bindings/sound/meson-g12a-tohdmitx.h
-@@ -0,0 +1,13 @@
-+/* SPDX-License-Identifier: GPL-2.0 */
-+#ifndef __DT_MESON_G12A_TOHDMITX_H
-+#define __DT_MESON_G12A_TOHDMITX_H
-+
-+#define TOHDMITX_I2S_IN_A	0
-+#define TOHDMITX_I2S_IN_B	1
-+#define TOHDMITX_I2S_IN_C	2
-+#define TOHDMITX_I2S_OUT	3
-+#define TOHDMITX_SPDIF_IN_A	4
-+#define TOHDMITX_SPDIF_IN_B	5
-+#define TOHDMITX_SPDIF_OUT	6
-+
-+#endif /* __DT_MESON_G12A_TOHDMITX_H */
+ static int axg_card_add_link(struct snd_soc_card *card, struct device_node *np,
+ 			     int *index)
+ {
+@@ -540,6 +557,8 @@ static int axg_card_add_link(struct snd_soc_card *card, struct device_node *np,
+ 
+ 	if (axg_card_cpu_is_tdm_iface(dai_link->cpu_of_node))
+ 		ret = axg_card_parse_tdm(card, np, index);
++	else if (axg_card_cpu_is_codec(dai_link->cpu_of_node))
++		dai_link->params = &codec_params;
+ 
+ 	return ret;
+ }
 -- 
 2.20.1
 
