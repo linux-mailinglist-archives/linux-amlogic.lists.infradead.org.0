@@ -2,74 +2,73 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id CACFE23A6A
-	for <lists+linux-amlogic@lfdr.de>; Mon, 20 May 2019 16:39:43 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id ED3F223A6E
+	for <lists+linux-amlogic@lfdr.de>; Mon, 20 May 2019 16:39:48 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=6C0jRUqIxpbGN2va1aNKi2jmQl8n1PUUboZ+59o6bwI=; b=em8obEJixfsgn8
-	0ky5m2F22I9TlTahxzMZW5F1xVrcMsLOLOOKDGo06gRad78h0uPv4rXfrNn+PXwpYuHyX8OJ3oVJy
-	tX5iVp3/oTbPV2iJcMDRKdbHvDFenoKDYFJsTgr52LLAEz4195XF7UUaoNiWj9h5fDn1Z9SkgfDvC
-	iZ1D/Tx4jzzyq8bw8LblWw572bDqlt6UdrlnH3FbDBhWqZm9px1aLXLZlUKEz7GKiX1g3h00xXljH
-	O0M9b3CIwHQZ/ZDEI8LfVB9cN0RcxSyvVu329FJ5LSHnnr+4D4lAx6a7D0fRu0BhqPwdampDmQ0qt
-	C9QCsa9WNfXs0uLP5cGQ==;
+	List-Owner; bh=+/ZkVv5Gz4+1lydQ1tFfbnDTUo/l4adt0ZJ4MY7Q2SA=; b=ZXDksGj/ynb0pL
+	z4nHL8Te9U5Drw5S3lhFLNbeCOHfQATBCKK3QDaK8tXE9ck4H548V/eGfnH9MAZqbnWPb4J1V+SqI
+	5QoLRc8xi3oY/tcS+1q/2zRB/GaV4hguavSdiAqPsW4US1aYXIn4SddkegscPXnnVNpq+siD0LDFn
+	xphDKsfVvXXfYef3x/zyy+iLjeSYTB5+ZAqAeqOEZAlqoFqcs1QB0RyHpg4FGte6jejDH0OSqG6A5
+	kg0S11BZO1XhdnTtP1FsF50wQTrEcYSyJcd+Jx8uZ3Ye8t8y6qN6R2mcUrdtlkBpml9NYN+QkeqQV
+	xHeC38hJqAj2u/Rx2OYA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hSjRz-0008Ba-7r; Mon, 20 May 2019 14:39:39 +0000
+	id 1hSjS4-0008GN-4P; Mon, 20 May 2019 14:39:44 +0000
 Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hSjQi-0006PD-11
+ id 1hSjQi-0006Qm-Aj
  for linux-amlogic@lists.infradead.org; Mon, 20 May 2019 14:38:27 +0000
-Received: by mail-wr1-x442.google.com with SMTP id w8so14917764wrl.6
- for <linux-amlogic@lists.infradead.org>; Mon, 20 May 2019 07:38:19 -0700 (PDT)
+Received: by mail-wr1-x442.google.com with SMTP id h4so14910593wre.7
+ for <linux-amlogic@lists.infradead.org>; Mon, 20 May 2019 07:38:20 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=ZjBhuWUBVlc7dSbIXQ9In2EP/rViqYs/vCz1OGKxCCo=;
- b=kVZUlP82EkRSrN6VcYSVwKkCxt7PQ+zs5bUwr53RfYDV8HJjP8vQeRIVC6cGuccADJ
- waEJK9ExJy1eXBNoALtXkEN7prV90JuQVLK5scVl3Q069iV720hh5xzXYvuFMkAoSisY
- dQzR/WvbC32ZkTFNbzgPGrpdw88bl5qHequC/Sa200KSqJZHjyGulR8gL+v4A2nb/aQR
- v7tS1uUrzJOF7f5TFRV0NnOGUwyAl0YW7zd6g0Mn/ub0kZtikmcyig7X4gHdehPpQ9Pi
- fRZ1ZX1GMHwWds7s2Zx7Dxq1lOAXVd4Ym+QY1HAJ8YrqMQMnnLoCpIGWD+breSORZlUz
- 6Ikw==
+ bh=ZVqgXqCRLzgJjndvfbSssXq9sPi6rcSDzSBDfSWDhDc=;
+ b=oRVC9sOVqaJJ7/VIvGdz/yOhmhMuouO38MVvt9FsMEigfB4u6TYFZsxNCzy/tT7QxZ
+ BH5gtZkLsm6GOm7m6uA5mZUwbR0hX3M+nuU8dMVFqLgx+7ZgxSjJhBlY0VIEH0U3o/hz
+ +ogf7v6+8tA4eU6oW2zhlcO1Niz72Txg3u7NOb6B5/9ZurmxWE6YlHkzSpMdVU4H5wet
+ mnPY1SbOcXHiQguasq+UYd8rqSYOvRGkQHxaeFQOahtAQaxIyAbIF2i44eP/cmi7oFTh
+ skkZ6eL8D2lD5YVvsU3NMDKGESXCV1aHo8CMFBoLVSWjB/ri+FhpEaLLPJkLPn+EJkBz
+ Op1Q==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=ZjBhuWUBVlc7dSbIXQ9In2EP/rViqYs/vCz1OGKxCCo=;
- b=BIGEUcYOBDdqThNcSK9bVDvlt8xDcRHIcUlgZy3c4HrtrcIunPlQoL1kWbxyxxhO5H
- KY87Kjh7qsXPCNF5EE8qKsbgpfDor91+aJaHyC7NkyI75M1zODwILyRAuGJvZU5t2WGp
- FVzf/2EaaJluYt2k5vkDNBxa6CCW0cGOCYNKOrXZ/Wcy59mu3CKc8pRDbbmCSozLna9i
- ykR+I6abWsCRL3ZhtOPYT8qr3BVzfOxAr9lCYT1sBsJNm0+lfYZesrNi7A0CMkCapeEf
- n5037aDsx/IHwhaBtAucIKWNpljbnXxX43c9Y+jELfFghAaT64v5iihYpUVQ04rXl8So
- UYWw==
-X-Gm-Message-State: APjAAAVQpq0gN9saj9rXZJuWrCXfcUBgPi3Eu0NtVx5rFdG2LTM89fH3
- XfB3HKdVjI/AIK5LZXocFTL4yw==
-X-Google-Smtp-Source: APXvYqwXaHdBxpngufWJn9Ad2Me+6dkJb3DeeqhmezZE29Zs8eIpl6gaJ/UafZXChQA7a+09VlyOHA==
-X-Received: by 2002:adf:f3ca:: with SMTP id g10mr21281688wrp.249.1558363098166; 
+ bh=ZVqgXqCRLzgJjndvfbSssXq9sPi6rcSDzSBDfSWDhDc=;
+ b=iM0eP13vpql2WRmR/45X9eTXYVq8Nk+Fcl1n2dD3afV+9bGSKaz1+GZSPIFy8SuQ7p
+ SDTuonTYdkdGGlakMF2O6DyVJkzuFRNJepe3/xqVDygRYDxCUsIIiScaC3ynNKpfOkus
+ EPvtefc23wimgi6CBl60+nzwFjwAQKmahlRPifRYSonaVWUFLgWvpZdgcs6TvIjF+Pe/
+ GPyb1rZ6i1XcPxvrBojSvqtvxmsNAEeKvWw4fY85r3xe8/+l/gBuQGn/YQgV/F8BbyCG
+ Z0CS7fOZYhnTEyWp3lvwUu1dAacseav35g0OP2tu8B4Ib2n+qVvuprdNAYpcNznxh+ER
+ e44A==
+X-Gm-Message-State: APjAAAV2gXr1BeNhDLHQE3rlqOMAKk39PPMxubvmquN4pFezN+1o+Lef
+ 5AIkZKvpacklF2Di+NGxAI3szn1GAxs1sg==
+X-Google-Smtp-Source: APXvYqxn7weDR9r3Q5lHk0WD6puAQO2W9ig2A6lM4Zo14uhc1ETk74//4DY3cTMY1DYzaw61XQ7UVQ==
+X-Received: by 2002:a5d:40ca:: with SMTP id b10mr6653651wrq.10.1558363098881; 
  Mon, 20 May 2019 07:38:18 -0700 (PDT)
 Received: from bender.baylibre.local
  (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
- by smtp.gmail.com with ESMTPSA id y4sm12505976wmj.20.2019.05.20.07.38.17
+ by smtp.gmail.com with ESMTPSA id y4sm12505976wmj.20.2019.05.20.07.38.18
  (version=TLS1_2 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
- Mon, 20 May 2019 07:38:17 -0700 (PDT)
+ Mon, 20 May 2019 07:38:18 -0700 (PDT)
 From: Neil Armstrong <narmstrong@baylibre.com>
 To: khilman@baylibre.com
-Subject: [PATCH 04/10] ARM: dts: meson8-minix-neo-x8: update with SPDX Licence
- identifier
-Date: Mon, 20 May 2019 16:38:06 +0200
-Message-Id: <20190520143812.2801-5-narmstrong@baylibre.com>
+Subject: [PATCH 05/10] ARM: dts: meson8: update with SPDX Licence identifier
+Date: Mon, 20 May 2019 16:38:07 +0200
+Message-Id: <20190520143812.2801-6-narmstrong@baylibre.com>
 X-Mailer: git-send-email 2.21.0
 In-Reply-To: <20190520143812.2801-1-narmstrong@baylibre.com>
 References: <20190520143812.2801-1-narmstrong@baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190520_073820_495729_AD10DA71 
-X-CRM114-Status: GOOD (  16.26  )
+X-CRM114-CacheID: sfid-20190520_073820_589017_E8B55003 
+X-CRM114-Status: GOOD (  16.71  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -103,17 +102,17 @@ Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
 Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
 ---
- arch/arm/boot/dts/meson8-minix-neo-x8.dts | 39 +----------------------
- 1 file changed, 1 insertion(+), 38 deletions(-)
+ arch/arm/boot/dts/meson8.dtsi | 42 +----------------------------------
+ 1 file changed, 1 insertion(+), 41 deletions(-)
 
-diff --git a/arch/arm/boot/dts/meson8-minix-neo-x8.dts b/arch/arm/boot/dts/meson8-minix-neo-x8.dts
-index 8686abd5de7f..2e669455a12d 100644
---- a/arch/arm/boot/dts/meson8-minix-neo-x8.dts
-+++ b/arch/arm/boot/dts/meson8-minix-neo-x8.dts
-@@ -1,43 +1,6 @@
+diff --git a/arch/arm/boot/dts/meson8.dtsi b/arch/arm/boot/dts/meson8.dtsi
+index 7ef442462ea4..fd8d57d0a3af 100644
+--- a/arch/arm/boot/dts/meson8.dtsi
++++ b/arch/arm/boot/dts/meson8.dtsi
+@@ -1,46 +1,6 @@
 +// SPDX-License-Identifier: GPL-2.0 OR X11
  /*
-  * Copyright 2014 Beniamino Galvani <b.galvani@gmail.com>
+  * Copyright 2014 Carlo Caione <carlo@caione.org>
 - *
 - * This file is dual-licensed: you can use it either under the terms
 - * of the GPL or the X11 license, at your option. Note that this dual
@@ -129,6 +128,9 @@ index 8686abd5de7f..2e669455a12d 100644
 - *     but WITHOUT ANY WARRANTY; without even the implied warranty of
 - *     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 - *     GNU General Public License for more details.
+- *
+- *     You should have received a copy of the GNU General Public License
+- *     along with this program. If not, see <http://www.gnu.org/licenses/>.
 - *
 - * Or, alternatively,
 - *
@@ -154,7 +156,7 @@ index 8686abd5de7f..2e669455a12d 100644
 - *     OTHER DEALINGS IN THE SOFTWARE.
   */
  
- /dts-v1/;
+ #include <dt-bindings/clock/meson8b-clkc.h>
 -- 
 2.21.0
 
