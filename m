@@ -2,58 +2,86 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id CA5CC254F6
-	for <lists+linux-amlogic@lfdr.de>; Tue, 21 May 2019 18:11:14 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1F2FE256A8
+	for <lists+linux-amlogic@lfdr.de>; Tue, 21 May 2019 19:26:55 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
-	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=StA9ynvuZ5j//l1lLTlLIl6jAGsHNZsD/oV3SP8mj4s=; b=oP7pUb/T4JLnLac9BSGGfrxQl
-	o4UAz1/DDqRv3aY9xNX16SBXdjKztGM7uF/xh0bkoVgGE6+Jb4KDlJDyOU2bf17IYWzmH66VnYyXw
-	u7aeWB1vEY6V4LRClsZHZeTlACt0pGI4AowxRa+tOfAGfO9wpxJcUPpCYVLer8fl/Zgk7qUC55XBP
-	P5xrwXKJfh7Gg0/zEKXt5vTfNWldtpiWMHB4cPHle5anm0heihSYjz24sKnzFJV4aroB8o+ZywfW5
-	p2r/zBmjcm6ezCQvB9bj8tRHWidSKRnT+WhY5OstSVnXqtMcR3YCmMNaLIN66OLngy0JMIB2NkVPu
-	WTZgx8AzQ==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=/wCZnZdhhb+EDzQ65PT38No0XIo6d7qSALj4OGxK6js=; b=POfG/+RfnoWpJj
+	0+CIKrG4njml/J+TxI8F4wPUmSBeehfGWdroU9+/OaRYVHQ7S6gSxBjjLzjUAYHLHBJfoY1pODTun
+	TXwsNr9kGtH8Z1jvrm4vjhqOyl6MRW9VZN6ODYxWeeZqEu1guM3U3RXbuPx70v4FFmlLTJqKkkOmT
+	YA8yDULb+x/ypriKZb46ZG3XhmWnKRFVsJuryhZSELpwAtWpcbczMR72Flw09gl5z7/1W6FKdoMtO
+	iuw8gpHA8Q7Zbyqi7Y/SDb5oIqQ5jNi0PwJcU+vFaGxO3S7AIOIcOtpzjILZKjp9MT/tGgg9Rb9Lh
+	1uv+XHJg2rx93wvTMnsg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hT7M7-0006Lu-DG; Tue, 21 May 2019 16:11:11 +0000
-Received: from usa-sjc-mx-foss1.foss.arm.com ([217.140.101.70]
- helo=foss.arm.com)
- by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hT7M4-0006LI-IE; Tue, 21 May 2019 16:11:09 +0000
-Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.72.51.249])
- by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id 2F8F9374;
- Tue, 21 May 2019 09:11:08 -0700 (PDT)
-Received: from [10.1.196.75] (e110467-lin.cambridge.arm.com [10.1.196.75])
- by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id 4174D3F718;
- Tue, 21 May 2019 09:11:07 -0700 (PDT)
-Subject: Re: [PATCH v3 3/3] arm64: dts: meson: Add minimal support for
- Odroid-N2
-To: Neil Armstrong <narmstrong@baylibre.com>, khilman@baylibre.com
-References: <20190521151952.2779-1-narmstrong@baylibre.com>
- <20190521151952.2779-4-narmstrong@baylibre.com>
-From: Robin Murphy <robin.murphy@arm.com>
-Message-ID: <4eb6aa5c-14e2-944e-9f15-692063ef072b@arm.com>
-Date: Tue, 21 May 2019 17:11:05 +0100
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
- Thunderbird/60.6.1
+	id 1hT8XL-00056N-Q2; Tue, 21 May 2019 17:26:51 +0000
+Received: from mail-oi1-x243.google.com ([2607:f8b0:4864:20::243])
+ by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
+ id 1hT8XJ-00055l-7u; Tue, 21 May 2019 17:26:50 +0000
+Received: by mail-oi1-x243.google.com with SMTP id z65so13389269oia.11;
+ Tue, 21 May 2019 10:26:48 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=googlemail.com; s=20161025;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=eJOLO6+fT4P+SCiRyBPi4+7nDWuVS/cC7SMFnlO8FSc=;
+ b=n8lCd1SP0iIV23NZM5l7ia3aHOMNEtqfLvquCPcDPsnqwrEWFZ6vl9vMTQd1JRdQeW
+ UXnFXy2vE1aEiifYnBqCVNna1rQH8K42SPgJjgyioDfJUNT92VDuAJx4Cr+reAYATiDn
+ UOuJaaZ4PYi0cMSNKj5rrruCriHDjB/stgLnUu1+LH4TivLCmw89/aIaQ9nmfOekILtW
+ wDNFBJWclJkOjPCeBpIj6bCh4YxXb5j7KtRis7iP3uU8QnIYH+JMtCgbPO15VZR60Tc2
+ iHq6G+NRKM4NCrdZtpcARpKhCG9mABICAJd3F/9bTuTDbBcQd/cCUzhKfrtYVrHLU6jx
+ S+HQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=eJOLO6+fT4P+SCiRyBPi4+7nDWuVS/cC7SMFnlO8FSc=;
+ b=UUwN9XVpf00huosUX3f8IB6KSyfqC+IaG0DIoN4XsSK/PbCNBUMJ/YoW/oP43Ku4c9
+ Zh2eFwwNGEKHldek93rWSbQH+Y7aIPuhf3Ek47cChqgout2axRRMP+y3UNyCioywJTTT
+ f9SKK9v0UM/Cn2A3FgFfy1AsRyxYJwSyGsPqqn/9S7m/o9s6fQtd9TzRiAWqw1LXyHgS
+ X+F+upK7rwDw8VbIV48hLpqIEFKcUyRLO4yJgALeeZwuSKx8N7gY3u0qvCkytO+47abn
+ jCrZAEFkKxorJLvagNyjdAccf9hpqOyUfDo+sMQuRM9eKZ/ITx7yTbTxu93Z/B1hm5Ug
+ 17dQ==
+X-Gm-Message-State: APjAAAUd867NaZOaeP92aKlTVxj1uqoDGesKciQlxxmFzHKgf/R8tAft
+ 4khOND+tn9SJKPrUdzv6ElAQQJiQas22D4gsGeg=
+X-Google-Smtp-Source: APXvYqyxdi56Ueg7EALlUk1Ep4gxIoClF1dtxww572zKOE3qzb9zruGzNqp+lYbXuSuglCifRABlgvwxXURBaXVflsA=
+X-Received: by 2002:aca:ed0a:: with SMTP id l10mr4436854oih.39.1558459608028; 
+ Tue, 21 May 2019 10:26:48 -0700 (PDT)
 MIME-Version: 1.0
-In-Reply-To: <20190521151952.2779-4-narmstrong@baylibre.com>
-Content-Language: en-GB
+References: <20190521151952.2779-1-narmstrong@baylibre.com>
+ <20190521151952.2779-3-narmstrong@baylibre.com>
+In-Reply-To: <20190521151952.2779-3-narmstrong@baylibre.com>
+From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+Date: Tue, 21 May 2019 19:26:37 +0200
+Message-ID: <CAFBinCCvoq0xkoCCiOqh7YHegZB4SJBjDMJTxEknDXogWiXUxw@mail.gmail.com>
+Subject: Re: [PATCH v3 2/3] dt-bindings: arm: amlogic: add Odroid-N2 binding
+To: Neil Armstrong <narmstrong@baylibre.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190521_091108_609260_288A0922 
-X-CRM114-Status: GOOD (  14.46  )
-X-Spam-Score: -5.0 (-----)
+X-CRM114-CacheID: sfid-20190521_102649_291437_0EAD86EB 
+X-CRM114-Status: UNSURE (   9.18  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [217.140.101.70 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:243 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (martin.blumenstingl[at]googlemail.com)
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -65,60 +93,28 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: linux-amlogic@lists.infradead.org, linux-kernel@vger.kernel.org,
- linux-arm-kernel@lists.infradead.org
+Cc: Rob Herring <robh@kernel.org>, devicetree@vger.kernel.org,
+ khilman@baylibre.com, linux-kernel@vger.kernel.org,
+ linux-amlogic@lists.infradead.org, linux-arm-kernel@lists.infradead.org
+Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
-Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On 21/05/2019 16:19, Neil Armstrong wrote:
-[...]
-> +		cpu100: cpu@100 {
-> +			device_type = "cpu";
-> +			compatible = "arm,cortex-a73", "arm,armv8";
-
-Nit: we've recently tried to eradicate "arm,armv8" as a fallback 
-compatible for real CPUs (although I see there are still a couple of 
-instances that have slipped through).
-
-Robin.
-
-> +			reg = <0x0 0x100>;
-> +			enable-method = "psci";
-> +			next-level-cache = <&l2>;
-> +		};
-> +
-> +		cpu101: cpu@101 {
-> +			device_type = "cpu";
-> +			compatible = "arm,cortex-a73", "arm,armv8";
-> +			reg = <0x0 0x101>;
-> +			enable-method = "psci";
-> +			next-level-cache = <&l2>;
-> +		};
-> +
-> +		cpu102: cpu@102 {
-> +			device_type = "cpu";
-> +			compatible = "arm,cortex-a73", "arm,armv8";
-> +			reg = <0x0 0x102>;
-> +			enable-method = "psci";
-> +			next-level-cache = <&l2>;
-> +		};
-> +
-> +		cpu103: cpu@103 {
-> +			device_type = "cpu";
-> +			compatible = "arm,cortex-a73", "arm,armv8";
-> +			reg = <0x0 0x103>;
-> +			enable-method = "psci";
-> +			next-level-cache = <&l2>;
-> +		};
-> +	};
-> +};
-> +
-> +&clkc {
-> +	compatible = "amlogic,g12b-clkc";
-> +};
-> 
+On Tue, May 21, 2019 at 5:19 PM Neil Armstrong <narmstrong@baylibre.com> wrote:
+>
+> Add compatible for the Amlogic G12B (S922X) SoC based Odroid-N2 SBC
+> from HardKernel.
+>
+> Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
+> Reviewed-by: Rob Herring <robh@kernel.org>
+> Reviewed-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+> ---
+> Rob, Martin,
+>
+> I converted the patch you acked in yaml, I kept the Reviewed-by,
+> is it ok for you ?
+yes, looks fine to me as well
 
 _______________________________________________
 linux-amlogic mailing list
