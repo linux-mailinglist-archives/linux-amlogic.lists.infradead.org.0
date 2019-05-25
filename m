@@ -1,90 +1,104 @@
 Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org>
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
-Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7E9CD2A4FE
-	for <lists+linux-amlogic@lfdr.de>; Sat, 25 May 2019 16:56:08 +0200 (CEST)
+Received: from bombadil.infradead.org (bombadil.infradead.org [198.137.202.133])
+	by mail.lfdr.de (Postfix) with ESMTPS id 1C72D2A683
+	for <lists+linux-amlogic@lfdr.de>; Sat, 25 May 2019 20:29:44 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:From:To:Subject:MIME-Version:Date:
-	Message-ID:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=Hxf9fIyscqLp8/aMJQy/WOiZrW5H3GSoR/h+o+S2hk0=; b=k3mAeyjHAfi5YZ
-	xiNHhSQtYTkPm7OGdRn6Ojr5fp+9hiNYkBx74aegVqaXuc+Iq7UrxTrhYTcsLorG+MVmYUKb4xxX8
-	I2y5vmX+AUL25Dl+nl9UBH2P8HtdwgqbNUBNotgTDyzSikEORQM0wbTB6NEjlXM6H/roooeql76+9
-	R+fF0i8C8fkigx/UUcEteX0+q46puev2dTH2xoBpQlGxK4tsxMYzIFCXtmSQpWUsjq0zeEr0y8KBI
-	eU/UN/N669obU7orfyTLk1a1hDYL8RoGDKVTBl0MYdICGHYe+08XTpnMEEHWBBSYzjt7o+0WatyMQ
-	LwvX5wv3rk3lroLh/TOQ==;
+	List-Owner; bh=CEdawITmRii5FcEphMVtsjDmZxiIWdBm2fbhxCLUoBY=; b=fah5GGn+3Q3xk4
+	W0Ul/9tEzMwTURBOSnrYeZDrNAORjy0MrkhtbI/TyUH0F09qIQeKCHR/zG/3qyo+xddT49vStE+Zm
+	CpSABwAbiKJlKL15dN/fIgBIik3W3Rj5g8LHpNYs5ARbqsaJEL1Eforq7YGuB+YwTkKNXeBz9FIsf
+	LrVG+Eq+w24H9LMNLuwg7Gb/1NpxUTfSXKIvB1zoDvz1uszVhMRRjxj9aiQYKP1EL4TPIE22mfW35
+	ySk9v3DlIgTzOlUU7IHxT3E703ZwoyNAaR/vcQ9/yy6gKDh/yZs3TDzkl/Ykr910BVnqQDOZs6Fgk
+	zfh1wW3j78n6RYMqPefg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hUY5c-0006F4-VM; Sat, 25 May 2019 14:56:04 +0000
-Received: from mail-wm1-x341.google.com ([2a00:1450:4864:20::341])
+	id 1hUbQM-0004Qu-1O; Sat, 25 May 2019 18:29:42 +0000
+Received: from casper.infradead.org ([2001:8b0:10b:1236::1])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hUY5U-00067t-1w
- for linux-amlogic@lists.infradead.org; Sat, 25 May 2019 14:55:57 +0000
-Received: by mail-wm1-x341.google.com with SMTP id w9so5696719wmi.0
- for <linux-amlogic@lists.infradead.org>; Sat, 25 May 2019 07:55:55 -0700 (PDT)
+ id 1hUbQ8-0003yY-FW; Sat, 25 May 2019 18:29:28 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=infradead.org; s=casper.20170209; h=Content-Transfer-Encoding:Content-Type:
+ MIME-Version:Message-Id:Date:Subject:Cc:To:From:Sender:Reply-To:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+ List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=1Yb/S5cquO/qD7cZ8y/Ty2KEWw38/es4qeSEZUyR+jc=; b=DA2XRAo4/42BjE5N25wrSNegWJ
+ 3m9X/DkXpaCv8XYfkDU6rb9zWF/lpYhavOckzBVx1Mvt/C4X8PqXGTH6rXLipwB5Z7Z2TsH9KeZyh
+ vJqhm+7TMmhMCfBsMpEv9h9C3B9Ih6SDQLk0eGLlIXuEI/WRLUw92G/1dpP4fzgtJRv6tC8PEvNtz
+ juDSL0cyydQ9Bg0neDwZaLFxI7N8yseCN/Z8S3qnoLd0W0Iy+jpnnddXpE4e96KX9ePFoP1qGZFcr
+ 2pZABig6sZho955oufOCMq+36S8WMOckYIohXEk82s0+5+EyUk5DNup8HrfQY175pAZGaPk3YEDaU
+ 909Y9GVA==;
+Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
+ by casper.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
+ id 1hUb90-00024t-8A; Sat, 25 May 2019 18:11:48 +0000
+Received: by mail-wr1-x442.google.com with SMTP id w13so4590523wru.11;
+ Sat, 25 May 2019 11:11:45 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=kernelci-org.20150623.gappssmtp.com; s=20150623;
- h=message-id:date:mime-version:content-transfer-encoding:subject:to
- :from:cc; bh=EuYIB6cW2iyL4GLrUb+ErE4HZQ0an8nT6D+WzTs0wj4=;
- b=arDkbo+ddHrJkuxsGH5jgsnxZX1bB6hh0JtUZoGqILsdaqzNYjFCoEVzZ/BiEJ/cS5
- DkVVzTIvFux2OYnmgBo2hKGgdftqu1c26sypBZiie2p0G2y7tKoRRtJs4I9brTGz1CFQ
- soxQGM3PHrSEljL7v2gz8SP0thrvVE4QivtCOwNI7aRS4p27FrjJL8iGCKvB4/U4Ha2M
- +fv5EY8w6OskUYyZSwKojyo/urWrxq4hRfdG2PHv/Pr2waFzarRncQ8lRzfL5ZSZC3Tp
- zkm/ysRhVS7MSnyWRjn0U7SkXEyaZl2MgA7yT4PbKdCg+tyBLocdF3oWJS1PbxwBF90R
- lVIA==
+ d=googlemail.com; s=20161025;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=1Yb/S5cquO/qD7cZ8y/Ty2KEWw38/es4qeSEZUyR+jc=;
+ b=OGJNTZfDrBzPN439RB++aRKeudPMkKmAnuPSKbCnLRPL0eV+S2U2ujtLWuKIW3R1/V
+ tR+Vi1PNTFdC3hGP5egqzB5KZrLyec9thl7qdXa7ZIVQeM50/fuANNeD/xx2+zjavcfh
+ Sot/dtNJhrUJ3CN3JWpD0bZEgn1Xr1TDXlo4Y3rXszL9ELsilnxHcpQutZ5dmQ95q+da
+ O+cChUMRweL+GBgKmh1Swu+H8mtFOj4Ri6QVjHAt5zCjyhpT6mXWZBSD+SU+1eh04PNv
+ rZm1iK+/8a/D9sCSzxE+GWi1gyxowb2WaeDIN2BLFZgY4xFUTPexkmSwSdQnPV+9iF8d
+ jSNg==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:message-id:date:mime-version
- :content-transfer-encoding:subject:to:from:cc;
- bh=EuYIB6cW2iyL4GLrUb+ErE4HZQ0an8nT6D+WzTs0wj4=;
- b=UBxk36G4P9W2AWHhcKEJ+IR8ErrYv0JEU+5yOpH5ZfBhKyG6Pyv8SZG0ZeaHToWcWu
- siTfhIruJZylZJnWOzcQ+VLPSEngKpVmdfnOceX2AL16k4q5dqIH9OKYbv0mCd6cZl7u
- 7bGkG65auu88SXGQ9sTTE06VGoaC+qVfyMLJyhLrxYsWtfoSHKsCei00A23hfJ2+5WxJ
- jfjeCinvdjKw1zEg1JPnVzqVjiFx4NZlHDwjj27FwVKj2Rjp8xnXQiRkv50TRFdhPizZ
- 9oZ4PAOcQjvMBN16M0Ge/9Yo44W3VD2FYvV8iq512ZBcaXiT8cJhr20NHoYdcNBROkd+
- mvDg==
-X-Gm-Message-State: APjAAAX/0iSoRrbTQbEpJ62UDiWfv1hRkAYCqQrbHcgdiYdKz418lKhP
- rX5uuhxe66zpwiCNw+C2XPcjqQ==
-X-Google-Smtp-Source: APXvYqxXR7WXZZ1TwOzelpEfXavjk8aSfM4cLDNK9nnX/lJskdY6r5plLpg7Y0tmuGpLGMB2tNPVqQ==
-X-Received: by 2002:a1c:1bc9:: with SMTP id b192mr3719972wmb.27.1558796154553; 
- Sat, 25 May 2019 07:55:54 -0700 (PDT)
-Received: from [148.251.42.114] ([2a01:4f8:201:9271::2])
- by smtp.gmail.com with ESMTPSA id p10sm2028727wrw.6.2019.05.25.07.55.53
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=1Yb/S5cquO/qD7cZ8y/Ty2KEWw38/es4qeSEZUyR+jc=;
+ b=T/jXCIdXQTypz8prJ5KQej6nuSh4IXjXYplweZuhd4fxMPU9Kg/Emsl7b8p+HM4XqL
+ qRoRw7pZO1aDsMrxALUmWQUEO0n1P1onyA40wWVLUus5xk+8p4wYTvtXNcXW+wIXAtId
+ tfPOSx0YYviraigLd7zlkSIe9RMDPvU7PEcVmR/1stRTbHG9lXUyDMLDWA9YutK+phx8
+ aEE2bkAx4HyHJrkkR5LadTpDRs8scwD23/4A21toQh8IdLhlc0U7oUXFtbanC6necQ/I
+ cN/NnDVIvJroRt+zilOjAswBO/2Y/D8puQ1i5xugD/swhY69O2n3CorcQxGCoHH+Nrbs
+ fhCg==
+X-Gm-Message-State: APjAAAXp7P6Y5BK2CjDs7Tj5gGPNzRUO++bp+u4Vum0cyhkAE1Hvmowa
+ 5S33wNnbVnmF3gRfzJOqIZGS3isW
+X-Google-Smtp-Source: APXvYqxBZiRxV8q08TSMKchVl/GQr4AJB1E/7X1Qboxu7UaF1qNqvJ7pwpHbrpQvTRZKOmexP2cjYw==
+X-Received: by 2002:adf:f78d:: with SMTP id q13mr20308734wrp.220.1558807903867; 
+ Sat, 25 May 2019 11:11:43 -0700 (PDT)
+Received: from blackbox.darklights.net
+ (p200300F133DDA4007CB8841254CD64FD.dip0.t-ipconnect.de.
+ [2003:f1:33dd:a400:7cb8:8412:54cd:64fd])
+ by smtp.googlemail.com with ESMTPSA id o8sm12794540wra.4.2019.05.25.11.11.42
  (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
- Sat, 25 May 2019 07:55:53 -0700 (PDT)
-Message-ID: <5ce95779.1c69fb81.df149.ac4a@mx.google.com>
-Date: Sat, 25 May 2019 07:55:53 -0700 (PDT)
+ Sat, 25 May 2019 11:11:42 -0700 (PDT)
+From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+To: linux-amlogic@lists.infradead.org, linux-pwm@vger.kernel.org,
+ thierry.reding@gmail.com, u.kleine-koenig@pengutronix.de
+Subject: [PATCH 00/14] pwm-meson: cleanups and improvements
+Date: Sat, 25 May 2019 20:11:19 +0200
+Message-Id: <20190525181133.4875-1-martin.blumenstingl@googlemail.com>
+X-Mailer: git-send-email 2.21.0
 MIME-Version: 1.0
-X-Kernelci-Report-Type: bisect
-X-Kernelci-Tree: mainline
-X-Kernelci-Lab-Name: lab-baylibre
-X-Kernelci-Branch: master
-X-Kernelci-Kernel: v5.2-rc1-357-g7fbc78e3155a
-Subject: mainline/master boot bisection: v5.2-rc1-357-g7fbc78e3155a on
- meson-g12a-x96-max
-To: tomeu.vizoso@collabora.com, guillaume.tucker@collabora.com,
- mgalka@collabora.com, Kevin Hilman <khilman@baylibre.com>,
- Neil Armstrong <narmstrong@baylibre.com>, broonie@kernel.org,
- matthew.hart@linaro.org, khilman@baylibre.com, enric.balletbo@collabora.com,
- Jerome Brunet <jbrunet@baylibre.com>
-From: "kernelci.org bot" <bot@kernelci.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190525_075556_150411_CD058652 
-X-CRM114-Status: UNSURE (   6.89  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.0 (/)
-X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+X-CRM114-CacheID: sfid-20190525_191146_361004_0E39DDF6 
+X-CRM114-Status: GOOD (  17.89  )
+X-Spam-Score: -0.2 (/)
+X-Spam-Report: SpamAssassin version 3.4.2 on casper.infradead.org summary:
+ Content analysis details:   (-0.2 points, 5.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:341 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:442 listed in]
  [list.dnswl.org]
- -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (martin.blumenstingl[at]googlemail.com)
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
@@ -99,154 +113,91 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- linux-kernel@vger.kernel.org, Rob Herring <robh+dt@kernel.org>,
- linux-amlogic@lists.infradead.org, linux-arm-kernel@lists.infradead.org
+Cc: Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
+ linux-kernel@vger.kernel.org, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-* This automated bisection report was sent to you on the basis  *
-* that you may be involved with the breaking commit it has      *
-* found.  No manual investigation has been done to verify it,   *
-* and the root cause of the problem may be somewhere else.      *
-* Hope this helps!                                              *
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+This series consists of various cleanups and improvements for the
+pwm-meson driver.
 
-mainline/master boot bisection: v5.2-rc1-357-g7fbc78e3155a on meson-g12a-x96-max
+Patches 1 to 6 are small code cleanups with the goal of making the code
+easier to read.
 
-Summary:
-  Start:      7fbc78e3155a Merge tag 'for-linus-20190524' of git://git.kernel.dk/linux-block
-  Details:    https://kernelci.org/boot/id/5ce8a65059b51433287a363c
-  Plain log:  https://storage.kernelci.org//mainline/master/v5.2-rc1-357-g7fbc78e3155a/arm64/defconfig/gcc-8/lab-baylibre/boot-meson-g12a-x96-max.txt
-  HTML log:   https://storage.kernelci.org//mainline/master/v5.2-rc1-357-g7fbc78e3155a/arm64/defconfig/gcc-8/lab-baylibre/boot-meson-g12a-x96-max.html
-  Result:     11a7bea17c9e arm64: dts: meson: g12a: add pinctrl support controllers
+Patches 7 to 9 are reworking the way the per-channel settings are
+accessed. This is a first preparation step for adding full support to
+meson_pwm_get_state() in the pwm-meson driver. Patch 7 makes struct
+meson_pwm_channel accessible from struct meson_pwm because
+meson_pwm_get_state() cannot use pwm_get_chip_data(). Patch 8 removes
+redundant switch/case statements and ensures that we don't have to
+add another redundant one for the upcoming full meson_pwm_get_state()
+implementation. Patch 9 gets rid of meson_pwm_add_channels() and moves
+the pwm_set_chip_data() call to meson_pwm_request() (like all other PWM
+drivers do - except two).
 
-Checks:
-  revert:     PASS
-  verify:     PASS
+Patch 10 is based on a suggestion by Uwe to simplify the calculation of
+the values which the PWM IP requires. The nice benefit of this is that
+we have an easier calculation which we can do "in reverse" for the
+meson_pwm_get_state() (which calculates nanoseconds from the hardware
+values).
 
-Parameters:
-  Tree:       mainline
-  URL:        git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
-  Branch:     master
-  Target:     meson-g12a-x96-max
-  CPU arch:   arm64
-  Lab:        lab-baylibre
-  Compiler:   gcc-8
-  Config:     defconfig
-  Test suite: boot
+Patch 11 implements reading the period and duty cycle in the
+meson_pwm_get_state() callback.
 
-Breaking commit found:
+Patch 12 removes some internal caching which we don't need anymore now
+meson_pwm_get_state() is fully implemented. The PWM core now takes care
+of not calling pwm_ops.apply() if "nothing has changed".
 
--------------------------------------------------------------------------------
-commit 11a7bea17c9e0a36daab934d83e15a760f402147
-Author: Jerome Brunet <jbrunet@baylibre.com>
-Date:   Mon Mar 18 10:58:45 2019 +0100
+Patch 13 adds support for PWM_POLARITY_INVERSED when disabling the
+output as suggested by Uwe.
 
-    arm64: dts: meson: g12a: add pinctrl support controllers
-    
-    Add the peripheral and always-on pinctrl controllers to the g12a soc.
-    
-    Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
-    Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
-    Signed-off-by: Kevin Hilman <khilman@baylibre.com>
+Patch 14 completes this series by adding some documentation to the
+driver. Thanks to Neil for summarizing how the hardware works
+internally.
 
-diff --git a/arch/arm64/boot/dts/amlogic/meson-g12a.dtsi b/arch/arm64/boot/dts/amlogic/meson-g12a.dtsi
-index abfa167751af..5e07e4ca3f4b 100644
---- a/arch/arm64/boot/dts/amlogic/meson-g12a.dtsi
-+++ b/arch/arm64/boot/dts/amlogic/meson-g12a.dtsi
-@@ -104,6 +104,29 @@
- 				#address-cells = <2>;
- 				#size-cells = <2>;
- 				ranges = <0x0 0x0 0x0 0x34400 0x0 0x400>;
-+
-+				periphs_pinctrl: pinctrl@40 {
-+					compatible = "amlogic,meson-g12a-periphs-pinctrl";
-+					#address-cells = <2>;
-+					#size-cells = <2>;
-+					ranges;
-+
-+					gpio: bank@40 {
-+						reg = <0x0 0x40  0x0 0x4c>,
-+						      <0x0 0xe8  0x0 0x18>,
-+						      <0x0 0x120 0x0 0x18>,
-+						      <0x0 0x2c0 0x0 0x40>,
-+						      <0x0 0x340 0x0 0x1c>;
-+						reg-names = "gpio",
-+							    "pull",
-+							    "pull-enable",
-+							    "mux",
-+							    "ds";
-+						gpio-controller;
-+						#gpio-cells = <2>;
-+						gpio-ranges = <&periphs_pinctrl 0 0 86>;
-+					};
-+				};
- 			};
- 
- 			hiu: bus@3c000 {
-@@ -150,6 +173,25 @@
- 					clocks = <&xtal>, <&clkc CLKID_CLK81>;
- 					clock-names = "xtal", "mpeg-clk";
- 				};
-+
-+				ao_pinctrl: pinctrl@14 {
-+					compatible = "amlogic,meson-g12a-aobus-pinctrl";
-+					#address-cells = <2>;
-+					#size-cells = <2>;
-+					ranges;
-+
-+					gpio_ao: bank@14 {
-+						reg = <0x0 0x14 0x0 0x8>,
-+						      <0x0 0x1c 0x0 0x8>,
-+						      <0x0 0x24 0x0 0x14>;
-+						reg-names = "mux",
-+							    "ds",
-+							    "gpio";
-+						gpio-controller;
-+						#gpio-cells = <2>;
-+						gpio-ranges = <&ao_pinctrl 0 0 15>;
-+					};
-+				};
- 			};
- 
- 			sec_AO: ao-secure@140 {
--------------------------------------------------------------------------------
+Due to the changed PWM calculation in patch 10 I have verified that
+we don't break any existing boards. The patch itself contains two
+examples which show that the new calculation improves precision. I
+made screenshots of the measurements in pulseview [0] for the second
+case ("PWM LED on Khadas VIM"):
+- old algorithm: [1]
+- old algorithm: [2]
+
+Dependencies:
+This series applies on top of Neil's patch "pwm: pwm-meson: update with
+SPDX Licence identifier" [3]
 
 
-Git bisection log:
+[0] https://sigrok.org/wiki/PulseView
+[1] https://abload.de/img/old-algormjs9.png
+[2] https://abload.de/img/new-algo4ckjo.png
+[3] https://patchwork.kernel.org/patch/10951319/
 
--------------------------------------------------------------------------------
-git bisect start
-# good: [a455eda33faafcaac1effb31d682765b14ef868c] Merge branch 'linus' of git://git.kernel.org/pub/scm/linux/kernel/git/evalenti/linux-soc-thermal
-git bisect good a455eda33faafcaac1effb31d682765b14ef868c
-# bad: [7fbc78e3155a0c464bd832efc07fb3c2355fe9bd] Merge tag 'for-linus-20190524' of git://git.kernel.dk/linux-block
-git bisect bad 7fbc78e3155a0c464bd832efc07fb3c2355fe9bd
-# bad: [311f71281ff4b24f86a39c60c959f485c68a6d36] Merge tag 'for-5.2/dm-changes-v2' of git://git.kernel.org/pub/scm/linux/kernel/git/device-mapper/linux-dm
-git bisect bad 311f71281ff4b24f86a39c60c959f485c68a6d36
-# bad: [be058ba65d9e43f40d31d9b16b99627f0a20de1b] Merge tag 'imx-dt-5.2' of git://git.kernel.org/pub/scm/linux/kernel/git/shawnguo/linux into arm/dt
-git bisect bad be058ba65d9e43f40d31d9b16b99627f0a20de1b
-# bad: [7996313656b83ba516a1546d51f08f1a0fab4e06] Merge tag 'omap-for-v5.2/dt-am3-signed' of git://git.kernel.org/pub/scm/linux/kernel/git/tmlind/linux-omap into arm/dt
-git bisect bad 7996313656b83ba516a1546d51f08f1a0fab4e06
-# bad: [2140eaf2f46faf2627ec030d7cabf2dda2cb546b] Merge tag 'stm32-dt-for-v5.2-1' of git://git.kernel.org/pub/scm/linux/kernel/git/atorgue/stm32 into arm/dt
-git bisect bad 2140eaf2f46faf2627ec030d7cabf2dda2cb546b
-# bad: [1a88083b9349b8310b25d9a9a96802ee4447e6b9] Merge tag 'v5.2-rockchip-dts64-1' of git://git.kernel.org/pub/scm/linux/kernel/git/mmind/linux-rockchip into arm/dt
-git bisect bad 1a88083b9349b8310b25d9a9a96802ee4447e6b9
-# bad: [1c93235a6d92deaab38bbb1cfc764b0757331ebb] Merge tag 'amlogic-dt' of https://git.kernel.org/pub/scm/linux/kernel/git/khilman/linux-amlogic into arm/dt
-git bisect bad 1c93235a6d92deaab38bbb1cfc764b0757331ebb
-# bad: [ff4f8b6cab5885ebc2c6b21fd058db8544e2eebb] arm64: dts: meson: g12a: Add UART A, B & C nodes and pins
-git bisect bad ff4f8b6cab5885ebc2c6b21fd058db8544e2eebb
-# good: [965c827ac37e71f76d3ac55c75ac08909f2a4eed] arm64: dts: meson: g12a: add efuse
-git bisect good 965c827ac37e71f76d3ac55c75ac08909f2a4eed
-# bad: [11a7bea17c9e0a36daab934d83e15a760f402147] arm64: dts: meson: g12a: add pinctrl support controllers
-git bisect bad 11a7bea17c9e0a36daab934d83e15a760f402147
-# good: [b019f4a4199f865b054262ff78f606ca70f7b981] arm64: dts: meson: g12a: Add AO Clock + Reset Controller support
-git bisect good b019f4a4199f865b054262ff78f606ca70f7b981
-# first bad commit: [11a7bea17c9e0a36daab934d83e15a760f402147] arm64: dts: meson: g12a: add pinctrl support controllers
--------------------------------------------------------------------------------
+
+Martin Blumenstingl (14):
+  pwm: meson: unify the parameter list of meson_pwm_{enable,disable}
+  pwm: meson: use devm_clk_get_optional() to get the input clock
+  pwm: meson: use GENMASK and FIELD_PREP for the lo and hi values
+  pwm: meson: change MISC_CLK_SEL_WIDTH to MISC_CLK_SEL_MASK
+  pwm: meson: don't duplicate the polarity internally
+  pwm: meson: pass struct pwm_device to meson_pwm_calc()
+  pwm: meson: add the meson_pwm_channel data to struct meson_pwm
+  pwm: meson: add the per-channel register offsets and bits in a struct
+  pwm: meson: move pwm_set_chip_data() to meson_pwm_request()
+  pwm: meson: simplify the calculation of the pre-divider and count
+  pwm: meson: read the full hardware state in meson_pwm_get_state()
+  pwm: meson: don't cache struct pwm_state internally
+  pwm: meson: add support PWM_POLARITY_INVERSED when disabling
+  pwm: meson: add documentation to the driver
+
+ drivers/pwm/pwm-meson.c | 323 +++++++++++++++++++++-------------------
+ 1 file changed, 169 insertions(+), 154 deletions(-)
+
+-- 
+2.21.0
+
 
 _______________________________________________
 linux-amlogic mailing list
