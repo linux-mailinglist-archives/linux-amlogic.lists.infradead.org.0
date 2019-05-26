@@ -2,93 +2,57 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 546EC2A6B1
-	for <lists+linux-amlogic@lfdr.de>; Sat, 25 May 2019 21:02:56 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 46D612A8E9
+	for <lists+linux-amlogic@lfdr.de>; Sun, 26 May 2019 08:51:16 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=BZMcQISYHC8Q9W8/VJMaIq/ONChQf0hG4MzF9C4VJvQ=; b=i7Aj6HEMVyL1GB
-	gfchGfTY8sgO1++VBGwqMrvRLIh1o/cQbqzYkdoK7n6PRgq6TSrcNU21sr5FpLTbidbGinFdPe4bw
-	DrqOZJbQ5Fa+eH2RYa8AipLxLNjaDnJQde+PGjlQdXJ6sXAawNU1XdiTdEV4cARpYGcWO7CkZf3tH
-	iFgzbeZJmvM07q7c45N6cE8GrNs5FpIrGDdsH+N+ZKObU9WX8p5fOICSAKhnFOF+AvEMv0IN2Eznx
-	vE6sIJugACJ4G2zGyLJykCeVun9C4zeQo9TP3oi/nWOq4mV5x7plUJp66JRYyVzRyE6txE5d95vMt
-	4H6UZFQgNPB0TBwI306w==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
+	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=w7KEfDX6Eh+rUjHVEZ+gXRp6g94nZ5aS/EOogrvWbGs=; b=QSBXziJG9DpC4q
+	ahxBxamWMfV6K75onIOs+0JtD0pneFzaXXnjCuq/xbu8SBuTKNAc3H7Id2QPtYGMFoq+jT3eRCrrF
+	GLLmObGFL22LOMrawccs0mi3CqOFPE733zlOiFT46UcbTWOEj2u8E1iszX6HuMcNlDfxun16a5ImO
+	HXHWywWj+WjWP0sZwmLYELIj41zIVFczQ/ePy8f2AsKzKna/GHsHYxx++jUUBum1NT64B8nvnx5Hn
+	wZoUVK/7nvqVu7T5CWzWfshrTrxumdJESr4BYnbyjkOkfwJvTDFOYGYRfAW2iX/MMHchKdxk2mvrP
+	+e8Hgi5kld1mjcG31Lcg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hUbwU-0002MT-Ae; Sat, 25 May 2019 19:02:54 +0000
-Received: from mail-wr1-x443.google.com ([2a00:1450:4864:20::443])
+	id 1hUmzw-0003Kp-Bf; Sun, 26 May 2019 06:51:12 +0000
+Received: from bhuna.collabora.co.uk ([46.235.227.227])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hUbvr-0001WV-MI; Sat, 25 May 2019 19:02:17 +0000
-Received: by mail-wr1-x443.google.com with SMTP id b18so12985391wrq.12;
- Sat, 25 May 2019 12:02:15 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=googlemail.com; s=20161025;
- h=from:to:cc:subject:date:message-id:in-reply-to:references
- :mime-version:content-transfer-encoding;
- bh=wwuYv3aJc+Jn6CC+ws46Y8JvxBizBD22MAUJcAPoAWs=;
- b=athd6wnvzMFvUabNQ5m23SBnvwwo2uiQkJ3YFUL8HHiVgS4lEYg6Ehj1l7FuqSYAIy
- o98L0uICFvssWTZYMTW/Doe9uC+xur1WNzSrjeEQHUmG/d1v6jTGYFink/Xl3TR3U/iw
- lF4ZleVNnzs6AlkJGWSjMCpo+YG+U8pxgBmuwel5k8rVrgRYmyv9DJ34SRLmcXKksFUk
- fmr+ka5pylHD/8r+x1yyl6fzKXZa9r/E6bZ7L/CmXtMj2mUjtNP5Sa9Jtu0v3EwyqW4H
- dTCjunvDz/QeyqxwI+vYuE3dXHKPWRhTnPJ1pYBkwrAumt7SwU00e3qP6qEpAahTC5qS
- h9aQ==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
- :references:mime-version:content-transfer-encoding;
- bh=wwuYv3aJc+Jn6CC+ws46Y8JvxBizBD22MAUJcAPoAWs=;
- b=omK2Gp3q/uK30MK8bjaDNAI2ms8qChw3baLP70N/23Mx4dnj9eKtkJLFVH7uBVZuHt
- 1X4MKW+l5+HwrtxB3AZ6zaDgDIqRBjYQ1ctZEpmvgoIKm2kjAEd7FP4KPNngXofFxB6a
- 2auHI80h8VllW26mOrrNxKd+nzeYPCpKrRcZQuL4DZ7Q17+oGLn0EJ3aMeFNIntfSCqx
- G6HTq0VWr3zUzBFO+CFdA3pI/iy0vwlxRAZA0rnZsc3ebC901OkQB06Y/hQotvxE1kY9
- DYOq3d1dHwTktF+gZSAaG6nbXVu3jl/JbwFc2iDAyNu6+xpLL/yujoU8qnfZtWzlUCOs
- 12ag==
-X-Gm-Message-State: APjAAAVplElzHHJdsm18Nlx8HOwI+woXn8LJ3/X06eHKn99it/cFLKjX
- LgzWtVz9mxcHx/4sgXM9Ej2Ksm6k
-X-Google-Smtp-Source: APXvYqy52Xb3yRcwFLGBRb8J5DjY31vTTOpWN18I1HEqnnydCPU1mcr8g4nguQ6yCFdL8ZnffvoBmA==
-X-Received: by 2002:adf:9c8e:: with SMTP id d14mr15880942wre.215.1558810934037; 
- Sat, 25 May 2019 12:02:14 -0700 (PDT)
-Received: from blackbox.darklights.net
- (p200300F133DDA4007CB8841254CD64FD.dip0.t-ipconnect.de.
- [2003:f1:33dd:a400:7cb8:8412:54cd:64fd])
- by smtp.googlemail.com with ESMTPSA id f2sm6870426wme.12.2019.05.25.12.02.13
- (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
- Sat, 25 May 2019 12:02:13 -0700 (PDT)
-From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-To: linux-amlogic@lists.infradead.org,
-	khilman@baylibre.com
-Subject: [PATCH 4/4] ARM: dts: meson8b: mxq: add the VDDEE regulator
-Date: Sat, 25 May 2019 21:02:04 +0200
-Message-Id: <20190525190204.7897-5-martin.blumenstingl@googlemail.com>
-X-Mailer: git-send-email 2.21.0
-In-Reply-To: <20190525190204.7897-1-martin.blumenstingl@googlemail.com>
-References: <20190525190204.7897-1-martin.blumenstingl@googlemail.com>
+ id 1hUmzt-0003Ju-78; Sun, 26 May 2019 06:51:10 +0000
+Received: from [127.0.0.1] (localhost [127.0.0.1])
+ (Authenticated sender: gtucker) with ESMTPSA id 5A6F6283B69
+Subject: Re: mainline/master boot bisection: v5.2-rc1-172-g4dde821e4296 on
+ meson-g12a-x96-max
+To: Kevin Hilman <khilman@baylibre.com>
+References: <5ce78689.1c69fb81.58097.eacf@mx.google.com>
+ <7hmujc0xnp.fsf@baylibre.com>
+ <f01b812e-ee18-528b-1859-620dd8f0fb53@collabora.com>
+ <7hh89j1ze4.fsf@baylibre.com>
+From: Guillaume Tucker <guillaume.tucker@collabora.com>
+Message-ID: <fef4eb85-cde7-6fb4-7586-cfd45b60365d@collabora.com>
+Date: Sun, 26 May 2019 07:50:59 +0100
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.6.1
 MIME-Version: 1.0
+In-Reply-To: <7hh89j1ze4.fsf@baylibre.com>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190525_120215_724458_C26C3044 
-X-CRM114-Status: GOOD (  12.50  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190525_235109_393575_0F8B142E 
+X-CRM114-Status: GOOD (  11.26  )
+X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:443 listed in]
- [list.dnswl.org]
+ no trust [46.235.227.227 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (martin.blumenstingl[at]googlemail.com)
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -100,79 +64,59 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
- linux-kernel@vger.kernel.org, linux-arm-kernel@lists.infradead.org
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ tomeu.vizoso@collabora.com, Neil Armstrong <narmstrong@baylibre.com>,
+ linux-kernel@vger.kernel.org, Rob Herring <robh+dt@kernel.org>,
+ broonie@kernel.org, matthew.hart@linaro.org, mgalka@collabora.com,
+ enric.balletbo@collabora.com, linux-amlogic@lists.infradead.org,
+ linux-arm-kernel@lists.infradead.org, Jerome Brunet <jbrunet@baylibre.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-The VDDEE regulator is basically a copy of the VCCK regulator. VDDEE
-supplies for example the Mali GPU and is controlled by PWM_D instead of
-PWM_C.
+On 24/05/2019 19:27, Kevin Hilman wrote:
+> Guillaume Tucker <guillaume.tucker@collabora.com> writes:
+> 
+>> On 24/05/2019 14:50, Kevin Hilman wrote:
+>>> "kernelci.org bot" <bot@kernelci.org> writes:
+>>>
+>>>> * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+>>>> * This automated bisection report was sent to you on the basis  *
+>>>> * that you may be involved with the breaking commit it has      *
+>>>> * found.  No manual investigation has been done to verify it,   *
+>>>> * and the root cause of the problem may be somewhere else.      *
+>>>> * Hope this helps!                                              *
+>>>> * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+>>>>
+>>>> mainline/master boot bisection: v5.2-rc1-172-g4dde821e4296 on meson-g12a-x96-max
+>>>>
+>>>> Summary:
+>>>>   Start:      4dde821e4296 Merge tag 'xfs-5.2-fixes-1' of git://git.kernel.org/pub/scm/fs/xfs/xfs-linux
+>>>>   Details:    https://kernelci.org/boot/id/5ce72c6259b514ed817a3640
+>>>>   Plain log:  https://storage.kernelci.org//mainline/master/v5.2-rc1-172-g4dde821e4296/arm64/defconfig+CONFIG_RANDOMIZE_BASE=y/gcc-8/lab-baylibre/boot-meson-g12a-x96-max.txt
+>>>>   HTML log:   https://storage.kernelci.org//mainline/master/v5.2-rc1-172-g4dde821e4296/arm64/defconfig+CONFIG_RANDOMIZE_BASE=y/gcc-8/lab-baylibre/boot-meson-g12a-x96-max.html
+>>>>   Result:     11a7bea17c9e arm64: dts: meson: g12a: add pinctrl support controllers
+>>>
+>>> False alarm.
+>>>
+>>> This one is failing in one lab but passing in another:
+>>> https://kernelci.org/boot/all/job/mainline/branch/master/kernel/v5.2-rc1-172-g4dde821e4296/
+>>>
+>>> I'll look into what's the difference between labs.
+>>
+>> Thanks for clarifying this.  I guess we should fix the logic
+>> which detects regressions to discard cases where there is a
+>> conflict between results in different labs.
+> 
+> Yes, we should.  If there are conflicts between labs, it's almost
+> certainly not worth the effort to automatically bisect (or at least not
+> worth it to send out the email.)
 
-Add the VDDEE PWM regulator and make it the supply of the Mali GPU.
+I've disabled bisections in lab-baylibre for now to stop the
+misleading reports until lab conflicts are better handled.
 
-Signed-off-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
----
- arch/arm/boot/dts/meson8b-mxq.dts | 26 +++++++++++++++++++++++---
- 1 file changed, 23 insertions(+), 3 deletions(-)
-
-diff --git a/arch/arm/boot/dts/meson8b-mxq.dts b/arch/arm/boot/dts/meson8b-mxq.dts
-index 07f1cc513f8a..8f7a02c1e27b 100644
---- a/arch/arm/boot/dts/meson8b-mxq.dts
-+++ b/arch/arm/boot/dts/meson8b-mxq.dts
-@@ -116,6 +116,22 @@
- 		regulator-boot-on;
- 		regulator-always-on;
- 	};
-+
-+	vddee: regulator-vddee {
-+		compatible = "pwm-regulator";
-+
-+		regulator-name = "VDDEE";
-+		regulator-min-microvolt = <860000>;
-+		regulator-max-microvolt = <1140000>;
-+
-+		vin-supply = <&vcc_5v>;
-+
-+		pwms = <&pwm_cd 1 1148 0>;
-+		pwm-dutycycle-range = <100 0>;
-+
-+		regulator-boot-on;
-+		regulator-always-on;
-+	};
- };
- 
- &cpu0 {
-@@ -151,6 +167,10 @@
- 	};
- };
- 
-+&mali {
-+	mali-supply = <&vddee>;
-+};
-+
- &saradc {
- 	status = "okay";
- 	vref-supply = <&vcc_1v8>;
-@@ -182,10 +202,10 @@
- 
- &pwm_cd {
- 	status = "okay";
--	pinctrl-0 = <&pwm_c1_pins>;
-+	pinctrl-0 = <&pwm_c1_pins>, <&pwm_d_pins>;
- 	pinctrl-names = "default";
--	clocks = <&clkc CLKID_XTAL>;
--	clock-names = "clkin0";
-+	clocks = <&clkc CLKID_XTAL>, <&clkc CLKID_XTAL>;
-+	clock-names = "clkin0", "clkin1";
- };
- 
- &uart_AO {
--- 
-2.21.0
-
+Guillaume
 
 _______________________________________________
 linux-amlogic mailing list
