@@ -2,67 +2,67 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D2ED82B9DB
-	for <lists+linux-amlogic@lfdr.de>; Mon, 27 May 2019 20:08:03 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id EA7182B9E1
+	for <lists+linux-amlogic@lfdr.de>; Mon, 27 May 2019 20:08:24 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
 	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=EpCqEzmreOMnxJ9SkM+Ij9NegSYTxqBHJ7FSKOdwN60=; b=iHX52p/z2fr92h
-	FRkO1k0BDxZvBxhSJK9aN8WfrkKbWh9zKldj0I7yPa2ABGnd6+v4G8bJwl5/JePct2JUQCHRh3hpr
-	v6xVCUlDPxy1SPd0utBqQuEl5kXkOZhVkLvGaQJIGTYXA/0gOXyMrTeGHDXo6wZlcIahplFwAoYcq
-	FRVPNZ3SC8gono0rWY+zBvgMaSt1vVTdvVtxjMvwKVrMY/sQDW7QfD1EOTzDt3wb6fKaN4JRp9cCB
-	N4j3eW2glrQa/fwQk2+gJxMH6Gk375oq+ZdfS5wFYJs97HANVooLK+1nqhsQPnK0bD9yPayFrrjN5
-	Yrs22l92w7co1Db50ZQA==;
+	List-Owner; bh=C2s2qxotsymkP2ak1Ms8IBjEy7g34erN6iKwSz2yFhk=; b=qP362IyUMhFZ/t
+	MuQLEidmlod2U60BuT/9r0waLh4v8AX37i0f9HD1u7mbXEzCPyaHMlUf2iApJcQmLVVT8UaWiCsH2
+	KPbHYqhU+VuX2LbMpPt5LQe1bB62/2sUY3Ti7/uk6s+kXx+pAteHn4ZeeXaClrxFj+3H22vpLSBJM
+	EC6+zL+2ydIG5ld4026TvHBfFkE3b/bzIL3Bqt0zoGf9Zlz6z9/BtQ5dEQNf1y/mUa5QKEoo/0FMB
+	j8/jokqFFmDLIP+ZBv92qiUrxdmMdYioWDeBMYRegPQFHC9mK1hyn9I3qt2V6PnsuP52vKgG4Fh/E
+	ni7vU/E8EF2JfpJX4MLw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hVK2R-0005L7-A4; Mon, 27 May 2019 18:07:59 +0000
-Received: from mail-oi1-x242.google.com ([2607:f8b0:4864:20::242])
+	id 1hVK2m-0005ug-Fg; Mon, 27 May 2019 18:08:20 +0000
+Received: from mail-ot1-x342.google.com ([2607:f8b0:4864:20::342])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hVK2H-00055R-Bw; Mon, 27 May 2019 18:07:51 +0000
-Received: by mail-oi1-x242.google.com with SMTP id q186so12448245oia.0;
- Mon, 27 May 2019 11:07:49 -0700 (PDT)
+ id 1hVK2W-0005WA-5E; Mon, 27 May 2019 18:08:06 +0000
+Received: by mail-ot1-x342.google.com with SMTP id l25so15476114otp.8;
+ Mon, 27 May 2019 11:08:04 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=googlemail.com; s=20161025;
  h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=kcaNvQthNDxKMvADNpdrHbGy7J+JNlWa1s2SqBcaEbk=;
- b=gIoH6vOWf1CUM7ihI4sZTjpRSzfhaHBkPyAifCAnj2KxZUk0kXB8nO9b9zBjtdIt82
- FJcq+ZakIQnwNnpacSYY8Q9XZ3kACUtY36oD5HL1S3gSqZ5vbCeTUuOwZksxbVTsQSm4
- alcasRAamdvLQYfcwt0PAKg1PMsEMaFSR8c2KJJ7H9g6GRtCYe84O3SbIcFrD/IgmdV5
- 8e8aFqQ59bLfBtQ2mGJnmcoeHbKaNxkaB39HeAujNjA4qO0ZKPz32/PgFt1tq2ZGtFqD
- xkXhwYlpGhGgJa/+4y95Yt3riqa9me5+sGtg3lEwM84SJ840aVDldMz+OEol6TjSrWyy
- AuKg==
+ :cc; bh=5Z8u+Mb6Dq9130guFLmfDlxiV/OSJhxaQytulTManxM=;
+ b=Md1/iNe3wpFg7pJRiiTPYACJft0AqPYLSVHS86cINONlNtBMoS6cwZSCdTtBdoIdm3
+ 565psYs4LGlFtaqtO4X10qXVS+90VoiFiw49WiVbulPp1zyKccOaMC//TjCYszO7YshT
+ J8RmIhICklmIIASLuxIvS0m4qoT7WuLRhr7q0jKK/FIO3vRGmiMMNGz9iizEuPlmN7eg
+ LnJ7T3YvtS/R7phhUfIOWg1TgkLpecleLlJYMiPQYj63M/cdb1DX7ukZJG1PGDTaZe90
+ bXncpZ0Cq3feoQ6jOB7cghvn2/6dEhWqb8hCCMLRNm92CdyXdEew7H5rcIO9HxJBX9Vp
+ qyTQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:mime-version:references:in-reply-to:from:date
  :message-id:subject:to:cc;
- bh=kcaNvQthNDxKMvADNpdrHbGy7J+JNlWa1s2SqBcaEbk=;
- b=Zx7Hi5af0UKsEtOxOq4oXfYDguJuLyRReHahZ9nsueN3qvJRK5Knx2RNepkoT4cTGi
- siscCqabTtlLSc2TxVq611rRnbz4m5qE4rPH8TR6/kb+kXqrCzcfq6YC8nNCNM8B0V+R
- lj7ibL/dAICuSFf7wiDzR2FCHF+GR4DzUypXRDW+Op4UgBwiP0Hwr+n31W26B5itbB6l
- kv5aKbu+ALI15Aew4K3QX3ErPMBDncofbWktgeOns7Y2MUKw44r2+FVUc+6Hn3q/HDv7
- OiV2git3RTKBrlXFBcM7cbXWAxJKTt8ueY7ZGpqLmWW5l/HAMPbxro9/aCOJu+KL+1Ag
- xmCw==
-X-Gm-Message-State: APjAAAUAGn++whHGEt7OxysSLFgoJ89NQGa2JtAHyMKZzJzOw84aCm3z
- onxyapnHZrNIm4t1+kKrjCt3NevdBsst481EmCJ/G7Z8910=
-X-Google-Smtp-Source: APXvYqyKJgVpri79hGrpfwOvc1XUZLuwonSoBLbzelPi358W+vr2nCgaFj9A+/DdmdxrgBHpTBcRgN+TmPll0F1fK9s=
-X-Received: by 2002:aca:3545:: with SMTP id c66mr135571oia.129.1558980468560; 
- Mon, 27 May 2019 11:07:48 -0700 (PDT)
+ bh=5Z8u+Mb6Dq9130guFLmfDlxiV/OSJhxaQytulTManxM=;
+ b=nWXUujcE7WFUM+56BbEFy2q21a4Pj6TlmiynvK+zb3GVpR4bL6T6yLABafo3Ddb6mT
+ tJH/qDVZD6BOF/kSwyNmsns8aRf8wFUoaD6C2WjmFaSiDWOIKrhpvGWGAU72vJsYgcWo
+ AMxnqTzrOnOHDngZa4OqXGGoAQJRnYw2Y62wQLy0dntVOME/L+8x6SqoJ82OMKLUV33Z
+ SzvZu3B2rHAJobf7BRycxDR2KW6XJcOsjzzIhjnzZNKsnc/A72YIp//4FbFUqPmNpCcz
+ 5cLDHwwC92TyKmttt2yQeR55Ise/GBAEuMsu2hgeLyOdw1n1HEr5A+N8U1DKNQazdvQA
+ wgng==
+X-Gm-Message-State: APjAAAVPqddWHEkFe8IFTkyUoozymqM/HfnGf3/i2QdOlJV8Sjrpgfqk
+ 2sYt7zH5/90u0G88wkzTMDVinWNmHO9hSclutDQ=
+X-Google-Smtp-Source: APXvYqw1KCJR0ykK+JZRq5RQEXEcYYqCwA42UGA6D3HXVktBN7+YLknn2jRyumOKZM/ijc37rS9VkNSx4uS8BgfiZng=
+X-Received: by 2002:a9d:744d:: with SMTP id p13mr50955091otk.96.1558980483396; 
+ Mon, 27 May 2019 11:08:03 -0700 (PDT)
 MIME-Version: 1.0
 References: <20190527133857.30108-1-narmstrong@baylibre.com>
- <20190527133857.30108-9-narmstrong@baylibre.com>
-In-Reply-To: <20190527133857.30108-9-narmstrong@baylibre.com>
+ <20190527133857.30108-11-narmstrong@baylibre.com>
+In-Reply-To: <20190527133857.30108-11-narmstrong@baylibre.com>
 From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-Date: Mon, 27 May 2019 20:07:37 +0200
-Message-ID: <CAFBinCBPH6pwxOEVJaJxpEqnbi1775a15Ec8Ac53nVpa6+8-Dw@mail.gmail.com>
-Subject: Re: [PATCH v2 08/10] ARM: dts: meson8b: update with SPDX Licence
+Date: Mon, 27 May 2019 20:07:52 +0200
+Message-ID: <CAFBinCD-rkB9_LDHAUL3oSD2iSmKHYctUY3_ZYdFNgfh3X4_NA@mail.gmail.com>
+Subject: Re: [PATCH v2 10/10] ARM: mach-meson: update with SPDX Licence
  identifier
 To: Neil Armstrong <narmstrong@baylibre.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190527_110749_476123_69D4753C 
-X-CRM114-Status: UNSURE (   8.26  )
+X-CRM114-CacheID: sfid-20190527_110804_382885_042CDE6E 
+X-CRM114-Status: UNSURE (   6.67  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -70,7 +70,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:242 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:342 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -103,13 +103,8 @@ Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
 On Mon, May 27, 2019 at 3:41 PM Neil Armstrong <narmstrong@baylibre.com> wrote:
 >
-> While the text specifies "of the GPL or the X11 license" the actual
-> license text matches the MIT license as specified at [0]
->
-> [0] https://spdx.org/licenses/MIT.html
->
 > Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
-Reviewed-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+Acked-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
 
 _______________________________________________
 linux-amlogic mailing list
