@@ -2,72 +2,73 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0F2132B69B
-	for <lists+linux-amlogic@lfdr.de>; Mon, 27 May 2019 15:39:52 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 03FA52B695
+	for <lists+linux-amlogic@lfdr.de>; Mon, 27 May 2019 15:39:34 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Mmaetk7ivMgRz1l+OOBJhRGcbL1iQFgLPBR5GQL9iaA=; b=qHo2M/0UsICnNG
-	o8+Es9Cdm4o2prOwxK6TmHBmHP7jGBBHPgHG2qj2iAuxMWd/n6r3LLaoyMcwiY1oXqb5Shp0Y+l0L
-	yLJHi+uuKnXiTW8IO20q1ttWRKHxQ1C+NSN6+pqNPE2E9CKIu7Ga3HHWcjm/ksN04Xro5lce9H8c7
-	V/ZLSNhZhrJMPgIDDroPnzcGJKUT2HTwULIk0jlty6L3Z8IQaCZpPCu7nJvp3EZ+81nFrHWZYCAtW
-	V43FKDSx13raGdE6kYT/SWclMYJ3nIYzTO3/wSiWlAugPwxXQWyqIEbamMYUuxLXrk9+qQUGyysea
-	IvX1Nrfu3e66CI43brJQ==;
+	List-Owner; bh=TEW8iQzldp94EyBNAX/s24sO+0+XVPa3Zxin3A/1rXc=; b=ljSB0R3nCt3xDe
+	Z1PxNFi1ud7h7cbmquVwWRfTB37eP59Ci27ZC+KGTsRmo6oBedP86TML8Gv3QJkGVAcwA9I6UTAvS
+	ShSp6W+Np4InPOFdXUMcWn3E6gTc68uUxnonZyeZy/K+Pq3VeM47Gj0eS26AXxxr/ZR/w2Swh8WbA
+	EV/StLcx54C4nJE0oqvbRLaf4DkVWxmL3eRL+a7u3uxCM7S1Ram3f/rvm+FksC7oQcBW1onDIuNsW
+	3aRV3p+PlgLYe4gbvAhLoFeXMK3jizaMtOeSKnAS8sS+EI2bsen6lPo1QTEwB4S3U8gW5j2FxMaox
+	rBWxvC6pfDvD4idlQiTg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hVFqv-0003Ef-2p; Mon, 27 May 2019 13:39:49 +0000
-Received: from mail-wm1-x343.google.com ([2a00:1450:4864:20::343])
+	id 1hVFqb-0002iL-SS; Mon, 27 May 2019 13:39:29 +0000
+Received: from mail-wm1-x344.google.com ([2a00:1450:4864:20::344])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hVFqC-0002EK-EA
+ id 1hVFqC-0002FM-Pn
  for linux-amlogic@lists.infradead.org; Mon, 27 May 2019 13:39:10 +0000
-Received: by mail-wm1-x343.google.com with SMTP id 15so15870373wmg.5
- for <linux-amlogic@lists.infradead.org>; Mon, 27 May 2019 06:39:03 -0700 (PDT)
+Received: by mail-wm1-x344.google.com with SMTP id i3so16194081wml.4
+ for <linux-amlogic@lists.infradead.org>; Mon, 27 May 2019 06:39:04 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=JZ70KPzQ/anFS7YsMdVvfIAJmCYS+9JUpTW+5eTm7G8=;
- b=a4AqktkKm7/jdXHmUtVAHwL/u5HxExKzyVAqS0Sirayj/OOByPJlzMn7urM1OvAQix
- fd3AJvQ32lbX89Cy2pJPP6hYIyN5e189F+IG046cG6A3o3USxAkaXssW54PXYlBYMys+
- amRTEy7vvleKH5SP6bwFsfe4tVC+3xib4cX59ucTijotqu4h3ch/pi+/y+aTIT9N6xa9
- X1Xw6gjdh9G5lgUuASXKRwA871YHD945r3fmM/07ZUhBOJPkr+2+HqXN7y4zP5f5t/Ku
- jYLxj4ggv0YkzgOFAIRFkA/0DxJBKVRo2y7CQl2fIgyoDfF7n+dHY/J39C1hjPCFSQkT
- /D9g==
+ bh=rXvaj3vUDYa9PEjMxbjGSAemm+pe/cxaMoF6H3fQNUY=;
+ b=Q+l/PHhGVu51hTqZYdAfAdFQSOivF3m2nfu/Y1lh6dSmHYVjPpAtM9SppJmt36DwiS
+ 8e+PHIw8Hd1PNm4RtvY3Q8VQnLCVCzFu7Q7C3qaD3UCvI43VAhlw/YgOx+FyK9C8z9ZG
+ tEajQcG1cPZ3cgfc4lCGbI3SfxBm+9kOgxvWrwp4CLqMDycJ9w6hMpLF3ki9Oy6sjdFR
+ MtPRxPUafv20m4UZNN6pYh2n4jTPODTNe6PFv9kdiP2x7016xNsTa1emET1RlM7QvWFt
+ S1R1+xBQYar0c9TjabnpI/uf2N+qr7k38vBef+DFHUa7EBRqtlREf4tBuPKHZaBDJzFf
+ pfMQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=JZ70KPzQ/anFS7YsMdVvfIAJmCYS+9JUpTW+5eTm7G8=;
- b=Mh8LTt0AO5l4EPpIGFA5GdUMp9/R3zHGGK6qT0ES6SBo3sfXSmCWsdIsYpQ54m3gWo
- 1D7M1WTR8ZUst/pctTvY5TbCc3atep5ydc8vwLAYocyfWoi4LXZADqzYEldlGAXhkpzA
- 9js28lCyY5A8jXyuN7uYpp5X5NI0ZfxbQQRSc/a6Dh4q8G0nYMNYyGzUg1dg7m9RhhEj
- OUEBSbpTtrlxDhnmW8BsWmsxWUXYuyMgWoFYNJGaN1IEL9U/crJv+p29gIoMXyQmylAm
- Oe5duOo84Y/8ZMLc5awXe7ov3f3tVTTo8jb4lnBmaPPfJ9X135nVHUjpkVXCgB1CHGrR
- TBLQ==
-X-Gm-Message-State: APjAAAV9jMtTLkUqciYlHks7XP8o7dEW/d1gyH1tOd0vllvx0KagdITS
- RZmi9/S8t4t4kRd9u9R67fPJ5ejVIPO6Lg==
-X-Google-Smtp-Source: APXvYqzABE6JC+x+21CVBHgoo+uK5hjDZBQWB3rj7Vjtipb8edgp1rrGncDmC0i4aRnQNgyZwGEQxQ==
-X-Received: by 2002:a1c:a815:: with SMTP id r21mr25706734wme.66.1558964342139; 
+ bh=rXvaj3vUDYa9PEjMxbjGSAemm+pe/cxaMoF6H3fQNUY=;
+ b=k7kTln3f51svX8+tLNsdPOrFXLi1rhhyAeoggjIx35M1Whua+gzQf4bEeqedCfrfHF
+ fgKsOkUWDvTXJs23bieW/dehFnNjXmGcFdH8vdBErINXk9zJa/AwQqh0tCq7X0oLmevv
+ xE/D7HYeAw5sPEJp4E7Eocz1M4q91DRmaCd6X7vH5MzAW/Wmfi4numoIMRU1Y6CxKsyx
+ +AMspi6uptQj5aYWFKry51O906k3TzbaFPcpWqAwWB5NIDb4ga61ntq/+3KV6XC5wrX3
+ RUjujXgOi8ndoq02eflxP0HqfeqxAlDxcGGeAsuFQn4y/TkhlrxbxOVntO20NzaUGToP
+ LYbA==
+X-Gm-Message-State: APjAAAWz90UMtAZvZA/SYkWnhEP2Wgh7A7Cp0KxUEBMS8c8ltYYEThim
+ X+qmIpQ+KNDzrmq1qVXjapnOug==
+X-Google-Smtp-Source: APXvYqxE4aKHzOrcgMiwac+ZfptW5NzdYTrUzpPpU/O+y1MWCV9kobFuWkgBeYF0aTGmeExPm8e1Vw==
+X-Received: by 2002:a7b:c442:: with SMTP id l2mr10420507wmi.50.1558964342824; 
  Mon, 27 May 2019 06:39:02 -0700 (PDT)
 Received: from bender.baylibre.local
  (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
- by smtp.gmail.com with ESMTPSA id a124sm7838335wmh.3.2019.05.27.06.39.01
+ by smtp.gmail.com with ESMTPSA id a124sm7838335wmh.3.2019.05.27.06.39.02
  (version=TLS1_2 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
- Mon, 27 May 2019 06:39:01 -0700 (PDT)
+ Mon, 27 May 2019 06:39:02 -0700 (PDT)
 From: Neil Armstrong <narmstrong@baylibre.com>
 To: khilman@baylibre.com
-Subject: [PATCH v2 01/10] ARM: dts: meson: update with SPDX Licence identifier
-Date: Mon, 27 May 2019 15:38:48 +0200
-Message-Id: <20190527133857.30108-2-narmstrong@baylibre.com>
+Subject: [PATCH v2 02/10] ARM: dts: meson6-atv1200: update with SPDX Licence
+ identifier
+Date: Mon, 27 May 2019 15:38:49 +0200
+Message-Id: <20190527133857.30108-3-narmstrong@baylibre.com>
 X-Mailer: git-send-email 2.21.0
 In-Reply-To: <20190527133857.30108-1-narmstrong@baylibre.com>
 References: <20190527133857.30108-1-narmstrong@baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190527_063904_738173_1734EDE3 
+X-CRM114-CacheID: sfid-20190527_063905_125968_DD16FC17 
 X-CRM114-Status: GOOD (  17.34  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -75,7 +76,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:343 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:344 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -107,13 +108,13 @@ license text matches the MIT license as specified at [0]
 
 Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
 ---
- arch/arm/boot/dts/meson.dtsi | 44 +-----------------------------------
+ arch/arm/boot/dts/meson6-atv1200.dts | 44 +---------------------------
  1 file changed, 1 insertion(+), 43 deletions(-)
 
-diff --git a/arch/arm/boot/dts/meson.dtsi b/arch/arm/boot/dts/meson.dtsi
-index 8841783aceec..c4447f6c8b2c 100644
---- a/arch/arm/boot/dts/meson.dtsi
-+++ b/arch/arm/boot/dts/meson.dtsi
+diff --git a/arch/arm/boot/dts/meson6-atv1200.dts b/arch/arm/boot/dts/meson6-atv1200.dts
+index 997e69c5963e..98e1c94c0261 100644
+--- a/arch/arm/boot/dts/meson6-atv1200.dts
++++ b/arch/arm/boot/dts/meson6-atv1200.dts
 @@ -1,48 +1,6 @@
 +// SPDX-License-Identifier: GPL-2.0 OR MIT
  /*
@@ -163,7 +164,7 @@ index 8841783aceec..c4447f6c8b2c 100644
 - *     OTHER DEALINGS IN THE SOFTWARE.
   */
  
- #include <dt-bindings/interrupt-controller/irq.h>
+ /dts-v1/;
 -- 
 2.21.0
 
