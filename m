@@ -2,79 +2,82 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 177082B59E
-	for <lists+linux-amlogic@lfdr.de>; Mon, 27 May 2019 14:43:30 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id AE0192B5A4
+	for <lists+linux-amlogic@lfdr.de>; Mon, 27 May 2019 14:43:47 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=k/EwjJxi+gb6WDWGdjCbvdkpjXdfmAe9Wt48Y7nhs94=; b=iATwJMhVTuJoWx
-	J2GgdhAx4y7jxwFwMXK3R0h5RTnyfhYR7zIu8xaBIpGe+t6aUAAlF75usAzOOaQbiDSdtoWCk1ljl
-	x17N1DuYUDaOJl3+DFSQ0S0PoatMoU4/jhGUoFM4egU5FvOvqWldNiZef6mVILO0VdQrTUTrCxGAT
-	CLtpHI8gvW+xxWqKwFqUw9GZBZAeYafJMnYJ1RPsr6oqmVuT9zilm9MAu9bOXSLCRYLzNxh9NjMeP
-	e2MJflLpdwDlE1DKi4XQ4pE2GdNijYHOl9AgW0zzD8EKYtfdtMFx2U5ZOfPGokztFWUUilDXKh5Dd
-	jS5H4k62PN+nopNDkyaQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=6mikJ6b/4efjn2jz8cuE6rxZQRtiHAyviJWZaqzpzt8=; b=dlqkKf1vGcy54g
+	LAQmtoQNA/FQisVOnz0U/KoN+ioFOZr4jDo4F0fI+w0pYiryCZwDPNaIh5ghtNn80bDVCNz0f/CKP
+	TotOHrE3E0TVcShEn+hiLfcJIxg1sI2mIE7ODcvo5FLc2kV3hXJxW/1f/Rt7Gp0n5GBp2W6MG6A5V
+	OecKh3Poo9pNsXVKiY4WWOgvWQ1Ijtlu/75gxRhC6zmkX+Yg/JANVXqjf1UenThnLOOhPdhyZVW2h
+	EXgsi5q+n2lsRlEPCp4Qo7vRTKg2BvuBMSlosYW8gOmoyNQXCAArUFaKRXsD6ZJBBRrlcSRkb4W2/
+	D8mjX4mjdnnfAYgrq4eA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hVEyN-00017o-7i; Mon, 27 May 2019 12:43:27 +0000
-Received: from mail-wm1-x341.google.com ([2a00:1450:4864:20::341])
+	id 1hVEyf-0001Qv-2k; Mon, 27 May 2019 12:43:45 +0000
+Received: from mail-wr1-x441.google.com ([2a00:1450:4864:20::441])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hVEy8-0000ne-8W
+ id 1hVEy9-0000p5-GP
  for linux-amlogic@lists.infradead.org; Mon, 27 May 2019 12:43:17 +0000
-Received: by mail-wm1-x341.google.com with SMTP id y3so16052533wmm.2
- for <linux-amlogic@lists.infradead.org>; Mon, 27 May 2019 05:43:12 -0700 (PDT)
+Received: by mail-wr1-x441.google.com with SMTP id f8so16826269wrt.1
+ for <linux-amlogic@lists.infradead.org>; Mon, 27 May 2019 05:43:13 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=NKi6i530JJNrkfWp8zdTE/DlNf+AJ6vpEuNiHI586GM=;
- b=F0OuPbcaU47Vw5cIofDI7N8sCg5q5HjGbe75cSt5fxbmgeL/gwFfe0z2Wex7Xk06+v
- KyG3eIWcX65wfRkP5yFfwX2MTmFf4YvIPSZ1sfR1vF1vL5KWjLpfqFxNLMzGW92WyTZ0
- xQHBioJ2CSnMfPDUutyRdQFF8edHOg7JnkFzKVpAXmvHIL4ES9prSLURjwD+JEwbDGxK
- ixEefmZ8lZXsS+0UWbqOEroGQcLF9GJipI2ge/K4pAZ7ZxZs8O4K2GqhChbwBA2HoQIf
- KPQrFoIVhCSob5K6Aky/XPD+3Qw/jM0QmRhk1va3R4IzLIYlAEQiAuh2kDeG0+YVUM8H
- IzPA==
+ h=from:to:cc:subject:date:message-id:in-reply-to:references
+ :mime-version:content-transfer-encoding;
+ bh=wfKAsx1k3aZxm1g3WHRqV/EWJCTGjV5kvipkF29KWgY=;
+ b=RbixjwZfkqTf7IjnopTanq0l4LQmRfQrKZvuDGX7vGcEw57/aoOmAB7MvWEgbsFEEQ
+ FnNubmDp9BOqpEMqt7ceQvKzMftLMFAlYy8DH6ClC2u3tTNNQyTt4j07CKKUSop2lyKK
+ O6BY8X+QzDpCyZneUK62VsxMklgpvmSbEBloeNMS8blv125hNBND2y7hPxGdRXhUasVA
+ 2BKmUMDZse3jc8EwYgQfNqwVUguTsaERfTcXWFAeT/UUpTVqivGAIncepVhKdgPlYTfK
+ WttPp0FRlWnvcMT8iOT+SL2Yyn1PINPI2xPOErptKrxeTxaG1FcfI2gSKDI+Gzarc7QB
+ N8LA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=NKi6i530JJNrkfWp8zdTE/DlNf+AJ6vpEuNiHI586GM=;
- b=JYJjInnBZ+bWODealknZ9aV4nu1tQYSWs//mgRr+kUD0CDgPfgKUoj8OgdWPTobNrr
- t1hvUNHsaum9fQqW7P0rWo0xK+bimibNRHmGpdFCGo9riuznE44vKkZ3zlTr1w8myAtg
- 3E6S/Ba8tfCmX5Ple9gKFYLavu/+W3u19VN2xs5Os+crtJkGzFGazLQpNyCfX2HzMcuV
- RyQq2Z8PBueEGB7Fp9dh5ulfWsSZYxf1gvnFHymjjKqnKHYX76x4N/YSRShZvkhKMLlQ
- er8PNxTnI6rhLjihD9iSOBB22fgHkIKnDV3A8MnWtKw6W3N6koOUhH9lPZwVY6g6ypqB
- 5QZQ==
-X-Gm-Message-State: APjAAAUzKZV+b/hAKRTsZ1F73V3nuaNDgLBrnfKeKoY/BBNq1TuB9YSC
- RZc8TyG6aYcCjDZBBGgtHeQA+g==
-X-Google-Smtp-Source: APXvYqwLlj5CMrnZHpa7NOKgj27nP4BBbZEUNpyia+Gjsf8jHnw5YAJDwN7ERYC5zPTVIVnhO1qS3g==
-X-Received: by 2002:a1c:c706:: with SMTP id x6mr9242682wmf.35.1558960990603;
- Mon, 27 May 2019 05:43:10 -0700 (PDT)
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
+ :references:mime-version:content-transfer-encoding;
+ bh=wfKAsx1k3aZxm1g3WHRqV/EWJCTGjV5kvipkF29KWgY=;
+ b=Al9x7gaT7zTJCYLeondE5Vb+D3gI7N04il32iYfJYvZNhqIdBDoZ3At+71IDqJD4Jf
+ pxZkrCAmWoXI55ygSxoIbqlAUf2cEnhZuRoU5/IgTNTqjXCkXsOxEZagTgEFw+QnHTr8
+ QpT0ZabWUMPlcUpYt376/5AqTK+mc6d/DpvmalI435l6J+VrFFvVdXvLhSAJJbYTsRxD
+ DmAZmiXHC5zuky0V11P/eSsTL2aE4sertsfyY36ayEA4FIzN2QWp/sTH11ZqH9KgXdEd
+ RqOHqSU12nhCxk42FIVZ9oExizZKqL26OzGaZeTaf0Zp3hUapaj/QiKNCU53CdeRnhd6
+ nI2A==
+X-Gm-Message-State: APjAAAX4I6xL7pZy2ND1tQborYe9HMITNGGW9pvUBfbnCglUh+hr4rhS
+ bQMxr/vTPfCuUWO9RXhiiseR+A==
+X-Google-Smtp-Source: APXvYqxnfjIHIRa4qi07Fsf6jQxGYjFAlyaqW/pJH4kjCXSboDIWvjhSeowBftxypf9mHpHl5S6bwQ==
+X-Received: by 2002:adf:db89:: with SMTP id u9mr36557444wri.294.1558960991581; 
+ Mon, 27 May 2019 05:43:11 -0700 (PDT)
 Received: from bender.baylibre.local
  (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
- by smtp.gmail.com with ESMTPSA id c14sm11494930wrt.45.2019.05.27.05.43.09
+ by smtp.gmail.com with ESMTPSA id c14sm11494930wrt.45.2019.05.27.05.43.10
  (version=TLS1_2 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
  Mon, 27 May 2019 05:43:10 -0700 (PDT)
 From: Neil Armstrong <narmstrong@baylibre.com>
-To: ulf.hansson@linaro.org,
-	khilman@baylibre.com
-Subject: [PATCH v2 0/3] mmc: meson-gx: add dram-access-quirk support
-Date: Mon, 27 May 2019 14:43:04 +0200
-Message-Id: <20190527124307.32075-1-narmstrong@baylibre.com>
+To: ulf.hansson@linaro.org, khilman@baylibre.com, devicetree@vger.kernel.org
+Subject: [PATCH v2 1/3] dt-bindings: mmc: meson-gx: add dram-access-quirk
+ property
+Date: Mon, 27 May 2019 14:43:05 +0200
+Message-Id: <20190527124307.32075-2-narmstrong@baylibre.com>
 X-Mailer: git-send-email 2.21.0
+In-Reply-To: <20190527124307.32075-1-narmstrong@baylibre.com>
+References: <20190527124307.32075-1-narmstrong@baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190527_054312_917866_41A8236E 
-X-CRM114-Status: GOOD (  11.55  )
+X-CRM114-CacheID: sfid-20190527_054314_045063_D6054A4F 
+X-CRM114-Status: UNSURE (   9.58  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:341 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:441 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -92,49 +95,42 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: linux-amlogic@lists.infradead.org, linux-mmc@vger.kernel.org,
- linux-kernel@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
- Neil Armstrong <narmstrong@baylibre.com>
+Cc: Neil Armstrong <narmstrong@baylibre.com>,
+ Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
+ linux-mmc@vger.kernel.org, linux-kernel@vger.kernel.org,
+ linux-amlogic@lists.infradead.org, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On the Amlogic G12A SoC family, (only) the SDIO controller fails to access
-the data from DRAM, leading to a broken controller.
+On the Amlogic G12A SoC family, (only) the SDIO controller has a bug which
+makes any DRAM access from the MMC controller fail.
 
-Add the amlogic,ddr-access-quirk property so signal this particular
+Add the amlogic,dram-access-quirk property so signal this particular
 controller has this bug and needs a quirk to work properly.
 
-But each MMC controller has 1,5KiB of SRAM after the registers, that can
-be used as bounce buffer to avoid direct DDR access from the integrated
-DMAs (this SRAM may be used by the boot ROM when DRAM is not yet initialized).
+Reviewed-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
+---
+ Documentation/devicetree/bindings/mmc/amlogic,meson-gx.txt | 4 ++++
+ 1 file changed, 4 insertions(+)
 
-The quirk is to disable the chained descriptor for this controller, and
-use this SRAM memory zone as buffer for the bounce buffer fallback mode.
-
-The performance hit hasn't been evaluated, but the fix has been tested
-using a WiFi AP6398S SDIO module, and the iperf3 Bandwidth measurement gave
-55.2 Mbits/sec over a 63 Hours long test, with the SDIO ios set as High-Speed
-at 50MHz clock. It gave around 170 Mbits/sec as SDR104 and 200MHz clock.
-
-Changes since v1:
-* use DRAM instead of DDR, added details in bindings on internal DMA controller
-* fix probe() to not try to unallocate bounce buffer on error
-* replace DT patch adding SDIO property to patch adding SDIO controller
-
-Jerome Brunet (1):
-  arm64: dts: meson: g12a: add SDIO controller
-
-Neil Armstrong (2):
-  dt-bindings: mmc: meson-gx: add dram-access-quirk property
-  mmc: meson-gx: add dram-access-quirk
-
- .../bindings/mmc/amlogic,meson-gx.txt         |  4 ++
- arch/arm64/boot/dts/amlogic/meson-g12a.dtsi   | 37 ++++++++++
- drivers/mmc/host/meson-gx-mmc.c               | 70 +++++++++++++++----
- 3 files changed, 96 insertions(+), 15 deletions(-)
-
+diff --git a/Documentation/devicetree/bindings/mmc/amlogic,meson-gx.txt b/Documentation/devicetree/bindings/mmc/amlogic,meson-gx.txt
+index 13e70409e8ac..ccc5358db131 100644
+--- a/Documentation/devicetree/bindings/mmc/amlogic,meson-gx.txt
++++ b/Documentation/devicetree/bindings/mmc/amlogic,meson-gx.txt
+@@ -22,6 +22,10 @@ Required properties:
+   clock rate requested by the MMC core.
+ - resets     : phandle of the internal reset line
+ 
++Optional properties:
++- amlogic,dram-access-quirk: set when controller's internal DMA engine cannot access the
++  DRAM memory, like on the G12A dedicated SDIO controller.
++
+ Example:
+ 
+ 	sd_emmc_a: mmc@70000 {
 -- 
 2.21.0
 
