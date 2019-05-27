@@ -2,103 +2,87 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B34702B6AA
-	for <lists+linux-amlogic@lfdr.de>; Mon, 27 May 2019 15:41:12 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E8BA42B6B3
+	for <lists+linux-amlogic@lfdr.de>; Mon, 27 May 2019 15:42:16 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=/yogUSIuqMKPkV6KwTQ6D0HZ+4AQSpIM/YZ6bMQgpHI=; b=uFicL7SWBoANAb
-	7SEWRZ3rZy6xL8EQ8KWABviqPsLHExcCkwToV/jBT6U+aZbre0kdQuiKpuSUEwlsGfR5ADS2qWpWI
-	xIAjxp0S1zaeDBAba0U+Ft6THDZplD/8/JWjvQXFZ8ywgkGeJ50IQsvb4Em9zQl4Qxo/NgE9dG2Qj
-	h6U4GpS3A/3pSV9x5GK0Y+zVwNMPevFCvucvzFt83Zr4rQYQUdJgcNMBGPuC0xi82P37NWFem6MXy
-	nqHNr0Wy5d1IlnEMhvhizEOrrdDjyQY9kd41JQg84yheI+hQOhzzUYyzh8NO8wttlb/CG8gzB9nQG
-	qX9IGzpN6hMOkk3s1MvA==;
+	List-Owner; bh=9SVwVSFeeJ4O6kNH5n2RAboavmI2i9TelQup5iXe88w=; b=Wyu7067hZze016
+	fQvG/1gBZRN61BxAyIFZzB7qXIVP6HzcmmRbsy+fUfv1bnab7iu/BbxoncP+8s660+kRSfdUDRbey
+	y/3LKA6ah0ldXrMG9XudRrXwIGGvtLEu4HmLKrCcJB3GnE76BM/xNgoAzRwzx+f00kYqbsfhQP2M6
+	Alf7U/lBdA/Q4hSy83isaKhYx2KIGNwa66pQW2pXUp3S2FUjhKTX65DRUCyYNGsp2AuBacG8mqdYc
+	VXEutYp8/NkQwxJm6qez3Ei9e3B0GCXAjSAFNt1l0arjS2g2Pr0nSdSU9VY6tQ5bMUkOYBmUfNdfa
+	tuG/sum+kXma1YRrx9+g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hVFsD-0005rG-Rt; Mon, 27 May 2019 13:41:09 +0000
-Received: from merlin.infradead.org ([2001:8b0:10b:1231::1])
+	id 1hVFtE-0006wI-Ds; Mon, 27 May 2019 13:42:12 +0000
+Received: from mail-wr1-x443.google.com ([2a00:1450:4864:20::443])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hVFqT-0002Z6-13
- for linux-amlogic@bombadil.infradead.org; Mon, 27 May 2019 13:39:21 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=infradead.org; s=merlin.20170209; h=Content-Transfer-Encoding:MIME-Version:
- References:In-Reply-To:Message-Id:Date:Subject:Cc:To:From:Sender:Reply-To:
- Content-Type:Content-ID:Content-Description:Resent-Date:Resent-From:
- Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:
- List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=verJ2TtoOCB8JmW8F70UDjfoCp/cGBMV0EuzVh2W1as=; b=VLPx/fvsT7xxdNEbfwzPiMuT2S
- obnfbq9fmUYQTuFGWXFIMZnVkaaChsbHxYT7zW1JHoFaRrD+Pon29b+p/n0mpVpceY0ZLMNN2a44P
- c3fDSO8kVSF16Nr4bOIaTkH4jbDoIuDij6dxL5iQTTTMast16E5ub4cowocYbidzYqs0/Ds12zjIM
- 0Dk0cPuciMYMBLAIoqCjRv6rjZzq4gMq/JeW4FBitccCWPEo9B4CEE1IfN+EMlarjoGXD42T9Ukl8
- 8uDFJ7p68DHHgYGWb9CvDEr+Jr/mRlnJiA+oJa2raLlFBuKUZIIO/18fTyVY9zcKZ3yzftoas/LSt
- GLaUPQeg==;
-Received: from mail-wm1-x343.google.com ([2a00:1450:4864:20::343])
- by merlin.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hVFqM-0003Yz-Ds
- for linux-amlogic@lists.infradead.org; Mon, 27 May 2019 13:39:19 +0000
-Received: by mail-wm1-x343.google.com with SMTP id w9so9778730wmi.0
+ id 1hVFqJ-0002S0-VH
+ for linux-amlogic@lists.infradead.org; Mon, 27 May 2019 13:39:17 +0000
+Received: by mail-wr1-x443.google.com with SMTP id l17so8582373wrm.10
  for <linux-amlogic@lists.infradead.org>; Mon, 27 May 2019 06:39:11 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=verJ2TtoOCB8JmW8F70UDjfoCp/cGBMV0EuzVh2W1as=;
- b=di7iNvnui7FhLrNe5R7wm7HudrjyzbQi94oSfDaZu4LWq8akC9LiUFa+RHumrQcLEA
- aOhH7queUJ9e0VbTh3LORPtzI+VWRq31fSwU0hCvOI554q1EXtLsxaWBRmo1x4ppmDDJ
- +EIncHx/MDk0NuxHkyPuaStxM7Xfps2rGWP2k1fzRoWucdDtkJkpH6l9GfqtHIL5DdLq
- XcImVYBi13I+SG39PDvZ8rfaxadr03MA/ZfHVK6LHCCmX2mpqy1TJZrchrtOCMx6K6JZ
- DoFLVeVGp8SpmASbDcXGj9Xba7xZIn76sb2s9BKmDFbxnIaVlbLABt57dYK7QzKaF4tV
- YCfQ==
+ bh=6ultmkYjgWhJ/xZHGxkX6N7CA7j/pBGMWJYUycDlyOs=;
+ b=ZWCIeJeJ5bbe3QYU5MHYCmvgdOx1CvzmjJ1SIJ+/EfRaQthknG2V3UFeEgwDV42KiD
+ ff4floiGIvqL50CVQGqrsv3olYmlrE9/51PBX7UYPNLMjIM3NJ+qWUXUi5LsohTIg6Z+
+ yGUKXHKhJw9prtsh8Ke1/bKpxWKdakHKTN+iwno6zEjcmCk/Lrd+Xvme8n/xqqlfNxfp
+ ISAAWiimOCHcv1UCmcsfiLCfUMQUZu/vGC14lsyF6Jpgy72LnNb3XrNDIdUbXvkv89S8
+ 9YbS2dWln5pw869bY5Jeb0YsttYTTBw9ejIyQDiajuEiwQP4lj4nSXvXndViRYBY6PYx
+ bXRw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=verJ2TtoOCB8JmW8F70UDjfoCp/cGBMV0EuzVh2W1as=;
- b=ht1IqZm/sirCO+QOW5FDaaZfJqJApfXbnsWRuVq1OTRKOxVoQmMQUKpataVf+/9s79
- cep2+B45INcqtptz6z9b9BSDQr4L0fctLFJ2B6jbYG+l0fzctQYzRySeKpiwqSfvRftR
- v00rQj1N4QzyRpadGKk1+xZeLQfEM2qNteuo89w+HJPEmwWi1lRzJ8I2BBnal9Vzle4i
- PypvrrrZPbX883PwZwtnIzvPADJL5mPqCDhcU/SzCBHLLyeTSeGFbBzvZVyzWeIuP1iU
- 5zi7osEq4GxO986Wtt5rtB2MIS74qufUi8+Ue6Z2Pcv5WY2E7jsF2eSIAeFpelzsoRx1
- XcvA==
-X-Gm-Message-State: APjAAAUgzhlRTdnxxKdAqh5xmk8HEU8rBCst7cvmZ6yTqq8ghONbFb2q
- kEY5gCMU0M6gSRJPE8NL/5WMgQ==
-X-Google-Smtp-Source: APXvYqyd/kK2slKqdVMOm7do4U1lyX83rjJItaXdUFe1Fo2m7B4apmdNOOZfK2IQ34qBHCqw24Uajg==
-X-Received: by 2002:a7b:c3c3:: with SMTP id t3mr27136443wmj.88.1558964349041; 
- Mon, 27 May 2019 06:39:09 -0700 (PDT)
+ bh=6ultmkYjgWhJ/xZHGxkX6N7CA7j/pBGMWJYUycDlyOs=;
+ b=plCifgm86cdJvZgbmzYR38XTM8KnQ0i6T7JZ9qt4lLvAhXz3HQcqsU0diuDUnRdXgp
+ lkLBAVMa5yZN7JTRF1/AjH62xJ5lcwREOBC9xPGEg9EowfyK3Y01LeIsqAEuqr64wNTP
+ WzBQrpFq5tjPdZ7RNPusQ0pKoC3+B0FwCc1cluIZrUg6P47z10V5O//cKUWvUWVSGnhL
+ Uf7x0OLUhoJuLr6CIgUDl9GxFIYdkH68qaCGTTzreEZSNgI7gPdX/9JUNiOJYefyqtIM
+ HWSyhKQIxLUrART4Vi///91yuhwAAfLKQr5u4zkxyA8M5Fq2196WX/dV3CBzvv0aVUun
+ 5a7w==
+X-Gm-Message-State: APjAAAV/idYslOS2YFx0Squ4R+pgrQopKBIeRPOA0pOlLdxuzeUunMOw
+ egC0LnyMBBDEyiAjeHJ/3sW+ag==
+X-Google-Smtp-Source: APXvYqx24uqW1qXuZFPiiToIbx1locFeLMf7EvNsEfe3TjVzFZkOove/54wDfLTO4gRyDSMZlztdgA==
+X-Received: by 2002:adf:e301:: with SMTP id b1mr10932162wrj.304.1558964350293; 
+ Mon, 27 May 2019 06:39:10 -0700 (PDT)
 Received: from bender.baylibre.local
  (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
- by smtp.gmail.com with ESMTPSA id a124sm7838335wmh.3.2019.05.27.06.39.08
+ by smtp.gmail.com with ESMTPSA id a124sm7838335wmh.3.2019.05.27.06.39.09
  (version=TLS1_2 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
- Mon, 27 May 2019 06:39:08 -0700 (PDT)
+ Mon, 27 May 2019 06:39:09 -0700 (PDT)
 From: Neil Armstrong <narmstrong@baylibre.com>
 To: khilman@baylibre.com
-Subject: [PATCH v2 08/10] ARM: dts: meson8b: update with SPDX Licence
+Subject: [PATCH v2 09/10] ARM: debug: meson.S: update with SPDX Licence
  identifier
-Date: Mon, 27 May 2019 15:38:55 +0200
-Message-Id: <20190527133857.30108-9-narmstrong@baylibre.com>
+Date: Mon, 27 May 2019 15:38:56 +0200
+Message-Id: <20190527133857.30108-10-narmstrong@baylibre.com>
 X-Mailer: git-send-email 2.21.0
 In-Reply-To: <20190527133857.30108-1-narmstrong@baylibre.com>
 References: <20190527133857.30108-1-narmstrong@baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190527_093914_483256_A65FF5E9 
-X-CRM114-Status: GOOD (  18.36  )
+X-CRM114-CacheID: sfid-20190527_063912_184264_6426E031 
+X-CRM114-Status: GOOD (  10.66  )
 X-Spam-Score: 0.0 (/)
-X-Spam-Report: SpamAssassin version 3.4.2 on merlin.infradead.org summary:
+X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:343 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:443 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -117,69 +101,27 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-While the text specifies "of the GPL or the X11 license" the actual
-license text matches the MIT license as specified at [0]
-
-[0] https://spdx.org/licenses/MIT.html
-
 Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
 ---
- arch/arm/boot/dts/meson8b.dtsi | 42 +---------------------------------
- 1 file changed, 1 insertion(+), 41 deletions(-)
+ arch/arm/include/debug/meson.S | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
 
-diff --git a/arch/arm/boot/dts/meson8b.dtsi b/arch/arm/boot/dts/meson8b.dtsi
-index 800cd65fc50a..6e48182962de 100644
---- a/arch/arm/boot/dts/meson8b.dtsi
-+++ b/arch/arm/boot/dts/meson8b.dtsi
-@@ -1,47 +1,7 @@
-+// SPDX-License-Identifier: GPL-2.0 OR MIT
+diff --git a/arch/arm/include/debug/meson.S b/arch/arm/include/debug/meson.S
+index 1bae99bf6f11..df158693a327 100644
+--- a/arch/arm/include/debug/meson.S
++++ b/arch/arm/include/debug/meson.S
+@@ -1,10 +1,7 @@
++/* SPDX-License-Identifier: GPL-2.0 */
  /*
-  * Copyright 2015 Endless Mobile, Inc.
-  * Author: Carlo Caione <carlo@endlessm.com>
+  * Copyright (C) 2014 Carlo Caione
+  * Carlo Caione <carlo@caione.org>
 - *
-- * This file is dual-licensed: you can use it either under the terms
-- * of the GPL or the X11 license, at your option. Note that this dual
-- * licensing only applies to this file, and not this project as a
-- * whole.
-- *
-- *  a) This library is free software; you can redistribute it and/or
-- *     modify it under the terms of the GNU General Public License as
-- *     published by the Free Software Foundation; either version 2 of the
-- *     License, or (at your option) any later version.
-- *
-- *     This library is distributed in the hope that it will be useful,
-- *     but WITHOUT ANY WARRANTY; without even the implied warranty of
-- *     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-- *     GNU General Public License for more details.
-- *
-- *     You should have received a copy of the GNU General Public License
-- *     along with this program. If not, see <http://www.gnu.org/licenses/>.
-- *
-- * Or, alternatively,
-- *
-- *  b) Permission is hereby granted, free of charge, to any person
-- *     obtaining a copy of this software and associated documentation
-- *     files (the "Software"), to deal in the Software without
-- *     restriction, including without limitation the rights to use,
-- *     copy, modify, merge, publish, distribute, sublicense, and/or
-- *     sell copies of the Software, and to permit persons to whom the
-- *     Software is furnished to do so, subject to the following
-- *     conditions:
-- *
-- *     The above copyright notice and this permission notice shall be
-- *     included in all copies or substantial portions of the Software.
-- *
-- *     THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-- *     EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
-- *     OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-- *     NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
-- *     HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-- *     WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-- *     FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-- *     OTHER DEALINGS IN THE SOFTWARE.
+- * This program is free software; you can redistribute it and/or modify
+- * it under the terms of the GNU General Public License version 2 as
+- * published by the Free Software Foundation.
   */
  
- #include <dt-bindings/clock/meson8b-clkc.h>
+ #define MESON_AO_UART_WFIFO		0x0
 -- 
 2.21.0
 
