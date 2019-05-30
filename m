@@ -2,52 +2,54 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B5D7B33A73
-	for <lists+linux-amlogic@lfdr.de>; Mon,  3 Jun 2019 23:58:06 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B28B62FC7F
+	for <lists+linux-amlogic@lfdr.de>; Thu, 30 May 2019 15:41:07 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:Cc:
-	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
-	In-Reply-To:MIME-Version:References:Message-ID:Subject:To:From:Date:Reply-To:
-	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=jcYv4nuJrx5MVf+ptFEnqfUigPDpEZz6KZ7BWwmJuR4=; b=W99Gi1wXTZPndGsRaerVNsY58
-	v11DWK8zXe0BRbShYcuUz29KXSip5bQwUAK3yDrBttRdXBEhBMS6w05utczZMZnCgD3QFT6ABpmqM
-	cRAYasUs1Dcp7NM9LvGEew76aWI/HfLgHhxRhIYpKvNoMd4BerREye7vp+1NJ9KFV1okolcyhE/LD
-	xeBUBr+nBcKyuVBJ3880lbd5MMEC4vFVvBatmiGownHAusZpGynGuysnIkcxXJFHpLxib+bAzGDjD
-	bCw2MO7TwJ3g0YnioTXfsEYOA6Peo4PB0WirPAhsv1Z9dL/8s9Vy2qlHEVSuLmU0gRfiWag3Wh0xY
-	ogKsEc/sw==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=+23WONjSLCIeaT2vVqVHvKi7hda5ZZ3n23KVpo/yCYs=; b=jVwQt05X/ps3w0
+	ggMStkVACCdb4n1wgwoWhb4GVc/ahVGlomkC0jYhbKSisCY3IMz5LiQDd6O1t2qfITB6tNdKdyoKI
+	cV/1tNjg0eqHZF9kKbCgUu8uHvuTciYheX2ux62UJmb9OF+9uEGOA+DV7UJ4IWrwzgJBe91FUhglC
+	WLGqNaABdBfHKLh/PiDGJcnxt0u2lJUQkLXvy/dKGUrWRtk3pq37Mavv52FW53thrqhPDPjMY1F2Q
+	eHAIGy0Zs7phWx0zYq1J4UbrTtanm0pt+HSq7zYnh+rYsqbtsyuKmPDrWX3ifHL/Wm0Rd5Y1NE5us
+	2B6QSTzX9eBgfviZMfTw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hXuxv-0000Y6-Nm; Mon, 03 Jun 2019 21:58:03 +0000
-Received: from sauhun.de ([88.99.104.3] helo=pokefinder.org)
- by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hWFNI-00051z-E0; Thu, 30 May 2019 07:21:22 +0000
-Received: from localhost (unknown [91.64.182.124])
- by pokefinder.org (Postfix) with ESMTPSA id 2A8B82C360B;
- Thu, 30 May 2019 09:21:16 +0200 (CEST)
-Date: Thu, 30 May 2019 09:21:14 +0200
-From: Wolfram Sang <wsa@the-dreams.de>
-To: Mauro Carvalho Chehab <mchehab+samsung@kernel.org>
-Subject: Re: [PATCH 22/22] docs: fix broken documentation links
-Message-ID: <20190530072110.GA1776@kunai>
-References: <cover.1559171394.git.mchehab+samsung@kernel.org>
- <f9fecacbe4ce0b2b3aed38d71ae3753f2daf3ce3.1559171394.git.mchehab+samsung@kernel.org>
+	id 1hWLIh-0003V0-Fl; Thu, 30 May 2019 13:40:59 +0000
+Received: from helcar.hmeau.com ([216.24.177.18] helo=deadmen.hmeau.com)
+ by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
+ id 1hWLIU-0003Ny-Mf; Thu, 30 May 2019 13:40:52 +0000
+Received: from gondobar.mordor.me.apana.org.au ([192.168.128.4] helo=gondobar)
+ by deadmen.hmeau.com with esmtps (Exim 4.89 #2 (Debian))
+ id 1hWLIQ-0005Un-Qz; Thu, 30 May 2019 21:40:42 +0800
+Received: from herbert by gondobar with local (Exim 4.89)
+ (envelope-from <herbert@gondor.apana.org.au>)
+ id 1hWLIL-0003cM-6P; Thu, 30 May 2019 21:40:37 +0800
+Date: Thu, 30 May 2019 21:40:37 +0800
+From: Herbert Xu <herbert@gondor.apana.org.au>
+To: Neil Armstrong <narmstrong@baylibre.com>
+Subject: Re: [PATCH] char: hw_random: meson-rng: update with SPDX Licence
+ identifier
+Message-ID: <20190530134037.joqdncbvbz5b2v3h@gondor.apana.org.au>
+References: <20190520135919.28946-1-narmstrong@baylibre.com>
 MIME-Version: 1.0
-In-Reply-To: <f9fecacbe4ce0b2b3aed38d71ae3753f2daf3ce3.1559171394.git.mchehab+samsung@kernel.org>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+Content-Disposition: inline
+In-Reply-To: <20190520135919.28946-1-narmstrong@baylibre.com>
+User-Agent: NeoMutt/20170113 (1.7.2)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190530_002120_775649_DE66CF3B 
-X-CRM114-Status: GOOD (  11.25  )
-X-Spam-Score: -0.0 (/)
+X-CRM114-CacheID: sfid-20190530_064050_399499_84572DC9 
+X-CRM114-Status: UNSURE (   6.64  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.0 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [88.99.104.3 listed in list.dnswl.org]
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
-X-Mailman-Approved-At: Mon, 03 Jun 2019 14:58:01 -0700
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -59,148 +61,27 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: Andrew Lunn <andrew@lunn.ch>, Andy Lutomirski <luto@kernel.org>,
- Catalin Marinas <catalin.marinas@arm.com>,
- Linus Walleij <linus.walleij@linaro.org>, Will Deacon <will.deacon@arm.com>,
- Pavel Tatashin <pasha.tatashin@oracle.com>, Paul Mackerras <paulus@samba.org>,
- Alessia Mantegazza <amantegazza@vaga.pv.it>, Jakub Wilk <jwilk@jwilk.net>,
- Bartosz Golaszewski <bgolaszewski@baylibre.com>,
- "Paul E. McKenney" <paulmck@linux.ibm.com>,
- Kevin Hilman <khilman@baylibre.com>, James Morris <jmorris@namei.org>,
- linux-acpi@vger.kernel.org, Ingo Molnar <mingo@redhat.com>,
- Benjamin Herrenschmidt <benh@kernel.crashing.org>,
- xen-devel@lists.xenproject.org, Jason Wang <jasowang@redhat.com>,
- Alexander Popov <alex.popov@linux.com>, Qian Cai <cai@lca.pw>,
- Al Viro <viro@zeniv.linux.org.uk>,
- Thomas Preston <thomas.preston@codethink.co.uk>,
- Thomas Gleixner <tglx@linutronix.de>, Kairui Song <kasong@redhat.com>,
- Ding Xiang <dingxiang@cmss.chinamobile.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- "Rafael J. Wysocki" <rjw@rjwysocki.net>, linux-kernel@vger.kernel.org,
- Paul Burton <paul.burton@mips.com>, Jiri Kosina <jkosina@suse.cz>,
- Casey Schaufler <casey@schaufler-ca.com>,
- Andrew Morton <akpm@linux-foundation.org>, Lu Baolu <baolu.lu@linux.intel.com>,
- Mark Rutland <mark.rutland@arm.com>, Feng Tang <feng.tang@intel.com>,
- Linux Doc Mailing List <linux-doc@vger.kernel.org>,
- Dave Hansen <dave.hansen@linux.intel.com>, Mimi Zohar <zohar@linux.ibm.com>,
- Kamalesh Babulal <kamalesh@linux.vnet.ibm.com>, linux-mm@kvack.org,
- Masahiro Yamada <yamada.masahiro@socionext.com>,
- Yannik Sembritzki <yannik@sembritzki.me>, Harry Wei <harryxiyou@gmail.com>,
- linux-i2c@vger.kernel.org, Shuah Khan <shuah@kernel.org>,
- Stephen Rothwell <sfr@canb.auug.org.au>,
- Stefano Stabellini <sstabellini@kernel.org>, Alexandre Ghiti <alex@ghiti.fr>,
- YueHaibing <yuehaibing@huawei.com>, Robert Moore <robert.moore@intel.com>,
- AKASHI Takahiro <takahiro.akashi@linaro.org>, Len Brown <lenb@kernel.org>,
- Joerg Roedel <jroedel@suse.de>, linux-arm-msm@vger.kernel.org,
- linuxppc-dev@lists.ozlabs.org, Mauro Carvalho Chehab <mchehab@infradead.org>,
- linux-gpio@vger.kernel.org, Claudiu Manoil <claudiu.manoil@nxp.com>,
- Florian Fainelli <f.fainelli@gmail.com>,
- Jacek Anaszewski <jacek.anaszewski@gmail.com>,
- Bjorn Helgaas <bhelgaas@google.com>, linux-amlogic@lists.infradead.org,
- Boris Ostrovsky <boris.ostrovsky@oracle.com>,
- Mika Westerberg <mika.westerberg@linux.intel.com>,
- linux-arm-kernel@lists.infradead.org, Tony Luck <tony.luck@intel.com>,
- Sean Christopherson <sean.j.christopherson@intel.com>,
- James Morse <james.morse@arm.com>, Michael Ellerman <mpe@ellerman.id.au>,
- Samuel Mendoza-Jonas <sam@mendozajonas.com>, linux-pci@vger.kernel.org,
- Bhupesh Sharma <bhsharma@redhat.com>,
- Jonathan Cameron <Jonathan.Cameron@huawei.com>,
- platform-driver-x86@vger.kernel.org, Quentin Perret <quentin.perret@arm.com>,
- linux-kselftest@vger.kernel.org, Alex Shi <alex.shi@linux.alibaba.com>,
- Lorenzo Pieralisi <lorenzo.pieralisi@arm.com>, Baoquan He <bhe@redhat.com>,
- Jonathan Corbet <corbet@lwn.net>, Raphael Gault <raphael.gault@arm.com>,
- Joel Stanley <joel@jms.id.au>, Federico Vaga <federico.vaga@vaga.pv.it>,
- Darren Hart <dvhart@infradead.org>, linux-edac@vger.kernel.org,
- Erik Schmauss <erik.schmauss@intel.com>, "Serge E. Hallyn" <serge@hallyn.com>,
- Palmer Dabbelt <palmer@sifive.com>, Kees Cook <keescook@chromium.org>,
- Bartlomiej Zolnierkiewicz <b.zolnierkie@samsung.com>,
- Jonathan =?utf-8?Q?Neusch=C3=A4fer?= <j.neuschaefer@gmx.net>,
- SeongJae Park <sj38.park@gmail.com>, Mark Brown <broonie@kernel.org>,
- Borislav Petkov <bp@alien8.de>, Sunil Muthuswamy <sunilmut@microsoft.com>,
- virtualization@lists.linux-foundation.org, devel@acpica.org,
- Ard Biesheuvel <ard.biesheuvel@linaro.org>,
- Liam Girdwood <lgirdwood@gmail.com>,
- Sakari Ailus <sakari.ailus@linux.intel.com>, Olof Johansson <olof@lixom.net>,
- Logan Gunthorpe <logang@deltatee.com>, "David S. Miller" <davem@davemloft.net>,
- "Kirill A. Shutemov" <kirill.shutemov@linux.intel.com>,
- Sven Van Asbroeck <thesven73@gmail.com>, Michal Hocko <mhocko@suse.com>,
- kvm@vger.kernel.org, "Michael S. Tsirkin" <mst@redhat.com>,
- Peter Zijlstra <peterz@infradead.org>, Thorsten Leemhuis <linux@leemhuis.info>,
- David Howells <dhowells@redhat.com>, David Brown <david.brown@linaro.org>,
- "H. Peter Anvin" <hpa@zytor.com>, devel@driverdev.osuosl.org,
- Manfred Spraul <manfred@colorfullife.com>, x86@kernel.org,
- Russell King <linux@armlinux.org.uk>, Mike Rapoport <rppt@linux.ibm.com>,
- Andy Gross <agross@kernel.org>, Dave Young <dyoung@redhat.com>,
- devicetree@vger.kernel.org, Arnaldo Carvalho de Melo <acme@redhat.com>,
- Jerome Glisse <jglisse@redhat.com>, Rob Herring <robh+dt@kernel.org>,
- Josh Poimboeuf <jpoimboe@redhat.com>, Dmitry Vyukov <dvyukov@google.com>,
- Luis Chamberlain <mcgrof@kernel.org>, Juergen Gross <jgross@suse.com>,
- Denis Efremov <efremov@ispras.ru>, netdev@vger.kernel.org,
- Nicolas Ferre <nicolas.ferre@microchip.com>,
- Changbin Du <changbin.du@intel.com>, linux-security-module@vger.kernel.org,
- Robin Murphy <robin.murphy@arm.com>, Andy Shevchenko <andy@infradead.org>
-Content-Type: multipart/mixed; boundary="===============2554668738273403661=="
+Cc: linux-amlogic@lists.infradead.org, linux-kernel@vger.kernel.org,
+ linux-crypto@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
+ mpm@selenic.com
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
+On Mon, May 20, 2019 at 03:59:19PM +0200, Neil Armstrong wrote:
+> Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
+> ---
+>  drivers/char/hw_random/meson-rng.c | 52 +-----------------------------
+>  1 file changed, 1 insertion(+), 51 deletions(-)
 
---===============2554668738273403661==
-Content-Type: multipart/signed; micalg=pgp-sha512;
-	protocol="application/pgp-signature"; boundary="fUYQa+Pmc3FrFX/N"
-Content-Disposition: inline
-
-
---fUYQa+Pmc3FrFX/N
-Content-Type: text/plain; charset=us-ascii
-Content-Disposition: inline
-Content-Transfer-Encoding: quoted-printable
-
-On Wed, May 29, 2019 at 08:23:53PM -0300, Mauro Carvalho Chehab wrote:
-> Mostly due to x86 and acpi conversion, several documentation
-> links are still pointing to the old file. Fix them.
->=20
-> Signed-off-by: Mauro Carvalho Chehab <mchehab+samsung@kernel.org>
-
-Didn't I ack this already?
-
-For the I2C part:
-
-Reviewed-by: Wolfram Sang <wsa@the-dreams.de>
-
-
---fUYQa+Pmc3FrFX/N
-Content-Type: application/pgp-signature; name="signature.asc"
-
------BEGIN PGP SIGNATURE-----
-
-iQIzBAABCgAdFiEEOZGx6rniZ1Gk92RdFA3kzBSgKbYFAlzvhGEACgkQFA3kzBSg
-KbZPRxAAhFPNKyTqg0No7kzvML2PBj9puH4y5gi/QPmIpGm4lHZikJFOlq9rgwR+
-PNNz1an8lJFTrFan9VvG36hYv4zCcWm80yw2U9xZfBOk1QRHUN5jTbC8UdGyCYh+
-Vo1yR3nEWEODI3yIS8kvTwlFWENBd5YA7O4GllMR1Ink+IPkc+60ji8Rt+VNZuFp
-J8tzUF5tCJlUFQYTgf8fSFvM+hA1shd0gnHRUNGKIBNLONCg9mbWBODwSfZi/VcV
-5J2t00XQuI/cXPk/I5Hm1XHxQKuaV/pQmcTDkrYB/ZFkPOUxqP6PM/I5S+usHBDr
-7CHd3KxR04qYdmaNac8E3NOqnN4xvGMVAGpO5mvvJ0lwSVvVsdMCETSjZ8pjfnXO
-pfDKBThEmJLVp9PdG5pVz1MwHv20PXAYax1rujWRjWIFdr/E8HyoW/qurTZf/bTs
-tQc63rAg5QHrF177J3WR13tZp+zpVN0KL061qk9J65j3aDMsyProevJz2RN/cQzX
-3630pUKa6S/q7r/t2yfL//sGW5K1nbWj3XdtpSZKvyp8KUmEM41oi48rkwMdMGL9
-aB7uRlDM/0J+WIRHeXSMJ50Yfk0rKjdAuyKbhWU9+nwgPaTxUW6KMLsRhjV1K57Y
-VK46VL1PX9nHY6d5572YnbuNT5Nzxeazz5nuBYHTLFDyBkyHHL8=
-=MWyf
------END PGP SIGNATURE-----
-
---fUYQa+Pmc3FrFX/N--
-
-
---===============2554668738273403661==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
+Patch applied.  Thanks.
+-- 
+Email: Herbert Xu <herbert@gondor.apana.org.au>
+Home Page: http://gondor.apana.org.au/~herbert/
+PGP Key: http://gondor.apana.org.au/~herbert/pubkey.txt
 
 _______________________________________________
 linux-amlogic mailing list
 linux-amlogic@lists.infradead.org
 http://lists.infradead.org/mailman/listinfo/linux-amlogic
-
---===============2554668738273403661==--
-
