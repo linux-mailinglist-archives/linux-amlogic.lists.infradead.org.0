@@ -2,39 +2,87 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 11E5134B6B
-	for <lists+linux-amlogic@lfdr.de>; Tue,  4 Jun 2019 17:04:10 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8C675343C2
+	for <lists+linux-amlogic@lfdr.de>; Tue,  4 Jun 2019 12:11:33 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=JGL7GqcOXl9NjEThnBj6fOg6075NhcrucsShUt+3RtQ=; b=pAAAb6PFwU5DFU
-	XtaPKc76lt3Dw/8aJHKKIxuU7S/e+q+G5FpgJXQKmFiHEqcPTUypVTx0RFimm6qqSBlkwhjhpq91X
-	h/H48hUwMuhooIcldcE3SFFHzUDcr0+HcqGW//TAU8dtWLR3KS+IHnCpUAU8eOS3CZxHKODCfvhUx
-	qyA4b09VpK8k/x6FdDRfiJJaA7ESWepadWPPW8rPaIM0bEq3EcHUmLVoSYZQ0ZLTfunvXQd1+aSiB
-	2ycTI5I/NSipS2wloz3bk6g7iM7a9+/YLqF7lii/q8dZjXSjgqDJZSsCISj7VReYULOgLl24DELcc
-	rrJhAegoVZDycmXm+oZQ==;
+	List-Owner; bh=FMl5SKtIQJPx3mPdtLPj7sdUVJ062FgEeHVymUCjbHY=; b=LrO/wNpmM4lkWv
+	fjGBVuSCwJBYPREbXzpSxOs3Jx3V9VgRx/NOyKu+XVEIE8Vy+DtZmS5HTrOrcjW7HcSUT2QpQfvFt
+	gWhr74Z8JGf1yIo0K7BoYiVX0y+kLfh82DOnNElQtSO1a9Vet5WhalNyJrcyOICkmJhA+y6LRRU/d
+	1OyX148G7014cJ1FrjGCO1+3UIlnBrX7AJhfLGvJRvFlNQu0L2YkX6mnho8IV0nW/A7SFoK3p2wGQ
+	JPKBG008/GjRyg3mj2CsxAg6B9bKFwfPbryUeLEqc5S/D0OjJljHQMMdbrKt/n59qPlyDfiUzWBJG
+	eofg1ksLjEstJ2Fp8UYQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hYAyt-0003jA-84; Tue, 04 Jun 2019 15:04:07 +0000
-Received: from [187.113.6.249] (helo=coco.lan)
- by bombadil.infradead.org with esmtpsa (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hY6D8-0008Uz-UV; Tue, 04 Jun 2019 09:58:31 +0000
-Date: Tue, 4 Jun 2019 06:58:02 -0300
-From: Mauro Carvalho Chehab <mchehab@infradead.org>
-To: Christophe Leroy <christophe.leroy@c-s.fr>
-Subject: Re: [PATCH 22/22] docs: fix broken documentation links
-Message-ID: <20190604065802.47a9d24b@coco.lan>
-In-Reply-To: <20190604064614.67cde821@coco.lan>
-References: <cover.1559171394.git.mchehab+samsung@kernel.org>
- <f9fecacbe4ce0b2b3aed38d71ae3753f2daf3ce3.1559171394.git.mchehab+samsung@kernel.org>
- <64e136de-1a7b-3436-9675-44ea9fa7b64a@c-s.fr>
- <20190604064614.67cde821@coco.lan>
-X-Mailer: Claws Mail 3.17.3 (GTK+ 2.24.32; x86_64-redhat-linux-gnu)
+	id 1hY6Pi-0005wl-KN; Tue, 04 Jun 2019 10:11:30 +0000
+Received: from mail-ua1-x941.google.com ([2607:f8b0:4864:20::941])
+ by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
+ id 1hY6Pf-0005vY-25
+ for linux-amlogic@lists.infradead.org; Tue, 04 Jun 2019 10:11:28 +0000
+Received: by mail-ua1-x941.google.com with SMTP id 7so7596410uah.1
+ for <linux-amlogic@lists.infradead.org>; Tue, 04 Jun 2019 03:11:26 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=vIAhQXsHJOyXhrVT0CHYLbhy05/J5RqxTMr2w2w4Y2I=;
+ b=hQHXiLPx88stEsF25lRD9d1mmW3eRvX2gS3t/o9d8ANOAc2IwjY09NFrzx6Hq1JR3C
+ uLW6K/95h+EHigfTJw4GCy+EEffjN5dnO5niUMWSyEwanSjMbSjOBOB+F2FRK8Hij7jS
+ 1TeJTMtqy+T1Hj9hbSsjWYWejx+wo/a7+PXHa1iVbw2Pni4jBXVki5eKzgwPXhIQetC3
+ nvDcY84Z8Uc7b2YNs2AnLpIbgsz9GeUU3LmUF11IscqtaNC/6062Jz8HmnEklR1lBWRR
+ zzFq/Aiho5kgbxIUDQFj+lzAJWMeUQha1g0f8bu7mtZCmCVxp7CTTA280jI9aOBiMm1O
+ IRgw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=vIAhQXsHJOyXhrVT0CHYLbhy05/J5RqxTMr2w2w4Y2I=;
+ b=PpWNJWnEyWMQ0uemTvy8O9vNUeheesGVvD4FGEHVDfqI5Z5mSbWZG1M4W87PpbpCvi
+ F9MISqXWVMovgO0EEEfjlJ602XNg8echjlI8WSqN0OSkktQams0IWgVhWpXr7mGRK0o5
+ jnozIS1lIeNYkRflGV4pXkoa/hlXUwDL0r5XBwIIzKsZXeqQQxSQyKP44GYjwoF58GIo
+ LFnelZ+gIJT93uFx9WyAXnRqj960TkC9LvzqC1LEFKF7RHm/PKcTf0paNzgbDiNr9188
+ ruy2WT/MLzycb5cCb8BVzrSklEgeo8+1Va6xRFXivZiaRNJHe9Nako6SkigS3jn/l4o1
+ zf/g==
+X-Gm-Message-State: APjAAAWz/AxP0J088tnBqFBFzs9JIwBheNrxcIo3TyFQzGqpI+wutWiX
+ M3YMxkc2qcBzSB9uyuJ62ChIGT+TExdNP/yEAnF0GQ==
+X-Google-Smtp-Source: APXvYqx2OahnUZixNsj1G0zgpQmMhnztq1ywvKQDB+AKOAvTww/7rf5gLsRm9dBCyMhNeCDtQYchFVgLSfXBphrWUE4=
+X-Received: by 2002:ab0:16da:: with SMTP id g26mr8574345uaf.15.1559643085791; 
+ Tue, 04 Jun 2019 03:11:25 -0700 (PDT)
 MIME-Version: 1.0
-X-Mailman-Approved-At: Tue, 04 Jun 2019 08:03:23 -0700
+References: <20190520143647.2503-1-narmstrong@baylibre.com>
+ <CAPDyKFoOHnYiYogjogRr=7PBjqHOseDDS6L0eirTo7Y+F449ow@mail.gmail.com>
+ <CAMuHMdWHnyTWMToXU_DSezwYs_Lkxj+v0BC8PKXHZgX=e1N3ww@mail.gmail.com>
+ <b6e67d32-6092-4bdf-312d-7241094a9248@baylibre.com>
+ <20190604090041.GB2855@kroah.com>
+In-Reply-To: <20190604090041.GB2855@kroah.com>
+From: Ulf Hansson <ulf.hansson@linaro.org>
+Date: Tue, 4 Jun 2019 12:10:49 +0200
+Message-ID: <CAPDyKFoAzf-K+ZoK0Kn7W8dH+1RHmRNjd91qZiO2am0whqexow@mail.gmail.com>
+Subject: Re: [PATCH 0/2] mmc: meson: update with SPDX Licence identifier
+To: Greg KH <gregkh@linuxfoundation.org>,
+ Geert Uytterhoeven <geert@linux-m68k.org>
+X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
+X-CRM114-CacheID: sfid-20190604_031127_121065_E50BA44D 
+X-CRM114-Status: GOOD (  14.18  )
+X-Spam-Score: -0.2 (/)
+X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
+ Content analysis details:   (-0.2 points)
+ pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:941 listed in]
+ [list.dnswl.org]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -46,239 +94,56 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: Andrew Lunn <andrew@lunn.ch>,
- Thomas Preston <thomas.preston@codethink.co.uk>,
- Wolfram Sang <wsa@the-dreams.de>, Catalin Marinas <catalin.marinas@arm.com>,
- Linus Walleij <linus.walleij@linaro.org>, Will Deacon <will.deacon@arm.com>,
- Russell King <linux@armlinux.org.uk>, Paul Mackerras <paulus@samba.org>,
- Alessia Mantegazza <amantegazza@vaga.pv.it>, Jakub Wilk <jwilk@jwilk.net>,
- AKASHI Takahiro <takahiro.akashi@linaro.org>,
- Kevin Hilman <khilman@baylibre.com>, James Morris <jmorris@namei.org>,
- linux-acpi@vger.kernel.org, Andy Gross <agross@kernel.org>,
- xen-devel@lists.xenproject.org, Jason Wang <jasowang@redhat.com>,
- Alexander Popov <alex.popov@linux.com>, Qian Cai <cai@lca.pw>,
- Al Viro <viro@zeniv.linux.org.uk>, Andy Lutomirski <luto@kernel.org>,
- Thomas Gleixner <tglx@linutronix.de>, Kairui Song <kasong@redhat.com>,
- Quentin Perret <quentin.perret@arm.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- "Rafael J. Wysocki" <rjw@rjwysocki.net>, linux-kernel@vger.kernel.org,
- Paul Burton <paul.burton@mips.com>, Jiri Kosina <jkosina@suse.cz>,
- Casey Schaufler <casey@schaufler-ca.com>,
- Andrew Morton <akpm@linux-foundation.org>, Lu Baolu <baolu.lu@linux.intel.com>,
- Mark Rutland <mark.rutland@arm.com>, Feng Tang <feng.tang@intel.com>,
- Linux Doc Mailing List <linux-doc@vger.kernel.org>,
- Dave Hansen <dave.hansen@linux.intel.com>, Mimi Zohar <zohar@linux.ibm.com>,
- Kamalesh Babulal <kamalesh@linux.vnet.ibm.com>,
- Masahiro Yamada <yamada.masahiro@socionext.com>,
- Yannik Sembritzki <yannik@sembritzki.me>, Harry Wei <harryxiyou@gmail.com>,
- linux-i2c@vger.kernel.org, Shuah Khan <shuah@kernel.org>,
- Stephen Rothwell <sfr@canb.auug.org.au>,
- "Paul E. McKenney" <paulmck@linux.ibm.com>, Alexandre Ghiti <alex@ghiti.fr>,
- YueHaibing <yuehaibing@huawei.com>, Robert Moore <robert.moore@intel.com>,
- Bartosz Golaszewski <bgolaszewski@baylibre.com>, Len Brown <lenb@kernel.org>,
- David Brown <david.brown@linaro.org>, Joerg Roedel <jroedel@suse.de>,
- linux-arm-msm@vger.kernel.org, linux-gpio@vger.kernel.org,
- Claudiu Manoil <claudiu.manoil@nxp.com>,
- Florian Fainelli <f.fainelli@gmail.com>,
- Jacek Anaszewski <jacek.anaszewski@gmail.com>,
- Bjorn Helgaas <bhelgaas@google.com>, linux-amlogic@lists.infradead.org,
- Boris Ostrovsky <boris.ostrovsky@oracle.com>,
- Mika Westerberg <mika.westerberg@linux.intel.com>,
- linux-arm-kernel@lists.infradead.org, Tony Luck <tony.luck@intel.com>,
- Sean Christopherson <sean.j.christopherson@intel.com>,
- Rob Herring <robh+dt@kernel.org>, James Morse <james.morse@arm.com>,
- Robin Murphy <robin.murphy@arm.com>,
- Samuel Mendoza-Jonas <sam@mendozajonas.com>, linux-pci@vger.kernel.org,
- Bhupesh Sharma <bhsharma@redhat.com>, Josh Poimboeuf <jpoimboe@redhat.com>,
- platform-driver-x86@vger.kernel.org,
- Ding Xiang <dingxiang@cmss.chinamobile.com>, linux-kselftest@vger.kernel.org,
- Alex Shi <alex.shi@linux.alibaba.com>,
- Lorenzo Pieralisi <lorenzo.pieralisi@arm.com>, Baoquan He <bhe@redhat.com>,
- Jonathan Corbet <corbet@lwn.net>, Raphael Gault <raphael.gault@arm.com>,
- Joel Stanley <joel@jms.id.au>, Federico Vaga <federico.vaga@vaga.pv.it>,
- Darren Hart <dvhart@infradead.org>, Erik Schmauss <erik.schmauss@intel.com>,
- "Serge E. Hallyn" <serge@hallyn.com>, Palmer Dabbelt <palmer@sifive.com>,
- Kees Cook <keescook@chromium.org>,
- Bartlomiej Zolnierkiewicz <b.zolnierkie@samsung.com>,
- Jonathan =?UTF-8?B?TmV1c2No?= =?UTF-8?B?w6RmZXI=?= <j.neuschaefer@gmx.net>,
- SeongJae Park <sj38.park@gmail.com>, Mark Brown <broonie@kernel.org>,
- Borislav Petkov <bp@alien8.de>, Sunil Muthuswamy <sunilmut@microsoft.com>,
- virtualization@lists.linux-foundation.org, devel@acpica.org,
- Ard Biesheuvel <ard.biesheuvel@linaro.org>,
- Liam Girdwood <lgirdwood@gmail.com>,
- Sakari Ailus <sakari.ailus@linux.intel.com>, Olof Johansson <olof@lixom.net>,
- Logan Gunthorpe <logang@deltatee.com>, "David S. Miller" <davem@davemloft.net>,
- "Kirill A. Shutemov" <kirill.shutemov@linux.intel.com>,
- Sven Van Asbroeck <thesven73@gmail.com>, Michal Hocko <mhocko@suse.com>,
- kvm@vger.kernel.org, "Michael S. Tsirkin" <mst@redhat.com>,
- Peter Zijlstra <peterz@infradead.org>, Thorsten Leemhuis <linux@leemhuis.info>,
- David Howells <dhowells@redhat.com>, linux-mm@kvack.org,
- "H. Peter Anvin" <hpa@zytor.com>, devel@driverdev.osuosl.org,
- Manfred Spraul <manfred@colorfullife.com>,
- Luis Chamberlain <mcgrof@kernel.org>, x86@kernel.org,
- Pavel Tatashin <pasha.tatashin@oracle.com>, Mike Rapoport <rppt@linux.ibm.com>,
- Ingo Molnar <mingo@redhat.com>, Dave Young <dyoung@redhat.com>,
- devicetree@vger.kernel.org, Arnaldo Carvalho de Melo <acme@redhat.com>,
- Jerome Glisse <jglisse@redhat.com>,
- Stefano Stabellini <sstabellini@kernel.org>,
- Jonathan Cameron <Jonathan.Cameron@huawei.com>,
- Dmitry Vyukov <dvyukov@google.com>, linux-edac@vger.kernel.org,
- Juergen Gross <jgross@suse.com>, Denis Efremov <efremov@ispras.ru>,
- netdev@vger.kernel.org, Nicolas Ferre <nicolas.ferre@microchip.com>,
- Changbin Du <changbin.du@intel.com>, linux-security-module@vger.kernel.org,
- linuxppc-dev@lists.ozlabs.org, Andy Shevchenko <andy@infradead.org>
+Cc: Neil Armstrong <narmstrong@baylibre.com>,
+ "linux-mmc@vger.kernel.org" <linux-mmc@vger.kernel.org>,
+ Linux Kernel Mailing List <linux-kernel@vger.kernel.org>,
+ "open list:ARM/Amlogic Meson..." <linux-amlogic@lists.infradead.org>,
+ Thomas Gleixner <tglx@linutronix.de>,
+ Linux ARM <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Em Tue, 4 Jun 2019 06:46:14 -0300
-Mauro Carvalho Chehab <mchehab+samsung@kernel.org> escreveu:
+On Tue, 4 Jun 2019 at 11:00, Greg KH <gregkh@linuxfoundation.org> wrote:
+>
+> On Tue, Jun 04, 2019 at 10:52:51AM +0200, Neil Armstrong wrote:
+> > Hi,
+> >
+> >
+> > On 04/06/2019 10:36, Geert Uytterhoeven wrote:
+> > > Hi Ulf, Neil,
+> > >
+> > > On Tue, May 28, 2019 at 10:53 AM Ulf Hansson <ulf.hansson@linaro.org> wrote:
+> > >> On Mon, 20 May 2019 at 16:36, Neil Armstrong <narmstrong@baylibre.com> wrote:
+> > >>> Update the SPDX Licence identifier for the Amlogic MMC drivers.
+> > >>>
+> > >>> Neil Armstrong (2):
+> > >>>   mmc: meson-gx-mmc: update with SPDX Licence identifier
+> > >>>   mmc: meson-mx-sdio: update with SPDX Licence identifier
+> > >>>
+> > >>>  drivers/mmc/host/meson-gx-mmc.c  | 15 +--------------
+> > >>>  drivers/mmc/host/meson-mx-sdio.c |  6 +-----
+> > >>>  2 files changed, 2 insertions(+), 19 deletions(-)
+> > >>
+> > >> Applied for next, thanks!
+> > >
+> > > Please note this conflicts with commit 2874c5fd28426836 ("treewide:
+> > > Replace GPLv2 boilerplate/reference with SPDX - rule 152") upstream,
+> > > which added (different) tags.
+> >
+> > This happens when we are not CCed with such changes.
+>
+> No one was cc:ed on such huge changes.  The merge conflicts are trivial
+> to work out, this should not be an issue.
 
-> Em Mon, 3 Jun 2019 09:34:15 +0200
-> Christophe Leroy <christophe.leroy@c-s.fr> escreveu:
-> 
+No worries, I deal with it as I am going to rebase my tree on rc4 on
+Monday anyway.
 
-> > [...]
-> > 
-> > > diff --git a/arch/powerpc/Kconfig b/arch/powerpc/Kconfig
-> > > index 8c1c636308c8..e868d2bd48b8 100644
-> > > --- a/arch/powerpc/Kconfig
-> > > +++ b/arch/powerpc/Kconfig
-> > > @@ -898,7 +898,7 @@ config PPC_MEM_KEYS
-> > >   	  page-based protections, but without requiring modification of the
-> > >   	  page tables when an application changes protection domains.
-> > >   
-> > > -	  For details, see Documentation/vm/protection-keys.rst
-> > > +	  For details, see Documentation/x86/protection-keys.rst  
-> > 
-> > It looks strange to reference an x86 file, for powerpc arch.
-> 
-> Indeed. Yet, seeking for the API documented there:
-> 
->  $ git grep -l pkey_mprotect
-> Documentation/x86/protection-keys.rst
-> arch/alpha/kernel/syscalls/syscall.tbl
-> arch/arm/tools/syscall.tbl
-> arch/arm64/include/asm/unistd32.h
-> arch/ia64/kernel/syscalls/syscall.tbl
-> arch/m68k/kernel/syscalls/syscall.tbl
-> arch/microblaze/kernel/syscalls/syscall.tbl
-> arch/mips/kernel/syscalls/syscall_n32.tbl
-> arch/mips/kernel/syscalls/syscall_n64.tbl
-> arch/mips/kernel/syscalls/syscall_o32.tbl
-> arch/parisc/kernel/syscalls/syscall.tbl
-> arch/powerpc/kernel/syscalls/syscall.tbl
-> arch/s390/kernel/syscalls/syscall.tbl
-> arch/sh/kernel/syscalls/syscall.tbl
-> arch/sparc/kernel/syscalls/syscall.tbl
-> arch/x86/entry/syscalls/syscall_32.tbl
-> arch/x86/entry/syscalls/syscall_64.tbl
-> arch/xtensa/kernel/syscalls/syscall.tbl
-> include/linux/syscalls.h
-> include/uapi/asm-generic/unistd.h
-> kernel/sys_ni.c
-> mm/mprotect.c
-> tools/include/uapi/asm-generic/unistd.h
-> tools/perf/arch/powerpc/entry/syscalls/syscall.tbl
-> tools/perf/arch/x86/entry/syscalls/syscall_64.tbl
-> tools/perf/builtin-trace.c
-> tools/testing/selftests/x86/protection_keys.c
-> 
-> Despite being used on several archs, the only documentation for it
-> is inside the x86 directory, as it seems that this is not
-> arch-specific.
-> 
-> Perhaps the file should, instead, be moved to another book.
+Thanks for the heads up!
 
-I guess the best is to have this inside the core-api book.
-
-Patch enclosed.
-
-Regards,
-Mauro
-
-
-[PATCH] docs: move protection-keys.rst to the core-api book
-
-This document is used by multiple architectures:
-
-	$ echo $(git grep -l  pkey_mprotect arch|cut -d'/' -f 2|sort|uniq)
-	alpha arm arm64 ia64 m68k microblaze mips parisc powerpc s390 sh sparc x86 xtensa
-
-So, let's move it to the core book and adjust the links to it
-accordingly.
-
-Signed-off-by: Mauro Carvalho Chehab <mchehab+samsung@kernel.org>
-
-diff --git a/Documentation/core-api/index.rst b/Documentation/core-api/index.rst
-index ee1bb8983a88..2466a4c51031 100644
---- a/Documentation/core-api/index.rst
-+++ b/Documentation/core-api/index.rst
-@@ -34,6 +34,7 @@ Core utilities
-    timekeeping
-    boot-time-mm
-    memory-hotplug
-+   protection-keys
- 
- 
- Interfaces for kernel debugging
-diff --git a/Documentation/x86/protection-keys.rst b/Documentation/core-api/protection-keys.rst
-similarity index 100%
-rename from Documentation/x86/protection-keys.rst
-rename to Documentation/core-api/protection-keys.rst
-diff --git a/Documentation/x86/index.rst b/Documentation/x86/index.rst
-index ae36fc5fc649..f2de1b2d3ac7 100644
---- a/Documentation/x86/index.rst
-+++ b/Documentation/x86/index.rst
-@@ -19,7 +19,6 @@ x86-specific Documentation
-    tlb
-    mtrr
-    pat
--   protection-keys
-    intel_mpx
-    amd-memory-encryption
-    pti
-diff --git a/arch/powerpc/Kconfig b/arch/powerpc/Kconfig
-index 8c1c636308c8..3b795a0cab62 100644
---- a/arch/powerpc/Kconfig
-+++ b/arch/powerpc/Kconfig
-@@ -898,7 +898,7 @@ config PPC_MEM_KEYS
- 	  page-based protections, but without requiring modification of the
- 	  page tables when an application changes protection domains.
- 
--	  For details, see Documentation/vm/protection-keys.rst
-+	  For details, see Documentation/core-api/protection-keys.rst
- 
- 	  If unsure, say y.
- 
-diff --git a/arch/x86/Kconfig b/arch/x86/Kconfig
-index 2bbbd4d1ba31..d87d53fcd261 100644
---- a/arch/x86/Kconfig
-+++ b/arch/x86/Kconfig
-@@ -1911,7 +1911,7 @@ config X86_INTEL_MEMORY_PROTECTION_KEYS
- 	  page-based protections, but without requiring modification of the
- 	  page tables when an application changes protection domains.
- 
--	  For details, see Documentation/x86/protection-keys.txt
-+	  For details, see Documentation/core-api/protection-keys.rst
- 
- 	  If unsure, say y.
- 
-diff --git a/tools/testing/selftests/x86/protection_keys.c b/tools/testing/selftests/x86/protection_keys.c
-index 5d546dcdbc80..480995bceefa 100644
---- a/tools/testing/selftests/x86/protection_keys.c
-+++ b/tools/testing/selftests/x86/protection_keys.c
-@@ -1,6 +1,6 @@
- // SPDX-License-Identifier: GPL-2.0
- /*
-- * Tests x86 Memory Protection Keys (see Documentation/x86/protection-keys.txt)
-+ * Tests x86 Memory Protection Keys (see Documentation/core-api/protection-keys.rst)
-  *
-  * There are examples in here of:
-  *  * how to set protection keys on memory
-
-
+Kind regards
+Uffe
 
 _______________________________________________
 linux-amlogic mailing list
