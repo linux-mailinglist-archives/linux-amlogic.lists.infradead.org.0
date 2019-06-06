@@ -2,83 +2,80 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3E76D37918
-	for <lists+linux-amlogic@lfdr.de>; Thu,  6 Jun 2019 18:05:52 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 99E873798D
+	for <lists+linux-amlogic@lfdr.de>; Thu,  6 Jun 2019 18:31:07 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:References
+	:In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=/hdI3cwuWK0Evw9bQ1wjKziPrbvp+PSB9lNcTwX5xHg=; b=bFBCJzpLZLmo+9
-	QctUZtsUwqlOsWN7MWljf95qoUwxWihNChx7bsSnO5o42176eDJZSmcPjM/IOJozNmgzrOXuWulkc
-	5Ml1rxvFcV8O8HnBZbnQag1On8M/J/r9q831UL3CD+srZYAR5/P3YAljWRkEfqqt6/g5lbgB6YUE7
-	mQiGk0CL98DJhzLvPphMVn/zjMk//kIGyQNqSO1OLjB/Zw9MrEpw0OZYeLaiN/Id+LFzRVUEtfjdM
-	T1mPRYYmzBLtUkQoJp/so22++Tw41wBVRqdRbTCsyE89Ko7FPT21WZWQpy/lnoXsrYMB/vpUClTA/
-	+8Ph+ZZMUn2luTt+TmHA==;
+	List-Owner; bh=zEl/Nri/yntBYW2q28nGnbqYpTUu7wNkrvfFDnszM/U=; b=U2Y+GhobZQFRXH
+	qAMCrg72Bz+yQ0RhuWzvsJmhcGrhmVmcqayygWFJRYZdT3OMrMWjE+hJAALJJkxVDxIKtnzewctM5
+	1iozGEaiKKb2O7nFbnKeH2Hltf4y4Tu+Rg/D0DROLB4K+nEiNCsU1dFuZqgETmu6cwyoyuvW1Tc9Y
+	pXQll3u7slZe+n1MdydGz+LJY+HiaccxnhuhjKIioBb5EJP5t1qkyhSHQSkTTvQtcO1H3b5w02rzv
+	HJbVoFxLLruGdF7EkwrRuQ7GNiu5hsI14l3dxjgLYvJ/eKO2LqUtg/v7U0fNjVHQhZJmVJhwboQhr
+	JwQSzcgeP4wr2L3abd+Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hYuth-0002ys-P4; Thu, 06 Jun 2019 16:05:49 +0000
-Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
+	id 1hYvI3-0006jo-RK; Thu, 06 Jun 2019 16:30:59 +0000
+Received: from mail-pg1-x541.google.com ([2607:f8b0:4864:20::541])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hYutK-0002dA-JG
- for linux-amlogic@lists.infradead.org; Thu, 06 Jun 2019 16:05:28 +0000
-Received: by mail-wr1-x442.google.com with SMTP id p11so3018631wre.7
- for <linux-amlogic@lists.infradead.org>; Thu, 06 Jun 2019 09:05:26 -0700 (PDT)
+ id 1hYvHz-0006im-VP
+ for linux-amlogic@lists.infradead.org; Thu, 06 Jun 2019 16:30:57 +0000
+Received: by mail-pg1-x541.google.com with SMTP id h2so1665720pgg.1
+ for <linux-amlogic@lists.infradead.org>; Thu, 06 Jun 2019 09:30:55 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=from:to:cc:subject:date:message-id:in-reply-to:references
- :mime-version:content-transfer-encoding;
- bh=REJ+F/EoJF8y7ON3vJSgKlf1KSRuyaPRK39EHGB3NLk=;
- b=kKQ+VelkUt6JaYM6/XzEtySTnRdqSxbVzVFAxBo810/cywmokiLiR9kZNee1J0oD8f
- ZUiQBCwReVS8IyTTxN1o5MB7Sfd2YRlfLfxryIof6HGtRhKx2z3iC42g0gt6pdBEmz/J
- ErTPSjLXXxXyj5qQQEumXBGTkg42dC6rF7dt4FYx3io5Zdg31GFQvL9+QfjHedb295WE
- F85dgv+buyyOakKpy5ZmUS+XaQqk632bXD2ZFp1o0aBdSrrEp/DlP6ar/Z9eWPRkwnpo
- GudcD18NWBPIchRHYt5YhwfABUMyzJJp7v3A+4jOj65U46ofalj9D+2VhG5iJgz0MkT8
- 3/xA==
+ h=from:to:cc:subject:in-reply-to:references:date:message-id
+ :mime-version; bh=HUlzUdoZEuwBcIsFcfZEEwizXh8qoMoVTwGXgk651gw=;
+ b=qETdpu1fq3YKAf+PIZM1StDrgV04HFfNxDbOwFwICih/0OGyExQlCsDvVUOYGpik2Y
+ 2gjJfDYHyR1f73PJKlKkPLUz0l0GTn/HYutjpmDgQis3C/fLVHDiMPAHQWe5abO1CxR5
+ gzEYFYbOrID4vQAzWHjf9Km7CDWQ+YgyDk6XU59IjAjlriBoJDBeFpD1qYriONA0b96g
+ as+fClyo/e/mPDsvW3CinLUXehamtCIGCz+GWe39ZTYfBfsTJCpXWi5sbo6KcpZH4vfU
+ 65XNfvzv4dThucKEFN8kGfxpVv32WFy2ilzisbYA6jRwPLAp4Ty+WQbW+p7s0mzzxyfP
+ PCOw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
- :references:mime-version:content-transfer-encoding;
- bh=REJ+F/EoJF8y7ON3vJSgKlf1KSRuyaPRK39EHGB3NLk=;
- b=noM/xKSETtGZQOCfmYMysAqpmCjKjKvu1+pp6sfLeJJgR0ghbeIrJzt0qy0+zK1r3n
- 0FJV2yHQn5YNgMj69g92P+hO0rjXC51Ij2P0Ng0yNXDa5BwMslDVEwuXZr8pgCFVxuXV
- 2ZHhiGOqWXudosAc2yrB9pDCTXYHYfKaaeU0vtfQeoSnN0PbjTALJ+pTx+h5No+QxZwG
- qhmZ8DeYuQBzSx20e7PWsfV1a129lsu1als7/IJsjvxChuVCknmT+DfWVjkgViM3R3O/
- vHAEU/pJp5yvbkSr215QuxQazjB8r/tWWDc3Kyaw1eLdmWQttuK4DzQx2Lx0XkzQ5l/+
- VCLA==
-X-Gm-Message-State: APjAAAUzFyjDZ2sYolXUPtU7fdFMJPUB6eAZoTpurDq2GhpPy4DKuoxr
- Iq73s/MPZ50ihPz/qW8kGl4Oig==
-X-Google-Smtp-Source: APXvYqz3gbNA2D0bF0Eq0O2oDIySuKiZynD3XFfUkI1kKWkAxWifm2Gws82DrVcaBKGHZEl7uIaLzQ==
-X-Received: by 2002:a05:6000:1c6:: with SMTP id
- t6mr31836953wrx.236.1559837125386; 
- Thu, 06 Jun 2019 09:05:25 -0700 (PDT)
-Received: from mjourdan-pc.numericable.fr (abo-99-183-68.mtp.modulonet.fr.
- [85.68.183.99])
- by smtp.gmail.com with ESMTPSA id t140sm2180901wmt.0.2019.06.06.09.05.24
- (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Thu, 06 Jun 2019 09:05:24 -0700 (PDT)
-From: Maxime Jourdan <mjourdan@baylibre.com>
-To: Mauro Carvalho Chehab <mchehab@kernel.org>,
- Hans Verkuil <hans.verkuil@cisco.com>
-Subject: [PATCH v10 3/3] MAINTAINERS: Add meson video decoder
-Date: Thu,  6 Jun 2019 18:05:12 +0200
-Message-Id: <20190606160512.26211-4-mjourdan@baylibre.com>
-X-Mailer: git-send-email 2.21.0
-In-Reply-To: <20190606160512.26211-1-mjourdan@baylibre.com>
-References: <20190606160512.26211-1-mjourdan@baylibre.com>
+ h=x-gm-message-state:from:to:cc:subject:in-reply-to:references:date
+ :message-id:mime-version;
+ bh=HUlzUdoZEuwBcIsFcfZEEwizXh8qoMoVTwGXgk651gw=;
+ b=WrBQaiRS0hdhH9xCrIYKkrjjteI10RapIiVqKn5EWdJ4uVpXaNhXogDxilzUZ/PZ91
+ qSisaCWdmxpNduiqhFyFJ41ho82nja/G7TIwlObBgoAutnPZNhT1zlmJPqjoWfezBIOM
+ RV+8MbQSEwBHi0OGYMLfzwj0WkarsWih/WhQOWw3pL4A4860OYC9kw1wvK33QclDhlU9
+ KBnnd7tBmu+Ip6KOjWQOeSfoz3c16Hgg6dFgTxGeuJcL+Z0SF947kOfePYoUsf4I3kpw
+ moBHk5ED4LrbmDdnG0Sm7XwyO92JAdgX8+epAxItrwAOvOZOLeqxuvBwYcbjuUdMvELj
+ faFA==
+X-Gm-Message-State: APjAAAVby1GSRb1hII5dnFojVU87HnOdJMsXlrzl3wxXNjmBBOF4Jrw6
+ V75V2jqjIW7bhQ96leL+/TzTKuvVQMc=
+X-Google-Smtp-Source: APXvYqwWK98UYLF0wDJKBybt9Rv8pjx46kTpnSnQ3dBiL60FgKPLRXlPXhLbIuisO9V+PN/eTZZzkQ==
+X-Received: by 2002:a62:2983:: with SMTP id
+ p125mr13170922pfp.154.1559838654627; 
+ Thu, 06 Jun 2019 09:30:54 -0700 (PDT)
+Received: from localhost (c-71-197-186-152.hsd1.wa.comcast.net.
+ [71.197.186.152])
+ by smtp.googlemail.com with ESMTPSA id g8sm2370035pgd.29.2019.06.06.09.30.53
+ (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
+ Thu, 06 Jun 2019 09:30:53 -0700 (PDT)
+From: Kevin Hilman <khilman@baylibre.com>
+To: Neil Armstrong <narmstrong@baylibre.com>, dri-devel@lists.freedesktop.org
+Subject: Re: [PATCH] drm/meson: fix G12A HDMI PLL settings for 4K60 1000/1001
+ variations
+In-Reply-To: <20190605125320.8708-1-narmstrong@baylibre.com>
+References: <20190605125320.8708-1-narmstrong@baylibre.com>
+Date: Thu, 06 Jun 2019 09:30:52 -0700
+Message-ID: <7hh892fzgj.fsf@baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190606_090526_635860_9CA9DFE9 
-X-CRM114-Status: UNSURE (   7.95  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190606_093056_006036_44C53B06 
+X-CRM114-Status: GOOD (  13.72  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:442 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:541 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -96,45 +93,59 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: Neil Armstrong <narmstrong@baylibre.com>,
- Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
- Kevin Hilman <khilman@baylibre.com>, linux-kernel@vger.kernel.org,
- linux-amlogic@lists.infradead.org, Jerome Brunet <jbrunet@baylibre.com>,
- linux-arm-kernel@lists.infradead.org, linux-media@vger.kernel.org
+Cc: linux-amlogic@lists.infradead.org, linux-kernel@vger.kernel.org,
+ linux-arm-kernel@lists.infradead.org, Neil Armstrong <narmstrong@baylibre.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Add an entry for the meson video decoder for amlogic SoCs.
+Neil Armstrong <narmstrong@baylibre.com> writes:
 
-Signed-off-by: Maxime Jourdan <mjourdan@baylibre.com>
----
- MAINTAINERS | 8 ++++++++
- 1 file changed, 8 insertions(+)
+> The Amlogic G12A HDMI PLL needs some specific settings to lock with
+> different fractional values for the 5,4GHz mode.
+>
+> Handle the 1000/1001 variation fractional case here to avoid having
+> the PLL in an non lockable state.
+>
+> Fixes: 202b9808f8ed ("drm/meson: Add G12A Video Clock setup")
+> Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
+> ---
+>  drivers/gpu/drm/meson/meson_vclk.c | 13 +++++++++++--
+>  1 file changed, 11 insertions(+), 2 deletions(-)
+>
+> diff --git a/drivers/gpu/drm/meson/meson_vclk.c b/drivers/gpu/drm/meson/meson_vclk.c
+> index 44250eff8a3f..83fc2fc82001 100644
+> --- a/drivers/gpu/drm/meson/meson_vclk.c
+> +++ b/drivers/gpu/drm/meson/meson_vclk.c
+> @@ -553,8 +553,17 @@ void meson_hdmi_pll_set_params(struct meson_drm *priv, unsigned int m,
+>  
+>  		/* G12A HDMI PLL Needs specific parameters for 5.4GHz */
+>  		if (m >= 0xf7) {
+> -			regmap_write(priv->hhi, HHI_HDMI_PLL_CNTL4, 0xea68dc00);
+> -			regmap_write(priv->hhi, HHI_HDMI_PLL_CNTL5, 0x65771290);
+> +			if (frac < 0x10000) {
+> +				regmap_write(priv->hhi, HHI_HDMI_PLL_CNTL4,
+> +							0x6a685c00);
+> +				regmap_write(priv->hhi, HHI_HDMI_PLL_CNTL5,
+> +							0x11551293);
+> +			} else {
+> +				regmap_write(priv->hhi, HHI_HDMI_PLL_CNTL4,
+> +							0xea68dc00);
+> +				regmap_write(priv->hhi, HHI_HDMI_PLL_CNTL5,
+> +							0x65771290);
+> +			}
+>  			regmap_write(priv->hhi, HHI_HDMI_PLL_CNTL6, 0x39272000);
+>  			regmap_write(priv->hhi, HHI_HDMI_PLL_CNTL7, 0x55540000);
+>  		} else {
 
-diff --git a/MAINTAINERS b/MAINTAINERS
-index b8fbf41865c2..7cf3ece9f0cb 100644
---- a/MAINTAINERS
-+++ b/MAINTAINERS
-@@ -10222,6 +10222,14 @@ S:	Maintained
- F:	drivers/mtd/nand/raw/meson_*
- F:	Documentation/devicetree/bindings/mtd/amlogic,meson-nand.txt
- 
-+MESON VIDEO DECODER DRIVER FOR AMLOGIC SOCS
-+M:	Maxime Jourdan <mjourdan@baylibre.com>
-+L:	linux-media@lists.freedesktop.org
-+L:	linux-amlogic@lists.infradead.org
-+S:	Supported
-+F:	drivers/staging/media/meson/vdec/
-+T:	git git://linuxtv.org/media_tree.git
-+
- METHODE UDPU SUPPORT
- M:	Vladimir Vid <vladimir.vid@sartura.hr>
- S:	Maintained
--- 
-2.21.0
+Reviewed-by: Kevin Hilman <khilman@baylibre.com>
 
+nit: this is continuing with more magic constants, and it would be nice
+to have them converted to #define'd bitfields.  But since that isn't a
+new problem in this patch, it's fine to cleanup later.
+
+Kevin
 
 _______________________________________________
 linux-amlogic mailing list
