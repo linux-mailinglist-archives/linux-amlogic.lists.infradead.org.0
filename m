@@ -2,53 +2,53 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5C3233ABD4
-	for <lists+linux-amlogic@lfdr.de>; Sun,  9 Jun 2019 22:38:53 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 98BAF3ABDC
+	for <lists+linux-amlogic@lfdr.de>; Sun,  9 Jun 2019 22:45:24 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=afB5jVuDfk/hxTqDLWYPCIoLjIbclDFND8D41OHCTds=; b=bEmmhJkllGwOfV
-	Y5BtuAWtcK9L3ihOS7cgVcJvUBty6Qob8QFoHW4phlZHkUTYzEj/iCB4HsNOD8KOBb/NNxyevKpOG
-	mKeFQ5yyZ9flXRSrXFc3CMnXXZoaMy+qf5BJtQ3Eo+iakW/6Ngc54GusiO6NMhnbsaNfilLh+ki2c
-	c5SH8fawc2fB50WtG0NSMdAtEXUe6XHjfHmTxCkrv7nxdB421jLDgn8+oOI0IDEwUPRMa+FhXS4g8
-	VO83xVhsD4EeRbulCDiniDDMNLlLqY5W35fAaAYZD9HEjT5ot4d3No0X4/L8l08QZsIZMcI3icuuF
-	5RUin6zbgIAASOMa8gZg==;
+	List-Owner; bh=i+ecqJPuviaJUb6h8N+ZNTuToztwXIQFx+I5eOQH43Q=; b=uXoAP3ZuUIGGhR
+	tCZ2zuYdd73mTOm9y88ReFYeLIXkV0bwjDS7ymXuq2rN0SCfOhsH4g+7Dx3qy2IeDLRigPtHZ6daF
+	zjdVZvAna3IFZpuprZ5sh1WDJbRLaYPVTr94+Q97fyjO278HMoXyXq2nMUNIwG5GEUgJYbaw0Jfg1
+	qt72rXM838PsL/c5mv52ZfordGUiOJ8IAczZcsQBBYZF2jwPrh6SIc7qlHMnWRs5/p/W45A+RUFfd
+	3uPPunkmDNGNMRqkp0q1k+BZsxqPp5EOvh57rvUqVXcVqTfPr8m0nq7RuxH5GYXnGYzRNRbRa+W8m
+	PMwQT6cSjJc7fdGvoOMQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1ha4aW-00078y-Q6; Sun, 09 Jun 2019 20:38:48 +0000
+	id 1ha4gr-00021k-A1; Sun, 09 Jun 2019 20:45:21 +0000
 Received: from vps0.lunn.ch ([185.16.172.187])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1ha4aS-00077i-22; Sun, 09 Jun 2019 20:38:46 +0000
+ id 1ha4go-00020m-9V; Sun, 09 Jun 2019 20:45:19 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=lunn.ch;
  s=20171124; h=In-Reply-To:Content-Type:MIME-Version:References:Message-ID:
  Subject:Cc:To:From:Date:Sender:Reply-To:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=aAgxuie2Hz2Ygvh1FvKs8sfXSa5TA6FHsD2v2BeNmlU=; b=loFZ3wg+RZyrJP5WO6P8HV8ypt
- gJzwviy22tCzfN56o6PocZ5VpSRqs864Mo6i6I+Uw8bhxw/vrbHap1giCG/rTkFt64tRsLPv8TE/L
- pPNZIwacKiE8RFy8kheg+N5BzbBM0mDbgETBoA9ACUsBkqJgg0bAHswXQXmQ2g7Xzl9k=;
+ bh=Ja8yjXW/Nihycq7JSqkIhvcVwYqGe/pmO57BMxjFYPk=; b=EYbbZBLSizui0oPFI5qV/M5viF
+ GOKssAIC+f0FZh61uB6bXNkCpDBl4FX1XHr2INo24UPEpmeEQPHsWyieVq/VXLli27kYIRbo4nNKZ
+ SVBwWyk8eT8+a46B46DO6XYLjpmfdCU4iL7uJ3feMXleePBM7e+n3vgaESbkBGt5XEJ0=;
 Received: from andrew by vps0.lunn.ch with local (Exim 4.89)
  (envelope-from <andrew@lunn.ch>)
- id 1ha4aC-0002PI-Ik; Sun, 09 Jun 2019 22:38:28 +0200
-Date: Sun, 9 Jun 2019 22:38:28 +0200
+ id 1ha4gg-0002Un-Lv; Sun, 09 Jun 2019 22:45:10 +0200
+Date: Sun, 9 Jun 2019 22:45:10 +0200
 From: Andrew Lunn <andrew@lunn.ch>
 To: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-Subject: Re: [RFC next v1 2/5] gpio: of: parse stmmac PHY reset line specific
- active-low property
-Message-ID: <20190609203828.GA8247@lunn.ch>
+Subject: Re: [RFC next v1 0/5] stmmac: honor the GPIO flags for the PHY reset
+ GPIO
+Message-ID: <20190609204510.GB8247@lunn.ch>
 References: <20190609180621.7607-1-martin.blumenstingl@googlemail.com>
- <20190609180621.7607-3-martin.blumenstingl@googlemail.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <20190609180621.7607-3-martin.blumenstingl@googlemail.com>
+In-Reply-To: <20190609180621.7607-1-martin.blumenstingl@googlemail.com>
 User-Agent: Mutt/1.5.23 (2014-03-12)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190609_133844_255982_56D86492 
-X-CRM114-Status: GOOD (  10.41  )
+X-CRM114-CacheID: sfid-20190609_134518_487079_448FD636 
+X-CRM114-Status: UNSURE (   7.15  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -87,24 +87,24 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On Sun, Jun 09, 2019 at 08:06:18PM +0200, Martin Blumenstingl wrote:
-> The stmmac driver currently ignores the GPIO flags which are passed via
-> devicetree because it operates with legacy GPIO numbers instead of GPIO
-> descriptors.
+> Patch #1 and #4 are minor cleanups which follow the boyscout rule:
+> "Always leave the campground cleaner than you found it."
+
+> I
+> am also looking for suggestions how to handle these cross-tree changes
+> (patch #2 belongs to the linux-gpio tree, patches #1, 3 and #4 should
+> go through the net-next tree. I will re-send patch #5 separately as
+> this should go through Kevin's linux-amlogic tree).
 
 Hi Martin
 
-I don't think this is the reason. I think historically stmmac messed
-up and ignored the flags. There are a number of device tree blobs
-which have the incorrect flag value, but since it was always ignored,
-it did not matter. Then came along a board which really did need the
-flag, but it was too late, it could not be enabled because too many
-boards would break. So the hack was made, and snps,reset-active-low
-was added.
+Patches 1 and 4 don't seem to have and dependencies. So i would
+suggest splitting them out and submitting them to netdev for merging
+independent of the rest.
 
-Since snps,reset-active-low is a hack, it should not be in the
-core. Please don't add it to gpiolib-of.c, keep it within stmmac
-driver.
+Linus can probably create a stable branch with the GPIO changes, which
+David can pull into net-next, and then apply the stmmac changes on
+top.
 
 	Andrew
 
