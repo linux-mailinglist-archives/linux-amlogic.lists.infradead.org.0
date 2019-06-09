@@ -2,88 +2,61 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 006933AB12
-	for <lists+linux-amlogic@lfdr.de>; Sun,  9 Jun 2019 20:08:02 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5C3233ABD4
+	for <lists+linux-amlogic@lfdr.de>; Sun,  9 Jun 2019 22:38:53 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=9+k9J45ZjhHLENQG18tyCkJ2l9iFV+AGRCOIObR2egk=; b=rgNDmNneLiMNdS
-	uawuK8uZO42KBJIcBZ2/BYbjNmBsBhFsgFFvDCmTpOpOs6rr7aKXPG+DzBf3HKjoo3F3B1u3vIQwJ
-	Uz57q4XZL/ZreW2thCU9z/oqJwGZsYxkXxhSpmKfj0ohXS32P6FtR2kk/qrhnX6l9585bEepFOKrk
-	o5S1L2CWwl6vNHZTidWGKQY4Rkg20o3yAgFdUzC5+jM4VIAwWVPcrdqt4KWKWa6JOO2dbrsJ8eUy1
-	wPrK9AeE2oW5DX0q1UWi2b2U5a35lVi2bWAC52nfTwhY6g3Syxb+r4cbAk5woZIIzKmp0s+W8+HGP
-	NRJQy2we8nhDrx9wkJeg==;
+	List-Owner; bh=afB5jVuDfk/hxTqDLWYPCIoLjIbclDFND8D41OHCTds=; b=bEmmhJkllGwOfV
+	Y5BtuAWtcK9L3ihOS7cgVcJvUBty6Qob8QFoHW4phlZHkUTYzEj/iCB4HsNOD8KOBb/NNxyevKpOG
+	mKeFQ5yyZ9flXRSrXFc3CMnXXZoaMy+qf5BJtQ3Eo+iakW/6Ngc54GusiO6NMhnbsaNfilLh+ki2c
+	c5SH8fawc2fB50WtG0NSMdAtEXUe6XHjfHmTxCkrv7nxdB421jLDgn8+oOI0IDEwUPRMa+FhXS4g8
+	VO83xVhsD4EeRbulCDiniDDMNLlLqY5W35fAaAYZD9HEjT5ot4d3No0X4/L8l08QZsIZMcI3icuuF
+	5RUin6zbgIAASOMa8gZg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1ha2EX-0004sM-MB; Sun, 09 Jun 2019 18:07:57 +0000
-Received: from mail-wr1-x444.google.com ([2a00:1450:4864:20::444])
+	id 1ha4aW-00078y-Q6; Sun, 09 Jun 2019 20:38:48 +0000
+Received: from vps0.lunn.ch ([185.16.172.187])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1ha2DM-0003eB-U9; Sun, 09 Jun 2019 18:06:46 +0000
-Received: by mail-wr1-x444.google.com with SMTP id x17so6864723wrl.9;
- Sun, 09 Jun 2019 11:06:43 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=googlemail.com; s=20161025;
- h=from:to:cc:subject:date:message-id:in-reply-to:references
- :mime-version:content-transfer-encoding;
- bh=o6l+94PYyR5Sk//+/Av+qY/UlCTL0ZemTkfdZsKsuI8=;
- b=SdWX2T5SmsidfZY0juvRr2RV/3P4zrsZFer61k+iFahxhK3NUrLNV7vJqaiiediw4R
- rcD5gjK4F36aGP9zl93OjqUlTqKa+yOuFb1zRg53a0+wk8GFvnBaH8M8tYUWFnkcMhES
- z6g3IjTPw7r0iQvIRiH4U10mEqwsFgh48Epr6t8L1JT2H0LP+CQmVdEwJdC9x/2+GFfe
- ovcWvCt7k9lSwAFW8Ms2DOuzngbf6sdjnjZzkBh4CFHgf+kYTWgHWQ8Lg8qcWOqPJ8R/
- CDsDEoFU29qpw66hFva8GSiCmvLelz82KUglM9YxxtwJTYRITd8hm+1Gx2C1LtklqYtl
- dWIA==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
- :references:mime-version:content-transfer-encoding;
- bh=o6l+94PYyR5Sk//+/Av+qY/UlCTL0ZemTkfdZsKsuI8=;
- b=gCJNgA6nFRIwLcEE9Yj5sWSEHDtS4htNPwfvRMdfrPXvHOFk+YQ5Cv50HKsnRliB44
- mpouV1DNIxJ2OBN4khueh48hjrqlhWXjjD8n/U2VMJ/okFfzbPvhIXUaKSg4t88odanF
- EETxIiddfYxyEVTdcckUXRamgvxnDQH4LFMHu03ZYNPMj7X2PrahrIKws24BOdfjSNZj
- K2Nv8xw2IkhIm09ih1iWwnq3QG9MHsgLPcXnGGja8rMhNimu3dRaTf22RM5zdDA2jkCf
- DknYQF24Upjbb57eVuE24uWsfjhan4HO00759A8+8lxmTTKmf6XNk7DIkxm8YbgHuIZT
- AfwQ==
-X-Gm-Message-State: APjAAAUv47ynXp/9uelhlAvdq2x0738l8fL/EvL1ooXLudGL6k3/CA8g
- +O4DmaxksYkFmSF6uBIf3tQ=
-X-Google-Smtp-Source: APXvYqwvHItbEUzIdxb67KT8Bn7m2rjiaeTPe7nvO5ksWV2HWlyxwGJBfFo9q42FP5gCm25H0bJ3Yg==
-X-Received: by 2002:adf:fd8d:: with SMTP id d13mr7811983wrr.8.1560103602460;
- Sun, 09 Jun 2019 11:06:42 -0700 (PDT)
-Received: from blackbox.darklights.net
- (p200300F133DDA400B42D8EB9D711C35E.dip0.t-ipconnect.de.
- [2003:f1:33dd:a400:b42d:8eb9:d711:c35e])
- by smtp.googlemail.com with ESMTPSA id h14sm2007731wrs.66.2019.06.09.11.06.41
- (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Sun, 09 Jun 2019 11:06:41 -0700 (PDT)
-From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-To: netdev@vger.kernel.org, linux-gpio@vger.kernel.org,
- linux-amlogic@lists.infradead.org, linus.walleij@linaro.org,
- bgolaszewski@baylibre.com, peppe.cavallaro@st.com, alexandre.torgue@st.com,
- joabreu@synopsys.com
-Subject: [RFC next v1 5/5] arm64: dts: meson: g12a: x96-max: fix the Ethernet
- PHY reset line
-Date: Sun,  9 Jun 2019 20:06:21 +0200
-Message-Id: <20190609180621.7607-6-martin.blumenstingl@googlemail.com>
-X-Mailer: git-send-email 2.21.0
-In-Reply-To: <20190609180621.7607-1-martin.blumenstingl@googlemail.com>
+ id 1ha4aS-00077i-22; Sun, 09 Jun 2019 20:38:46 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=lunn.ch;
+ s=20171124; h=In-Reply-To:Content-Type:MIME-Version:References:Message-ID:
+ Subject:Cc:To:From:Date:Sender:Reply-To:Content-Transfer-Encoding:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
+ List-Post:List-Owner:List-Archive;
+ bh=aAgxuie2Hz2Ygvh1FvKs8sfXSa5TA6FHsD2v2BeNmlU=; b=loFZ3wg+RZyrJP5WO6P8HV8ypt
+ gJzwviy22tCzfN56o6PocZ5VpSRqs864Mo6i6I+Uw8bhxw/vrbHap1giCG/rTkFt64tRsLPv8TE/L
+ pPNZIwacKiE8RFy8kheg+N5BzbBM0mDbgETBoA9ACUsBkqJgg0bAHswXQXmQ2g7Xzl9k=;
+Received: from andrew by vps0.lunn.ch with local (Exim 4.89)
+ (envelope-from <andrew@lunn.ch>)
+ id 1ha4aC-0002PI-Ik; Sun, 09 Jun 2019 22:38:28 +0200
+Date: Sun, 9 Jun 2019 22:38:28 +0200
+From: Andrew Lunn <andrew@lunn.ch>
+To: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+Subject: Re: [RFC next v1 2/5] gpio: of: parse stmmac PHY reset line specific
+ active-low property
+Message-ID: <20190609203828.GA8247@lunn.ch>
 References: <20190609180621.7607-1-martin.blumenstingl@googlemail.com>
+ <20190609180621.7607-3-martin.blumenstingl@googlemail.com>
 MIME-Version: 1.0
+Content-Disposition: inline
+In-Reply-To: <20190609180621.7607-3-martin.blumenstingl@googlemail.com>
+User-Agent: Mutt/1.5.23 (2014-03-12)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190609_110644_999334_EEFE2AAA 
-X-CRM114-Status: GOOD (  13.27  )
+X-CRM114-CacheID: sfid-20190609_133844_255982_56D86492 
+X-CRM114-Status: GOOD (  10.41  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:444 listed in]
- [list.dnswl.org]
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (martin.blumenstingl[at]googlemail.com)
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ no trust [185.16.172.187 listed in list.dnswl.org]
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
@@ -103,57 +76,37 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, narmstrong@baylibre.com,
- Martin Blumenstingl <martin.blumenstingl@googlemail.com>, khilman@baylibre.com,
- linux-kernel@vger.kernel.org, davem@davemloft.net,
+Cc: devicetree@vger.kernel.org, alexandre.torgue@st.com,
+ linux-gpio@vger.kernel.org, netdev@vger.kernel.org, linus.walleij@linaro.org,
+ narmstrong@baylibre.com, linux-kernel@vger.kernel.org,
+ bgolaszewski@baylibre.com, joabreu@synopsys.com, khilman@baylibre.com,
+ peppe.cavallaro@st.com, linux-amlogic@lists.infradead.org, davem@davemloft.net,
  linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-The PHY reset line and interrupt line are swapped on the X96 Max
-compared to the Odroid-N2 schematics. This means:
-- GPIOZ_14 is the interrupt line (on the Odroid-N2 it's the reset line)
-- GPIOZ_15 is the reset line (on the Odroid-N2 it's the interrupt line)
+On Sun, Jun 09, 2019 at 08:06:18PM +0200, Martin Blumenstingl wrote:
+> The stmmac driver currently ignores the GPIO flags which are passed via
+> devicetree because it operates with legacy GPIO numbers instead of GPIO
+> descriptors.
 
-Also the GPIOZ_14 and GPIOZ_15 pins are special. The datasheet describes
-that they are "3.3V input tolerant open drain (OD) output pins". This
-means the GPIO controller can drive the output LOW to reset the PHY. To
-release the reset it can only switch the pin to input mode. The output
-cannot be driven HIGH for these pins.
-This requires configuring the reset line as GPIO_OPEN_SOURCE because
-otherwise the PHY will be stuck in "reset" state (because driving the
-pin HIGH seeems to result in the same signal as driving it LOW).
+Hi Martin
 
-Switch to GPIOZ_15 for the reset GPIO with the correct flags and drop
-the "snps,reset-active-low" property as this is now encoded in the
-GPIO_OPEN_SOURCE flag.
+I don't think this is the reason. I think historically stmmac messed
+up and ignored the flags. There are a number of device tree blobs
+which have the incorrect flag value, but since it was always ignored,
+it did not matter. Then came along a board which really did need the
+flag, but it was too late, it could not be enabled because too many
+boards would break. So the hack was made, and snps,reset-active-low
+was added.
 
-Fixes: 51d116557b2044 ("arm64: dts: meson-g12a-x96-max: Add Gigabit Ethernet Support")
-Signed-off-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
----
- arch/arm64/boot/dts/amlogic/meson-g12a-x96-max.dts | 3 +--
- 1 file changed, 1 insertion(+), 2 deletions(-)
+Since snps,reset-active-low is a hack, it should not be in the
+core. Please don't add it to gpiolib-of.c, keep it within stmmac
+driver.
 
-diff --git a/arch/arm64/boot/dts/amlogic/meson-g12a-x96-max.dts b/arch/arm64/boot/dts/amlogic/meson-g12a-x96-max.dts
-index 98bc56e650a0..c93b639679c0 100644
---- a/arch/arm64/boot/dts/amlogic/meson-g12a-x96-max.dts
-+++ b/arch/arm64/boot/dts/amlogic/meson-g12a-x96-max.dts
-@@ -186,9 +186,8 @@
- 	phy-mode = "rgmii";
- 	phy-handle = <&external_phy>;
- 	amlogic,tx-delay-ns = <2>;
--	snps,reset-gpio = <&gpio GPIOZ_14 0>;
-+	snps,reset-gpio = <&gpio GPIOZ_15 GPIO_OPEN_SOURCE>;
- 	snps,reset-delays-us = <0 10000 1000000>;
--	snps,reset-active-low;
- };
- 
- &pwm_ef {
--- 
-2.21.0
-
+	Andrew
 
 _______________________________________________
 linux-amlogic mailing list
