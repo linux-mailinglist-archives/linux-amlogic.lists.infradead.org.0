@@ -2,84 +2,85 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6B9AF3D52C
-	for <lists+linux-amlogic@lfdr.de>; Tue, 11 Jun 2019 20:08:51 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 874564188F
+	for <lists+linux-amlogic@lfdr.de>; Wed, 12 Jun 2019 01:06:10 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:References
+	:In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=IRwNFpKTIHNGuHLlxetSFqhzMvR1cN9PnXKcyMnm2i0=; b=e0imXHluHjk8BB
-	vX3nCzGWFP963UZOEZuXwgj3mT4KH5SNvxFyW3IhQu7IC/Cuem88HTHnQppcv6c5dBnvqIt/hjo7Q
-	gpaA1JFNOApDfNpfcYCtLuz8dARq+pm0NO28SCvaoceaWTcTfJR/pInrxMPL6/jkCDPvnb8bnIka3
-	N+/MCqHSrfX+zUCagX0xdb6HFtCO5OSx1QzXS1NAoE03MEwkVIzxxU2ST6BVcse/+3a7lMrP8Iwgj
-	Cu4ms5SIj+9bxmjNYOOQNeAZcSI7xG43ZsQ8kr6w9iqA0PvKPN29YRRrZjWKarpkT5ahUzvmGqUMn
-	D4EhO7Ng+LKQeCICPCQA==;
+	List-Owner; bh=zj9yeBP3/i9AbVYopSo3OGcZ/bMMpCQ+dayNTLFof9Y=; b=Ceaqw36gp98j5W
+	MH67ylcuzW12/mblnQrVqz9BdG+3a8NhuUHcVJbXKyXig/lmDNCF84gDgid50mWMFG0ouTjQe7eU4
+	okIQQKkrPnGxJ4gIZYxWFj6NzdcbhACuUvRVwkTISv5a9ciEU/iNrVQDTwwk5i5XNt2z+wBA4EC8a
+	5P0Ew3JBZ29bJevWwUaOU1uvpSacVV2++rDNqu2b/LLsvk09v2rkiSsQPspYFmqIb3Sp2UVPq1UAA
+	lXv97N3g0yW8x2T1bdmS/zjN1DxAUqbRHJwBHWeszLUSNXH4utiZBJZrGTZM86FBq9y6uaGrdpP2f
+	NV7b3ENGn5jzdrWU82Uw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1halCS-00056n-Eg; Tue, 11 Jun 2019 18:08:48 +0000
-Received: from mail-ot1-x341.google.com ([2607:f8b0:4864:20::341])
+	id 1hapq7-0000CH-7S; Tue, 11 Jun 2019 23:06:03 +0000
+Received: from mail-pg1-x544.google.com ([2607:f8b0:4864:20::544])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1halCN-00054K-GS; Tue, 11 Jun 2019 18:08:45 +0000
-Received: by mail-ot1-x341.google.com with SMTP id z23so12787842ote.13;
- Tue, 11 Jun 2019 11:08:43 -0700 (PDT)
+ id 1hapq3-0000Bi-Lw
+ for linux-amlogic@lists.infradead.org; Tue, 11 Jun 2019 23:06:01 +0000
+Received: by mail-pg1-x544.google.com with SMTP id k187so7290886pga.0
+ for <linux-amlogic@lists.infradead.org>; Tue, 11 Jun 2019 16:05:58 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=googlemail.com; s=20161025;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=O89jlWqoEX7q/G6CiVxiDDmlI/FOM0sB6BHEXW+0fFM=;
- b=cHdSLiwdTyZbPGVz/qYnZJJCYplwKEbE0QdVdYmjqez+GGasa8TA9GEaZeZf+/Q/yc
- 8TIaqOiIijHlpQPN+b0BBZvmxtMd47x/uYK7Vk5XPD8mYxbl+yUPaIuF7vI0M7QzRtm0
- HNeafuVGHu/sa/BCqZcATKXmtS7Eag+BS6pOHP7N3/7dY0uWHKLKUSLT34TY6AzMuvGD
- Nr42TPWl2pxEfX5qbCwSGwJadJSQJ9gNcRUKKGUG7vKQZCsm/m8sJ9YWSh2bYRWL5CwC
- TqB5iiaGNo0Yp7KTmdwXVV/+fDhjaVwXeP064+XZo1StqFJ682mO7SEdwmnKHz22qWhC
- eMcA==
+ d=baylibre-com.20150623.gappssmtp.com; s=20150623;
+ h=from:to:cc:subject:in-reply-to:references:date:message-id
+ :mime-version; bh=OBwSPzkDdi1CMoAJXu3fdSCyBq/M09/6VhI4AMk4Xd0=;
+ b=myQGfU/fQ9FotkLvkIP5napMe/OlFIpyYMu85C1/ME8ATNL3ykv9VzsgnRpn3SiXtB
+ oK2zfgP4tp0UvDA43Eb5BnXfH2n9vFTf5ttK+jxUOAKg64WPZlvO+qYjypkNRx7fOELh
+ +/kyBy9tyGhTsyAtSsjBgdhzvl7i8qU0vwi0bKaYntUUFQFSCK1PzG8coiWfRIHEs3F7
+ mZnu+yaiZIil39fibfqN1W7CTlDjWG1/6hcssnbsnUUyZ07qAhXeSB6EJNLM4XK++Dw+
+ hRmBU2Gnj+VniTueB2pa2vhiNaHtAg4oP5sZcjecADRWjA8Nh9VCSyaq5PBegpLoen9p
+ oYgw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=O89jlWqoEX7q/G6CiVxiDDmlI/FOM0sB6BHEXW+0fFM=;
- b=STqRoHxEyXnzZupT7GoGBIlrUGb7NSyl3yhwZdWeh1ZWqXTKe9nFOpC9SGmRJheH2X
- uqPSRxWHLaL3FQJQcvWER+s5QZUFCAvRWA1YBUJrcHCN0TmksOhwM9EHtVeBpFIhS+cr
- nNCgPziq35+U7cG5n2Jj3MUyUj2FRD0LWTjg6HQmYSW1yN8fVtEbSZZPFDhgU0bw0I1z
- RM8HxtFOMui7iHLUkG4xbB4SH0sKvQeavT71bjUqLGaGxcClHhp6p4h+YLoaw+QI13R7
- H99hiD1ndsqyYVKcyTvRNevJyRAKBZt1EgRqLPkgkW/HLdQi/04chuM76wga2WrZvjqI
- fO0w==
-X-Gm-Message-State: APjAAAXyAeYQc1GSXzVNzlZ4ZWdhDuxtteThErI7qJnR2ABlJtwFWl8D
- 4ywVGPskEUHiptKvelVedETXufRRrYk7nLYbc5M=
-X-Google-Smtp-Source: APXvYqx6SoLuddvsSFbGwWXlHsKKnRFjZOzVnVqvxNNOkTK4cQ1P337c36bckWzk3tAMnUuN46R+aOyOVrxZcNZhBbc=
-X-Received: by 2002:a9d:32a6:: with SMTP id u35mr36300662otb.81.1560276522291; 
- Tue, 11 Jun 2019 11:08:42 -0700 (PDT)
+ h=x-gm-message-state:from:to:cc:subject:in-reply-to:references:date
+ :message-id:mime-version;
+ bh=OBwSPzkDdi1CMoAJXu3fdSCyBq/M09/6VhI4AMk4Xd0=;
+ b=sVfgJCI/M6jHxv8LpTRL8R6CQ3C1N6xXauLnNPDyCwKUZaEzwsogfJiKlza3JPMGrC
+ B/jFEcNk9XJAs2JvmCsMP756JgzZ6om47huChIlCR+MzZOdqlUizbQK/vaNt+GMfmmRb
+ V3s9NHl6pCFlpCBrVf+lTJVto0blGqxdF6ELw0mYMz+oDfp01B6cVfCShwediHq7RoNU
+ /cHdvyYfbkjFQygcYus8/qfRk0Hzi0ybDcEcJ7EOqSOSitUQ4BaL93Wz+tAY6E9DzL1R
+ UdpyhI1IEwQ/dEOJHqhvYWRNk6q6DaljZLWfMdyIzPhPt+2C0+ylnYXv8TCC4WRLgp6E
+ ZiqQ==
+X-Gm-Message-State: APjAAAUvTCgLyWQSjhnxvMKVKcVsw7oMeeBws3V7diz3tWvPI7dHDp04
+ QWUOyAZuYp22F0WE+9Ive7jZpg==
+X-Google-Smtp-Source: APXvYqxjdj5vYjUUy2sB0u9Tk6uxU+kfxuJmVI3vHyHL5GJvrsWFCoAFGf8gZgFCMu8WEUVcxUHFCg==
+X-Received: by 2002:a17:90a:ba94:: with SMTP id
+ t20mr15629024pjr.116.1560294357844; 
+ Tue, 11 Jun 2019 16:05:57 -0700 (PDT)
+Received: from localhost (c-71-197-186-152.hsd1.wa.comcast.net.
+ [71.197.186.152])
+ by smtp.googlemail.com with ESMTPSA id x5sm4327928pjp.21.2019.06.11.16.05.57
+ (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
+ Tue, 11 Jun 2019 16:05:57 -0700 (PDT)
+From: Kevin Hilman <khilman@baylibre.com>
+To: Jerome Brunet <jbrunet@baylibre.com>
+Subject: Re: [PATCH 0/2] arm64: dts: meson: sei510: add sound card
+In-Reply-To: <20190524140318.17608-1-jbrunet@baylibre.com>
+References: <20190524140318.17608-1-jbrunet@baylibre.com>
+Date: Tue, 11 Jun 2019 16:05:56 -0700
+Message-ID: <7himtb4t9n.fsf@baylibre.com>
 MIME-Version: 1.0
-References: <20190611135842.8396-1-narmstrong@baylibre.com>
-In-Reply-To: <20190611135842.8396-1-narmstrong@baylibre.com>
-From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-Date: Tue, 11 Jun 2019 20:08:31 +0200
-Message-ID: <CAFBinCAkwjf9oDV6AGPi2PzzQ2KNTXXDHW6FTfN3kXpDT6cFpg@mail.gmail.com>
-Subject: Re: [PATCH] usb: dwc3: meson-g12a: Add support for IRQ based OTG
- switching
-To: Neil Armstrong <narmstrong@baylibre.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190611_110843_640173_24F5783A 
-X-CRM114-Status: GOOD (  19.62  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190611_160559_781244_DF0C300B 
+X-CRM114-Status: UNSURE (   9.40  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:341 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:544 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (martin.blumenstingl[at]googlemail.com)
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
@@ -92,93 +93,36 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: balbi@kernel.org, linux-usb@vger.kernel.org, linux-kernel@vger.kernel.org,
- linux-arm-kernel@lists.infradead.org, linux-amlogic@lists.infradead.org
+Cc: devicetree@vger.kernel.org, linux-amlogic@lists.infradead.org,
+ linux-kernel@vger.kernel.org, Jerome Brunet <jbrunet@baylibre.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Hi Neil,
+Jerome Brunet <jbrunet@baylibre.com> writes:
 
-On Tue, Jun 11, 2019 at 3:58 PM Neil Armstrong <narmstrong@baylibre.com> wrote:
+> This patchset adds the sound card of sei510 board.
 >
-> Add support for the OTG ID change interrupt to switch between Host
-> and Device mode.
+> Note #1:
+> The patchset (build) depends on the tohdmitx ASoC patch [0] for the dt
+> bindings of the tohdmitx glue. It also (run) depends on the mpll clock
+> series [1] to get a correct clock sources.
 >
-> Tested on the Hardkernel Odroid-N2 board.
+> Note #2:
+> I would normaly prefer to use the HIFI pll dedicated to audio to provide
+> the base rate for the 48kHz audio family. HIFI pll rate precision is a
+> little bit better than the MPLL. However, the HIFI pll may sometimes,
+> rarely, take a long time to report a lock. I'm still debugging this.
+> In the mean time, let's use MPLL2 instead.
 >
-> Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
-with the three questions/comments below answered/addressed:
-Reviewed-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+> [0]: e35f5ad6a965 ("ASoC: meson: add tohdmitx DT bindings")
+> [1]: https://lkml.kernel.org/r/20190513123115.18145-1-jbrunet@baylibre.com
 
-> ---
->  drivers/usb/dwc3/dwc3-meson-g12a.c | 32 ++++++++++++++++++++++++++++--
->  1 file changed, 30 insertions(+), 2 deletions(-)
->
-> diff --git a/drivers/usb/dwc3/dwc3-meson-g12a.c b/drivers/usb/dwc3/dwc3-meson-g12a.c
-> index 2aec31a2eacb..e5c5ad0d529e 100644
-> --- a/drivers/usb/dwc3/dwc3-meson-g12a.c
-> +++ b/drivers/usb/dwc3/dwc3-meson-g12a.c
-the comment block at the start of the driver file also contains a
-"TOFIX" which points to the missing IRQ handling
-can you please also drop that TOFIX comment in lines 15/16?
+All dependencies are merged or queued for v5.3, so queuing this for v5.3
+also,
 
-> @@ -348,6 +348,22 @@ static enum usb_role dwc3_meson_g12a_role_get(struct device *dev)
->                 USB_ROLE_HOST : USB_ROLE_DEVICE;
->  }
->
-> +static irqreturn_t dwc3_meson_g12a_irq_thread(int irq, void *data)
-> +{
-> +       struct dwc3_meson_g12a *priv = data;
-> +       enum phy_mode otg_id;
-> +
-> +       otg_id = dwc3_meson_g12a_get_id(priv);
-> +       if (otg_id != priv->otg_phy_mode) {
-> +               if (dwc3_meson_g12a_otg_mode_set(priv, otg_id))
-> +                       dev_warn(priv->dev, "Failed to switch OTG mode\n");
-> +       }
-> +
-> +       regmap_update_bits(priv->regmap, USB_R5, USB_R5_ID_DIG_IRQ, 0);
-> +
-> +       return IRQ_HANDLED;
-> +}
-> +
->  static struct device *dwc3_meson_g12_find_child(struct device *dev,
->                                                 const char *compatible)
->  {
-> @@ -374,7 +390,7 @@ static int dwc3_meson_g12a_probe(struct platform_device *pdev)
->         void __iomem *base;
->         struct resource *res;
->         enum phy_mode otg_id;
-> -       int ret, i;
-> +       int ret, i, irq;
->
->         priv = devm_kzalloc(dev, sizeof(*priv), GFP_KERNEL);
->         if (!priv)
-> @@ -436,6 +452,19 @@ static int dwc3_meson_g12a_probe(struct platform_device *pdev)
->         /* Get dr_mode */
->         priv->otg_mode = usb_get_dr_mode(dev);
->
-> +       if (priv->otg_mode == USB_DR_MODE_OTG) {
-> +               /* Ack irq before registering */
-> +               regmap_update_bits(priv->regmap, USB_R5,
-> +                                  USB_R5_ID_DIG_IRQ, 0);
-I assume that either the IRQ line is:
-- always enabled
-- enabled when (USB_R5_ID_DIG_EN_0 | USB_R5_ID_DIG_EN_1 |
-USB_R5_ID_DIG_TH_MASK) are set (which we already do in
-dwc3_meson_g12a_usb_init)
-
-> +               irq = platform_get_irq(pdev, 0);
-do we need to check the IRQ before trying to request it?
-drivers/gpu/drm/meson/meson_dw_hdmi.c and drivers/usb/dwc3/host.c for
-example error out if irq number is lower than 0
-
-(it's great to see that this only required a small patch to make it work :))
-
-
-Martin
+Kevin
 
 _______________________________________________
 linux-amlogic mailing list
