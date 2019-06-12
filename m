@@ -2,73 +2,79 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7F42E4223E
-	for <lists+linux-amlogic@lfdr.de>; Wed, 12 Jun 2019 12:22:22 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id F0F0C428CF
+	for <lists+linux-amlogic@lfdr.de>; Wed, 12 Jun 2019 16:25:52 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:References
+	:In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=7z0MWzeMtHh8sgdn71H7t6Mrev24zOnKq/J8vQxpSic=; b=dtbxVWQhgXM26W
-	NL/jffTG/9FQLkBuLBxJr1BuuKJw5iGm3zkD3LPkJvUKfg2DMXg5Q/BUey/Xe0IoGOMD6hpLkmAdq
-	wC/Qy4ajc509AguWQl2+AhkhQ3SsMh85cETewud6Q6SrfP3w270rq0yXKxAVLT33Lg/YS+Woy+Lz2
-	w343wMJBf51v84TX/Ms4o5jVPDzLZgFQ2D1isr4Bvfm5gzOkG8COfGys3ykf7oNpUTh47s3X9wy/e
-	2PFvbjAiSpugnXW3Lzx1EbkF72sV8G5xkjl71gWXUaR4nYN5F/RNCtG7WI/ZG6wbvEo8lvPmaw+7q
-	/CsQtDl43ap9OnAtwXeg==;
+	List-Owner; bh=8TNg/9pcABW1+AtQKIiXa5kBBD2TSi9iyCit4hBvDUE=; b=LBRd/bFKv+mz6w
+	0w5VXOrd1M/3YBYhvQNFCSd352XEd4w9SzIW0cXVNUS5V72Bq8bo+G3uj9Ik3UYnp5ruf7eh/9tOF
+	S8kdqeINBj6EtYhICxkw4X7w9s9H3eEkU/erUvyHyEOlvtlLodSng8m2m1ISQe6JDJGix/FYz/6iH
+	clDRSbcbs0c6wtPJEDLzSASj2CCN0q9Xf8JZwpsHL6lr+8Ol0Rm7rIfx4ge4UX/vbDiRAOECs2kNt
+	9MgBoeNKyoAeHRGXEU7DwG4w30s4P+Bqjrvjd3XOla0PT1605lEsLqiD9DBChoxvHSzrfVXxX8v8O
+	YiXt4OxGIkU2u84ZgrgQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hb0OX-0002xF-Qy; Wed, 12 Jun 2019 10:22:17 +0000
-Received: from mail-wm1-x343.google.com ([2a00:1450:4864:20::343])
+	id 1hb4CA-00050y-8P; Wed, 12 Jun 2019 14:25:46 +0000
+Received: from mail-pg1-x541.google.com ([2607:f8b0:4864:20::541])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hb0OG-0002f3-15
- for linux-amlogic@lists.infradead.org; Wed, 12 Jun 2019 10:22:01 +0000
-Received: by mail-wm1-x343.google.com with SMTP id s15so5940253wmj.3
- for <linux-amlogic@lists.infradead.org>; Wed, 12 Jun 2019 03:21:59 -0700 (PDT)
+ id 1hb4Bu-0004qu-K1
+ for linux-amlogic@lists.infradead.org; Wed, 12 Jun 2019 14:25:32 +0000
+Received: by mail-pg1-x541.google.com with SMTP id s27so9025918pgl.2
+ for <linux-amlogic@lists.infradead.org>; Wed, 12 Jun 2019 07:25:30 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=AFoHMSEj9tVrWcEUPH5FAzB19SGdLo79LhrgprT3fB0=;
- b=rulL1S3rudmYvANWuk91UMefuzuee5m+1kiBg/S4z4W6rohQIQJvVef0Ga8/kNwqJP
- kQbz+GWJXFvKOlUq8wHsIOsVwPqBI6yU4JVUxy8FcXHzelpiTu0d9AnpLnqKnk6brVeP
- 0fI7UN+JLLjazssXG03F2xYy4RGi8lRQZddXYhMMtpv3pOhX4qKtG2S8uhFGlc+GLnT6
- pvwprNWkUYEuVh6VpDMyqPFBM3B4d4BM96DCh7LGjxch5bvcQL2oQCAMKcd+OcUFDS/9
- lerJBd9pWHPVwxh6CPJHbt3h+bxG3bzij0XlNY2uclYVY1/q+J8iyOw8VXcY4XYFT3kO
- 9meA==
+ h=from:to:cc:subject:in-reply-to:references:date:message-id
+ :mime-version; bh=CG5iVPWcjFplF7lR6y3XE62eHLD9eYji1o8inBAtJJY=;
+ b=DkNlW945kuLZQ3RMFEaZhtAt/vvk0BfAkLbeAKizzc+dO/m7G5UF9lRQm6NNq+DUQh
+ OLjx98iEFsYqoENabN8XQzrRfB0Q9IoWk/uhCskW75d1RLTar/8kKDcJRAxWV50LaX24
+ m1lvDmGvJ92HaqHz9OUmZKcjabh54tm4K4IahU9DPDC0JuzJUCJNlET6Y8v5CG9MuDNs
+ 7inxq7/Pu7rKUo9WkPtzByceY8kkmQdTna1PRVg//7iHjmNAlshnrhZtb5VaiPBqNjFT
+ WdX2mmSdhZMr5Iybo/COmIzTsuYbvIaFlP3cddhl+HBvAIaRf7CN1gYZkVTahmdsPgeM
+ vHvQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=AFoHMSEj9tVrWcEUPH5FAzB19SGdLo79LhrgprT3fB0=;
- b=t9aKUY5TIbA3ZMrQmywnyFrqiIWwj0FrGv7FjDKqFgu1TxiTEcJahLOjN/BwlM+Z3Y
- DywP8rpMmYLfLoEztPPs6UFRiifxtJtPwIJIqQnYzTB7UwUv2FL3aGW2o6QNWK27lRa+
- fkK7NIKR1xWXq2ccB7kWsWhYOUB23SwbonEQG73i7FdQ2KRr7yhLK8MFKCuV8A4Yyx2t
- S0Vy2ZXVczYRX1Zbwop/8ef8UB7VAuiN270Mk7Th3/WiOYyQEu0ehDPcJe9a10z+mSdx
- w79O2npTFTKDuobTm8yYaCnSbUGMSsw23692St47D7uiV6inPrdtrR8EA8W0Ae1LNjw1
- swsw==
-X-Gm-Message-State: APjAAAXw9qKy+SVhCu5lQeW8wnI0sTHzx8gGpxxHQ7AsXl+ey2nml4eu
- ztu5n/W3+OrRben6plRFgrkwgA8XngpIAY8g73Z5qw==
-X-Google-Smtp-Source: APXvYqz6AjVcZoYHA6CdaGJpxS+2mtUzECSit9/BS1GTOdIOLeI2k4WuyT2w1sPbw2Vab/weDhNLTVi2+YFEotGwynw=
-X-Received: by 2002:a1c:ed07:: with SMTP id l7mr19968400wmh.148.1560334917880; 
- Wed, 12 Jun 2019 03:21:57 -0700 (PDT)
+ h=x-gm-message-state:from:to:cc:subject:in-reply-to:references:date
+ :message-id:mime-version;
+ bh=CG5iVPWcjFplF7lR6y3XE62eHLD9eYji1o8inBAtJJY=;
+ b=Pcjbr1AeSJB7T7FQoviee19lchXEyeei/AvUnHZT8JyqZbX/S3EKwT6gP8aImG0XUX
+ fF4FCj8K37wm/V5Fwc63N72zDBeJ1eNghp3marc7rHzoOS6xhQ9KNeCctJYFDUFT2hGS
+ 6qUtsGuSDbl4OHqyLMifvwvE/aXgbwpuJatPjB7bfJey1wGZVXKsbpWgScfIrlivdvDX
+ EYTi3kqUxRrSub2ZVPy3RI+4MRj+OJOhyqQt1aiXbZeceeDG8P/v23YeWtkap//NgKll
+ HXP6MCB2fnq9Ttn3RMaav5rLePZ2dTg6tTUVLLzB7lCswt348mV8TigUInvZ/XAe/NlJ
+ a1Gg==
+X-Gm-Message-State: APjAAAV5lGGklCtu2mCW74R29ku/mvVmkz5WaT68AEScWnrIkp8IVLUX
+ 6P+sqDTSpw6Xc3r80jt2PycxwC5hbp4=
+X-Google-Smtp-Source: APXvYqzFJUGgeRa9mS5//wWFpkOuEjJAUvNZgOI1pyCzeAI1Y14G2xwuNekpf+1k+vZZVrtDqAnWDA==
+X-Received: by 2002:a63:af44:: with SMTP id s4mr25363352pgo.411.1560349529636; 
+ Wed, 12 Jun 2019 07:25:29 -0700 (PDT)
+Received: from localhost (c-71-197-186-152.hsd1.wa.comcast.net.
+ [71.197.186.152])
+ by smtp.googlemail.com with ESMTPSA id y14sm121972pjr.13.2019.06.12.07.25.27
+ (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
+ Wed, 12 Jun 2019 07:25:27 -0700 (PDT)
+From: Kevin Hilman <khilman@baylibre.com>
+To: Neil Armstrong <narmstrong@baylibre.com>
+Subject: Re: [PATCH v5 0/3] arm64: Add initial support for Odroid-N2
+In-Reply-To: <20190603091008.2382-1-narmstrong@baylibre.com>
+References: <20190603091008.2382-1-narmstrong@baylibre.com>
+Date: Wed, 12 Jun 2019 07:25:27 -0700
+Message-ID: <7hr27y3mp4.fsf@baylibre.com>
 MIME-Version: 1.0
-References: <20190612100536.22368-1-yuehaibing@huawei.com>
-In-Reply-To: <20190612100536.22368-1-yuehaibing@huawei.com>
-From: Maxime Jourdan <mjourdan@baylibre.com>
-Date: Wed, 12 Jun 2019 12:21:47 +0200
-Message-ID: <CAMO6nayiXiOkHSxgZU+oyPdSo5ugcV6XaCdy7P1Riutv+c7XRQ@mail.gmail.com>
-Subject: Re: [PATCH -next] media: meson: vdec: Add missing kthread.h
-To: YueHaibing <yuehaibing@huawei.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190612_032200_135038_B0CCD8D2 
-X-CRM114-Status: GOOD (  12.76  )
+X-CRM114-CacheID: sfid-20190612_072530_682461_ECEB6BFE 
+X-CRM114-Status: UNSURE (   9.93  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:343 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:541 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -86,53 +92,39 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: devel@driverdev.osuosl.org, gregkh@linuxfoundation.org,
- linux-kernel@vger.kernel.org, linux-media@lists.freedesktop.org,
- Kevin Hilman <khilman@baylibre.com>, linux-amlogic@lists.infradead.org,
- Mauro Carvalho Chehab <mchehab@kernel.org>,
- linux-arm-kernel@lists.infradead.org,
- Linux Media Mailing List <linux-media@vger.kernel.org>
+Cc: linux-amlogic@lists.infradead.org, linux-kernel@vger.kernel.org,
+ linux-arm-kernel@lists.infradead.org, Neil Armstrong <narmstrong@baylibre.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On Wed, Jun 12, 2019 at 12:05 PM YueHaibing <yuehaibing@huawei.com> wrote:
->
-> Fix building error:
->
-> drivers/staging/media/meson/vdec/vdec.c: In function vdec_recycle_thread:
-> drivers/staging/media/meson/vdec/vdec.c:59:10: error: implicit declaration
->  of function kthread_should_stop;
->  did you mean thread_saved_sp? [-Werror=implicit-function-declaration]
->
-> Reported-by: Hulk Robot <hulkci@huawei.com>
-> Fixes: 3e7f51bd9607 ("media: meson: add v4l2 m2m video decoder driver")
-> Signed-off-by: YueHaibing <yuehaibing@huawei.com>
-> ---
->  drivers/staging/media/meson/vdec/vdec.c | 1 +
->  1 file changed, 1 insertion(+)
->
-> diff --git a/drivers/staging/media/meson/vdec/vdec.c b/drivers/staging/media/meson/vdec/vdec.c
-> index 4e4f9d6..0a1a04f 100644
-> --- a/drivers/staging/media/meson/vdec/vdec.c
-> +++ b/drivers/staging/media/meson/vdec/vdec.c
-> @@ -12,6 +12,7 @@
->  #include <linux/mfd/syscon.h>
->  #include <linux/slab.h>
->  #include <linux/interrupt.h>
-> +#include <linux/kthread.h>
->  #include <media/v4l2-ioctl.h>
->  #include <media/v4l2-event.h>
->  #include <media/v4l2-ctrls.h>
-> --
-> 2.7.4
->
->
+Neil Armstrong <narmstrong@baylibre.com> writes:
 
-Thanks for the patch, sorry that this one slipped through.
+> This patchset adds basic support for :
+> - Amlogic G12B, which is very similar to G12A
+> - The HardKernel Odroid-N2 based on the S922X SoC
+>
+> The Amlogic G12B SoC is very similar with the G12A SoC, sharing
+> most of the features and architecture, but with these differences :
+> - The first CPU cluster only has 2xCortex-A53 instead of 4
+> - G12B has a second cluster of 4xCortex-A73
+> - Both cluster can achieve 2GHz instead of 1,8GHz for G12A
+> - CPU Clock architecture is difference, thus needing a different
+>   compatible to handle this slight difference
+> - Supports a MIPI CSI input
+> - Embeds a Mali-G52 instead of a Mali-G31, but integration is the same
+>
+> Actual support is done in the same way as for the GXM support, including
+> the G12A dtsi and redefining the CPU clusters.
+> Unlike GXM, the first cluster is different, thus needing to remove
+> the last 2 cpu nodes of the first cluster.
 
-Acked-by: Maxime Jourdan <mjourdan@baylibre.com>
+Tested-by: Kevin Hilman <khilman@baylibre.com>
+
+Queued for v5.3,
+
+Kevin
 
 _______________________________________________
 linux-amlogic mailing list
