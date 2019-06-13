@@ -2,77 +2,74 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 660FA4359B
-	for <lists+linux-amlogic@lfdr.de>; Thu, 13 Jun 2019 13:43:00 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 00204435C3
+	for <lists+linux-amlogic@lfdr.de>; Thu, 13 Jun 2019 14:12:18 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=q9+KJJlO/qhAxYaDZjFW2luhCinASQcLqiXNyrmH95A=; b=DiDsdiqEkLyG/F
-	0Lvhll+/cgzm0ZqcerWTCsv9nNPM8Scw7yQ/OXx4KSv+7gnPvy+ireK6KPxAGgf4FTMExgiuLXMyB
-	ziN4qN04ibyBJqqhkPRaGQCjJwKclwgeK6JxYy1AT6z92P7DCPFyJUVojqPB0CQFr2a3hj+ZFcfnC
-	K/hVruIphji5qHd8NIcMXFwfIXS81XB1OkCy6cf0H9q2yuIXHVfcHpE8xBH9XOwop+k2C8YjpFw3H
-	r2VKrDeXyj8vD7l0qjWDGj/zUHmFYSYhwwMp1vpoYdX1Y1bqPcvM8B4RFgLbIA5F4Fj2rMTPqLhX3
-	usGjSqxhx5zwnOYkXxDQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=kbZkPUxPyUR7cxkrA3d1ZFIKDDEKI59bKzdiR55eE1Y=; b=rU1X8wKNAawg12
+	3LvIz34DD+7SsziJqKa9cqgnmdzuEsHMiHO7pcdtS97wZPfAlFH8lN+JGkjxDSOuoEOHu2PSUYZL+
+	c8avsbrlRXcxPTx8esKvWZXF9ffi3cK/MS4mT05DDsVXyMpOZDIQtPBlSar5hvok0e1RQVYeuYF3t
+	MgfPJ9cxsMEHyFP961i2bnZPYIuKe8htrv81hclPI67DpKTARIUiuOrWY0JTxcLVSzStOod/N5wBh
+	wWoBjf/iuiBt+KuKBmKdIVoRwJKwY67n1Djp+Nq+Z5ofytCFZTzGi9YPfKYmgTi/CvEcYuqm65BAh
+	hcJeFpb3K3+GT35qf9wQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hbO87-0000Ag-Uy; Thu, 13 Jun 2019 11:42:56 +0000
+	id 1hbOaW-00042G-Ak; Thu, 13 Jun 2019 12:12:16 +0000
 Received: from mail-wm1-x344.google.com ([2a00:1450:4864:20::344])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hbO7w-0008UN-7r
- for linux-amlogic@lists.infradead.org; Thu, 13 Jun 2019 11:42:45 +0000
-Received: by mail-wm1-x344.google.com with SMTP id 207so1973493wma.1
- for <linux-amlogic@lists.infradead.org>; Thu, 13 Jun 2019 04:42:44 -0700 (PDT)
+ id 1hbOaS-00041h-OZ
+ for linux-amlogic@lists.infradead.org; Thu, 13 Jun 2019 12:12:14 +0000
+Received: by mail-wm1-x344.google.com with SMTP id h19so6487311wme.0
+ for <linux-amlogic@lists.infradead.org>; Thu, 13 Jun 2019 05:12:12 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=from:to:cc:subject:date:message-id:in-reply-to:references
- :mime-version:content-transfer-encoding;
- bh=Tw+9nr0k/SQ4+6C+T7NQWdtgxVemIU5O6qgx24DY8vo=;
- b=Ok5DOoG/v42T5p/NULeH/QnUtOj3y3bgwt/tHoF5P/QfLizFjo2FteTJhShh/SJZlr
- Nmlqr3KRJRhMsWo6pVvAXVbul1OayENODZ5gcGgO5C7JDGHK9U+PzWdA/jg93WjfgrBX
- 3aPLgeJJNFVLG2B/rgjiiSmhS+VPDiaQJtZu9Yj5qNZsnJJwZOWKrk3hKiDrwVwOJa46
- DJ8yGbCY355E06ytD2Ad5rB+zWuOJWxU5VFLulOd9U0WSoao+makMDcH1cw103nSXVwm
- WvwvNjZS5YfcP6dgfELXmWKxdmNFba7TWuBCTXVwsvhillQ7D9Jrl3egEbQtgmyPgiVH
- 5Z9Q==
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=dxPAopxGigXChNe4VdO4Ubt5YTdhDcINUQzBTzEvzKk=;
+ b=1g9KtaZe/+oTpytYwjZO6yBksvr6Iq1cGRxviJuU4NBlxHLTidBtC8fZ57YYsFdFl+
+ xtC/aJBuwSN8BisYBx12l/oSJCZy7DIfRqBrq+rpXCGdLCHTxhXFvTmCBtsk8MkI0aAH
+ 6cChkYFKuHDiK7vinsQXX8B77oajTNHf6lWZJtc6spSEy9LQwmt38ohVGTwWglgjLY4J
+ TI3fiUKEsldOjiU9UYzkJmmmskIlq62uhE+mgxWk7wo5ewSljqAyBDENmsZDwvEarMf1
+ Mm0rEg0jEZtrwu7KfJ3heI5gmwlBnVyzf4HJO+Q7c9n41FDukqeJvEKo0oefEd/bXC1n
+ Yvgg==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
- :references:mime-version:content-transfer-encoding;
- bh=Tw+9nr0k/SQ4+6C+T7NQWdtgxVemIU5O6qgx24DY8vo=;
- b=Bgfpa/Cu+USMLYCYV61hX18VcYE4zDmVLALl19DjwX+qnXQxKZqKgHEmV/UvP37z3f
- TTtnZ0dcDDUSILxT54RqmXIPdkCGsEJaIAHF7jhvhn395IJ3Uu9MDx1KqENBYK48cDWW
- W+N1+rmipzztRnW8otbteqsseNpW4S3AK0GYT7D9T07ydzo5uAwPDDb7sEK0ZwhbsmQO
- 4NhOMuPYRq6pFB00njIEtg8OMz4lFLrSJd/cDTugVB5t26tP2pShRPcebJ7Xoxf6U5WS
- w3f326/Cv7xm4TfOeZzknyQonsbTXuAAZ0oUWCLqxp3nQAQXySlCJ3/GAU16S2W6jTh0
- xrtA==
-X-Gm-Message-State: APjAAAUCHbFGNZERd9eEm0w32jd2uSj9XtziBbD1cWNlPRFo12Y63PMp
- WSPC+KdqK3k7eM8+5e7pdBT8BA==
-X-Google-Smtp-Source: APXvYqzEpIcfbKY9VmOQOlh4gHR44pyPiRNjVhiHDFIUMTdcrq2NBX4iOv+SXfr3SjTejuF07/m1hA==
-X-Received: by 2002:a1c:9cd1:: with SMTP id f200mr3280189wme.157.1560426163056; 
- Thu, 13 Jun 2019 04:42:43 -0700 (PDT)
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=dxPAopxGigXChNe4VdO4Ubt5YTdhDcINUQzBTzEvzKk=;
+ b=N4qZRhV2/UnuLKNOqBLtbM3OjG3qSeyV9gKtpeIEO6p6x8EHUULBVK+NUfP6kVdFW1
+ 7TRB6GJVF7IEL5zjq2ChUebv1czxpBqvMw71r2c+tEyKI48VQ+H6/enia8SOY8jlVvDP
+ E1KHzMssiqHR3CbSXnBje9BJEiXwuM3O3xh5IMOrrvnQkOV3g27Kkoep3LT6KENWgbw3
+ Q0kEumG/t9tkZfQLxSTDvbcLD+LBKF0cNWXcN0abUERP4nXLSF3v/fTGPE4gBkrw8UT7
+ fFUFI1zBMuhjHbaA8B2oPjgMr6JBJ4MTUz9wycg0rUSGltwjlkCgsz0OkHYHJzmRr6iB
+ vxhA==
+X-Gm-Message-State: APjAAAV12IMF6/WXR54W48LHOjPiwIkODE87fLIF/cN2qJR0duH1EJic
+ 7YAagbs7BIMCY43tyDk55Xagf0UmNKw=
+X-Google-Smtp-Source: APXvYqxnPKLSaS0xc8+5oGeF/I6OTATx59AZvwhfSt3I2nQvb+XqlMcdxs+3C8O2o5Llg/zX03VARw==
+X-Received: by 2002:a7b:c344:: with SMTP id l4mr3450592wmj.25.1560427931387;
+ Thu, 13 Jun 2019 05:12:11 -0700 (PDT)
 Received: from boomer.local (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr.
  [90.63.244.31])
- by smtp.googlemail.com with ESMTPSA id b5sm2598490wru.69.2019.06.13.04.42.42
+ by smtp.googlemail.com with ESMTPSA id f6sm2974532wrw.68.2019.06.13.05.12.10
  (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Thu, 13 Jun 2019 04:42:42 -0700 (PDT)
+ Thu, 13 Jun 2019 05:12:10 -0700 (PDT)
 From: Jerome Brunet <jbrunet@baylibre.com>
-To: Mark Brown <broonie@kernel.org>, Liam Girdwood <lgirdwood@gmail.com>,
- Kevin Hilman <khilman@baylibre.com>
-Subject: [PATCH 4/4] ASoC: meson: axg-tdm: consistently use SND_SOC_DAIFMT
- defines
-Date: Thu, 13 Jun 2019 13:42:33 +0200
-Message-Id: <20190613114233.21130-5-jbrunet@baylibre.com>
+To: Andrzej Hajda <a.hajda@samsung.com>,
+ Laurent Pinchart <Laurent.pinchart@ideasonboard.com>,
+ David Airlie <airlied@linux.ie>, Daniel Vetter <daniel@ffwll.ch>
+Subject: [PATCH] drm: dw-hdmi-i2s: support more i2s format
+Date: Thu, 13 Jun 2019 14:12:07 +0200
+Message-Id: <20190613121207.12185-1-jbrunet@baylibre.com>
 X-Mailer: git-send-email 2.20.1
-In-Reply-To: <20190613114233.21130-1-jbrunet@baylibre.com>
-References: <20190613114233.21130-1-jbrunet@baylibre.com>
 MIME-Version: 1.0
 X-Patchwork-Bot: notify
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190613_044244_276205_03ED6E4B 
-X-CRM114-Status: UNSURE (   8.75  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190613_051212_817943_A2EF02E6 
+X-CRM114-Status: GOOD (  11.26  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -97,38 +94,89 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, alsa-devel@alsa-project.org,
- linux-amlogic@lists.infradead.org, linux-kernel@vger.kernel.org,
+Cc: Kevin Hilman <khilman@baylibre.com>, linux-amlogic@lists.infradead.org,
+ linux-kernel@vger.kernel.org, dri-devel@lists.freedesktop.org,
  Jerome Brunet <jbrunet@baylibre.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-There a mix of SND_SOC_DAIFMT_ and SND_SOC_DAI_FORMAT_ in
-axg-tdm-interface.c. Even, if this is currently the same thing, lets use
-the same group consistently.
+The dw-hdmi-i2s supports more formats than just regular i2s.
+Add support for left justified, right justified and dsp modes
+A and B.
 
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
 ---
- sound/soc/meson/axg-tdm-interface.c | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
 
-diff --git a/sound/soc/meson/axg-tdm-interface.c b/sound/soc/meson/axg-tdm-interface.c
-index 585ce030b79b..d51f3344be7c 100644
---- a/sound/soc/meson/axg-tdm-interface.c
-+++ b/sound/soc/meson/axg-tdm-interface.c
-@@ -306,8 +306,8 @@ static int axg_tdm_iface_hw_params(struct snd_pcm_substream *substream,
- 		}
- 		break;
+ Tested on the Amlogic arm64 meson-g12a-sei510 with i2s, left_j, dsp_a
+ and dsp_b. right_j is not supported by this platform.
+
+ .../drm/bridge/synopsys/dw-hdmi-i2s-audio.c   | 26 ++++++++++++++++---
+ drivers/gpu/drm/bridge/synopsys/dw-hdmi.h     |  6 +++--
+ 2 files changed, 27 insertions(+), 5 deletions(-)
+
+diff --git a/drivers/gpu/drm/bridge/synopsys/dw-hdmi-i2s-audio.c b/drivers/gpu/drm/bridge/synopsys/dw-hdmi-i2s-audio.c
+index 5cbb71a866d5..2b624cff541d 100644
+--- a/drivers/gpu/drm/bridge/synopsys/dw-hdmi-i2s-audio.c
++++ b/drivers/gpu/drm/bridge/synopsys/dw-hdmi-i2s-audio.c
+@@ -44,9 +44,8 @@ static int dw_hdmi_i2s_hw_params(struct device *dev, void *data,
+ 	u8 inputclkfs = 0;
  
--	case SND_SOC_DAI_FORMAT_DSP_A:
--	case SND_SOC_DAI_FORMAT_DSP_B:
-+	case SND_SOC_DAIFMT_DSP_A:
-+	case SND_SOC_DAIFMT_DSP_B:
- 		break;
+ 	/* it cares I2S only */
+-	if ((fmt->fmt != HDMI_I2S) ||
+-	    (fmt->bit_clk_master | fmt->frame_clk_master)) {
+-		dev_err(dev, "unsupported format/settings\n");
++	if (fmt->bit_clk_master | fmt->frame_clk_master) {
++		dev_err(dev, "unsupported clock settings\n");
+ 		return -EINVAL;
+ 	}
  
- 	default:
+@@ -63,6 +62,27 @@ static int dw_hdmi_i2s_hw_params(struct device *dev, void *data,
+ 		break;
+ 	}
+ 
++	switch (fmt->fmt) {
++	case HDMI_I2S:
++		conf1 |= HDMI_AUD_CONF1_MODE_I2S;
++		break;
++	case HDMI_RIGHT_J:
++		conf1 |= HDMI_AUD_CONF1_MODE_RIGHT_J;
++		break;
++	case HDMI_LEFT_J:
++		conf1 |= HDMI_AUD_CONF1_MODE_LEFT_J;
++		break;
++	case HDMI_DSP_A:
++		conf1 |= HDMI_AUD_CONF1_MODE_BURST_1;
++		break;
++	case HDMI_DSP_B:
++		conf1 |= HDMI_AUD_CONF1_MODE_BURST_2;
++		break;
++	default:
++		dev_err(dev, "unsupported format\n");
++		return -EINVAL;
++	}
++
+ 	dw_hdmi_set_sample_rate(hdmi, hparms->sample_rate);
+ 
+ 	hdmi_write(audio, inputclkfs, HDMI_AUD_INPUTCLKFS);
+diff --git a/drivers/gpu/drm/bridge/synopsys/dw-hdmi.h b/drivers/gpu/drm/bridge/synopsys/dw-hdmi.h
+index 4e3ec09d3ca4..091d7c28aa17 100644
+--- a/drivers/gpu/drm/bridge/synopsys/dw-hdmi.h
++++ b/drivers/gpu/drm/bridge/synopsys/dw-hdmi.h
+@@ -869,8 +869,10 @@ enum {
+ 
+ /* AUD_CONF1 field values */
+ 	HDMI_AUD_CONF1_MODE_I2S = 0x00,
+-	HDMI_AUD_CONF1_MODE_RIGHT_J = 0x02,
+-	HDMI_AUD_CONF1_MODE_LEFT_J = 0x04,
++	HDMI_AUD_CONF1_MODE_RIGHT_J = 0x20,
++	HDMI_AUD_CONF1_MODE_LEFT_J = 0x40,
++	HDMI_AUD_CONF1_MODE_BURST_1 = 0x60,
++	HDMI_AUD_CONF1_MODE_BURST_2 = 0x80,
+ 	HDMI_AUD_CONF1_WIDTH_16 = 0x10,
+ 	HDMI_AUD_CONF1_WIDTH_24 = 0x18,
+ 
 -- 
 2.20.1
 
