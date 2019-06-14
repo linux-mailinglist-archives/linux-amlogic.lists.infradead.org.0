@@ -2,69 +2,69 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 007A645867
-	for <lists+linux-amlogic@lfdr.de>; Fri, 14 Jun 2019 11:16:58 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id F423D45876
+	for <lists+linux-amlogic@lfdr.de>; Fri, 14 Jun 2019 11:20:53 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
 	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ra3uZQb2m8GFVUuLwylfkjXsPFJdsi4k/jk874TBoSc=; b=VBZv1HRvHpNYhS
-	DhP7vkrdQ2meWm/TA3xc4EYD0VrxJewSvYB1c7/+YR4MU3LGGhxv5GGB/LXtBYyE6Q3aMV09BJl4a
-	WrmKT/4DPs8eqwIUSXf1QBr/IADbwkvhgTo+Xw4S7kXmyE+oLQXF6oZL2kufE247+78m+NKQt/z46
-	EFi3MVhoUSMdyfb4M0xSUzfS9Daz+xJ41/nGdF8VyXz6UeX2Gr9M56xGi/NAbgCz838dmoxqd57/D
-	gxgv57uHbWfnx9XZ7FVweBFZPXZ4XdhC5ptTeZMJzBtMa4Y+w52Q3BFOZRsJOmIqHvlWXp/PF9mYG
-	LrkgX4H6SQ/6Q2Sa8MSQ==;
+	List-Owner; bh=UxyVlcXqjTmLaIAB6Zti30fNPVLu3HSQhm6tSLQNhLY=; b=P0y7MPKsOEyrCm
+	246dgeOX9QDfDCJk4aYbFJrn7H6uXirp5GTKOtQA7D5EC1Qi1TfzYtKs915q9ij1ibnAUg0Oxbv89
+	zWkl5z9STAVn5+D6I3ooj7kOUzlH13IAgCeBqrGvnPT5KXWJhfFIVqzQLUoB2tEfa8ifHdCilp5nD
+	fPbuWXFUMpMnOMJ6NPgNCBGQ6cQDK4rLXiV4iY5a0F4QD7MciHabMed7JMnl1JJ81OdWsBaqRpi5o
+	5OSTXYIsIpmu4Cyl3DgcQ8ATahFd6wzKfWPrGnUS4To1T/CG/xtexBBsiEUqURW7fOnZ4J0cQ996s
+	qdUVuWwQqDOlF1GR7/gg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hbiKF-0005Ka-7V; Fri, 14 Jun 2019 09:16:47 +0000
+	id 1hbiO8-0007VT-Mo; Fri, 14 Jun 2019 09:20:48 +0000
 Received: from mail-wm1-x341.google.com ([2a00:1450:4864:20::341])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hbiJl-00057H-Cq
- for linux-amlogic@lists.infradead.org; Fri, 14 Jun 2019 09:16:19 +0000
-Received: by mail-wm1-x341.google.com with SMTP id z23so1524663wma.4
- for <linux-amlogic@lists.infradead.org>; Fri, 14 Jun 2019 02:16:17 -0700 (PDT)
+ id 1hbiNt-0007Lz-Gi
+ for linux-amlogic@lists.infradead.org; Fri, 14 Jun 2019 09:20:35 +0000
+Received: by mail-wm1-x341.google.com with SMTP id z23so1539079wma.4
+ for <linux-amlogic@lists.infradead.org>; Fri, 14 Jun 2019 02:20:33 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=subject:to:cc:references:from:openpgp:autocrypt:organization
  :message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=skSuQndny9OcFC0qC8PTPOb35g+5uN9t5jVARmPgyjE=;
- b=e1E4Btx1qcjqRNkSP39UkoAFrgZj+Xb7HbMbvCSPR8DAIXKcSVVEBvy90PwIDWr7mh
- UcFi/+qgVgFQkiyPffxWPcUFOddtvpASIbExY071B/3tcQrQovg9LUUx9SsgpawR49E9
- /g8lyjO80O9kp7NRq0bTk4WfQofLG1QKW8Xgc9fOkCAnGoTii5XIiWK/Kazl8WoGQXA6
- EfTmJwakWUxs2xQ48crGcZAXIgYEe9OPKgg9zBWKppejU/TdpveHnoRWvqRmK044GsSs
- eVFc0B54wKVRxncwAUm5NcH2XgMtQOIV0Th8i+2xyRpRW3CbEKj0l4t3aQGBqebSrlEK
- EIFw==
+ bh=m+z2ZodE61oq7L4c1O0fCMt/E0ojRHesY65DUb3lKls=;
+ b=ZiU5gtKaJijPLWdzHRiJ/9rRZTiFSd2YC0PIPgr9Jgd9uGU+YBRrHRbGw9/UHsopJP
+ uwqh95Ba15OtX8qHSmKvkfALhYd5k/HKEu8QgkkKbDK2K+GSCX6mUoQRPPKb4Ye5XWCp
+ pnK2ZrYBpJki1NA+XGD56lQ2UdKq91L+PRKXQbA3uxzHBYnKroYg9g5luM1TvWaP0Xtl
+ /Ue/CTc8TirWw8DNTtHg08kVhVAdEXplg5eohZfoeCmrGiGU73gBwc3E6GdIGi+qvX/L
+ LAj6Frfo+hzb+OU7EBxJA0vG+Yqc7EZLkYLUXEfnLeae7OpNsiYsVP05HIsOIwMI85V2
+ Rq0w==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:subject:to:cc:references:from:openpgp:autocrypt
  :organization:message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=skSuQndny9OcFC0qC8PTPOb35g+5uN9t5jVARmPgyjE=;
- b=g9ZyZQcQTOReStFfnSE9Lux0uglPHFJ5p5pIYJ8Cx14rlBjR33kIbCBcSlh3RfycKU
- ukSfbH15KXVtQDOlaL23Y5wkm1YynUhOmeDye87rwj0xDwZK2O6JRxymbHue7CNf61/x
- HBbTS3VnQYJKDenR8rb30QkpetU9zsfyh3aoIYU0Qg7vnGblyG5NL+O5iTCZGmzejw9G
- 9fUzDnte1TGm2XW22wWvtHDZlWQ7ksDzKyXu17aB9/lGL19PYAgXup1JW2dttlIiSGiN
- 0TxOD0vqC91iPIMNStrHcoZDLrvDQV93nrMJS/m++x8vBSjgkye4bSAa/SoHOq1MRipn
- 56fA==
-X-Gm-Message-State: APjAAAXMrZrvCbI1xwjRbT89qJAyJRD+9whu7slgWRi8UiD32bsnOz9o
- 1GRJ1CEEnoNwb2Ems/F4GnjKyQ==
-X-Google-Smtp-Source: APXvYqyIWfdh+bMKfmFpQjxNfctIVrMndMDb852nreA+48Ey6C2noa5XQsGEDAErXMrpYSqfE/KVxw==
-X-Received: by 2002:a1c:e109:: with SMTP id y9mr6702298wmg.35.1560503775697;
- Fri, 14 Jun 2019 02:16:15 -0700 (PDT)
+ bh=m+z2ZodE61oq7L4c1O0fCMt/E0ojRHesY65DUb3lKls=;
+ b=SFS/tMWmVz2hcrLGuYwfeqQZsdzwZ1p/P0x8xxTWEjcZnNaBRqaLJxMDx914n+e0El
+ MDLbv06q4WR2HkOyIcfvQiua6V6ME3MMo5KJbwoQAi8WX/E1HHs5BDCo4hpj8QW51+2C
+ Kyu4O8s687XNqDW9jbD7e+sg9zLNhsy1B+KnnoMPdL5LILZr0PZ0+gllbNf1Z5KdAG4Q
+ yxEBIadKpvYl73mfEHtKSXb+MecXtIPwbs++V8VLBm1ZA/wEeGyA5nPkdpSktY3X1cED
+ 6kr365FMMnuNdV0H1w2IUDEYzT0Zr1jZsgzt8xE0ivx9uLPC50Tfg1S1I4norTwOwZe5
+ Rc8g==
+X-Gm-Message-State: APjAAAU6V/EeXmajBj7hYoVyhN0cU7xROl/AoopijMlHdehDfTmmJT/j
+ Qo0oemCokfmb+3OiPR5OJW1cQg==
+X-Google-Smtp-Source: APXvYqyf+4bbKgizSXjP7IWk6l6OMY2+g4TYDRUGSMO53y7NIKEd8ZQedX9atlMQrpl/kIs7L9rIHA==
+X-Received: by 2002:a1c:b684:: with SMTP id g126mr6985488wmf.176.1560504031958; 
+ Fri, 14 Jun 2019 02:20:31 -0700 (PDT)
 Received: from [10.1.2.12] (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr.
  [90.63.244.31])
- by smtp.gmail.com with ESMTPSA id v204sm3904983wma.20.2019.06.14.02.16.15
+ by smtp.gmail.com with ESMTPSA id s10sm2788207wrt.49.2019.06.14.02.20.31
  (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
- Fri, 14 Jun 2019 02:16:15 -0700 (PDT)
-Subject: Re: [PATCH 1/2] arm64: dts: meson: g12b: odroid-n2: add the Ethernet
+ Fri, 14 Jun 2019 02:20:31 -0700 (PDT)
+Subject: Re: [PATCH 2/2] arm64: dts: meson: g12a: x96-max: add the Ethernet
  PHY interrupt line
 To: Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
  linux-amlogic@lists.infradead.org, khilman@baylibre.com
 References: <20190610164531.8303-1-martin.blumenstingl@googlemail.com>
- <20190610164531.8303-2-martin.blumenstingl@googlemail.com>
+ <20190610164531.8303-3-martin.blumenstingl@googlemail.com>
 From: Neil Armstrong <narmstrong@baylibre.com>
 Openpgp: preference=signencrypt
 Autocrypt: addr=narmstrong@baylibre.com; prefer-encrypt=mutual; keydata=
@@ -117,16 +117,16 @@ Autocrypt: addr=narmstrong@baylibre.com; prefer-encrypt=mutual; keydata=
  VsbXrP9BZ6snXyHfebPnno/te5XRqZTL9aJOytB/1iUna+1MAwBxGFPvqeEUUyT+gx1l3Acl
  ZaTUOEkgIor5losDrePdPgE=
 Organization: Baylibre
-Message-ID: <f480393f-87ef-9777-5933-7fa8fc707c95@baylibre.com>
-Date: Fri, 14 Jun 2019 11:16:14 +0200
+Message-ID: <31ea68c3-0f37-a755-775a-7180ff6747f5@baylibre.com>
+Date: Fri, 14 Jun 2019 11:20:31 +0200
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
  Thunderbird/60.7.0
 MIME-Version: 1.0
-In-Reply-To: <20190610164531.8303-2-martin.blumenstingl@googlemail.com>
+In-Reply-To: <20190610164531.8303-3-martin.blumenstingl@googlemail.com>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190614_021617_688795_0A159921 
-X-CRM114-Status: GOOD (  15.86  )
+X-CRM114-CacheID: sfid-20190614_022033_627129_9B235FE4 
+X-CRM114-Status: GOOD (  17.34  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -158,20 +158,25 @@ Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
 On 10/06/2019 18:45, Martin Blumenstingl wrote:
-> The interrupt line of the RTL8211F PHY is routed to the GPIOZ_14 pad.
-> Describe this in the device tree so the PHY framework doesn't have to
-> poll the PHY status.
+> X96 Max has the PHY reset and interrupt lines are identical to the
+> Odroid-N2:
+> - GPIOZ_14 is the interrupt on X96 Max
+> - GPIOZ_15 is the reset line on X96 Max
 > 
+> Add GPIOZ_14 as PHY interrupt line on the X96 Max so we don't have to
+> poll for the PHY status.
+> 
+> Suggested-by: Neil Armstrong <narmstrong@baylibre.com>
 > Signed-off-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
 > ---
->  arch/arm64/boot/dts/amlogic/meson-g12b-odroid-n2.dts | 4 ++++
+>  arch/arm64/boot/dts/amlogic/meson-g12a-x96-max.dts | 4 ++++
 >  1 file changed, 4 insertions(+)
 > 
-> diff --git a/arch/arm64/boot/dts/amlogic/meson-g12b-odroid-n2.dts b/arch/arm64/boot/dts/amlogic/meson-g12b-odroid-n2.dts
-> index 0d9ec45b8059..8c9535880007 100644
-> --- a/arch/arm64/boot/dts/amlogic/meson-g12b-odroid-n2.dts
-> +++ b/arch/arm64/boot/dts/amlogic/meson-g12b-odroid-n2.dts
-> @@ -190,6 +190,10 @@
+> diff --git a/arch/arm64/boot/dts/amlogic/meson-g12a-x96-max.dts b/arch/arm64/boot/dts/amlogic/meson-g12a-x96-max.dts
+> index 24956edaf8e2..e3f3f37d3081 100644
+> --- a/arch/arm64/boot/dts/amlogic/meson-g12a-x96-max.dts
+> +++ b/arch/arm64/boot/dts/amlogic/meson-g12a-x96-max.dts
+> @@ -180,6 +180,10 @@
 >  		reset-assert-us = <10000>;
 >  		reset-deassert-us = <10000>;
 >  		reset-gpios = <&gpio GPIOZ_15 (GPIO_ACTIVE_LOW | GPIO_OPEN_DRAIN)>;
@@ -182,15 +187,15 @@ On 10/06/2019 18:45, Martin Blumenstingl wrote:
 >  	};
 >  };
 >  
->
+> 
 
-[   13.505835] RTL8211F Gigabit Ethernet 0.0:00: attached PHY driver [RTL8211F Gigabit Ethernet] (mii_bus:phy_addr=0.0:00, irq=26)
 
+[   46.844307] RTL8211F Gigabit Ethernet 0.0:00: attached PHY driver [RTL8211F Gigabit Ethernet] (mii_bus:phy_addr=0.0:00, irq=28)
 
 # cat /proc/interrupts
-           CPU0       CPU1       CPU2       CPU3       CPU4       CPU5
+           CPU0       CPU1       CPU2       CPU3
 ...
- 26:          3          0          0          0          0          0  meson-gpio-irqchip  26 Level     0.0:00
+ 28:          5          0          0          0  meson-gpio-irqchip  26 Level     0.0:00
 ...
 
 
