@@ -2,80 +2,84 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A91AE46EE3
-	for <lists+linux-amlogic@lfdr.de>; Sat, 15 Jun 2019 09:59:21 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B165D46F94
+	for <lists+linux-amlogic@lfdr.de>; Sat, 15 Jun 2019 12:39:24 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
-	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
-	References:List-Owner; bh=p4921IfCr1HQQI/YM1QR9gFrvn8cOSEJ+/afQZj/QlE=; b=smv
-	K3VEB1l0sHC5RRmETyYoz1Shohm38yQNidqzcg1Q9RZ1kOcZ+j/Ph+mSYyqa73jUK6gQvPUiEQ3Di
-	0SyPHs26jvVFO3NYM2McgUbAsP8og2DLnKV0n3UISfl7Cc/yrM9+N/7uuIAX0n3xMQ0aR/DRHW98G
-	qlKVk4x5Qo3iENn43HLdIIyyVKdHrKxjMTvLt2JJBeyNOGNLcih5vGrevE7UCF9uK6o8acHiE6Gee
-	k8yx+rHAZxH6BV0/YRD76393A4R8mYgPzf8ZA/GH8Jl1MUJJkQHghHd7EtXS+qi1f2428GIyGIbLO
-	JTV62AgT0/sSYqnNi6ez7Wrva+ma4nw==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=ak6udNU5ca4E05mszJxUIkRTVMKQ7Y4xN4FXXEAL7Nw=; b=Sx7K/fY0A3U2n2
+	Zx5fQqOZYnI9ZJILIP0I90RBSPAh9rZkqqpSRLltzzYV4IE7I5WIA7hAVSXVtocsPNbLa1oqgw8kw
+	FX8YxgabHpaYPzuRjxsp1LGEZ+Wmzd8wduR7s88Sdbpa7REM/eXYPtH0y9oJRlOE8uiX/DShiYtKq
+	sKo+hJ/z9Cvh9gm5DDnuEdcPt9XeVptVabPjRW0gpzlwSGvF3k7qPQFC6J5ITPPxkKppEG84l577i
+	Ff6zI4oRGqeJhladq4LbU+0RcijRqmNz6vU0BukFnbX7vrS3dGekR1vzxIU4wHhRwAWDckK+J3fv8
+	Aqbe53yw+AoLoVIzr2Sg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hc3aj-0005WN-Ub; Sat, 15 Jun 2019 07:59:13 +0000
+	id 1hc65i-0008Jh-PW; Sat, 15 Jun 2019 10:39:22 +0000
 Received: from mail-wm1-x344.google.com ([2a00:1450:4864:20::344])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hc3ae-0005W3-Vh
- for linux-amlogic@lists.infradead.org; Sat, 15 Jun 2019 07:59:10 +0000
-Received: by mail-wm1-x344.google.com with SMTP id z23so4344088wma.4
- for <linux-amlogic@lists.infradead.org>; Sat, 15 Jun 2019 00:59:08 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=from:to:cc:subject:date:message-id;
- bh=ggui5tKQFGyDOgYvoTOX6NnpsBmDVkYhESGR6zzTFdU=;
- b=gqgQvdCUXp1OGOgi83z5DfpYL3GWNNbTQinEetyXceF6eXRvwzZR+9jc9ky10TMBk8
- HHquiriuEPu/D/nzsfudqlxYQ9wgcg0ctbNV+SmBpJ7yvBNXJzucwH15GaS4CLsTUihV
- gaNAyFCz9I8ABS6leHhWAcI5hODRZVIQVWO4WzGn+DWzav5ckpfyBdGMHtZ9jP6qBXMk
- 0R5IFNU89FO20+V6fYCGqsUo31r5ZGG7QsX8Gd+BGFW/janRhVb8drtptA8a/DWP2ZGB
- qHyagEVwRqdO8VviCoV2nSsXexw28TP2rI+sJqbx8UPO2XDHb6bTJghDZsMLZbQxFWyK
- pwmg==
+ id 1hc65a-0008GS-N2; Sat, 15 Jun 2019 10:39:17 +0000
+Received: by mail-wm1-x344.google.com with SMTP id w9so1085250wmd.1;
+ Sat, 15 Jun 2019 03:39:14 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=googlemail.com; s=20161025;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=EWaWjBLfgDeqQMeH6hpzSxjXl2/kKEQOmTgrAj3YJGg=;
+ b=q4/8iFDv/T3DcaMC2SysEKqDtCxF3c7gcO9kFC6QhAQ8Ex2o7CwvTeaOo3VXylWkt4
+ YtbxW1khkg1DKRwBV1F2J2Dx7XsWT6rv7r8yWVXm4CBoo4yVH/vislaPW/LkR2ChisMx
+ j8czCpHUS5RtVrKyJjtzW8TPdYApVAt6hXdf+z+bEjCgoussLKr8dbuyIZnjrvJBzU8p
+ 3v1fwA87rIJQ0l4yCuDEVLyQ0HIrdeB/ovFmI7Cx42GS4Xq9b+WPRwNLXlVje9c09Tz5
+ dHtJbavxvfEoLGIDWDTzo/YLgR9zA5T8dPelO8cn3of6uTO2tuh8JYZLTaaRzEE+JYEG
+ D2dw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id;
- bh=ggui5tKQFGyDOgYvoTOX6NnpsBmDVkYhESGR6zzTFdU=;
- b=gWoo82WFn/gw7O3m+/dbp/MPCFQTY3KkbwJk3bLeHIXL74BHPWKX0ecQ2ZJP1NY4cB
- WrEBuwEPEs/U52nXn/uIwmx7z+mOrQnMO7B1/snm3zw9vYoZyr8RePG6FJF9y7qa9vnG
- gaMzNpGabbY923os4a5JB8ktaNo9e8yepgBYZdNfNkLBhyJSF/3eDcORZAI2C0aunrEw
- rUhOSukNiGbLNNdzPgnLbLP/J5+IjFlKF2flqqVpeLBzwS44SeO7CZyXsmmz/pVXetl7
- SzbTe2W1K4JMiUeEDOcYUyuJmviixgzxvKQswpsJsVlHrEruk/OptTiqwZf8A9TeREV/
- i68g==
-X-Gm-Message-State: APjAAAVmSfNDt8KWGGRya/4RmFbOEx3f2EvFRpe+f9XMj5Pz3z5S7if+
- YGjUqCAbbVgxIH8HtbzXd4nHlStC
-X-Google-Smtp-Source: APXvYqw/zHSrm0m8yeIqRCOBolznMAWijdvv9AD4sxwg45lvyctgyuxOnuoKY+qLXLrqv2/2n6FdAA==
-X-Received: by 2002:a1c:6a0e:: with SMTP id f14mr11523048wmc.154.1560585547263; 
- Sat, 15 Jun 2019 00:59:07 -0700 (PDT)
-Received: from afl1.intra.ditec.sk (adsl-dyn95.78-98-50.t-com.sk.
- [78.98.50.95]) by smtp.googlemail.com with ESMTPSA id
- j123sm10562017wmb.32.2019.06.15.00.59.05
- (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
- Sat, 15 Jun 2019 00:59:06 -0700 (PDT)
-From: afl1 <afl2001@gmail.com>
-To: linux-amlogic@lists.infradead.org
-Subject: [PATCH] pinctrl: meson: add missing tsin pinctrl for meson gxbb/gxl
-Date: Sat, 15 Jun 2019 09:59:02 +0200
-Message-Id: <20190615075902.32341-1-afl2001@gmail.com>
-X-Mailer: git-send-email 2.17.1
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=EWaWjBLfgDeqQMeH6hpzSxjXl2/kKEQOmTgrAj3YJGg=;
+ b=W2XRWFGGVYaAVIJbTfow5Agx1cs6aaGwj7FxyT3BKIwX6I1hPfCw5xy1Acq+fiqelm
+ LT993NqmRRUmOrQesiCDhkanniT/vaJ23AuAYPH/PzaqBcAdTM68deCHeZ5s239y76+S
+ eHiUtWffPRDvEtLjOPBPTuvLGPv2zAPSdx5Jk0IbSt2EKxQZ9n1wcaX4jeEM7nyCSa3z
+ 0NMOv6pSe4S8WKzrfMFndlOPR0yYPF+3MkAuQz/BdTehfslFa/wn/E8frCsor4Xmq+uf
+ C6/F7uvomg7hZM1sVl47lczQGC46yyRpvXTyYmNy/qKlaXND6wdDiN78xQUHKvFAhcG4
+ nMpA==
+X-Gm-Message-State: APjAAAU3VAjdBLGDjw/gNmkrr6gH04Om/GHv+RXMzTiHt3zKzj62WeFF
+ KdUZjyZ+BM2eGe7h9arxMo3IZJdPfn8=
+X-Google-Smtp-Source: APXvYqw7KUGm67auqn07Aq7kGxt/BE4gLpTyvUOVo7p1zIlBqBC3k9rX5VurjgaPLbfEwXXhKwRLZw==
+X-Received: by 2002:a1c:2dd2:: with SMTP id
+ t201mr10541354wmt.136.1560595152890; 
+ Sat, 15 Jun 2019 03:39:12 -0700 (PDT)
+Received: from blackbox.darklights.net
+ (p200300F133C20E00A9A405DFDBBC0790.dip0.t-ipconnect.de.
+ [2003:f1:33c2:e00:a9a4:5df:dbbc:790])
+ by smtp.googlemail.com with ESMTPSA id
+ o126sm12209031wmo.31.2019.06.15.03.39.11
+ (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
+ Sat, 15 Jun 2019 03:39:12 -0700 (PDT)
+From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+To: linux-amlogic@lists.infradead.org,
+	khilman@baylibre.com
+Subject: [PATCH v3 0/4] Ethernet PHY reset GPIO updates for Amlogic SoCs
+Date: Sat, 15 Jun 2019 12:38:28 +0200
+Message-Id: <20190615103832.5126-1-martin.blumenstingl@googlemail.com>
+X-Mailer: git-send-email 2.22.0
+MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190615_005909_025110_344D834F 
-X-CRM114-Status: UNSURE (   9.55  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.1 (/)
+X-CRM114-CacheID: sfid-20190615_033915_145053_DF4A3B0E 
+X-CRM114-Status: GOOD (  13.67  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.1 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
  no trust [2a00:1450:4864:20:0:0:0:344 listed in]
  [list.dnswl.org]
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (afl2001[at]gmail.com)
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit (afl2001[at]gmail.com)
+ provider (martin.blumenstingl[at]googlemail.com)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
@@ -96,163 +100,87 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: afl1 <afl2001@gmail.com>
-MIME-Version: 1.0
+Cc: andrew@lunn.ch, narmstrong@baylibre.com,
+ Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
+ netdev@vger.kernel.org, linus.walleij@linaro.org, linux-kernel@vger.kernel.org,
+ robin.murphy@arm.com, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-This patch adds missing tsin pinctrl definitions
-for meson gxbb and gxl/gxm.
+While trying to add the Ethernet PHY interrupt on the X96 Max I found
+that the current reset line definition is incorrect. Patch #1 fixes
+this.
 
-Signed-off-by: afl1 <afl2001@gmail.com>
----
- drivers/pinctrl/meson/pinctrl-meson-gxbb.c | 35 ++++++++++++++++++++++
- drivers/pinctrl/meson/pinctrl-meson-gxl.c  | 27 +++++++++++++++++
- 2 files changed, 62 insertions(+)
+Since the fix requires moving from the deprecated "snps,reset-gpio"
+property to the generic Ethernet PHY reset bindings I decided to move
+all Amlogic boards over to the non-deprecated bindings. That's what
+patches #2 and #3 do.
 
-diff --git a/drivers/pinctrl/meson/pinctrl-meson-gxbb.c b/drivers/pinctrl/meson/pinctrl-meson-gxbb.c
-index 4edeb4cae72a..63a25b5bc4c0 100644
---- a/drivers/pinctrl/meson/pinctrl-meson-gxbb.c
-+++ b/drivers/pinctrl/meson/pinctrl-meson-gxbb.c
-@@ -237,10 +237,24 @@ static const unsigned int hdmi_hpd_pins[]	= { GPIOH_0 };
- static const unsigned int hdmi_sda_pins[]	= { GPIOH_1 };
- static const unsigned int hdmi_scl_pins[]	= { GPIOH_2 };
- 
-+static const unsigned int tsin_a_d_valid_pins[] = { GPIOY_0 };
-+static const unsigned int tsin_a_sop_pins[]	= { GPIOY_1 };
-+static const unsigned int tsin_a_clk_pins[]	= { GPIOY_2 };
-+static const unsigned int tsin_a_d0_pins[]	= { GPIOY_3 };
-+static const unsigned int tsin_a_dp_pins[]	= {
-+	GPIOY_4, GPIOY_5, GPIOY_6, GPIOY_7, GPIOY_8, GPIOY_9, GPIOY_10
-+};
-+
-+static const unsigned int tsin_a_fail_pins[]	= { GPIOY_11 };
- static const unsigned int i2s_out_ch23_y_pins[]	= { GPIOY_8 };
- static const unsigned int i2s_out_ch45_y_pins[]	= { GPIOY_9 };
- static const unsigned int i2s_out_ch67_y_pins[]	= { GPIOY_10 };
- 
-+static const unsigned int tsin_b_d_valid_pins[] = { GPIOX_6 };
-+static const unsigned int tsin_b_sop_pins[]	= { GPIOX_7 };
-+static const unsigned int tsin_b_clk_pins[]	= { GPIOX_8 };
-+static const unsigned int tsin_b_d0_pins[]	= { GPIOX_9 };
-+
- static const unsigned int spdif_out_y_pins[]	= { GPIOY_12 };
- 
- static const unsigned int gen_clk_out_pins[]	= { GPIOY_15 };
-@@ -443,8 +457,18 @@ static struct meson_pmx_group meson_gxbb_periphs_groups[] = {
- 	GROUP(pwm_a_x,		3,	17),
- 	GROUP(pwm_e,		2,	30),
- 	GROUP(pwm_f_x,		3,	18),
-+	GROUP(tsin_b_d_valid,	3,	9),
-+	GROUP(tsin_b_sop,	3,	8),
-+	GROUP(tsin_b_clk,	3,	10),
-+	GROUP(tsin_b_d0,	3,	7),
- 
- 	/* Bank Y */
-+	GROUP(tsin_a_fail,	3,	3),
-+	GROUP(tsin_a_d_valid,	3,	2),
-+	GROUP(tsin_a_sop,	3,	1),
-+	GROUP(tsin_a_clk,	3,	0),
-+	GROUP(tsin_a_d0,	3,	4),
-+	GROUP(tsin_a_dp,	3,	5),
- 	GROUP(uart_cts_c,	1,	19),
- 	GROUP(uart_rts_c,	1,	18),
- 	GROUP(uart_tx_c,	1,	17),
-@@ -607,6 +631,15 @@ static const char * const gpio_periphs_groups[] = {
- 	"GPIOX_20", "GPIOX_21", "GPIOX_22",
- };
- 
-+static const char * const tsin_a_groups[] = {
-+	"tsin_a_clk", "tsin_a_sop", "tsin_a_d_valid", "tsin_a_d0",
-+	"tsin_a_dp", "tsin_a_fail",
-+};
-+
-+static const char * const tsin_b_groups[] = {
-+	"tsin_b_clk", "tsin_b_sop", "tsin_b_d_valid", "tsin_b_d0",
-+};
-+
- static const char * const emmc_groups[] = {
- 	"emmc_nand_d07", "emmc_clk", "emmc_cmd", "emmc_ds",
- };
-@@ -798,6 +831,8 @@ static struct meson_pmx_func meson_gxbb_periphs_functions[] = {
- 	FUNCTION(i2s_out),
- 	FUNCTION(spdif_out),
- 	FUNCTION(gen_clk_out),
-+	FUNCTION(tsin_a),
-+	FUNCTION(tsin_b),
- };
- 
- static struct meson_pmx_func meson_gxbb_aobus_functions[] = {
-diff --git a/drivers/pinctrl/meson/pinctrl-meson-gxl.c b/drivers/pinctrl/meson/pinctrl-meson-gxl.c
-index 0c0a5018102b..984d0e2086a5 100644
---- a/drivers/pinctrl/meson/pinctrl-meson-gxl.c
-+++ b/drivers/pinctrl/meson/pinctrl-meson-gxl.c
-@@ -247,6 +247,17 @@ static const unsigned int tsin_a_dp_pins[] = {
- 	GPIODV_1, GPIODV_2, GPIODV_3, GPIODV_4, GPIODV_5, GPIODV_6, GPIODV_7,
- };
- 
-+static const unsigned int tsin_b_clk_pins[]	= { GPIOH_6 };
-+static const unsigned int tsin_b_d0_pins[]	= { GPIOH_7 };
-+static const unsigned int tsin_b_sop_pins[]	= { GPIOH_8 };
-+static const unsigned int tsin_b_d_valid_pins[] = { GPIOH_9 };
-+
-+static const unsigned int tsin_b_fail_z4_pins[] = { GPIOZ_4 };
-+static const unsigned int tsin_b_clk_z3_pins[]	= { GPIOZ_3 };
-+static const unsigned int tsin_b_d0_z2_pins[]	= { GPIOZ_2 };
-+static const unsigned int tsin_b_sop_z1_pins[]	= { GPIOZ_1 };
-+static const unsigned int tsin_b_d_valid_z0_pins[] = { GPIOZ_0 };
-+
- static const struct pinctrl_pin_desc meson_gxl_aobus_pins[] = {
- 	MESON_PIN(GPIOAO_0),
- 	MESON_PIN(GPIOAO_1),
-@@ -444,6 +455,11 @@ static struct meson_pmx_group meson_gxl_periphs_groups[] = {
- 	GROUP(eth_txd1,		4,	12),
- 	GROUP(eth_txd2,		4,	11),
- 	GROUP(eth_txd3,		4,	10),
-+	GROUP(tsin_b_fail_z4,	3,	15),
-+	GROUP(tsin_b_clk_z3,	3,	16),
-+	GROUP(tsin_b_d0_z2,	3,	17),
-+	GROUP(tsin_b_sop_z1,	3,	18),
-+	GROUP(tsin_b_d_valid_z0, 3,	19),
- 	GROUP(pwm_c,		3,	20),
- 	GROUP(i2s_out_ch23_z,	3,	26),
- 	GROUP(i2s_out_ch45_z,	3,	25),
-@@ -460,6 +476,10 @@ static struct meson_pmx_group meson_gxl_periphs_groups[] = {
- 	GROUP(i2s_out_lr_clk,	6,	24),
- 	GROUP(i2s_out_ch01,	6,	23),
- 	GROUP(spdif_out_h,	6,	28),
-+	GROUP(tsin_b_d0,	6,	17),
-+	GROUP(tsin_b_sop,	6,	18),
-+	GROUP(tsin_b_d_valid,	6,	19),
-+	GROUP(tsin_b_clk,	6,	20),
- 
- 	/* Bank DV */
- 	GROUP(uart_tx_b,	2,	16),
-@@ -695,6 +715,12 @@ static const char * const tsin_a_groups[] = {
- 	"tsin_a_dp", "tsin_a_fail",
- };
- 
-+static const char * const tsin_b_groups[] = {
-+	"tsin_b_clk", "tsin_b_sop", "tsin_b_d_valid", "tsin_b_d0",
-+	"tsin_b_clk_z3", "tsin_b_sop_z1", "tsin_b_d_valid_z0", "tsin_b_d0_z2",
-+	"tsin_b_fail_z4",
-+};
-+
- static const char * const gpio_aobus_groups[] = {
- 	"GPIOAO_0", "GPIOAO_1", "GPIOAO_2", "GPIOAO_3", "GPIOAO_4",
- 	"GPIOAO_5", "GPIOAO_6", "GPIOAO_7", "GPIOAO_8", "GPIOAO_9",
-@@ -770,6 +796,7 @@ static struct meson_pmx_func meson_gxl_periphs_functions[] = {
- 	FUNCTION(spdif_out),
- 	FUNCTION(eth_led),
- 	FUNCTION(tsin_a),
-+	FUNCTION(tsin_b),
- };
- 
- static struct meson_pmx_func meson_gxl_aobus_functions[] = {
+Finally I found that Odroid-N2 doesn't define the Ethernet PHY's reset
+GPIO yet. I don't have that board so I can't test whether it really
+works but based on the schematics it should. 
+
+This series is a partial successor to "stmmac: honor the GPIO flags
+for the PHY reset GPIO" from [0]. I decided not to take Linus W.'s
+Reviewed-by from patch #4 of that series because I had to change the
+wording and I want to be sure that he's happy with that now.
+
+One quick note regarding patches #1 and #4: I decided to violate the
+"max 80 characters per line" (by 4 characters) limit because I find
+that the result is easier to read then it would be if I split the
+line.
+
+
+Changes since v1 at [1]:
+- fixed the reset deassert delay for RTL8211F PHYs - spotted by Robin
+  Murphy (thank you). according to the public RTL8211E datasheet the
+  correct values seem to be: 10ms assert, 30ms deassert
+- fixed the reset assert and deassert delays for IP101GR PHYs. There
+  are two values given in the public datasheet, use the higher one
+  (10ms instead of 2.5)
+- update the patch descriptions to quote the datasheets (the RTL8211F
+  quotes are taken from the public RTL8211E datasheet because as far
+  as I can tell the reset sequence is identical on both PHYs)
+
+Changes since v2 at [2]:
+- add Neil's Reviewed/Acked/Tested-by's (thank you!)
+- rebased on top of "arm64: dts: meson-g12a-x96-max: add sound card"
+
+
+[0] https://patchwork.kernel.org/cover/10983801/
+[1] https://patchwork.kernel.org/cover/10985155/
+[2] https://patchwork.kernel.org/cover/10990863/
+
+
+Martin Blumenstingl (4):
+  arm64: dts: meson: g12a: x96-max: fix the Ethernet PHY reset line
+  ARM: dts: meson: switch to the generic Ethernet PHY reset bindings
+  arm64: dts: meson: use the generic Ethernet PHY reset GPIO bindings
+  arm64: dts: meson: g12b: odroid-n2: add the Ethernet PHY reset line
+
+ arch/arm/boot/dts/meson8b-ec100.dts                   |  9 +++++----
+ arch/arm/boot/dts/meson8b-mxq.dts                     |  9 +++++----
+ arch/arm/boot/dts/meson8b-odroidc1.dts                |  9 +++++----
+ arch/arm/boot/dts/meson8m2-mxiii-plus.dts             |  8 ++++----
+ arch/arm64/boot/dts/amlogic/meson-g12a-x96-max.dts    |  7 ++++---
+ arch/arm64/boot/dts/amlogic/meson-g12b-odroid-n2.dts  |  4 ++++
+ arch/arm64/boot/dts/amlogic/meson-gxbb-nanopi-k2.dts  |  9 +++++----
+ .../arm64/boot/dts/amlogic/meson-gxbb-nexbox-a95x.dts |  8 ++++----
+ arch/arm64/boot/dts/amlogic/meson-gxbb-odroidc2.dts   |  9 +++++----
+ arch/arm64/boot/dts/amlogic/meson-gxbb-p200.dts       |  9 +++++----
+ arch/arm64/boot/dts/amlogic/meson-gxbb-vega-s95.dtsi  |  9 +++++----
+ arch/arm64/boot/dts/amlogic/meson-gxbb-wetek.dtsi     |  8 ++++----
+ arch/arm64/boot/dts/amlogic/meson-gxl-s905d-p230.dts  | 11 ++++++-----
+ arch/arm64/boot/dts/amlogic/meson-gxm-khadas-vim2.dts | 10 +++++-----
+ arch/arm64/boot/dts/amlogic/meson-gxm-nexbox-a1.dts   |  8 ++++----
+ arch/arm64/boot/dts/amlogic/meson-gxm-q200.dts        | 11 ++++++-----
+ arch/arm64/boot/dts/amlogic/meson-gxm-rbox-pro.dts    |  8 ++++----
+ 17 files changed, 80 insertions(+), 66 deletions(-)
+
 -- 
-2.17.1
+2.22.0
 
 
 _______________________________________________
