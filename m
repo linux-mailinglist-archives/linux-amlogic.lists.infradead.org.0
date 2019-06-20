@@ -2,76 +2,76 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2A2C74DC90
-	for <lists+linux-amlogic@lfdr.de>; Thu, 20 Jun 2019 23:30:50 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1A43E4DC98
+	for <lists+linux-amlogic@lfdr.de>; Thu, 20 Jun 2019 23:32:01 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
 	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=dYTkOQYvezGkvU0BpINmlMfkh/h+J/Lwb9OMT89IfOQ=; b=dJb9lyJrSi3LPT
-	ZxzSdEKuU0MefWZw5Wau+ZvGEVpZ1fIP7+/9N+knVwBjcb6FDGyeE/0wbtNxeQloLKfHIPZJ4UX0X
-	UyplwVa2ZoLjoT4XraeqsEGCqSvN4jWMbiTxAWq8tsF2QfAKUyI1Ue8sNFYasiqT16Fqhr7z6UDn3
-	toysbcf69tyWcK1hklHBhxHWuugADX8zw/9xmwAIlrvvYjEv+Yj7jgHm1rYWYBzieW7qBjS/zX5LK
-	rudCKmVu1MTHmPJMSV7Ha5R9W+GfFs/KFBbAgLFGUPcMO/dF9hIHstWiwWYPK7tXmySOV8BggG/W7
-	jXjU4Su83RYMvppINHHA==;
+	List-Owner; bh=sYuww6/IXbWHjRr1COTxPcYvKf5d3FWG81AzSQSOZ2M=; b=WFaD3tVGeln7A3
+	GDrxgUqHPE/23qrdt/D+JTLJwZlj3OKfmfoH/aHvomgeXSMVqfrOB7MehOwaWZZaS8KoabFpeCHwy
+	wZOqQNoorD07GBSMJP9wQtYOgqQx249IFRVXHONnebeEmnzQtuzk1VVPkX2G5T7qg8WyhMAuQx5vA
+	RU8RJmB9CP5gzRmBme+W+hNeHAtgkx0PcyYw2CESiuy6Y2GQpza3CBglHKwKH/0GXwkuUKAr9K3Z1
+	MP/zO68N3wgRU1dcwO7vmtb2TocbVzz2vKzYwY6yfI/Afrp/98DXWh8tKybsZMi5L3+hTI0FxlgJ8
+	yNKUHeu7FC5Y/C0XzLdQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1he4dq-0000MQ-7B; Thu, 20 Jun 2019 21:30:46 +0000
-Received: from mail-pg1-x544.google.com ([2607:f8b0:4864:20::544])
+	id 1he4ez-0000hB-2I; Thu, 20 Jun 2019 21:31:57 +0000
+Received: from mail-pl1-x634.google.com ([2607:f8b0:4864:20::634])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1he4da-0000C1-90
- for linux-amlogic@lists.infradead.org; Thu, 20 Jun 2019 21:30:31 +0000
-Received: by mail-pg1-x544.google.com with SMTP id s27so2252601pgl.2
- for <linux-amlogic@lists.infradead.org>; Thu, 20 Jun 2019 14:30:29 -0700 (PDT)
+ id 1he4ev-0000a2-FU
+ for linux-amlogic@lists.infradead.org; Thu, 20 Jun 2019 21:31:55 +0000
+Received: by mail-pl1-x634.google.com with SMTP id p1so1915973plo.2
+ for <linux-amlogic@lists.infradead.org>; Thu, 20 Jun 2019 14:31:53 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=from:to:cc:subject:date:message-id:mime-version;
- bh=PSngLiKCARM8vfl1eyrBhYLURk7Q+qO0cLGvH0A3iVA=;
- b=T7Cq03+1uAfj55bksp6eGyDn4NFZ/RXX728L8E9GRbxq6u6fAiaV3n4yTMCdiKqPnt
- 1w3nhDtqIMMV5Va4CVQlG1Uuo1QVmCuI1JtMVxvhQN6GsDXadnNM0Yr/Vz2uPXFLlMa5
- UyeX7PsNAJESXOSUxK0nZyjNeylX8KzJozht5V7DbMAenfYSJCRTxYYvqfWskNxn2Afj
- kz1/rSSgahx+gLNp5n3dzAxkDr1X4G/2Mtb1jjcToP6+153mRj1EnKydiord/jdvl8mD
- ppyOCAYWqrKiSSzF4xgLpkoD8y1JLsutA1SiohReeQfzX/Lg3T/cPdqOlosi1D/uvC0G
- ZZ2Q==
+ bh=LA2byWf25MGtOfC7J6iW/rcMxjse6CVHJ6rWUn1KKNA=;
+ b=QXWzh6ab8zvmLfzqY6NgD4pAIgfOuYVmkZiDPIn/0NfdhyQyCc68UBHjd9v+eW5aYx
+ UX44OeK8q+2E22O+iDV35zv1kD4LB/9kRqiMMsgWXHzF+CbMD2BK63y4k1u42d+nK0Dp
+ 91m+fS/tmYGON+A9nQdTehkGJl4UE7ke7QzC8OLU3D+6lsRw+jLnGGoxlGvp7L+qy6Km
+ 7+2gPYrPUKlTCAMnEmC99masL0Q7GUFt4hF5PeTVfc5rnhAul4lVFjzH/v73EYxvgB4v
+ kJu9WB4GG6w52i6xVDOL7IheiZfQLxRZKfb+gTxfzneKOMfJbNYP37GDZF/ZtSptra71
+ knOA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version;
- bh=PSngLiKCARM8vfl1eyrBhYLURk7Q+qO0cLGvH0A3iVA=;
- b=tuhJ6x1YG0wcmKLARW2vkhDef0Pbjmdns1EvhjPbiFG2bbYJzGXcXsTEchEKWOc2sx
- 5E2EwEOKRuyDdgkN9p1b6HimyYIz6jsnOPfGDJiV3cma1NxHiOIX0rC4COHkap6TDRZv
- +gu5L36rU/J/sr0fO/vJirlTAr3PeuYKypO+4RBPNYfvZIJscHCRQpPbCbZMAgtJlsnv
- ADrN/Ix5RrZz2inS2vUx1PqI2F92Z/jjwqwwvRQ13vf4GsQqBtjuA02xwBLj7f2KsV0/
- hIvUG/y+oa37Mqe3MqknFowsnHq6sulA8sWB6OmdSFxuUIRGOk93G/HwFXcKavHEARrl
- sh7A==
-X-Gm-Message-State: APjAAAWFh14oXOUBCZDFYPWpKWXEXTW+ti21zQMFzqtQtiKOLiljA+ri
- kpBrieA7UosI3UidHWldUT8gMQ==
-X-Google-Smtp-Source: APXvYqxLGSQfAF8f9kOYdADaXp2yg90LdmryXc18yWGDwh2lpCVpIT0kB4+qGTJUD2uTejoTPZqnsA==
-X-Received: by 2002:a62:ac11:: with SMTP id v17mr16662290pfe.236.1561066229088; 
- Thu, 20 Jun 2019 14:30:29 -0700 (PDT)
+ bh=LA2byWf25MGtOfC7J6iW/rcMxjse6CVHJ6rWUn1KKNA=;
+ b=oAAF5mIwHRuU2vH3YCZy4FIaowEm7p1ezQaHFJbLsazNMUZ4JpL3EmCeUOdn+N7Apc
+ n7rE0e+mc+i0P+Ti1vYC87IiW8zFk4BLav5iWMoV91GguhXmL+jvi2zR7UkE7CyE6ysX
+ tscx7V+GIqqXr8+sLdEWjQHohIzqCJcsTMjSwElrc99O6az2mHEO71JbK+8ywsKoOoG9
+ 6dpdUTAo+IdImL23AfNwwT6jyt82sysFDcvuhjD1hbA6GOtE2vFssGicwLpO8B7+yijw
+ kdSLKKkTdCDtkJ0f5Hmrz5vLs/fIUCpG/5MxZX5yueKJQ5Z9g1yrz6ocTgLlUGQs26jO
+ 9KHw==
+X-Gm-Message-State: APjAAAXHDA6v+P6x0OI+pI21uqHMWpounVGjEZn0XkgutAIHW2Ki6jg4
+ dhg77SWjf/aHlA3ZVwOgqyOu/RiCAYG7nA==
+X-Google-Smtp-Source: APXvYqyv378BHtXcWMIVzB5B7/TmnQ3LgvYsvSOvqHTCZMdAWRk3SnG4MAD/oUAbpC/ua4PG3msihQ==
+X-Received: by 2002:a17:902:42a5:: with SMTP id
+ h34mr90991811pld.16.1561066312639; 
+ Thu, 20 Jun 2019 14:31:52 -0700 (PDT)
 Received: from localhost (c-71-197-186-152.hsd1.wa.comcast.net.
  [71.197.186.152])
- by smtp.googlemail.com with ESMTPSA id n89sm18722182pjc.0.2019.06.20.14.30.28
+ by smtp.googlemail.com with ESMTPSA id c129sm401469pfa.106.2019.06.20.14.31.52
  (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
- Thu, 20 Jun 2019 14:30:28 -0700 (PDT)
+ Thu, 20 Jun 2019 14:31:52 -0700 (PDT)
 From: Kevin Hilman <khilman@baylibre.com>
 To: arm@kernel.org
-Subject: [GIT PULL] soc: Amlogic driver updates for v5.3
-Date: Thu, 20 Jun 2019 14:30:27 -0700
-Message-ID: <7hlfxweyh8.fsf@baylibre.com>
+Subject: [GIT PULL] ARM: dts: Amlogic updates for v5.3
+Date: Thu, 20 Jun 2019 14:31:51 -0700
+Message-ID: <7hd0j8eyew.fsf@baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190620_143030_323987_95F797B3 
-X-CRM114-Status: UNSURE (   8.80  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190620_143153_535928_950F1415 
+X-CRM114-Status: GOOD (  10.34  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:544 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:634 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -101,24 +101,51 @@ The following changes since commit a188339ca5a396acc588e5851ed7e19f66b0ebd9:
 
 are available in the git repository at:
 
-  https://git.kernel.org/pub/scm/linux/kernel/git/khilman/linux-amlogic.git tags/amlogic-drivers
+  https://git.kernel.org/pub/scm/linux/kernel/git/khilman/linux-amlogic.git tags/amlogic-dt
 
-for you to fetch changes up to 9a98fdf5b6e635d9d9710f87e1da42aeab12ff0d:
+for you to fetch changes up to a2c6e82e5341a283b06b04029f952598e445b159:
 
-  soc: amlogic: canvas: add support for Meson8, Meson8b and Meson8m2 (2019-05-22 18:19:14 -0700)
-
-----------------------------------------------------------------
-soc: Amlogic driver updates for v5.3
-- canvas: add support for Meson8*
+  ARM: dts: meson: switch to the generic Ethernet PHY reset bindings (2019-06-20 13:58:11 -0700)
 
 ----------------------------------------------------------------
-Martin Blumenstingl (2):
-      dt-bindings: soc: amlogic: canvas: document support for Meson8/8b/8m2
-      soc: amlogic: canvas: add support for Meson8, Meson8b and Meson8m2
+ARM: dts: Amlogic updates for v5.3
+- SPDX updates
+- switch to generic ethernet PHY reset bindings
+- add the canvas module
+- mxiii-plus board: add regulators
 
- Documentation/devicetree/bindings/soc/amlogic/amlogic,canvas.txt | 10 +++++++---
- drivers/soc/amlogic/meson-canvas.c                               | 14 +++++++++++++-
- 2 files changed, 20 insertions(+), 4 deletions(-)
+----------------------------------------------------------------
+Martin Blumenstingl (7):
+      ARM: dts: meson8: add the canvas module
+      ARM: dts: meson8m2: update the offset of the canvas module
+      ARM: dts: meson8b: add the canvas module
+      ARM: dts: meson8m2: mxiii-plus: rename the DCDC2 regulator
+      ARM: dts: meson8m2: mxiii-plus: add the supply for the Mali GPU
+      ARM: dts: meson8b: mxq: improve support for the TRONFY MXQ S805
+      ARM: dts: meson: switch to the generic Ethernet PHY reset bindings
+
+Neil Armstrong (8):
+      ARM: dts: meson: update with SPDX Licence identifier
+      ARM: dts: meson6-atv1200: update with SPDX Licence identifier
+      ARM: dts: meson6: update with SPDX Licence identifier
+      ARM: dts: meson8-minix-neo-x8: update with SPDX Licence identifier
+      ARM: dts: meson8: update with SPDX Licence identifier
+      ARM: dts: meson8b-mxq: update with SPDX Licence identifier
+      ARM: dts: meson8b-odroidc1: update with SPDX Licence identifier
+      ARM: dts: meson8b: update with SPDX Licence identifier
+
+ arch/arm/boot/dts/meson.dtsi              |  44 +-------------------------------------------
+ arch/arm/boot/dts/meson6-atv1200.dts      |  44 +-------------------------------------------
+ arch/arm/boot/dts/meson6.dtsi             |  44 +-------------------------------------------
+ arch/arm/boot/dts/meson8-minix-neo-x8.dts |  39 +--------------------------------------
+ arch/arm/boot/dts/meson8.dtsi             |  64 +++++++++++++++++++++++----------------------------------------
+ arch/arm/boot/dts/meson8b-ec100.dts       |   9 +++++----
+ arch/arm/boot/dts/meson8b-mxq.dts         | 182 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-----------------------------------------
+ arch/arm/boot/dts/meson8b-odroidc1.dts    |  51 ++++++--------------------------------------------
+ arch/arm/boot/dts/meson8b.dtsi            |  64 +++++++++++++++++++++++----------------------------------------
+ arch/arm/boot/dts/meson8m2-mxiii-plus.dts |  17 +++++++++++------
+ arch/arm/boot/dts/meson8m2.dtsi           |  10 ++++++++++
+ 11 files changed, 223 insertions(+), 345 deletions(-)
 
 _______________________________________________
 linux-amlogic mailing list
