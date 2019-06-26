@@ -2,81 +2,81 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B636D56579
-	for <lists+linux-amlogic@lfdr.de>; Wed, 26 Jun 2019 11:13:24 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2B1A856AC1
+	for <lists+linux-amlogic@lfdr.de>; Wed, 26 Jun 2019 15:37:07 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Z/Nnyw1n53NC3Q779/gfHZjt1o2WHmakpp4mctUmluU=; b=GmHBN2jb7ggBV1
-	r6jBiJwcCKjKPb4o+mzanp7GMMQQaX7UHGM59vsufgRNTKeWuHODRve7RQwCToVaoP4HAJi5mNhQd
-	JK61V7663S9EgaKz5pfKDcjGE68xFBc7KruP7UwELefvmEgAc08ojHdHPL9PRwougsTwzjCbUpn9k
-	JaCze21RnSTNnen/zyU7hxUWLH5ojw9ue1hrpjcpa+Pf/9tZZXKgBNnu8JTN3B1GKeC61ZiqKKl88
-	gAaagmmmucFa/c84RzbNJr4qUhQwEGVksO+6ZTTLFP+KRC3S6Y7LG3iESS2odK0Aw8hoCXQ2vIPE8
-	/GkIJngNzXH8mDJrzusQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=tenRZPMfnhjN5dRqj7RJzwt7wIDEfmv9xpRWnmEtdP4=; b=E0UmBzOxKecxeD
+	YdRzaUJcIrV4dqQIWzI6g4tySXsjwlt0u/DaGY9LBjIFQ3aSXSXKhKppVNRxSCZywRq7lalUxcAoH
+	QJq/ek+Gqy9GPXLn26yZB/32iMZcR8gV2qdj3C/cR0Ek1DTU5mqFCsuoDfC3gefO58ARucLsALFYw
+	TjSldWLHtZf2iH7YgRCkVGfKBm0n+7woPLqAL65tDmGzJ7i7zYuqGXJOf9RBajantsV4rW8QPFEnS
+	+LeX/INkApW+UL1GksS8Me+6Q2wZOLMxwtfkfpPYujwLPpggJ+FttR4QtMIZkknT0qZytB7i23zok
+	rttekzNrr2qVVeS2/tOg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hg3zU-0000UE-L9; Wed, 26 Jun 2019 09:13:20 +0000
-Received: from mail-wm1-x333.google.com ([2a00:1450:4864:20::333])
+	id 1hg86e-0005Vl-Ef; Wed, 26 Jun 2019 13:37:00 +0000
+Received: from mail-wm1-x343.google.com ([2a00:1450:4864:20::343])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hg3tF-0002js-C6
- for linux-amlogic@lists.infradead.org; Wed, 26 Jun 2019 09:06:59 +0000
-Received: by mail-wm1-x333.google.com with SMTP id v19so1241166wmj.5
- for <linux-amlogic@lists.infradead.org>; Wed, 26 Jun 2019 02:06:53 -0700 (PDT)
+ id 1hg86F-0005Bg-OH
+ for linux-amlogic@lists.infradead.org; Wed, 26 Jun 2019 13:36:37 +0000
+Received: by mail-wm1-x343.google.com with SMTP id x15so2141767wmj.3
+ for <linux-amlogic@lists.infradead.org>; Wed, 26 Jun 2019 06:36:33 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=from:to:cc:subject:date:message-id:in-reply-to:references
- :mime-version:content-transfer-encoding;
- bh=9RQ6YaugFGkpRgh3juxH1I5rV90U2Bkw0dj0SZEZKwc=;
- b=J0NS7bRqNS0ZD9B+lSRFe4le6yXmNDFrR2upnXhCDY5C4V5LEnqtg1cGQuQwS/EfnD
- JfBSP+JFXSv+TxAihAgDuOJ02RCAacyf9xthx/r/0gVK7VHp1Q04mqoWqz115l6wz4Tg
- 5GGeO1VgatZQvjZPxf+PVdabu+FbJrVvSUBdqNy9zrDeawHHyO/pVOI5wRdj/WLlb52Z
- vGA4sx71G+qwn4y8vzoNOair6gePijN4Ipj26Q7+3GBKbpugvF352+RtX/+yEKIix+aR
- njX6Hbjb2DLxusCypboZqfZLYqU3j5VNpolmTezfmqzgcp1IoFoBjpPc8cvBUIS9n3Cz
- sUdQ==
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=4FQg0smS+mfYMsusPPdodpkb22WraUSysEIqfJJV0yM=;
+ b=VHEsNntS0B4pEO3c7fwECuQ4V7xeuFnooK6MO9IMX978YagrBVIBsBiTY/LeigduXr
+ hEbi1aImDb5PmCDtCL69RpPzO091ws2GrWX+YPTWXyBl39/QnErn31JHaEHU3SibngUj
+ FNNYMAXWu1Tqgnw5sz2ykr2xgdx7q4KTMKiPYaaQ3KGcDx/koVCST9+xzBl5+BtWNtFP
+ 5p9Zdc76EobXrkOX18uFkB+3jY53S8T2F5N8v1f5SFftwAhZPOnZY1ma88QRv2JP5rfh
+ Tx4fBaWB37o2j1YJ6zOKCb4gZpNh05B4LnMrZroeTsw6Y75HgPdAiFYDfOektVxiXGer
+ IPfw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
- :references:mime-version:content-transfer-encoding;
- bh=9RQ6YaugFGkpRgh3juxH1I5rV90U2Bkw0dj0SZEZKwc=;
- b=rQxH6PmzrCTmGOMpMbsGh7x1eAOjEfHpnikSEG22r9EMYX9NTi6XUqyimyRBTUEJmB
- m9zVolqWZm/ixH5pqgLpYTg6Ws4twng5pfCDYxlIGeoyUSbemVejI9PWarz4cm3/sua+
- LRqcIvjYBzeE+ws+tHAFUOWNJtPt0l0jrqCX5lT3Kqlrs1O0Ms6A0EaOubfsQ4+NVn8v
- y3GqaXfvUUghIeJlHGiPudv0B9dzGgbKbjc46t06z4q7SxDAbEB/f9ifx6BE19+o/7Qg
- Of9sotaToZJVWZl8XlYF0myw9IPH81XHjYHpnIzhn2BpnOFWXTeuOTtYGE+zTrlSurA5
- d5Pg==
-X-Gm-Message-State: APjAAAVn0nroy9JEIzQ2kgEgsSVbmbrFcxtkTdi/rDM/r5iRWUpWNN9j
- 4jC56A0Fqmn61SgmTiP8gM0klg==
-X-Google-Smtp-Source: APXvYqwxDozI/FKA1vAkTzJa0CO5JhJdf4H6DJgUxSxrWePq7VprAaD6psUV7Ud7fw3drOIzxbfu8g==
-X-Received: by 2002:a1c:a848:: with SMTP id r69mr1887295wme.12.1561540011512; 
- Wed, 26 Jun 2019 02:06:51 -0700 (PDT)
-Received: from bender.baylibre.local
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=4FQg0smS+mfYMsusPPdodpkb22WraUSysEIqfJJV0yM=;
+ b=W2L9aWwFYj1+9EoVRf0DYxuo0KYt3s3Mx1nRKkN6xmBp7Od8UCdZB7bfGBehlvIrtz
+ CRWZiImBiTAka0IKdP+1InoLuPq7GWYDE+siVBJ6Es1qabVNGUNbFiy4HVItyzEWcqqK
+ uuYaAq3eIivIQsaL+shpdUyFjI2tnHFuAHRcf/ykXedQzHKfU2Gtb/mOJZsQPxfMRy3L
+ vn4qTHkFeK1mDR1jpnojardX1MseTkhd84zkF1vRGjZg9YgMmEB0c9kb9S7+w+5MGTCt
+ 9HY9KlIm4cDr1Jd6HUlEN3wx4iEyP68Ko5s++kD9Hh+Z763LwSzlttEuu3iPT4PDrwE0
+ kQAQ==
+X-Gm-Message-State: APjAAAWILU3oGqTHxshJG6vR2KQLDXJJ0Wppld/cv1+hDbTChwgKNqPJ
+ ZKWHWLDywaBvWMGB2NHqz18GYA==
+X-Google-Smtp-Source: APXvYqysws+jQlqShYlTKNd5YEBpxaojbCsgdCSKH4ZtXxVfdbxFbdzZ7FYDDAUJSCKD6wEDIJmj7g==
+X-Received: by 2002:a1c:3:: with SMTP id 3mr2866435wma.6.1561556192208;
+ Wed, 26 Jun 2019 06:36:32 -0700 (PDT)
+Received: from starbuck.baylibre.local
  (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
- by smtp.gmail.com with ESMTPSA id o6sm1925797wmc.46.2019.06.26.02.06.50
- (version=TLS1_2 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
- Wed, 26 Jun 2019 02:06:50 -0700 (PDT)
-From: Neil Armstrong <narmstrong@baylibre.com>
-To: jbrunet@baylibre.com,
-	khilman@baylibre.com
-Subject: [RFC/RFT v2 14/14] arm64: dts: meson-g12b-odroid-n2: enable DVFS
-Date: Wed, 26 Jun 2019 11:06:32 +0200
-Message-Id: <20190626090632.7540-15-narmstrong@baylibre.com>
+ by smtp.googlemail.com with ESMTPSA id w185sm2877880wma.39.2019.06.26.06.36.31
+ (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
+ Wed, 26 Jun 2019 06:36:31 -0700 (PDT)
+From: Jerome Brunet <jbrunet@baylibre.com>
+To: Mark Brown <broonie@kernel.org>, Liam Girdwood <lgirdwood@gmail.com>,
+ Kevin Hilman <khilman@baylibre.com>
+Subject: [PATCH 0/2] ASoC: soc-core: update dai_link init
+Date: Wed, 26 Jun 2019 15:36:15 +0200
+Message-Id: <20190626133617.25959-1-jbrunet@baylibre.com>
 X-Mailer: git-send-email 2.21.0
-In-Reply-To: <20190626090632.7540-1-narmstrong@baylibre.com>
-References: <20190626090632.7540-1-narmstrong@baylibre.com>
 MIME-Version: 1.0
+X-Patchwork-Bot: notify
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190626_020655_055064_342636D0 
-X-CRM114-Status: GOOD (  11.33  )
+X-CRM114-CacheID: sfid-20190626_063635_923683_F554B6FD 
+X-CRM114-Status: UNSURE (   6.44  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:333 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:343 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -94,157 +94,34 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: Neil Armstrong <narmstrong@baylibre.com>,
- martin.blumenstingl@googlemail.com, linux-kernel@vger.kernel.org,
- linux-gpio@vger.kernel.org, linux-amlogic@lists.infradead.org,
- linux-clk@vger.kernel.org, linux-arm-kernel@lists.infradead.org
+Cc: devicetree@vger.kernel.org, alsa-devel@alsa-project.org,
+ linux-amlogic@lists.infradead.org, linux-kernel@vger.kernel.org,
+ Jerome Brunet <jbrunet@baylibre.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Enable DVFS for the Odroid-N2 by setting the clock, OPP and supply
-for each cores of each CPU clusters.
+My initial goal with this patchset was to allow a dai_link to have no
+no platform component, instead of having dummy by default.
 
-The first cluster uses the "VDDCPU_B" power supply, and the second
-cluster uses the "VDDCPU_A" power supply.
+However, when rebasing, I discovered that Kuninori Morimoto had recently
+done that in a different way :)
 
-Each power supply can achieve 0.73V to 1.01V using 2 distinct PWM
-outputs clocked at 800KHz with an inverse duty-cycle.
+I am still submitting my change since it should allow multiple platform
+components on a dai_link, which is one of the FIXME note in soc-core.
 
-DVFS has been tested by running the arm64 cpuburn at [1] and cycling
-between all the possible cpufreq translations of each cluster and
-checking the final frequency using the clock-measurer, script at [2].
+I have also added a check on the codecs component availability to align
+on what was done for platforms and cpus
 
-[1] https://github.com/ssvb/cpuburn-arm/blob/master/cpuburn-a53.S
-[2] https://gist.github.com/superna9999/d4de964dbc0f84b7d527e1df2ddea25f
+Jerome Brunet (2):
+  ASoC: soc-core: defer card registration if codec component is missing
+  ASoC: soc-core: support dai_link with platforms_num != 1
 
-Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
----
- .../boot/dts/amlogic/meson-g12b-odroid-n2.dts | 96 +++++++++++++++++++
- 1 file changed, 96 insertions(+)
+ include/sound/soc.h  |  6 ++++
+ sound/soc/soc-core.c | 72 +++++++++++++++++++++-----------------------
+ 2 files changed, 41 insertions(+), 37 deletions(-)
 
-diff --git a/arch/arm64/boot/dts/amlogic/meson-g12b-odroid-n2.dts b/arch/arm64/boot/dts/amlogic/meson-g12b-odroid-n2.dts
-index c3e0735e6d9f..0db1547bfb5a 100644
---- a/arch/arm64/boot/dts/amlogic/meson-g12b-odroid-n2.dts
-+++ b/arch/arm64/boot/dts/amlogic/meson-g12b-odroid-n2.dts
-@@ -114,6 +114,44 @@
- 		/* FIXME: actually controlled by VDDCPU_B_EN */
- 	};
- 
-+	vddcpu_a: regulator-vddcpu-a {
-+		/*
-+		 * MP8756GD Regulator.
-+		 */
-+		compatible = "pwm-regulator";
-+
-+		regulator-name = "VDDCPU_A";
-+		regulator-min-microvolt = <721000>;
-+		regulator-max-microvolt = <1022000>;
-+
-+		vin-supply = <&main_12v>;
-+
-+		pwms = <&pwm_ab 0 1250 0>;
-+		pwm-dutycycle-range = <100 0>;
-+
-+		regulator-boot-on;
-+		regulator-always-on;
-+	};
-+
-+	vddcpu_b: regulator-vddcpu-b {
-+		/*
-+		 * Silergy SY8120B1ABC Regulator.
-+		 */
-+		compatible = "pwm-regulator";
-+
-+		regulator-name = "VDDCPU_B";
-+		regulator-min-microvolt = <721000>;
-+		regulator-max-microvolt = <1022000>;
-+
-+		vin-supply = <&main_12v>;
-+
-+		pwms = <&pwm_AO_cd 1 1250 0>;
-+		pwm-dutycycle-range = <100 0>;
-+
-+		regulator-boot-on;
-+		regulator-always-on;
-+	};
-+
- 	hub_5v: regulator-hub_5v {
- 		compatible = "regulator-fixed";
- 		regulator-name = "HUB_5V";
-@@ -245,6 +283,48 @@
- 	status = "okay";
- };
- 
-+&cpu0 {
-+	cpu-supply = <&vddcpu_b>;
-+	operating-points-v2 = <&cpu_opp_table_0>;
-+	clocks = <&clkc CLKID_CPU_CLK>;
-+	clock-latency = <50000>;
-+};
-+
-+&cpu1 {
-+	cpu-supply = <&vddcpu_b>;
-+	operating-points-v2 = <&cpu_opp_table_0>;
-+	clocks = <&clkc CLKID_CPU_CLK>;
-+	clock-latency = <50000>;
-+};
-+
-+&cpu100 {
-+	cpu-supply = <&vddcpu_a>;
-+	operating-points-v2 = <&cpub_opp_table_1>;
-+	clocks = <&clkc CLKID_CPUB_CLK>;
-+	clock-latency = <50000>;
-+};
-+
-+&cpu101 {
-+	cpu-supply = <&vddcpu_a>;
-+	operating-points-v2 = <&cpub_opp_table_1>;
-+	clocks = <&clkc CLKID_CPUB_CLK>;
-+	clock-latency = <50000>;
-+};
-+
-+&cpu102 {
-+	cpu-supply = <&vddcpu_a>;
-+	operating-points-v2 = <&cpub_opp_table_1>;
-+	clocks = <&clkc CLKID_CPUB_CLK>;
-+	clock-latency = <50000>;
-+};
-+
-+&cpu103 {
-+	cpu-supply = <&vddcpu_a>;
-+	operating-points-v2 = <&cpub_opp_table_1>;
-+	clocks = <&clkc CLKID_CPUB_CLK>;
-+	clock-latency = <50000>;
-+};
-+
- &ext_mdio {
- 	external_phy: ethernet-phy@0 {
- 		/* Realtek RTL8211F (0x001cc916) */	
-@@ -308,6 +388,22 @@
- 	pinctrl-names = "default";
- };
- 
-+&pwm_ab {
-+	pinctrl-0 = <&pwm_a_e_pins>;
-+	pinctrl-names = "default";
-+	clocks = <&xtal>;
-+	clock-names = "clkin0";
-+	status = "okay";
-+};
-+
-+&pwm_AO_cd {
-+	pinctrl-0 = <&pwm_ao_d_e_pins>;
-+	pinctrl-names = "default";
-+	clocks = <&xtal>;
-+	clock-names = "clkin1";
-+	status = "okay";
-+};
-+
- /* SD card */
- &sd_emmc_b {
- 	status = "okay";
 -- 
 2.21.0
 
