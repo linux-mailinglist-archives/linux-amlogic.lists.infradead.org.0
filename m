@@ -2,73 +2,76 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1775358247
+	by mail.lfdr.de (Postfix) with ESMTPS id 53EB358248
 	for <lists+linux-amlogic@lfdr.de>; Thu, 27 Jun 2019 14:14:14 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=Beuq0R96VLswOG4aHCu+8f8DnwM5EXSLsBDWJB65r3Q=; b=iWCIZHLnoCcdFx
-	IEBQNaMc6gmH62s2xQpL+9LrOWjHQKceNp2/PCmjN9kWuMNrR+wuD95vKdUQB2FujWQCOcfNbWoo3
-	pecpxtWgZFOHjjoU505bNvBFG2WavbOYrfLc861EGVeb+Ip9ftKHAse8ygwLrmuCoMgrdjmd5dbh8
-	bc1CCG5WIwh2mf/7dPqk8HGTkg6yYYBmZfe27ttWFwxr4RkUES6Xw7ba1BALmpZwGq9B1TuXL4RnS
-	gNJlWBSdWVoq1QtFEe0TCfZHb489uQ8cwGmzXaf9m6fm4OrcsVSCCzrUZNDfwxb9Kb9hw2MQzbLh7
-	/o5Voes2iiZDnm02l25w==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=X9p2SEwLWH+C/cCLaj2X2Ju7hNI/9Pu2lEKXqNPeS6s=; b=bXGpov1B/B35Go
+	GyTatHs4XjNFyzv6wIWVfF5eSUSLDi40ULhm5aGbZGUTY3wwurI24L5DEq/Zx3OpPqJDWFmUfeu+K
+	giJAayuPbpigeUNfyMih0Yu5NIjWMavTTDL++wZNORv42D6meVmsQC11MMBQWhBsbD5TdoMirZSYz
+	tUyJv7jRRQgh7XhTQw5CriRKxMWaUq92OIsGzFKccGsKTICay7P2GvKehNsQIGt0fBKxnHZX3Lnti
+	5v5vB3aQZyD4lI1eWkNFWcCmEbQvabXrT6uE1ZLJW//tL5ImirNYtJHXdMh3Q1sLkQyaCRrgcuVAm
+	u0rrU5OjoOD/v2dV8EsA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hgTHx-0004Ad-U4; Thu, 27 Jun 2019 12:14:05 +0000
-Received: from mail-wm1-x343.google.com ([2a00:1450:4864:20::343])
+	id 1hgTI0-0004C7-BB; Thu, 27 Jun 2019 12:14:08 +0000
+Received: from mail-wm1-x344.google.com ([2a00:1450:4864:20::344])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hgTHs-00049o-R9
- for linux-amlogic@lists.infradead.org; Thu, 27 Jun 2019 12:14:02 +0000
-Received: by mail-wm1-x343.google.com with SMTP id z23so5445530wma.4
- for <linux-amlogic@lists.infradead.org>; Thu, 27 Jun 2019 05:14:00 -0700 (PDT)
+ id 1hgTHu-00049p-HS
+ for linux-amlogic@lists.infradead.org; Thu, 27 Jun 2019 12:14:03 +0000
+Received: by mail-wm1-x344.google.com with SMTP id c66so5506614wmf.0
+ for <linux-amlogic@lists.infradead.org>; Thu, 27 Jun 2019 05:14:01 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=LdXcbqi//1yQdo7sH21GuoXxU61NLp73gRkdlfRljFs=;
- b=XdfbE24dBpd/sTmZ7q4zvtKudeNA2u1ZlCAXEV6LSSX9MhXFeHsJA89RAGLWnAXKz5
- SVrwt61pY7t/JEyrDiZRvdMmw8qKctFALBIdVUuWRHU/WnvcCMDN0IK8U+OnimL7puwF
- Slbnn8jecmWciwC7EuS8Tpk8VdmPuwZClsYozfuX6VZCVQoOeDpzVlchZJU26FXwdfy5
- pORUGm/YZEaHE/qjgWXlN/Ue67kPhK9qdJhmrEEL3hxk4wJJEcoOXRqO7ZG4kfkJ6OeQ
- UAG56yvB+/TjPpdUMEllkNehJ0aDgHDSIXuvklQkgtlY3BaehtSzHPujwV7ITEOl4np3
- uOKw==
+ h=from:to:cc:subject:date:message-id:in-reply-to:references
+ :mime-version:content-transfer-encoding;
+ bh=6dZUNh41e54wloGbD976gFDh/dh9Od8QCAeDEWTqPi0=;
+ b=OngWCzsC9ReioQ2dB+3Si543jtwEMKbYjq/B6YLYPcItr0MZED1V2Dnrf1ipky90Xm
+ 2iqnk1Q9oOnzku0hLU6IbIPk+Egc8yDD67sNL0VmwMMzUU6CWjk9wYoUOhtUyro6kaA2
+ x/kegG5rlAwYjSM9O5eUH2HiLieh6BIsN7bTxHpA+O0W4ef+8mzhbLP8T45X3vwagZ3Y
+ 2zeBk3oPb43DvoPr30KaBrp0CTr4oLPqlx9RgjuNGnVfvlC2yVMbWuuALVF0uTIrL/Jy
+ QcGya6qoe436hbQ2EZ06QZ3VYz3D6/Hnha2mc6zl9JCmqKAXP/jm6XI7aGTMuHjMXqrN
+ FN5w==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=LdXcbqi//1yQdo7sH21GuoXxU61NLp73gRkdlfRljFs=;
- b=J6f/wSyROOfs2Dtb+O0KUZIOxXmECJ1G2QAGtBPPMW8lwNJy0KEnQbE+A/wDZ3zAr1
- wobpVmeqb8nxjIZ4eKQuvbrbRlX/l2xORw37tslMw1nqQQOn59W9ahF2ccwy+7Fdm9ii
- TYDBUXXMd7Pzvvg2VGfsrOr1+lJdK00AL9yjwggBGVigyEnM9WZxpfz6pOwB58OzhAl5
- XJSJjHk+EuFlBiL9G7dR45WCv90ZTRlbksxmYygTE8SiNFgen8Ld5jyc0lAUt36oLKeG
- I68+mBcgl/EdNxM/VMQ69AJvpXNNUMLOh0H5SdttJ4Y/8R0rz1FfpXWxnc8bKe20z17R
- Jw0w==
-X-Gm-Message-State: APjAAAUw3NWY88DbdGuRblTP5bhs3FmXIgytEpKouT5QrWyYtN7LqM72
- YGf4wlI00Uqo6OmG48OXmmSD+Q==
-X-Google-Smtp-Source: APXvYqxfToTeP7Z6wbZ2zjURbfpnhMu6weuA67216EZ1Md0Y5D3hlgGZi/3X8aMdt1KW9lO/15lYrg==
-X-Received: by 2002:a1c:9ac9:: with SMTP id c192mr3273937wme.0.1561637639202; 
- Thu, 27 Jun 2019 05:13:59 -0700 (PDT)
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
+ :references:mime-version:content-transfer-encoding;
+ bh=6dZUNh41e54wloGbD976gFDh/dh9Od8QCAeDEWTqPi0=;
+ b=BuMi4qmohj5o3SErRAXveOPS6oSFvU/Rnq6DMfq0aUlDDBdvn6RXXacnfGy5/mkRrB
+ +xoFhLjma2mG9ahuvMAMdgfpItJlyo3OcfbZ1csTG21fQOjwnMWWaFflnlsu5Pc8XTEd
+ yTfrZ6/gecunKPDBOtGnZxwHUIG3R64MAQwvp52PU+W5LbC5P4V8sc39Hi4xybl4HdBj
+ 4uoq0alN8WR4zEMyVXQXfzIYO6EgUymQINSwr2egU0KmLkfJZwJ8UksuZ7wTqmwgOm/t
+ Hi+vmwcr572/OKYe/r1a/GY7LXe/Kk4J/+BblZQorNoOwXYItG273i4xqmLZ8mD0iC7/
+ YxIw==
+X-Gm-Message-State: APjAAAV10v7DHozW5fyqPqwT6XSceV52xvt7s29JBy/I+3qaMDvhK4UB
+ in+lubCnIS2EB8AVYkU06//5UA==
+X-Google-Smtp-Source: APXvYqza+Hvs5MtThW6KOFfdj04i4mvr0iJ5DAtXO9FQIkHVfLWq3VCCfUzX1vZSCuDoDWFEcBd7aA==
+X-Received: by 2002:a1c:c109:: with SMTP id r9mr3255675wmf.143.1561637640165; 
+ Thu, 27 Jun 2019 05:14:00 -0700 (PDT)
 Received: from starbuck.baylibre.local
  (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
- by smtp.googlemail.com with ESMTPSA id i11sm6160594wmi.33.2019.06.27.05.13.57
+ by smtp.googlemail.com with ESMTPSA id i11sm6160594wmi.33.2019.06.27.05.13.59
  (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Thu, 27 Jun 2019 05:13:58 -0700 (PDT)
+ Thu, 27 Jun 2019 05:13:59 -0700 (PDT)
 From: Jerome Brunet <jbrunet@baylibre.com>
 To: Mark Brown <broonie@kernel.org>, Liam Girdwood <lgirdwood@gmail.com>,
  Kevin Hilman <khilman@baylibre.com>
-Subject: [PATCH v2 0/2] ASoC: soc-core: update dai_link init
-Date: Thu, 27 Jun 2019 14:13:48 +0200
-Message-Id: <20190627121350.21027-1-jbrunet@baylibre.com>
+Subject: [PATCH v2 1/2] ASoC: soc-core: defer card registration if codec
+ component is missing
+Date: Thu, 27 Jun 2019 14:13:49 +0200
+Message-Id: <20190627121350.21027-2-jbrunet@baylibre.com>
 X-Mailer: git-send-email 2.21.0
+In-Reply-To: <20190627121350.21027-1-jbrunet@baylibre.com>
+References: <20190627121350.21027-1-jbrunet@baylibre.com>
 MIME-Version: 1.0
 X-Patchwork-Bot: notify
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190627_051400_929752_11E4A830 
-X-CRM114-Status: UNSURE (   6.53  )
+X-CRM114-CacheID: sfid-20190627_051402_576208_BE10884F 
+X-CRM114-Status: UNSURE (   9.15  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -76,7 +79,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:343 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:344 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -102,32 +105,39 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-My initial goal with this patchset was to allow a dai_link to have no
-no platform component, instead of having dummy by default.
+Like cpus and platforms, defer sound card initialization if the codec
+component is missing when initializing the dai_link
 
-However, when rebasing, I discovered that Kuninori Morimoto had recently
-done that in a different way :)
+Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
+---
+ sound/soc/soc-core.c | 8 ++++++++
+ 1 file changed, 8 insertions(+)
 
-I am still submitting my change since it should allow multiple platform
-components on a dai_link, which is one of the FIXME note in soc-core.
-
-I have also added a check on the codecs component availability to align
-on what was done for platforms and cpus
-
-Change since v1 [0]:
-* Fix registartion typo
-* Rename dlc variable to codec/platform
-
-[0]: https://lkml.kernel.org/r/20190626133617.25959-1-jbrunet@baylibre.com
-
-Jerome Brunet (2):
-  ASoC: soc-core: defer card registration if codec component is missing
-  ASoC: soc-core: support dai_link with platforms_num != 1
-
- include/sound/soc.h  |  6 ++++
- sound/soc/soc-core.c | 67 +++++++++++++++++++++-----------------------
- 2 files changed, 38 insertions(+), 35 deletions(-)
-
+diff --git a/sound/soc/soc-core.c b/sound/soc/soc-core.c
+index 358f1fbf9a30..0ec1d7a59b24 100644
+--- a/sound/soc/soc-core.c
++++ b/sound/soc/soc-core.c
+@@ -1064,12 +1064,20 @@ static int soc_init_dai_link(struct snd_soc_card *card,
+ 				link->name);
+ 			return -EINVAL;
+ 		}
++
+ 		/* Codec DAI name must be specified */
+ 		if (!codec->dai_name) {
+ 			dev_err(card->dev, "ASoC: codec_dai_name not set for %s\n",
+ 				link->name);
+ 			return -EINVAL;
+ 		}
++
++		/*
++		 * Defer card registration if codec component is not added to
++		 * component list.
++		 */
++		if (!soc_find_component(codec))
++			return -EPROBE_DEFER;
+ 	}
+ 
+ 	/*
 -- 
 2.21.0
 
