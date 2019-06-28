@@ -2,79 +2,80 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9C88A5A339
-	for <lists+linux-amlogic@lfdr.de>; Fri, 28 Jun 2019 20:13:19 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D23C95A455
+	for <lists+linux-amlogic@lfdr.de>; Fri, 28 Jun 2019 20:41:31 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:References
 	:In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=0RnVau+bH3YpE7dwc+5us5ZCZ9mIbtDDlcF5vZ+MQy0=; b=TI44nYmKY9Rxaz
-	fqxIMZRGReggiZ6CuzOt1lKTrrjFwdXnADhtLL0wFLkuhzkdBZ4FSeMfBl/iL70jeoefmNLKIafmR
-	HztFXSwHQ7MGfItgs0582CW2t6r5mnnsxTbgjTJZ0rW4BEdGpdANegCR27hrHdqmJY793w6zAWnKD
-	s3OuCaqAACsPFKpBgKutfH8djFKy3RuyI4hmNrQj8l6KdTfLOJmutoMSyTrxTx3tias2CFzlWo4RD
-	eZ0VvIrEHRy1Q5zAsji0xK+9YCPQCWFB3fw16shSKlIh4bdylwT5A144wQeHYPyIBseGKl5CDkK+e
-	jAQs8qWE3y+IpB7nn9Mg==;
+	List-Owner; bh=E0VLuKvYOhxduNifEVYGagOw9yFDyiqV7lhcV73fRT8=; b=hY9kqxGxsRAdhJ
+	9ePmLSab+DGWhzufjwDf4D7IgD63pUizEoHG4PeCW95OlE5jkPDPoKGwJJj+7eH6TP4ocLFzFqWU3
+	54PcTKnC4tkUE0zq7PTwt2bTPK0du+s3CrZ7E7+dpWEXkMBy+GJ2AErIus8EcZyaayevSfnuwqdA9
+	06gpHqDCN2B6y9IZzJR4BdDTg+qNQ8hcidI0ZYMmM6aWZBiRZZ4SJHErN4KDAd2PaPfQcDSFfEDGA
+	DtiPnIuFZ8HGg2SjqAqJlrGS80ggG1QFskunkwGY9rWD8++fM85vaNH5MPaplL1d5l6X5XL2JO87E
+	cbrmsBRKIZWfc9GkcAMA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hgvN5-0000A8-1P; Fri, 28 Jun 2019 18:13:15 +0000
-Received: from mail-pl1-x644.google.com ([2607:f8b0:4864:20::644])
+	id 1hgvoN-0007cI-1H; Fri, 28 Jun 2019 18:41:27 +0000
+Received: from mail-pl1-x642.google.com ([2607:f8b0:4864:20::642])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hgvN1-000094-B1
- for linux-amlogic@lists.infradead.org; Fri, 28 Jun 2019 18:13:13 +0000
-Received: by mail-pl1-x644.google.com with SMTP id 9so2896780ple.5
- for <linux-amlogic@lists.infradead.org>; Fri, 28 Jun 2019 11:13:10 -0700 (PDT)
+ id 1hgvo5-0007Of-EB
+ for linux-amlogic@lists.infradead.org; Fri, 28 Jun 2019 18:41:12 +0000
+Received: by mail-pl1-x642.google.com with SMTP id e5so3690067pls.13
+ for <linux-amlogic@lists.infradead.org>; Fri, 28 Jun 2019 11:41:08 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=from:to:cc:subject:in-reply-to:references:date:message-id
- :mime-version; bh=Cn9Q1Wbyl5xIGaCdkoIIaNcFmVQFrY2dwxn3d9BBkHc=;
- b=eag4mvABTu4bMgSKtKRaxm6hxG1BPnj1CEDFDSDsrF6DOjCGrRewpIXSDm7hcqEmzs
- mn+E004mWDj4R879Vf9eY87+iP/Wk2xBwki3jO3juI6uyXY8phyqEjB38IK3ihQKMwMc
- Cd6Llre7Oo/KZXZxjU80RAQo/+53AG/eeK+vmGfTUy39fzItmjufUSdfnyuecNykvLT7
- ztmI8T5bDDvTG2AqW44V6lcm7kOKJs2HrwEU87a23q26iR7Yfzxpm1YAOtsxOXwa6RUk
- moDdV4v+CP9qI3+CevCjHpdLRTZsYlBKjIwkb5sHJ19IF4aHoFmNkJLypftqcz4xfj51
- xVVg==
+ :mime-version; bh=fQE3yjXSmEBBK7nvjeoLovQEjasyqjJ5dyMYD6mC7O8=;
+ b=QY3rhsLuoD6pfWkXWngj/KQZLMCZ6yKpGYJkF8Udg5G/NGlFdbnzzTaxM/GRBX+11c
+ AnNNBc/vjnaGlBRfRxmVRJoln28jtZgEKcNVIEXES54GLsmjjJVEjQGOwQx3duZv8EFD
+ bg778Ycp1xeyCJe7RSwG5IXqT5y/7DDJtHpUMuqo1T0kome3xAVG4DxMia5CUsq+d4VD
+ 8f4NSX1ZdBgmdmwL/W+JZt8Sq6C3jNm2Iyyz70u/HmpqhhcQUZ+L/yrkulUFpykYYq3Y
+ RijRHD7GKT4cLc9K1EZckwtGCnlSApICLOCkfIClG7XztQWsSpDyHnltBacBvaUmhgzs
+ oaaA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:in-reply-to:references:date
  :message-id:mime-version;
- bh=Cn9Q1Wbyl5xIGaCdkoIIaNcFmVQFrY2dwxn3d9BBkHc=;
- b=Bja076tNf+smiYMekTPxEPX6NbSid9TFszz1oAi2d40CR2tMlc6AEazl1OKBHOKLa3
- H+QpFtBLWg71+r/14e2YBOyHSncArzgc+yaXEnC0+lF7gsGxAmFPQosrT9JVLdPugez5
- Uas+DvyI+IhXb3+cU7xoQFjCIK9VcTJO9ymtDKMt2dPA2r+EXrwt5TzAOj1txXNgzSCl
- ZRQNFSFWBWpaN8E1bHw5uOSthUeOxu/6+Jy7bCC8ZQvYzktOz1rKelafthMR7h1h7+QP
- a9CD7eP3S1PY7VRE0Xjw8+NVGuF6vItu8pzNVgUugd1K0XOYw6h1V95b3eCgcs2665K1
- EVjQ==
-X-Gm-Message-State: APjAAAWIArd4yngHb0Kfw7tjj6dCW1EoBTCLQcHxJUHZIfERDJC0XHED
- QatajRSxdUJ+PqxM0tzDPOt8Cg==
-X-Google-Smtp-Source: APXvYqyO0DxNwIeVEjqqmuJf6WfYaCTaV6owpC43va2Fglh9hukvx/iaKf2dkMByt/m7tQBZXRWWpw==
-X-Received: by 2002:a17:902:da4:: with SMTP id
- 33mr12037670plv.209.1561745590252; 
- Fri, 28 Jun 2019 11:13:10 -0700 (PDT)
+ bh=fQE3yjXSmEBBK7nvjeoLovQEjasyqjJ5dyMYD6mC7O8=;
+ b=ilCVrMaoTRjjnpbBozEXeypFEcCe5k+hCDxEIr3hPs3spCF2BjHPXNqaOgG9/TDLX6
+ IZXVquTS6CJMTiKdDZcLp8+v0okX/WPlt5gxwyOk7XzTQR7mHdqMVA0KIDjbHa1W8cQM
+ BMmAAAZJ9q5HmgkCGfufC0tfpEevGAU/cFpeT54UMPrSuLUz88TltvdR9SwxvNPZvl6C
+ eIm62YgArCADymD/8/lBn0b/sRr+l8t7JFwF5KgIYo1znJeZ/l/xv7Cn5OaucZgQP/US
+ 6/+MQ1FlpzRtFsDwPwr0c0fHT7FGNNybAuXxKcsZIR6rW/Suk0iO+KTymVkSYVe6S5jV
+ Id9A==
+X-Gm-Message-State: APjAAAUaA7Jdghw0q+qyYPcccJVGl3QE4iKHv2UPwzhjGZtqxAGRNqnQ
+ 34zOQ1LLVLK7OyqKJuO20n2Kcw==
+X-Google-Smtp-Source: APXvYqzByc/4yIWQSC44smY+Wmaei7vfmV5iHq9ECor2e7zK+iHHiRISkR4djb2VDtszsmN6vH8dvw==
+X-Received: by 2002:a17:902:7687:: with SMTP id
+ m7mr13517930pll.310.1561747268178; 
+ Fri, 28 Jun 2019 11:41:08 -0700 (PDT)
 Received: from localhost (c-71-197-186-152.hsd1.wa.comcast.net.
- [71.197.186.152])
- by smtp.googlemail.com with ESMTPSA id o14sm2675345pjp.29.2019.06.28.11.13.09
+ [71.197.186.152]) by smtp.googlemail.com with ESMTPSA id
+ q144sm4238550pfc.103.2019.06.28.11.41.07
  (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
- Fri, 28 Jun 2019 11:13:09 -0700 (PDT)
+ Fri, 28 Jun 2019 11:41:07 -0700 (PDT)
 From: Kevin Hilman <khilman@baylibre.com>
-To: Neil Armstrong <narmstrong@baylibre.com>, jbrunet@baylibre.com
-Subject: Re: [RFC/RFT v2 00/14] arm64: g12a: add support for DVFS
-In-Reply-To: <20190626090632.7540-1-narmstrong@baylibre.com>
-References: <20190626090632.7540-1-narmstrong@baylibre.com>
-Date: Fri, 28 Jun 2019 11:13:08 -0700
-Message-ID: <7hblyhr32j.fsf@baylibre.com>
+To: Neil Armstrong <narmstrong@baylibre.com>
+Subject: Re: [PATCH] arm64: dts: meson-g12a: add missing dwc2 phy-names
+In-Reply-To: <20190625123647.26117-1-narmstrong@baylibre.com>
+References: <20190625123647.26117-1-narmstrong@baylibre.com>
+Date: Fri, 28 Jun 2019 11:41:04 -0700
+Message-ID: <7h8stlr1rz.fsf@baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190628_111311_383038_A336C925 
-X-CRM114-Status: GOOD (  12.33  )
+X-CRM114-CacheID: sfid-20190628_114109_539353_EE637A1A 
+X-CRM114-Status: UNSURE (   8.61  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:644 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:642 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -92,10 +93,8 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: Neil Armstrong <narmstrong@baylibre.com>,
- martin.blumenstingl@googlemail.com, linux-kernel@vger.kernel.org,
- linux-gpio@vger.kernel.org, linux-amlogic@lists.infradead.org,
- linux-clk@vger.kernel.org, linux-arm-kernel@lists.infradead.org
+Cc: linux-amlogic@lists.infradead.org, linux-kernel@vger.kernel.org,
+ linux-arm-kernel@lists.infradead.org, Neil Armstrong <narmstrong@baylibre.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
@@ -103,76 +102,25 @@ Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
 Neil Armstrong <narmstrong@baylibre.com> writes:
 
-> The G12A/G12B Socs embeds a specific clock tree for each CPU cluster :
-> cpu_clk / cpub_clk
-> |   \- cpu_clk_dyn
-> |      |  \- cpu_clk_premux0
-> |      |        |- cpu_clk_postmux0
-> |      |        |    |- cpu_clk_dyn0_div
-> |      |        |    \- xtal/fclk_div2/fclk_div3
-> |      |        \- xtal/fclk_div2/fclk_div3
-> |      \- cpu_clk_premux1
-> |            |- cpu_clk_postmux1
-> |            |    |- cpu_clk_dyn1_div
-> |            |    \- xtal/fclk_div2/fclk_div3
-> |            \- xtal/fclk_div2/fclk_div3
-> \ sys_pll / sys1_pll
+> The G12A USB2 OTG capable PHY uses a 8bit large UTMI bus, and the OTG
+> controller gets the PHY but width by probing the associated phy.
 >
-> This patchset adds notifiers on cpu_clk / cpub_clk, cpu_clk_dyn,
-> cpu_clk_premux0 and sys_pll / sys1_pll to permit change frequency of
-> the CPU clock in a safe way as recommended by the vendor Documentation
-> and reference code.
+> By default it will use 16bit wide settings if a phy is not specified,
+> in our case we specified the phy, but not the phy-names.
 >
-> This patchset :
-> - introduces needed core and meson clk changes
-> - adds support for the G12B second cluster clock measurer ids
-> - protects clock measurer from cooncurent measures
-> - adds the clock notifiers
-> - moves the G12A DT to a common g12a-common dtsi
-> - adds the G12A and G12B OPPs
-> - enables DVFS on all supported boards
+> The dwc2 bindings specifies that if phys is present, phy-names shall be
+> "usb2-phy".
 >
-> Dependencies:
-> - PWM AO input order fix at [1]
-> - PWM enhancements from Martin at [2]
+> Adding phy-names = "usb2-phy" solves the OTG PHY bus configuration.
 >
-> Changes since RFT/RFC v1 at [3]:
-> - Added EXPORT_SYMBOL_GPL() to clk_hw_set_parent
-> - Added missing static to g12b_cpub_clk_mux0_div_ops and g12a_cpu_clk_mux_nb
-> - Simplified g12a_cpu_clk_mux_notifier_cb() without switch/case
-> - Fixed typo in "this the current path" in g12a.c
-> - Fixed G12B dtsi by adding back the sdio quirk
-> - Fixed G12A dtsi unwanted sdio quirk removal
-> - Fixed various checkpatch errors
->
-> [1] https://patchwork.kernel.org/patch/11006835/
-> [2] https://patchwork.kernel.org/patch/11006835/
-> [3] https://patchwork.kernel.org/cover/11006929/
->
-> Neil Armstrong (14):
->   pinctrl: meson-g12a: add pwm_a on GPIOE_2 pinmux
->   clk: core: introduce clk_hw_set_parent()
->   clk: meson: regmap: export regmap_div ops functions
->   clk: meson: eeclk: add setup callback
->   soc: amlogic: meson-clk-measure: protect measure with a mutex
->   soc: amlogic: meson-clk-measure: add G12B second cluster cpu clk
->   clk: meson: g12a: add notifiers to handle cpu clock change
->   clk: meson: g12a: expose CPUB clock ID for G12B
->   arm64: dts: move common G12A & G12B modes to meson-g12-common.dtsi
->   arm64: dts: meson-g12-common: add pwm_a on GPIOE_2 pinmux
->   arm64: dts: meson-g12a: add cpus OPP table
->   arm64: dts: meson-g12a: enable DVFS on G12A boards
->   arm64: dts: meson-g12b: add cpus OPP tables
->   arm64: dts: meson-g12b-odroid-n2: enable DVFS
+> Fixes: 9baf7d6be730 ("arm64: dts: meson: g12a: Add G12A USB nodes")
+> Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
 
-The DT files don't apply cleanly to my tree (v5.3/dt64 branch).  Could
-you rebase:
+Queuing for v5.3-rc,
 
-Then I can put into my testing branch, which gets included in 'integ'
-and it will be easier for others to test.
+Thanks,
 
 Kevin
-
 
 _______________________________________________
 linux-amlogic mailing list
