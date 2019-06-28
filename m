@@ -2,85 +2,68 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 24534595D9
-	for <lists+linux-amlogic@lfdr.de>; Fri, 28 Jun 2019 10:17:27 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id CBEA35A181
+	for <lists+linux-amlogic@lfdr.de>; Fri, 28 Jun 2019 18:56:46 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=M7aei2Yn4/+UwKTfOHEWZexvlTgbPDLry/+qqbiHcK4=; b=c/skM/7t1KdoJA
-	gG9gU17QwCKZmEhZomrktVyX9o1UirUksfSmY7Bk3S9ts9JVxqlhaTM7G2SzXC2EqulJZuopIZK6/
-	u4/9jwVr9Ai9wqKu4gBBOYc4SS+w0L2LnarlndaCzqWJwfudSbGbfveD07FJhkxwfK4Sz7cAKMHY0
-	zns1AqePTWcuR8Qem++izNYFRJfZ+wz2iZ+rPlAi5bNECS8+vNYvShxCkfaJiynXsJTyBPeWTuYIB
-	SDYi1vpGI4jShHXl0w+39e8JKzg4WD2/RkGmLqfrgraFZl3zb1KU2Aw1slftvbe49g03btrqh5GAK
-	ctw5EgyLWDkzqKsFT1nw==;
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:
+	In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	References:List-Owner; bh=IOAH9T/im6XyBNrjFinWxn+CXiOlGo7BLT+jvlrPYQg=; b=Jk0
+	DSE6PybC81QIpq0WbUznk3CgzNTusA/iIig+APhZBW3xqUAP6htl5pdtdj1ZkP48oeTTCZXtSaZIK
+	2oYfIGXnW8gKYRAg2q2lhIzP8D4m2W3NEF278QgwHJL6akdmiTPXdYcd336ddkqWEu0g5YpDJhtxB
+	lk4J2ieQixt6iReyPgrPdWDcTboGDI/ML/PKSNWUVSqaOHwt0wCKFd5DhGhDbNQ59KfggovIiHZyU
+	UiFzAayab5saOIjNbbdcO4ngU8XBJ7kNaSc5uApBo/gMfohLaiEfiptCQXHEkKVYGITGOUgi5D9VL
+	mdENkeeVzc422brYG5EveKF/T1czwIA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hgm4M-0001y5-Hu; Fri, 28 Jun 2019 08:17:18 +0000
-Received: from mail-wr1-x444.google.com ([2a00:1450:4864:20::444])
+	id 1hguAv-00042z-B7; Fri, 28 Jun 2019 16:56:37 +0000
+Received: from heliosphere.sirena.org.uk ([2a01:7e01::f03c:91ff:fed4:a3b6])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hgm4I-0001xZ-CB
- for linux-amlogic@lists.infradead.org; Fri, 28 Jun 2019 08:17:16 +0000
-Received: by mail-wr1-x444.google.com with SMTP id p13so5261653wru.10
- for <linux-amlogic@lists.infradead.org>; Fri, 28 Jun 2019 01:17:13 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=0iX4GoXUMjYo0yWAqnak7nWNu9SahWjJ+qIlyX2DjnA=;
- b=pqUrZZrHnpMwYQiyu/1jCW1Vn1dbIBUApoVZMhyhBwvnhvhfumKMpGn/HD06hkyLKV
- mAr70tgH1UWNF40M5i4Iu7TZyBCOF9E4DVrgXNhfgFoe68UERxt7W4BtnpD/aXQbHgrr
- KSKRFDsze0oQlGIrrEesEJEXxvjGoX7ByoMNidbjknRj4Bylt+bqRjjgIIVO6eX4pKnN
- 1AmfDbD/NeC/4Z9WHyrLlNhDEE1EW62NsHUnaW1L+cOpLHwoL1tVmmD214BJEgmzEGJp
- UBCPbzQkK8BSlSG9gz7fGNCBlajjvLjh/2C21gkCh6AjXCuIST7i+hrq6mn684QyGZ60
- KhUQ==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=0iX4GoXUMjYo0yWAqnak7nWNu9SahWjJ+qIlyX2DjnA=;
- b=OaG0XrN5Z7QUl7rV3WsiY2IEclKJVjM8fWUF1sAkSCYSdmK4YKFu8a8mH8/uGjYi67
- Kfvg71kegnq2TATRwZDqFQ8z+64njL6EpJvXPPS60fQgipJATreA5zW4S9DCWLwq+MyQ
- M2N9+/F+dKy2wbLg2thoxJgWLHwpxmeO4ZOYS1mtKru4zxy1U6ELh9gPm+DtaK1883RL
- G9h5c3wns3ySNHQ4LPy9KftWuw5Xe6kwdbHEpMej/OOyTTsQ8CBSY/ycv5g4rNhIOds2
- hf1DLhPmk7h+KHW5gX0gqchhN+oO0+UbIGWGkAvynPpKBBBHOoSwAkZROdTkCa2+anDg
- cdaA==
-X-Gm-Message-State: APjAAAXGIFCQutT6YJS3Ef9Fe5WxjlzzmcNJVdIbMBtBzBN47Aip2Vtc
- Mp5fFz+us8yGrgHOvr2SjXESc9gzQHdJEQ==
-X-Google-Smtp-Source: APXvYqw+rkcyh3PTU9URJjuIKiu4kZ97NgtKOX3PAukWMiU12hf7kxkJIrnT5wyWxV6LyDzzRWcw8A==
-X-Received: by 2002:a05:6000:124a:: with SMTP id
- j10mr6749454wrx.191.1561709832291; 
- Fri, 28 Jun 2019 01:17:12 -0700 (PDT)
-Received: from starbuck.baylibre.local
- (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
- by smtp.googlemail.com with ESMTPSA id r5sm2819216wrg.10.2019.06.28.01.17.11
- (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Fri, 28 Jun 2019 01:17:11 -0700 (PDT)
-From: Jerome Brunet <jbrunet@baylibre.com>
-To: Mark Brown <broonie@kernel.org>, Liam Girdwood <lgirdwood@gmail.com>,
- Kevin Hilman <khilman@baylibre.com>
-Subject: [PATCH] ASoC: meson: axg-card: remove useless check on codec
-Date: Fri, 28 Jun 2019 10:17:08 +0200
-Message-Id: <20190628081708.22039-1-jbrunet@baylibre.com>
-X-Mailer: git-send-email 2.21.0
-MIME-Version: 1.0
-X-Patchwork-Bot: notify
+ id 1hguAp-00041d-QD
+ for linux-amlogic@lists.infradead.org; Fri, 28 Jun 2019 16:56:34 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=sirena.org.uk; s=20170815-heliosphere; h=Date:Message-Id:In-Reply-To:
+ Subject:Cc:To:From:Sender:Reply-To:MIME-Version:Content-Type:
+ Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:References:
+ List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:
+ List-Archive; bh=aC9fWPYqc3WgfJHm0DcB4vDnamPIlvUEdZf1IR7iVGA=; b=C2SlVTwCB5LA
+ 48CwtqPxDjOYZHk4Vq8CvPo/1o4VALbxwkiqKEKYnGTeJKcvVl6ynlushqpdiO8HqBChpDVM6DW4c
+ SEtAeGdoT/f+MjYcE2bH1HYGZhCRB8WT21CAh/nUBSdVvEqnv7xv47QLNpJo2ZaqWZirU+/OJfiY1
+ ZpNvs=;
+Received: from cpc102320-sgyl38-2-0-cust46.18-2.cable.virginm.net
+ ([82.37.168.47] helo=finisterre.sirena.org.uk)
+ by heliosphere.sirena.org.uk with esmtpsa
+ (TLS1.2:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.89)
+ (envelope-from <broonie@sirena.org.uk>)
+ id 1hguAm-0007BU-Hg; Fri, 28 Jun 2019 16:56:28 +0000
+Received: by finisterre.sirena.org.uk (Postfix, from userid 1000)
+ id 0CCBA44004B; Fri, 28 Jun 2019 17:56:28 +0100 (BST)
+From: Mark Brown <broonie@kernel.org>
+To: Jerome Brunet <jbrunet@baylibre.com>
+Subject: Applied "ASoC: meson: axg-card: remove useless check on codec" to the
+ asoc tree
+In-Reply-To: <20190628081708.22039-1-jbrunet@baylibre.com>
+X-Patchwork-Hint: ignore
+Message-Id: <20190628165628.0CCBA44004B@finisterre.sirena.org.uk>
+Date: Fri, 28 Jun 2019 17:56:28 +0100 (BST)
+X-Bad-Reply: In-Reply-To but no 'Re:' in Subject.
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190628_011714_478632_1167C2A2 
-X-CRM114-Status: UNSURE (   9.71  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190628_095632_005183_D1D71555 
+X-CRM114-Status: GOOD (  14.09  )
+X-Spam-Score: 0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:444 listed in]
- [list.dnswl.org]
- -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
@@ -96,18 +79,53 @@ List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
 Cc: devicetree@vger.kernel.org, alsa-devel@alsa-project.org,
- linux-kernel@vger.kernel.org, linux-amlogic@lists.infradead.org,
- Dan Carpenter <dan.carpenter@oracle.com>, Jerome Brunet <jbrunet@baylibre.com>
+ Kevin Hilman <khilman@baylibre.com>, Liam Girdwood <lgirdwood@gmail.com>,
+ linux-kernel@vger.kernel.org, Mark Brown <broonie@kernel.org>,
+ linux-amlogic@lists.infradead.org, Dan Carpenter <dan.carpenter@oracle.com>
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
+
+The patch
+
+   ASoC: meson: axg-card: remove useless check on codec
+
+has been applied to the asoc tree at
+
+   https://git.kernel.org/pub/scm/linux/kernel/git/broonie/sound.git for-5.3
+
+All being well this means that it will be integrated into the linux-next
+tree (usually sometime in the next 24 hours) and sent to Linus during
+the next merge window (or sooner if it is a bug fix), however if
+problems are discovered then the patch may be dropped or reverted.  
+
+You may get further e-mails resulting from automated or manual testing
+and review of the tree, please engage with people reporting problems and
+send followup patches addressing any issues that are reported if needed.
+
+If any updates are required or you are submitting further changes they
+should be sent as incremental updates against current git, existing
+patches will not be replaced.
+
+Please add any relevant lists and maintainers to the CCs when replying
+to this mail.
+
+Thanks,
+Mark
+
+From 8fc22fa4b2cd983e4c542d1841b3d2212ad18ed4 Mon Sep 17 00:00:00 2001
+From: Jerome Brunet <jbrunet@baylibre.com>
+Date: Fri, 28 Jun 2019 10:17:08 +0200
+Subject: [PATCH] ASoC: meson: axg-card: remove useless check on codec
 
 While checking cpus before dereferencing the pointer is required, it is
 not necessary for codecs. 'codec' can't possibly be NULL in the loop
 
 Reported-by: Dan Carpenter <dan.carpenter@oracle.com>
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
+Signed-off-by: Mark Brown <broonie@kernel.org>
 ---
  sound/soc/meson/axg-card.c | 3 +--
  1 file changed, 1 insertion(+), 2 deletions(-)
@@ -127,7 +145,7 @@ index 70bb0cbad233..14a8321744da 100644
  	}
  
 -- 
-2.21.0
+2.20.1
 
 
 _______________________________________________
