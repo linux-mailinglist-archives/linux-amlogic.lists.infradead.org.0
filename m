@@ -2,80 +2,64 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 957115D888
-	for <lists+linux-amlogic@lfdr.de>; Wed,  3 Jul 2019 02:01:54 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 946E95DB6E
+	for <lists+linux-amlogic@lfdr.de>; Wed,  3 Jul 2019 04:15:31 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=us+IiZ8UVAkXvDMKS0gWXtAkVfdAcdj0aMy5NymKVyI=; b=IJsxGbTqQxSMSn
-	0f+w1uff6rsdHerKuKHYBl60s2xiSox+4RrSJwoCjAOAgfubimcV8jgWRxhM1J0VqP8Vbj3tE9J5H
-	iKh5Z2pFRPm/QfEn3bl5CB1r6HZbOWfFTeeAaWBntOzcFqF0GXyYG9A+9I7XobaUqzJQAsrmNPgYh
-	f18zH3XSnKs98g6IPgRaUpJ70E+xsL/Hk9Pw89gyviEE9K6/tnDJXW7bTjlUbm8sG93ab1lQII44P
-	gQnuTre2wj8yKfhMMEmUVhaJhWqGe0lfd7kSJCeXxZ6+eNK6gAwwqwCScIspG5HOAw1eKUpez9Zvj
-	pRTL+LXL3t4aqgKsuLUg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=U/O9H7PSKJHwg1EIdJtdp9Q3uDXq/hcPvzeTteUNfrw=; b=Xv+XX8ruOmhTLg
+	eDGtKuZ/nA56utHUbkBw6+dIXI5etTRs8TZO+eX4+4z1zPtCsV/5hTNgj6ZMX4O3b4ztoK7yjmmzI
+	0ZZXsWcGk4pMsXJAVA1lDzPJKQCFWhtuZlexo/vdyPoaJGaxoAVnW3EDmUwNb9hIu45jLU+MfY/2H
+	OZuZiCz70CYwUnLeyNVpFG4/i1elZU9g9l0dctKqFzAzyko6kuHTjlHvfndU2KdLVU17waOcSPUYq
+	o9rcmHgh8E7/7xEfgGF2N/hjKfJGG4Nvi/IohRw5Q8acHXsMkBuqIFRG7/HePI9EglPXAORZHWrXV
+	uKetqp/FEWq8ZvjllpHw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hiSid-0001yN-EA; Wed, 03 Jul 2019 00:01:51 +0000
-Received: from mail-oi1-x241.google.com ([2607:f8b0:4864:20::241])
+	id 1hiUnp-0003Og-61; Wed, 03 Jul 2019 02:15:21 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hiSiZ-0001y2-D4; Wed, 03 Jul 2019 00:01:48 +0000
-Received: by mail-oi1-x241.google.com with SMTP id v186so513013oie.5;
- Tue, 02 Jul 2019 17:01:47 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=googlemail.com; s=20161025;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=obK8pqGpp6ppUzwFxaYhNaIwmhJYhgnzTyLxnEMEbaE=;
- b=Lgk8HxN2TeaySbNH6ob4UW9Y1FU9ezn/XZX87/sUbY5sGJwYYW09z7LGrLbcskZrtF
- h+DBGDabYukmYv22IrZ+49itPNoy9cnyYJwXzXiW6ASg/lvgOvgV9xy8WSmeF0czH39O
- EMhCzMJeDIXushtAdpqBdCjnDi4NMWsS0JZhxKSR2ci7IHbGYrw9WaE3uF7v9RYIQGF8
- ll2bePKQibxC4pnFOZQyZC/NqU6LO7Ln0PNYeNQN9TP1H3SQfRxU8G0AJF4w0TFfuyph
- rybCk3984T+iyvQRkaFh2kGxXryzzYsKtkAkcoIxKP07Jik8Z4QS54FQbbJbr97+pmZH
- aDFw==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=obK8pqGpp6ppUzwFxaYhNaIwmhJYhgnzTyLxnEMEbaE=;
- b=OTlQYeIAwdgXVKTIEkArDZi5K1JF/XOU3kcTGpAW9E1OoYIfKXX8jhH+b2lJRW2+hc
- bO0f6MVqGaR5pmw8TGs2NjudTJ2lC7KBNSUu0dSCDI9zZaeIX8vOhJ16n1UrQFDQKgjK
- qc8tv3vh/f2u13uMjnPZTkiw7SzrSqZp/X3qIaQuEPjer6uT3PUUfwit7B3hhbQIV3uU
- 1TlLJb+UpkaaFw3/lv/e8TI9TB7rWQTlh0oKvD/Bu8khRikr4gbUQM4yrc3ZfOynYhfB
- u4evORWjaA8pXg9d7QC0wNdu2zql6Xkylwn8cg6GdruPRxbiGANbmE+AIsTbcSbRdVBi
- tjNg==
-X-Gm-Message-State: APjAAAVWhpZJayq/XKTvH1cTF2Bnm1i1u5yhmiI4/D/+kybMILX0JYb7
- /VekDBiKpYdqM8FFZ8BiEdb8knzIpDXVt9fVCOc=
-X-Google-Smtp-Source: APXvYqzsU+VOw/pRzHZkbj7mE4hstsvnVzXhxSZSDwcHEbGK6duR2ysmseQ7VOXaagjXgGDyInbFMOecV+o3mcRZ56Y=
-X-Received: by 2002:aca:4306:: with SMTP id q6mr4781191oia.39.1562112106480;
- Tue, 02 Jul 2019 17:01:46 -0700 (PDT)
+ id 1hiUnl-0003Nl-56
+ for linux-amlogic@lists.infradead.org; Wed, 03 Jul 2019 02:15:18 +0000
+Received: from sasha-vm.mshome.net (c-73-47-72-35.hsd1.nh.comcast.net
+ [73.47.72.35])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id 6A5842187F;
+ Wed,  3 Jul 2019 02:15:15 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1562120116;
+ bh=+Jv8G9Bv9bksetOHe/bcYYYfL0WmjVsX+d9rjn+Cmss=;
+ h=From:To:Cc:Subject:Date:From;
+ b=XQFn13ipJP+0+zHKTMq5Udp5IFm8Su6S/Gql6yvyzI9FQVPQ5O219aFKm8uuLm5hG
+ 8NJKqUc5lfgf8/5G9AH9UPJjeXmj9UlY58UnN2eF7FwlHA+BJdZ1Q0AAbJMpt9ssjq
+ i61Z78Ce5FEilda7LuNNPuig3FTjxJTsOgiJLH5s=
+From: Sasha Levin <sashal@kernel.org>
+To: linux-kernel@vger.kernel.org,
+	stable@vger.kernel.org
+Subject: [PATCH AUTOSEL 5.1 01/39] ARM: dts: meson8: fix GPU interrupts and
+ drop an undocumented property
+Date: Tue,  2 Jul 2019 22:14:36 -0400
+Message-Id: <20190703021514.17727-1-sashal@kernel.org>
+X-Mailer: git-send-email 2.20.1
 MIME-Version: 1.0
-References: <20190701104705.18271-1-narmstrong@baylibre.com>
- <20190701104705.18271-6-narmstrong@baylibre.com>
-In-Reply-To: <20190701104705.18271-6-narmstrong@baylibre.com>
-From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-Date: Wed, 3 Jul 2019 02:01:35 +0200
-Message-ID: <CAFBinCBTbCf=haP=YmkmtvAxD6hgq32LPMg=OkRF3P_p+okqeQ@mail.gmail.com>
-Subject: Re: [RFC 05/11] dt-bindings: soc: amlogic: clk-measure: Add SM1
- compatible
-To: Neil Armstrong <narmstrong@baylibre.com>
+X-stable: review
+X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190702_170147_440291_6F738992 
-X-CRM114-Status: UNSURE (   6.03  )
+X-CRM114-CacheID: sfid-20190702_191517_216968_1ADF0EBF 
+X-CRM114-Status: UNSURE (   8.54  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-5.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:241 listed in]
- [list.dnswl.org]
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (martin.blumenstingl[at]googlemail.com)
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
@@ -83,6 +67,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -94,20 +79,61 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, khilman@baylibre.com,
- linux-kernel@vger.kernel.org, linux-amlogic@lists.infradead.org,
- linux-arm-kernel@lists.infradead.org, jbrunet@baylibre.com
+Cc: Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
+ Kevin Hilman <khilman@baylibre.com>, devicetree@vger.kernel.org,
+ linux-amlogic@lists.infradead.org, Sasha Levin <sashal@kernel.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On Mon, Jul 1, 2019 at 12:49 PM Neil Armstrong <narmstrong@baylibre.com> wrote:
->
-> Add the Amlogic SM1 Compatible for the clk-measurer IP.
->
-> Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
-Reviewed-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+
+[ Upstream commit 01dfdd7b4693496854ac92d1ebfb18d7b108f777 ]
+
+The interrupts in Amlogic's vendor kernel sources are all contiguous.
+There are two typos leading to pp2 and pp4 as well as ppmmu2 and ppmmu4
+incorrectly sharing the same interrupt line.
+Fix this by using interrupt 170 for pp2 and 171 for ppmmu2.
+
+Also drop the undocumented "switch-delay" which is a left-over from my
+experiments with an early lima kernel driver when it was still
+out-of-tree and required this property on Amlogic SoCs.
+
+Fixes: 7d3f6b536e72c9 ("ARM: dts: meson8: add the Mali-450 MP6 GPU")
+Signed-off-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+Signed-off-by: Kevin Hilman <khilman@baylibre.com>
+Signed-off-by: Sasha Levin <sashal@kernel.org>
+---
+ arch/arm/boot/dts/meson8.dtsi | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+
+diff --git a/arch/arm/boot/dts/meson8.dtsi b/arch/arm/boot/dts/meson8.dtsi
+index a9781243453e..048b55c8dc1e 100644
+--- a/arch/arm/boot/dts/meson8.dtsi
++++ b/arch/arm/boot/dts/meson8.dtsi
+@@ -248,8 +248,8 @@
+ 				     <GIC_SPI 167 IRQ_TYPE_LEVEL_HIGH>,
+ 				     <GIC_SPI 168 IRQ_TYPE_LEVEL_HIGH>,
+ 				     <GIC_SPI 169 IRQ_TYPE_LEVEL_HIGH>,
+-				     <GIC_SPI 172 IRQ_TYPE_LEVEL_HIGH>,
+-				     <GIC_SPI 173 IRQ_TYPE_LEVEL_HIGH>,
++				     <GIC_SPI 170 IRQ_TYPE_LEVEL_HIGH>,
++				     <GIC_SPI 171 IRQ_TYPE_LEVEL_HIGH>,
+ 				     <GIC_SPI 172 IRQ_TYPE_LEVEL_HIGH>,
+ 				     <GIC_SPI 173 IRQ_TYPE_LEVEL_HIGH>,
+ 				     <GIC_SPI 174 IRQ_TYPE_LEVEL_HIGH>,
+@@ -264,7 +264,6 @@
+ 			clocks = <&clkc CLKID_CLK81>, <&clkc CLKID_MALI>;
+ 			clock-names = "bus", "core";
+ 			operating-points-v2 = <&gpu_opp_table>;
+-			switch-delay = <0xffff>;
+ 		};
+ 	};
+ }; /* end of / */
+-- 
+2.20.1
+
 
 _______________________________________________
 linux-amlogic mailing list
