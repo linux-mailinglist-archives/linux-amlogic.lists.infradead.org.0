@@ -2,101 +2,83 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B94936FD38
-	for <lists+linux-amlogic@lfdr.de>; Mon, 22 Jul 2019 11:56:31 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id BF39670173
+	for <lists+linux-amlogic@lfdr.de>; Mon, 22 Jul 2019 15:44:18 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:References:
-	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
-	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
-	:Resent-Message-ID:List-Owner;
-	bh=yGaAbL9HzOjlKMlN7yDXJERxA7HqS/btR0kZJb1Z8+o=; b=G8lNdFD3Jih6Kucy7EHKCK0LEy
-	1JnNvUlsdf943nJs/mmdIXja11A9wAchQylxwCSkg14m8c5uQYTiDw2deCY7tcrvvOtEnmV9+pE17
-	UYKlkVWhueJ+G+dvG3ZwnV6Jpc7DSUVuffy+xnrxQoRx1G3yYkAAYYcZqe/Y2LTSqA4katElmhURf
-	nvCApeiqOk54VKLQccldOVv42DCArcMMJQTAhJPNdU4DYw1lU6VJPcBtshuv6sBdD60CPvs/7OKWj
-	eVcClGSJN62PAbXcqJ6crKGOQpD7hV47+/0A/61Ixwz0XG7GGR4gr88B5jfNX+mVj7/YDj/jDOjgl
-	CF94fdag==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=4NL+Msj85EItRhaZQrdtJJbE77UDpQ1maBrIMCG9/DQ=; b=Lkvvx+E/RWaaLu
+	hobmtkD2BiHo8Oap1kPPsjM37EHpKt8A0RRPrX/h2Ib19dVcd23v856INixGc5X1jfTNOeKFqXBC4
+	c43fC13750Tq6uqJAhQYUn849KxbTWqwE1eVajmkOPZgxKewiAK0pKMaxv8zkdvQ8X5CpLsLHq4fH
+	LRHFZ+3DyIWQuACm0AqQ2B6H8ldkbxuBNFa9WpArOi1ybeRgMtd3mHoAUBdh03NOX/mshan8P/e6L
+	HCw2diSm5UuglfoSFdzULKiexFbbEfTJNyp1dVQOCGlqWaAD1WROtrGQpKkKArJtYygqhpRfwdP1V
+	lqq3jkyiSt/JT6l1gBGg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hpV3S-0001wI-4L; Mon, 22 Jul 2019 09:56:26 +0000
-Received: from casper.infradead.org ([2001:8b0:10b:1236::1])
+	id 1hpYbo-00016k-B9; Mon, 22 Jul 2019 13:44:08 +0000
+Received: from mail-vk1-xa41.google.com ([2607:f8b0:4864:20::a41])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hpV1o-0008Dh-Eg
- for linux-amlogic@bombadil.infradead.org; Mon, 22 Jul 2019 09:54:44 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=infradead.org; s=casper.20170209; h=References:In-Reply-To:Message-Id:Date:
- Subject:Cc:To:From:Sender:Reply-To:MIME-Version:Content-Type:
- Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:
- List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=BuoDlpPb1vre+s0M4n7UQuzVeVmwTbnqlEv8lDT4UWI=; b=WWEOrDjRp2ITo0RH+X9XA8oFB
- Y88K8/8fygEqxTj0snNhh28elmIfwSsVJcC6QD5hPhp8ow1P8oeU+Xp1usGDXq9+2iJgaejnNGlqT
- Ch0Vnz2kJfcn0Fg3umZCG96viRrTs0YsPUidk1Ne5XdR4+cGVA6X1H44xCAtI+mzGFbBjdm8X82pw
- Ub0CV0oOZ5ycQcM2WZ6J5bMKWgxHYdSNdl0xqguA4kE5hXlYutP7lkLv8WFt1ijMPXDPIK0Jt40Cg
- TA3AcOEo9vdzbTrhELWfqoC+/p+2EeiVVrVOkj+IZ5cvD1bZDAvSFXt9HtRf2xU206PwRFiX9UjFv
- CnWAPU3dg==;
-Received: from mail-wr1-x443.google.com ([2a00:1450:4864:20::443])
- by casper.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hpV1s-0007rn-Cm
- for linux-amlogic@lists.infradead.org; Mon, 22 Jul 2019 09:54:50 +0000
-Received: by mail-wr1-x443.google.com with SMTP id f9so38677992wre.12
- for <linux-amlogic@lists.infradead.org>; Mon, 22 Jul 2019 02:54:37 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=from:to:cc:subject:date:message-id:in-reply-to:references;
- bh=BuoDlpPb1vre+s0M4n7UQuzVeVmwTbnqlEv8lDT4UWI=;
- b=tKsjU5byCoZ5Sa+GP1Va7H9RQlqX/jqqS/q2WCk4JH/Cah1N2dHDB/kGpm4ruyddOv
- /u6dzzGOGiOZalKUIfiBGWJUx7fUruazlVJJetd3nBhKlMbSRS8pTCHrIUr8UmzYdpP9
- XchSEBbNVnFJV2uy46sIazeoKX6j+daD4DPGyMhHqCzgMJ0kaNJjuWOA8P+b0ImnJaEA
- XL2DbM2wuoAgFUEifMONziWGqE4jYLjCaYk0F0Ahnx7dI4tA8inuRs89OExzu4ctRTE3
- T3YGEoD/5/4oK1aMSx5dgwPWDdqPq1uhypMS1P/TgB2uPoVHV7opKMN4LUdF1z9ZuD4A
- 15qw==
+ id 1hpYbO-0000u6-VW
+ for linux-amlogic@lists.infradead.org; Mon, 22 Jul 2019 13:43:44 +0000
+Received: by mail-vk1-xa41.google.com with SMTP id o19so7838031vkb.6
+ for <linux-amlogic@lists.infradead.org>; Mon, 22 Jul 2019 06:43:42 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=JfWmDXv4BPNqOTEY9hU9q6gKX1IYDQYRoMyC7yt2MNI=;
+ b=E/But+YuUKIzOcn6HUyy4svfKw8XGm9k9ye+AQjkaG9X/TWQ3EMinTa8z7xp3u05Ky
+ JWLgAuxe+lrOiI6YgBbO1YHkcwMk6k9b1ZRdkUtPGe/4LwAz1LutDwQ5KqLZ7Z3lJ5Yv
+ 6Aab+564w4FX4UBEEuWjzVfV67IBm1INTk5+0MvliPxcuFfyrM6BdfkDALKnY9IIkVKq
+ qjRaHqKPO3eI5FFDdjleOVM/8YI/580dxzUMI/vSffxY/2VAgjXK7Azfvw9IQUmo+Ise
+ qXJvgJTr3m1dzRR0XTuq6QeYuVikSCmxtlV7q25GKKMyCmReGzDEOYl/7YtUodEuC0UN
+ UtOg==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
- :references;
- bh=BuoDlpPb1vre+s0M4n7UQuzVeVmwTbnqlEv8lDT4UWI=;
- b=T6e8sDs+iJxeWkA+YugHjgsTooKCwmMXdAk5tsq4Q9j4hOmkdzPWhNiEyvHF7mH05j
- 2sYJbETC415GhOFaewTy0uGXNOY7XichJBVuaGwmixYt9/cGNbq5k0ntA5OZbWBkNpP1
- k1rLKry1HsCvSfShSTfO22y6a++92NxtwO7xq8Mx8EiJrSd7A/yAmv5GJ31Dh9ozRmct
- 3MY0U2KVkCWeGYwHcp1Jkdq3awHA7mIhiXGTlWHolIN0pmE110jqjvWHxpg3LvSsaKJk
- U4Yld4YeT6hLBgbk8JF/D/o7sxPXs0wpgZuXrofPRRaqU/Cn0/+cC90dB4xXXeixWh29
- L3GQ==
-X-Gm-Message-State: APjAAAWg7qE+4BZCi/H1otLHMjJNPUEThq00i9q22JbuUsyYkwK1kEFT
- CteH/ifWPY0DxNolgl/1VAAv0Q==
-X-Google-Smtp-Source: APXvYqzEI8Yc89xIk5KnT0N0hiwsBpvaUVjuHPZEKB+qhbA7krIHnkZEIerewidwdBrfvIOKyMR26g==
-X-Received: by 2002:adf:9486:: with SMTP id 6mr42268769wrr.242.1563789276066; 
- Mon, 22 Jul 2019 02:54:36 -0700 (PDT)
-Received: from pop-os.baylibre.local
- (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
- by smtp.googlemail.com with ESMTPSA id 91sm83158469wrp.3.2019.07.22.02.54.35
- (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
- Mon, 22 Jul 2019 02:54:35 -0700 (PDT)
-From: Alexandre Mergnat <amergnat@baylibre.com>
-To: jbrunet@baylibre.com
-Subject: [PATCH 8/8] clk: meson: remove clk input helper
-Date: Mon, 22 Jul 2019 11:54:25 +0200
-Message-Id: <20190722095425.14193-9-amergnat@baylibre.com>
-X-Mailer: git-send-email 2.17.1
-In-Reply-To: <20190722095425.14193-1-amergnat@baylibre.com>
-References: <20190722095425.14193-1-amergnat@baylibre.com>
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=JfWmDXv4BPNqOTEY9hU9q6gKX1IYDQYRoMyC7yt2MNI=;
+ b=FjvPR1vuoDBbzUOU2LwtUf3uKV4ZfdYJZRaoRxMPUTBhTgYCuUkne5V/yHvTjY7w1s
+ fnwbIDNEyF/orJjX7hL8pC3JVbAAKnyTRrrhwHVGTghV5Sx/GDA9DKsX3lAdmCZq2AUz
+ RRuzGA4WUeVliVQIocKM0kVhSr6DNYJ9LxFcPWRiLo9/HLtqtTYo4XevcSjfHBZn1G63
+ jN4oG67qBU+fngd1UJ/s8JmXYwB5t4UkexMfzBxMDCNRvtdRuPiX7WV1siWW8+N/nZh5
+ KeK17sITMLcq46Jb7nNYDqQpudzHDP6F7zwMZbcHpSYgaTEui4/dH70MDQbxLjp2NOZX
+ QW2w==
+X-Gm-Message-State: APjAAAXtuTdRmMO/7Mfmxz1T8lNixR4HH5hfSWi5BKIxPNpbBRYWk6q6
+ mL52IVE2diqkf8s/48SxSmPHsXJoncxGy5nOhdTVTkM5
+X-Google-Smtp-Source: APXvYqx14wMKbyhub1IcdyQKRP208Xy4cOVwN13tySgJSo9PZ3oI+ibBZ47r4EOcKXyhteGxLy3BIFkVyqio17fYhcQ=
+X-Received: by 2002:a1f:f282:: with SMTP id q124mr25220311vkh.4.1563803021647; 
+ Mon, 22 Jul 2019 06:43:41 -0700 (PDT)
+MIME-Version: 1.0
+References: <cover.1562734889.git.joe@perches.com>
+ <94dcbeb13b08a67ae9f404aa590c1c1459bc5287.1562734889.git.joe@perches.com>
+In-Reply-To: <94dcbeb13b08a67ae9f404aa590c1c1459bc5287.1562734889.git.joe@perches.com>
+From: Ulf Hansson <ulf.hansson@linaro.org>
+Date: Mon, 22 Jul 2019 15:43:05 +0200
+Message-ID: <CAPDyKFpmc3qkU4mXk7X0nGkOLnZ060e-n-en5T-Z7FXzcO5ymw@mail.gmail.com>
+Subject: Re: [PATCH 06/12] mmc: meson-mx-sdio: Fix misuse of GENMASK macro
+To: Joe Perches <joe@perches.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190722_105448_466860_0D2FB82B 
-X-CRM114-Status: GOOD (  13.39  )
-X-Spam-Score: 0.0 (/)
-X-Spam-Report: SpamAssassin version 3.4.2 on casper.infradead.org summary:
- Content analysis details:   (0.0 points, 5.0 required)
+X-CRM114-CacheID: sfid-20190722_064343_644126_EEDDDD2A 
+X-CRM114-Status: GOOD (  11.82  )
+X-Spam-Score: -0.2 (/)
+X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:443 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:a41 listed in]
  [list.dnswl.org]
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -108,137 +90,49 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: narmstrong@baylibre.com, sboyd@kernel.org, khilman@baylibre.com,
- Alexandre Mergnat <amergnat@baylibre.com>, linux-kernel@vger.kernel.org,
- baylibre-upstreaming@groups.io, linux-amlogic@lists.infradead.org,
- linux-clk@vger.kernel.org, linux-arm-kernel@lists.infradead.org
-MIME-Version: 1.0
+Cc: Kevin Hilman <khilman@baylibre.com>,
+ "linux-mmc@vger.kernel.org" <linux-mmc@vger.kernel.org>,
+ Linux Kernel Mailing List <linux-kernel@vger.kernel.org>,
+ "open list:ARM/Amlogic Meson..." <linux-amlogic@lists.infradead.org>,
+ Andrew Morton <akpm@linux-foundation.org>,
+ Linux ARM <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-The clk input function which allows clock controllers to register a bypass
-clock from a clock producer is no longer needed anymore since meson clock
-controllers have migrated to a new parent allocation method.
+On Wed, 10 Jul 2019 at 07:04, Joe Perches <joe@perches.com> wrote:
+>
+> Arguments are supposed to be ordered high then low.
+>
+> Signed-off-by: Joe Perches <joe@perches.com>
 
-Signed-off-by: Alexandre Mergnat <amergnat@baylibre.com>
----
- drivers/clk/meson/Kconfig     |  3 ---
- drivers/clk/meson/Makefile    |  1 -
- drivers/clk/meson/clk-input.c | 49 -----------------------------------
- drivers/clk/meson/clk-input.h | 19 --------------
- 4 files changed, 72 deletions(-)
- delete mode 100644 drivers/clk/meson/clk-input.c
- delete mode 100644 drivers/clk/meson/clk-input.h
+Applied for fixes by adding a fixes+stable tag, thanks!
 
-diff --git a/drivers/clk/meson/Kconfig b/drivers/clk/meson/Kconfig
-index 72a37572501f..500be0b0d473 100644
---- a/drivers/clk/meson/Kconfig
-+++ b/drivers/clk/meson/Kconfig
-@@ -1,7 +1,4 @@
- # SPDX-License-Identifier: GPL-2.0-only
--config COMMON_CLK_MESON_INPUT
--	tristate
--
- config COMMON_CLK_MESON_REGMAP
- 	tristate
- 	select REGMAP
-diff --git a/drivers/clk/meson/Makefile b/drivers/clk/meson/Makefile
-index bc35a4efd6b7..f09d83dc3d60 100644
---- a/drivers/clk/meson/Makefile
-+++ b/drivers/clk/meson/Makefile
-@@ -4,7 +4,6 @@
- obj-$(CONFIG_COMMON_CLK_MESON_AO_CLKC) += meson-aoclk.o
- obj-$(CONFIG_COMMON_CLK_MESON_DUALDIV) += clk-dualdiv.o
- obj-$(CONFIG_COMMON_CLK_MESON_EE_CLKC) += meson-eeclk.o
--obj-$(CONFIG_COMMON_CLK_MESON_INPUT) += clk-input.o
- obj-$(CONFIG_COMMON_CLK_MESON_MPLL) += clk-mpll.o
- obj-$(CONFIG_COMMON_CLK_MESON_PHASE) += clk-phase.o
- obj-$(CONFIG_COMMON_CLK_MESON_PLL) += clk-pll.o
-diff --git a/drivers/clk/meson/clk-input.c b/drivers/clk/meson/clk-input.c
-deleted file mode 100644
-index 086226e9dba6..000000000000
---- a/drivers/clk/meson/clk-input.c
-+++ /dev/null
-@@ -1,49 +0,0 @@
--// SPDX-License-Identifier: (GPL-2.0 OR MIT)
--/*
-- * Copyright (c) 2018 BayLibre, SAS.
-- * Author: Jerome Brunet <jbrunet@baylibre.com>
-- */
--
--#include <linux/clk.h>
--#include <linux/clk-provider.h>
--#include <linux/device.h>
--#include <linux/module.h>
--#include "clk-input.h"
--
--static const struct clk_ops meson_clk_no_ops = {};
--
--struct clk_hw *meson_clk_hw_register_input(struct device *dev,
--					   const char *of_name,
--					   const char *clk_name,
--					   unsigned long flags)
--{
--	struct clk *parent_clk = devm_clk_get(dev, of_name);
--	struct clk_init_data init;
--	const char *parent_name;
--	struct clk_hw *hw;
--	int ret;
--
--	if (IS_ERR(parent_clk))
--		return (struct clk_hw *)parent_clk;
--
--	hw = devm_kzalloc(dev, sizeof(*hw), GFP_KERNEL);
--	if (!hw)
--		return ERR_PTR(-ENOMEM);
--
--	parent_name = __clk_get_name(parent_clk);
--	init.name = clk_name;
--	init.ops = &meson_clk_no_ops;
--	init.flags = flags;
--	init.parent_names = &parent_name;
--	init.num_parents = 1;
--	hw->init = &init;
--
--	ret = devm_clk_hw_register(dev, hw);
--
--	return ret ? ERR_PTR(ret) : hw;
--}
--EXPORT_SYMBOL_GPL(meson_clk_hw_register_input);
--
--MODULE_DESCRIPTION("Amlogic clock input helper");
--MODULE_AUTHOR("Jerome Brunet <jbrunet@baylibre.com>");
--MODULE_LICENSE("GPL v2");
-diff --git a/drivers/clk/meson/clk-input.h b/drivers/clk/meson/clk-input.h
-deleted file mode 100644
-index 4a541b9685a6..000000000000
---- a/drivers/clk/meson/clk-input.h
-+++ /dev/null
-@@ -1,19 +0,0 @@
--/* SPDX-License-Identifier: GPL-2.0 */
--/*
-- * Copyright (c) 2019 BayLibre, SAS.
-- * Author: Jerome Brunet <jbrunet@baylibre.com>
-- */
--
--#ifndef __MESON_CLK_INPUT_H
--#define __MESON_CLK_INPUT_H
--
--#include <linux/clk-provider.h>
--
--struct device;
--
--struct clk_hw *meson_clk_hw_register_input(struct device *dev,
--					   const char *of_name,
--					   const char *clk_name,
--					   unsigned long flags);
--
--#endif /* __MESON_CLK_INPUT_H */
--- 
-2.17.1
+Kind regards
+Uffe
 
+
+> ---
+>  drivers/mmc/host/meson-mx-sdio.c | 2 +-
+>  1 file changed, 1 insertion(+), 1 deletion(-)
+>
+> diff --git a/drivers/mmc/host/meson-mx-sdio.c b/drivers/mmc/host/meson-mx-sdio.c
+> index 2d736e416775..ba9a63db73da 100644
+> --- a/drivers/mmc/host/meson-mx-sdio.c
+> +++ b/drivers/mmc/host/meson-mx-sdio.c
+> @@ -73,7 +73,7 @@
+>         #define MESON_MX_SDIO_IRQC_IF_CONFIG_MASK               GENMASK(7, 6)
+>         #define MESON_MX_SDIO_IRQC_FORCE_DATA_CLK               BIT(8)
+>         #define MESON_MX_SDIO_IRQC_FORCE_DATA_CMD               BIT(9)
+> -       #define MESON_MX_SDIO_IRQC_FORCE_DATA_DAT_MASK          GENMASK(10, 13)
+> +       #define MESON_MX_SDIO_IRQC_FORCE_DATA_DAT_MASK          GENMASK(13, 10)
+>         #define MESON_MX_SDIO_IRQC_SOFT_RESET                   BIT(15)
+>         #define MESON_MX_SDIO_IRQC_FORCE_HALT                   BIT(30)
+>         #define MESON_MX_SDIO_IRQC_HALT_HOLE                    BIT(31)
+> --
+> 2.15.0
+>
 
 _______________________________________________
 linux-amlogic mailing list
