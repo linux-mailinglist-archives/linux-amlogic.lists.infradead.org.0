@@ -2,66 +2,67 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 67B8572040
-	for <lists+linux-amlogic@lfdr.de>; Tue, 23 Jul 2019 21:56:21 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id A2A6F72043
+	for <lists+linux-amlogic@lfdr.de>; Tue, 23 Jul 2019 21:57:02 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
 	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=fyAH/VR96XU/UeKre6gyA85fzeWpjwaaCefdy6dK4Zk=; b=RAFY4kjTHJTYNK
-	um2+DCZpbKiJ4Fo++pXq/MipvJmZGcl/BkIZadfw8vXf9JOMDlLmp+XbQ6E80lYWKnxLs6l6ut2AJ
-	E6QM+3ZMa+LBwNT14v7cDLy24gXU+0QDTgzPH6fdmiDGJZFtWu7nnxZrNhNbZVXcmggBUNq7NEHvf
-	+DoAyzVv+6TIoLBbZagRvCyP3F3Rj0Eh80oXHygLEbxDpLLbSpA6s4HQQITUlm32St8BvirdNttSb
-	5grKefS975hoUWrNV2mLMTK2LUZEwxvmNvcHJH2IDoQWPPEP5ccFwcOmQsPyHMKPrGwwhqteVxsc/
-	ZnEaATnpOHgVhceeDBGw==;
+	List-Owner; bh=09uTd62hsC5+axeNZjG2z5rwB03C7GXvZImNnJjiKwg=; b=lRfD5djgnDfZch
+	/K3PE4Iq3Hqz/Zoz1frIXAHUPw6nTYT+qj+S+m9aizLKIjCegQWnqmAOGKU4rK2/ckDybuTjfm+C3
+	buJlnZCj/TiKNeQ8qOURNYWiSXEO8PjU260Arive4VFdhDgChFY1Bq6hWUscFRCmgHrN8UEX1kZwe
+	Dh5wZAaz5/+Y2oB0NKogPsf30CryGVz8a7ovc5eMst7e8sYr5NZ4x3VLlffw6r/Zojr6ZbjARYQ+A
+	xn1oxJGLT6mmknnbnSnDfEc0ah4Kj/Ff5FrFJ4iAJcWDcyjb417ztJfhJIGczH0KfCuw4LkoFA7CC
+	zDhyFe6GXmKfJufxox2g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hq0tV-0007ga-1n; Tue, 23 Jul 2019 19:56:17 +0000
-Received: from mail-ot1-x344.google.com ([2607:f8b0:4864:20::344])
+	id 1hq0uB-0008JB-8T; Tue, 23 Jul 2019 19:56:59 +0000
+Received: from mail-oi1-x244.google.com ([2607:f8b0:4864:20::244])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hq0tQ-0007aM-Sa
- for linux-amlogic@lists.infradead.org; Tue, 23 Jul 2019 19:56:14 +0000
-Received: by mail-ot1-x344.google.com with SMTP id j19so6892192otq.2
- for <linux-amlogic@lists.infradead.org>; Tue, 23 Jul 2019 12:56:11 -0700 (PDT)
+ id 1hq0u7-0008Bd-CH
+ for linux-amlogic@lists.infradead.org; Tue, 23 Jul 2019 19:56:56 +0000
+Received: by mail-oi1-x244.google.com with SMTP id q4so4082612oij.3
+ for <linux-amlogic@lists.infradead.org>; Tue, 23 Jul 2019 12:56:55 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=googlemail.com; s=20161025;
  h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=rrOyyFy5rqW99rk0P5KQSSl5r6R/QDYqLHn4USJsL3A=;
- b=vcM3eQorsGcT1LMegPoSDy7NqJel3thLcZ2N2Qhx0puRNsTkmNEiG0F+XQkCGOX1Ig
- 1/4OLol9nF+KTkFq94bP7V0gNccyrHqwFvBsL8WBQM5+kMzt7kkuhu6Y1jnOqPvXPAqa
- Cp3VNRJ5JO6K9m4vIs+nQ491pbazijVwpD1Z7JkavJUwZPTK859ob7hylOnwT8BipmZd
- Emu5jpBlPNjxdz60q6vN7ZKaoCSNrbo+2U4pXw+By02NFun+DnlVft68K1jVspPLqQuS
- Fw32ofFtSNlZCeFfzCvc2088usKsI5DZh/eOdcbK4L+tZydcscA0m8oIEDABGvc+ZCbN
- 3XJg==
+ :cc; bh=1AFUHPs3ukSumhoc36+Xs1ZNvtbenSv/4Q8Xj7E9MYM=;
+ b=PtdD/d1uwfy+AGDVmKWOA8frDABiK2A++eRyYAVYStYpKoEWO2MA4dEA9ma/lT1l79
+ YkRZTu2r+noblhGiQQjjFXO6na8fz4GLS7CHZeZK+CSQQCMkIGn3mPhq386VtrkuxkLV
+ mq/fLFxurYfJC9h8r3A6xlevEJRLDzScem1/uxlXjpddnEVGFSIxDs1zLHRuOjXyxl/7
+ CNqhVXT0hjKxfndknoi1FZWthsMAoLgqendB5zfaig7Ae7eE2jTyXEPkyrMpqtuI8wd+
+ 2SeD0E8vVvpqEx3tBkyWniwzYTPHmH/aLQtXYE/zmq5kJOgIci2wl42P4PrwmDQnbJsI
+ 8Drg==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:mime-version:references:in-reply-to:from:date
  :message-id:subject:to:cc;
- bh=rrOyyFy5rqW99rk0P5KQSSl5r6R/QDYqLHn4USJsL3A=;
- b=fk37oErHxxbvL4DhVioUb1ehfzvwXxZ41kDNwJrOngueoqHGWLbzel5vxW0eVr3Mhc
- WJVAJKjKZX/E0QgCRCWw/hFhJCgWcI38lmmOIOdupbG3+4YEscpn72DD+mLadplW43CP
- Nld1uKTL5s7WbHUzQC9N5w6MSvNRFe8HRwYMxT1ybD95QW9Otch4j5Nb/oCHaURj4xcw
- PiIoIU92tA/S2w8dCz5y7esPfpwFdom5NgXIcr+lC+ycn3QAAvj6wxIsUDaC61IrXbwv
- MrmnJxzviqgxtWM0kPM6X7BWLtuiN1AoCyCpzmr89PPftMOXGJ5sdbcvM4Og7U9vUXce
- EmtA==
-X-Gm-Message-State: APjAAAU8KUTMiOQNyY5VB0SGaeleiR+1L+bV7KDnaBe1E+eoM2dX0BSN
- K9kmyIQ52FcF+OfnBsJ5S5P1PZdZLILH6iSnFB9FkH+S
-X-Google-Smtp-Source: APXvYqx9q9PX9Dg4p97MrcRHkmu4+GGoPQUy/wK1/SEPl6JfdseBURzpG2Mjqo4+UW71Mn/KARpQONAL+YxJ9rauNRc=
-X-Received: by 2002:a9d:39a6:: with SMTP id y35mr59597026otb.81.1563911770343; 
- Tue, 23 Jul 2019 12:56:10 -0700 (PDT)
+ bh=1AFUHPs3ukSumhoc36+Xs1ZNvtbenSv/4Q8Xj7E9MYM=;
+ b=e6PeDAC0MuNPwr96i78IZh7Ui5K+hyE7EixI4qInpnZJQTz8Br/WCtKLwfw6Kyn55A
+ o0JXtmEHR//QAm2Wfyon6ZCo28evNSalfFIDJm56I42Ve3BC7AitFSW0yH/bKn6d3EC+
+ meqYkjt5C0vYx6H7yQChIUFln3C9hQp/THT7tGZz8Tobf79g+m9SJxxdp1mvNQ9X1yB0
+ mtN40uP5fSbGQl45vUiIjRABW/fId/tVdPUiBLjvp3bjFJ33FWRiK5M4VxAw1t+tfekT
+ TjXtEOeMVY7DGbwzhRzLAC61IuqrwujgO4EQg/y14v7sGqvUrpWB1pCUDC4A7D41tRs0
+ rFCg==
+X-Gm-Message-State: APjAAAUulnFG9cWb6y24imhFeer0q8uYOJZXkHCtA9ohMxDKlgGaLj3N
+ o9nq2Tc8dltXL64X7HTZIzsINURsOd2ZEis0S7Q=
+X-Google-Smtp-Source: APXvYqzQoRR4HmY0uZaFXa1cGF2QLM7M5Wd2+IL8+k4pMdzEWKP3+vqYccZqRa0yFdkE3KLi2sQWXeCqITjQ+r99uKw=
+X-Received: by 2002:aca:4ad2:: with SMTP id
+ x201mr38072383oia.129.1563911814391; 
+ Tue, 23 Jul 2019 12:56:54 -0700 (PDT)
 MIME-Version: 1.0
-References: <20190718090301.19283-1-jbrunet@baylibre.com>
-In-Reply-To: <20190718090301.19283-1-jbrunet@baylibre.com>
+References: <20190718093623.23598-1-jbrunet@baylibre.com>
+In-Reply-To: <20190718093623.23598-1-jbrunet@baylibre.com>
 From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-Date: Tue, 23 Jul 2019 21:55:59 +0200
-Message-ID: <CAFBinCDb0nq-HDbiAL4MjtmfjE=GLh0bns110BuEEJpr=ctGWw@mail.gmail.com>
-Subject: Re: [PATCH] arm64: dts: meson: add ethernet fifo sizes
+Date: Tue, 23 Jul 2019 21:56:43 +0200
+Message-ID: <CAFBinCBefuCvTL0E_zf=EQDLyTjE5sQD-TkHNj2vQ2UOCsmtkA@mail.gmail.com>
+Subject: Re: [PATCH] ARM: dts: meson8b: add ethernet fifo sizes
 To: Jerome Brunet <jbrunet@baylibre.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190723_125612_958023_8836FEE2 
-X-CRM114-Status: UNSURE (   8.71  )
+X-CRM114-CacheID: sfid-20190723_125655_422282_29B97FF3 
+X-CRM114-Status: UNSURE (   8.86  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -69,7 +70,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:344 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:244 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
@@ -93,28 +94,27 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: Kevin Hilman <khilman@baylibre.com>, linux-amlogic@lists.infradead.org,
- linux-kernel@vger.kernel.org, devicetree@vger.kernel.org
+Cc: Kevin Hilman <khilman@baylibre.com>, devicetree@vger.kernel.org,
+ linux-kernel@vger.kernel.org, linux-amlogic@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On Thu, Jul 18, 2019 at 11:03 AM Jerome Brunet <jbrunet@baylibre.com> wrote:
+On Thu, Jul 18, 2019 at 11:36 AM Jerome Brunet <jbrunet@baylibre.com> wrote:
 >
 > If unspecified in DT, the fifo sizes are not automatically detected by
 > the dwmac1000 dma driver and the reported fifo sizes default to 0.
 > Because of this, flow control will be turned off on the device.
 >
-> Add the fifo sizes provided by the datasheets in the SoC in DT so
+> Add the fifo sizes provided by the datasheet in the SoC in DT so
 > flow control may be enabled if necessary.
-(only worth updating if you have to re-send it for whatever reason)
-as far as I understand the stmmac code
-(dwmac1000_dma_operation_mode_{rx,tx}) "RX flow control" depends on
-the RX FIFO size but TX doesn't
-
+>
 > Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
 Reviewed-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+
+I wonder if this "fixes" some of the performance issues on Odroid-C1
+testing this is now on my TODO-list for the weekend
 
 _______________________________________________
 linux-amlogic mailing list
