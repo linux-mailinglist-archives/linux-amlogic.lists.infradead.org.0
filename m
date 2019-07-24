@@ -2,82 +2,82 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 19EDF733A4
-	for <lists+linux-amlogic@lfdr.de>; Wed, 24 Jul 2019 18:24:27 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D24F8733A7
+	for <lists+linux-amlogic@lfdr.de>; Wed, 24 Jul 2019 18:24:32 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=DRHaz9mHYu6B6heLgOn3KVTfSvuDDA4h4subiNvJ1n0=; b=Y0PwfJP+XqBY19
-	Mb2sfF0/VSWTA5uYbNAvfDQ39RJ0Exp7xoRyVaSxCI0m0PiE1HutYmte58fPnJGObYkANW1FIjoWX
-	rlTxrqKPD9tSKhN0UzJtsEEbjxyDVocKJGPyEYqOG2kltj3L5Eul06ptd7xhsosvhun2dKsKIjiS8
-	HHx4BRqUmqccktJcm4arJ6/v51jSsuLGKdmu01nF4JXJZ8WOtNk6NkvpUN8UIC7ruBr7euTyXb5bH
-	2jBrnpVanXVy5+Iw/DC+s8rkTZkyTziOpFLrGfHOgCKCFh9ySJmyCsfi4b3WiJN84pG5++5nMNZvZ
-	WeyYRkdIXDuK/WXhYSrQ==;
+	List-Owner; bh=IXrv9TNlI97w/7jO61FN9X3VP2q8LVNfs1PywBcSMEY=; b=UqVrkm6co83Scc
+	JxpcYKjGe4/vFzitieHNv0nhmWk6+qbbJZZOly2ZV4xy7nintTyRrb2bMoiobxHaVyBkVxuTTIINF
+	0EqL91+5pee8jCl9Rda+86FC5v0aHIBNaq0DX7FOdy8GsjXqcBDGbIj9RW6wbowgU9BgWou7kCf7g
+	TCzUFbwMKEIscXQlJFYaRqiX2MR2qJNvwkvZrAyTIGK091tz7XFY2JRwC3DnT3UO9/5Vtd1fASO/g
+	5hfAGmCZ9nuDMp5EizQNsNqITJf8HJnHBxnHEygM58fEwyzy0gYRpvhM7xKJZNZSoHAqSy+rtlmf7
+	eHBx+YgTFzDW15KaYghQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hqK3y-000712-Sw; Wed, 24 Jul 2019 16:24:22 +0000
-Received: from mail-wr1-x443.google.com ([2a00:1450:4864:20::443])
+	id 1hqK44-00078C-Vg; Wed, 24 Jul 2019 16:24:29 +0000
+Received: from mail-wm1-x341.google.com ([2a00:1450:4864:20::341])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hqK3q-0006sT-Nn
- for linux-amlogic@lists.infradead.org; Wed, 24 Jul 2019 16:24:17 +0000
-Received: by mail-wr1-x443.google.com with SMTP id p17so47628732wrf.11
- for <linux-amlogic@lists.infradead.org>; Wed, 24 Jul 2019 09:24:14 -0700 (PDT)
+ id 1hqK3s-0006tZ-3T
+ for linux-amlogic@lists.infradead.org; Wed, 24 Jul 2019 16:24:20 +0000
+Received: by mail-wm1-x341.google.com with SMTP id s15so20822965wmj.3
+ for <linux-amlogic@lists.infradead.org>; Wed, 24 Jul 2019 09:24:15 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=ZSaABRSxmdPUIlgGnW2e+CGetJdVeG6KV5A9m/NM03Q=;
- b=0pshrWORbtR9bwGpPO/MJfAdOn47cpmS7uHac8G6OKoOKp2ZPIni0pWdFjRnSmwsJf
- W6BdvldykF0q8NBQvlSe/iRUgyDrBKncnSgKIziL/9tRU60SwhO2eyi6FoLTjyFFz9px
- vq7W3LDd7u0bkk/5pt8Dm69MPaEjimSoSWColk3ocsvSAfkwSbMgQBtE4r+O2Umi2o6Y
- k+nL159AfkGDIoB0+EoO9XgUxV/t3tHYp7BWUhb22rj2U7GUO+lYhk1tyHx3/kB//XED
- JRkpaIhqP375b6vvq55uSwqVGpAtICIP8Q0mRBH2kY0+wPkycv7lWs10T0WKC2ZYEs0Q
- cqag==
+ bh=fEqbgC4ffyUrLuttzgUt5FRl7sGgCywNMcNCDLVp0IE=;
+ b=rlHioeG5qyt3yeoOQxhVWAqMVyPP0n2aMILs+ua+NsbJkQeFpxaNCtsES2nnR1WgcL
+ u1dWYguZGuirOq5oqOQ20cGCnv3YHT98dSsztpl90vskstO72I7GdzdsiaT4Ji3EnNVo
+ AVjULroRg0dNK9ZU5nAtvBiziiO8Mgn3AxNB1UCLKArUeTvi/99lA4FgHqtxoO25kK+l
+ LJYrbc3Rzc5mm5C4EDSAcqBQ5lPLeluJ9uTv+tEtZePrPS3oT1ZjURDImzU3qi6GUM13
+ XTuW56+4SQx01QA1Qs0DgZe7vftG5O8TkpUBFlUnfhT45c5EkUpf/EMeGEUSWxe+aMmK
+ +a9Q==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=ZSaABRSxmdPUIlgGnW2e+CGetJdVeG6KV5A9m/NM03Q=;
- b=hVbUfrgg+uAIRdC7g+CyjPePl4uoo1QeM2TM6wXHGlCyRcpmUZ21a4CWzc1atayB6M
- S333ncBI68SzTowhrx+P7dEl+aL/BSNhMe4QZDawymNAqzawqiiiLatNoqftQsy4HsuE
- QFA1eQeP6vWvyBg7/yPNRKNzko+wQtqVqpkfRCe0PJBUmDSC6B+NFTFRY8aVDsXTcytK
- 6DxfNISWUPWGiToJ9HMxb2s8ZS5y2mBNH3xRq2nLhpO7sZ8kpdhzvC1z/T1TLU6yrzG5
- AIUmAbxNQZbN1CXd68sYGcSuAAGDc9AT82VJ9VTVUlPnv167W0/0hFNgCmXyuqDx7lDx
- +gBA==
-X-Gm-Message-State: APjAAAVfI3a1FAy64npM+3jJaeDgxhC64a/pR2BkLtcU/3wVy2vNQ6p9
- RrnTitkBQx3tuE7OS9HJprJiFQ==
-X-Google-Smtp-Source: APXvYqxS3+s9PV/UD5cbznvDYuzkayLSYR2XQOJ7T6bOblKvnaCksJxG1/j1hQYeSoEZr3oOFC0kmg==
-X-Received: by 2002:adf:e843:: with SMTP id d3mr40668799wrn.249.1563985453480; 
- Wed, 24 Jul 2019 09:24:13 -0700 (PDT)
+ bh=fEqbgC4ffyUrLuttzgUt5FRl7sGgCywNMcNCDLVp0IE=;
+ b=Nsez2RX/it0opjbEOk68fHOpY+nBgjhVVrz22nZou74TDk8Hhynxh3sJ0LcGwGUyGA
+ 5ssahCdr8YPf2XvMfNWeGKUMTkJnBtmbC4sLDJG6vVEsPIwmIo4RAxhLfsI4f4IWp0FK
+ d0mU13pT7Eua6nzfKteA1iPmjo/PC7OMira2h9dx1LNddXYPvXbO+ssnz9HKzfDxLTIk
+ k7i4Vl1m4gWl84TrUaHlXISbFDYFi7TShVvoTaThwvmueHCGX6hOp38Bv8XPnCRypRD0
+ /7hpBceHY0ppwNemP+hP1w0n02E5Ym4LleRgeVcey06iHV/Y7gOXrlCmQx7cCdooZOFU
+ modg==
+X-Gm-Message-State: APjAAAXYwDnIDACdh8sHdNUeNX1UU1BogYKTVpksw0wGBx0gsrT1qC6w
+ f8Wem1MjU1EOijAhx1de8IzV+w==
+X-Google-Smtp-Source: APXvYqxSy9x4/yh9m90aKp+X1IKThgfUDZfuujmcY54Z1t8ubh/f8nflpp3+bKvgTzgHbRuawy6wJg==
+X-Received: by 2002:a7b:cc09:: with SMTP id f9mr77497784wmh.68.1563985454615; 
+ Wed, 24 Jul 2019 09:24:14 -0700 (PDT)
 Received: from starbuck.baylibre.local
  (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
- by smtp.googlemail.com with ESMTPSA id f70sm55688960wme.22.2019.07.24.09.24.12
+ by smtp.googlemail.com with ESMTPSA id f70sm55688960wme.22.2019.07.24.09.24.13
  (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
  Wed, 24 Jul 2019 09:24:13 -0700 (PDT)
 From: Jerome Brunet <jbrunet@baylibre.com>
 To: Mark Brown <broonie@kernel.org>, Liam Girdwood <lgirdwood@gmail.com>,
  Kevin Hilman <khilman@baylibre.com>
-Subject: [PATCH 4/6] ASoC: create pcm for codec2codec links as well
-Date: Wed, 24 Jul 2019 18:24:03 +0200
-Message-Id: <20190724162405.6574-5-jbrunet@baylibre.com>
+Subject: [PATCH 5/6] ASoC: codec2codec: remove ephemeral variables
+Date: Wed, 24 Jul 2019 18:24:04 +0200
+Message-Id: <20190724162405.6574-6-jbrunet@baylibre.com>
 X-Mailer: git-send-email 2.21.0
 In-Reply-To: <20190724162405.6574-1-jbrunet@baylibre.com>
 References: <20190724162405.6574-1-jbrunet@baylibre.com>
 MIME-Version: 1.0
 X-Patchwork-Bot: notify
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190724_092414_782656_CCFB10EA 
-X-CRM114-Status: GOOD (  18.11  )
+X-CRM114-CacheID: sfid-20190724_092416_167453_8AE183D8 
+X-CRM114-Status: GOOD (  14.04  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:443 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:341 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -103,167 +103,240 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-At the moment, codec to codec links uses an ephemeral variable for
-the struct snd_pcm_substream. Also the struct snd_soc_pcm_runtime
-does not have real struct snd_pcm.
-
-This might a problem if the functions used by a codec on codec to
-codec link expect these structures to exist, and keep on existing
-during the life of the codec.
-
-For example, it is the case of the hdmi-codec, which uses
-snd_pcm_add_chmap_ctls(). For the controls to works, the pcm and
-substream must to exist.
-
-This change is first step, it create pcm (and substreams) for codec
-to codec links, in the same way as dpcm backend links.
+Now that codec to codec links struct snd_soc_pcm_runtime have lasting pcm
+and substreams, let's use them. Alsa allocate and keep the
+struct snd_pcm_runtime as long as the link is powered.
 
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
 ---
- sound/soc/soc-core.c | 42 ++++++++++++------------------------------
- sound/soc/soc-pcm.c  | 35 ++++++++++++++++++++++++++++++++---
- 2 files changed, 44 insertions(+), 33 deletions(-)
+ sound/soc/soc-dapm.c | 86 ++++++++++++++++++++++++--------------------
+ 1 file changed, 48 insertions(+), 38 deletions(-)
 
-diff --git a/sound/soc/soc-core.c b/sound/soc/soc-core.c
-index 7ecfe641ca46..9e8eb93c8a3f 100644
---- a/sound/soc/soc-core.c
-+++ b/sound/soc/soc-core.c
-@@ -447,16 +447,6 @@ static void snd_soc_flush_all_delayed_work(struct snd_soc_card *card)
- 		flush_delayed_work(&rtd->delayed_work);
- }
+diff --git a/sound/soc/soc-dapm.c b/sound/soc/soc-dapm.c
+index aa6e47beaec3..e0eedff5fe94 100644
+--- a/sound/soc/soc-dapm.c
++++ b/sound/soc/soc-dapm.c
+@@ -3802,48 +3802,45 @@ static int snd_soc_dai_link_event(struct snd_soc_dapm_widget *w,
+ {
+ 	struct snd_soc_dapm_path *path;
+ 	struct snd_soc_dai *source, *sink;
+-	struct snd_soc_pcm_runtime *rtd = w->priv;
+ 	const struct snd_soc_pcm_stream *config;
+-	struct snd_pcm_substream substream;
++	struct snd_pcm_substream *substream = w->priv;
++	struct snd_soc_pcm_runtime *rtd = substream->private_data;
+ 	struct snd_pcm_hw_params params;
+ 	struct snd_pcm_runtime *runtime = NULL;
+-	int ret = 0;
++	int ret = 0, saved_stream = substream->stream;
  
--static void codec2codec_close_delayed_work(struct work_struct *work)
--{
--	/*
--	 * Currently nothing to do for c2c links
--	 * Since c2c links are internal nodes in the DAPM graph and
--	 * don't interface with the outside world or application layer
--	 * we don't have to do any special handling on close.
--	 */
--}
+ 	if (WARN_ON(list_empty(&w->edges[SND_SOC_DAPM_DIR_OUT]) ||
+ 		    list_empty(&w->edges[SND_SOC_DAPM_DIR_IN])))
+ 		return -EINVAL;
+ 
+-	memset(&substream, 0, sizeof(substream));
 -
- #ifdef CONFIG_PM_SLEEP
- /* powers down audio subsystem for suspend */
- int snd_soc_suspend(struct device *dev)
-@@ -1552,27 +1542,19 @@ static int soc_probe_link_dais(struct snd_soc_card *card,
- 		return ret;
- 	}
- 
--	if (!dai_link->params) {
--		/* create the pcm */
--		ret = soc_new_pcm(rtd, num);
--		if (ret < 0) {
--			dev_err(card->dev, "ASoC: can't create pcm %s :%d\n",
--				dai_link->stream_name, ret);
--			return ret;
--		}
--		ret = soc_link_dai_pcm_new(&cpu_dai, 1, rtd);
--		if (ret < 0)
--			return ret;
--		ret = soc_link_dai_pcm_new(rtd->codec_dais,
--					   rtd->num_codecs, rtd);
--		if (ret < 0)
--			return ret;
--	} else {
--		INIT_DELAYED_WORK(&rtd->delayed_work,
--				  codec2codec_close_delayed_work);
-+	/* create the pcm */
-+	ret = soc_new_pcm(rtd, num);
-+	if (ret < 0) {
-+		dev_err(card->dev, "ASoC: can't create pcm %s :%d\n",
-+			dai_link->stream_name, ret);
-+		return ret;
- 	}
+-	/* Allocate a dummy snd_pcm_runtime for startup() and other ops() */
+-	runtime = kzalloc(sizeof(*runtime), GFP_KERNEL);
+-	if (!runtime) {
+-		ret = -ENOMEM;
+-		goto out;
+-	}
+-	substream.runtime = runtime;
+-	substream.private_data = rtd;
 -
--	return 0;
-+	ret = soc_link_dai_pcm_new(&cpu_dai, 1, rtd);
-+	if (ret < 0)
-+		return ret;
-+	ret = soc_link_dai_pcm_new(rtd->codec_dais,
-+				   rtd->num_codecs, rtd);
-+	return ret;
- }
- 
- static int soc_bind_aux_dev(struct snd_soc_card *card, int num)
-diff --git a/sound/soc/soc-pcm.c b/sound/soc/soc-pcm.c
-index fabeac164a6c..30264bc592f6 100644
---- a/sound/soc/soc-pcm.c
-+++ b/sound/soc/soc-pcm.c
-@@ -678,6 +678,16 @@ static void close_delayed_work(struct work_struct *work)
- 	mutex_unlock(&rtd->pcm_mutex);
- }
- 
-+static void codec2codec_close_delayed_work(struct work_struct *work)
-+{
-+	/*
-+	 * Currently nothing to do for c2c links
-+	 * Since c2c links are internal nodes in the DAPM graph and
-+	 * don't interface with the outside world or application layer
-+	 * we don't have to do any special handling on close.
-+	 */
-+}
+ 	switch (event) {
+ 	case SND_SOC_DAPM_PRE_PMU:
+-		substream.stream = SNDRV_PCM_STREAM_CAPTURE;
++		runtime = kzalloc(sizeof(*runtime), GFP_KERNEL);
++		if (!runtime) {
++			ret = -ENOMEM;
++			goto out;
++		}
++		substream->runtime = runtime;
 +
- /*
-  * Called by ALSA when a PCM substream is closed. Private data can be
-  * freed here. The cpu DAI, codec DAI, machine and components are also
-@@ -3011,6 +3021,12 @@ int soc_new_pcm(struct snd_soc_pcm_runtime *rtd, int num)
- 		playback = rtd->dai_link->dpcm_playback;
- 		capture = rtd->dai_link->dpcm_capture;
- 	} else {
-+		/* Adapt stream for codec2codec links */
-+		struct snd_soc_pcm_stream *cpu_capture = rtd->dai_link->params ?
-+			&cpu_dai->driver->playback : &cpu_dai->driver->capture;
-+		struct snd_soc_pcm_stream *cpu_playback = rtd->dai_link->params ?
-+			&cpu_dai->driver->capture : &cpu_dai->driver->playback;
++		substream->stream = SNDRV_PCM_STREAM_CAPTURE;
+ 		snd_soc_dapm_widget_for_each_source_path(w, path) {
+ 			source = path->source->priv;
+ 
+-			ret = snd_soc_dai_startup(source, &substream);
++			ret = snd_soc_dai_startup(source, substream);
+ 			if (ret < 0) {
+ 				dev_err(source->dev,
+ 					"ASoC: startup() failed: %d\n", ret);
+ 				goto out;
 +
- 		for_each_rtd_codec_dai(rtd, i, codec_dai) {
- 			if (snd_soc_dai_stream_valid(codec_dai, SNDRV_PCM_STREAM_PLAYBACK) &&
- 			    snd_soc_dai_stream_valid(cpu_dai,   SNDRV_PCM_STREAM_PLAYBACK))
-@@ -3019,6 +3035,9 @@ int soc_new_pcm(struct snd_soc_pcm_runtime *rtd, int num)
- 			    snd_soc_dai_stream_valid(cpu_dai,   SNDRV_PCM_STREAM_CAPTURE))
- 				capture = 1;
+ 			}
+ 			source->active++;
  		}
+ 
+-		substream.stream = SNDRV_PCM_STREAM_PLAYBACK;
++		substream->stream = SNDRV_PCM_STREAM_PLAYBACK;
+ 		snd_soc_dapm_widget_for_each_sink_path(w, path) {
+ 			sink = path->sink->priv;
+ 
+-			ret = snd_soc_dai_startup(sink, &substream);
++			ret = snd_soc_dai_startup(sink, substream);
+ 			if (ret < 0) {
+ 				dev_err(sink->dev,
+ 					"ASoC: startup() failed: %d\n", ret);
+@@ -3852,6 +3849,8 @@ static int snd_soc_dai_link_event(struct snd_soc_dapm_widget *w,
+ 			sink->active++;
+ 		}
+ 
++		substream->hw_opened = 1;
 +
-+		capture = capture && cpu_capture->channels_min;
-+		playback = playback && cpu_playback->channels_min;
+ 		/*
+ 		 * Note: getting the config after .startup() gives a chance to
+ 		 * either party on the link to alter the configuration if
+@@ -3871,26 +3870,26 @@ static int snd_soc_dai_link_event(struct snd_soc_dapm_widget *w,
+ 			goto out;
+ 		}
+ 
+-		substream.stream = SNDRV_PCM_STREAM_CAPTURE;
++		substream->stream = SNDRV_PCM_STREAM_CAPTURE;
+ 		snd_soc_dapm_widget_for_each_source_path(w, path) {
+ 			source = path->source->priv;
+ 
+-			ret = soc_dai_hw_params(&substream, &params, source);
++			ret = soc_dai_hw_params(substream, &params, source);
+ 			if (ret < 0)
+ 				goto out;
+ 
+-			dapm_update_dai_unlocked(&substream, &params, source);
++			dapm_update_dai_unlocked(substream, &params, source);
+ 		}
+ 
+-		substream.stream = SNDRV_PCM_STREAM_PLAYBACK;
++		substream->stream = SNDRV_PCM_STREAM_PLAYBACK;
+ 		snd_soc_dapm_widget_for_each_sink_path(w, path) {
+ 			sink = path->sink->priv;
+ 
+-			ret = soc_dai_hw_params(&substream, &params, sink);
++			ret = soc_dai_hw_params(substream, &params, sink);
+ 			if (ret < 0)
+ 				goto out;
+ 
+-			dapm_update_dai_unlocked(&substream, &params, sink);
++			dapm_update_dai_unlocked(substream, &params, sink);
+ 		}
+ 
+ 		break;
+@@ -3920,40 +3919,45 @@ static int snd_soc_dai_link_event(struct snd_soc_dapm_widget *w,
+ 			ret = 0;
+ 		}
+ 
+-		substream.stream = SNDRV_PCM_STREAM_CAPTURE;
++		substream->stream = SNDRV_PCM_STREAM_CAPTURE;
+ 		snd_soc_dapm_widget_for_each_source_path(w, path) {
+ 			source = path->source->priv;
+-			snd_soc_dai_hw_free(source, &substream);
++			snd_soc_dai_hw_free(source, substream);
+ 		}
+ 
+-		substream.stream = SNDRV_PCM_STREAM_PLAYBACK;
++		substream->stream = SNDRV_PCM_STREAM_PLAYBACK;
+ 		snd_soc_dapm_widget_for_each_sink_path(w, path) {
+ 			sink = path->sink->priv;
+-			snd_soc_dai_hw_free(sink, &substream);
++			snd_soc_dai_hw_free(sink, substream);
+ 		}
+ 
+-		substream.stream = SNDRV_PCM_STREAM_CAPTURE;
++		substream->stream = SNDRV_PCM_STREAM_CAPTURE;
+ 		snd_soc_dapm_widget_for_each_source_path(w, path) {
+ 			source = path->source->priv;
+ 			source->active--;
+-			snd_soc_dai_shutdown(source, &substream);
++			snd_soc_dai_shutdown(source, substream);
+ 		}
+ 
+-		substream.stream = SNDRV_PCM_STREAM_PLAYBACK;
++		substream->stream = SNDRV_PCM_STREAM_PLAYBACK;
+ 		snd_soc_dapm_widget_for_each_sink_path(w, path) {
+ 			sink = path->sink->priv;
+ 			sink->active--;
+-			snd_soc_dai_shutdown(sink, &substream);
++			snd_soc_dai_shutdown(sink, substream);
+ 		}
+ 		break;
+ 
++	case SND_SOC_DAPM_POST_PMD:
++		kfree(substream->runtime);
++		break;
++
+ 	default:
+ 		WARN(1, "Unknown event %d\n", event);
+ 		ret = -EINVAL;
  	}
  
- 	if (rtd->dai_link->playback_only) {
-@@ -3032,7 +3051,13 @@ int soc_new_pcm(struct snd_soc_pcm_runtime *rtd, int num)
+ out:
+-	kfree(runtime);
++	/* Restore the substream direction */
++	substream->stream = saved_stream;
+ 	return ret;
+ }
+ 
+@@ -4076,9 +4080,11 @@ snd_soc_dapm_alloc_kcontrol(struct snd_soc_card *card,
+ }
+ 
+ static struct snd_soc_dapm_widget *
+-snd_soc_dapm_new_dai(struct snd_soc_card *card, struct snd_soc_pcm_runtime *rtd,
++snd_soc_dapm_new_dai(struct snd_soc_card *card,
++		     struct snd_pcm_substream *substream,
+ 		     char *id)
+ {
++	struct snd_soc_pcm_runtime *rtd = substream->private_data;
+ 	struct snd_soc_dapm_widget template;
+ 	struct snd_soc_dapm_widget *w;
+ 	const char **w_param_text;
+@@ -4097,7 +4103,7 @@ snd_soc_dapm_new_dai(struct snd_soc_card *card, struct snd_soc_pcm_runtime *rtd,
+ 	template.name = link_name;
+ 	template.event = snd_soc_dai_link_event;
+ 	template.event_flags = SND_SOC_DAPM_PRE_PMU | SND_SOC_DAPM_POST_PMU |
+-		SND_SOC_DAPM_PRE_PMD;
++		SND_SOC_DAPM_PRE_PMD | SND_SOC_DAPM_POST_PMD;
+ 	template.kcontrol_news = NULL;
+ 
+ 	/* allocate memory for control, only in case of multiple configs */
+@@ -4132,7 +4138,7 @@ snd_soc_dapm_new_dai(struct snd_soc_card *card, struct snd_soc_pcm_runtime *rtd,
+ 		goto outfree_kcontrol_news;
  	}
  
- 	/* create the PCM */
--	if (rtd->dai_link->no_pcm) {
-+	if (rtd->dai_link->params) {
-+		snprintf(new_name, sizeof(new_name), "codec2codec(%s)",
-+			 rtd->dai_link->stream_name);
-+
-+		ret = snd_pcm_new_internal(rtd->card->snd_card, new_name, num,
-+					   playback, capture, &pcm);
-+	} else if (rtd->dai_link->no_pcm) {
- 		snprintf(new_name, sizeof(new_name), "(%s)",
- 			rtd->dai_link->stream_name);
+-	w->priv = rtd;
++	w->priv = substream;
  
-@@ -3059,13 +3084,17 @@ int soc_new_pcm(struct snd_soc_pcm_runtime *rtd, int num)
- 	dev_dbg(rtd->card->dev, "ASoC: registered pcm #%d %s\n",num, new_name);
+ 	return w;
  
- 	/* DAPM dai link stream work */
--	INIT_DELAYED_WORK(&rtd->delayed_work, close_delayed_work);
-+	if (rtd->dai_link->params)
-+		INIT_DELAYED_WORK(&rtd->delayed_work,
-+				  codec2codec_close_delayed_work);
-+	else
-+		INIT_DELAYED_WORK(&rtd->delayed_work, close_delayed_work);
+@@ -4254,6 +4260,8 @@ static void dapm_connect_dai_link_widgets(struct snd_soc_card *card,
+ 	struct snd_soc_dai *codec_dai;
+ 	struct snd_soc_dapm_widget *playback = NULL, *capture = NULL;
+ 	struct snd_soc_dapm_widget *codec, *playback_cpu, *capture_cpu;
++	struct snd_pcm_substream *substream;
++	struct snd_pcm_str *streams = rtd->pcm->streams;
+ 	int i;
  
- 	pcm->nonatomic = rtd->dai_link->nonatomic;
- 	rtd->pcm = pcm;
- 	pcm->private_data = rtd;
+ 	if (rtd->dai_link->params) {
+@@ -4272,7 +4280,8 @@ static void dapm_connect_dai_link_widgets(struct snd_soc_card *card,
  
--	if (rtd->dai_link->no_pcm) {
-+	if (rtd->dai_link->no_pcm || rtd->dai_link->params) {
- 		if (playback)
- 			pcm->streams[SNDRV_PCM_STREAM_PLAYBACK].substream->private_data = rtd;
- 		if (capture)
+ 		if (playback_cpu && codec) {
+ 			if (!playback) {
+-				playback = snd_soc_dapm_new_dai(card, rtd,
++				substream = streams[SNDRV_PCM_STREAM_PLAYBACK].substream;
++				playback = snd_soc_dapm_new_dai(card, substream,
+ 								"playback");
+ 				if (IS_ERR(playback)) {
+ 					dev_err(rtd->dev,
+@@ -4301,7 +4310,8 @@ static void dapm_connect_dai_link_widgets(struct snd_soc_card *card,
+ 
+ 		if (codec && capture_cpu) {
+ 			if (!capture) {
+-				capture = snd_soc_dapm_new_dai(card, rtd,
++				substream = streams[SNDRV_PCM_STREAM_CAPTURE].substream;
++				capture = snd_soc_dapm_new_dai(card, substream,
+ 							       "capture");
+ 				if (IS_ERR(capture)) {
+ 					dev_err(rtd->dev,
 -- 
 2.21.0
 
