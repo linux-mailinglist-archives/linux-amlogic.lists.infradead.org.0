@@ -2,83 +2,82 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 72778733A1
-	for <lists+linux-amlogic@lfdr.de>; Wed, 24 Jul 2019 18:24:24 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B2B9D733A2
+	for <lists+linux-amlogic@lfdr.de>; Wed, 24 Jul 2019 18:24:26 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=RVN9bXLrAKoFdBHr57nLSUurOAvr2C0FAv9naG2h7aQ=; b=SBiHWr7HjSCK5w
-	Ec5p0fUwKHkBlCmgKNVh6RMRx2zXxf3PhSP4PKaia7VaikYGGvaoTBqRvAKFO9m+05ww+Xl+Kqgnm
-	3p0NQii6R8olDl3yVq0rN6q2wKThVNayqdrjSeq/DB9ey78A15PO9WSf9G9OmqfEn4JAhv2ZVsw3V
-	ixccH+UsN/cRiyxIGbQXzK8E5ciRcm4Z+PjtGQViX2U0bmJ8LReVK+gu7E4NUP5/vxPZF5rQmwUt2
-	LyCKhrb8XnHFDQf+9DameZqGCVZvGPjBcn1SU+gagiciCN2Sf7tpvz8HwICeb3yhN4uqk/6QCM4dQ
-	G3FPNpPCxqgwJ65yE0vg==;
+	List-Owner; bh=1ttGmqNfpf2goCmUc0MdoGwquq0JSQXYTp2DieYQouA=; b=DvqiUWpBha9nfS
+	FESRNqtYDF46V1bewqDJOZXh1Lxk4B3qF1tIqpCCrDArpPrpF7aASLKTqV0Ap9dBF6nnfBneZi4CF
+	IM+rCvRGk1WhuvBKnMMLpL9Y6Aca+rvl9KSv8qtHf/a6PxB2Z3qRj+J20qgb94QMB21O8FxUiFL+l
+	TXYfI/7kywgV6H4a1HdaKO8X2oJoqsecHJ3xZbLrbmmy89m1uQYHT4dHEKMgHbwKeABE7G5bN3Vou
+	4pun4rzr/7OPhm3yeSBoblicBmS/KD36mEpWwwkunqthbGFEZWiz12etNAYqjPhAOelI/n7QSuUU7
+	JCmvepULow/2B9+vlj+g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hqK3v-0006wX-2e; Wed, 24 Jul 2019 16:24:19 +0000
-Received: from mail-wm1-x341.google.com ([2a00:1450:4864:20::341])
+	id 1hqK3w-0006yD-Pg; Wed, 24 Jul 2019 16:24:20 +0000
+Received: from mail-wr1-x444.google.com ([2a00:1450:4864:20::444])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hqK3p-0006rs-Kq
- for linux-amlogic@lists.infradead.org; Wed, 24 Jul 2019 16:24:15 +0000
-Received: by mail-wm1-x341.google.com with SMTP id f17so42163831wme.2
- for <linux-amlogic@lists.infradead.org>; Wed, 24 Jul 2019 09:24:12 -0700 (PDT)
+ id 1hqK3q-0006s5-IC
+ for linux-amlogic@lists.infradead.org; Wed, 24 Jul 2019 16:24:16 +0000
+Received: by mail-wr1-x444.google.com with SMTP id z1so47622550wru.13
+ for <linux-amlogic@lists.infradead.org>; Wed, 24 Jul 2019 09:24:13 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=Npvt6BnLoRE+ITNaKiuWjMdj+Jqxi0Z7NGG0xDY8eZY=;
- b=PPUpu2UkVrvoFD58jMMOxwF8SwBcLWeMm6AdGHu32jkbpMAD7Eg35djpLxCBi2fMDx
- 0CxgU2P1kCEHKkMn4Elyn5ujwm+PeMd5CTF6eojwwGsHXP/nL1EgGvFdUZkSoRs+Bp96
- MJMh/rpOXNtt8dBM2uXRtqixTB9f3Tb6SH+Ece61kAKLtRkjJbWWEpr6s2ux2PaxDuD9
- Ea0i5p5nEreZOyRnnnuE4yReUMaDmvpktXnpAlZh38dcRK5DBm0tFgNZMijZkSebyinJ
- HkKCoSQfh9IXQEQn1eJ+qGqfov17Vww7kyvlbGqMUjXDEWdm4dIRP/IUI265UeYG4cEH
- 79YQ==
+ bh=NYbwqma1m9jqmdyH3lyO6cWket2bF1VkY/YuX/cmnIM=;
+ b=kumEAPUx7B49kM8BuP59c5fzHEqI89ld6/bXZ9wclNMrmminy+PGmddOmTANEISf/U
+ mW0bJLHMrDbnth3oX9Og7HTFcbiDi73QRyYxCu5r3QHVKXc53nxgAOudarnTjjJs2fHe
+ LnUt1GR8wHA/aaEGQb7Xvx28Jb352PPcZUBhKcnLBjo+BugP50E+I7aZg75y7y3YJyHS
+ BzzvfZpaGurdnxhCp0AcFvLMZIBBI8ob8aIK4KJ/+FlZ8p8tKSovSjTzBcIJVDPlhLEj
+ c/fx/W6do9q7Q9UCgrxOqIArBTbdLqubwtgGlXXROGKKX7WjiL64SsHP+XlVPkrML96X
+ dLJQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=Npvt6BnLoRE+ITNaKiuWjMdj+Jqxi0Z7NGG0xDY8eZY=;
- b=HddvdGX4Ly6kp2wa0bVS7dYpWTqozARg2OPK2N9INOmu3zsJolv0E4vdPc1wcUP8S/
- VT1YuAKYYxW50pCzzN/Qeeyi/qpviyXxrQsAK++5w8ZULakgyLneNCxWMLhHluoOKI65
- OBHiPmTdAKs1+nLfdIKEqKtOjFKYozXyg6G2DgOB89YA+CnVTgISZ1jz3u8YcOs1WND8
- +bxlfrImf/BQDrJ27YVPWWl4TnpA2E6NvL5n8CuQuSsPnSZ3fZf4OVNTHDMf43eY3PHO
- +ItvkybNi0OuXYzLiKAaf1YgNfl7ViQ92Yk7R2t1R7bPN/VazCmJGGNqQrSPXCRkXKcF
- EpKw==
-X-Gm-Message-State: APjAAAW9cvlSlCdZn6Fb5hk0t+MBA5xdaEUamvXRbYLHU/wR4rXfpMRQ
- 9uL3qC8IdbYcTmhz+bUIn7f3CuxcoE8=
-X-Google-Smtp-Source: APXvYqxbB0+hlRjwpVSHseapZwEaI2p3LvGV7HWs+1hzOz2F2kLsTMcPSZVa4XmP+b9EpqBLQ2BEMw==
-X-Received: by 2002:a1c:a101:: with SMTP id k1mr76948104wme.98.1563985451734; 
- Wed, 24 Jul 2019 09:24:11 -0700 (PDT)
+ bh=NYbwqma1m9jqmdyH3lyO6cWket2bF1VkY/YuX/cmnIM=;
+ b=fUmvnUgrxwi1p3pd18qLs1ZBkYQE/WzegmNFt7Erhs8J+IfOyvdaQQEEVWtiCO1zpG
+ aiJiFugB2vlMmDmhAZ2iSkvUYTQtrhDJdNe8a9QJ7G5WfRDutd4Mwi2zeSf6hHVStbLu
+ w2YbxQJnOCSqH2DFfGpQ5bc8d5IelfpIIBZTY2fEFWSmDZLdUp44p/ufRl2dycxscIcU
+ izC1h9uHxBePWvP1eE+qo9grEL1+Unqd/lfp72vEpo77bvCFTO6DJa9ShJcMDYyjRiX0
+ niTX/a5Ns/vb/jnbj7VinQOGLR1rTzepP6wg91Uo97o0th3evIgs8TzUm86JmXHb7myx
+ VkaA==
+X-Gm-Message-State: APjAAAWjg9qtP7Bi2+9v8MUKe1kW70qUUfsF7G+fmcOMGqZuxyme+O6y
+ L5hFIqYUMeKDCKcORaBLmnerdA==
+X-Google-Smtp-Source: APXvYqx9Mc3Q8VY1dWRoHo7J46SnH4zpSFciHtF/nlFovtGxl1DJgfQUB5i7Xs03xKhQXhwPkPfqdw==
+X-Received: by 2002:adf:edd1:: with SMTP id v17mr4837090wro.348.1563985452644; 
+ Wed, 24 Jul 2019 09:24:12 -0700 (PDT)
 Received: from starbuck.baylibre.local
  (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
- by smtp.googlemail.com with ESMTPSA id f70sm55688960wme.22.2019.07.24.09.24.10
+ by smtp.googlemail.com with ESMTPSA id f70sm55688960wme.22.2019.07.24.09.24.11
  (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Wed, 24 Jul 2019 09:24:11 -0700 (PDT)
+ Wed, 24 Jul 2019 09:24:12 -0700 (PDT)
 From: Jerome Brunet <jbrunet@baylibre.com>
 To: Mark Brown <broonie@kernel.org>, Liam Girdwood <lgirdwood@gmail.com>,
  Kevin Hilman <khilman@baylibre.com>
-Subject: [PATCH 2/6] ASoC: codec2codec: name link using stream direction
-Date: Wed, 24 Jul 2019 18:24:01 +0200
-Message-Id: <20190724162405.6574-3-jbrunet@baylibre.com>
+Subject: [PATCH 3/6] ASoC: codec2codec: deal with params when necessary
+Date: Wed, 24 Jul 2019 18:24:02 +0200
+Message-Id: <20190724162405.6574-4-jbrunet@baylibre.com>
 X-Mailer: git-send-email 2.21.0
 In-Reply-To: <20190724162405.6574-1-jbrunet@baylibre.com>
 References: <20190724162405.6574-1-jbrunet@baylibre.com>
 MIME-Version: 1.0
 X-Patchwork-Bot: notify
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190724_092413_678318_D80A0D82 
-X-CRM114-Status: UNSURE (   9.78  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190724_092414_612880_92E30265 
+X-CRM114-Status: GOOD (  16.96  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:341 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:444 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -104,69 +103,166 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-At the moment, codec to codec dai link widgets are named after the
-cpu dai and the 1st codec valid on the link. This might be confusing
-if there is multiple valid codecs on the link for one stream
-direction.
+When there is an event on codec to codec dai_link, we only need to deal
+with params if the event is SND_SOC_DAPM_PRE_PMU, when .hw_params() is
+called. For the other events, it is useless.
 
-Instead, use the dai link name and the stream direction to name the
-the dai link widget
+Also, params does not need to be dynamically allocated as it does not
+need to survive the event.
+
+Last, dealing with the codec to codec params just before calling
+.hw_params() callbacks give change to either party on the link to alter
+params content in .startup(), which might be useful in some cases
 
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
 ---
- sound/soc/soc-dapm.c | 12 ++++--------
- 1 file changed, 4 insertions(+), 8 deletions(-)
+ sound/soc/soc-dapm.c | 81 ++++++++++++++++++++++++++++----------------
+ 1 file changed, 51 insertions(+), 30 deletions(-)
 
 diff --git a/sound/soc/soc-dapm.c b/sound/soc/soc-dapm.c
-index 5348abda7ce2..d20cd89513a4 100644
+index d20cd89513a4..aa6e47beaec3 100644
 --- a/sound/soc/soc-dapm.c
 +++ b/sound/soc/soc-dapm.c
-@@ -4056,8 +4056,7 @@ snd_soc_dapm_alloc_kcontrol(struct snd_soc_card *card,
+@@ -3764,25 +3764,12 @@ int snd_soc_dapm_new_controls(struct snd_soc_dapm_context *dapm,
+ }
+ EXPORT_SYMBOL_GPL(snd_soc_dapm_new_controls);
  
- static struct snd_soc_dapm_widget *
- snd_soc_dapm_new_dai(struct snd_soc_card *card, struct snd_soc_pcm_runtime *rtd,
--		     struct snd_soc_dapm_widget *source,
--		     struct snd_soc_dapm_widget *sink)
-+		     char *id)
+-static int snd_soc_dai_link_event(struct snd_soc_dapm_widget *w,
+-				  struct snd_kcontrol *kcontrol, int event)
++static int
++snd_soc_dai_link_prepare_params(struct snd_soc_dapm_widget *w,
++				struct snd_pcm_hw_params *params,
++				const struct snd_soc_pcm_stream *config)
  {
- 	struct snd_soc_dapm_widget template;
- 	struct snd_soc_dapm_widget *w;
-@@ -4067,7 +4066,7 @@ snd_soc_dapm_new_dai(struct snd_soc_card *card, struct snd_soc_pcm_runtime *rtd,
- 	int ret;
- 
- 	link_name = devm_kasprintf(card->dev, GFP_KERNEL, "%s-%s",
--				   source->name, sink->name);
-+				   rtd->dai_link->name, id);
- 	if (!link_name)
- 		return ERR_PTR(-ENOMEM);
- 
-@@ -4247,15 +4246,13 @@ static void dapm_connect_dai_link_widgets(struct snd_soc_card *card,
- 	}
- 
- 	for_each_rtd_codec_dai(rtd, i, codec_dai) {
+-	struct snd_soc_dapm_path *path;
+-	struct snd_soc_dai *source, *sink;
+-	struct snd_soc_pcm_runtime *rtd = w->priv;
+-	const struct snd_soc_pcm_stream *config;
+-	struct snd_pcm_substream substream;
+-	struct snd_pcm_hw_params *params = NULL;
+-	struct snd_pcm_runtime *runtime = NULL;
+ 	unsigned int fmt;
+-	int ret = 0;
 -
- 		/* connect BE DAI playback if widgets are valid */
- 		codec = codec_dai->playback_widget;
+-	config = rtd->dai_link->params + rtd->params_select;
+-
+-	if (WARN_ON(!config) ||
+-	    WARN_ON(list_empty(&w->edges[SND_SOC_DAPM_DIR_OUT]) ||
+-		    list_empty(&w->edges[SND_SOC_DAPM_DIR_IN])))
+-		return -EINVAL;
  
- 		if (playback_cpu && codec) {
- 			if (!playback) {
- 				playback = snd_soc_dapm_new_dai(card, rtd,
--								playback_cpu,
--								codec);
-+								"playback");
- 				if (IS_ERR(playback)) {
- 					dev_err(rtd->dev,
- 						"ASoC: Failed to create DAI %s: %ld\n",
-@@ -4284,8 +4281,7 @@ static void dapm_connect_dai_link_widgets(struct snd_soc_card *card,
- 		if (codec && capture_cpu) {
- 			if (!capture) {
- 				capture = snd_soc_dapm_new_dai(card, rtd,
--							       codec,
--							       capture_cpu);
-+							       "capture");
- 				if (IS_ERR(capture)) {
- 					dev_err(rtd->dev,
- 						"ASoC: Failed to create DAI %s: %ld\n",
+ 	/* Be a little careful as we don't want to overflow the mask array */
+ 	if (config->formats) {
+@@ -3791,26 +3778,41 @@ static int snd_soc_dai_link_event(struct snd_soc_dapm_widget *w,
+ 		dev_warn(w->dapm->dev, "ASoC: Invalid format %llx specified\n",
+ 			 config->formats);
+ 		fmt = 0;
+-	}
+ 
+-	/* Currently very limited parameter selection */
+-	params = kzalloc(sizeof(*params), GFP_KERNEL);
+-	if (!params) {
+-		ret = -ENOMEM;
+-		goto out;
++		return -EINVAL;
+ 	}
+-	snd_mask_set(hw_param_mask(params, SNDRV_PCM_HW_PARAM_FORMAT), fmt);
+ 
++	memset(params, 0, sizeof(*params));
++
++	snd_mask_set(hw_param_mask(params, SNDRV_PCM_HW_PARAM_FORMAT), fmt);
+ 	hw_param_interval(params, SNDRV_PCM_HW_PARAM_RATE)->min =
+ 		config->rate_min;
+ 	hw_param_interval(params, SNDRV_PCM_HW_PARAM_RATE)->max =
+ 		config->rate_max;
+-
+ 	hw_param_interval(params, SNDRV_PCM_HW_PARAM_CHANNELS)->min
+ 		= config->channels_min;
+ 	hw_param_interval(params, SNDRV_PCM_HW_PARAM_CHANNELS)->max
+ 		= config->channels_max;
+ 
++	return 0;
++}
++
++static int snd_soc_dai_link_event(struct snd_soc_dapm_widget *w,
++				  struct snd_kcontrol *kcontrol, int event)
++{
++	struct snd_soc_dapm_path *path;
++	struct snd_soc_dai *source, *sink;
++	struct snd_soc_pcm_runtime *rtd = w->priv;
++	const struct snd_soc_pcm_stream *config;
++	struct snd_pcm_substream substream;
++	struct snd_pcm_hw_params params;
++	struct snd_pcm_runtime *runtime = NULL;
++	int ret = 0;
++
++	if (WARN_ON(list_empty(&w->edges[SND_SOC_DAPM_DIR_OUT]) ||
++		    list_empty(&w->edges[SND_SOC_DAPM_DIR_IN])))
++		return -EINVAL;
++
+ 	memset(&substream, 0, sizeof(substream));
+ 
+ 	/* Allocate a dummy snd_pcm_runtime for startup() and other ops() */
+@@ -3850,27 +3852,47 @@ static int snd_soc_dai_link_event(struct snd_soc_dapm_widget *w,
+ 			sink->active++;
+ 		}
+ 
++		/*
++		 * Note: getting the config after .startup() gives a chance to
++		 * either party on the link to alter the configuration if
++		 * necessary
++		 */
++		config = rtd->dai_link->params + rtd->params_select;
++		if (WARN_ON(!config)) {
++			dev_err(w->dapm->dev, "ASoC: link config missing\n");
++			ret = -EINVAL;
++			goto out;
++		}
++
++		ret = snd_soc_dai_link_prepare_params(w, &params, config);
++		if (ret < 0) {
++			dev_err(w->dapm->dev, "ASoC: link params prepare failed: %d\n",
++				ret);
++			goto out;
++		}
++
+ 		substream.stream = SNDRV_PCM_STREAM_CAPTURE;
+ 		snd_soc_dapm_widget_for_each_source_path(w, path) {
+ 			source = path->source->priv;
+ 
+-			ret = soc_dai_hw_params(&substream, params, source);
++			ret = soc_dai_hw_params(&substream, &params, source);
+ 			if (ret < 0)
+ 				goto out;
+ 
+-			dapm_update_dai_unlocked(&substream, params, source);
++			dapm_update_dai_unlocked(&substream, &params, source);
+ 		}
+ 
+ 		substream.stream = SNDRV_PCM_STREAM_PLAYBACK;
+ 		snd_soc_dapm_widget_for_each_sink_path(w, path) {
+ 			sink = path->sink->priv;
+ 
+-			ret = soc_dai_hw_params(&substream, params, sink);
++			ret = soc_dai_hw_params(&substream, &params, sink);
+ 			if (ret < 0)
+ 				goto out;
+ 
+-			dapm_update_dai_unlocked(&substream, params, sink);
++			dapm_update_dai_unlocked(&substream, &params, sink);
+ 		}
++
+ 		break;
+ 
+ 	case SND_SOC_DAPM_POST_PMU:
+@@ -3932,7 +3954,6 @@ static int snd_soc_dai_link_event(struct snd_soc_dapm_widget *w,
+ 
+ out:
+ 	kfree(runtime);
+-	kfree(params);
+ 	return ret;
+ }
+ 
 -- 
 2.21.0
 
