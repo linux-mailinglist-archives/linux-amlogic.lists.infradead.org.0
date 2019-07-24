@@ -2,84 +2,84 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2A45072AED
-	for <lists+linux-amlogic@lfdr.de>; Wed, 24 Jul 2019 11:00:31 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id A63C9733A0
+	for <lists+linux-amlogic@lfdr.de>; Wed, 24 Jul 2019 18:24:23 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=DJ1HseS2C7Cz8X4alANZCC/mb8JgBXb/imf7mojTENI=; b=fM1n6PX78HEy64
-	y7hvkBvnv89v6kzTfEvzrFrDUOVdxYY7fURde755TuGsJzu1PfarQIhlYKyYmUCO2eqnC+joS5ePb
-	Jn6V02+EEFBWRxMYWgUUrk4ItLHE5TI3e0Qtu5N/Zp7m7ah4M47ejZnlshQt46eH0EqdNYD4acRzt
-	OgBBOIEiRE+UWgAjuOGwCMaqwNxqJZM3xIlzi72nQ6Z27NKSL1+D/1Zve8WKyxORqK3nqE0yHOG8I
-	NN+Gyy5l1LqMh+K1UcBWfIOBbRV4U6cHpnku8LPLhoMktrf+A/dNm9vL8zzkafnxj/7Jqx9nzYT2a
-	pW3ZEScrUkiwHa28VPrg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=mKAbJlsQaQJ3lSwJUNOBPI1VYeW1aTa9j8Wpvx2hPjQ=; b=V5puVlvij64MIK
+	bPypqNgt72C9IwlHvuTvcdw2KbG4CoGroMK0aYs4huIs8F7FCDpivrsmVnL4QRHabBQLIzHFPqRhR
+	frHIvIp+ltkDiekgI5WSId9e4LOmy/fsqSoUtfEJfvIHtSOtt/DSnHQQ2R0zIoiYfcbXZixyxclX4
+	6NXwcUDEpmco3XRkEntTQ9rbxygLIcD9uV5rxMMT4zm4EwtXSkeT9vmvLR96FcifSlfbZgG+hvezG
+	sIfA50IvMX04iWrEkY8n+ZuAb4ueEOVjvXTvO2xm44H+iDCU67pkCRmY0WynjdeOSSqLomNovBHaT
+	glnrxXqqn5JCbCm019GQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hqD8H-00028i-6z; Wed, 24 Jul 2019 09:00:21 +0000
-Received: from mail-io1-xd41.google.com ([2607:f8b0:4864:20::d41])
+	id 1hqK3u-0006ty-24; Wed, 24 Jul 2019 16:24:18 +0000
+Received: from mail-wr1-x443.google.com ([2a00:1450:4864:20::443])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hqD8A-00027s-If; Wed, 24 Jul 2019 09:00:16 +0000
-Received: by mail-io1-xd41.google.com with SMTP id o9so88037417iom.3;
- Wed, 24 Jul 2019 02:00:13 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=Sm/JL+hP+mCoNP+dMciXgNOdiOkppRY7NGRE3pt521E=;
- b=eR8u7qKKHElGFqz/S6XlFGERvnoHQyXbSrTscLhR4cXF5w67QuhmRrX3UBFX+2PzYp
- zue+YvNmVD2e4pHn5m1z278tfusrxNx27FkFVZjnNv4+xPDIqrczT82QqP4+AJ0tp4t4
- wrk962dTC+xYxkgBh4emaRtesxwwsWWarrwPzp+5uP+Zm7wzbX+ZlQMBGU9ujuw6fUGg
- LOKnbLSgSx72h5Y1eoMoJkoamvlLadgaYwaW/UMU/K2pI/+5Rb5D/h0aTjScFVDT/KMA
- oJ1xPeNK/mv6TVaOHTBjrgrd8O6d0fK6U3FJcPi5z8XkRvsVu8bkh28mIH0agUks5NFG
- e6Bg==
+ id 1hqK3n-0006rP-PX
+ for linux-amlogic@lists.infradead.org; Wed, 24 Jul 2019 16:24:13 +0000
+Received: by mail-wr1-x443.google.com with SMTP id p13so47623476wru.10
+ for <linux-amlogic@lists.infradead.org>; Wed, 24 Jul 2019 09:24:10 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=baylibre-com.20150623.gappssmtp.com; s=20150623;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=rscQz3KUGOpkCDKHMcXdQe7Cl/GoBVV86V2E9kxxK1s=;
+ b=jITz/uDE43k3A8NB1nlk3u+xzG/Y0MTElmt4Smge4Q7/p2i4AQP+Ot+lzFSbs47nGs
+ nn730d5rJ1NTniNhwvL69qjT1i8otT5IErkH1IiOMTNxW24JI06varqHToVixQg9jubW
+ apzUCJPFyUzn7NKyoVzr34ZHbOSBLFFqurZhsZcz1QT5CYE5yCVjRWij5XwCt1SsMLH6
+ gO3Jx9ohRvjRTh/gNM246+tC38Ty8u7M+KUP7nIZiB3NUacjKhIFZsBmuWhWZ1skiHep
+ HHskYmreyeF6CvNKUjIf88ehFvrMJu1k0LGqCrX+Itgq1xAhb/3oczCVjg1ktXi2w5x3
+ +efA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=Sm/JL+hP+mCoNP+dMciXgNOdiOkppRY7NGRE3pt521E=;
- b=E0O6d+y4hm3d4q+5Tp70JnBpZlc7oMpf1DLfVcqw+umP8/5uUaimZCepU7HBYLllNR
- NzAKxHiEI0BUANPolO3HlE7hyl8AhlsvFw1KWZjRcisNkKbTtGlV6yUb33MtfihSxxhM
- Le3tfHNIJo1XG4CXw9zXNW5QtFybEJUjTYDr8dPiT0hQjOz2BG781WJynQJHItEoHcxx
- v3SYXrP28KU9X7g5byA/QfFtoA3tf3zFo4vD7mJRZn9hZybbTfasHQo+nzHCSR3k5F+e
- 2S8UIDY7f46eJvENvsOMIapVnP8TQJdz3VrA8DuQYMqkFMU4qnAHL2wQwfEqtauhkubH
- Gmow==
-X-Gm-Message-State: APjAAAXaf2UqSWmbeg8qxIZHmaTTMN9m/0t3yJGEZgOBJ+uRUfprm7Hb
- OG1F8QzFZwhSl02mIUiEG7Y0z6+cjJpAz73pG7Y=
-X-Google-Smtp-Source: APXvYqxYMsXuU0YWjK636od6j6zGxjRLMjCkycvx2+POeKyX+OTzKJCK8ADuJ1tC1FER+CWj81OCoIiFMT/gTgh51pU=
-X-Received: by 2002:a5e:9b05:: with SMTP id j5mr12610997iok.75.1563958812549; 
- Wed, 24 Jul 2019 02:00:12 -0700 (PDT)
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=rscQz3KUGOpkCDKHMcXdQe7Cl/GoBVV86V2E9kxxK1s=;
+ b=aN85rRC5PrhXAP2bxYHxZ3KtVO8lpB46AJiP71zcbYUXCbjwG1VUwJxNrxaRzXlojC
+ 1a4gJe9W065AXfcxZuoNbwELE/NrQ0EiNbzz7gJcGePQVvbsDvI0zGBiCIBcA2SalBd5
+ 2fSahZa8qCX1GRRDFj0aFolPkUBA/sFia6xYF+YwK/yMNY9o0U/TJAEj0ITyuD4b/imt
+ DOty5vO7WSO0bOpWCeUA2OW0aEC1vLtUtYHI3c+DbtwHv6K+pWtyLRnDlifeRgLHVf2q
+ ar5O8IG+Gso8sJ45TSsCDbUUEUNqxPObTJEcZZsf1LZ9zo/ve9gV3dclzS3Pqa54ursP
+ OJfw==
+X-Gm-Message-State: APjAAAXHJsTSdzVujHic/oRJmOmCSKJVnyz8U4h/su/qh3woB4FWAYVG
+ +fynciN2bG8Omx9rlrP1cn0H2w==
+X-Google-Smtp-Source: APXvYqwzABCOBCOzXWxksAWXozHEuvx2wpN+ZOBXgno4LlJoOSdi7K6PGndRhEJOhxZWMIuNGujEzw==
+X-Received: by 2002:adf:8bc2:: with SMTP id w2mr5964754wra.7.1563985449460;
+ Wed, 24 Jul 2019 09:24:09 -0700 (PDT)
+Received: from starbuck.baylibre.local
+ (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
+ by smtp.googlemail.com with ESMTPSA id f70sm55688960wme.22.2019.07.24.09.24.08
+ (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
+ Wed, 24 Jul 2019 09:24:08 -0700 (PDT)
+From: Jerome Brunet <jbrunet@baylibre.com>
+To: Mark Brown <broonie@kernel.org>, Liam Girdwood <lgirdwood@gmail.com>,
+ Kevin Hilman <khilman@baylibre.com>
+Subject: [PATCH 0/6] ASoC: improve codec to codec link support
+Date: Wed, 24 Jul 2019 18:23:59 +0200
+Message-Id: <20190724162405.6574-1-jbrunet@baylibre.com>
+X-Mailer: git-send-email 2.21.0
 MIME-Version: 1.0
-References: <20190719192954.26481-1-xruppen@gmail.com>
- <eadcf7ef-4aad-fa4f-3b1b-a5238f394b1e@baylibre.com>
- <CANAwSgTbvQO5qum1K3q8+J=WO4yLjadnZSZYf_AAhbf+CJm92Q@mail.gmail.com>
- <cdb986e9-e905-8001-630a-cf3e3f8c5369@baylibre.com>
-In-Reply-To: <cdb986e9-e905-8001-630a-cf3e3f8c5369@baylibre.com>
-From: Anand Moon <linux.amoon@gmail.com>
-Date: Wed, 24 Jul 2019 14:30:01 +0530
-Message-ID: <CANAwSgSwDQdT60N87GrOWNDP0_ZvKnYsKg5QPVP0jJvQ8rKzpg@mail.gmail.com>
-Subject: Re: [PATCH] arm64: dts: meson: odroid-n2: keep SD card regulator
- always on
-To: Neil Armstrong <narmstrong@baylibre.com>
+X-Patchwork-Bot: notify
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190724_020014_647372_649A3A04 
-X-CRM114-Status: GOOD (  22.05  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190724_092411_975051_2394C3A2 
+X-CRM114-Status: UNSURE (   7.49  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:d41 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:443 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (linux.amoon[at]gmail.com)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
@@ -94,108 +94,55 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
- Kevin Hilman <khilman@baylibre.com>,
- Linux Kernel <linux-kernel@vger.kernel.org>, Xavier Ruppen <xruppen@gmail.com>,
- linux-amlogic@lists.infradead.org,
- linux-arm-kernel <linux-arm-kernel@lists.infradead.org>
+Cc: devicetree@vger.kernel.org, alsa-devel@alsa-project.org,
+ linux-amlogic@lists.infradead.org, linux-kernel@vger.kernel.org,
+ Jerome Brunet <jbrunet@baylibre.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Hi Neil,
+As explained in this previous series [0], on Amlogic, we are using codec to
+codec links to deal with the glue which is between the i2s backends and the
+synopsys hdmi controller.
 
-On Wed, 24 Jul 2019 at 12:19, Neil Armstrong <narmstrong@baylibre.com> wrote:
->
-> Hi Anand,
->
-> On 24/07/2019 07:30, Anand Moon wrote:
-> > Hi All,
-> >
-> > On Mon, 22 Jul 2019 at 12:51, Neil Armstrong <narmstrong@baylibre.com> wrote:
-> >>
-> >> On 19/07/2019 21:29, Xavier Ruppen wrote:
-> >>> When powering off the Odroid N2, the tflash_vdd regulator is
-> >>> automatically turned off by the kernel. This is a problem
-> >>> when issuing the "reboot" command while using an SD card.
-> >>> The boot ROM does not power this regulator back on, blocking
-> >>> the reboot process at the boot ROM stage, preventing the
-> >>> SD card from being detected.
-> >>>
-> >>> Adding the "regulator-always-on" property fixes the problem.
-> >>>
-> >>> Signed-off-by: Xavier Ruppen <xruppen@gmail.com>
-> >>> ---
-> >>>
-> >>> Here is what the boot ROM output looks like without this patch:
-> >>>
-> >>>     [root@alarm ~]# reboot
-> >>>     [...]
-> >>>     [   24.275860] shutdown[1]: All loop devices detached.
-> >>>     [   24.278864] shutdown[1]: Detaching DM devices.
-> >>>     [   24.287105] kvm: exiting hardware virtualization
-> >>>     [   24.318776] reboot: Restarting system
-> >>>     bl31 reboot reason: 0xd
-> >>>     bl31 reboot reason: 0x0
-> >>>     system cmd  1.
-> >>>     G12B:BL:6e7c85:7898ac;FEAT:E0F83180:2000;POC:F;RCY:0;
-> >>>     EMMC:800;NAND:81;SD?:0;SD:400;USB:8;LOOP:1;EMMC:800;
-> >>>     NAND:81;SD?:0;SD:400;USB:8;LOOP:2;EMMC:800;NAND:81;
-> >>>     SD?:0;SD:400;USB:8;LOOP:3; [...]
-> >>>
-> >>> Other people can be seen having this problem on the odroid
-> >>> forum [1].
-> >>>
-> >>> The cause of the problem was found by Martin Blumenstingl
-> >>> on #linux-amlogic. We may want to add his Suggested-by tag
-> >>> if he agrees.
-> >>>
-> >>> [1] https://forum.odroid.com/viewtopic.php?f=176&t=33993
-> >>>
-> >>>  arch/arm64/boot/dts/amlogic/meson-g12b-odroid-n2.dts | 1 +
-> >>>  1 file changed, 1 insertion(+)
-> >>>
-> >>> diff --git a/arch/arm64/boot/dts/amlogic/meson-g12b-odroid-n2.dts b/arch/arm64/boot/dts/amlogic/meson-g12b-odroid-n2.dts
-> >>> index 81780ffcc7f0..4e916e1f71f7 100644
-> >>> --- a/arch/arm64/boot/dts/amlogic/meson-g12b-odroid-n2.dts
-> >>> +++ b/arch/arm64/boot/dts/amlogic/meson-g12b-odroid-n2.dts
-> >>> @@ -53,6 +53,7 @@
-> >>>
-> >>>               gpio = <&gpio_ao GPIOAO_8 GPIO_ACTIVE_HIGH>;
-> >>>               enable-active-high;
-> >>> +             regulator-always-on;
-> >>>       };
-> >>>
-> >>>       tf_io: gpio-regulator-tf_io {
-> >>>
-> >>
-> >> Surely solves the situation, thanks !
-> >>
-> >> please add a comment on top of "regulator-always-on" to explain why we always enable it,
-> >> note we should always enable it in case of watchdog reboot or other uncontrolled reset,
-> >> this regulator must never be disabled.
-> >>
-> >> Reviewed-by: Neil Armstrong <narmstrong@baylibre.com>
-> >>
-> >> Thanks,
-> >> Neil
-> >>
-> >
-> > I am afraid this did not fix the issue I was also facing with
-> > Archlinux on Odroid N2 using mainline u-boot.
->
-> Seems to be a separate issue, could we start a separate thread with all your
-> setup (branch, git SHAa, configs, board setup, ...) for this ?
->
-> Thanks,
-> Neil
->
+This worked well until I tried to .get_eld() support in the dw-hdmi-i2s
+driver.  Doing so adds channel mapping controls to the codec. This shown
+several problem
 
-Ok sorry for the noise.
+1) .pcm_new() is not called on codec to codec links.
+   struct snd_soc_pcm_runtime do not even have a valid .pcm
+2) struct snd_pcm_substream and struct snd_pcm_runtime are ephemeral
+   This is a problem if a control needs to access them
 
-Best Regards
--Anand
+The goal of this patchset is to resolve the above issues and improve the
+codec to codec link support enough to correctly handle the hdmi-codec
+
+The support of these codec to codec links could probably be improved in the
+future to behave like any other link and use soc_pcm_open(),
+soc_pcm_hw_params(), etc...
+
+The challenge lies in the dapm mutex. The soc_pcm call dapm function locking
+this mutex but the dapm mutex is already held in snd_soc_dai_link_event()
+
+[0]: https://lkml.kernel.org/r/20190515131858.32130-1-jbrunet@baylibre.com
+
+Jerome Brunet (6):
+  ASoC: codec2codec: run callbacks in order
+  ASoC: codec2codec: name link using stream direction
+  ASoC: codec2codec: deal with params when necessary
+  ASoC: create pcm for codec2codec links as well
+  ASoC: codec2codec: remove ephemeral variables
+  ASoC: codec2codec: fill some of the runtime stream parameters
+
+ sound/soc/soc-core.c |  42 +++-------
+ sound/soc/soc-dapm.c | 186 +++++++++++++++++++++++++++----------------
+ sound/soc/soc-pcm.c  |  35 +++++++-
+ 3 files changed, 162 insertions(+), 101 deletions(-)
+
+-- 
+2.21.0
+
 
 _______________________________________________
 linux-amlogic mailing list
