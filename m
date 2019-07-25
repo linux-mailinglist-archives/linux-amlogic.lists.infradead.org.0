@@ -2,8 +2,8 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3328175486
-	for <lists+linux-amlogic@lfdr.de>; Thu, 25 Jul 2019 18:46:33 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B605C7548C
+	for <lists+linux-amlogic@lfdr.de>; Thu, 25 Jul 2019 18:47:17 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,70 +11,69 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=kN6qB9/DbYla0rt3kkqdlH880ZLAG2J6KQZImlQVREg=; b=TjFmvwD++tbVAGX/xO33vHfEwD
-	BG2gQLaMLnt1cvqtU/ry0ml4kxOprSKEhYdqv6Eh60iTOyCV8NKuGdVNNUKS570IVzDSfMfXd8Zj5
-	FRdBxpsWj66gOxwAdeL01BkfPBW/TziWRE9iaZlK1Ktb28aG8S/UZhOUPGnoT1zTfzp+rfMQAtxIV
-	IvrBwy+AGKYn8oOCotwcVwr2Nen6NDPxID4gghZzWuL8oyGn73IzhpHXDXk+pcFtKfUUSHZsiK1NP
-	BfzObnuwDyBLJp6q1++rXMH4uywTf8pxEMbNvLjVXPlfLy9vSKKkJV0+H9dRowc/CW4XJsBFkBIc3
-	UhjYNViA==;
+	bh=2cL/r6AAnH4EuVaMUayeqrRJ9KcusHLgF8baShquabY=; b=ta5NGIqs5uZiYcRwT+r8PzHvBf
+	QJ0Yfkv7f3ZP2WPVdecNy5d0xbHq4elrFYEO5DjKITsuxDtnGzVliVV0MG2sTBBfQXz94A+ESZb9i
+	zG5s2Kix2epw5CTz6pnSv2dsca5Zj3LlZSEqc2nk2P/wS8FIloEm99mdWSBaBUOR49O5IbGspV2li
+	vDNl9XeLEQBS2LwC7s8JTH+ayR25G0fcv6wbqgoJZUyDU/L2I36SiccTacbT0QGq6Yujdgf3yZfQV
+	3X9mtrsGTnqT0Yte4RlnemnMC0ed5oajEiYvNQbpnXJlgLnRmTk30NDTfF796TX0+YqkYzwqjbqTl
+	J8fkX41A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hqgst-0007fN-8T; Thu, 25 Jul 2019 16:46:27 +0000
-Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
+	id 1hqgte-0008EM-Dw; Thu, 25 Jul 2019 16:47:14 +0000
+Received: from mail-wm1-x344.google.com ([2a00:1450:4864:20::344])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hqgpe-0004LY-7S
- for linux-amlogic@lists.infradead.org; Thu, 25 Jul 2019 16:43:20 +0000
-Received: by mail-wr1-x442.google.com with SMTP id n4so51568192wrs.3
- for <linux-amlogic@lists.infradead.org>; Thu, 25 Jul 2019 09:43:06 -0700 (PDT)
+ id 1hqgpf-0004Mk-Cv
+ for linux-amlogic@lists.infradead.org; Thu, 25 Jul 2019 16:43:23 +0000
+Received: by mail-wm1-x344.google.com with SMTP id 207so45606398wma.1
+ for <linux-amlogic@lists.infradead.org>; Thu, 25 Jul 2019 09:43:07 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=from:to:cc:subject:date:message-id:in-reply-to:references;
- bh=HL6tNC1MlW3akGtx+AMGL8mhLl0b5KdwEXzBA1olynw=;
- b=bQ7dGF4/GETSRk7Zxfwp7MISu6N+Uo7a7AOaKwjW4la2iC9/MKPZnNwHeH8iNOJjXF
- iNBfvfa5+I8BIq5Cg1614q8atAZV8QQTuENlgmeaNIQalv4+SludkEG424/mRvI0xKVp
- IGv7BJi/nxa0ZzGkeYjdGd3G9BtlvY66s8b9mW9eZuZP3DJ+W7Jf6v5iJpBT/NAC6PnM
- JW6g6CK2mo5Y0C8mY1GXgTBUCrOAZXv88bbWct0M9sbubIUNdHQn6JPYpEUvv3YDreKV
- mPq3UlgFM4k7P9gwST2xWkcIbf1rCS8429FpxkQlFYflDpI5nDzhDM1t4OT6rCwER3/X
- WcAg==
+ bh=mMLWTpRyQOIhO2zBKiwG8296jQFE+BtYZV6zzvxEPl0=;
+ b=Is62LuGc0BmnvvmbpBU+xVb6noxFfGphUlBMiZveEOXCmAKXoPdXIPTSEssvRQ34s1
+ QzU5bh9h8J55jfMBytlBPFy6Iqc6MwejQtZ+qDEsWEVgrhjwyruTWyYleHwZ4anoiAPq
+ KzhnbK4frlZITLBbh5jK7NjEi8keSvszPpxuSh6l82rNgg3nDQqDFaJGWdADwEOIGM4Y
+ rV4zRxC6aokyakx2qnP2Cii0goc72HfCbc8CDJRLwFRIplm0FypPvRidpk/HZw/w32wP
+ HECv44Cs94gzVylVj3/0vTt7HgUnAyh4mkYHAdIdiVoerE3cCj+JP7jFNp52DVD0oyWU
+ 6t4Q==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references;
- bh=HL6tNC1MlW3akGtx+AMGL8mhLl0b5KdwEXzBA1olynw=;
- b=dxxpWzxH7JFHlDfNmZpkG+cLtfXeaxnhvF6AksPj0FZDdNwkg7HcnYFC0F5Ns5Mx1M
- Bp/DGhFxZvp5w976IVkPKtsjcjcc6OFvuihcyaXQ/Jy/AA9fPY+XSQyz64qQcuMvJ7pL
- 3qUMJbDgMyqsYUPRVJHjFL9tuXBhxhZWzhg5NRWBQnqkcOqwauaBneNfd5Cg5KhE8N+z
- En7wk8QqbSsLVOrHzyoTx9FteznZMV/mGI9Y+sd3Nzo8e8blqx1Dz/lpn/kOJQXpLnE5
- iMpaapa+lsi1BuTihO1agOyJysBgMawJJiEQDRQmzpLQbmi/FoccyW4K8I/Ip7tAgloQ
- 2BRw==
-X-Gm-Message-State: APjAAAXUzhb2V/bnV4T85bKecHM06Ps5JFlR8HQVuN/gzDlwuzTdAZq5
- ZdxBHzybvEb+XZiCzJB+LSZfVA==
-X-Google-Smtp-Source: APXvYqziqaxehvGhptJQJHJhlUdG9s1AlbNEI59Oi8lXFneY0m9KRDdfC69QZNhAgFK5gEZRUxBsxA==
-X-Received: by 2002:a5d:5607:: with SMTP id l7mr100672917wrv.228.1564072984787; 
- Thu, 25 Jul 2019 09:43:04 -0700 (PDT)
+ bh=mMLWTpRyQOIhO2zBKiwG8296jQFE+BtYZV6zzvxEPl0=;
+ b=L0qy2x5RIRior3xzrLceI0aewP9BQ3oe9RqZblC8OQadc2Iu+sQyuNjHBD12vqXH5H
+ qhenWbuzgwMxB/G3Gq8ooLmTxT4uuKOO+CU+JlgsxVlXcYu2d8C2BCBdeDJmKb1awk/i
+ 98UK5iqO9PErra/VukiK8a26jNsKEhejk4FS3xPEOljmY2AZGVhKFIJU8jzVxkEhodLr
+ M8Nx3TuDRVHTMidQwO7xKUG4aWSrVpOaMMj/w6WBcmdArslubbEyd66lwCAHVZ46/DGG
+ R5CHFUOh0f1fYa6ljauwPcmBZGSWbHxOnN/XMffKcqiDy+KuUGPD/0w2T+8EHi+eXfRM
+ 1aTQ==
+X-Gm-Message-State: APjAAAXCn0Eenz3AK+CTAMcselTNd1p2rFDQ8gwD0nTrjRDwHonTJRjW
+ TjjkzAbuAvgmBmAhG98ubuEEkg==
+X-Google-Smtp-Source: APXvYqy/hW7JIa1298EywLJf5h0MYenaQL09q4MVqbon6wyDqqejH9zoPdH9EExeziayAgzU00wSDw==
+X-Received: by 2002:a1c:b604:: with SMTP id g4mr82333298wmf.111.1564072985966; 
+ Thu, 25 Jul 2019 09:43:05 -0700 (PDT)
 Received: from pop-os.baylibre.local ([2a01:e35:8ad2:2cb0:2dbb:fac9:5ec0:e3ef])
- by smtp.googlemail.com with ESMTPSA id 91sm103031727wrp.3.2019.07.25.09.43.03
+ by smtp.googlemail.com with ESMTPSA id 91sm103031727wrp.3.2019.07.25.09.43.04
  (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
- Thu, 25 Jul 2019 09:43:04 -0700 (PDT)
+ Thu, 25 Jul 2019 09:43:05 -0700 (PDT)
 From: Alexandre Mergnat <amergnat@baylibre.com>
 To: jbrunet@baylibre.com
-Subject: [PATCH v2 6/8] clk: meson: clk-regmap: migrate to new parent
- description method
-Date: Thu, 25 Jul 2019 18:42:36 +0200
-Message-Id: <20190725164238.27991-7-amergnat@baylibre.com>
+Subject: [PATCH v2 7/8] clk: meson: remove ee input bypass clocks
+Date: Thu, 25 Jul 2019 18:42:37 +0200
+Message-Id: <20190725164238.27991-8-amergnat@baylibre.com>
 X-Mailer: git-send-email 2.17.1
 In-Reply-To: <20190725164238.27991-1-amergnat@baylibre.com>
 References: <20190725164238.27991-1-amergnat@baylibre.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190725_094306_332857_5A1B393F 
-X-CRM114-Status: GOOD (  13.02  )
+X-CRM114-CacheID: sfid-20190725_094307_656750_AAB70711 
+X-CRM114-Status: GOOD (  12.21  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:442 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:344 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -102,114 +101,82 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-This clock controller use the string comparison method to describe parent
-relation between the clocks, which is not optimized.
+During probe, bypass clocks (i.e. ee-in-xtal) are made from device-tree
+inputs to provide input clocks which can be access through global name.
+The cons of this method are the duplicated clocks, means more string
+comparison.
 
-Migrate to the new way by using .parent_hws where possible (ie. when
-all clocks are local to the controller) and use .parent_data otherwise.
+Specify parent directly with device-tree clock name.
+
+Remove the bypass clock registration from the ee probe function.
 
 Signed-off-by: Alexandre Mergnat <amergnat@baylibre.com>
 ---
- drivers/clk/meson/axg.c        |  3 +++
- drivers/clk/meson/clk-regmap.h | 12 ++++++------
- drivers/clk/meson/g12a.c       |  6 ++++++
- drivers/clk/meson/gxbb.c       |  3 +++
- drivers/clk/meson/meson8b.c    |  3 +++
- 5 files changed, 21 insertions(+), 6 deletions(-)
+ drivers/clk/meson/Kconfig       |  1 -
+ drivers/clk/meson/meson-eeclk.c | 10 ----------
+ drivers/clk/meson/meson-eeclk.h |  2 --
+ 3 files changed, 13 deletions(-)
 
-diff --git a/drivers/clk/meson/axg.c b/drivers/clk/meson/axg.c
-index 7a3d795cc614..13fc0006f63d 100644
---- a/drivers/clk/meson/axg.c
-+++ b/drivers/clk/meson/axg.c
-@@ -1096,6 +1096,9 @@ static struct clk_regmap axg_gen_clk = {
- 	},
- };
+diff --git a/drivers/clk/meson/Kconfig b/drivers/clk/meson/Kconfig
+index 178ee72ba4bc..72a37572501f 100644
+--- a/drivers/clk/meson/Kconfig
++++ b/drivers/clk/meson/Kconfig
+@@ -38,7 +38,6 @@ config COMMON_CLK_MESON_AO_CLKC
+ config COMMON_CLK_MESON_EE_CLKC
+ 	tristate
+ 	select COMMON_CLK_MESON_REGMAP
+-	select COMMON_CLK_MESON_INPUT
  
-+#define MESON_GATE(_name, _reg, _bit) \
-+	MESON_PCLK(_name, _reg, _bit, &axg_clk81.hw)
-+
- /* Everything Else (EE) domain gates */
- static MESON_GATE(axg_ddr, HHI_GCLK_MPEG0, 0);
- static MESON_GATE(axg_audio_locker, HHI_GCLK_MPEG0, 2);
-diff --git a/drivers/clk/meson/clk-regmap.h b/drivers/clk/meson/clk-regmap.h
-index 1dd0abe3ba91..c4a39604cffd 100644
---- a/drivers/clk/meson/clk-regmap.h
-+++ b/drivers/clk/meson/clk-regmap.h
-@@ -111,7 +111,7 @@ clk_get_regmap_mux_data(struct clk_regmap *clk)
- extern const struct clk_ops clk_regmap_mux_ops;
- extern const struct clk_ops clk_regmap_mux_ro_ops;
+ config COMMON_CLK_MESON8B
+ 	bool
+diff --git a/drivers/clk/meson/meson-eeclk.c b/drivers/clk/meson/meson-eeclk.c
+index 6ba2094be257..a7cb1e7aedc4 100644
+--- a/drivers/clk/meson/meson-eeclk.c
++++ b/drivers/clk/meson/meson-eeclk.c
+@@ -10,7 +10,6 @@
+ #include <linux/mfd/syscon.h>
+ #include <linux/regmap.h>
  
--#define __MESON_GATE(_name, _reg, _bit, _ops)				\
-+#define __MESON_PCLK(_name, _reg, _bit, _ops, _pname)			\
- struct clk_regmap _name = {						\
- 	.data = &(struct clk_regmap_gate_data){				\
- 		.offset = (_reg),					\
-@@ -120,15 +120,15 @@ struct clk_regmap _name = {						\
- 	.hw.init = &(struct clk_init_data) {				\
- 		.name = #_name,						\
- 		.ops = _ops,						\
--		.parent_names = (const char *[]){ "clk81" },		\
-+		.parent_hws = (const struct clk_hw *[]) { _pname },	\
- 		.num_parents = 1,					\
- 		.flags = (CLK_SET_RATE_PARENT | CLK_IGNORE_UNUSED),	\
- 	},								\
- }
+-#include "clk-input.h"
+ #include "clk-regmap.h"
+ #include "meson-eeclk.h"
  
--#define MESON_GATE(_name, _reg, _bit)	\
--	__MESON_GATE(_name, _reg, _bit, &clk_regmap_gate_ops)
-+#define MESON_PCLK(_name, _reg, _bit, _pname)	\
-+	__MESON_PCLK(_name, _reg, _bit, &clk_regmap_gate_ops, _pname)
+@@ -18,7 +17,6 @@ int meson_eeclkc_probe(struct platform_device *pdev)
+ {
+ 	const struct meson_eeclkc_data *data;
+ 	struct device *dev = &pdev->dev;
+-	struct clk_hw *input;
+ 	struct regmap *map;
+ 	int ret, i;
  
--#define MESON_GATE_RO(_name, _reg, _bit)	\
--	__MESON_GATE(_name, _reg, _bit, &clk_regmap_gate_ro_ops)
-+#define MESON_PCLK_RO(_name, _reg, _bit, _pname)	\
-+	__MESON_PCLK(_name, _reg, _bit, &clk_regmap_gate_ro_ops, _pname)
- #endif /* __CLK_REGMAP_H */
-diff --git a/drivers/clk/meson/g12a.c b/drivers/clk/meson/g12a.c
-index 8cc7f5acf7ab..a8f706de811b 100644
---- a/drivers/clk/meson/g12a.c
-+++ b/drivers/clk/meson/g12a.c
-@@ -3325,6 +3325,12 @@ static struct clk_regmap g12a_ts = {
- 	},
- };
+@@ -37,14 +35,6 @@ int meson_eeclkc_probe(struct platform_device *pdev)
+ 	if (data->init_count)
+ 		regmap_multi_reg_write(map, data->init_regs, data->init_count);
  
-+#define MESON_GATE(_name, _reg, _bit) \
-+	MESON_PCLK(_name, _reg, _bit, &g12a_clk81.hw)
-+
-+#define MESON_GATE_RO(_name, _reg, _bit) \
-+	MESON_PCLK_RO(_name, _reg, _bit, &g12a_clk81.hw)
-+
- /* Everything Else (EE) domain gates */
- static MESON_GATE(g12a_ddr,			HHI_GCLK_MPEG0,	0);
- static MESON_GATE(g12a_dos,			HHI_GCLK_MPEG0,	1);
-diff --git a/drivers/clk/meson/gxbb.c b/drivers/clk/meson/gxbb.c
-index 67e466356d4b..7cfb998eeb3e 100644
---- a/drivers/clk/meson/gxbb.c
-+++ b/drivers/clk/meson/gxbb.c
-@@ -2587,6 +2587,9 @@ static struct clk_regmap gxbb_gen_clk = {
- 	},
- };
+-	input = meson_clk_hw_register_input(dev, "xtal", IN_PREFIX "xtal", 0);
+-	if (IS_ERR(input)) {
+-		ret = PTR_ERR(input);
+-		if (ret != -EPROBE_DEFER)
+-			dev_err(dev, "failed to get input clock");
+-		return ret;
+-	}
+-
+ 	/* Populate regmap for the regmap backed clocks */
+ 	for (i = 0; i < data->regmap_clk_num; i++)
+ 		data->regmap_clks[i]->map = map;
+diff --git a/drivers/clk/meson/meson-eeclk.h b/drivers/clk/meson/meson-eeclk.h
+index 9ab5d6fa7ccb..77316207bde1 100644
+--- a/drivers/clk/meson/meson-eeclk.h
++++ b/drivers/clk/meson/meson-eeclk.h
+@@ -10,8 +10,6 @@
+ #include <linux/clk-provider.h>
+ #include "clk-regmap.h"
  
-+#define MESON_GATE(_name, _reg, _bit) \
-+	MESON_PCLK(_name, _reg, _bit, &gxbb_clk81.hw)
-+
- /* Everything Else (EE) domain gates */
- static MESON_GATE(gxbb_ddr, HHI_GCLK_MPEG0, 0);
- static MESON_GATE(gxbb_dos, HHI_GCLK_MPEG0, 1);
-diff --git a/drivers/clk/meson/meson8b.c b/drivers/clk/meson/meson8b.c
-index b30279a5bfcc..67e6691e080c 100644
---- a/drivers/clk/meson/meson8b.c
-+++ b/drivers/clk/meson/meson8b.c
-@@ -2564,6 +2564,9 @@ static struct clk_regmap meson8b_cts_i958 = {
- 	},
- };
+-#define IN_PREFIX "ee-in-"
+-
+ struct platform_device;
  
-+#define MESON_GATE(_name, _reg, _bit) \
-+	MESON_PCLK(_name, _reg, _bit, &meson8b_clk81.hw)
-+
- /* Everything Else (EE) domain gates */
- 
- static MESON_GATE(meson8b_ddr, HHI_GCLK_MPEG0, 0);
+ struct meson_eeclkc_data {
 -- 
 2.17.1
 
