@@ -2,79 +2,81 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6339576625
-	for <lists+linux-amlogic@lfdr.de>; Fri, 26 Jul 2019 14:47:05 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7323B76634
+	for <lists+linux-amlogic@lfdr.de>; Fri, 26 Jul 2019 14:48:20 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=eHVuJWTDJW4++P/CfWfgnJpGxlJlzoVJD58JlVZ120o=; b=iCuxClcD58BM1f
-	vjCAq7mr+CcGZoNjcF8yhepMwpAats5vrdcBBp/qgok98D8hESoylUWCI/A8MKS1q6N9R2SMYa6z8
-	E9fzY5yb0VaJ0zGaCbH3peZzd+J5e1/T/tfqwqL38KPi86LjkK+HqMvclt6e+Qx96vLB1Jc+x3vZR
-	Ht9n9j4dVIQC4OPpuCPD77JAxyxbOjVjnyXtelQtdWi2s1Cf+q2B3fDb3l1xJVjFv5MJKx10IkTvN
-	CosjP3H/vS7EevJLWXWAmWMlrjlLW4V14q4PXkdPSdnpzAQs49tra4G023g41rLZarD77p4j77G4U
-	5PRu06j0g1xlLdU9sxNQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=05DJRRyPnP00UY2ojgK9pQRLB3TeRAdXfxvXE3HLHjI=; b=eRc6v5pe2gB5ZQ
+	EyOvmazk/USRi+q0ZqgrKz4rMqQY/+IcaPLGN/bBVcBXY8rSgLZUe5SCf0g0euLb3zzzlsUK6VqJm
+	STfgqLZLLo3kudwCUX25Vrzx3ul4kNA0GszPW/ftywTSv1zjtW7bexEJz/KgKTCzvc7x/U0ZuhozN
+	RVQMOrxfjk0gCFRtSyQ/W6/EgB8t8+9fi3iSlkuzIIlN2/nTeY+bRZ5QDMjETd3rszhxp2ge7FINP
+	bxBonyMGboQws+opncU7ls3YTSUHkLbg+d13mUZ4e5RD9aGKEX//iXhdEnuyN23NY5aZoINrmpg7o
+	3aMYusdXzGL0wHpM48zA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hqzcd-0003Pf-RP; Fri, 26 Jul 2019 12:46:55 +0000
-Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
+	id 1hqzdv-0004aI-Ka; Fri, 26 Jul 2019 12:48:15 +0000
+Received: from mail-wr1-x443.google.com ([2a00:1450:4864:20::443])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hqzcY-0003NH-B8
- for linux-amlogic@lists.infradead.org; Fri, 26 Jul 2019 12:46:52 +0000
-Received: by mail-wr1-x442.google.com with SMTP id x1so4406737wrr.9
- for <linux-amlogic@lists.infradead.org>; Fri, 26 Jul 2019 05:46:49 -0700 (PDT)
+ id 1hqzcY-0003NM-Rc
+ for linux-amlogic@lists.infradead.org; Fri, 26 Jul 2019 12:46:54 +0000
+Received: by mail-wr1-x443.google.com with SMTP id x1so4406778wrr.9
+ for <linux-amlogic@lists.infradead.org>; Fri, 26 Jul 2019 05:46:50 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=HLxaMsYCZ3/jXkIVQkw/a8MrmWzCu04lpfPSyYLHWrs=;
- b=mUsF1imLERCFTkg2/Uzs7hmT38m2Kw7AJTfPDinEzNaaUZiuZV0l7wgIMCBRiIpBLB
- sA2L6wbnAkNjgyxnvt+9CUZas/y2tN3c+yW9Z/i0K7FMw8zz3ahtIQ92Uc0Cq6vWSNLW
- b9iiTR5A8Nj+kKSFXN4cp60DhKL8YPrrTBsjy2J73V2t/u15peL4eIha+TsgPDuiMVqX
- R09H5zAiMSUYAAQp+OJQo5RAcr+JIVtweRBbU5unW8uZIaYHUdvP2ANTxyy3VlJFZ94a
- VPttMRsEIV69Jbf0DBp5gHwDaBz8ET5XSc1LefOqoVZFYXZ3XRW9z1IFjgCVwUcGHSUM
- Rb6Q==
+ h=from:to:cc:subject:date:message-id:in-reply-to:references
+ :mime-version:content-transfer-encoding;
+ bh=q2ZYPAYax6bQxbm/1YpeRuib4ukPUXFCF68rf3gTwXE=;
+ b=UExMW0UUk/saslNhvncL7VmYbPBukVTDIwiQ9JEDm69304VqE2iV0GPHIMb+GUPi9Q
+ XdND6CCt4qIO7Z4R//L+VDKTJAUY+3+Y1HzYcDO2y4mr4QOkGhwHY3+9qwH1jcJt6sgE
+ CoiuxUwVJ1pmjRomS01ZwYEr690+g6Hf0aYHNDKua/QYqVCnK8s+lUjCoMqMBGPuokIZ
+ gewunm6XF2lbta7rgn6eIKlLbS4HzeUPan8WI9YsybAITkTOZdv07nFpAQE8F/0jpMWr
+ 1C43R+9oAIwvWjl4yunSxC0lKcsRwrKAEgJ9Muul1S0BDHCmeNzV8cK0Ds3kH/DwncuW
+ bJPg==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=HLxaMsYCZ3/jXkIVQkw/a8MrmWzCu04lpfPSyYLHWrs=;
- b=omzuhn844PczR6ivuqlxvY+XgZApm+3rMRJA1Pwmy+sYGc6engp4yVR4x5d9Bhybw1
- kJ2/eCsI8BYMfXcdCux7zmyiZr1meyeZLGsiPjahLUvc2aMRZYXdtI+qO1zXsCvrGlxm
- 3INb4OwAiSKXU56/EBC6jaeKjTL095bJlNQHrnMKxX7s8QBapNlRUs/qmYscPPLcyilQ
- /0jSJQ0wr+bZUp8JdkkCXqJluLiFpQM3XcdSQsbWbZqQW6MiFlUJs7FpnAAm4ufOJUqP
- 6b9fbnwdnRF1QFnmrEwHZZiHhxS+I/dPZT0BHa/mpjjqKnJl2RaisMTFMCC13C+M9c0t
- 6f2Q==
-X-Gm-Message-State: APjAAAXEGaCz1tqaHWd0Ucw9bTHYJWkDt89C0ygBs87MBLPWu71DKhzT
- 2W+/iDSTKVUK7Ck9RgXdv6u0jg==
-X-Google-Smtp-Source: APXvYqxm1YKS+4DrGIxchn3QR4y65WJgjEHqXNZSjIdrgVVETjxtNhl4GAnKHur+0BraxsIAcY0zmA==
-X-Received: by 2002:adf:fb8e:: with SMTP id a14mr7232715wrr.263.1564145208209; 
- Fri, 26 Jul 2019 05:46:48 -0700 (PDT)
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
+ :references:mime-version:content-transfer-encoding;
+ bh=q2ZYPAYax6bQxbm/1YpeRuib4ukPUXFCF68rf3gTwXE=;
+ b=bjpnnG2c25vwK9fAw+Z3kYrNr48prYO63Au6fZvU0ErODEgLJSJDJrG8+bQYn5ft5z
+ fQfaURmUzNtl48Z8ymFwn2W9YsDlE4+JEPG/dI3vHuYL7zsNBD+BkJIGmy9Yv0/i7mLa
+ yuExqns95uHx8P0SNROWsH+Qm/HfW4NMnmC1AyYCknngZZycvDVqBbgK/e/UKCsN//Xb
+ 4aYVInhZaJLNpqlkEfCfo34sxQJ8xbwkt1vKjiJya4U8WhCda+V+Bj8cCkCoKG6TXqnK
+ 2D98bwLZRUAkJHxgB+XQ3KUTGgeD+hd7wn7degDTXZ0edgBKML8R2DGhFxTCmw5OdQdv
+ 59BA==
+X-Gm-Message-State: APjAAAV+cDGFE50FdnRHLmvKrLTo4nNhHXf2KYY7ehfEGShc91tGiitz
+ HZypgd44UBBbRdltN9NsXsOOog==
+X-Google-Smtp-Source: APXvYqwqpHIX1Hp7OItyBHPULfeNjzdPhmgqs5iWOD8M1voMJHDkAIcMIUA10pnpZcFezyDpSX8tag==
+X-Received: by 2002:a05:6000:3:: with SMTP id
+ h3mr16592055wrx.114.1564145209279; 
+ Fri, 26 Jul 2019 05:46:49 -0700 (PDT)
 Received: from mjourdan-pc.numericable.fr (abo-99-183-68.mtp.modulonet.fr.
  [85.68.183.99])
- by smtp.gmail.com with ESMTPSA id x16sm39090124wmj.4.2019.07.26.05.46.47
+ by smtp.gmail.com with ESMTPSA id x16sm39090124wmj.4.2019.07.26.05.46.48
  (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Fri, 26 Jul 2019 05:46:47 -0700 (PDT)
+ Fri, 26 Jul 2019 05:46:48 -0700 (PDT)
 From: Maxime Jourdan <mjourdan@baylibre.com>
 To: Kevin Hilman <khilman@baylibre.com>
-Subject: [PATCH 0/3] arm64: dts: meson: add the video decoder nodes
-Date: Fri, 26 Jul 2019 14:46:36 +0200
-Message-Id: <20190726124639.7713-1-mjourdan@baylibre.com>
+Subject: [PATCH 1/3] dt-bindings: media: amlogic,vdec: add default compatible
+Date: Fri, 26 Jul 2019 14:46:37 +0200
+Message-Id: <20190726124639.7713-2-mjourdan@baylibre.com>
 X-Mailer: git-send-email 2.22.0
+In-Reply-To: <20190726124639.7713-1-mjourdan@baylibre.com>
+References: <20190726124639.7713-1-mjourdan@baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190726_054650_452255_E90BF017 
-X-CRM114-Status: UNSURE (   6.93  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190726_054650_893892_90E9A13C 
+X-CRM114-Status: GOOD (  10.38  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:442 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:443 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -99,25 +101,42 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-This series adds the dts nodes for the Amlogic video decoder for the
-GXBB (S905), GXL (S905X) and GXM (S912) SoCs.
+The first version of the bindings is missing a generic compatible that
+is used by the base node (GX), and then extended by the SoC device trees
+(GXBB, GXL, GXM)
 
-It also includes two misc. fixes for the bindings documentation:
-a missing generic compatible and changing the example node's type
-to something more conventional.
+Also change the example to use "video-codec" instead of "video-decoder",
+as the former is the one used in almost all cases when it comes to video
+decode/encode accelerators.
 
-Maxime Jourdan (3):
-  dt-bindings: media: amlogic,vdec: add default compatible
-  arm64: dts: meson-gx: add video decoder entry
-  arm64: dts: meson: add video decoder entries
+Signed-off-by: Maxime Jourdan <mjourdan@baylibre.com>
+---
+ Documentation/devicetree/bindings/media/amlogic,vdec.txt | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
 
- .../devicetree/bindings/media/amlogic,vdec.txt     |  5 +++--
- arch/arm64/boot/dts/amlogic/meson-gx.dtsi          | 14 ++++++++++++++
- arch/arm64/boot/dts/amlogic/meson-gxbb.dtsi        | 11 +++++++++++
- arch/arm64/boot/dts/amlogic/meson-gxl.dtsi         | 11 +++++++++++
- arch/arm64/boot/dts/amlogic/meson-gxm.dtsi         |  4 ++++
- 5 files changed, 43 insertions(+), 2 deletions(-)
-
+diff --git a/Documentation/devicetree/bindings/media/amlogic,vdec.txt b/Documentation/devicetree/bindings/media/amlogic,vdec.txt
+index aabdd01bcf32..9b6aace86ca7 100644
+--- a/Documentation/devicetree/bindings/media/amlogic,vdec.txt
++++ b/Documentation/devicetree/bindings/media/amlogic,vdec.txt
+@@ -26,6 +26,7 @@ Required properties:
+ 	- GXBB (S905) : "amlogic,gxbb-vdec"
+ 	- GXL (S905X, S905D) : "amlogic,gxl-vdec"
+ 	- GXM (S912) : "amlogic,gxm-vdec"
++	followed by the common "amlogic,gx-vdec"
+ - reg: base address and size of he following memory-mapped regions :
+ 	- dos
+ 	- esparser
+@@ -47,8 +48,8 @@ Required properties:
+ 
+ Example:
+ 
+-vdec: video-decoder@c8820000 {
+-	compatible = "amlogic,gxbb-vdec";
++vdec: video-codec@c8820000 {
++	compatible = "amlogic,gxbb-vdec", "amlogic,gx-vdec";
+ 	reg = <0x0 0xc8820000 0x0 0x10000>,
+ 	      <0x0 0xc110a580 0x0 0xe4>;
+ 	reg-names = "dos", "esparser";
 -- 
 2.22.0
 
