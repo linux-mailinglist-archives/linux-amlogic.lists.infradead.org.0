@@ -2,72 +2,72 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C75B2789E3
-	for <lists+linux-amlogic@lfdr.de>; Mon, 29 Jul 2019 12:53:55 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D6846789EA
+	for <lists+linux-amlogic@lfdr.de>; Mon, 29 Jul 2019 12:54:49 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:References
 	:In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ffs8PDg5cEpzRUZ16+tqIkkvTYn6BYsRbJNZDO/NHhQ=; b=ZW7ntuV0UIrSQh
-	HpC/YIyHIDlwi5nN4XnW2a38iyABETLa6c2i6BxjAtjURL6vDNv7bXtb+QNKbAyfuGt8bkuJuCUX1
-	8sVR2mMaJXdJGKG97kGSmGPsOYTNogK5+xTvXHbOgd+tm++hqF7+cmUfThAsKPCV3+zf6go+Va4Yc
-	uuvzOqDxovL2KMZsWPfMJbglGFMvhpsJILCtwVxBVVf246PU59azCaqB4AGvQct2Q3+WQmWph3OZr
-	Ey2TDLsqOOsGKsz8DfXZySuQ38/lArVksqeyYg343xjkZcPsxt2NHQK9P4cP5SYKVF2OrtolLhKaz
-	jRYUi0Y/dKKDCcJ0IIvA==;
+	List-Owner; bh=Tl6QeSLStqXpSSC7WbLRdNU11vhYVadFeKbDDrB2UFg=; b=gND5joS1NHp3TL
+	EYPElpVIsb4ysRFNrH1hABWgCvD0ueIE1dyZFGYE2wug/rl25jKnHpzO1sAUHvVfo0I0NHhvQNTDg
+	L2ybgM4aICueH5Eo4NvsKoj94Nq7DoMEyUzFp44VTXE4CQfsbqw2f2iqeXMk9hFbcplxIGHLrkudM
+	O/rLwLlFUVz9bgAII+lttnqiKMokd0CSrIM9BjycclSk1cYZ5zW70Z+dhAjSlHFlP6b1GtC3KQL43
+	dSN6wFjA2VSHgQH5z/ky9VRUw05Xr8A0U5/9rdblOaVYq8yRPpzI39wbex837JN1orpenyEJYg4EQ
+	TrLXnIndnkhnNJi+HuGw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hs3Hs-0000H3-7I; Mon, 29 Jul 2019 10:53:52 +0000
+	id 1hs3Ik-0000gV-9Y; Mon, 29 Jul 2019 10:54:46 +0000
 Received: from mail-wm1-x341.google.com ([2a00:1450:4864:20::341])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hs3Hi-00008n-3r
- for linux-amlogic@lists.infradead.org; Mon, 29 Jul 2019 10:53:43 +0000
-Received: by mail-wm1-x341.google.com with SMTP id 207so53415210wma.1
- for <linux-amlogic@lists.infradead.org>; Mon, 29 Jul 2019 03:53:41 -0700 (PDT)
+ id 1hs3If-0000fp-IQ
+ for linux-amlogic@lists.infradead.org; Mon, 29 Jul 2019 10:54:42 +0000
+Received: by mail-wm1-x341.google.com with SMTP id v15so53427760wml.0
+ for <linux-amlogic@lists.infradead.org>; Mon, 29 Jul 2019 03:54:41 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=from:to:cc:subject:in-reply-to:references:date:message-id
- :mime-version; bh=P3COhzyH6iXhkUqb58Ll+n9CaZJ1lhlavM2fMRktAGU=;
- b=JaMcne2DiIeeVdHaTOx7JgVOlm1khWybU1LyPFgBTqmdGdKfa9IF6b1ryZ2sB+bASI
- Fi2JBz7VOeu8iKN+vl4MO5yNst6wEnE2TqUsVhBiNePV0f3zFT3jzs2RL7c+Sb9kcQxm
- CG59Hh/jNrQbPWIpCAo9g+OsOTjKTyUjGfA990pehRyBz0gvUdzeP1pzVdohzIdGOemP
- fiVrSttr2vz+jWzQxvJ7d3GcWtgQdpmSyiv50M02cUS1ChTJ8z7Fnj+45R8o4VejuBRO
- jUHBx90LyQtnv7Tklc6uaYD0QK7/OWaB6JmVSEU19GSqhUnO3kxP8m3sLeaiYIVbb7o2
- 385w==
+ :mime-version; bh=eqfg5Eacmy1+/MhOFkxqCtwYHlycdYQaxotBimNO4tM=;
+ b=JN7vSXEF75Oelp0EyviFYoaWimsb5xVHwKIwNhCJKpemuYt2P19a659u41EmU9aChL
+ yODZRtKntrTQMkND9VKWTh3/CWtbDhCgXSNZPBByMpRkb1wveyF2ziL8brQWucZM09Df
+ h5DY8xv6kItvcWN4idyU/uw91bzFa0QZ0n6k/oKQktSeoni48jh1f6qcI8HfNX85cXr5
+ D5G7Yq9PLAH7WxozX1uhTTOUU/PU1ixyPhaP34lykwEOlQOgkWwwZeXfrBxXDYFfCzt7
+ wW0mGlJsjhJHLsP7cdo3Dmlm6xKep00TNMIc5OQMZeS1dOW26fPzBTKTQuXk+pxI5om+
+ vwpw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:in-reply-to:references:date
  :message-id:mime-version;
- bh=P3COhzyH6iXhkUqb58Ll+n9CaZJ1lhlavM2fMRktAGU=;
- b=c8H8MrnnEAp5olFN+RrWxGXM5swRpalS2KztHKtAdDziskUkJgAUWcmuCp4TkWqcXR
- MHIqwJF61ozFmSYabcY4nRe/31Z1kzK0EEu/SB/gZpCYnIhECtEAI2y7wZcCVw4Ngw0J
- J72wRbdazxna3JS2NBz7pJkMoLyYNBkJMmQFdAxJLklylV1xkNzxY96nSNRG7mEu2buJ
- 1B+NI3exBPCcHM88TPIND1Nn6hKJgzGJhaEm4Y6xlSoGZ1w6rwTHk0jIYuGK8hwieaLy
- qYvwC/L/ZvaTPtVrwZB19NwKoX6JxVddp8P57+/ya85HtQfx7rMu2jCX4EbMiHEc5gny
- zH2g==
-X-Gm-Message-State: APjAAAXebhBpLBSgJANqEuBkmHKNPV+xQC1IVJkpOCNdGB0TVuT+bHWM
- ZdtEsm2aA4Ajnlz9Z8RU5VDuwQ==
-X-Google-Smtp-Source: APXvYqxwuWo8lB42LjgZDeetJ6kM9JIYJvns12qyruinqHeJddpFQariDUkpt28Qlhw6t91UoVT+pg==
-X-Received: by 2002:a1c:e341:: with SMTP id a62mr41453713wmh.165.1564397620334; 
- Mon, 29 Jul 2019 03:53:40 -0700 (PDT)
+ bh=eqfg5Eacmy1+/MhOFkxqCtwYHlycdYQaxotBimNO4tM=;
+ b=Q6a5RygRODKaEWk9/MML7kkUm+ZvpVyCBm0cPTNF+3qVD0Wj1kQfV8h8p9Gy1L6e2e
+ R5r6Qf8E5YpGhcIkj+oZlmq5ck5ydJpxi7DgDVyvTYT1snYrP8xktiBZ38/juAs7YS/V
+ ZKacPDvUcv4EIJn/jzXdJcTDrYDanbFSDULu92qB/lSdZhccnzMSLXnKpcCvYIXZ6Kis
+ CrwS+ZlLYsfkjszm7A1SXgzRHicQP0w7ZHvXK2ZRdXbUjW+Tolb963aD2wVYRvF1Yn9b
+ hPviNEki4es94F9u97kucFNTV2wR6DY1SyJwSdEAZKQqWMqCpJBGmYn1cWwoQdUi4acM
+ RIvw==
+X-Gm-Message-State: APjAAAUmLcfn14ubBhUnMMPKT+7/H6xqGT86KzjUscJSNe8RGbuCmFpU
+ tp30AkJOlJZ+446UUkth6QbkLQ==
+X-Google-Smtp-Source: APXvYqwIfLdaKYHkYVTTbNZVS5iy+6EEZOZyCe/3q44b3hbfmzHduJ3sHM2CB1fUjblr88CN7uiAjQ==
+X-Received: by 2002:a05:600c:23d2:: with SMTP id
+ p18mr93463026wmb.160.1564397680266; 
+ Mon, 29 Jul 2019 03:54:40 -0700 (PDT)
 Received: from localhost ([2a01:e34:eeb6:4690:ecfa:1144:aa53:4a82])
- by smtp.gmail.com with ESMTPSA id i13sm53855709wrr.73.2019.07.29.03.53.39
+ by smtp.gmail.com with ESMTPSA id o26sm126645461wro.53.2019.07.29.03.54.39
  (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Mon, 29 Jul 2019 03:53:39 -0700 (PDT)
+ Mon, 29 Jul 2019 03:54:39 -0700 (PDT)
 From: Jerome Brunet <jbrunet@baylibre.com>
 To: Alexandre Mergnat <amergnat@baylibre.com>
-Subject: Re: [PATCH v2 0/4] clk: meson: ao: use the new parent description
+Subject: Re: [PATCH v2 0/8] clk: meson: ee: use the new parent description
  method
-In-Reply-To: <20190725164126.27919-1-amergnat@baylibre.com>
-References: <20190725164126.27919-1-amergnat@baylibre.com>
-Date: Mon, 29 Jul 2019 12:53:38 +0200
-Message-ID: <1j36ip9knh.fsf@starbuckisacylon.baylibre.com>
+In-Reply-To: <20190725164238.27991-1-amergnat@baylibre.com>
+References: <20190725164238.27991-1-amergnat@baylibre.com>
+Date: Mon, 29 Jul 2019 12:54:38 +0200
+Message-ID: <1jzhkx861d.fsf@starbuckisacylon.baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190729_035342_625910_DE512384 
-X-CRM114-Status: UNSURE (   9.42  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190729_035441_607585_AD03744A 
+X-CRM114-Status: GOOD (  10.92  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -101,7 +101,7 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On Thu 25 Jul 2019 at 18:41, Alexandre Mergnat <amergnat@baylibre.com> wrote:
+On Thu 25 Jul 2019 at 18:42, Alexandre Mergnat <amergnat@baylibre.com> wrote:
 
 > Meson SoCs clock controllers use the string comparison method to describe
 > parent relation between the clocks, which is not optimized.
@@ -122,29 +122,41 @@ On Thu 25 Jul 2019 at 18:41, Alexandre Mergnat <amergnat@baylibre.com> wrote:
 > [0] commit fc0c209c147f ("clk: Allow parents to be specified without string names")
 >
 > Change since v1:
-> - Improve clock parent assignment for "fixme" using name instead of fw_name.
+> - Improve comments in gxbb, g12a and meson8b files
 >
-> Alexandre Mergnat (4):
->   clk: meson: g12a-aoclk: migrate to the new parent description method
->   clk: meson: gxbb-aoclk: migrate to the new parent description method
->   clk: meson: axg-aoclk: migrate to the new parent description method
->   clk: meson: remove ao input bypass clocks
->
->  drivers/clk/meson/Kconfig       |  1 -
->  drivers/clk/meson/axg-aoclk.c   | 63 ++++++++++++++-----------
->  drivers/clk/meson/g12a-aoclk.c  | 81 ++++++++++++++++++++-------------
->  drivers/clk/meson/gxbb-aoclk.c  | 55 +++++++++++-----------
->  drivers/clk/meson/meson-aoclk.c | 37 ---------------
->  drivers/clk/meson/meson-aoclk.h |  8 ----
->  6 files changed, 114 insertions(+), 131 deletions(-)
->
+> Alexandre Mergnat (8):
+>   clk: meson: g12a: move clock declaration to dependency order
+>   clk: meson: g12a: migrate to the new parent description method
+>   clk: meson: gxbb: migrate to the new parent description method
+>   clk: meson: axg: migrate to the new parent description method
+>   clk: meson: meson8b: migrate to the new parent description method
+>   clk: meson: clk-regmap: migrate to new parent description method
+>   clk: meson: remove ee input bypass clocks
+>   clk: meson: remove clk input helper
 
+Squashed patch 1 and 2
 Applied
+
 Thanks !
 
+>
+>  drivers/clk/meson/Kconfig       |    4 -
+>  drivers/clk/meson/Makefile      |    1 -
+>  drivers/clk/meson/axg.c         |  207 ++++--
+>  drivers/clk/meson/clk-input.c   |   49 --
+>  drivers/clk/meson/clk-input.h   |   19 -
+>  drivers/clk/meson/clk-regmap.h  |   12 +-
+>  drivers/clk/meson/g12a.c        | 1093 ++++++++++++++++++++-----------
+>  drivers/clk/meson/gxbb.c        |  657 +++++++++++++------
+>  drivers/clk/meson/meson-eeclk.c |   10 -
+>  drivers/clk/meson/meson-eeclk.h |    2 -
+>  drivers/clk/meson/meson8b.c     |  710 ++++++++++++++------
+>  11 files changed, 1805 insertions(+), 959 deletions(-)
+>  delete mode 100644 drivers/clk/meson/clk-input.c
+>  delete mode 100644 drivers/clk/meson/clk-input.h
+>
 > -- 
 > 2.17.1
-
 
 _______________________________________________
 linux-amlogic mailing list
