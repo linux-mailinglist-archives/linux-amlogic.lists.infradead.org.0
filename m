@@ -2,68 +2,68 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1191B7C234
-	for <lists+linux-amlogic@lfdr.de>; Wed, 31 Jul 2019 14:51:55 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id EB8487C235
+	for <lists+linux-amlogic@lfdr.de>; Wed, 31 Jul 2019 14:52:20 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
 	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=MWJ+A6xEi23k6e8RXTELqIY7tExS44LCTEQ2RbFg9cA=; b=ptmv624WZjQQAa
-	LtGHviG+lCDAQulN3Mmxo10gb+D5RnbNb8HWn6MXR9dSUaXfXlXTmg+xf7FC5A9ykqahPN9hVH9L5
-	7DFHu12Vpv/FvAGEGfphdwBc6AJRFpmohBdZYCnnjhISLhz+AAZEgIBYnp2XrI/q33xkpS6o14XYx
-	7oHnsHJRcD+F02u2S0qMDpCBcJMDRjbRi6sq7W4OH/73SxKiCwvMv1+4KX1eORBQplLL8ng2Lcu9+
-	YcJWXnJ5dpgZ1tusRbE45+Iv6ZLs8o+Is47fYePGuVfv2jFC7f+0bxb8BKdB9WDqdh5A8J7O2975i
-	ksEDT6Ctfm9KLFe6gvAQ==;
+	List-Owner; bh=u6nRkoZnDT9ntTeszmXVCuudgQQ2SAnfFcUsZXDHvY8=; b=mZqYKYWN3mc02q
+	NnBxITfjJlh4tNtEpegKQzU/qtWcPCckFJ8eIJTkkKbOFviYBK0Nmrp2uuZgH0GdqVf0/D4TT7Lzg
+	v9N3CtOI5IMR98FixxZpeajONL+NM6r/q9bEe5EHpMdEeoOIfa/q38x2JEZQIi7VW6ilUtqY2GuXN
+	XqNBtaDLMgX1/yG8zqnIiO67uo10WqicgB2n1HeCuijLkNbYJmAIC7ERIzZDqwV/EhhugyZDD/Zfn
+	iEoxGhG1Jdznux/cBD7+avAjG/bEvBTijfuEtAIY/wFgXNViVLFtjE661TkSPXiKinsbe9oXrLPLP
+	J7j0LA3HItA5Sy2+6EeA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hso59-00042H-1L; Wed, 31 Jul 2019 12:51:51 +0000
-Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
+	id 1hso5Z-0004Ek-UL; Wed, 31 Jul 2019 12:52:17 +0000
+Received: from mail-wm1-x341.google.com ([2a00:1450:4864:20::341])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hso4z-0003tj-T6
- for linux-amlogic@lists.infradead.org; Wed, 31 Jul 2019 12:51:43 +0000
-Received: by mail-wr1-x442.google.com with SMTP id p13so69524536wru.10
- for <linux-amlogic@lists.infradead.org>; Wed, 31 Jul 2019 05:51:41 -0700 (PDT)
+ id 1hso5W-0004DZ-0x
+ for linux-amlogic@lists.infradead.org; Wed, 31 Jul 2019 12:52:15 +0000
+Received: by mail-wm1-x341.google.com with SMTP id s3so60662552wms.2
+ for <linux-amlogic@lists.infradead.org>; Wed, 31 Jul 2019 05:52:13 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=subject:to:cc:references:from:openpgp:autocrypt:organization
  :message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=mbZkyFp1Z1ll70YaQICnCwHAwlgq/wjaBzmJoGt2t2M=;
- b=Isjb9t+lALjpGl7Pxjt1EV1JETjjiPJ92/QGYBD8TFyNndBOWN5aj2sVyM0LS0LQjC
- Q+FSm6bhU5yBUhBb9rYu7EwoogKjuN9zarGk46rYSv2ezEqayAiKhMcOLZdZ681CbPzZ
- dKTYE8DbH2qvcSjA0CRTYW9wMEyTol46u0YAhE+SeHgQODECYXTmQWjbECAOHxlIvJmu
- ItMMBvY9SRpf59UViPHrNESfvjgdl06XlT1R9NUxzSw9uTNMh7thIc1HJ3JqvJs1ldKt
- Wz1iq0e6ItfSCfjrk7v8tK/eBykQd9Ub0KVPob/8lKHgr+Gxbsg5eGcYOP6n2XyUwZD2
- t1nA==
+ bh=nHgD5MradYY8xVGHEvd/R2jyn+uvXGXVexfyZzlb6Eg=;
+ b=NDQ1w/tMCOAR6qUEvWcAPGFf2syCsFKvMvMkOvNkNsuR8d1JWPhMuUE6VolCt6ngPc
+ 0x+nNNBtrFhu8hdrzOvzONn6BXK3TwkHxoLnLXO51bwZL6awbkZT4aY4Vf2vzbQhLoox
+ DTC9+WaObJiuK84ogxTOdK3AHFmlYsnqfVwKVLBwGZ4jYkxHqADsatO7zGrA98OhEHFa
+ DOUbbQSax8BLtrbGMUTANL8ftDT0SOVwXkDTjsciC9syTWEe5ImmtTsjtGMR7RNO28Pc
+ 01yq2zVyCmutfIgAa8tLQnvbAxus3GqPV20+JP9GeEdhrSviRS2ASUuW+4Qm5IdAXQmJ
+ J/wA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:subject:to:cc:references:from:openpgp:autocrypt
  :organization:message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=mbZkyFp1Z1ll70YaQICnCwHAwlgq/wjaBzmJoGt2t2M=;
- b=ldWYmrmf2rV0oBowZ+sjLch40V4rpvWNHR7EIJgTuZB9el+mqbVCqQZVxmf/WdiAtc
- XzqaHxwZcgLnLk74ap7VGQQtbFJEjjMGFC0oboIjEbBhfcWl5Ynm/96sCzQcFKIeQ38s
- ExdjuJYLpymFwDZWYxHZPVMPY/HiI3LyFWXA9a48kwLcfjg2SgGUNDXPDKR/KEUEt8vy
- wLH22LUqS2UJporugI0hNZEUUb7RbBIa0uYQ4qYGE9FB4J2PCQYHtTTtwGuvuTbimyfT
- eaQ1ILXTpAkxvyrjeeNLNYCN+jWlozKLA3+6EwVO55nppk7cVB5JL8exCRmQozCOco3c
- eB8g==
-X-Gm-Message-State: APjAAAU2WnW4lO5Cwj1wG/dn1GCt2Tr4NMxcotqBzl32amCgqNjRyOvu
- dwazyQsNMjBD8a1867IMb3lY7w==
-X-Google-Smtp-Source: APXvYqyLRZokBRocMHRX7A2pYosYT4CdjE+fF6+eb7bIPJ8ORiUWKgf8s7bpv9JLgPZfpxvuakQmmw==
-X-Received: by 2002:a5d:69c4:: with SMTP id s4mr104745648wrw.163.1564577500247; 
- Wed, 31 Jul 2019 05:51:40 -0700 (PDT)
+ bh=nHgD5MradYY8xVGHEvd/R2jyn+uvXGXVexfyZzlb6Eg=;
+ b=QDkjm8Zm1UpdW3/i4ES13Vm4K1jr9yN320+ZACKOrMn/YAoGeYZCDpQEawtH5D4fZ2
+ u3DtJBD2FTctylBWvVUlaAul9qHzdd993l8bwYfGck6j0pjB8EbKH+j2B0v3nkQ9to9C
+ M1zjoU9eiQwXrotveiXta4z/Jpt2SuqqwiFsym/yxziSChwpj/Gwua910YiZUMuLAuq7
+ k8z/W9mDdBjoBvn5S0PxsenKSo2AeTXbywfb9+s0SU2ApFZH/YlHLnB0O/GxRjnqfx88
+ Z4RLrvicT4+jeDz0b23ZyiFo3HSRaXsSW4Rfc22M3pBOwRz3Nt+v2tIxdza2+mCi7ebk
+ C7XQ==
+X-Gm-Message-State: APjAAAWcpTurJ72eo13E8bLq0PqMqQ12gFldIAyIeZeD7tyE9EbMtFGM
+ 3rqQREhpgo5igInQTm09dgQqzg==
+X-Google-Smtp-Source: APXvYqzexZqsx7QZvp2tVYogwNmmqGukY9o2hhSYZ9udv3ZU8B9ndsRSKGLPT58dVWfPKzHKy9t8Gw==
+X-Received: by 2002:a7b:cae9:: with SMTP id t9mr110553661wml.126.1564577532473; 
+ Wed, 31 Jul 2019 05:52:12 -0700 (PDT)
 Received: from [10.1.2.12] (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr.
  [90.63.244.31])
- by smtp.gmail.com with ESMTPSA id a8sm54730608wma.31.2019.07.31.05.51.39
+ by smtp.gmail.com with ESMTPSA id g11sm68858050wru.24.2019.07.31.05.52.11
  (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
- Wed, 31 Jul 2019 05:51:39 -0700 (PDT)
-Subject: Re: [PATCH 4/6] arm64: dts: meson: sei510: Add minimal thermal zone
+ Wed, 31 Jul 2019 05:52:11 -0700 (PDT)
+Subject: Re: [PATCH 6/6] MAINTAINERS: add entry for Amlogic Thermal driver
 To: Guillaume La Roque <glaroque@baylibre.com>, daniel.lezcano@linaro.org,
  khilman@baylibre.com
 References: <20190731121409.17285-1-glaroque@baylibre.com>
- <20190731121409.17285-5-glaroque@baylibre.com>
+ <20190731121409.17285-7-glaroque@baylibre.com>
 From: Neil Armstrong <narmstrong@baylibre.com>
 Openpgp: preference=signencrypt
 Autocrypt: addr=narmstrong@baylibre.com; prefer-encrypt=mutual; keydata=
@@ -116,23 +116,23 @@ Autocrypt: addr=narmstrong@baylibre.com; prefer-encrypt=mutual; keydata=
  VsbXrP9BZ6snXyHfebPnno/te5XRqZTL9aJOytB/1iUna+1MAwBxGFPvqeEUUyT+gx1l3Acl
  ZaTUOEkgIor5losDrePdPgE=
 Organization: Baylibre
-Message-ID: <c451fd49-bf3d-b7d7-46ba-43ac7bed3b90@baylibre.com>
-Date: Wed, 31 Jul 2019 14:51:39 +0200
+Message-ID: <3c522eb3-5cf7-6a79-3282-864d8b783a51@baylibre.com>
+Date: Wed, 31 Jul 2019 14:52:11 +0200
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
  Thunderbird/60.8.0
 MIME-Version: 1.0
-In-Reply-To: <20190731121409.17285-5-glaroque@baylibre.com>
+In-Reply-To: <20190731121409.17285-7-glaroque@baylibre.com>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190731_055141_938404_3959929A 
-X-CRM114-Status: GOOD (  15.13  )
+X-CRM114-CacheID: sfid-20190731_055214_070152_42D9DBD8 
+X-CRM114-Status: GOOD (  12.85  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:442 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:341 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -159,51 +159,36 @@ Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
 On 31/07/2019 14:14, Guillaume La Roque wrote:
-> Add minimal thermal zone for DDR and CPU sensor
+> Add myself as maintainer for Amlogic Thermal driver.
 > 
 > Signed-off-by: Guillaume La Roque <glaroque@baylibre.com>
 > ---
->  arch/arm64/boot/dts/amlogic/meson-g12a-sei510.dts | 13 +++++++++++++
->  1 file changed, 13 insertions(+)
+>  MAINTAINERS | 9 +++++++++
+>  1 file changed, 9 insertions(+)
 > 
-> diff --git a/arch/arm64/boot/dts/amlogic/meson-g12a-sei510.dts b/arch/arm64/boot/dts/amlogic/meson-g12a-sei510.dts
-> index c7a87368850b..79ae514e238d 100644
-> --- a/arch/arm64/boot/dts/amlogic/meson-g12a-sei510.dts
-> +++ b/arch/arm64/boot/dts/amlogic/meson-g12a-sei510.dts
-> @@ -33,6 +33,19 @@
->  		ethernet0 = &ethmac;
->  	};
+> diff --git a/MAINTAINERS b/MAINTAINERS
+> index fb2b12f75c37..299f27d11058 100644
+> --- a/MAINTAINERS
+> +++ b/MAINTAINERS
+> @@ -15910,6 +15910,15 @@ F:	Documentation/driver-api/thermal/cpu-cooling-api.rst
+>  F:	drivers/thermal/cpu_cooling.c
+>  F:	include/linux/cpu_cooling.h
 >  
-> +	thermal-zones {
-> +		soc_thermal {
-> +			polling-delay = <1000>;
-> +			polling-delay-ptripsassive = <100>;
-> +			thermal-sensors = <&cpu_temp 0>;
-
-
-Seems the trips & cooling-maps are required as described in thermal.txt
-
-For the soc_thermal zone it's esy to add a cooling map with the CPU
-and cooling devices, but for the ddr_thermal, no idea if we can use the
-CPUs within 2 cooling maps.
-
-> +		};
-
-I would add a blank line between the zones, same for other files.
-
-
-> +		ddr_thermal {
-> +			polling-delay = <1000>;
-> +			polling-delay-passive = <100>;
-> +			thermal-sensors = <&ddr_temp 1>;
-> +		};
-> +	};
+> +THERMAL DRIVER FOR AMLOGIC SOCS
+> +M:	Guillaume La Roque <glaroque@baylibre.com>
+> +L:	linux-pm@vger.kernel.org
+> +L:	linux-amlogic@lists.infradead.org
+> +W:	http://linux-meson.com/
+> +S:	Supported
+> +F:	drivers/thermal/amlogic_thermal.c
+> +F:	Documentation/devicetree/bindings/thermal/amlogic,thermal.yaml
 > +
->  	mono_dac: audio-codec-0 {
->  		compatible = "maxim,max98357a";
->  		#sound-dai-cells = <0>;
+>  THINKPAD ACPI EXTRAS DRIVER
+>  M:	Henrique de Moraes Holschuh <ibm-acpi@hmh.eng.br>
+>  L:	ibm-acpi-devel@lists.sourceforge.net
 > 
 
+Reviewed-by: Neil Armstrong <narmstrong@baylibre.com>
 
 _______________________________________________
 linux-amlogic mailing list
