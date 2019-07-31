@@ -2,82 +2,83 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1AF3F7BF7B
-	for <lists+linux-amlogic@lfdr.de>; Wed, 31 Jul 2019 13:30:57 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 0FA267C0D6
+	for <lists+linux-amlogic@lfdr.de>; Wed, 31 Jul 2019 14:14:36 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:
-	In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	References:List-Owner; bh=o1MF2HX7xE9+M8XyJJA4LzG/aifzPf48pCUPiu7p1Xw=; b=YYH
-	/22Z7tVRsVMun+OcHDYQJZjeyr3rJpbOkzTiN/WxW6KpqCyFgzTwP5Y4j1an65lXQMpebpy4fusZS
-	4PEnnf7oCcx1kddVBcmy34CNMLTXvNaJ4cMYKRCVXVghf01RNQGElXjWnErpzF/og94oheKYM2X/Y
-	21hAW3anyRp76GmGSxYfYiT64HpLCEi/m8/WdVE21RnJOJvp3EK9+2td5QWQlyu0i+zrYqZoozctD
-	HQSNy2aLK+c8mBHsZG8qN8UV/NePuJEF+tafDiY/PYoxhLBVMQi4CbtJzTtg1KTuO701WA/rLDWoG
-	OLpcXkKs0jfgXzy7PSvWtQ00LQkCDIw==;
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
+	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=nGhg1KrG0Pge/mCZvdnMV2x9tz++gae62bNq1fMiFu4=; b=hHu
+	AVGe7z/2oOtxyvaQqSwhHDr0iGeC1c9wfn7W41O7dmfoC8vKmc/NQ6jQBjU7L8POR1Tn8T6f5AgKk
+	Wli4QwncP29M7v6aou2Ypyouu/trXOBeVV2MV/WjN0GZS07AX7865g/yZzUyuz90c0c2hmoCRZJUK
+	eL/6je5YuTK7dxM9bHVglJYnQSb+8YQyqLE4SSJmHyjPItR+gwsVQhDchiUA3+AF3M+Gqi47YOIHb
+	DN6TBmlvoXr/MFDcSIZPq5Dy9LYqDZPhtWYqycv7I/K094xmqORhw1bwfScWASbCSn1BtTLabiIPd
+	jOpFhsGHOo/wmFtne+ZxTEJyhKOD+gg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hsmop-00035y-Ic; Wed, 31 Jul 2019 11:30:55 +0000
-Received: from merlin.infradead.org ([205.233.59.134])
+	id 1hsnV0-0005dC-FB; Wed, 31 Jul 2019 12:14:30 +0000
+Received: from mail-wr1-x441.google.com ([2a00:1450:4864:20::441])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hsmo7-0001h6-O4; Wed, 31 Jul 2019 11:30:11 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=infradead.org; s=merlin.20170209; h=Date:Message-Id:In-Reply-To:Subject:Cc:
- To:From:Sender:Reply-To:MIME-Version:Content-Type:Content-Transfer-Encoding:
- Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
- Resent-To:Resent-Cc:Resent-Message-ID:References:List-Id:List-Help:
- List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=LPcMA1o77HKX43GsHKyVecF06+o1mUT9VBwNz+iFXMo=; b=xL1Wktafjl4jkxpp2gIALYpkkN
- ae4XsuLv0Rz8r+TUZA2y2THagCY9/lnlMII9Z1hdwzEGu5aahLiqzU6m/z04LPavxs0/vcfmOoKoh
- FeZHrylJr2f25SyGZqi0ycLOrQ0ST9TOL8mzD5u1JXceaB3B8UQlicrx1ty1OG2jfHARNMaveiUQf
- X91X91eD9Usgt03UzDGEuzaIEL/UfqAsZtU9Td9uNsYLE8Rj2LYEo9Zo5bqE2E9b52+ap8f4qeo/a
- 9wHdGoUk3WawHXoyEphJymTXigTBCP0SdtySbXwxFZ3DfroJmN87AhIWJMeYj7Af1a3FKy08iWpy8
- Nx5s0QZw==;
-Received: from heliosphere.sirena.org.uk ([2a01:7e01::f03c:91ff:fed4:a3b6])
- by merlin.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hsmo4-0001Ny-VJ; Wed, 31 Jul 2019 11:30:10 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sirena.org.uk; s=20170815-heliosphere; h=Date:Message-Id:In-Reply-To:
- Subject:Cc:To:From:Sender:Reply-To:MIME-Version:Content-Type:
- Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:References:
- List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:
- List-Archive; bh=LPcMA1o77HKX43GsHKyVecF06+o1mUT9VBwNz+iFXMo=; b=HzFMQvEjsOVh
- XLfYvHR/3qgBqQK0ZJzR+WOLriQDmxegipE/C6imXRGHa7CDbinVSkkj678e4/+t3O1hGpl29jcCQ
- 5BsOjLDFSFCiBXHceELzZ96ibSaYRDxwVwdPpCtWlnSPqE7ksYn+JzL2uWdQ1r6g2Ik9j0+TQjKcq
- PtkWU=;
-Received: from ypsilon.sirena.org.uk ([2001:470:1f1d:6b5::7])
- by heliosphere.sirena.org.uk with esmtpsa
- (TLS1.3:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.92)
- (envelope-from <broonie@sirena.org.uk>)
- id 1hsmnn-0001pL-RE; Wed, 31 Jul 2019 11:29:51 +0000
-Received: by ypsilon.sirena.org.uk (Postfix, from userid 1000)
- id 10AC62742D57; Wed, 31 Jul 2019 12:29:51 +0100 (BST)
-From: Mark Brown <broonie@kernel.org>
-To: YueHaibing <yuehaibing@huawei.com>
-Subject: Applied "ASoC: tegra20_das: use devm_platform_ioremap_resource() to
- simplify code" to the asoc tree
-In-Reply-To: <20190727150738.54764-2-yuehaibing@huawei.com>
-X-Patchwork-Hint: ignore
-Message-Id: <20190731112951.10AC62742D57@ypsilon.sirena.org.uk>
-Date: Wed, 31 Jul 2019 12:29:51 +0100 (BST)
-X-Bad-Reply: In-Reply-To but no 'Re:' in Subject.
-X-Spam-Note: CRM114 invocation failed
-X-Spam-Score: 0.2 (/)
-X-Spam-Report: SpamAssassin version 3.4.2 on merlin.infradead.org summary:
- Content analysis details:   (0.2 points)
+ id 1hsnUl-0005OG-Ab
+ for linux-amlogic@lists.infradead.org; Wed, 31 Jul 2019 12:14:17 +0000
+Received: by mail-wr1-x441.google.com with SMTP id c2so66204538wrm.8
+ for <linux-amlogic@lists.infradead.org>; Wed, 31 Jul 2019 05:14:14 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=baylibre-com.20150623.gappssmtp.com; s=20150623;
+ h=from:to:cc:subject:date:message-id;
+ bh=LjD7zv10OSEEYASmHj/VO2M7lzphFAaxTy5j9pYxJDo=;
+ b=wq+OcFSyqHwlGFEmAGphrBhbP+jw2ZeUDJvnr2ryt0UBu4Kc8BRJiGhW6nT4CpumyV
+ SKOb8IQMeNonlQPsKhQERiB/vwfGBTE0wB75t/eaDiGV22IphLZrF1IBc1ENghpzhQel
+ ZYhMZKVg3ke0P91tgzfMITOJuO4O8bOJTwI3GPQteEg68oqQb8yfK6SSaGQ0qaQazN8x
+ 8t8ESnrCXgYEnHfjqb7iJQmssQOB0Al/KAIWguYzWba4gqqGSoYAoZAqEzF9AsSUX7Up
+ WaZ6pwGSnfOltvm6IF58V/oAvcv+TGqUo0y3gUuOSsOl361ChIoMnUMxB5ahxtY1gEQj
+ ooJQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:from:to:cc:subject:date:message-id;
+ bh=LjD7zv10OSEEYASmHj/VO2M7lzphFAaxTy5j9pYxJDo=;
+ b=mBrY6fPxJLZCrLqotc/pnr8DRO8U4rD4rkizlyoTAfnGvLNkJpVMg4VIIR+rvlYwMh
+ bIZ5TT50pSXilte3TrFx0CeE9erYDPdy3fQgkQXNpprjuvYWIZolV035uCI5p3jBi183
+ aYhBcUiwxFs5R0bcaW1u0vPuOx764R69gAxQPxZgT1f4JysaTS/vr4Y26fX25DlvZEsU
+ aSDiVWKVmSbIJ9Udb0XOmRJcxMwxYW+nVrLQNdLRWZh4/hTZ3om0wmC41DTdV+bLG+JD
+ N1EHnb2+DtKHAqQkJ9z1ccIhahRsHylWXgR1Fz6jNV7kFnVjGQAuMHwNdkPusNGcCw9O
+ qwkA==
+X-Gm-Message-State: APjAAAVwYEPXvc9OOixrDk74c797zWLnotUp0k6V7NbW76ElaSVaN6Zb
+ Px5xMbanp/1GZIdV3c0w8k/hUQ==
+X-Google-Smtp-Source: APXvYqxJbSn0OApVvnN6CpKmYBH7g0bhbbP4QJ0hUCNLf17qIH6FUg3NTYWzUkcC4F/NvISPNemGcw==
+X-Received: by 2002:adf:db46:: with SMTP id f6mr5645832wrj.212.1564575253424; 
+ Wed, 31 Jul 2019 05:14:13 -0700 (PDT)
+Received: from glaroque-ThinkPad-T480.baylibre.local
+ (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
+ by smtp.gmail.com with ESMTPSA id a64sm3613713wmf.1.2019.07.31.05.14.10
+ (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
+ Wed, 31 Jul 2019 05:14:10 -0700 (PDT)
+From: Guillaume La Roque <glaroque@baylibre.com>
+To: daniel.lezcano@linaro.org,
+	khilman@baylibre.com
+Subject: [PATCH 0/6] Add support of New Amlogic temperature sensor for G12 SoCs
+Date: Wed, 31 Jul 2019 14:14:03 +0200
+Message-Id: <20190731121409.17285-1-glaroque@baylibre.com>
+X-Mailer: git-send-email 2.17.1
+X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
+X-CRM114-CacheID: sfid-20190731_051415_506786_B6C0D54A 
+X-CRM114-Status: UNSURE (   9.15  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.0 (/)
+X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:441 listed in]
+ [list.dnswl.org]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -89,99 +90,53 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: mripard@kernel.org, alsa-devel@alsa-project.org, olivier.moysan@st.com,
- Xiubo.Lee@gmail.com, linux-kernel@vger.kernel.org, paul@crapouillou.net,
- jcmvbkbc@gmail.com, thierry.reding@gmail.com, shawnguo@kernel.org,
- festevam@gmail.com, linux-stm32@st-md-mailman.stormreply.com,
- jbrunet@baylibre.com, f.fainelli@gmail.com, khilman@baylibre.com,
- tiwai@suse.com, michal.simek@xilinx.com, jonathanh@nvidia.com,
- Hulk Robot <hulkci@huawei.com>, wens@csie.org,
- bcm-kernel-feedback-list@broadcom.com, linux-imx@nxp.com,
- s.hauer@pengutronix.de, matthias.bgg@gmail.com, linux-xtensa@linux-xtensa.org,
- alexandre.torgue@st.com, yamada.masahiro@socionext.com, rjui@broadcom.com,
- robert.jarzmik@free.fr, haojian.zhuang@gmail.com, nicoleotsuka@gmail.com,
- Mark Brown <broonie@kernel.org>, linux-mediatek@lists.infradead.org,
- linux-rpi-kernel@lists.infradead.org, linux-tegra@vger.kernel.org,
- linux-amlogic@lists.infradead.org, perex@perex.cz,
- linux-arm-kernel@lists.infradead.org, mcoquelin.stm32@gmail.com,
- baohua@kernel.org, timur@kernel.org, sbranden@broadcom.com, eric@anholt.net,
- gregkh@linuxfoundation.org, arnaud.pouliquen@st.com, lgirdwood@gmail.com,
- wahrenst@gmx.net, kernel@pengutronix.de, linuxppc-dev@lists.ozlabs.org,
- daniel@zonque.org
+Cc: devicetree@vger.kernel.org, linux-amlogic@lists.infradead.org,
+ linux-kernel@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
+ linux-pm@vger.kernel.org
 MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-The patch
+This patchs series add support of New Amlogic temperature sensor and minimal
+thermal zone for SEI510 and ODROID-N2 boards.
 
-   ASoC: tegra20_das: use devm_platform_ioremap_resource() to simplify code
+First implementation was doing on IIO[1] but after comments i move on thermal framework.
+Formulas and calibration values come from amlogic.
 
-has been applied to the asoc tree at
+Dependencies :
+- patch 3: depends on Neil's patchs :
+              - missing dwc2 phy-names[1] 
+              - rework on G12 DT[2]
 
-   https://git.kernel.org/pub/scm/linux/kernel/git/broonie/sound.git for-5.4
+[1] https://lore.kernel.org/linux-amlogic/20190604144714.2009-1-glaroque@baylibre.com/
+[2] https://lore.kernel.org/linux-amlogic/20190625123647.26117-1-narmstrong@baylibre.com/
+[3] https://lore.kernel.org/linux-amlogic/20190729132622.7566-2-narmstrong@baylibre.com/
 
-All being well this means that it will be integrated into the linux-next
-tree (usually sometime in the next 24 hours) and sent to Linus during
-the next merge window (or sooner if it is a bug fix), however if
-problems are discovered then the patch may be dropped or reverted.  
+Guillaume La Roque (6):
+  dt-bindings: thermal: Add DT bindings documentation for Amlogic
+    Thermal
+  thermal: amlogic: Add thermal driver to support G12 SoCs
+  arm64: dts: amlogic: g12: add temperature sensor
+  arm64: dts: meson: sei510: Add minimal thermal zone
+  arm64: dts: amlogic: odroid-n2: add minimal thermal zone
+  MAINTAINERS: add entry for Amlogic Thermal driver
 
-You may get further e-mails resulting from automated or manual testing
-and review of the tree, please engage with people reporting problems and
-send followup patches addressing any issues that are reported if needed.
+ .../bindings/thermal/amlogic,thermal.yaml     |  58 +++
+ MAINTAINERS                                   |   9 +
+ .../boot/dts/amlogic/meson-g12-common.dtsi    |  22 ++
+ .../boot/dts/amlogic/meson-g12a-sei510.dts    |  13 +
+ .../boot/dts/amlogic/meson-g12b-odroid-n2.dts |  13 +
+ drivers/thermal/Kconfig                       |  12 +-
+ drivers/thermal/Makefile                      |   1 +
+ drivers/thermal/amlogic_thermal.c             | 335 ++++++++++++++++++
+ 8 files changed, 462 insertions(+), 1 deletion(-)
+ create mode 100644 Documentation/devicetree/bindings/thermal/amlogic,thermal.yaml
+ create mode 100644 drivers/thermal/amlogic_thermal.c
 
-If any updates are required or you are submitting further changes they
-should be sent as incremental updates against current git, existing
-patches will not be replaced.
-
-Please add any relevant lists and maintainers to the CCs when replying
-to this mail.
-
-Thanks,
-Mark
-
-From 21cc4ea85879c1b424fb01caa6e481c14286f7f0 Mon Sep 17 00:00:00 2001
-From: YueHaibing <yuehaibing@huawei.com>
-Date: Sat, 27 Jul 2019 23:07:05 +0800
-Subject: [PATCH] ASoC: tegra20_das: use devm_platform_ioremap_resource() to
- simplify code
-
-Use devm_platform_ioremap_resource() to simplify the code a bit.
-This is detected by coccinelle.
-
-Reported-by: Hulk Robot <hulkci@huawei.com>
-Signed-off-by: YueHaibing <yuehaibing@huawei.com>
-Link: https://lore.kernel.org/r/20190727150738.54764-2-yuehaibing@huawei.com
-Signed-off-by: Mark Brown <broonie@kernel.org>
----
- sound/soc/tegra/tegra20_das.c | 4 +---
- 1 file changed, 1 insertion(+), 3 deletions(-)
-
-diff --git a/sound/soc/tegra/tegra20_das.c b/sound/soc/tegra/tegra20_das.c
-index 10f9c3b19c88..1070b2710d5e 100644
---- a/sound/soc/tegra/tegra20_das.c
-+++ b/sound/soc/tegra/tegra20_das.c
-@@ -120,7 +120,6 @@ static const struct regmap_config tegra20_das_regmap_config = {
- 
- static int tegra20_das_probe(struct platform_device *pdev)
- {
--	struct resource *res;
- 	void __iomem *regs;
- 	int ret = 0;
- 
-@@ -134,8 +133,7 @@ static int tegra20_das_probe(struct platform_device *pdev)
- 	}
- 	das->dev = &pdev->dev;
- 
--	res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
--	regs = devm_ioremap_resource(&pdev->dev, res);
-+	regs = devm_platform_ioremap_resource(pdev, 0);
- 	if (IS_ERR(regs)) {
- 		ret = PTR_ERR(regs);
- 		goto err;
 -- 
-2.20.1
+2.17.1
 
 
 _______________________________________________
