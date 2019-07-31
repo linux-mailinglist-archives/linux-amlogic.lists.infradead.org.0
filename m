@@ -2,65 +2,66 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id ACCCE7BF8A
-	for <lists+linux-amlogic@lfdr.de>; Wed, 31 Jul 2019 13:31:28 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id BECF07BF7F
+	for <lists+linux-amlogic@lfdr.de>; Wed, 31 Jul 2019 13:31:03 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
 	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:
 	In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	References:List-Owner; bh=S34bbbD2b3TyPEXT8ciZAEqRPPiufgq5k8x44mPiFaU=; b=qua
-	eSwD6Z61f4Akellt48NmZV+0YyJmSUxHYAuEqdaBVJQibEXkdinfLJ6ji+R5skfNWwfEwGVcNI1Z5
-	tZ9t9KkUSiZ2Yqw1fT65CJhqkIiAWiGbamriKia7ihCTzs1hTHXOWWP4gtjpw7X/r+sBtjbFQP7qz
-	HevqHcK+qZZYduCGJnlUQo1y2JSJhc7Pierzt6mXTv12YAHtmbaeCx7kfKJHZ6r+DWU3p6GU3onRj
-	jsehqA+dXxwzREaJNIhls7JZkw+f0cCQmhxtbX06MVAi+xTEv0tc5CxgAK0MgVVmoQI1r9fe/jFMw
-	N/0JiiUTad7c6pSpoGEIAY+W0safJyA==;
+	References:List-Owner; bh=tp+sB954ay5doBGKpyLqGgk5A/pgfP2XspefRV5mwzo=; b=sS8
+	2Y+s83IsA41mogB629BbkmzHcl90CXGiv1IO2X3tG5bonga8Bu7ggE4SdRaEaQKzw1aO/9hSWWbsC
+	19g6CfKg3q4fanmCQ+aqEoXg2cwA2QlB/JDOeEIEiV4RnexHCYodJ/FBGkeoOm4sNkeJVq0imrQOo
+	513ubC6myAtGtQjRKBRIFlhCRuQOhhGN5BJOnhrBdxL7tAudM84j08JOjMyGzLngqxnl6hNdHijZ1
+	9uQilAcTd8rBozKSKryNmM/k7qNwwcLSivitNchEZO53d+Kl794h4szZ97D3HATw8m226zgYhyOPt
+	FZAL8u7RSkdCx3/ErtZL0VmwBf7H4Lw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hsmpK-0003yN-VZ; Wed, 31 Jul 2019 11:31:26 +0000
-Received: from merlin.infradead.org ([2001:8b0:10b:1231::1])
+	id 1hsmot-0003D8-RO; Wed, 31 Jul 2019 11:30:59 +0000
+Received: from merlin.infradead.org ([205.233.59.134])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hsmo9-0001ZR-OE; Wed, 31 Jul 2019 11:30:13 +0000
+ id 1hsmo7-0001h6-04; Wed, 31 Jul 2019 11:30:11 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=infradead.org; s=merlin.20170209; h=Date:Message-Id:In-Reply-To:Subject:Cc:
  To:From:Sender:Reply-To:MIME-Version:Content-Type:Content-Transfer-Encoding:
  Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
  Resent-To:Resent-Cc:Resent-Message-ID:References:List-Id:List-Help:
  List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=hqElXS8Bos/S9Ngud8UOIoqIvdLmiVyGr0j4JbIF298=; b=A7KotpeFxM/iBCDZHv4nn+bpQr
- m3/ubUNaP26+/C35rOn9ruoksqwFCZwMEuztAA0cBweym52TI8qnS3LLidoZLrYJmFV3NewuWmsWW
- bvbqnerECXJV9kkhexUsxkdUsLR77X4h8ETGgH78vm6dxHNcsBSp5Z4dhY7oStegBCXLCQ/gVWw0F
- tm56uAl/fIdfwgHhvTO6FeGXhBBdDmsLdn+SHTgGse9i68dlkyTTvVNHJf3l8q+6TaK1odM4ltE7s
- B3lBvz6SJTPM7mO5KKQkxF+Nug5/NhcVgieyFk70M4ajt4W1fJJL6Fx/Ee75uWZiMfWgQ7pDLEQKH
- w4HAuZtg==;
+ bh=z0IHM+7vogbfAEDA0ioqx+jvax0cqC8LrOI2sqD0W9M=; b=QVfUTvIdwxmewhhQzk3bs8qpGw
+ kNdORvtS/jfzlSd8YmrZbIYdPjx8fQFoezJyo10ES7dDm03/C9B9cDQAtzq8gUT5ftv0+2mYHFm+n
+ PV+y5AqYpR/k7hUUALHRRnSJLuCaYYGhesVO/CH+xjsnWmwRILqu4hrGBpKK8tmL8+3IVKO+Af6dS
+ 35qybX14bVCNnB6OeLy8WSHqRWoVT/XzPn/W0oKsPHZgtalAYwJ5e31rljTpK2fJbsgFbIPB7lufB
+ eFXaPh1xAy7frvAVgv/jdupcZ1VZc31q1GPz1N/hZfSj+9q0iR+Gn7wM2eyplCsH/mVBhL44fecJF
+ Krw6I28w==;
 Received: from heliosphere.sirena.org.uk ([2a01:7e01::f03c:91ff:fed4:a3b6])
  by merlin.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hsmo3-0001Nb-BI; Wed, 31 Jul 2019 11:30:09 +0000
+ id 1hsmo2-0001Na-RY; Wed, 31 Jul 2019 11:30:09 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sirena.org.uk; s=20170815-heliosphere; h=Date:Message-Id:In-Reply-To:
  Subject:Cc:To:From:Sender:Reply-To:MIME-Version:Content-Type:
  Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:References:
  List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:
- List-Archive; bh=hqElXS8Bos/S9Ngud8UOIoqIvdLmiVyGr0j4JbIF298=; b=YnCi+cRys2p+
- ETBDw3sxOp99kmF90lFGdWwgqtLlK9mYUIyZL5ZuT/kYNfjx61Q3OOjiu++JuJHAO8W8Hf/U8KDFT
- XpPL2/Xvl0kOuVTeS3UIabqFidqT+PXGyDuIe6U2p+ytnwFyMuy2u/a3y0Ir2cJDDQGqv9wip9Mi0
- h52AQ=;
-Received: from ypsilon.sirena.org.uk ([2001:470:1f1d:6b5::7])
+ List-Archive; bh=z0IHM+7vogbfAEDA0ioqx+jvax0cqC8LrOI2sqD0W9M=; b=lAmN1MuwJSWu
+ IoJ9vIugvMB2Q5xCujcndl3SeVb3COQIhkyb0hyPV6UMHAsiNu5JqxaBvCt/jlk4NZ0LOYBQThKji
+ Kiyen2jXzOnaSMFj8qm+BEw6konfk3YB5YQ9OWxyenRnxZJeV4fWxw0cUMLmw5fjGuvBuZ4RMNST8
+ 4Tg7k=;
+Received: from cpc102320-sgyl38-2-0-cust46.18-2.cable.virginm.net
+ ([82.37.168.47] helo=ypsilon.sirena.org.uk)
  by heliosphere.sirena.org.uk with esmtpsa
  (TLS1.3:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.92)
  (envelope-from <broonie@sirena.org.uk>)
- id 1hsmnn-0001oq-0R; Wed, 31 Jul 2019 11:29:51 +0000
+ id 1hsmnn-0001oz-56; Wed, 31 Jul 2019 11:29:51 +0000
 Received: by ypsilon.sirena.org.uk (Postfix, from userid 1000)
- id A06DF2742CC3; Wed, 31 Jul 2019 12:29:49 +0100 (BST)
+ id 07FCF2742CDE; Wed, 31 Jul 2019 12:29:49 +0100 (BST)
 From: Mark Brown <broonie@kernel.org>
 To: YueHaibing <yuehaibing@huawei.com>
-Subject: Applied "ASoC: mt8173: use devm_platform_ioremap_resource() to
+Subject: Applied "ASoC: ep93xx-i2s: use devm_platform_ioremap_resource() to
  simplify code" to the asoc tree
-In-Reply-To: <20190727150738.54764-6-yuehaibing@huawei.com>
+In-Reply-To: <20190727150738.54764-5-yuehaibing@huawei.com>
 X-Patchwork-Hint: ignore
-Message-Id: <20190731112949.A06DF2742CC3@ypsilon.sirena.org.uk>
+Message-Id: <20190731112950.07FCF2742CDE@ypsilon.sirena.org.uk>
 Date: Wed, 31 Jul 2019 12:29:49 +0100 (BST)
 X-Bad-Reply: In-Reply-To but no 'Re:' in Subject.
 X-Spam-Note: CRM114 invocation failed
@@ -116,7 +117,7 @@ Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
 The patch
 
-   ASoC: mt8173: use devm_platform_ioremap_resource() to simplify code
+   ASoC: ep93xx-i2s: use devm_platform_ioremap_resource() to simplify code
 
 has been applied to the asoc tree at
 
@@ -141,10 +142,10 @@ to this mail.
 Thanks,
 Mark
 
-From fceef72b68d63593d8543a8d608ccc8427e13d56 Mon Sep 17 00:00:00 2001
+From 4b3540074361fc7b97f2da54365c55ceca6333d2 Mon Sep 17 00:00:00 2001
 From: YueHaibing <yuehaibing@huawei.com>
-Date: Sat, 27 Jul 2019 23:07:09 +0800
-Subject: [PATCH] ASoC: mt8173: use devm_platform_ioremap_resource() to
+Date: Sat, 27 Jul 2019 23:07:08 +0800
+Subject: [PATCH] ASoC: ep93xx-i2s: use devm_platform_ioremap_resource() to
  simplify code
 
 Use devm_platform_ioremap_resource() to simplify the code a bit.
@@ -152,33 +153,32 @@ This is detected by coccinelle.
 
 Reported-by: Hulk Robot <hulkci@huawei.com>
 Signed-off-by: YueHaibing <yuehaibing@huawei.com>
-Link: https://lore.kernel.org/r/20190727150738.54764-6-yuehaibing@huawei.com
+Link: https://lore.kernel.org/r/20190727150738.54764-5-yuehaibing@huawei.com
 Signed-off-by: Mark Brown <broonie@kernel.org>
 ---
- sound/soc/mediatek/mt8173/mt8173-afe-pcm.c | 4 +---
+ sound/soc/cirrus/ep93xx-i2s.c | 4 +---
  1 file changed, 1 insertion(+), 3 deletions(-)
 
-diff --git a/sound/soc/mediatek/mt8173/mt8173-afe-pcm.c b/sound/soc/mediatek/mt8173/mt8173-afe-pcm.c
-index 0382896c162e..90bd2c92cae7 100644
---- a/sound/soc/mediatek/mt8173/mt8173-afe-pcm.c
-+++ b/sound/soc/mediatek/mt8173/mt8173-afe-pcm.c
-@@ -1056,7 +1056,6 @@ static int mt8173_afe_pcm_dev_probe(struct platform_device *pdev)
- 	int irq_id;
- 	struct mtk_base_afe *afe;
- 	struct mt8173_afe_private *afe_priv;
+diff --git a/sound/soc/cirrus/ep93xx-i2s.c b/sound/soc/cirrus/ep93xx-i2s.c
+index 0b4355e95f84..7d9cf67129d4 100644
+--- a/sound/soc/cirrus/ep93xx-i2s.c
++++ b/sound/soc/cirrus/ep93xx-i2s.c
+@@ -430,15 +430,13 @@ static const struct snd_soc_component_driver ep93xx_i2s_component = {
+ static int ep93xx_i2s_probe(struct platform_device *pdev)
+ {
+ 	struct ep93xx_i2s_info *info;
 -	struct resource *res;
+ 	int err;
  
- 	ret = dma_set_mask_and_coherent(&pdev->dev, DMA_BIT_MASK(33));
- 	if (ret)
-@@ -1086,8 +1085,7 @@ static int mt8173_afe_pcm_dev_probe(struct platform_device *pdev)
- 		return ret;
- 	}
+ 	info = devm_kzalloc(&pdev->dev, sizeof(*info), GFP_KERNEL);
+ 	if (!info)
+ 		return -ENOMEM;
  
 -	res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
--	afe->base_addr = devm_ioremap_resource(&pdev->dev, res);
-+	afe->base_addr = devm_platform_ioremap_resource(pdev, 0);
- 	if (IS_ERR(afe->base_addr))
- 		return PTR_ERR(afe->base_addr);
+-	info->regs = devm_ioremap_resource(&pdev->dev, res);
++	info->regs = devm_platform_ioremap_resource(pdev, 0);
+ 	if (IS_ERR(info->regs))
+ 		return PTR_ERR(info->regs);
  
 -- 
 2.20.1
