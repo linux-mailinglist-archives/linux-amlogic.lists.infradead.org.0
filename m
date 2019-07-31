@@ -2,70 +2,82 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 758CF7BF6F
-	for <lists+linux-amlogic@lfdr.de>; Wed, 31 Jul 2019 13:30:33 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1AF3F7BF7B
+	for <lists+linux-amlogic@lfdr.de>; Wed, 31 Jul 2019 13:30:57 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
 	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:
 	In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	References:List-Owner; bh=RYxonD/HwxlojIiQ0/9Yus49TfCBFWw6tYwW5Moi6nY=; b=dfI
-	/M0LxgV9iRVXZJTtFQIxknZBqV7DsLIYeKBdjr1mUfGo7FfSs65VZKjZBdRKZilzx3Inmb0Qh74j2
-	F9bensv+CuQ4N3LaAz7r69KRGG8rD5KezZFzNA/HaI6TGmDqKYYa4nzpCkzpEoro4yzWBUWsHFT4u
-	X1uhCzI01IVcuP/WkaTySQZx4Cm+w2Qrd2cQeao9JUqzoeCDZPbFIe3m24OA6i1azQAMUUpASOOYt
-	e6GH2VOLSxbpP5Gy9KMt7M7WncUbGbV/ZbmnTxQsZiT0yXOS5eIy/TUjLD7zAbiorD2GOoELja9QV
-	BYY84G4DOwytQp0VAlLmg0zprtWIweA==;
+	References:List-Owner; bh=o1MF2HX7xE9+M8XyJJA4LzG/aifzPf48pCUPiu7p1Xw=; b=YYH
+	/22Z7tVRsVMun+OcHDYQJZjeyr3rJpbOkzTiN/WxW6KpqCyFgzTwP5Y4j1an65lXQMpebpy4fusZS
+	4PEnnf7oCcx1kddVBcmy34CNMLTXvNaJ4cMYKRCVXVghf01RNQGElXjWnErpzF/og94oheKYM2X/Y
+	21hAW3anyRp76GmGSxYfYiT64HpLCEi/m8/WdVE21RnJOJvp3EK9+2td5QWQlyu0i+zrYqZoozctD
+	HQSNy2aLK+c8mBHsZG8qN8UV/NePuJEF+tafDiY/PYoxhLBVMQi4CbtJzTtg1KTuO701WA/rLDWoG
+	OLpcXkKs0jfgXzy7PSvWtQ00LQkCDIw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hsmoO-0002Ty-DW; Wed, 31 Jul 2019 11:30:28 +0000
-Received: from heliosphere.sirena.org.uk ([2a01:7e01::f03c:91ff:fed4:a3b6])
+	id 1hsmop-00035y-Ic; Wed, 31 Jul 2019 11:30:55 +0000
+Received: from merlin.infradead.org ([205.233.59.134])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hsmnv-0000rm-Fo
- for linux-amlogic@lists.infradead.org; Wed, 31 Jul 2019 11:30:03 +0000
+ id 1hsmo7-0001h6-O4; Wed, 31 Jul 2019 11:30:11 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=infradead.org; s=merlin.20170209; h=Date:Message-Id:In-Reply-To:Subject:Cc:
+ To:From:Sender:Reply-To:MIME-Version:Content-Type:Content-Transfer-Encoding:
+ Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+ Resent-To:Resent-Cc:Resent-Message-ID:References:List-Id:List-Help:
+ List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=LPcMA1o77HKX43GsHKyVecF06+o1mUT9VBwNz+iFXMo=; b=xL1Wktafjl4jkxpp2gIALYpkkN
+ ae4XsuLv0Rz8r+TUZA2y2THagCY9/lnlMII9Z1hdwzEGu5aahLiqzU6m/z04LPavxs0/vcfmOoKoh
+ FeZHrylJr2f25SyGZqi0ycLOrQ0ST9TOL8mzD5u1JXceaB3B8UQlicrx1ty1OG2jfHARNMaveiUQf
+ X91X91eD9Usgt03UzDGEuzaIEL/UfqAsZtU9Td9uNsYLE8Rj2LYEo9Zo5bqE2E9b52+ap8f4qeo/a
+ 9wHdGoUk3WawHXoyEphJymTXigTBCP0SdtySbXwxFZ3DfroJmN87AhIWJMeYj7Af1a3FKy08iWpy8
+ Nx5s0QZw==;
+Received: from heliosphere.sirena.org.uk ([2a01:7e01::f03c:91ff:fed4:a3b6])
+ by merlin.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
+ id 1hsmo4-0001Ny-VJ; Wed, 31 Jul 2019 11:30:10 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sirena.org.uk; s=20170815-heliosphere; h=Date:Message-Id:In-Reply-To:
  Subject:Cc:To:From:Sender:Reply-To:MIME-Version:Content-Type:
  Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:References:
  List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:
- List-Archive; bh=QcGmBVpDOdgqukjU+sGeVWU68WD55hAUZCPdArb9dVo=; b=it7QpXTqCKjT
- EjZ4pPZAezG1Z4SYVc4k4tvPHDuAiPs5gTSOa9r3/JEL8KULqKbFMiXjHu/pQcMGivq9kOje2fdrw
- JEDRLSsdNqcOWn2Td/uZT031g39gliOgRJv5TT3AH10z52mLuJiR9LQzg4r5yLkF4+xc0m9xDqy2u
- 5sdVQ=;
+ List-Archive; bh=LPcMA1o77HKX43GsHKyVecF06+o1mUT9VBwNz+iFXMo=; b=HzFMQvEjsOVh
+ XLfYvHR/3qgBqQK0ZJzR+WOLriQDmxegipE/C6imXRGHa7CDbinVSkkj678e4/+t3O1hGpl29jcCQ
+ 5BsOjLDFSFCiBXHceELzZ96ibSaYRDxwVwdPpCtWlnSPqE7ksYn+JzL2uWdQ1r6g2Ik9j0+TQjKcq
+ PtkWU=;
 Received: from ypsilon.sirena.org.uk ([2001:470:1f1d:6b5::7])
  by heliosphere.sirena.org.uk with esmtpsa
  (TLS1.3:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.92)
  (envelope-from <broonie@sirena.org.uk>)
- id 1hsmno-0001pQ-0o; Wed, 31 Jul 2019 11:29:52 +0000
+ id 1hsmnn-0001pL-RE; Wed, 31 Jul 2019 11:29:51 +0000
 Received: by ypsilon.sirena.org.uk (Postfix, from userid 1000)
- id 41B9A2742CC3; Wed, 31 Jul 2019 12:29:51 +0100 (BST)
+ id 10AC62742D57; Wed, 31 Jul 2019 12:29:51 +0100 (BST)
 From: Mark Brown <broonie@kernel.org>
-To: Jerome Brunet <jbrunet@baylibre.com>
-Subject: Applied "ASoC: meson: g12a-tohdmitx: override codec2codec params" to
- the asoc tree
-In-Reply-To: <20190729080139.32068-1-jbrunet@baylibre.com>
+To: YueHaibing <yuehaibing@huawei.com>
+Subject: Applied "ASoC: tegra20_das: use devm_platform_ioremap_resource() to
+ simplify code" to the asoc tree
+In-Reply-To: <20190727150738.54764-2-yuehaibing@huawei.com>
 X-Patchwork-Hint: ignore
-Message-Id: <20190731112951.41B9A2742CC3@ypsilon.sirena.org.uk>
+Message-Id: <20190731112951.10AC62742D57@ypsilon.sirena.org.uk>
 Date: Wed, 31 Jul 2019 12:29:51 +0100 (BST)
 X-Bad-Reply: In-Reply-To but no 'Re:' in Subject.
-X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190731_042959_554393_6DB1580D 
-X-CRM114-Status: GOOD (  16.90  )
-X-Spam-Score: 0.1 (/)
-X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.1 points)
+X-Spam-Note: CRM114 invocation failed
+X-Spam-Score: 0.2 (/)
+X-Spam-Report: SpamAssassin version 3.4.2 on merlin.infradead.org summary:
+ Content analysis details:   (0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
  mail domains are different
  0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -77,10 +89,25 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, alsa-devel@alsa-project.org,
- Kevin Hilman <khilman@baylibre.com>, Liam Girdwood <lgirdwood@gmail.com>,
- linux-kernel@vger.kernel.org, Mark Brown <broonie@kernel.org>,
- linux-amlogic@lists.infradead.org
+Cc: mripard@kernel.org, alsa-devel@alsa-project.org, olivier.moysan@st.com,
+ Xiubo.Lee@gmail.com, linux-kernel@vger.kernel.org, paul@crapouillou.net,
+ jcmvbkbc@gmail.com, thierry.reding@gmail.com, shawnguo@kernel.org,
+ festevam@gmail.com, linux-stm32@st-md-mailman.stormreply.com,
+ jbrunet@baylibre.com, f.fainelli@gmail.com, khilman@baylibre.com,
+ tiwai@suse.com, michal.simek@xilinx.com, jonathanh@nvidia.com,
+ Hulk Robot <hulkci@huawei.com>, wens@csie.org,
+ bcm-kernel-feedback-list@broadcom.com, linux-imx@nxp.com,
+ s.hauer@pengutronix.de, matthias.bgg@gmail.com, linux-xtensa@linux-xtensa.org,
+ alexandre.torgue@st.com, yamada.masahiro@socionext.com, rjui@broadcom.com,
+ robert.jarzmik@free.fr, haojian.zhuang@gmail.com, nicoleotsuka@gmail.com,
+ Mark Brown <broonie@kernel.org>, linux-mediatek@lists.infradead.org,
+ linux-rpi-kernel@lists.infradead.org, linux-tegra@vger.kernel.org,
+ linux-amlogic@lists.infradead.org, perex@perex.cz,
+ linux-arm-kernel@lists.infradead.org, mcoquelin.stm32@gmail.com,
+ baohua@kernel.org, timur@kernel.org, sbranden@broadcom.com, eric@anholt.net,
+ gregkh@linuxfoundation.org, arnaud.pouliquen@st.com, lgirdwood@gmail.com,
+ wahrenst@gmx.net, kernel@pengutronix.de, linuxppc-dev@lists.ozlabs.org,
+ daniel@zonque.org
 MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
@@ -89,7 +116,7 @@ Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
 The patch
 
-   ASoC: meson: g12a-tohdmitx: override codec2codec params
+   ASoC: tegra20_das: use devm_platform_ioremap_resource() to simplify code
 
 has been applied to the asoc tree at
 
@@ -114,95 +141,45 @@ to this mail.
 Thanks,
 Mark
 
-From 2c4956bc1e9062e5e3c5ea7612294f24e6d4fbdd Mon Sep 17 00:00:00 2001
-From: Jerome Brunet <jbrunet@baylibre.com>
-Date: Mon, 29 Jul 2019 10:01:39 +0200
-Subject: [PATCH] ASoC: meson: g12a-tohdmitx: override codec2codec params
+From 21cc4ea85879c1b424fb01caa6e481c14286f7f0 Mon Sep 17 00:00:00 2001
+From: YueHaibing <yuehaibing@huawei.com>
+Date: Sat, 27 Jul 2019 23:07:05 +0800
+Subject: [PATCH] ASoC: tegra20_das: use devm_platform_ioremap_resource() to
+ simplify code
 
-So far, forwarding the hw_params of the input to output relied on the
-.hw_params() callback of the cpu side of the codec2codec link to be called
-first. This is a bit weak.
+Use devm_platform_ioremap_resource() to simplify the code a bit.
+This is detected by coccinelle.
 
-Instead, override the stream params of the codec2codec to link to set it up
-correctly.
-
-Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
-Link: https://lore.kernel.org/r/20190729080139.32068-1-jbrunet@baylibre.com
+Reported-by: Hulk Robot <hulkci@huawei.com>
+Signed-off-by: YueHaibing <yuehaibing@huawei.com>
+Link: https://lore.kernel.org/r/20190727150738.54764-2-yuehaibing@huawei.com
 Signed-off-by: Mark Brown <broonie@kernel.org>
 ---
- sound/soc/meson/g12a-tohdmitx.c | 34 ++++++++++++++++-----------------
- 1 file changed, 16 insertions(+), 18 deletions(-)
+ sound/soc/tegra/tegra20_das.c | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
 
-diff --git a/sound/soc/meson/g12a-tohdmitx.c b/sound/soc/meson/g12a-tohdmitx.c
-index 707ccb192e4c..9943c807ec5d 100644
---- a/sound/soc/meson/g12a-tohdmitx.c
-+++ b/sound/soc/meson/g12a-tohdmitx.c
-@@ -28,7 +28,7 @@
- #define  CTRL0_SPDIF_CLK_SEL		BIT(0)
+diff --git a/sound/soc/tegra/tegra20_das.c b/sound/soc/tegra/tegra20_das.c
+index 10f9c3b19c88..1070b2710d5e 100644
+--- a/sound/soc/tegra/tegra20_das.c
++++ b/sound/soc/tegra/tegra20_das.c
+@@ -120,7 +120,6 @@ static const struct regmap_config tegra20_das_regmap_config = {
  
- struct g12a_tohdmitx_input {
--	struct snd_pcm_hw_params params;
-+	struct snd_soc_pcm_stream params;
- 	unsigned int fmt;
- };
- 
-@@ -225,26 +225,17 @@ static int g12a_tohdmitx_input_hw_params(struct snd_pcm_substream *substream,
+ static int tegra20_das_probe(struct platform_device *pdev)
  {
- 	struct g12a_tohdmitx_input *data = dai->playback_dma_data;
+-	struct resource *res;
+ 	void __iomem *regs;
+ 	int ret = 0;
  
--	/* Save the stream params for the downstream link */
--	memcpy(&data->params, params, sizeof(*params));
-+	data->params.rates = snd_pcm_rate_to_rate_bit(params_rate(params));
-+	data->params.rate_min = params_rate(params);
-+	data->params.rate_max = params_rate(params);
-+	data->params.formats = 1 << params_format(params);
-+	data->params.channels_min = params_channels(params);
-+	data->params.channels_max = params_channels(params);
-+	data->params.sig_bits = dai->driver->playback.sig_bits;
+@@ -134,8 +133,7 @@ static int tegra20_das_probe(struct platform_device *pdev)
+ 	}
+ 	das->dev = &pdev->dev;
  
- 	return 0;
- }
- 
--static int g12a_tohdmitx_output_hw_params(struct snd_pcm_substream *substream,
--					  struct snd_pcm_hw_params *params,
--					  struct snd_soc_dai *dai)
--{
--	struct g12a_tohdmitx_input *in_data =
--		g12a_tohdmitx_get_input_data(dai->capture_widget);
--
--	if (!in_data)
--		return -ENODEV;
--
--	memcpy(params, &in_data->params, sizeof(*params));
--
--	return 0;
--}
- 
- static int g12a_tohdmitx_input_set_fmt(struct snd_soc_dai *dai,
- 				       unsigned int fmt)
-@@ -266,6 +257,14 @@ static int g12a_tohdmitx_output_startup(struct snd_pcm_substream *substream,
- 	if (!in_data)
- 		return -ENODEV;
- 
-+	if (WARN_ON(!rtd->dai_link->params)) {
-+		dev_warn(dai->dev, "codec2codec link expected\n");
-+		return -EINVAL;
-+	}
-+
-+	/* Replace link params with the input params */
-+	rtd->dai_link->params = &in_data->params;
-+
- 	if (!in_data->fmt)
- 		return 0;
- 
-@@ -278,7 +277,6 @@ static const struct snd_soc_dai_ops g12a_tohdmitx_input_ops = {
- };
- 
- static const struct snd_soc_dai_ops g12a_tohdmitx_output_ops = {
--	.hw_params	= g12a_tohdmitx_output_hw_params,
- 	.startup	= g12a_tohdmitx_output_startup,
- };
- 
+-	res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
+-	regs = devm_ioremap_resource(&pdev->dev, res);
++	regs = devm_platform_ioremap_resource(pdev, 0);
+ 	if (IS_ERR(regs)) {
+ 		ret = PTR_ERR(regs);
+ 		goto err;
 -- 
 2.20.1
 
