@@ -2,56 +2,56 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C152E7BF6D
-	for <lists+linux-amlogic@lfdr.de>; Wed, 31 Jul 2019 13:30:31 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E9DE57BFA6
+	for <lists+linux-amlogic@lfdr.de>; Wed, 31 Jul 2019 13:31:40 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
 	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:
 	In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	References:List-Owner; bh=Rwr5J2kDth85GgzhMQGDimnm4o/VocDjlg3Av0rXah8=; b=Qrv
-	GEhIfCJflZpxYn0qqGo7rf4Tt4wla1F960/kqGo1RpVgOF/RWvT/0SzRznFqkoDjWPxOueQIoCwiD
-	Z/d3mXbCiyeDn6BYjuvwGdWQ613at3EMv/j2pRf/8EGdlbSvL6HdufTknTS/Bj4ZMeWaTQuWCoGK5
-	eIeWJsDSC+ZtBh6dd6DpqDlsFju5eSQF95bfGn1lIve7qDYWHIu5JCr6wLU+KeEsRZCxKb6DBLEQy
-	e0L5U1bF3qAgX0pCVPE1PILMkMi/O1KXWRPyrPLPmSjxom9Himyho7ecGuZdb1w50uDrtjtIkN6zt
-	zMQxj8lRwkevdEG6Epg0p8pDVVTL+Lw==;
+	References:List-Owner; bh=HubYC8D10dJ+vp8ef3yCCO7Ihqeljp26hLtSG+ijdlo=; b=V82
+	b6mf7P25V7vXqEPHf8HIrCbrWvUeryevnb0mF9WaokDsfpuG7VGy2tqlXHVMEvJVvRFCZMvdiOd3m
+	tQmEQchpiBLqyPFWMNe3Wkwjt1yODR44Zcm5vYS3TlqOKIJ573thD+Ft5crNoczgTBdxKMqnepF8B
+	I0Wxtr8DWLO/f334rwgGByx7gZntTjCos92HwnMM7Mcvkv4yT92SMiCTBl3TQ9U1VBvkJ8YeLXQEK
+	n+rCV5xKlxPToQRh9ZbvUItTJqeibCJZOGUJRJpDVovHQObe7JGiRaqIZgCfc9UyhzF3SjoEiFczB
+	iJGUhOHBjPO9eauU1f32CsrEPwIrobA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hsmoL-0002PW-LR; Wed, 31 Jul 2019 11:30:25 +0000
+	id 1hsmpV-0004CJ-Sv; Wed, 31 Jul 2019 11:31:37 +0000
 Received: from heliosphere.sirena.org.uk ([2a01:7e01::f03c:91ff:fed4:a3b6])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hsmnv-0000rk-CD; Wed, 31 Jul 2019 11:30:03 +0000
+ id 1hsmnx-0000ti-R9; Wed, 31 Jul 2019 11:30:15 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sirena.org.uk; s=20170815-heliosphere; h=Date:Message-Id:In-Reply-To:
  Subject:Cc:To:From:Sender:Reply-To:MIME-Version:Content-Type:
  Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:References:
  List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:
- List-Archive; bh=D27PgUzlkeJT1hRDQAIWF2kJbtKxhYxVBpbQCxryxOg=; b=j2EOOVV2gVCv
- IwofE9JOuzwJZVPv5AaFEhn0PEGycQZW3HOh6JT5ZaDYCAA5gH9/QTi/DsF+hdOlzJSvi1AQ1hCqY
- WztfJFk2HqD0Ewio4F2IePC419Da3YEYElcdOb74J03NFYrpCdZIzkCANZy54zkks2dz8BbPx52Z0
- MT6UI=;
+ List-Archive; bh=rRPz+PWWHOG3+Z69Sa198TqzitnXS8SfELUICqTQMgE=; b=MC3kMyK9KPVL
+ xh62WxhHGry3uYbLLNEwrY8hSb2Oh0BYEPEr7KQhYpnNYhl7mVPz3mFuECKljaDS+Uh5Jd6QvZO1B
+ dgD+0Ym95Ww6DObAecmO+AdqH5NOD6jvIrSwXD8htVcdZZhoHlzKP4dXHwIDXJAfHuJc6aLIbWFdQ
+ g/zwc=;
 Received: from cpc102320-sgyl38-2-0-cust46.18-2.cable.virginm.net
  ([82.37.168.47] helo=ypsilon.sirena.org.uk)
  by heliosphere.sirena.org.uk with esmtpsa
  (TLS1.3:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.92)
  (envelope-from <broonie@sirena.org.uk>)
- id 1hsmnh-0001lx-KJ; Wed, 31 Jul 2019 11:29:45 +0000
+ id 1hsmni-0001mW-2t; Wed, 31 Jul 2019 11:29:46 +0000
 Received: by ypsilon.sirena.org.uk (Postfix, from userid 1000)
- id 1946E2742CC3; Wed, 31 Jul 2019 12:29:45 +0100 (BST)
+ id 6EECC2742C99; Wed, 31 Jul 2019 12:29:45 +0100 (BST)
 From: Mark Brown <broonie@kernel.org>
 To: YueHaibing <yuehaibing@huawei.com>
-Subject: Applied "ASoC: meson: axg-spdifin: use
- devm_platform_ioremap_resource() to simplify code" to the asoc tree
-In-Reply-To: <20190727150738.54764-29-yuehaibing@huawei.com>
+Subject: Applied "ASoC: meson: axg-pdm: use devm_platform_ioremap_resource()
+ to simplify code" to the asoc tree
+In-Reply-To: <20190727150738.54764-28-yuehaibing@huawei.com>
 X-Patchwork-Hint: ignore
-Message-Id: <20190731112945.1946E2742CC3@ypsilon.sirena.org.uk>
+Message-Id: <20190731112945.6EECC2742C99@ypsilon.sirena.org.uk>
 Date: Wed, 31 Jul 2019 12:29:45 +0100 (BST)
 X-Bad-Reply: In-Reply-To but no 'Re:' in Subject.
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190731_042959_444262_E8930080 
-X-CRM114-Status: GOOD (  12.53  )
+X-CRM114-CacheID: sfid-20190731_043001_900437_5A1857B1 
+X-CRM114-Status: GOOD (  12.72  )
 X-Spam-Score: 0.1 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.1 points)
@@ -104,7 +104,7 @@ Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
 The patch
 
-   ASoC: meson: axg-spdifin: use devm_platform_ioremap_resource() to simplify code
+   ASoC: meson: axg-pdm: use devm_platform_ioremap_resource() to simplify code
 
 has been applied to the asoc tree at
 
@@ -129,36 +129,36 @@ to this mail.
 Thanks,
 Mark
 
-From d61feec0f60c250c786a9e0069ce909979491c7b Mon Sep 17 00:00:00 2001
+From 2e73d98f2ecf61008926bb8a425c3281a89959c0 Mon Sep 17 00:00:00 2001
 From: YueHaibing <yuehaibing@huawei.com>
-Date: Sat, 27 Jul 2019 23:07:32 +0800
-Subject: [PATCH] ASoC: meson: axg-spdifin: use
- devm_platform_ioremap_resource() to simplify code
+Date: Sat, 27 Jul 2019 23:07:31 +0800
+Subject: [PATCH] ASoC: meson: axg-pdm: use devm_platform_ioremap_resource() to
+ simplify code
 
 Use devm_platform_ioremap_resource() to simplify the code a bit.
 This is detected by coccinelle.
 
 Reported-by: Hulk Robot <hulkci@huawei.com>
 Signed-off-by: YueHaibing <yuehaibing@huawei.com>
-Link: https://lore.kernel.org/r/20190727150738.54764-29-yuehaibing@huawei.com
+Link: https://lore.kernel.org/r/20190727150738.54764-28-yuehaibing@huawei.com
 Signed-off-by: Mark Brown <broonie@kernel.org>
 ---
- sound/soc/meson/axg-spdifin.c | 4 +---
+ sound/soc/meson/axg-pdm.c | 4 +---
  1 file changed, 1 insertion(+), 3 deletions(-)
 
-diff --git a/sound/soc/meson/axg-spdifin.c b/sound/soc/meson/axg-spdifin.c
-index 01b2035fa841..d0d09f945b48 100644
---- a/sound/soc/meson/axg-spdifin.c
-+++ b/sound/soc/meson/axg-spdifin.c
-@@ -453,7 +453,6 @@ static int axg_spdifin_probe(struct platform_device *pdev)
+diff --git a/sound/soc/meson/axg-pdm.c b/sound/soc/meson/axg-pdm.c
+index 9d5684493ffc..bfd37d49a73e 100644
+--- a/sound/soc/meson/axg-pdm.c
++++ b/sound/soc/meson/axg-pdm.c
+@@ -585,7 +585,6 @@ static int axg_pdm_probe(struct platform_device *pdev)
+ {
  	struct device *dev = &pdev->dev;
- 	struct axg_spdifin *priv;
- 	struct snd_soc_dai_driver *dai_drv;
+ 	struct axg_pdm *priv;
 -	struct resource *res;
  	void __iomem *regs;
  	int ret;
  
-@@ -468,8 +467,7 @@ static int axg_spdifin_probe(struct platform_device *pdev)
+@@ -600,8 +599,7 @@ static int axg_pdm_probe(struct platform_device *pdev)
  		return -ENODEV;
  	}
  
