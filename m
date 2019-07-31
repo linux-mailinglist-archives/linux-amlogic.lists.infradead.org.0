@@ -2,74 +2,59 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4B9037BF72
-	for <lists+linux-amlogic@lfdr.de>; Wed, 31 Jul 2019 13:30:41 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id AF2807BFC3
+	for <lists+linux-amlogic@lfdr.de>; Wed, 31 Jul 2019 13:32:04 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
 	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:
 	In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	References:List-Owner; bh=eetl/rfrSZo/rFTCke0dotQNC8gjEJhOJSsjxNgoK7M=; b=J76
-	nEnYbT3sN3ikwKg9CvCB1ycu9oS+7dS6IqgdZSIJfzz9vm3/D4aSuS+XQ/ZrU0jHE0C3v5ljw6ume
-	FtWFKqT8PJFtdp1jAHG77MtSwRvYgLYwb3xXljQbFgP/tFev5P3jOJdiCFkyiu1pAvnUZ3TbPA6C6
-	WrVetyLsUc4a7DLPZM4BJ/SmE5r5whQn+E/zKT5wdaNxBQSpeCMqmiUSI5JjSCZH74lXKuKjtyGRz
-	SxHAwG6G3hb3fZ4HuP3+rDVrl31FkD8OAPjse6iYWh4/eOtUuI3kYYOkcc0IwcsuvYFwH3rbjn8/C
-	gUVGy7+uRsFpKwspglZENWM9tG8NtIw==;
+	References:List-Owner; bh=w8EmLTuGbcOLgQCaG9/zjMwkqlbEVo71K16Y1kpYhtc=; b=Qtg
+	wij9NNV8fd2NvFH5NR/d+MKsVFyWjWKT0peYlRQy6H2pN4TI3CyygToNQyeRgsBIlfj0QPIQHw03/
+	flNR79bj/7Sn9j4GTH1XQjrUuR73kgPVL1KOJKhz5mo9QQDWlX6gQITSRd6K9yRbvZhk0wKEIoFH5
+	RpSCqzsSG70680QHfdnWwCpOvE2gP3sEAX3rvNXXPFgmflKqXxvRrxtIkoARCsb6U55eBUvVyEKtd
+	qA+1cZQhKPcsm0cgFJYFH4wS8k1SEPgsJrLAHD/IN/nxqlNDq2J7vCKETghZ0qowsRUKM5nKRcXel
+	XG+whayqrrWnhRre0KYyiBsMPIxrzwA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hsmoZ-0002kU-MS; Wed, 31 Jul 2019 11:30:39 +0000
-Received: from casper.infradead.org ([85.118.1.10])
- by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hsmo6-0001Tg-9k; Wed, 31 Jul 2019 11:30:10 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=infradead.org; s=casper.20170209; h=Date:Message-Id:In-Reply-To:Subject:Cc:
- To:From:Sender:Reply-To:MIME-Version:Content-Type:Content-Transfer-Encoding:
- Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
- Resent-To:Resent-Cc:Resent-Message-ID:References:List-Id:List-Help:
- List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=r1wAASK25aJBPqdZLAEIvsw9jEIrgqUExUX7YJy9Lu8=; b=ocRfQ9eHVcnovlvxDEHMq4bwea
- caPhrInwX/TNjihfD6a5xEIRmJIwbkM6XyOioFG14T7SuKK6PLQnlOTrjdTqBPbYYF/wwAFXHUzu8
- XwPCclQZCgol8YU2C5sJmLdNAi6b2MW8mm+uLUzXBZDpdzRHXzsQLzdLLYulchdxUROrZ4kNdt3Xi
- Tk6k/T0PYfWN5jFfkt1jWh9sKt0KtiHtBW8n8FKo34BqB3W2iUwajJ0MoggJvRFGJiFEiLkESA4Y/
- G3xBWOkyK/trFN2/jpNV7414/2waRdEgrgO0b5JZ/qQk/ZV0IzicceAEnM2b0vLy+kChitcNn97Dy
- ec1R9heA==;
+	id 1hsmps-0004rm-G3; Wed, 31 Jul 2019 11:32:00 +0000
 Received: from heliosphere.sirena.org.uk ([2a01:7e01::f03c:91ff:fed4:a3b6])
- by casper.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hsmoF-0008Vq-AZ; Wed, 31 Jul 2019 11:30:21 +0000
+ by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
+ id 1hsmo5-0001TU-Af; Wed, 31 Jul 2019 11:30:17 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sirena.org.uk; s=20170815-heliosphere; h=Date:Message-Id:In-Reply-To:
  Subject:Cc:To:From:Sender:Reply-To:MIME-Version:Content-Type:
  Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:References:
  List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:
- List-Archive; bh=r1wAASK25aJBPqdZLAEIvsw9jEIrgqUExUX7YJy9Lu8=; b=TGxqvibR/UMG
- lLqRckji80AGnKN1l5Sn2Z0+CY5U50freRz1gbPzXwI0WxsbPbczMTKZeAJzyJSuw3MffP8UXy6ZF
- CSekY3Gwxd+2676zFNzVMVM1fZZ96AX6kkM8zm4zHLnWht3BQ2xO2+QUusS67uj17k/kO2ui5UtdG
- WhqG0=;
+ List-Archive; bh=OK1qfP6SGmbQHUIYgf6InFAdJuQ6Az7VgLYIKL/9SvY=; b=QXGtYpMyBZf9
+ Q0ld8V/rb/34AocCTqq9hFoFsKLewLCkhHu/6Y3KjnbvsjslY1m7w5JJ6UsPuRYrg9Gonqk0XL6OM
+ Ay0v4uHwPjyXIFZO9tmAjW50hhlDbO5zgmb6ZiXTRVk82//jxqL53JID/RUxasdKuWc9W+P1pujIB
+ Jff2c=;
 Received: from cpc102320-sgyl38-2-0-cust46.18-2.cable.virginm.net
  ([82.37.168.47] helo=ypsilon.sirena.org.uk)
  by heliosphere.sirena.org.uk with esmtpsa
  (TLS1.3:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.92)
  (envelope-from <broonie@sirena.org.uk>)
- id 1hsmnm-0001ob-Bp; Wed, 31 Jul 2019 11:29:50 +0000
+ id 1hsmnn-0001pE-H6; Wed, 31 Jul 2019 11:29:51 +0000
 Received: by ypsilon.sirena.org.uk (Postfix, from userid 1000)
- id 52BDD2742C99; Wed, 31 Jul 2019 12:29:49 +0100 (BST)
+ id AF2942742C99; Wed, 31 Jul 2019 12:29:50 +0100 (BST)
 From: Mark Brown <broonie@kernel.org>
 To: YueHaibing <yuehaibing@huawei.com>
-Subject: Applied "ASoC: mt6797: use devm_platform_ioremap_resource() to
+Subject: Applied "ASoC: tegra: use devm_platform_ioremap_resource() to
  simplify code" to the asoc tree
-In-Reply-To: <20190727150738.54764-7-yuehaibing@huawei.com>
+In-Reply-To: <20190727150738.54764-3-yuehaibing@huawei.com>
 X-Patchwork-Hint: ignore
-Message-Id: <20190731112949.52BDD2742C99@ypsilon.sirena.org.uk>
-Date: Wed, 31 Jul 2019 12:29:49 +0100 (BST)
+Message-Id: <20190731112950.AF2942742C99@ypsilon.sirena.org.uk>
+Date: Wed, 31 Jul 2019 12:29:50 +0100 (BST)
 X-Bad-Reply: In-Reply-To but no 'Re:' in Subject.
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190731_123019_469831_1BBF7559 
-X-CRM114-Status: GOOD (  16.50  )
-X-Spam-Score: 0.2 (/)
-X-Spam-Report: SpamAssassin version 3.4.2 on casper.infradead.org summary:
- Content analysis details:   (0.2 points, 5.0 required)
+X-CRM114-CacheID: sfid-20190731_043009_585364_9415109C 
+X-CRM114-Status: GOOD (  12.64  )
+X-Spam-Score: 0.1 (/)
+X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
+ Content analysis details:   (0.1 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
@@ -119,7 +104,7 @@ Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
 The patch
 
-   ASoC: mt6797: use devm_platform_ioremap_resource() to simplify code
+   ASoC: tegra: use devm_platform_ioremap_resource() to simplify code
 
 has been applied to the asoc tree at
 
@@ -144,46 +129,45 @@ to this mail.
 Thanks,
 Mark
 
-From 61e799e3658952397da80f6c2e3581e7b65209a8 Mon Sep 17 00:00:00 2001
+From 7d22808641cdea50baeae636acf5d592a7aa1239 Mon Sep 17 00:00:00 2001
 From: YueHaibing <yuehaibing@huawei.com>
-Date: Sat, 27 Jul 2019 23:07:10 +0800
-Subject: [PATCH] ASoC: mt6797: use devm_platform_ioremap_resource() to
- simplify code
+Date: Sat, 27 Jul 2019 23:07:06 +0800
+Subject: [PATCH] ASoC: tegra: use devm_platform_ioremap_resource() to simplify
+ code
 
 Use devm_platform_ioremap_resource() to simplify the code a bit.
 This is detected by coccinelle.
 
 Reported-by: Hulk Robot <hulkci@huawei.com>
 Signed-off-by: YueHaibing <yuehaibing@huawei.com>
-Link: https://lore.kernel.org/r/20190727150738.54764-7-yuehaibing@huawei.com
+Link: https://lore.kernel.org/r/20190727150738.54764-3-yuehaibing@huawei.com
 Signed-off-by: Mark Brown <broonie@kernel.org>
 ---
- sound/soc/mediatek/mt6797/mt6797-afe-pcm.c | 5 +----
- 1 file changed, 1 insertion(+), 4 deletions(-)
+ sound/soc/tegra/tegra30_i2s.c | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
 
-diff --git a/sound/soc/mediatek/mt6797/mt6797-afe-pcm.c b/sound/soc/mediatek/mt6797/mt6797-afe-pcm.c
-index 08a6532da322..e52c032d53aa 100644
---- a/sound/soc/mediatek/mt6797/mt6797-afe-pcm.c
-+++ b/sound/soc/mediatek/mt6797/mt6797-afe-pcm.c
-@@ -749,7 +749,6 @@ static int mt6797_afe_pcm_dev_probe(struct platform_device *pdev)
- {
- 	struct mtk_base_afe *afe;
- 	struct mt6797_afe_private *afe_priv;
--	struct resource *res;
- 	struct device *dev;
- 	int i, irq_id, ret;
+diff --git a/sound/soc/tegra/tegra30_i2s.c b/sound/soc/tegra/tegra30_i2s.c
+index ac6983c6bd72..e6d548fa980b 100644
+--- a/sound/soc/tegra/tegra30_i2s.c
++++ b/sound/soc/tegra/tegra30_i2s.c
+@@ -368,7 +368,6 @@ static int tegra30_i2s_platform_probe(struct platform_device *pdev)
+ 	struct tegra30_i2s *i2s;
+ 	const struct of_device_id *match;
+ 	u32 cif_ids[2];
+-	struct resource *mem;
+ 	void __iomem *regs;
+ 	int ret;
  
-@@ -774,9 +773,7 @@ static int mt6797_afe_pcm_dev_probe(struct platform_device *pdev)
+@@ -406,8 +405,7 @@ static int tegra30_i2s_platform_probe(struct platform_device *pdev)
+ 		goto err;
  	}
  
- 	/* regmap init */
--	res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
--
--	afe->base_addr = devm_ioremap_resource(&pdev->dev, res);
-+	afe->base_addr = devm_platform_ioremap_resource(pdev, 0);
- 	if (IS_ERR(afe->base_addr))
- 		return PTR_ERR(afe->base_addr);
- 
+-	mem = platform_get_resource(pdev, IORESOURCE_MEM, 0);
+-	regs = devm_ioremap_resource(&pdev->dev, mem);
++	regs = devm_platform_ioremap_resource(pdev, 0);
+ 	if (IS_ERR(regs)) {
+ 		ret = PTR_ERR(regs);
+ 		goto err_clk_put;
 -- 
 2.20.1
 
