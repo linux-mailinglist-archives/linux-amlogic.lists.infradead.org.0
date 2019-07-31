@@ -2,81 +2,82 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 21F357BB7E
-	for <lists+linux-amlogic@lfdr.de>; Wed, 31 Jul 2019 10:24:57 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1E1B37BB88
+	for <lists+linux-amlogic@lfdr.de>; Wed, 31 Jul 2019 10:25:41 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=9VSKdBcnVz/cgSsTD7MoHxrpFEtE+XJ0W3v1KWDcv90=; b=D6wLU3bJhP2W+8
-	AC0SLt78E4KYDLH87rLcZn1DBMzzPV1OHg5HH3lreh/i0Fwzp77HXEZuvvWxKN6b6A8UyLDcTPwr0
-	iHRBFLwR2e+tt65H1YPgOpLlJcwqhl6sFBZdis8X0XwdkCEiF5X5woKMv8ZqlcqPxb5l1RQ0/ECBJ
-	EyuNRTujr/4hXsFTfW7MmI2Jfrf6yMy5N353ED1JfbY+JDyHbKjIh0l+vclgjlqaNahlmgzry3Zum
-	os/qjRubClL4mxGNQP1A7llJf1FGPem2hAGkKtrZYqvZ8KiXsSWvDazDIBxCS0qZoabP9J5BMEBC0
-	SNIO9ddQNzkVhynN04Bw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=tksqFwWoKxNXDggR8Ff4iMxOHxCyLnWSQ1HswlsuIMQ=; b=DUe1xJCNJ8FMrT
+	JZEEXZQ0WMxfUwipAdmXKvsfDWMXXNdYA3h5/OThjtqXgqIr926jqsj2SeAaTSHIfPDURN/mduf1r
+	wVrY8XGjVa6JUac8y4UKvvR7B+ASxeKPBCWrLRJzUntlHoqhBMP9Kd1tYIEGt6YtnelNqhHOaZsoO
+	UR8ODF/gvOzWlQK/w+UT2k9ssQIygY1ec0ayqG2ANaPxqzbAvU2LYcwMYvs5uuVqtSlwOBlmLLdG1
+	muTJkvXGeDHqSCpOhUFBrXqF9K3BXzuuJGs1ahPGDHS7qrXT32nkjiqZBJpZ10xx4mdWz2MZRW82x
+	UqM4dGRi/aoZsSEveiEw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hsjug-00052n-Gd; Wed, 31 Jul 2019 08:24:46 +0000
-Received: from mail-wr1-x444.google.com ([2a00:1450:4864:20::444])
+	id 1hsjvU-0006mE-8T; Wed, 31 Jul 2019 08:25:36 +0000
+Received: from mail-wm1-x344.google.com ([2a00:1450:4864:20::344])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hsjuD-0004kL-UM
- for linux-amlogic@lists.infradead.org; Wed, 31 Jul 2019 08:24:19 +0000
-Received: by mail-wr1-x444.google.com with SMTP id r1so68619883wrl.7
- for <linux-amlogic@lists.infradead.org>; Wed, 31 Jul 2019 01:24:16 -0700 (PDT)
+ id 1hsjuD-0004kd-UN
+ for linux-amlogic@lists.infradead.org; Wed, 31 Jul 2019 08:24:22 +0000
+Received: by mail-wm1-x344.google.com with SMTP id p74so59752533wme.4
+ for <linux-amlogic@lists.infradead.org>; Wed, 31 Jul 2019 01:24:17 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=923Ja2WcpXT79P86aL3lNG+qbwOggNaCyX5ijNpRJ5o=;
- b=QFW/c3WauL5r/F0ZtnfrXqzpOqeu5eaCNKRUXuqJoeMRA8C58lPUBaC3Dk3vyAk7u2
- 2mp5c6hjhvIyYLyIsmXtkNOAhXBwylr0QuMoYthx29CxnyrNuRZw6yqnUcVaa8u7kPOI
- 3waHbd0gqvRrvXjBCOdUAlZ4yVWgv3YN8O0xFCvzHzpYSQO0tCjk36m+ZKCR7HzEFkX9
- 3Z4WI8E0b2ssz6KAYgP4vvnO4q0PBwZh+W9fp5QuT+J6PmCD6FNgvyyvLxmsH7hRyCxO
- 5zXrzDqbX78wnpbrEqu+XhSDEy4Aeji6tRxf4fc7lMg4xwT9LGrMKxQ2gmiXEm50r/1T
- EmrA==
+ h=from:to:cc:subject:date:message-id:in-reply-to:references
+ :mime-version:content-transfer-encoding;
+ bh=0irTfRWSZ70qNvhsiExUstYrNfb3pdmbXdiGXd5JhF8=;
+ b=hw80V/InTiJxJH2AH3UWZZ4CUq7Pa/utyGT/q458WHSiUT2ppY7hAAw3/vbHpL2pzL
+ K0BuME0L2K/rO30XimBliuprG32Q4+ZOf4s5RxXy0T+VJe5ykeJSwd2MS9ikYUYv9uAg
+ YPnUxK1ctCQ5m0Q9iDqG/FMWHMg32KRn5i5hAwe3pg46DMGw+U1N/L0AJOlNEE+q1WBU
+ muZlxc7aLEeWLAuGYeFCKYKWZQRK7cfze8F/Yaiu3vEDbdd4S/srnmdzYUV4oCfWLMib
+ BIXuCS8AbzXqdNTb7jTfQk2XIiI3mNuPtp+cxw1FRgLlrqskcyfFM9JbohIGDBbKHj+i
+ c9+g==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=923Ja2WcpXT79P86aL3lNG+qbwOggNaCyX5ijNpRJ5o=;
- b=TUFecAZP56Gd6igkIi8Bg0JU+YPrWqFAKaKHeowwk9vHku1FcONNoq75edU/z7F5Dq
- c7QaerQ3FZqFyKM5MiYsqvoPcJkBNQqSXnk+Z2XFWu6t16xEc7Kfneq22ra3/Pa1jrRd
- 2xGKmx+gOdkDg86MCZSofDsRikAzsmu4p5l8zPOYiPkpQD9kDUoSMW1F3YS1qca0jlze
- xuNkWpdESsN62L7QL16p3prV9bknY4NL/IzzcOKDtz6QOJbVAQEBX1W4dQ+G+f6wKdMP
- yB5MO4ndiwozX/nC2THR1kUbdH1b8SK4pRsJvCU/VyOGnx0mawbO8m5x1qKkXGKL5Cua
- kGfg==
-X-Gm-Message-State: APjAAAWzFY0lL9lx04JJozjjxkHfjZF6i6f4dXnKZorBX8H+n8YjfCoC
- tbD5/z/gUO5C3/K8ezvcP9hkRj4qb5Y=
-X-Google-Smtp-Source: APXvYqyW+Kdgzx7xM0neb1lynMTW4xGwPPQq/J11QHkYCb0v1hPS9K5b4vVL8TRzTgh4ggvSdNM09A==
-X-Received: by 2002:adf:de90:: with SMTP id w16mr35937106wrl.217.1564561455192; 
- Wed, 31 Jul 2019 01:24:15 -0700 (PDT)
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
+ :references:mime-version:content-transfer-encoding;
+ bh=0irTfRWSZ70qNvhsiExUstYrNfb3pdmbXdiGXd5JhF8=;
+ b=l3kNJbWojNNbecAFTopVI3gTUWoWWP01R+Q9BW7Xwsk5sF32zgltbEIWQ3gh/BIyiS
+ HH+AZF3s2xO7BvnG07ZPXTX/jM5EkqNBs+IW0EMgkv6LWADv9BXyh4m1pf9qPbwR5Enm
+ 6gIZ8cWd9l2WWbAXz4wCoEZo+p4Wh+KFIlOj/G59Q8jDzr76+DtJfiGkcDrIpA0/rhDP
+ DvQxuCvqsK00oQC4n/AIqCZ32eP3H2Pl517HUcq3+rgePrUIqHloZQQd3URANWgh0y+c
+ MdHuIOXjIj2jrQSE12K61GqJOP8LnnmOhSpP4TBIwdRsbDAhByLOtjAz+kcGYyBi3Dub
+ sU1A==
+X-Gm-Message-State: APjAAAVgZbGjdNYXGhQFoP3zLKMLrhskqesMl7B8UKFP1eIZxG8iqXS0
+ zW01GprMGdx4d+DrkzGl+DVkK36N1bU=
+X-Google-Smtp-Source: APXvYqxwqKJLeF0A9W2Qb4n3Ft9qKIilrEwYAsvkxn4OL2mk5QQMea6ic1fnLlRUSXtJ0oMq56TBkw==
+X-Received: by 2002:a1c:f90f:: with SMTP id x15mr32073741wmh.69.1564561456060; 
+ Wed, 31 Jul 2019 01:24:16 -0700 (PDT)
 Received: from localhost.localdomain ([185.49.42.196])
- by smtp.gmail.com with ESMTPSA id o3sm54597664wrs.59.2019.07.31.01.24.13
+ by smtp.gmail.com with ESMTPSA id o3sm54597664wrs.59.2019.07.31.01.24.15
  (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Wed, 31 Jul 2019 01:24:14 -0700 (PDT)
+ Wed, 31 Jul 2019 01:24:15 -0700 (PDT)
 From: Carlo Caione <ccaione@baylibre.com>
 To: srinivas.kandagatla@linaro.org, khilman@baylibre.com,
  narmstrong@baylibre.com, robh+dt@kernel.org, tglx@linutronix.de,
  jbrunet@baylibre.com, linux-arm-kernel@lists.infradead.org,
  linux-amlogic@lists.infradead.org, devicetree@vger.kernel.org
-Subject: [PATCH v2 0/4] Rework secure-monitor driver
-Date: Wed, 31 Jul 2019 09:23:35 +0100
-Message-Id: <20190731082339.20163-1-ccaione@baylibre.com>
+Subject: [PATCH v2 1/4] firmware: meson_sm: Mark chip struct as static const
+Date: Wed, 31 Jul 2019 09:23:36 +0100
+Message-Id: <20190731082339.20163-2-ccaione@baylibre.com>
 X-Mailer: git-send-email 2.20.1
+In-Reply-To: <20190731082339.20163-1-ccaione@baylibre.com>
+References: <20190731082339.20163-1-ccaione@baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190731_012418_169317_B8B1B60D 
-X-CRM114-Status: UNSURE (   8.66  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190731_012418_179289_C4FE1CE4 
+X-CRM114-Status: GOOD (  10.25  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:444 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:344 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -100,36 +101,27 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-The secure-monitor driver is currently in really bad shape, not my 
-proudest piece of code (thanks Jerome for pointing that out ;). I tried 
-to rework it a bit to make it a bit more tolerable.
+No need to be a global struct.
 
-I needed to change a bit the APIs and consequently adapt the only user 
-we have, that is the nvmem/efuses driver. To not break bisectability I 
-added one single commit to change both the drivers.
+Reviewed-by: Jerome Brunet <jbrunet@baylibre.com>
+Signed-off-by: Carlo Caione <ccaione@baylibre.com>
+---
+ drivers/firmware/meson/meson_sm.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
-The remaining commits are cosmetic and DTS/docs fixes.
-
-Changelog:
-- Changed patches order to not break bisect
-- Removed non-functional changes (PATCH 1/5) of the nvmem driver
-- Fix gxbb/gxl DTS
-
-Carlo Caione (4):
-  firmware: meson_sm: Mark chip struct as static const
-  nvmem: meson-efuse: bindings: Add secure-monitor phandle
-  arm64: dts: meson: Link nvmem and secure-monitor nodes
-  firmware: meson_sm: Rework driver as a proper platform driver
-
- .../bindings/nvmem/amlogic-efuse.txt          |  6 ++
- arch/arm64/boot/dts/amlogic/meson-axg.dtsi    |  1 +
- arch/arm64/boot/dts/amlogic/meson-g12a.dtsi   |  1 +
- arch/arm64/boot/dts/amlogic/meson-gx.dtsi     |  1 +
- drivers/firmware/meson/meson_sm.c             | 96 +++++++++++++------
- drivers/nvmem/meson-efuse.c                   | 24 ++++-
- include/linux/firmware/meson/meson_sm.h       | 15 +--
- 7 files changed, 104 insertions(+), 40 deletions(-)
-
+diff --git a/drivers/firmware/meson/meson_sm.c b/drivers/firmware/meson/meson_sm.c
+index 8d908a8e0d20..772ca6726e7b 100644
+--- a/drivers/firmware/meson/meson_sm.c
++++ b/drivers/firmware/meson/meson_sm.c
+@@ -35,7 +35,7 @@ struct meson_sm_chip {
+ 	struct meson_sm_cmd cmd[];
+ };
+ 
+-struct meson_sm_chip gxbb_chip = {
++static const struct meson_sm_chip gxbb_chip = {
+ 	.shmem_size		= SZ_4K,
+ 	.cmd_shmem_in_base	= 0x82000020,
+ 	.cmd_shmem_out_base	= 0x82000021,
 -- 
 2.20.1
 
