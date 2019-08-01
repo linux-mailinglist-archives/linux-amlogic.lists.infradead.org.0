@@ -2,81 +2,82 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D2BAE7D6BA
-	for <lists+linux-amlogic@lfdr.de>; Thu,  1 Aug 2019 09:55:27 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 68D9E7D6BE
+	for <lists+linux-amlogic@lfdr.de>; Thu,  1 Aug 2019 09:55:48 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=PU0ekeic6qrjiz+uLmBrkm2fKeA2Bw1wndHpYar7qvo=; b=qvmeTw3yn72egy
-	wdPvCuggdV0IhOUpmzRNSVoKjcMvxA75a7mUTyzrt+u/NaTH1nZ1h31SH81Zt/GaLChTtLfudy0bi
-	4SRAg2xMDBJO0hjLKIiAO7CRgPID8DK5eEGUBXQEOBQ+PGk/i3P9/0gLVckZ+OomGodPYkdXpnvre
-	WuKOyjMtxfvWLitlQd/1IXivoB/BL9G4xoGwZLpm3pSnnqfHQAuFQYa4QOINAgChPVi4lgpkxv0HY
-	bXrz+E86RRWaTC0iLxVHTmjOxLREWNHV21QQ3IkVkPiNfYXg1CyJaE88WhOOtyIpvl1hNzPKk9uxi
-	x+E/zLl3OfnknC1HieKQ==;
+	List-Owner; bh=3mFadSJZiEfu9xNN+5LNKpYC8LrGpBDQb6F9tdPl2DU=; b=rzG6eIpcanrrL4
+	VP9zVXTqthHc5VnMJb428QXVbFZOntU1V9swdoZ2FFNY3eB+NxMjYb4ZehdmS+rbCLY0iXhyFSBwV
+	UbqXeGbLcIjQADuvTWDmeVBaxNkNt98niQ4eagGT3ICGaGWFwVW66ZqOsyPB53UlxCTt0pNn872KB
+	O6w9JzAhCkiGimG93QvkqDQWgremkUJvzK8HtI7wQDoqV5Q5b7oANXJP3S6l/M45HCd+vHISZCvh5
+	BSXawYiUVzUAZBTE7pvUJtcy8b1/Zd66eqFyU5uhgwztUps73qUyLCiCYjj/RssrD0prxZuGRHkfZ
+	TaICGu/EUzZuJAp+CeVg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1ht5vn-0002cZ-PR; Thu, 01 Aug 2019 07:55:23 +0000
-Received: from mail-wm1-x343.google.com ([2a00:1450:4864:20::343])
+	id 1ht5w8-000396-Ad; Thu, 01 Aug 2019 07:55:44 +0000
+Received: from mail-wm1-x342.google.com ([2a00:1450:4864:20::342])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1ht5vT-00010b-1G
- for linux-amlogic@lists.infradead.org; Thu, 01 Aug 2019 07:55:06 +0000
-Received: by mail-wm1-x343.google.com with SMTP id x15so63566855wmj.3
- for <linux-amlogic@lists.infradead.org>; Thu, 01 Aug 2019 00:55:02 -0700 (PDT)
+ id 1ht5vT-00017A-Km
+ for linux-amlogic@lists.infradead.org; Thu, 01 Aug 2019 07:55:08 +0000
+Received: by mail-wm1-x342.google.com with SMTP id u25so51890302wmc.4
+ for <linux-amlogic@lists.infradead.org>; Thu, 01 Aug 2019 00:55:03 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=e2WiU/DsLe1wMNodqzZLwpA1aNczN5SEyIJEg5xWVGI=;
- b=kk4EI62G9gnoZqd97Z0u+DSm5SF9LFtmVoaZYg15h2QPorIngSPSqD+Npc3qeC0Da1
- eGOmkbCRmOYxun5Mj9FlyliH0lzbmVCCGsIDdYSKYou3lebc/3Wlk2+N93/+3mR0ogRa
- iBwn/rcDy2MKfCbEVAJe7cwGPs587ieLtDMax2zYs+DatDFsbBhBqoGnnfPhmAwxHlzm
- 5dpGUoGnX77XJcDZRZPblQaQ/1kqCf9281rApakQNjJlDwfNUmzkLrb2XZHonlbgbdp/
- NQpl0PAbjp0BqZfMq5lB/PHJH0xG3FpBP/K5jG1CeiEvHzZWtzY/1FzczcmbmekYKDUG
- cDoA==
+ bh=S/U2vfr6KpQVUGk7LGivXBjTe3cQxbkb3JGHh9Y0Z5g=;
+ b=GVM7VG1fhWn1thASAa3dEu1eaGoxMvUZKilOXRoZnyn5VPQTS8oN3mtNLX1TSuHFHu
+ TLyEvanhuCJR7IlVKEusnMRkhmu8iA9hYUHH+HPeJgIw4s6CZdSGNQfA7i+CkFfkok86
+ RORWtqYMWlgaBN0Zm/3weiXE28vfWRwS8Uf6WvUQ8ytDbv/240yNK1IFBoMArjiUyj2x
+ pATmZz2YuFfYgItWgnafvVKgU80AMkIoiKJpb7Nies3ccLwGPEjhaxGrFBh3NaJDlZfD
+ eXgQjsMyYZ5ZIlSObmFtLJOu+2REVIEOQl8bkjoiLdrpl7kXhBzlsvXfwrSJ4SkiyHbu
+ rC9Q==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=e2WiU/DsLe1wMNodqzZLwpA1aNczN5SEyIJEg5xWVGI=;
- b=VgrUXRvYTxSLqwdcg0I0ifgINjnMxN3cNqY+yZ0aTs1M92MQZmumxFeB56btA1+u4l
- bPd3bJMcKhN4ijbTRWc1KFTvw4J4d2r1Nh/vCCWD2WdF5Cua65viRhQNQTP5JzjI4yy3
- 6qheHPhrG77owYbwwkkS3wkbEf3xZsK670QlMrtpqRv1NHycvVV/ANYoA27y0iYxtXdL
- 1ZlqODoWbsALLoPBBRn7ULt1/YZoShh91sWwRTHIk7SH/dnMF3CpaAuoyb/0rmw+kq2i
- JZVlNRUn6Cbp0suY3TKIKL9x4zg2NmLCreHUElAgwBPwyoEBaslrXfr5oH2pwtasT45S
- 7arg==
-X-Gm-Message-State: APjAAAUdQyyVHx0dVTZ4K2WxKOyw8/wqfLC4SIVJFkWafFE8PZt/od7l
- C+0dKGmMPAeU+RaLVQEVvngKxg==
-X-Google-Smtp-Source: APXvYqyIkpvceBqFHAuhL6SK/XlbkFXZgpPhOoIlOhD+7y54rr6VzOLrLtQGkX0yCQiCqFHg5dmNFg==
-X-Received: by 2002:a1c:7a02:: with SMTP id v2mr114218798wmc.159.1564646101566; 
- Thu, 01 Aug 2019 00:55:01 -0700 (PDT)
+ bh=S/U2vfr6KpQVUGk7LGivXBjTe3cQxbkb3JGHh9Y0Z5g=;
+ b=JUY3/PgY/+MuJCBLsspeN27AJFNQk6FiSQUZKoHi0J8wFFc5HTC8EVNYTgTxQ3wgv/
+ oJPWfpyXKVY1SHj06EDVbD7xBiV0m1XLJ6yIp+VMPqpCzJIxXbk1s/4XrceqT1fOSWNf
+ f3dzGE2cFDvtTkzKETNCb0nTbT+3alAYvVGZEQ/fSCtjeOukqyEiPSYFDONb33td4TvF
+ /1r2EpQvPV+XD/nZSLsBllSKhLf12+k4DCz5c73l9ZoyoQkDzWg6QoeRD0a1ysUtn4DD
+ EGvJsIYtaJWnGL3ZKMUYvBCeZElKk6nQutJG0RydXA4GsDte/fSPpjAMYeE+bk3kYgqW
+ bJYg==
+X-Gm-Message-State: APjAAAW1oge5zJnFeAvuizkPF7woAU2Ky9dwZmzAeWadrfmYS2tI8NUP
+ qI3VfTFJPntd5i+gcVMkX+eRtA==
+X-Google-Smtp-Source: APXvYqx63hzIPJbnoKcosXltEPLqar2N+McXWG9ADJG7p3a1qb2nNDFC3hnrT0W0g1JeoKNM6mhzmA==
+X-Received: by 2002:a1c:1a87:: with SMTP id
+ a129mr112944890wma.21.1564646102195; 
+ Thu, 01 Aug 2019 00:55:02 -0700 (PDT)
 Received: from bender.baylibre.local
  (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
- by smtp.gmail.com with ESMTPSA id y12sm64199221wrm.79.2019.08.01.00.55.00
+ by smtp.gmail.com with ESMTPSA id y12sm64199221wrm.79.2019.08.01.00.55.01
  (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
  Thu, 01 Aug 2019 00:55:01 -0700 (PDT)
 From: Neil Armstrong <narmstrong@baylibre.com>
 To: p.zabel@pengutronix.de
-Subject: [PATCH 2/3] dt-bindings: reset: amlogic,
- meson-gxbb-reset: update with SPDX Licence identifier
-Date: Thu,  1 Aug 2019 09:54:53 +0200
-Message-Id: <20190801075454.23547-3-narmstrong@baylibre.com>
+Subject: [PATCH 3/3] dt-bindings: reset: amlogic,
+ meson8b-reset: update with SPDX Licence identifier
+Date: Thu,  1 Aug 2019 09:54:54 +0200
+Message-Id: <20190801075454.23547-4-narmstrong@baylibre.com>
 X-Mailer: git-send-email 2.22.0
 In-Reply-To: <20190801075454.23547-1-narmstrong@baylibre.com>
 References: <20190801075454.23547-1-narmstrong@baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190801_005503_090671_3215AF68 
-X-CRM114-Status: GOOD (  16.30  )
+X-CRM114-CacheID: sfid-20190801_005503_684279_2BEEC400 
+X-CRM114-Status: GOOD (  16.40  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:343 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:342 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -103,13 +104,13 @@ Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
 Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
 ---
- .../reset/amlogic,meson-gxbb-reset.h          | 51 +------------------
+ .../dt-bindings/reset/amlogic,meson8b-reset.h | 51 +------------------
  1 file changed, 1 insertion(+), 50 deletions(-)
 
-diff --git a/include/dt-bindings/reset/amlogic,meson-gxbb-reset.h b/include/dt-bindings/reset/amlogic,meson-gxbb-reset.h
-index 524d6077ac1b..ea5058618863 100644
---- a/include/dt-bindings/reset/amlogic,meson-gxbb-reset.h
-+++ b/include/dt-bindings/reset/amlogic,meson-gxbb-reset.h
+diff --git a/include/dt-bindings/reset/amlogic,meson8b-reset.h b/include/dt-bindings/reset/amlogic,meson8b-reset.h
+index 614aff2c7aff..c614438bcbdb 100644
+--- a/include/dt-bindings/reset/amlogic,meson8b-reset.h
++++ b/include/dt-bindings/reset/amlogic,meson8b-reset.h
 @@ -1,56 +1,7 @@
 +/* SPDX-License-Identifier: GPL-2.0 OR BSD-3-Clause */
  /*
@@ -166,8 +167,8 @@ index 524d6077ac1b..ea5058618863 100644
 - * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 - * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   */
- #ifndef _DT_BINDINGS_AMLOGIC_MESON_GXBB_RESET_H
- #define _DT_BINDINGS_AMLOGIC_MESON_GXBB_RESET_H
+ #ifndef _DT_BINDINGS_AMLOGIC_MESON8B_RESET_H
+ #define _DT_BINDINGS_AMLOGIC_MESON8B_RESET_H
 -- 
 2.22.0
 
