@@ -2,90 +2,71 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id DB0D47DBC3
-	for <lists+linux-amlogic@lfdr.de>; Thu,  1 Aug 2019 14:46:46 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1E85F7DC3F
+	for <lists+linux-amlogic@lfdr.de>; Thu,  1 Aug 2019 15:10:55 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:
+	In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=6tFN59jRtEIGbwjyvfxIMmv7EkTTCnC9iJSo4NHV9Zs=; b=SzVdu4BTlfX8Cd
-	tzVJyqRqD3M4i1dTjNTzX++a1I0W4VwlEcQw/LBLTnjtvqlVcZZ2kqNaFJj2aQef8luc44SiRBQq4
-	NZXknLlaJ0Bd/WW1+Q3awVFPvCO1xhE5xLKUtlxD46U1PJaZf9M3Txt9ut1a1yuPxfL4Pia6EZtWV
-	MSh9Wz1CPQeVKEw6PrY4I+301R6FrVRHUXy/PjKgO+KCUSxT1R40LLV2pnr+Xu4m51MvKWGarWV5c
-	ux8dv+tfALbIUaeRrq/k40PCQQhY+BgK2TTYQvGm0ZA9b1o1r02Fy8dXxMiQANg5+LxaIlTHUH4Ml
-	3ezMe2EEZRakhsgfKqfQ==;
+	References:List-Owner; bh=b1TiaM4lz2WtHrmbmzFUSKir8lnYLsZOM1/8u38gUps=; b=QJ1
+	0vKSWZz7EdhNEHZWuEFppJkk68STFqYKWnAGycjmlTQ6xzIlZkSWiR22IaSfZ3Gz0d/Zb0cqYqvnn
+	UjF7sWkB5YdawRBqmIvKPQsRIzQzlwZtCqnPAy2o5RjcnkWY9hNGomtLI+aaGu5EcFIR8Mm+UCkeL
+	yC9YGt5bZzuQkjDfMIT1di+oeER8Uf6N2hlJuC7ZjnnSjfIidREqq2NaUTpfLTw9YGgXQ5HkBO5WK
+	3eTZ8UHkdiwbhMvmPsKdkCtKzIYfdJo4ji2GjVGMS0jtabeut/+PEquVGd7/fpFlQjVjoIoJ8zqhH
+	oIGQVpb/a8QFVYriT1/2ghTHxs/dVbg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1htATh-0003vV-AY; Thu, 01 Aug 2019 12:46:41 +0000
-Received: from mail-wm1-x342.google.com ([2a00:1450:4864:20::342])
+	id 1htAr3-0008Ng-8f; Thu, 01 Aug 2019 13:10:49 +0000
+Received: from heliosphere.sirena.org.uk ([2a01:7e01::f03c:91ff:fed4:a3b6])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1htATQ-0003mG-Fj
- for linux-amlogic@lists.infradead.org; Thu, 01 Aug 2019 12:46:26 +0000
-Received: by mail-wm1-x342.google.com with SMTP id l2so63037603wmg.0
- for <linux-amlogic@lists.infradead.org>; Thu, 01 Aug 2019 05:46:23 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=date:from:to:cc:subject:message-id:references:mime-version
- :content-disposition:in-reply-to:user-agent;
- bh=cZCY92RMfghZJsFP1Vz0w4UO7UoxBKe+hI+aMfOaKM8=;
- b=vUXnXx5kNtIFZ0huFPiV/HxhJIbQdYlkFxXwCPijUEreVyNC/1pxQMald0tr6/5oU+
- Ku4JTGZOhL69MmV/Q5dbk4vWDah5/JPXEMYMNks43DojB8zmCbVBMLURc1fImEZ3YdI2
- doKD9u7bejJ/UhT/GPcMTjZ3kZuOJbdM7J2rwAqwTZGpSbztlqyjT6hvwS7ltXOWjcBk
- TrrLVnQKDRIuXxZS6tfQvsGHNDhV8M+CJGdf4t3WAuO9zvRHvrl20GzPHvRRlfXh2a0J
- Ljef/yOoYB7o1JF7ZWTjXgMEN9MOgFo75dmzLwOg0n27FcmGHiQyvs9PyZVPgyw/6NZ0
- KxRA==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=cZCY92RMfghZJsFP1Vz0w4UO7UoxBKe+hI+aMfOaKM8=;
- b=TDfwAOc18ALpv77mqNjziiPF2x5W+arqUhnCeNPY96RHv2w9iz+SsWB+N0C55bfaXj
- q+n6dMj+06EnxKYD4WXhA9n8kQ0JeCn3ELB4C1gmgx2pMOepkrVgz6OpykDAKDOLp4V4
- jSJxJl0b6n8li6PftDj5UM4Xgqn2dqTaDb7KFEImU2oEHjUUMyn2Y5SPUmsuwRWMHKLE
- utch8MuLzqsczs1m/ERynIOSi7aIM4Xh7jLJHlQyVq9J8FNsWOM0J59NA0aKVTYYryL+
- vcdemSqlMn4NzTc/Totd7+FytFvWD6soeos65M7wfYNWhL3M4Lv55SnNdQsMcl4RLxW2
- y/4A==
-X-Gm-Message-State: APjAAAXHBIOS3siEGbtH91zaVUtQwLUQfTJlaDPN9ps6W8Hcj3R8v9kx
- Wi3PyrgHK0WbmU1pmZFK2dWyZg==
-X-Google-Smtp-Source: APXvYqx/EB+krQbuHfDMiwKikaXaFO+7qwPqB2cAqkBDAaRdrKTmsFkpl+/WGtL6bOLXv0IkeDY/3A==
-X-Received: by 2002:a1c:3cc4:: with SMTP id
- j187mr110992050wma.36.1564663582722; 
- Thu, 01 Aug 2019 05:46:22 -0700 (PDT)
-Received: from Red ([2a01:cb1d:147:7200:2e56:dcff:fed2:c6d6])
- by smtp.googlemail.com with ESMTPSA id f70sm96317715wme.22.2019.08.01.05.46.20
- (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
- Thu, 01 Aug 2019 05:46:21 -0700 (PDT)
-Date: Thu, 1 Aug 2019 14:46:18 +0200
-From: LABBE Corentin <clabbe@baylibre.com>
-To: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-Subject: Re: [PATCH 2/4] crypto: amlogic: Add crypto accelerator for amlogic
- GXL
-Message-ID: <20190801124618.GA30316@Red>
-References: <1564083776-20540-1-git-send-email-clabbe@baylibre.com>
- <1564083776-20540-3-git-send-email-clabbe@baylibre.com>
- <CAFBinCD7pgUaBJgeGHTOu-uZRA9a6K2kxPsu+huKe23wcnKPoA@mail.gmail.com>
-MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <CAFBinCD7pgUaBJgeGHTOu-uZRA9a6K2kxPsu+huKe23wcnKPoA@mail.gmail.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+ id 1htAr0-0008MI-6c
+ for linux-amlogic@lists.infradead.org; Thu, 01 Aug 2019 13:10:47 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=sirena.org.uk; s=20170815-heliosphere; h=Date:Message-Id:In-Reply-To:
+ Subject:Cc:To:From:Sender:Reply-To:MIME-Version:Content-Type:
+ Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:References:
+ List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:
+ List-Archive; bh=4qLtngAUhWvMnevBCxBv/fEsOgw3HSy6g6y7VvFe9/M=; b=Q5jVLcLmFtbi
+ NOQtN8ynuRsOoNuVlWGVOvJjbk65tLp4obfBX9m/IH5XZF2L7A3Iz/LtnuPc4VWQa4Iixv96gPK/a
+ bD+HJaJ92pFR9zI3BcQ8c4gkrd3SKCeqwMhPRtU2B86t1j3/rUww1rOSKpaOOu60wJIdwd+J2qc3M
+ jENmY=;
+Received: from cpc102320-sgyl38-2-0-cust46.18-2.cable.virginm.net
+ ([82.37.168.47] helo=ypsilon.sirena.org.uk)
+ by heliosphere.sirena.org.uk with esmtpsa
+ (TLS1.3:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.92)
+ (envelope-from <broonie@sirena.org.uk>)
+ id 1htAqu-0004iq-Mg; Thu, 01 Aug 2019 13:10:40 +0000
+Received: by ypsilon.sirena.org.uk (Postfix, from userid 1000)
+ id 31DD02742D42; Thu,  1 Aug 2019 14:10:40 +0100 (BST)
+From: Mark Brown <broonie@kernel.org>
+To: Jerome Brunet <jbrunet@baylibre.com>
+Subject: Applied "ASoC: codec2codec: fill some of the runtime stream
+ parameters" to the asoc tree
+In-Reply-To: <20190725165949.29699-7-jbrunet@baylibre.com>
+X-Patchwork-Hint: ignore
+Message-Id: <20190801131040.31DD02742D42@ypsilon.sirena.org.uk>
+Date: Thu,  1 Aug 2019 14:10:40 +0100 (BST)
+X-Bad-Reply: In-Reply-To but no 'Re:' in Subject.
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190801_054624_528859_70810F6D 
-X-CRM114-Status: GOOD (  18.62  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190801_061046_245402_C2BDF285 
+X-CRM114-Status: GOOD (  10.93  )
+X-Spam-Score: 0.1 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (0.1 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:342 listed in]
- [list.dnswl.org]
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -97,60 +78,76 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: mark.rutland@arm.com, devicetree@vger.kernel.org,
- herbert@gondor.apana.org.au, baylibre-upstreaming@groups.io,
- khilman@baylibre.com, linux-kernel@vger.kernel.org, robh+dt@kernel.org,
- linux-crypto@vger.kernel.org, linux-amlogic@lists.infradead.org,
- davem@davemloft.net, linux-arm-kernel@lists.infradead.org
+Cc: devicetree@vger.kernel.org, alsa-devel@alsa-project.org,
+ Kevin Hilman <khilman@baylibre.com>, Liam Girdwood <lgirdwood@gmail.com>,
+ linux-kernel@vger.kernel.org, Mark Brown <broonie@kernel.org>,
+ linux-amlogic@lists.infradead.org
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On Sat, Jul 27, 2019 at 02:17:38PM +0200, Martin Blumenstingl wrote:
-> Hi Corentin,
-> 
-> it's great to see you working on this :)
-> 
-> On Thu, Jul 25, 2019 at 9:45 PM Corentin Labbe <clabbe@baylibre.com> wrote:
-> >
-> > This patch adds support for the amlogic GXL cryptographic offloader present
-> > on GXL SoCs.
-> >
-> > This driver supports AES cipher in CBC/ECB mode.
-> >
-> > Signed-off-by: Corentin Labbe <clabbe@baylibre.com>
-> > ---
-> >  drivers/crypto/Kconfig                  |   2 +
-> >  drivers/crypto/Makefile                 |   1 +
-> >  drivers/crypto/amlogic/Kconfig          |  24 ++
-> >  drivers/crypto/amlogic/Makefile         |   2 +
-> >  drivers/crypto/amlogic/amlogic-cipher.c | 358 ++++++++++++++++++++++++
-> >  drivers/crypto/amlogic/amlogic-core.c   | 326 +++++++++++++++++++++
-> >  drivers/crypto/amlogic/amlogic.h        | 172 ++++++++++++
-> >  7 files changed, 885 insertions(+)
-> >  create mode 100644 drivers/crypto/amlogic/Kconfig
-> >  create mode 100644 drivers/crypto/amlogic/Makefile
-> >  create mode 100644 drivers/crypto/amlogic/amlogic-cipher.c
-> >  create mode 100644 drivers/crypto/amlogic/amlogic-core.c
-> >  create mode 100644 drivers/crypto/amlogic/amlogic.h
-> there are two different crypto IPs on Amlogic SoCs:
-> - GXL and newer use the "BLKMV" crypto IP
-> - GXBB, Meson8/Meson8b/Meson8m2 (and probably older SoCs) use the
-> "NDMA" crypto IP
-> 
+The patch
 
-I believed it was the opposite. (BLKMV the older, NDMA the newer)
-Anyway, on the datasheet I found (s905d), neither NDMA or BLKMV is mentioned, it is just called Crypto Engine.
-So I think GXL is the best choice.
+   ASoC: codec2codec: fill some of the runtime stream parameters
 
-> personally I think it makes sense to either have the IP name (blkmv)
-> or SoC name (GXL) in the file or directory names as well as being
-> consistent with that in the Kconfig option names
+has been applied to the asoc tree at
 
-Ok I will rename files to amlogic-gxl-xxx
+   https://git.kernel.org/pub/scm/linux/kernel/git/broonie/sound.git for-5.4
 
-Thanks
+All being well this means that it will be integrated into the linux-next
+tree (usually sometime in the next 24 hours) and sent to Linus during
+the next merge window (or sooner if it is a bug fix), however if
+problems are discovered then the patch may be dropped or reverted.  
+
+You may get further e-mails resulting from automated or manual testing
+and review of the tree, please engage with people reporting problems and
+send followup patches addressing any issues that are reported if needed.
+
+If any updates are required or you are submitting further changes they
+should be sent as incremental updates against current git, existing
+patches will not be replaced.
+
+Please add any relevant lists and maintainers to the CCs when replying
+to this mail.
+
+Thanks,
+Mark
+
+From 9de98628c895d15427138073986eab1e3ce39cb4 Mon Sep 17 00:00:00 2001
+From: Jerome Brunet <jbrunet@baylibre.com>
+Date: Thu, 25 Jul 2019 18:59:49 +0200
+Subject: [PATCH] ASoC: codec2codec: fill some of the runtime stream parameters
+
+Set the information provided struct snd_soc_pcm_stream in the
+struct snd_pcm_runtime of the codec to codec link.
+
+Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
+Link: https://lore.kernel.org/r/20190725165949.29699-7-jbrunet@baylibre.com
+Signed-off-by: Mark Brown <broonie@kernel.org>
+---
+ sound/soc/soc-dapm.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/sound/soc/soc-dapm.c b/sound/soc/soc-dapm.c
+index 1c953a1b46ce..e16838e1bda2 100644
+--- a/sound/soc/soc-dapm.c
++++ b/sound/soc/soc-dapm.c
+@@ -3874,6 +3874,11 @@ snd_soc_dai_link_event_pre_pmu(struct snd_soc_dapm_widget *w,
+ 		dapm_update_dai_unlocked(substream, params, sink);
+ 	}
+ 
++	runtime->format = params_format(params);
++	runtime->subformat = params_subformat(params);
++	runtime->channels = params_channels(params);
++	runtime->rate = params_rate(params);
++
+ out:
+ 	if (ret < 0)
+ 		kfree(runtime);
+-- 
+2.20.1
 
 
 _______________________________________________
