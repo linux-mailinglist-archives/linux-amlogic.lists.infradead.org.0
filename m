@@ -2,72 +2,73 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3163C7D6AF
-	for <lists+linux-amlogic@lfdr.de>; Thu,  1 Aug 2019 09:55:14 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 918887D6BB
+	for <lists+linux-amlogic@lfdr.de>; Thu,  1 Aug 2019 09:55:28 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=iLkLL98ixE4sAzzKNkU4qOe0YJ61rQgVSH6PLSTPBS4=; b=gkfYL6Y3LlfzwA
-	K7ZinYNBAgsSSOulFgbLzKHE2AFF/22hHIuSqX/YIsM5vtwZX4SMNJciXruZ57R4w9gdu+WEqflZz
-	JNPe54EoAGDgp7xioTmb/ktMedmEOMV9zMuEsoBSO5fJSQVeV7Y0ReOTwnRdUiYj9D66QD7+2VSMH
-	z8oG91+EtqkvP3RtSwSMhJQ8/G9LTwfs5KbVdINu0Rhxcz382MvOGmKt0DAg2W+ruf3wo6LaLXu+6
-	ScFzUg9QjxAJlawxmfhDZb9xjAyIy4XeFeXQa2FER0FayMJkQyrwqi2qIZ2ejA5J6IpizstQH/6fV
-	ns2BlWiFcikmWqbFQJMg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=LP15NefEP/FYkQS2CLeznEo0uNrZlUrOvm12yHFlDSQ=; b=ehHtHuYFtivm5Y
+	9DB47/065MXVbbhK8k78H1sKDuM76ya88o1OgKm/PaktankRdhnhPE3FHV6BQRNW8owczE0gl5zB6
+	4oO86XMr4dfkTPXPLk70sVu38nRtVyFikgVaKWUwWu2JwEgp+hXJe8KgAPE7sjGkPlMyzvxpCJ6be
+	79+o/ZRTqOWaCftoTkawCAa3rX294syy+YqY6zvbFgeHwRKYbftxcLCmxnf81yF3/NPyvLSEnZM3+
+	9JaNotQgaWJxiHDfo6FQ78fVcILUuFXvEiStUkWc7O19rPVTg/1xfETfykPWv4naNPdlaIm9sfhCx
+	OnCKTEHNlh4kwFlfa5+Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1ht5vY-0001ek-07; Thu, 01 Aug 2019 07:55:08 +0000
+	id 1ht5vq-0002fO-QU; Thu, 01 Aug 2019 07:55:26 +0000
 Received: from mail-wm1-x342.google.com ([2a00:1450:4864:20::342])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1ht5vS-0000x3-59
- for linux-amlogic@lists.infradead.org; Thu, 01 Aug 2019 07:55:04 +0000
-Received: by mail-wm1-x342.google.com with SMTP id l2so62212975wmg.0
- for <linux-amlogic@lists.infradead.org>; Thu, 01 Aug 2019 00:55:01 -0700 (PDT)
+ id 1ht5vS-0000xE-9A
+ for linux-amlogic@lists.infradead.org; Thu, 01 Aug 2019 07:55:06 +0000
+Received: by mail-wm1-x342.google.com with SMTP id h19so3011965wme.0
+ for <linux-amlogic@lists.infradead.org>; Thu, 01 Aug 2019 00:55:02 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=DCllPmBw4lut+Uqi6OBcOMhCVblvrSC3X451qg4jFyI=;
- b=1jyb7sI9h2Uu/fkFZ5BhBBVZzi57jo75CTaozgehdA86w5n7mdgbzo60jiiZVdMxE6
- pU9AtBQsVZQWlm3Fj86Y/7/Guo6t5FrrkQTNpzN1jnFbIPJxcn2uLdrBjAQiIB45ETGJ
- J9TgoQgHrrAtw2229GrQF+4d8T/JvLYVBTUb4XHiKyi39GxSMmrRHylwfXm10gJ9R5Br
- 0TOn0DO9J7iG7Nf18SBjlN5QL59+5/Kw2mEDuX16FEcZc+Tghy0Pp2JccwIvZ9bJSxTe
- qBygl1LSw4Rk33E5JtmMmvOhd2R26tZZH7kmUCnLwzxgd4wcqbMN+ZWyjQ1jWXxE55Ko
- lwtQ==
+ h=from:to:cc:subject:date:message-id:in-reply-to:references
+ :mime-version:content-transfer-encoding;
+ bh=VDh+yTCqb2E9NnVNrkncEUqcUL07YA1bsORJMbcQ8lw=;
+ b=IzvL6Fh8RsohbqMby4W0y9O0NYlulPkbH7/6/KE7ev/epMQUxqEMGoBNO7hasjRB01
+ /HKKAZluufYjxDeMWVHHn/PBOC16QdfF8bFsHPAH/y0seF5aLbTFn3qY0xodZ77nucSY
+ xYMW3sPy+9Q9CM6qMRRSINJH5EbEDk5vXnNhNZLhPlQpUwj+N7ffv9fojxS7O7dsAM1Q
+ wmk7yQI6F4l8KrAM7trg2kTFx7sn9OQD/diXUgZ9QzkMHRXcqBM5bSemJqoYhaxQhj/7
+ E9wFCTeeCCjgGVkitxS5ZV+i0H0VTV0ObPeyma9le55NMAyecpfvqWXsQP3FV+hdWzCM
+ UtSw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=DCllPmBw4lut+Uqi6OBcOMhCVblvrSC3X451qg4jFyI=;
- b=ARN3ZVYVs4SJNg5WiBgkufTOKqoSsbgMeX8OLOfayTUJm2SEIuC6GXB+zxXo1KvesX
- noC4WgK1g6za3N9A4b+HJX7DT1sPnLmyOGQNK2Rp1DlUnSkRq9U+d2dIezCwvC3h3ZTK
- 6wg/e+GWWl+V3+ATSNOXszXmuyZurHrkskwD6cd4znnKeq0en+FYO+idGXg3kWcBK8nR
- awya37K74Kod9CI3m5Rf187Urrbsn9qn1SvYzsm+NHrbhqYFOes96whgpIslYTCIvgqW
- hnIbvNW09Jp1mjJLjYn9D2DYVfxJC21I7N/K7h7xxiC2x5fA8tr/FQ6feobBYKXuXNZT
- yjkA==
-X-Gm-Message-State: APjAAAWeIJzHXeJL3pMIrGM7roXHLliaHgwU/0kwMGy245tLUqV6TRYR
- NwgNgOip2vhUD5fqn1qIEH3P1Q==
-X-Google-Smtp-Source: APXvYqzlDJs+p7+lHmLvPaIqh7+AzhIFpJlRyvlJ/W3TVENURBpyKur7D9F3PzuD0Ye68XsD7jxAXw==
-X-Received: by 2002:a1c:407:: with SMTP id 7mr120943986wme.113.1564646100198; 
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
+ :references:mime-version:content-transfer-encoding;
+ bh=VDh+yTCqb2E9NnVNrkncEUqcUL07YA1bsORJMbcQ8lw=;
+ b=mBgNM/1TWZn3rx6vQOBhHEXFLdBrZtYpXJKlyJ6AQ19HgNyb+ywHjtHlzldqoseYWX
+ gBRUE8WXdj75L3W+t0CeqlxeatfRPq1UB2ATbJnp+Sffs7Pt3CsuRy9JHJ6Gkhw80trr
+ zjyLhISD9EKy/YCpz3bCqVd5sf/qIAYKhecYbD5o+thTAR3lD6Na559gWCKeDyuSUpEO
+ VpMy//Ju45UGACs8uJu6oigpReE9+5A4gEdRz4XkJB1kpk4srjeePceICm0l2wu0bvo+
+ WePf/tdRHkkPdNjNB+7v7KrCAdW0ZBvTdrKbIHFUD0O0qWD7I6QomcWdZ979kUap2vpc
+ cqKw==
+X-Gm-Message-State: APjAAAXRrJh5yp5jJgetYTYeL3TZlJBtfSrn17UJ8CNLIL8JRM/g1/gW
+ FCpBtPDcw13x0gyVchFQJ57m1g==
+X-Google-Smtp-Source: APXvYqzGk38l6yq4GXNCBAzayn9dzPlX9QGyiHIVNo8jdmjDHvCA/27f71y7td8ETAlQCK68vOhRjA==
+X-Received: by 2002:a7b:ce01:: with SMTP id m1mr34128533wmc.1.1564646100811;
  Thu, 01 Aug 2019 00:55:00 -0700 (PDT)
 Received: from bender.baylibre.local
  (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
- by smtp.gmail.com with ESMTPSA id y12sm64199221wrm.79.2019.08.01.00.54.59
+ by smtp.gmail.com with ESMTPSA id y12sm64199221wrm.79.2019.08.01.00.55.00
  (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Thu, 01 Aug 2019 00:54:59 -0700 (PDT)
+ Thu, 01 Aug 2019 00:55:00 -0700 (PDT)
 From: Neil Armstrong <narmstrong@baylibre.com>
 To: p.zabel@pengutronix.de
-Subject: [PATCH 0/3] reset: meson: update with SPDX Licence identifier
-Date: Thu,  1 Aug 2019 09:54:51 +0200
-Message-Id: <20190801075454.23547-1-narmstrong@baylibre.com>
+Subject: [PATCH 1/3] reset: reset-meson: update with SPDX Licence identifier
+Date: Thu,  1 Aug 2019 09:54:52 +0200
+Message-Id: <20190801075454.23547-2-narmstrong@baylibre.com>
 X-Mailer: git-send-email 2.22.0
+In-Reply-To: <20190801075454.23547-1-narmstrong@baylibre.com>
+References: <20190801075454.23547-1-narmstrong@baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190801_005502_261708_433197CF 
-X-CRM114-Status: UNSURE (   5.80  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190801_005502_342900_B48ED823 
+X-CRM114-Status: GOOD (  16.08  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -99,20 +100,75 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-This serie updates the Amlogic Reset driver and bindings.
+Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
+---
+ drivers/reset/reset-meson.c | 51 +------------------------------------
+ 1 file changed, 1 insertion(+), 50 deletions(-)
 
-Neil Armstrong (3):
-  reset: reset-meson: update with SPDX Licence identifier
-  dt-bindings: reset: amlogic,meson-gxbb-reset: update with SPDX Licence
-    identifier
-  dt-bindings: reset: amlogic,meson8b-reset: update with SPDX Licence
-    identifier
-
- drivers/reset/reset-meson.c                   | 51 +------------------
- .../reset/amlogic,meson-gxbb-reset.h          | 51 +------------------
- .../dt-bindings/reset/amlogic,meson8b-reset.h | 51 +------------------
- 3 files changed, 3 insertions(+), 150 deletions(-)
-
+diff --git a/drivers/reset/reset-meson.c b/drivers/reset/reset-meson.c
+index 5242e0679df7..7d05d766e1ea 100644
+--- a/drivers/reset/reset-meson.c
++++ b/drivers/reset/reset-meson.c
+@@ -1,58 +1,9 @@
++// SPDX-License-Identifier: GPL-2.0 OR BSD-3-Clause
+ /*
+  * Amlogic Meson Reset Controller driver
+  *
+- * This file is provided under a dual BSD/GPLv2 license.  When using or
+- * redistributing this file, you may do so under either license.
+- *
+- * GPL LICENSE SUMMARY
+- *
+- * Copyright (c) 2016 BayLibre, SAS.
+- * Author: Neil Armstrong <narmstrong@baylibre.com>
+- *
+- * This program is free software; you can redistribute it and/or modify
+- * it under the terms of version 2 of the GNU General Public License as
+- * published by the Free Software Foundation.
+- *
+- * This program is distributed in the hope that it will be useful, but
+- * WITHOUT ANY WARRANTY; without even the implied warranty of
+- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+- * General Public License for more details.
+- *
+- * You should have received a copy of the GNU General Public License
+- * along with this program; if not, see <http://www.gnu.org/licenses/>.
+- * The full GNU General Public License is included in this distribution
+- * in the file called COPYING.
+- *
+- * BSD LICENSE
+- *
+  * Copyright (c) 2016 BayLibre, SAS.
+  * Author: Neil Armstrong <narmstrong@baylibre.com>
+- *
+- * Redistribution and use in source and binary forms, with or without
+- * modification, are permitted provided that the following conditions
+- * are met:
+- *
+- *   * Redistributions of source code must retain the above copyright
+- *     notice, this list of conditions and the following disclaimer.
+- *   * Redistributions in binary form must reproduce the above copyright
+- *     notice, this list of conditions and the following disclaimer in
+- *     the documentation and/or other materials provided with the
+- *     distribution.
+- *   * Neither the name of Intel Corporation nor the names of its
+- *     contributors may be used to endorse or promote products derived
+- *     from this software without specific prior written permission.
+- *
+- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+- * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+- * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+- * A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+- * OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+- * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+- * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+- * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+- * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  */
+ #include <linux/err.h>
+ #include <linux/init.h>
 -- 
 2.22.0
 
