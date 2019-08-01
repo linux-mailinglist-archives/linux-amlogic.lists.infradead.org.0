@@ -2,71 +2,86 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2CE8D7DC3E
-	for <lists+linux-amlogic@lfdr.de>; Thu,  1 Aug 2019 15:10:52 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id EE5CC7DCFC
+	for <lists+linux-amlogic@lfdr.de>; Thu,  1 Aug 2019 15:57:10 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:
-	In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	References:List-Owner; bh=YaMP21GPl5s/WFr9IFHJhTBi7wp3FbayzXNdSFWoIsw=; b=IH5
-	ohNtrXOMXCgXcqUifaM/sPyc574NIPJIUXCiNKcT9BQa23e29NXv2pwJbx9fnF2iK8GW6mfE6KQtS
-	dRPt2oqfsTFSDpm4Llhj/zmzavJIoswprv4XI4JtCtY4UZXwltr3i/0PoeKJ7UukvEIZPCOvfTNQf
-	AL7B4gyKng7954k6QKtyBRuGMg5F1Ko7FusghNt2Tz76xUjqiPhUKk2dyH3LQJlah5vmrMThbq8uw
-	QRPtLXMzXTQLePYZNoX7CMgCuNz1lpXIcAGXppzlvRddBG5nQXO2tYMWVqg2lLCyMlEJjuytNZck/
-	+eOXZQB/eW1L/hgv99Q6BHuliVWZojg==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=HgAy+w1NK3PV6hMItPrKAwpSbabhbv+iQEjXlvIqRyc=; b=MV2+iNYvTfKHDf
+	uTstVOmvpWOHsFYzzf2CG7t8/9DO2xZR8da7vXqYgnGlXkT5kOxV/gU2IK9gV1vEeODtGTcSq0qpz
+	N7ol64u79355gGsNG2WcSGPwhqEKo3Q/4GpiZnbRlYXbF8P2ONTl91yX07Vm1RG5ghJjppfIibp9g
+	mUJxYIDMPvtXtV7uuuCazz86xFAO8XE4es0FZ7YwPZ5eEOF7mCasN85WWTEPz/HupK9LBAYepxz+s
+	t1v2xFG2mJHfoIiD++0bDO58WICzqpTGEgHbhmmcKo6JdKSySDfFnVdkvwBfk/WMfP+eLhJujX604
+	JVo8QvD38Sn2VCk1ud3w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1htAr4-0008Oe-LH; Thu, 01 Aug 2019 13:10:50 +0000
-Received: from heliosphere.sirena.org.uk ([2a01:7e01::f03c:91ff:fed4:a3b6])
+	id 1htBZp-0001Ek-Od; Thu, 01 Aug 2019 13:57:05 +0000
+Received: from mail-wm1-x32b.google.com ([2a00:1450:4864:20::32b])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1htAr0-0008MF-1n
- for linux-amlogic@lists.infradead.org; Thu, 01 Aug 2019 13:10:47 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sirena.org.uk; s=20170815-heliosphere; h=Date:Message-Id:In-Reply-To:
- Subject:Cc:To:From:Sender:Reply-To:MIME-Version:Content-Type:
- Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:References:
- List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:
- List-Archive; bh=kZ2POKn0qn2LN7RXkQ6obBp4mrNriTeVZiQqjkwNIM8=; b=peAGhlj0SUKa
- xQqDLR7xGRe9C86XgIthDd/Na2s46vP6u+fSU1qyczOIfdZ8BNQAOZNkcwqhQrRwVZ58yJ1q3TXtY
- MwHuOInSQ7G6VKtJU3lthXny68wqhqHB0L8IaY2fXXLcYjDaGclY/ouB8gDOCZTrBJDNyD0CFApG7
- CIduw=;
-Received: from cpc102320-sgyl38-2-0-cust46.18-2.cable.virginm.net
- ([82.37.168.47] helo=ypsilon.sirena.org.uk)
- by heliosphere.sirena.org.uk with esmtpsa
- (TLS1.3:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.92)
- (envelope-from <broonie@sirena.org.uk>)
- id 1htAqv-0004j0-3n; Thu, 01 Aug 2019 13:10:41 +0000
-Received: by ypsilon.sirena.org.uk (Postfix, from userid 1000)
- id A018F2742C48; Thu,  1 Aug 2019 14:10:40 +0100 (BST)
-From: Mark Brown <broonie@kernel.org>
-To: Jerome Brunet <jbrunet@baylibre.com>
-Subject: Applied "ASoC: create pcm for codec2codec links as well" to the asoc
- tree
-In-Reply-To: <20190725165949.29699-5-jbrunet@baylibre.com>
-X-Patchwork-Hint: ignore
-Message-Id: <20190801131040.A018F2742C48@ypsilon.sirena.org.uk>
-Date: Thu,  1 Aug 2019 14:10:40 +0100 (BST)
-X-Bad-Reply: In-Reply-To but no 'Re:' in Subject.
+ id 1htBZa-0000zX-GP
+ for linux-amlogic@lists.infradead.org; Thu, 01 Aug 2019 13:56:52 +0000
+Received: by mail-wm1-x32b.google.com with SMTP id g67so59191225wme.1
+ for <linux-amlogic@lists.infradead.org>; Thu, 01 Aug 2019 06:56:49 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=baylibre-com.20150623.gappssmtp.com; s=20150623;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=lIm81eDhukyw6fbCl/+3h+QPFrHXYcRhnM9vCZm0FBU=;
+ b=13O0vL5DX2cs4dd++hzfRHv1CPifo+nEBZIfEK/xPAm8LBOTVk9bmKI2ZMbRTH1Qny
+ gGc5Etb+oieTHOJzEcqzxWDGO6QQqX8ZqANnbyLDBv2TvisCVoaDgG+Sk1kHTmon4u7p
+ 23GDtno64u2hTvVK4IASbns2pDTl99MQ9lBi+m6sVEXUkUpyjOdGM2BNfLvVc5T/fqbP
+ 9RYMi1RBDw8zjzxwomGDcNw8yXfmP3fnwqKgmxCfWTSa6c7Ru6292ZJe91J3mLvVO1do
+ 1LdLqXyr4MpjfSurQz0trb5nuP2J9ZMxqd5XwmuOpZpWwQRuERRQeyL/kh7Wen7RuCof
+ AwZA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=lIm81eDhukyw6fbCl/+3h+QPFrHXYcRhnM9vCZm0FBU=;
+ b=qGoBncihdw6uocGSC71SN7kjWeJLrT0DGjubrngX8jqiFQ5QRV3bvjlEWEB3yGnfGQ
+ D8KXXJtpXqJUUPCu3v3X9G9onjxJF8n6RVN7PyG4L3LywyjgCRlho4fGP9PZCQorjRwI
+ Ai3jFTBb9sI4Kox3loVz4Fgzef12KwaAr0zXYbqRqp5bNiZ0jvcmMz6nDxkZYPO/dluT
+ ZpKDsUgnnQOOSOJmPWLxyie10nplgkwcW78maLNIxfvY/SfmXR7dbosblmM5VNULEdGn
+ 8EfBR3vYFsbU+4cpLbsRTVfFD72k2+3bCgA/G/PAqkBpV7U6b6h7DagP0kYjfVub5F2R
+ K+pg==
+X-Gm-Message-State: APjAAAXoUG+r19/E+URi/rSP5i+uc1jTua3M6n5X584ukE304Rrb03Ke
+ y3GVUpsyPZ7z9JFLY6tzrZJgVQ==
+X-Google-Smtp-Source: APXvYqz463HiGivdjA4sUX+UrCKICPNW2Wd+t3590qMCqsuXMkM9GjxeAukrBa4PObzWj+jGQXbYjg==
+X-Received: by 2002:a1c:ef0c:: with SMTP id
+ n12mr111159574wmh.132.1564667808166; 
+ Thu, 01 Aug 2019 06:56:48 -0700 (PDT)
+Received: from bender.baylibre.local
+ (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
+ by smtp.gmail.com with ESMTPSA id u6sm69659952wml.9.2019.08.01.06.56.47
+ (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
+ Thu, 01 Aug 2019 06:56:47 -0700 (PDT)
+From: Neil Armstrong <narmstrong@baylibre.com>
+To: robh+dt@kernel.org
+Subject: [RFC 0/9] dt-bindings: first tentative of conversion to yaml format
+Date: Thu,  1 Aug 2019 15:56:35 +0200
+Message-Id: <20190801135644.12843-1-narmstrong@baylibre.com>
+X-Mailer: git-send-email 2.22.0
+MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190801_061046_246625_84EF31B8 
-X-CRM114-Status: GOOD (  21.77  )
-X-Spam-Score: 0.1 (/)
+X-CRM114-CacheID: sfid-20190801_065650_575487_DFD251C0 
+X-CRM114-Status: UNSURE (   6.76  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.1 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:32b listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -78,213 +93,80 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, alsa-devel@alsa-project.org,
- Kevin Hilman <khilman@baylibre.com>, Liam Girdwood <lgirdwood@gmail.com>,
- linux-kernel@vger.kernel.org, Mark Brown <broonie@kernel.org>,
- linux-amlogic@lists.infradead.org
-MIME-Version: 1.0
+Cc: p.zabel@pengutronix.de, devicetree@vger.kernel.org,
+ linux-watchdog@vger.kernel.org, Neil Armstrong <narmstrong@baylibre.com>,
+ jassisinghbrar@gmail.com, linux-spi@vger.kernel.org,
+ linux-crypto@vger.kernel.org, linux-serial@vger.kernel.org,
+ linux-amlogic@lists.infradead.org, kishon@ti.com,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-The patch
+This is a first tentative to convert some of the simplest Amlogic
+dt-bindings to the yaml format.
 
-   ASoC: create pcm for codec2codec links as well
+All have been tested using :
+$ make ARCH=arm64 dtbs_check
 
-has been applied to the asoc tree at
+Issues with the amlogic arm64 DTs has already been identified thanks
+to the validation scripts. The DT fixes will be pushed once these yaml
+bindings are acked.
 
-   https://git.kernel.org/pub/scm/linux/kernel/git/broonie/sound.git for-5.4
+Neil Armstrong (9):
+  dt-bindings: mailbox: meson-mhu: convert to yaml
+  dt-bindings: rng: amlogic,meson-rng: convert to yaml
+  dt-bindings: spi: meson: convert to yaml
+  dt-bindings: reset: amlogic,meson-reset: convert to yaml
+  dt-bindings: arm: amlogic: amlogic,meson-gx-ao-secure: convert to yaml
+  dt-bindings: phy: meson-g12a-usb2-phy: convert to yaml
+  dt-bindings: phy: meson-g12a-usb3-pcie-phy: convert to yaml
+  dt-bindings: serial: meson-uart: convert to yaml
+  dt-bindings: watchdog: meson-gxbb-wdt: convert to yaml
 
-All being well this means that it will be integrated into the linux-next
-tree (usually sometime in the next 24 hours) and sent to Linus during
-the next merge window (or sooner if it is a bug fix), however if
-problems are discovered then the patch may be dropped or reverted.  
+ .../amlogic/amlogic,meson-gx-ao-secure.txt    | 28 -------
+ .../amlogic/amlogic,meson-gx-ao-secure.yaml   | 42 +++++++++++
+ .../devicetree/bindings/mailbox/meson-mhu.txt | 34 ---------
+ .../bindings/mailbox/meson-mhu.yaml           | 53 +++++++++++++
+ .../bindings/phy/meson-g12a-usb2-phy.txt      | 22 ------
+ .../bindings/phy/meson-g12a-usb2-phy.yaml     | 67 +++++++++++++++++
+ .../bindings/phy/meson-g12a-usb3-pcie-phy.txt | 22 ------
+ .../phy/meson-g12a-usb3-pcie-phy.yaml         | 61 +++++++++++++++
+ .../bindings/reset/amlogic,meson-reset.txt    | 19 -----
+ .../bindings/reset/amlogic,meson-reset.yaml   | 40 ++++++++++
+ .../bindings/rng/amlogic,meson-rng.txt        | 21 ------
+ .../bindings/rng/amlogic,meson-rng.yaml       | 37 +++++++++
+ .../bindings/serial/amlogic,meson-uart.txt    | 38 ----------
+ .../bindings/serial/amlogic,meson-uart.yaml   | 75 +++++++++++++++++++
+ .../bindings/spi/amlogic,meson-gx-spicc.yaml  | 74 ++++++++++++++++++
+ .../bindings/spi/amlogic,meson6-spifc.yaml    | 57 ++++++++++++++
+ .../devicetree/bindings/spi/spi-meson.txt     | 55 --------------
+ .../bindings/watchdog/meson-gxbb-wdt.txt      | 16 ----
+ .../bindings/watchdog/meson-gxbb-wdt.yaml     | 37 +++++++++
+ 19 files changed, 543 insertions(+), 255 deletions(-)
+ delete mode 100644 Documentation/devicetree/bindings/arm/amlogic/amlogic,meson-gx-ao-secure.txt
+ create mode 100644 Documentation/devicetree/bindings/arm/amlogic/amlogic,meson-gx-ao-secure.yaml
+ delete mode 100644 Documentation/devicetree/bindings/mailbox/meson-mhu.txt
+ create mode 100644 Documentation/devicetree/bindings/mailbox/meson-mhu.yaml
+ delete mode 100644 Documentation/devicetree/bindings/phy/meson-g12a-usb2-phy.txt
+ create mode 100644 Documentation/devicetree/bindings/phy/meson-g12a-usb2-phy.yaml
+ delete mode 100644 Documentation/devicetree/bindings/phy/meson-g12a-usb3-pcie-phy.txt
+ create mode 100644 Documentation/devicetree/bindings/phy/meson-g12a-usb3-pcie-phy.yaml
+ delete mode 100644 Documentation/devicetree/bindings/reset/amlogic,meson-reset.txt
+ create mode 100644 Documentation/devicetree/bindings/reset/amlogic,meson-reset.yaml
+ delete mode 100644 Documentation/devicetree/bindings/rng/amlogic,meson-rng.txt
+ create mode 100644 Documentation/devicetree/bindings/rng/amlogic,meson-rng.yaml
+ delete mode 100644 Documentation/devicetree/bindings/serial/amlogic,meson-uart.txt
+ create mode 100644 Documentation/devicetree/bindings/serial/amlogic,meson-uart.yaml
+ create mode 100644 Documentation/devicetree/bindings/spi/amlogic,meson-gx-spicc.yaml
+ create mode 100644 Documentation/devicetree/bindings/spi/amlogic,meson6-spifc.yaml
+ delete mode 100644 Documentation/devicetree/bindings/spi/spi-meson.txt
+ delete mode 100644 Documentation/devicetree/bindings/watchdog/meson-gxbb-wdt.txt
+ create mode 100644 Documentation/devicetree/bindings/watchdog/meson-gxbb-wdt.yaml
 
-You may get further e-mails resulting from automated or manual testing
-and review of the tree, please engage with people reporting problems and
-send followup patches addressing any issues that are reported if needed.
-
-If any updates are required or you are submitting further changes they
-should be sent as incremental updates against current git, existing
-patches will not be replaced.
-
-Please add any relevant lists and maintainers to the CCs when replying
-to this mail.
-
-Thanks,
-Mark
-
-From a342031cdd0818cb0fbcb44798211c7a02c7ca27 Mon Sep 17 00:00:00 2001
-From: Jerome Brunet <jbrunet@baylibre.com>
-Date: Thu, 25 Jul 2019 18:59:47 +0200
-Subject: [PATCH] ASoC: create pcm for codec2codec links as well
-
-At the moment, codec to codec links uses an ephemeral variable for
-the struct snd_pcm_substream. Also the struct snd_soc_pcm_runtime
-does not have real struct snd_pcm.
-
-This might a problem if the functions used by a codec on codec to
-codec link expect these structures to exist, and keep on existing
-during the life of the codec.
-
-For example, it is the case of the hdmi-codec, which uses
-snd_pcm_add_chmap_ctls(). For the controls to works, the pcm and
-substream must to exist.
-
-This change is first step, it create pcm (and substreams) for codec
-to codec links, in the same way as dpcm backend links.
-
-Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
-Link: https://lore.kernel.org/r/20190725165949.29699-5-jbrunet@baylibre.com
-Signed-off-by: Mark Brown <broonie@kernel.org>
----
- sound/soc/soc-core.c | 42 ++++++++++++------------------------------
- sound/soc/soc-pcm.c  | 35 ++++++++++++++++++++++++++++++++---
- 2 files changed, 44 insertions(+), 33 deletions(-)
-
-diff --git a/sound/soc/soc-core.c b/sound/soc/soc-core.c
-index 06697b2d96b1..da11e44b01aa 100644
---- a/sound/soc/soc-core.c
-+++ b/sound/soc/soc-core.c
-@@ -447,16 +447,6 @@ static void snd_soc_flush_all_delayed_work(struct snd_soc_card *card)
- 		flush_delayed_work(&rtd->delayed_work);
- }
- 
--static void codec2codec_close_delayed_work(struct work_struct *work)
--{
--	/*
--	 * Currently nothing to do for c2c links
--	 * Since c2c links are internal nodes in the DAPM graph and
--	 * don't interface with the outside world or application layer
--	 * we don't have to do any special handling on close.
--	 */
--}
--
- #ifdef CONFIG_PM_SLEEP
- /* powers down audio subsystem for suspend */
- int snd_soc_suspend(struct device *dev)
-@@ -1555,27 +1545,19 @@ static int soc_probe_link_dais(struct snd_soc_card *card,
- 		return ret;
- 	}
- 
--	if (!dai_link->params) {
--		/* create the pcm */
--		ret = soc_new_pcm(rtd, num);
--		if (ret < 0) {
--			dev_err(card->dev, "ASoC: can't create pcm %s :%d\n",
--				dai_link->stream_name, ret);
--			return ret;
--		}
--		ret = soc_link_dai_pcm_new(&cpu_dai, 1, rtd);
--		if (ret < 0)
--			return ret;
--		ret = soc_link_dai_pcm_new(rtd->codec_dais,
--					   rtd->num_codecs, rtd);
--		if (ret < 0)
--			return ret;
--	} else {
--		INIT_DELAYED_WORK(&rtd->delayed_work,
--				  codec2codec_close_delayed_work);
-+	/* create the pcm */
-+	ret = soc_new_pcm(rtd, num);
-+	if (ret < 0) {
-+		dev_err(card->dev, "ASoC: can't create pcm %s :%d\n",
-+			dai_link->stream_name, ret);
-+		return ret;
- 	}
--
--	return 0;
-+	ret = soc_link_dai_pcm_new(&cpu_dai, 1, rtd);
-+	if (ret < 0)
-+		return ret;
-+	ret = soc_link_dai_pcm_new(rtd->codec_dais,
-+				   rtd->num_codecs, rtd);
-+	return ret;
- }
- 
- static int soc_bind_aux_dev(struct snd_soc_card *card, int num)
-diff --git a/sound/soc/soc-pcm.c b/sound/soc/soc-pcm.c
-index fabeac164a6c..30264bc592f6 100644
---- a/sound/soc/soc-pcm.c
-+++ b/sound/soc/soc-pcm.c
-@@ -678,6 +678,16 @@ static void close_delayed_work(struct work_struct *work)
- 	mutex_unlock(&rtd->pcm_mutex);
- }
- 
-+static void codec2codec_close_delayed_work(struct work_struct *work)
-+{
-+	/*
-+	 * Currently nothing to do for c2c links
-+	 * Since c2c links are internal nodes in the DAPM graph and
-+	 * don't interface with the outside world or application layer
-+	 * we don't have to do any special handling on close.
-+	 */
-+}
-+
- /*
-  * Called by ALSA when a PCM substream is closed. Private data can be
-  * freed here. The cpu DAI, codec DAI, machine and components are also
-@@ -3011,6 +3021,12 @@ int soc_new_pcm(struct snd_soc_pcm_runtime *rtd, int num)
- 		playback = rtd->dai_link->dpcm_playback;
- 		capture = rtd->dai_link->dpcm_capture;
- 	} else {
-+		/* Adapt stream for codec2codec links */
-+		struct snd_soc_pcm_stream *cpu_capture = rtd->dai_link->params ?
-+			&cpu_dai->driver->playback : &cpu_dai->driver->capture;
-+		struct snd_soc_pcm_stream *cpu_playback = rtd->dai_link->params ?
-+			&cpu_dai->driver->capture : &cpu_dai->driver->playback;
-+
- 		for_each_rtd_codec_dai(rtd, i, codec_dai) {
- 			if (snd_soc_dai_stream_valid(codec_dai, SNDRV_PCM_STREAM_PLAYBACK) &&
- 			    snd_soc_dai_stream_valid(cpu_dai,   SNDRV_PCM_STREAM_PLAYBACK))
-@@ -3019,6 +3035,9 @@ int soc_new_pcm(struct snd_soc_pcm_runtime *rtd, int num)
- 			    snd_soc_dai_stream_valid(cpu_dai,   SNDRV_PCM_STREAM_CAPTURE))
- 				capture = 1;
- 		}
-+
-+		capture = capture && cpu_capture->channels_min;
-+		playback = playback && cpu_playback->channels_min;
- 	}
- 
- 	if (rtd->dai_link->playback_only) {
-@@ -3032,7 +3051,13 @@ int soc_new_pcm(struct snd_soc_pcm_runtime *rtd, int num)
- 	}
- 
- 	/* create the PCM */
--	if (rtd->dai_link->no_pcm) {
-+	if (rtd->dai_link->params) {
-+		snprintf(new_name, sizeof(new_name), "codec2codec(%s)",
-+			 rtd->dai_link->stream_name);
-+
-+		ret = snd_pcm_new_internal(rtd->card->snd_card, new_name, num,
-+					   playback, capture, &pcm);
-+	} else if (rtd->dai_link->no_pcm) {
- 		snprintf(new_name, sizeof(new_name), "(%s)",
- 			rtd->dai_link->stream_name);
- 
-@@ -3059,13 +3084,17 @@ int soc_new_pcm(struct snd_soc_pcm_runtime *rtd, int num)
- 	dev_dbg(rtd->card->dev, "ASoC: registered pcm #%d %s\n",num, new_name);
- 
- 	/* DAPM dai link stream work */
--	INIT_DELAYED_WORK(&rtd->delayed_work, close_delayed_work);
-+	if (rtd->dai_link->params)
-+		INIT_DELAYED_WORK(&rtd->delayed_work,
-+				  codec2codec_close_delayed_work);
-+	else
-+		INIT_DELAYED_WORK(&rtd->delayed_work, close_delayed_work);
- 
- 	pcm->nonatomic = rtd->dai_link->nonatomic;
- 	rtd->pcm = pcm;
- 	pcm->private_data = rtd;
- 
--	if (rtd->dai_link->no_pcm) {
-+	if (rtd->dai_link->no_pcm || rtd->dai_link->params) {
- 		if (playback)
- 			pcm->streams[SNDRV_PCM_STREAM_PLAYBACK].substream->private_data = rtd;
- 		if (capture)
 -- 
-2.20.1
+2.22.0
 
 
 _______________________________________________
