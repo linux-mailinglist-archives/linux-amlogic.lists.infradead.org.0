@@ -2,77 +2,56 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5CFC67DEAB
-	for <lists+linux-amlogic@lfdr.de>; Thu,  1 Aug 2019 17:20:26 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C15267F7C4
+	for <lists+linux-amlogic@lfdr.de>; Fri,  2 Aug 2019 15:05:23 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=LxRu8J42LW/PYhvwzO3kQtPZURRlOwrdCWfhhYOhfeo=; b=HyfMV7j1YkWHDy
-	yvnGT5p5DajfeiQQo/UcECLBbcy++s5F5Rhs5aHbjhXKRCarHgrUtR7Hj2FSSeDPu+84XsBz67BAH
-	r+q+/+aTIqaIpf66stAWNZ7ViKQ5RHlEiwFx40eqoeGf71JSiP35G5yveiP6c660PIHJ/hcOG7+ul
-	cThwCOpW0n3b39CEdfyEcteijd2EGgI8FIj7Mu5cfs7zwT3ru6BdA3iXlxiCAh8lWNrlSAR9wCGxc
-	hMCbB42uapCFRLeDYpQRFtNvEjr383aSIJWkSsZ+e69XVlmlb/C7iQvjBeBcEuHxZ/6+tpRLfcy35
-	MDUp438N7CoxIP9VuQMQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=IF4Dh9/F/9YVLVBvXSc3Q3k5caami0UzmcqLwSvxpUw=; b=FMcc3rIfIDgE81
+	VFnqQq5P1eok1FdwwEl5idEUMlX/SDiKur3/S0CmTzxcuqRJGpYavmi4FZruXjAsGEbmnk6l45xhB
+	aB8IvmB8f60LbM3AVJlJyYcBsUVZojNUs/sub/+dzs8oDRPhj0+9emOblH4vstLGotyyMJcI0BozK
+	yC7nxuTo4siJ4Z1PEH19o7o1ICKCDY0EMBCzXnbby+5I2gnu56ifTB37Pd9NMvz/UY94zNQkujeYk
+	9I1U3okjt7QMMbJ3lEH97V2svZSHRwuoi+ePjfvtonzZX/amW/6coGjMgVvgnXGWbjk1qZMoARW8+
+	FCIV0FLJFGhVCugUpCHw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1htCsP-0007vv-2h; Thu, 01 Aug 2019 15:20:21 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1htXFE-0007WN-Pa; Fri, 02 Aug 2019 13:05:16 +0000
+Received: from szxga04-in.huawei.com ([45.249.212.190] helo=huawei.com)
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1htCsL-0007vX-MO; Thu, 01 Aug 2019 15:20:18 +0000
-Received: from mail-qk1-f174.google.com (mail-qk1-f174.google.com
- [209.85.222.174])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
- (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 2CB0821726;
- Thu,  1 Aug 2019 15:20:17 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1564672817;
- bh=A5WVsf7G2kFJI6lI2lC6kb+wdtK4qcYkyJefqOmwKnE=;
- h=References:In-Reply-To:From:Date:Subject:To:Cc:From;
- b=iPvinyI9HCcagqoyjJOmSXdt/1odOuDy24qOv1sHtO2tFYo60EpDtdKR/vJkNTLxQ
- p1YslmBdSI7GE9rHshrM3LJXBthjFmaRgRZ9sLnG6U5C+jCVIzUBAcJCSQjEKodcOE
- 71A/4oGB0Wb1P3jtkbdnyfpUrr3DzyZXYWLie7KI=
-Received: by mail-qk1-f174.google.com with SMTP id s22so52357047qkj.12;
- Thu, 01 Aug 2019 08:20:17 -0700 (PDT)
-X-Gm-Message-State: APjAAAWGmiJsK1u3+6SINQkA038sOYyWuNYWzyBfyoWi5pyCrw89/zqW
- x6vcp2L1x7yGqq9AySddYG2zNqoMy/PPwh8TzQ==
-X-Google-Smtp-Source: APXvYqyOTDfIkp0PiGP+4XgmfZUgR81KtILQm6TcrNNBpWndNc5glbXR+cfHFaU1qak5P984zIWlLDST+tVjYpRqtxI=
-X-Received: by 2002:a37:a44a:: with SMTP id n71mr21061481qke.393.1564672816295; 
- Thu, 01 Aug 2019 08:20:16 -0700 (PDT)
+ id 1htXFA-0007Vc-VL; Fri, 02 Aug 2019 13:05:14 +0000
+Received: from DGGEMS409-HUB.china.huawei.com (unknown [172.30.72.60])
+ by Forcepoint Email with ESMTP id 95FB79FACA09C48A77C3;
+ Fri,  2 Aug 2019 21:05:08 +0800 (CST)
+Received: from localhost (10.133.213.239) by DGGEMS409-HUB.china.huawei.com
+ (10.3.19.209) with Microsoft SMTP Server id 14.3.439.0; Fri, 2 Aug 2019
+ 21:04:24 +0800
+From: YueHaibing <yuehaibing@huawei.com>
+To: <balbi@kernel.org>, <gregkh@linuxfoundation.org>, <khilman@baylibre.com>, 
+ <narmstrong@baylibre.com>
+Subject: [PATCH -next] usb: dwc3: meson-g12a: use
+ devm_platform_ioremap_resource() to simplify code
+Date: Fri, 2 Aug 2019 21:04:08 +0800
+Message-ID: <20190802130408.20336-1-yuehaibing@huawei.com>
+X-Mailer: git-send-email 2.10.2.windows.1
 MIME-Version: 1.0
-References: <20190801135644.12843-1-narmstrong@baylibre.com>
-In-Reply-To: <20190801135644.12843-1-narmstrong@baylibre.com>
-From: Rob Herring <robh+dt@kernel.org>
-Date: Thu, 1 Aug 2019 09:20:03 -0600
-X-Gmail-Original-Message-ID: <CAL_JsqL7FEAJ9S5j9JSwfj+t8434KsEOcxKEMWNFnG00b07JMA@mail.gmail.com>
-Message-ID: <CAL_JsqL7FEAJ9S5j9JSwfj+t8434KsEOcxKEMWNFnG00b07JMA@mail.gmail.com>
-Subject: Re: [RFC 0/9] dt-bindings: first tentative of conversion to yaml
- format
-To: Neil Armstrong <narmstrong@baylibre.com>
+X-Originating-IP: [10.133.213.239]
+X-CFilter-Loop: Reflected
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190801_082017_755016_80101EDF 
-X-CRM114-Status: UNSURE (   8.95  )
+X-CRM114-CacheID: sfid-20190802_060513_557150_E8E582EB 
+X-CRM114-Status: UNSURE (   7.60  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -5.2 (-----)
+X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+ Content analysis details:   (-2.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [45.249.212.190 listed in list.dnswl.org]
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -84,31 +63,49 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: Philipp Zabel <p.zabel@pengutronix.de>, devicetree@vger.kernel.org,
- LINUX-WATCHDOG <linux-watchdog@vger.kernel.org>,
- Jassi Brar <jassisinghbrar@gmail.com>, linux-spi <linux-spi@vger.kernel.org>,
- "open list:HARDWARE RANDOM NUMBER GENERATOR CORE"
- <linux-crypto@vger.kernel.org>,
- "open list:SERIAL DRIVERS" <linux-serial@vger.kernel.org>,
- linux-amlogic@lists.infradead.org, Kishon Vijay Abraham I <kishon@ti.com>,
- "moderated list:ARM/FREESCALE IMX / MXC ARM ARCHITECTURE"
- <linux-arm-kernel@lists.infradead.org>
+Cc: linux-amlogic@lists.infradead.org, linux-usb@vger.kernel.org,
+ YueHaibing <yuehaibing@huawei.com>, linux-kernel@vger.kernel.org,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On Thu, Aug 1, 2019 at 7:56 AM Neil Armstrong <narmstrong@baylibre.com> wrote:
->
-> This is a first tentative to convert some of the simplest Amlogic
-> dt-bindings to the yaml format.
+Use devm_platform_ioremap_resource() to simplify the code a bit.
+This is detected by coccinelle.
 
-Great to see this.
+Reported-by: Hulk Robot <hulkci@huawei.com>
+Signed-off-by: YueHaibing <yuehaibing@huawei.com>
+---
+ drivers/usb/dwc3/dwc3-meson-g12a.c | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
 
-I've gone thru all of the patches. Some of the same minor comments I
-made also apply to the patches I didn't comment on.
+diff --git a/drivers/usb/dwc3/dwc3-meson-g12a.c b/drivers/usb/dwc3/dwc3-meson-g12a.c
+index bca7e92..d73ccd9 100644
+--- a/drivers/usb/dwc3/dwc3-meson-g12a.c
++++ b/drivers/usb/dwc3/dwc3-meson-g12a.c
+@@ -386,7 +386,6 @@ static int dwc3_meson_g12a_probe(struct platform_device *pdev)
+ 	struct device		*dev = &pdev->dev;
+ 	struct device_node	*np = dev->of_node;
+ 	void __iomem *base;
+-	struct resource *res;
+ 	enum phy_mode otg_id;
+ 	int ret, i, irq;
+ 
+@@ -394,8 +393,7 @@ static int dwc3_meson_g12a_probe(struct platform_device *pdev)
+ 	if (!priv)
+ 		return -ENOMEM;
+ 
+-	res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
+-	base = devm_ioremap_resource(dev, res);
++	base = devm_platform_ioremap_resource(pdev, 0);
+ 	if (IS_ERR(base))
+ 		return PTR_ERR(base);
+ 
+-- 
+2.7.4
 
-Rob
+
 
 _______________________________________________
 linux-amlogic mailing list
