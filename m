@@ -2,80 +2,81 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E27A1818D2
-	for <lists+linux-amlogic@lfdr.de>; Mon,  5 Aug 2019 14:05:22 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 869B0818D9
+	for <lists+linux-amlogic@lfdr.de>; Mon,  5 Aug 2019 14:06:32 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=AkuHgc399aND5TF89Qg822n7Td3FrIlb9CGOeGPrm1g=; b=U0LDNFhWNLB7lP
-	81CjWKdeM5nLuUfZobvTWMW52R6Z5xSjouyAuHK0Zc4wbRluUah8Qc49+evtbVfgZ03RQjZe3WQLg
-	YWMVWHCVf0w4dhKE+5cZSk5q95zM3DSbC0K+rZe1jDQXgudTuOcxSKtr4IsoO6aldYZHBHjhEXk3e
-	Sd2T0Q91972GfuFJzIHIz1nJW6CuEPuEaX+PpChEILtxHd7zXZRsjjJk/8utGX8o2Njwrvfq15xkw
-	LWAgddDucSlydWuwLvbYKk3k6n5K3z0DiSQgVz4qlhnwZ900wutEWJ51anpDSQZzEwXlPg6LGSiH6
-	IQkm7L2sMrZs37r6BZHA==;
+	List-Owner; bh=LxDM8MuuGN8/Oadwy+nMWPjHwySIwPJXy20rVmoz3Gk=; b=l9qd5dGDAP0fFn
+	cz4XNIFXStCh7G/Mriih1dCpX9wC7fRUd6gB1raTUHNE4amNsMKiJcRq82wNwqsjLEbj1xalKC0AW
+	/Xi5Q2sSskS4yzxgTmeSk/VWt6ug6WAhMngA1abTqueYX0NT+7SQgxDgzxpRggdw6RF14HCRYGH2a
+	b4pn67+Gmm/wzYLCQNVIH6mWUAQzzprwYrzzA9uO2ohAfeDMj6fVVw5ZqRTNHsHe/4OviHX8l9wPk
+	1ExEa3sWUSNwVrUp+Ggswkm3pV/pGDMKWt014r637c1sC+A2lBRzkiOTT3kCWJ+8OCYhEk/KSesYl
+	vM6UIqKXkmQMNCshTRrg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hubjs-0006Uj-US; Mon, 05 Aug 2019 12:05:21 +0000
-Received: from mail-wr1-x42c.google.com ([2a00:1450:4864:20::42c])
+	id 1hubl1-0007Y0-2P; Mon, 05 Aug 2019 12:06:31 +0000
+Received: from mail-wr1-x42e.google.com ([2a00:1450:4864:20::42e])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hubi8-0003DM-8D
- for linux-amlogic@lists.infradead.org; Mon, 05 Aug 2019 12:03:34 +0000
-Received: by mail-wr1-x42c.google.com with SMTP id p13so9584068wru.10
- for <linux-amlogic@lists.infradead.org>; Mon, 05 Aug 2019 05:03:31 -0700 (PDT)
+ id 1hubiC-0003EN-0d
+ for linux-amlogic@lists.infradead.org; Mon, 05 Aug 2019 12:03:39 +0000
+Received: by mail-wr1-x42e.google.com with SMTP id p17so84137362wrf.11
+ for <linux-amlogic@lists.infradead.org>; Mon, 05 Aug 2019 05:03:32 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=tQeBoHTDyW/juIg5YxaAObUedP0IRigO3DWlsydmdvE=;
- b=LfM+hXYhOgzGI0rp3jXoy6H4d6Rlak6EpBo/Jp2TAeUrUiYiwFcsOa/rVXzyLSrI9Y
- pShPKGVD0C+7vsKEkn92ZsDajrSDprasHVqnprZToxr7SyIoZihVa1xTuI/5MZEzmtwn
- +WcptEyXF9HWsX3shOekomcmdBHTdWO9AZMCdMRkgfhp6CyVFG0I0PX0GZ7fm/VhIwlR
- wd84kFiCAxHosi4AX5U0VkAogzuAjJ/vjsf72rZMqdZK1aMYk2QKp4KrHqhWYaBbEDpm
- HKbWBUYuP35O2POJgXwGVdskeyC8r4oZe6BlOfcBaTQ6Tv4TeIxXabqyayMkJwim6+Nz
- JJzQ==
+ bh=b1XGdy2nJKzucwuRIzJ0TOC6ZhQODYjSeQdAwBFlneI=;
+ b=lMM15MLzt6Hai8wnmTDzO/Cfv5iPTpuo1yNv7j7DLI+TssldZYUeRmJezSQ+6uT8Wf
+ VplNweHvsify8msqINJ+Fk9sA1Y2mWp/lMmskb1wwhVWXsAA2RBACeC0R3XMPA4kClew
+ C1KHlPK9YQ5K23SK5jCja0MhP2vbXlUaZVZotGnO95wuLZPM62pCuwjOyRPI44FnhQIj
+ 3AZtcO6cp2YlYulIWZ4VoLMCzzfki2JER2DA9h1RRBW4Z6VlSCxogQgKRPktzATt3opK
+ Zf4fhOKJGGS85xXEIPE1z2xGWMEcSWdaMw9vHwGFaYEQ5t/sq1wTdI0isAPFyXRgl7pq
+ bDXA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=tQeBoHTDyW/juIg5YxaAObUedP0IRigO3DWlsydmdvE=;
- b=jNEIuWtCZKjOK7CriwSge5FtX8zVxSVXnOOcLZJFx9XbCTcRYx5hSKd9fZH22j4Rrz
- kPMiAioZ36uiNKTG7L3kjL+NonBWgIo4kNCzJMxgE59UixjWkOOOK5ihgBKcGT2AEyr8
- rpI1OBvk08wrrsah6MQYEflKzwFUNrchHMc75ZvTuPpy/Qjoohi0n4+J8keQTAcwqlhs
- KGIZEBjyeqQilXxvPgiNqa/DItDOBh/vdhjQtZVi41qxjhuOSZ94hbrlRFahlGHHmSvM
- cJf0m8Kl2knLkX3g/Dg9te43OcB/8eFBU1w+1G1wsQO6ctpsWwJoeuoZmqZ2oDHnCeCw
- sW4Q==
-X-Gm-Message-State: APjAAAU4l2/1DufWfI/unuRsqLIAnDAUgiGzLNI2jCYbo60XPUY7+rFl
- iAjT8lf8eC6mCvTxwDV+Vw9444NjoxTEsA==
-X-Google-Smtp-Source: APXvYqyqTAAoOMr4QzjFfPNakH329yCMl3UqezhM8/xSxCkB6aWqg6l07iQQGEMIsWUA2HyyB79KYQ==
-X-Received: by 2002:a5d:5302:: with SMTP id e2mr9958753wrv.347.1565006609991; 
- Mon, 05 Aug 2019 05:03:29 -0700 (PDT)
+ bh=b1XGdy2nJKzucwuRIzJ0TOC6ZhQODYjSeQdAwBFlneI=;
+ b=SvSqsfEt73tclbTaKJuJUT0gHDzY4GRc/u4uuPbBuVyn7/nBP6KbMEtA7Lh6s0/2x+
+ Hy6aC9kx7F+YV+OYX7AejUgrAGuh+C21psV03NnXvRXFDty1x5NQ37AWmfAL/Ku4yVma
+ P3t4KFkJzIbRix05YI8qBZ9kinZx/x7Loe8tNlrjjTf2g/HZzgloDIkopUSlRj56jKkp
+ gKqfJs9JsASbGcGI+bszUAB8T3lLEFceuHNIjFZReHZ074GhWAIQH07XIgfuqCPHM6tf
+ xtgXxsISBTIMLmKlv4xW9rtpUM5WRLCOkb2g1yz6GlznpeiJKB5iKHuJPU2rH1eJiMnx
+ o9WA==
+X-Gm-Message-State: APjAAAWOGjFMJoVn6MC70DvYlkx8wuqmoFABca1l80Q6YCxnieqCXTxm
+ AVgpXszY8e8HSJgbGrCcr6BwYA==
+X-Google-Smtp-Source: APXvYqz55EPEsBCPC/Ok0ShHcjO9diNKpV56u+ZyINITUx4vht63l1eGjPviZ0nVTTmm06A8XwUr7Q==
+X-Received: by 2002:adf:f3c1:: with SMTP id g1mr25866889wrp.203.1565006610658; 
+ Mon, 05 Aug 2019 05:03:30 -0700 (PDT)
 Received: from bender.baylibre.local
  (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
- by smtp.gmail.com with ESMTPSA id x6sm88683668wrt.63.2019.08.05.05.03.29
+ by smtp.gmail.com with ESMTPSA id x6sm88683668wrt.63.2019.08.05.05.03.30
  (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Mon, 05 Aug 2019 05:03:29 -0700 (PDT)
+ Mon, 05 Aug 2019 05:03:30 -0700 (PDT)
 From: Neil Armstrong <narmstrong@baylibre.com>
 To: robh+dt@kernel.org
-Subject: [RFCv2 6/9] dt-bindings: phy: meson-g12a-usb2-phy: convert to yaml
-Date: Mon,  5 Aug 2019 14:03:17 +0200
-Message-Id: <20190805120320.32282-7-narmstrong@baylibre.com>
+Subject: [RFCv2 7/9] dt-bindings: phy: meson-g12a-usb3-pcie-phy: convert to
+ yaml
+Date: Mon,  5 Aug 2019 14:03:18 +0200
+Message-Id: <20190805120320.32282-8-narmstrong@baylibre.com>
 X-Mailer: git-send-email 2.22.0
 In-Reply-To: <20190805120320.32282-1-narmstrong@baylibre.com>
 References: <20190805120320.32282-1-narmstrong@baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190805_050332_445653_372F43A5 
-X-CRM114-Status: GOOD (  13.05  )
+X-CRM114-CacheID: sfid-20190805_050336_074565_97267E44 
+X-CRM114-Status: GOOD (  12.90  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:42c listed in]
+ no trust [2a00:1450:4864:20:0:0:0:42e listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -102,34 +103,34 @@ Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
 Now that we have the DT validation in place, let's convert the device tree
-bindings for the Amlogic G12A USB2 PHY over to a YAML schemas.
+bindings for the Amlogic G12A USB3 + PCIE Combo PHY over to a YAML schemas.
 
 While the original phy bindings specifies phy-supply as required,
 the examples and implementations makes it optional, thus phy-supply
-is not in the required list of attributes.
+is not present in the properties and required lists.
 
 Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
 ---
- .../phy/amlogic,meson-g12a-usb2-phy.yaml      | 63 +++++++++++++++++++
- .../bindings/phy/meson-g12a-usb2-phy.txt      | 22 -------
- 2 files changed, 63 insertions(+), 22 deletions(-)
- create mode 100644 Documentation/devicetree/bindings/phy/amlogic,meson-g12a-usb2-phy.yaml
- delete mode 100644 Documentation/devicetree/bindings/phy/meson-g12a-usb2-phy.txt
+ .../phy/amlogic,meson-g12a-usb3-pcie-phy.yaml | 57 +++++++++++++++++++
+ .../bindings/phy/meson-g12a-usb3-pcie-phy.txt | 22 -------
+ 2 files changed, 57 insertions(+), 22 deletions(-)
+ create mode 100644 Documentation/devicetree/bindings/phy/amlogic,meson-g12a-usb3-pcie-phy.yaml
+ delete mode 100644 Documentation/devicetree/bindings/phy/meson-g12a-usb3-pcie-phy.txt
 
-diff --git a/Documentation/devicetree/bindings/phy/amlogic,meson-g12a-usb2-phy.yaml b/Documentation/devicetree/bindings/phy/amlogic,meson-g12a-usb2-phy.yaml
+diff --git a/Documentation/devicetree/bindings/phy/amlogic,meson-g12a-usb3-pcie-phy.yaml b/Documentation/devicetree/bindings/phy/amlogic,meson-g12a-usb3-pcie-phy.yaml
 new file mode 100644
-index 000000000000..51254b4e65dd
+index 000000000000..346f9c35427c
 --- /dev/null
-+++ b/Documentation/devicetree/bindings/phy/amlogic,meson-g12a-usb2-phy.yaml
-@@ -0,0 +1,63 @@
++++ b/Documentation/devicetree/bindings/phy/amlogic,meson-g12a-usb3-pcie-phy.yaml
+@@ -0,0 +1,57 @@
 +# SPDX-License-Identifier: (GPL-2.0 OR BSD-2-Clause)
 +# Copyright 2019 BayLibre, SAS
 +%YAML 1.2
 +---
-+$id: "http://devicetree.org/schemas/phy/amlogic,meson-g12a-usb2-phy.yaml#"
++$id: "http://devicetree.org/schemas/phy/amlogic,meson-g12a-usb3-pcie-phy.yaml#"
 +$schema: "http://devicetree.org/meta-schemas/core.yaml#"
 +
-+title: Amlogic G12A USB2 PHY
++title: Amlogic G12A USB3 + PCIE Combo PHY
 +
 +maintainers:
 +  - Neil Armstrong <narmstrong@baylibre.com>
@@ -137,7 +138,7 @@ index 000000000000..51254b4e65dd
 +properties:
 +  compatible:
 +    enum:
-+      - amlogic,meson-g12a-usb2-phy
++      - amlogic,meson-g12a-usb3-pcie-phy
 +
 +  reg:
 +    maxItems: 1
@@ -147,7 +148,7 @@ index 000000000000..51254b4e65dd
 +
 +  clock-names:
 +    items:
-+      - const: xtal
++      - const: ref_clk
 +
 +  resets:
 +    maxItems: 1
@@ -157,13 +158,7 @@ index 000000000000..51254b4e65dd
 +      - const: phy
 +
 +  "#phy-cells":
-+    const: 0
-+
-+  phy-supply:
-+     maxItems: 1
-+     description:
-+       Phandle to a regulator that provides power to the PHY. This
-+       regulator will be managed during the PHY power on/off sequence.
++    const: 1
 +
 +required:
 +  - compatible
@@ -176,42 +171,42 @@ index 000000000000..51254b4e65dd
 +
 +examples:
 +  - |
-+    phy@36000 {
-+          compatible = "amlogic,meson-g12a-usb2-phy";
-+          reg = <0x36000 0x2000>;
-+          clocks = <&xtal>;
-+          clock-names = "xtal";
++    phy@46000 {
++          compatible = "amlogic,meson-g12a-usb3-pcie-phy";
++          reg = <0x46000 0x2000>;
++          clocks = <&ref_clk>;
++          clock-names = "ref_clk";
 +          resets = <&phy_reset>;
 +          reset-names = "phy";
-+          #phy-cells = <0>;
++          #phy-cells = <1>;
 +    };
-diff --git a/Documentation/devicetree/bindings/phy/meson-g12a-usb2-phy.txt b/Documentation/devicetree/bindings/phy/meson-g12a-usb2-phy.txt
+diff --git a/Documentation/devicetree/bindings/phy/meson-g12a-usb3-pcie-phy.txt b/Documentation/devicetree/bindings/phy/meson-g12a-usb3-pcie-phy.txt
 deleted file mode 100644
-index a6ebc3dea159..000000000000
---- a/Documentation/devicetree/bindings/phy/meson-g12a-usb2-phy.txt
+index 7cfc17e2df31..000000000000
+--- a/Documentation/devicetree/bindings/phy/meson-g12a-usb3-pcie-phy.txt
 +++ /dev/null
 @@ -1,22 +0,0 @@
--* Amlogic G12A USB2 PHY binding
+-* Amlogic G12A USB3 + PCIE Combo PHY binding
 -
 -Required properties:
--- compatible:	Should be "amlogic,meson-g12a-usb2-phy"
+-- compatible:	Should be "amlogic,meson-g12a-usb3-pcie-phy"
+-- #phys-cells:	must be 1. The cell number is used to select the phy mode
+-  as defined in <dt-bindings/phy/phy.h> between PHY_TYPE_USB3 and PHY_TYPE_PCIE
 -- reg:		The base address and length of the registers
--- #phys-cells:	must be 0 (see phy-bindings.txt in this directory)
--- clocks:	a phandle to the clock of this PHY
--- clock-names:	must be "xtal"
--- resets:	a phandle to the reset line of this PHY
+-- clocks:	a phandle to the 100MHz reference clock of this PHY
+-- clock-names:	must be "ref_clk"
+-- resets:	phandle to the reset lines for the PHY control
 -- reset-names:	must be "phy"
--- phy-supply:	see phy-bindings.txt in this directory
 -
 -Example:
--	usb2_phy0: phy@36000 {
--		compatible = "amlogic,g12a-usb2-phy";
--		reg = <0x0 0x36000 0x0 0x2000>;
--		clocks = <&xtal>;
--		clock-names = "xtal";
--		resets = <&reset RESET_USB_PHY21>;
+-	usb3_pcie_phy: phy@46000 {
+-		compatible = "amlogic,g12a-usb3-pcie-phy";
+-		reg = <0x0 0x46000 0x0 0x2000>;
+-		clocks = <&clkc CLKID_PCIE_PLL>;
+-		clock-names = "ref_clk";
+-		resets = <&reset RESET_PCIE_PHY>;
 -		reset-names = "phy";
--		#phy-cells = <0>;
+-		#phy-cells = <1>;
 -	};
 -- 
 2.22.0
