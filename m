@@ -2,81 +2,81 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9B11C818DB
-	for <lists+linux-amlogic@lfdr.de>; Mon,  5 Aug 2019 14:06:37 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C3178818D8
+	for <lists+linux-amlogic@lfdr.de>; Mon,  5 Aug 2019 14:06:26 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ivWV5a8TEfctrvAFyGJqCwd6MmAiMpIAn53NLGaNmLc=; b=ftL2ML57wjNtDl
-	KAJgo5mF3FjMqZIKwCfvHei/YiYSFJ+fvM2JIC3Ok/dqHf/4730uNNpYERr58Pfo/OY50G3DQkE54
-	k8D7EsFdYms8wbE5aalO6j7IM3dOKc04zWQ8IjS4nwGF0Of9v8ZMxmB48gOYR5pXs9ZrvVH/Migf9
-	SCZDa0hbyl6pF62cfS5V5ezSddsuPYilkZ7eqLq/LZnE/8/tzwFM2fPM88TY6nqHsQNvJs30Hugbn
-	yglVfFe3nEFL/ZQw0m2JPF2C/8DIrrwTeZz4BSZwKQXI6qMMki9u4UwdI65457NbVSbkIAGKpJ1lt
-	ic2X1nV7tmFtVrDdMZHg==;
+	List-Owner; bh=grPoqozwyQnD/7Prr0mqKWdDXScGZn7kYIe0NGkP3iM=; b=PwuK/snk93RnQP
+	w76IIzaCSRx0XO0NUE+GS+x7DDt6oKDMWuXdCQOV12TwxknRdieOJor+R+k7VJUYba0JCPmnWXN9N
+	rCAmhNJgskhQ+vxz+Nv8qm9b8mWNu9AwIIQ7ixchfQ/LNHG27xPLCtNuEio5tkuTltnkdfxoE5alh
+	i8GCvH+Fh7/5zsOPNElju6BLUCcuM/eLpsW/p6GpdU1kuC0xBLTfHJ9IbeuQP4XRjWkLsDYI5FPXI
+	pw14TPGIqKhkjA0i/rdgHmh+oDchMfZuU/BMVmEHD/miLRhR9rUdUWTYlZjc/zHuiYbKm9HRZBLJV
+	Sf60tRvMmHJKUKKWW65A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hubl3-0007bI-5U; Mon, 05 Aug 2019 12:06:33 +0000
-Received: from mail-wm1-x32e.google.com ([2a00:1450:4864:20::32e])
+	id 1hubkv-0007SU-BT; Mon, 05 Aug 2019 12:06:25 +0000
+Received: from mail-wr1-f46.google.com ([209.85.221.46])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hubiC-0003FA-1m
- for linux-amlogic@lists.infradead.org; Mon, 05 Aug 2019 12:03:39 +0000
-Received: by mail-wm1-x32e.google.com with SMTP id g67so68628777wme.1
- for <linux-amlogic@lists.infradead.org>; Mon, 05 Aug 2019 05:03:32 -0700 (PDT)
+ id 1hubiA-0003HS-KY
+ for linux-amlogic@lists.infradead.org; Mon, 05 Aug 2019 12:03:37 +0000
+Received: by mail-wr1-f46.google.com with SMTP id g17so84144400wrr.5
+ for <linux-amlogic@lists.infradead.org>; Mon, 05 Aug 2019 05:03:34 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=03cjrsP0RDgNB463NC5l+ar2rIPSWRGFuDWfbzKJer4=;
- b=bvHJb3/6rwm4ri0PWxAXqnx3tGsomLKgntrlR6roxjbfUP6TEBJURIDqmlmcSRxvPl
- fimBqtk8WQSAlH9LrMqsF9EmNosdDF36A800TTFj/lVL6VodbYKGqPaHntux/YWADAa7
- Ei33K9eY8iK/Thb3RpTv/AU3l8LkQRen5fAEJUshRIcPclZw4Cu7Q9+N3YBZTibaRDhK
- ljuJoHKVDwCteZkH+J8kAfOHTENu+wOVpDYIslaHSJ21GRdB82HSYhNqgaDvZ9SPtSdK
- gHjYtUsui5gFXpHlmnn3t1844q+M2rAKUkkMsRdl2cA3TLV7sGLHF6Yk+IcM+zwiWjw5
- DBxQ==
+ bh=It0S2pqtroKRwqpCJzVHjSEtdzt+mhpXXxLdI5TJ2aI=;
+ b=XcS/BR3jo8xM1NaMWdsnUB4S6gVD0pY/78we1meVjquEdBMWTcHxGseyDIptk1owW4
+ sAch2yfbaGyV3k2zzpH9b3hN3WBcHMWkA+9chY46jAJx6YqIqZicqWrrd83D6NHliOzh
+ 3/siYxppNrcV+/XAQ5C3kvBHalzZud7vkYgz1YUywWv1NVjKP4XQFnaCApw0xU7D8RQr
+ GyOn68CKDRiFUtKeXDw33SbxSH7yTUr9lBD8Bpkm16lWH4wskVZIiaOhDTaFUkmOrgzx
+ X7Kv0hps1OtDlAsW3G1h1Ob/hvy6L9BzYOo5S1uitLU99O+q4mAfyyVAeD8xEFZS6V1+
+ IuTg==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=03cjrsP0RDgNB463NC5l+ar2rIPSWRGFuDWfbzKJer4=;
- b=OwZILsLpM0Re8QSke7CbEwB7qbrQp2kNa/sTo9oWoJmQEX3IsTymEcinAlDDid66V5
- 0GRclEEEDYWz+k1xV2N6vPPE42sK+oKzLdgAB1Br11MsAMH3kpjvgNODlU2WcqJPzOXm
- xY/QLMy143+qRyA0gtw9Wlkte3DmzqxwqqzTYW7eh1kHgpVGb6R30CVmvcCr9u4m9Nvr
- ZlPY/rBEUMTS3+fx7wYXaHl/7KGef2bitmCy81F102jtOy99gbDlCdlrdkZjU5DePSHZ
- /EqdbWtqB8hPuDFlsCd8IVcMkXy5G/nbatw2expHLOGXDTH1N6opWpgsakzwEfXPQmWv
- 9ZDw==
-X-Gm-Message-State: APjAAAVIWFob0IoimY2ZMa2YEMISJJLDMyJSNI6Zd+6bt2MRdTccNqdk
- lT8jtrKgOAk6rEIBD5Cay+1pQGH6V/0HfA==
-X-Google-Smtp-Source: APXvYqywE8Dp7JVC/Lpdsu06qvWsy2pnvNdftrd1iabEJoCm13l1U9u7UmUh513R4CWlvucD+q1S+A==
-X-Received: by 2002:a7b:cd9a:: with SMTP id y26mr19568536wmj.44.1565006611348; 
+ bh=It0S2pqtroKRwqpCJzVHjSEtdzt+mhpXXxLdI5TJ2aI=;
+ b=FqmIKIpR5gB3pnCpre7rhafXnlMgPdeR81Qrxr4K+fhGryI3NmioWqO8X2OWFNBX/+
+ QUAgF5faCtj1M0+osi2Si7Op96+7dlGPXe6Gdz5nmsHn+SFvjUIGiTH+2QV+XLco/o7s
+ OptnKnZJ/M3PAx/Ic/2RSh7pVp5xy1flxVzyuYU8zhirRIdxWZD6jcTo/9ccgsT6AWqT
+ gQoaIW3HGhb2ngaT9A8lt5wE3YmGdLSL8PHt173gcE8FZ9RkQ9+knNJntkRjqxe1R63V
+ MA2RJOgcEk6DtI5X1TngAAUEMQBEuJyRK1VS0CZr7eY5MorncRnBK4/66XhK6r/vExdD
+ HVuQ==
+X-Gm-Message-State: APjAAAVJ3N4ws+gCKHOhww4pHmaqRMmRI9fbT2uOfircg/jJH6PaXXTa
+ o6zXqZb8RyUish9RRoWuadPoDKnebqrlPw==
+X-Google-Smtp-Source: APXvYqydGaCtbOymxM94Qk7KUysBb9OK1H/sS9OgWK1Hm6mbeH5Ar1ePJu8NBJIxGYsKGqLDdvCMig==
+X-Received: by 2002:adf:f84a:: with SMTP id
+ d10mr153995452wrq.319.1565006611988; 
  Mon, 05 Aug 2019 05:03:31 -0700 (PDT)
 Received: from bender.baylibre.local
  (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
- by smtp.gmail.com with ESMTPSA id x6sm88683668wrt.63.2019.08.05.05.03.30
+ by smtp.gmail.com with ESMTPSA id x6sm88683668wrt.63.2019.08.05.05.03.31
  (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Mon, 05 Aug 2019 05:03:30 -0700 (PDT)
+ Mon, 05 Aug 2019 05:03:31 -0700 (PDT)
 From: Neil Armstrong <narmstrong@baylibre.com>
 To: robh+dt@kernel.org
-Subject: [RFCv2 8/9] dt-bindings: serial: meson-uart: convert to yaml
-Date: Mon,  5 Aug 2019 14:03:19 +0200
-Message-Id: <20190805120320.32282-9-narmstrong@baylibre.com>
+Subject: [RFCv2 9/9] dt-bindings: watchdog: meson-gxbb-wdt: convert to yaml
+Date: Mon,  5 Aug 2019 14:03:20 +0200
+Message-Id: <20190805120320.32282-10-narmstrong@baylibre.com>
 X-Mailer: git-send-email 2.22.0
 In-Reply-To: <20190805120320.32282-1-narmstrong@baylibre.com>
 References: <20190805120320.32282-1-narmstrong@baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190805_050336_539068_F7788F82 
-X-CRM114-Status: GOOD (  14.53  )
+X-CRM114-CacheID: sfid-20190805_050334_892518_C65657F7 
+X-CRM114-Status: GOOD (  11.51  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:32e listed in]
- [list.dnswl.org]
+ no trust [209.85.221.46 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
@@ -94,7 +94,7 @@ List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
 Cc: linux-amlogic@lists.infradead.org, devicetree@vger.kernel.org,
- linux-arm-kernel@lists.infradead.org, linux-serial@vger.kernel.org,
+ linux-watchdog@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
  Neil Armstrong <narmstrong@baylibre.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
@@ -102,139 +102,81 @@ Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
 Now that we have the DT validation in place, let's convert the device tree
-bindings for the Amlogic UART Serial controller over to a YAML schemas.
+bindings for the Amlogic GXBB Watchdog timer over to a YAML schemas.
 
 Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
 ---
- .../bindings/serial/amlogic,meson-uart.txt    | 38 ----------
- .../bindings/serial/amlogic,meson-uart.yaml   | 73 +++++++++++++++++++
- 2 files changed, 73 insertions(+), 38 deletions(-)
- delete mode 100644 Documentation/devicetree/bindings/serial/amlogic,meson-uart.txt
- create mode 100644 Documentation/devicetree/bindings/serial/amlogic,meson-uart.yaml
+ .../watchdog/amlogic,meson-gxbb-wdt.yaml      | 37 +++++++++++++++++++
+ .../bindings/watchdog/meson-gxbb-wdt.txt      | 16 --------
+ 2 files changed, 37 insertions(+), 16 deletions(-)
+ create mode 100644 Documentation/devicetree/bindings/watchdog/amlogic,meson-gxbb-wdt.yaml
+ delete mode 100644 Documentation/devicetree/bindings/watchdog/meson-gxbb-wdt.txt
 
-diff --git a/Documentation/devicetree/bindings/serial/amlogic,meson-uart.txt b/Documentation/devicetree/bindings/serial/amlogic,meson-uart.txt
-deleted file mode 100644
-index c06c045126fc..000000000000
---- a/Documentation/devicetree/bindings/serial/amlogic,meson-uart.txt
-+++ /dev/null
-@@ -1,38 +0,0 @@
--Amlogic Meson SoC UART Serial Interface
--=======================================
--
--The Amlogic Meson SoC UART Serial Interface is present on a large range
--of SoCs, and can be present either in the "Always-On" power domain or the
--"Everything-Else" power domain.
--
--The particularity of the "Always-On" Serial Interface is that the hardware
--is active since power-on and does not need any clock gating and is usable
--as very early serial console.
--
--Required properties:
--- compatible : compatible: value should be different for each SoC family as :
--	- Meson6 : "amlogic,meson6-uart"
--	- Meson8 : "amlogic,meson8-uart"
--	- Meson8b : "amlogic,meson8b-uart"
--	- GX (GXBB, GXL, GXM) : "amlogic,meson-gx-uart"
--	eventually followed by : "amlogic,meson-ao-uart" if this UART interface
--	is in the "Always-On" power domain.
--- reg : offset and length of the register set for the device.
--- interrupts : identifier to the device interrupt
--- clocks : a list of phandle + clock-specifier pairs, one for each
--	   entry in clock names.
--- clock-names :
--   * "xtal" for external xtal clock identifier
--   * "pclk" for the bus core clock, either the clk81 clock or the gate clock
--   * "baud" for the source of the baudrate generator, can be either the xtal
--	or the pclk.
--
--e.g.
--uart_A: serial@84c0 {
--	compatible = "amlogic,meson-gx-uart";
--	reg = <0x0 0x84c0 0x0 0x14>;
--	interrupts = <GIC_SPI 26 IRQ_TYPE_EDGE_RISING>;
--	/* Use xtal as baud rate clock source */
--	clocks = <&xtal>, <&clkc CLKID_UART0>, <&xtal>;
--	clock-names = "xtal", "pclk", "baud";
--};
-diff --git a/Documentation/devicetree/bindings/serial/amlogic,meson-uart.yaml b/Documentation/devicetree/bindings/serial/amlogic,meson-uart.yaml
+diff --git a/Documentation/devicetree/bindings/watchdog/amlogic,meson-gxbb-wdt.yaml b/Documentation/devicetree/bindings/watchdog/amlogic,meson-gxbb-wdt.yaml
 new file mode 100644
-index 000000000000..5d48a8c04aa9
+index 000000000000..d7352f709b37
 --- /dev/null
-+++ b/Documentation/devicetree/bindings/serial/amlogic,meson-uart.yaml
-@@ -0,0 +1,73 @@
++++ b/Documentation/devicetree/bindings/watchdog/amlogic,meson-gxbb-wdt.yaml
+@@ -0,0 +1,37 @@
 +# SPDX-License-Identifier: (GPL-2.0 OR BSD-2-Clause)
 +# Copyright 2019 BayLibre, SAS
 +%YAML 1.2
 +---
-+$id: "http://devicetree.org/schemas/serial/amlogic,meson-uart.yaml#"
++$id: "http://devicetree.org/schemas/watchdog/amlogic,meson-gxbb-wdt.yaml#"
 +$schema: "http://devicetree.org/meta-schemas/core.yaml#"
 +
-+title: Amlogic Meson SoC UART Serial Interface
++title: Meson GXBB SoCs Watchdog timer
 +
 +maintainers:
 +  - Neil Armstrong <narmstrong@baylibre.com>
 +
-+description: |
-+  The Amlogic Meson SoC UART Serial Interface is present on a large range
-+  of SoCs, and can be present either in the "Always-On" power domain or the
-+  "Everything-Else" power domain.
-+
-+  The particularity of the "Always-On" Serial Interface is that the hardware
-+  is active since power-on and does not need any clock gating and is usable
-+  as very early serial console.
-+
 +properties:
 +  compatible:
-+    oneOf:
-+      - description: Allways-on power domain UART controller
-+        items:
-+        - enum:
-+          - amlogic,meson6-uart
-+          - amlogic,meson8-uart
-+          - amlogic,meson8b-uart
-+          - amlogic,meson-gx-uart
-+        - const: amlogic,meson-ao-uart
-+      - description: Everything-Else power domain UART controller
-+        enum:
-+        - amlogic,meson6-uart
-+        - amlogic,meson8-uart
-+        - amlogic,meson8b-uart
-+        - amlogic,meson-gx-uart
++    enum:
++      - amlogic,meson-gxbb-wdt
 +
 +  reg:
 +    maxItems: 1
 +
-+  interrupts:
-+    maxItems: 1
-+
 +  clocks:
-+    items:
-+      - description: external xtal clock identifier
-+      - description: the bus core clock, either the clk81 clock or the gate clock
-+      - description: the source of the baudrate generator, can be either the xtal or the pclk
-+
-+  clock-names:
-+    items:
-+      - const: xtal
-+      - const: pclk
-+      - const: baud
++    maxItems: 1
++    description:
++      A phandle to the clock of this PHY
 +
 +required:
 +  - compatible
 +  - reg
-+  - interrupts
 +  - clocks
-+  - clock-names
 +
 +examples:
 +  - |
-+    serial@84c0 {
-+          compatible = "amlogic,meson-gx-uart";
-+          reg = <0x84c0 0x14>;
-+          interrupts = <26>;
-+          clocks = <&xtal>, <&pclk>, <&xtal>;
-+          clock-names = "xtal", "pclk", "baud";
++    watchdog@98d0 {
++          compatible = "amlogic,meson-gxbb-wdt";
++          reg = <0x98d0 0x10>;
++          clocks = <&xtal>;
 +    };
+diff --git a/Documentation/devicetree/bindings/watchdog/meson-gxbb-wdt.txt b/Documentation/devicetree/bindings/watchdog/meson-gxbb-wdt.txt
+deleted file mode 100644
+index c7fe36fa739c..000000000000
+--- a/Documentation/devicetree/bindings/watchdog/meson-gxbb-wdt.txt
++++ /dev/null
+@@ -1,16 +0,0 @@
+-Meson GXBB SoCs Watchdog timer
+-
+-Required properties:
+-
+-- compatible : should be "amlogic,meson-gxbb-wdt"
+-- reg : Specifies base physical address and size of the registers.
+-- clocks : Should be a phandle to the Watchdog clock source, for GXBB the xtal
+-	   is the default clock source.
+-
+-Example:
+-
+-wdt: watchdog@98d0 {
+-	compatible = "amlogic,meson-gxbb-wdt";
+-	reg = <0 0x98d0 0x0 0x10>;
+-	clocks = <&xtal>;
+-};
 -- 
 2.22.0
 
