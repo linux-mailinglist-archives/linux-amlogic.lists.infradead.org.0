@@ -2,80 +2,80 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id F179D818CE
-	for <lists+linux-amlogic@lfdr.de>; Mon,  5 Aug 2019 14:05:00 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9FA85818D1
+	for <lists+linux-amlogic@lfdr.de>; Mon,  5 Aug 2019 14:05:22 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=2osan5KR+ceHsRqFhn+XkNWxxyKHnOj4bXknR35Nytg=; b=g+v0fEuTKyIoiq
-	1WzykZAsslD4YFGPCLRXuv/LDYlJFy8xo/O0SzR+PiVz0VZvqLmv9wtJ/lfluhK3ZKIK9q+wOCj9z
-	PIMMJ40EEsBQOREGPjtY8gXZh4rvwYzBIMkxdXjkfS3prFeLnpMinH2X4TTmkNN0piWoRyK7dKuV1
-	weMokjTLmjr+xjwLTg+o49dEQ0v13s0WOXFiGFkhqu/zT+6B/ftvJf13JahSGkGzE1tL3Bglyq1DH
-	EmtmDhfJxYXOqS1TenYFdbl1PSX5hdJAGpG+/QGTCUASr8d8CQdJJCxlMC/jZLRJymjh2PlrruUTc
-	XpaOKO2Ln1sTgAwPlPPg==;
+	List-Owner; bh=jBqcxj9P/84T/JefpuuteLtAs2Czcoy6I02QEogLsV0=; b=nmFWKctOL9Ixdh
+	TBqpCJmcD6WAp9pjaiCpOcwFSEZ0W9KcI0zJHcEqYG2no6SN0fj2t8JikhqIc8KA0kdUV+D9Kwg1C
+	i5EVPsC/p8H/IfCvZ9BGTRIEcW9vIsHi2+EP7Ttp13eXIFRi3QBCFUysU+3MEaxoh/h4CHLKmQ/+a
+	Z0yMy558TEXMEZ4n6duxnH7/5p20mdTYl/CINrXzKy/zv7lOlcUBMLGwi+gDy2PckE3/a6WUGAfr1
+	zAV7L+jtZoIgCyFFpuVTvtefQiBiVI37u3O2BraICuBOUMQRCxyqXY2DMav7JUD15++4lBlBX1LrL
+	Qyw0xpOP11C9iZKfNpQQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hubjX-00050I-CU; Mon, 05 Aug 2019 12:04:59 +0000
-Received: from mail-wr1-x436.google.com ([2a00:1450:4864:20::436])
+	id 1hubjq-0006Rz-GL; Mon, 05 Aug 2019 12:05:18 +0000
+Received: from mail-wr1-x430.google.com ([2a00:1450:4864:20::430])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hubi8-0003A4-Iz
+ id 1hubi8-0003BF-GP
  for linux-amlogic@lists.infradead.org; Mon, 05 Aug 2019 12:03:35 +0000
-Received: by mail-wr1-x436.google.com with SMTP id f9so5230596wre.12
- for <linux-amlogic@lists.infradead.org>; Mon, 05 Aug 2019 05:03:28 -0700 (PDT)
+Received: by mail-wr1-x430.google.com with SMTP id y4so84161010wrm.2
+ for <linux-amlogic@lists.infradead.org>; Mon, 05 Aug 2019 05:03:29 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=Wq+NOUXuHn9W915kfej1QDLl0G8Catrb+/a+UkGjnNI=;
- b=EhN2WpYa+7ri803ml/bEjkzN1nY8BeU/AY+MMoupJpUIq2u1p69+yVQ7br/t7mH40P
- lp9VfG2N8pWv83c6lN9S33D5h3Mg/GgGrJTxktOOpRJc4Qs00Zm87PR/db7y2yW3eAM6
- uqOo8k7bHGd3mbezV1Dwr1KXDr0iOfekOTUrcq5m6jm0CTIKePQkNlLJNUaHWfovrAew
- +b6HUE0pNdRqO0/lmBNUKx++21+RPI0IeTwUD1yG1RRAViSfofe/w7WYXAKG/1Z/+xUG
- K4otNssxD3TWTfLz/MTLFN14SC5nJN6LkuPwF16Sd6vwDrXPfpogEAxW9ueLCgKxJYzS
- XhEg==
+ bh=1UVbrDvxHP5fxAN2NFQuc4DUAHk3kIbjh3o2fngqONY=;
+ b=Hp4E2CtC/CqVj2zUXcx0mf2aKRE8qNhjqoRkDLzn/2ALVO8KG/wgxj/8JsqNdYoCpX
+ LicIz8U0wOImo8ByhkgKlAT2i2vDKQCFheCdpBLfCArxDd6WBiXfwKw7z15Ks2rMXTH2
+ NbfvUjP+OL4hyJGMpBylUgSTnW6SvBeZr4SijYlyt7Ei3Rwq6RwHWeIyJ80NaRTUEtBR
+ o2pBGhEzT8fF4N0EUANccvuhKuGV/2R9kDehR/iaTt15tVHhUzqE5UDn/VPWAYRpelgb
+ ntJl39mCOUe24RS7FdTCz8Y8OCo2nJ7VUEwpnGsXrq+jU3tOcCyJ9LIJAtxHCKzfKtSF
+ R5PA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=Wq+NOUXuHn9W915kfej1QDLl0G8Catrb+/a+UkGjnNI=;
- b=X7QjSZG6gdBVzxkXiN0Jp3mhgd92aVeTpSXgYJXM8R5oL7pfe95l7R/SXS7yXTBmAr
- ltgr3MrD8m2lXOq9YvC0t2Hz9YS2iTNszTnIoOceD5WYIDnfQ41LHj4LmIttB6bnYvaU
- jZjynhBu+jWBTy1zUAJYNPchE89uG6oZmv1b9XiU02MdouiQIALuXot97foJoD3J5//4
- qMDODkcVHiHK1i+okxVf8t2mf5U6Kq8bzozhe2CYCUyZskCCwPLydFtBcK2HkBqoR4Fk
- fhQmNwzYpf8a6ojxtwEkqW6KVP/QkYjixyxgQ9Vk1Hi0yHqUqRpahJEQFl1E2sFC7gE8
- 7pkg==
-X-Gm-Message-State: APjAAAUia3UbQKB4vqd2bprer79Vbftg+dQDbEVTJbO5VlwK09OJz4UI
- I+OzDYcoGCLzUl2qH9Vvl1j7xg==
-X-Google-Smtp-Source: APXvYqyz2oDf3zNhCGl1fmtqi/15XruskE/NYuyc7ppJN3wS25RsZliVSJ0Q+N3wlY6fZsbAF7WPyA==
-X-Received: by 2002:a5d:4949:: with SMTP id r9mr24455367wrs.289.1565006607077; 
+ bh=1UVbrDvxHP5fxAN2NFQuc4DUAHk3kIbjh3o2fngqONY=;
+ b=btwbwkSXhLndbmIuEEhuZPqZ3whkdk9QAk2O1lODl276k4afBlYGGk+nAUeB58tROg
+ R370RLeIaB7c6QLj5QTuyXWbotcutQAl+k81bbE8rMiJ1UI5Z0ZmlSV9c/FsrVuiQjs5
+ zHuPCHDR2WVzp/pM8PohdrSsslrIQuFd0EikO67M2KB4+eiil3vDomDW6+pIQW4GMrzK
+ 3hVMs7aadoV7qotqdUInLfjLkiJYj07URWON3paQfGpM4NxOYnRRwBBxp82hHxdQneTY
+ RHRnr9lYhZ7AbZeCBeaEseAtuyXnaABN4zkvZ4d1Mv41zc0BRQFFpyXoFaOA0K6cv9EA
+ qX3g==
+X-Gm-Message-State: APjAAAUzz8vx5JYtq0M/Bg87Vz+xL1lTPpWxHo5klziTxK7+1E2bO3fm
+ F+RzfNAydpl1WnJplECbdUsvKA==
+X-Google-Smtp-Source: APXvYqyd3wkTX3t9piiXsiUvpCyXSr8KaClorqcwW6T6bYRCzKarSSd9WohTarGxBu0zlFBS9XZbCA==
+X-Received: by 2002:a5d:428a:: with SMTP id k10mr4966844wrq.329.1565006607836; 
  Mon, 05 Aug 2019 05:03:27 -0700 (PDT)
 Received: from bender.baylibre.local
  (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
- by smtp.gmail.com with ESMTPSA id x6sm88683668wrt.63.2019.08.05.05.03.26
+ by smtp.gmail.com with ESMTPSA id x6sm88683668wrt.63.2019.08.05.05.03.27
  (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Mon, 05 Aug 2019 05:03:26 -0700 (PDT)
+ Mon, 05 Aug 2019 05:03:27 -0700 (PDT)
 From: Neil Armstrong <narmstrong@baylibre.com>
 To: robh+dt@kernel.org
-Subject: [RFCv2 2/9] dt-bindings: rng: amlogic,meson-rng: convert to yaml
-Date: Mon,  5 Aug 2019 14:03:13 +0200
-Message-Id: <20190805120320.32282-3-narmstrong@baylibre.com>
+Subject: [RFCv2 3/9] dt-bindings: spi: meson: convert to yaml
+Date: Mon,  5 Aug 2019 14:03:14 +0200
+Message-Id: <20190805120320.32282-4-narmstrong@baylibre.com>
 X-Mailer: git-send-email 2.22.0
 In-Reply-To: <20190805120320.32282-1-narmstrong@baylibre.com>
 References: <20190805120320.32282-1-narmstrong@baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190805_050332_761417_5BC5A0A1 
-X-CRM114-Status: GOOD (  11.05  )
+X-CRM114-CacheID: sfid-20190805_050332_731026_56373E03 
+X-CRM114-Status: GOOD (  11.97  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:436 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:430 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -94,7 +94,7 @@ List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
 Cc: linux-amlogic@lists.infradead.org, devicetree@vger.kernel.org,
- linux-crypto@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
+ linux-spi@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
  Neil Armstrong <narmstrong@baylibre.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
@@ -102,65 +102,122 @@ Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
 Now that we have the DT validation in place, let's convert the device tree
-bindings for the Amlogic Random Number generator over to a YAML schemas.
+bindings for the Amlogic SPI controllers over to two separate YAML schemas.
 
 Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
 ---
- .../bindings/rng/amlogic,meson-rng.txt        | 21 -----------
- .../bindings/rng/amlogic,meson-rng.yaml       | 37 +++++++++++++++++++
- 2 files changed, 37 insertions(+), 21 deletions(-)
- delete mode 100644 Documentation/devicetree/bindings/rng/amlogic,meson-rng.txt
- create mode 100644 Documentation/devicetree/bindings/rng/amlogic,meson-rng.yaml
+ .../bindings/spi/amlogic,meson-gx-spicc.yaml  | 67 +++++++++++++++++++
+ .../bindings/spi/amlogic,meson6-spifc.yaml    | 53 +++++++++++++++
+ .../devicetree/bindings/spi/spi-meson.txt     | 55 ---------------
+ 3 files changed, 120 insertions(+), 55 deletions(-)
+ create mode 100644 Documentation/devicetree/bindings/spi/amlogic,meson-gx-spicc.yaml
+ create mode 100644 Documentation/devicetree/bindings/spi/amlogic,meson6-spifc.yaml
+ delete mode 100644 Documentation/devicetree/bindings/spi/spi-meson.txt
 
-diff --git a/Documentation/devicetree/bindings/rng/amlogic,meson-rng.txt b/Documentation/devicetree/bindings/rng/amlogic,meson-rng.txt
-deleted file mode 100644
-index 4d403645ac9b..000000000000
---- a/Documentation/devicetree/bindings/rng/amlogic,meson-rng.txt
-+++ /dev/null
-@@ -1,21 +0,0 @@
--Amlogic Meson Random number generator
--=====================================
--
--Required properties:
--
--- compatible : should be "amlogic,meson-rng"
--- reg : Specifies base physical address and size of the registers.
--
--Optional properties:
--
--- clocks : phandle to the following named clocks
--- clock-names: Name of core clock, must be "core"
--
--Example:
--
--rng {
--	compatible = "amlogic,meson-rng";
--	reg = <0x0 0xc8834000 0x0 0x4>;
--	clocks = <&clkc CLKID_RNG0>;
--	clock-names = "core";
--};
-diff --git a/Documentation/devicetree/bindings/rng/amlogic,meson-rng.yaml b/Documentation/devicetree/bindings/rng/amlogic,meson-rng.yaml
+diff --git a/Documentation/devicetree/bindings/spi/amlogic,meson-gx-spicc.yaml b/Documentation/devicetree/bindings/spi/amlogic,meson-gx-spicc.yaml
 new file mode 100644
-index 000000000000..a9ff3cb35c5e
+index 000000000000..49b617c98ae7
 --- /dev/null
-+++ b/Documentation/devicetree/bindings/rng/amlogic,meson-rng.yaml
-@@ -0,0 +1,37 @@
++++ b/Documentation/devicetree/bindings/spi/amlogic,meson-gx-spicc.yaml
+@@ -0,0 +1,67 @@
 +# SPDX-License-Identifier: (GPL-2.0 OR BSD-2-Clause)
 +# Copyright 2019 BayLibre, SAS
 +%YAML 1.2
 +---
-+$id: "http://devicetree.org/schemas/rng/amlogic,meson-rng.yaml#"
++$id: "http://devicetree.org/schemas/spi/amlogic,meson-gx-spicc.yaml#"
 +$schema: "http://devicetree.org/meta-schemas/core.yaml#"
 +
-+title: Amlogic Meson Random number generator
++title: Amlogic Meson SPI Communication Controller
 +
 +maintainers:
 +  - Neil Armstrong <narmstrong@baylibre.com>
 +
++allOf:
++  - $ref: "spi-controller.yaml#"
++
++description: |
++  The Meson SPICC is a generic SPI controller for general purpose Full-Duplex
++  communications with dedicated 16 words RX/TX PIO FIFOs.
++
 +properties:
 +  compatible:
 +    enum:
-+      - amlogic,meson-rng
++      - amlogic,meson-gx-spicc # SPICC controller on Amlogic GX and compatible SoCs
++      - amlogic,meson-axg-spicc # SPICC controller on Amlogic AXG and compatible SoCs
++
++  interrupts:
++    maxItems: 1
++
++  reg:
++    maxItems: 1
++
++  resets:
++    maxItems: 1
++
++  clocks:
++    maxItems: 1
++
++  clock-names:
++    description: input clock for the baud rate generator
++    items:
++      - const: core
++
++required:
++  - compatible
++  - reg
++  - interrupts
++  - clocks
++  - clock-names
++
++examples:
++  - |
++    spi@c1108d80 {
++          compatible = "amlogic,meson-gx-spicc";
++          reg = <0xc1108d80 0x80>;
++          interrupts = <112>;
++          clocks = <&clk81>;
++          clock-names = "core";
++          #address-cells = <1>;
++          #size-cells = <0>;
++
++          ethernet-switch@0 {
++              compatible = "micrel,ks8995m";
++              spi-max-frequency = <1000000>;
++              reg = <0>;
++          };
++    };
++
+diff --git a/Documentation/devicetree/bindings/spi/amlogic,meson6-spifc.yaml b/Documentation/devicetree/bindings/spi/amlogic,meson6-spifc.yaml
+new file mode 100644
+index 000000000000..67dcedc81a5e
+--- /dev/null
++++ b/Documentation/devicetree/bindings/spi/amlogic,meson6-spifc.yaml
+@@ -0,0 +1,53 @@
++# SPDX-License-Identifier: (GPL-2.0 OR BSD-2-Clause)
++# Copyright 2019 BayLibre, SAS
++%YAML 1.2
++---
++$id: "http://devicetree.org/schemas/spi/amlogic,meson6-spifc.yaml#"
++$schema: "http://devicetree.org/meta-schemas/core.yaml#"
++
++title: Amlogic Meson SPI Flash Controller
++
++maintainers:
++  - Neil Armstrong <narmstrong@baylibre.com>
++
++allOf:
++  - $ref: "spi-controller.yaml#"
++
++description: |
++  The Meson SPIFC is a controller optimized for communication with SPI
++  NOR memories, without DMA support and a 64-byte unified transmit /
++  receive buffer.
++
++properties:
++  compatible:
++    enum:
++      - amlogic,meson6-spifc # SPI Flash Controller on Meson6 and compatible SoCs
++      - amlogic,meson-gxbb-spifc # SPI Flash Controller on GXBB and compatible SoCs
 +
 +  reg:
 +    maxItems: 1
@@ -168,20 +225,88 @@ index 000000000000..a9ff3cb35c5e
 +  clocks:
 +    maxItems: 1
 +
-+  clock-names:
-+    items:
-+      - const: core
-+
 +required:
 +  - compatible
 +  - reg
++  - clocks
 +
 +examples:
 +  - |
-+    rng@c8834000 {
-+          compatible = "amlogic,meson-rng";
-+          reg = <0xc8834000 0x4>;
++    spi@c1108c80 {
++          compatible = "amlogic,meson6-spifc";
++          reg = <0xc1108c80 0x80>;
++          clocks = <&clk81>;
++          #address-cells = <1>;
++          #size-cells = <0>;
++
++          flash: m25p80@0 {
++              compatible = "spansion,m25p80", "jedec,spi-nor";
++              reg = <0>;
++              spi-max-frequency = <40000000>;
++          };
 +    };
++
+diff --git a/Documentation/devicetree/bindings/spi/spi-meson.txt b/Documentation/devicetree/bindings/spi/spi-meson.txt
+deleted file mode 100644
+index b7f5e86fed22..000000000000
+--- a/Documentation/devicetree/bindings/spi/spi-meson.txt
++++ /dev/null
+@@ -1,55 +0,0 @@
+-Amlogic Meson SPI controllers
+-
+-* SPIFC (SPI Flash Controller)
+-
+-The Meson SPIFC is a controller optimized for communication with SPI
+-NOR memories, without DMA support and a 64-byte unified transmit /
+-receive buffer.
+-
+-Required properties:
+- - compatible: should be "amlogic,meson6-spifc" or "amlogic,meson-gxbb-spifc"
+- - reg: physical base address and length of the controller registers
+- - clocks: phandle of the input clock for the baud rate generator
+- - #address-cells: should be 1
+- - #size-cells: should be 0
+-
+-	spi@c1108c80 {
+-		compatible = "amlogic,meson6-spifc";
+-		reg = <0xc1108c80 0x80>;
+-		clocks = <&clk81>;
+-		#address-cells = <1>;
+-		#size-cells = <0>;
+-	};
+-
+-* SPICC (SPI Communication Controller)
+-
+-The Meson SPICC is generic SPI controller for general purpose Full-Duplex
+-communications with dedicated 16 words RX/TX PIO FIFOs.
+-
+-Required properties:
+- - compatible: should be:
+-	"amlogic,meson-gx-spicc" on Amlogic GX and compatible SoCs.
+-	"amlogic,meson-axg-spicc" on Amlogic AXG and compatible SoCs
+- - reg: physical base address and length of the controller registers
+- - interrupts: The interrupt specifier
+- - clock-names: Must contain "core"
+- - clocks: phandle of the input clock for the baud rate generator
+- - #address-cells: should be 1
+- - #size-cells: should be 0
+-
+-Optional properties:
+- - resets: phandle of the internal reset line
+-
+-See ../spi/spi-bus.txt for more details on SPI bus master and slave devices
+-required and optional properties.
+-
+-Example :
+-	spi@c1108d80 {
+-		compatible = "amlogic,meson-gx-spicc";
+-		reg = <0xc1108d80 0x80>;
+-		interrupts = <GIC_SPI 112 IRQ_TYPE_LEVEL_HIGH>;
+-		clock-names = "core";
+-		clocks = <&clk81>;
+-		#address-cells = <1>;
+-		#size-cells = <0>;
+-	};
 -- 
 2.22.0
 
