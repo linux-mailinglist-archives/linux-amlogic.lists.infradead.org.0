@@ -2,87 +2,81 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A51EC819FD
-	for <lists+linux-amlogic@lfdr.de>; Mon,  5 Aug 2019 14:49:21 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1353D81D6A
+	for <lists+linux-amlogic@lfdr.de>; Mon,  5 Aug 2019 15:41:15 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Ht7dtZ0CvkXw7ebOfXKap79uHKpFUEVqPaWWRapxT00=; b=X/9o7l4BjbkgiM
-	6HMSCq9DmR9rY0uKgv1xnWfRbc4Y0J64u1eIcs3jKPKz9p+xf6QejVCvZ4UnW1m0mZKEvYHMuGkpf
-	xJRRtG0oBM3hL8OJNIg9z7YburNqn5HnXkv7EVw8zVyw7NWArnFpwgwpTy95FqS1KO3fPXP6WOGQ5
-	xMehBO06E9dlcB5w1fJYoci6LVRA/hkmi8LQJMSpXzo0rDDyx88af3kLljWtkn+q+SLlaI1rjA4g8
-	3CzOrAW6jDFBu9d5PUeitRAi0EhJSSiJSwtVspRaqVJGFp92B/zaM5By41bU0J32HUS+7qdbD1p7/
-	IFUZy0velE/HxwVM0uRw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=AidVGTjnJ6ccJMlsfpuw2sA1ZT4Dd/XU+lfo5icUhtk=; b=l7nyeyOJfmdjUd
+	sEoL7y3bgYDUTsihIKwj83ADx9vlVZT9E9EYSokJ+RTPabqC85XKQ6UNNBS1Bd4jVhkKFfsCFGOIr
+	zwJxWMhukqlKOjNalrX5wfWeYZ5OVGAE4cyv5GFls5r/h2UTTOhYm1KbCdF+LMETNpTNCD5pWUIGU
+	nn8d3ymRbS40TIeY1snopdBxlhkJr2XTsepQX+wvD3Ek71xOLF5dzNfLZD1QlCLk1d2DOhsRNvL5B
+	zr1r2UfXc9Ygjz8uK1WXNSY4ro0j/xPxvG7gapdY5BodUekIPlIYgG0gFL4Khr+jHUYU39VQrpr0n
+	aGKiKmLH8W0r08bxrMsg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hucQS-00009V-6u; Mon, 05 Aug 2019 12:49:20 +0000
-Received: from mail-wm1-x342.google.com ([2a00:1450:4864:20::342])
+	id 1hudEd-0000Zl-Hq; Mon, 05 Aug 2019 13:41:11 +0000
+Received: from mail-wm1-x344.google.com ([2a00:1450:4864:20::344])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hucQ4-0008FM-0F
- for linux-amlogic@lists.infradead.org; Mon, 05 Aug 2019 12:48:58 +0000
-Received: by mail-wm1-x342.google.com with SMTP id v19so72904457wmj.5
- for <linux-amlogic@lists.infradead.org>; Mon, 05 Aug 2019 05:48:55 -0700 (PDT)
+ id 1hudEZ-0000Yv-SR
+ for linux-amlogic@lists.infradead.org; Mon, 05 Aug 2019 13:41:09 +0000
+Received: by mail-wm1-x344.google.com with SMTP id g67so68952266wme.1
+ for <linux-amlogic@lists.infradead.org>; Mon, 05 Aug 2019 06:41:07 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=subject:to:cc:references:from:message-id:date:user-agent
- :mime-version:in-reply-to:content-transfer-encoding:content-language;
- bh=I4WQBlYtUK3LpLALLS8/Bgf6TMUihDOjjA4mHf9gmXw=;
- b=s6b1QVHf93ASWMbEq+K8NrqNubU0VKZcHFb4e3uq3oEfx0rf+//MchlNQPKayhgCvW
- CUCBE6YkH92ZifWWrmW464gGWwOUVdrm0W2eT6xdLqZNfIYzONd2kTpbiOBcmqc2tB9t
- V17h1u1tU/TF5u+mTW3xwhB87mA6giFlr3gwUIuId9c7WGoqw54is7R02XNt40eTKWhh
- njOMkKU2kfjm6zt/L8R3Pi0g4lmHu4rKkXKvyKyDWGZzC8Aa6+VHuuwKrFXWOphk9qRO
- drwPAPxNLKqoP7G/WnTmYb8fAbRYc6ukNJq0jnnb+rvIaWUqY4BabyFS8jOldRo6+q8d
- Gxdw==
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=o3FggyWEk7iag/gjHOv9EP41vPE6V1cAArTG8uYr8XE=;
+ b=VKzwCZsY5ujaTHwBT2AdabMwz/1j90BaDaa/VIhk7cwlJO/n264xa2vUQOchFf6hn1
+ iu24xUGNF3exhSvC8sOfcU/WP7MHEpYz/JQi5vY4N0rpFRQ82yUIc7fT6QjSg4sLApfW
+ AFtp86CS+jmu0DbCb5QFeDCGFqmNTB0si0PY8C4SC39LwW5U15uabg5vrEjne46KEZIn
+ L0vhnpzT/HAVWyLSZ88RB448nF5GfiMbcwdmRxymXqDL7tAB/BT8Bp2NaS+NI1QbEYFg
+ 5zNSN1uU0r3p79VVyvXzjFIKCtqRQOHtpk4qkXtx1dPs1l1ks7l5kqR4qlp9VVFwooHF
+ yjJA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:subject:to:cc:references:from:message-id:date
- :user-agent:mime-version:in-reply-to:content-transfer-encoding
- :content-language;
- bh=I4WQBlYtUK3LpLALLS8/Bgf6TMUihDOjjA4mHf9gmXw=;
- b=gk6J1DiZmzdnqykWw7fp080ODc6vzLLziNm8TKhExDXSOJJJ1k5b5FEPWYpO6n8jKg
- dl7L6RhIc1BpA8i+8VTMv4bFlqQ5ls1V12mV8WChKxWKaAcIzZOtOR2kByQ8qHBP/3sR
- kSAhC5hv4s+A+yWF7IDw+y8sxk93HadM1ywV2gJrJDluQJ5Jz/gNz98EhYaIhxVZAeaw
- 2uVQlniVl++3dtB+dTibBbwdFObSEWbtmWk3SVRwHXVhPWLm2rTGwsxTUmBhWw23d37v
- sZY1jT1lnI3zTormWrWyYRJkMxF+s+PQQAvt1zHTq9pPkRNEuIiYCjqrtOvZ0m22koZT
- LuEw==
-X-Gm-Message-State: APjAAAXBGxuWj+lzExIRZU33DzFoXkLm84c+1dlZLGPQP+dx87tu7pK2
- uEAJuh8zp/v56OhSvACgXtkjdQ==
-X-Google-Smtp-Source: APXvYqwpd7vS0LRg5oITH/nfFBUXRzWmk9UAeFv1TcmYUsmKHnazMLOnFGlOmL6kk7iKgRhpY4SaJw==
-X-Received: by 2002:a1c:a7c6:: with SMTP id
- q189mr19095355wme.146.1565009334383; 
- Mon, 05 Aug 2019 05:48:54 -0700 (PDT)
-Received: from [10.1.4.98] (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr.
- [90.63.244.31])
- by smtp.gmail.com with ESMTPSA id i66sm151649804wmi.11.2019.08.05.05.48.53
- (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
- Mon, 05 Aug 2019 05:48:53 -0700 (PDT)
-Subject: Re: [PATCH v2 2/6] thermal: amlogic: Add thermal driver to support
- G12 SoCs
-To: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-References: <20190731153529.30159-1-glaroque@baylibre.com>
- <20190731153529.30159-3-glaroque@baylibre.com>
- <CAFBinCDGSJABnS1L1ULueyeXZaV38qrxEA0a12gB-uyRC_TvPQ@mail.gmail.com>
-From: guillaume La Roque <glaroque@baylibre.com>
-Message-ID: <14e14cd9-46bd-0d43-654c-6db64397f5c7@baylibre.com>
-Date: Mon, 5 Aug 2019 14:48:53 +0200
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
- Thunderbird/60.8.0
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=o3FggyWEk7iag/gjHOv9EP41vPE6V1cAArTG8uYr8XE=;
+ b=OCNGzCSUGGLIF77+Qk4/N8UKrfu2wGGxZj8Cvl2I+ApLLq1+2PvcOKQRr2zgz4PU/s
+ NEGzMmh/Lp2sB2epEJcASO79IrEnn+ssHr+Atlnm4cec/2uOMWchgGwFfR3QYGGqqXk6
+ Xgr9quAF0uqW3XNhJV/cXwGqD1kqTewgXBbATHfi9jjqzB1LRX11PkKJFxaGLrlVxOuI
+ GpFBQL9V6v5N+A6+QT3QxTi4Nt0jNZlWMCeA+XICePrJSUEEU/wsxvFVBQCflQsiP3uf
+ mwZXFqlxQQUS+mHFv2m1obgDl1J21d/Hh+Ppg3Jfm6RYmnBT+Y66YW2t+Ef3/7NTB5Ft
+ Nq7A==
+X-Gm-Message-State: APjAAAVrYdWS7r6L4I66Oq9CQ98aHAVPDpJCpsS5v6xrXaqgYFL2AX4+
+ hYgeswQlANjw0v4MAWkPYIb6Vg==
+X-Google-Smtp-Source: APXvYqwF6PGarFPBjk3nNJY6M7XmmSODW9OY5CMXn6Qo4jDotnjtLtsU/m8nGsyE18j0hM+jq4UcTA==
+X-Received: by 2002:a1c:5f09:: with SMTP id t9mr19859634wmb.112.1565012466102; 
+ Mon, 05 Aug 2019 06:41:06 -0700 (PDT)
+Received: from starbuck.baylibre.local
+ (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
+ by smtp.googlemail.com with ESMTPSA id w7sm99040534wrn.11.2019.08.05.06.41.05
+ (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
+ Mon, 05 Aug 2019 06:41:05 -0700 (PDT)
+From: Jerome Brunet <jbrunet@baylibre.com>
+To: Andrzej Hajda <a.hajda@samsung.com>,
+ Neil Armstrong <narmstrong@baylibre.com>
+Subject: [PATCH 0/8] drm/bridge: dw-hdmi: improve i2s support
+Date: Mon,  5 Aug 2019 15:40:54 +0200
+Message-Id: <20190805134102.24173-1-jbrunet@baylibre.com>
+X-Mailer: git-send-email 2.21.0
 MIME-Version: 1.0
-In-Reply-To: <CAFBinCDGSJABnS1L1ULueyeXZaV38qrxEA0a12gB-uyRC_TvPQ@mail.gmail.com>
-Content-Language: en-US
+X-Patchwork-Bot: notify
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190805_054856_246753_E1DED7C9 
-X-CRM114-Status: GOOD (  34.85  )
+X-CRM114-CacheID: sfid-20190805_064107_976446_E7143DC1 
+X-CRM114-Status: UNSURE (   8.71  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:342 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:344 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -100,138 +94,56 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, linux-pm@vger.kernel.org, khilman@baylibre.com,
- daniel.lezcano@linaro.org, linux-kernel@vger.kernel.org,
- linux-amlogic@lists.infradead.org, linux-arm-kernel@lists.infradead.org
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Cc: Jonas Karlman <jonas@kwiboo.se>, Kevin Hilman <khilman@baylibre.com>,
+ linux-kernel@vger.kernel.org, dri-devel@lists.freedesktop.org,
+ linux-amlogic@lists.infradead.org, Jerome Brunet <jbrunet@baylibre.com>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-SGkgTWFydGluLAoKYWdhaW4gdGhhbmtzIGZvciB5b3VyIHJldmlldy4KCk9uIDgvMy8xOSA4OjI0
-IFBNLCBNYXJ0aW4gQmx1bWVuc3RpbmdsIHdyb3RlOgo+IEhpIEd1aWxsYXVtZSwKPgo+IChJIHN0
-aWxsIGRvbid0IGhhdmUgYW55IGV4cGVyaWVuY2Ugd2l0aCB0aGUgdGhlcm1hbCBmcmFtZXdvcmss
-IHNvCj4gYmVsb3cgYXJlIHNvbWUgZ2VuZXJhbCBjb21tZW50cykKPgo+IE9uIFdlZCwgSnVsIDMx
-LCAyMDE5IGF0IDU6MzYgUE0gR3VpbGxhdW1lIExhIFJvcXVlCj4gPGdsYXJvcXVlQGJheWxpYnJl
-LmNvbT4gd3JvdGU6Cj4gSSB3b3VsZCBhZGQgYSBwYXRjaCBkZXNjcmlwdGlvbiBoZXJlOgo+ICIK
-PiBBbWxvZ2ljIEcxMkEgYW5kIEcxMkIgU29DcyBpbnRlZ3JhdGUgdHdvIHRoZXJtYWwgc2Vuc29y
-cyB3aXRoIHRoZSBzYW1lIGRlc2lnbi4KPiBPbmUgaXMgbG9jYXRlZCBjbG9zZSB0byB0aGUgRERS
-IChjb250cm9sbGVyPykgYW5kIHRoZSBvdGhlciBvbmUgaXMKPiBsb2NhdGVkIGNsb3NlIHRvIHRo
-ZSBQTExzIChiZXR3ZWVuIHRoZSBDUFUgYW5kIEdQVSkuCj4KPiBUaGUgY2FsaWJyYXRpb24gZGF0
-YSBmb3IgZWFjaCBvZiB0aGUgdGhlcm1hbCBzZW5zb3JzIGluc3RhbmNlIGlzCj4gc3RvcmVkIGlu
-IGEgZGlmZmVyZW50IGxvY2F0aW9uIHdpdGhpbiB0aGUgQU8gcmVnaW9uLgo+Cj4gSW1wbGVtZW50
-IHJlYWRpbmcgdGhlIHRlbXBlcmF0dXJlIGZyb20gZWFjaCB0aGVybWFsIHNlbnNvci4KPgo+IFRo
-ZSBJUCBibG9jayBoYXMgbW9yZSBmdW5jdGlvbmFsaXR5LCB3aGljaCBtYXkgYmUgYWRkZWQgdG8g
-dGhpcyBkcml2ZXIKPiBpbiB0aGUgZnV0dXJlOgo+IC0gcmVhZGluZyB1cCB0byAxNiBzdG9yZWQg
-dGVtcGVyYXR1cmUgc2FtcGxlcwoKaXQncyBub3Qgd29ya2luZywgeW91IGNhbiB2ZXJpZnkgaXQg
-aWYgeW91IGNoZWNrIHRoZSByZWdtYXAgZGVmaW5lIGluIHRoZSBkcml2ZXIuIGluIGZhY3QgdGVt
-cCBpcyBvbmx5IHdyaXRlIGluIG9uZSByZWdpc3RlciwgaXQncyBjb25maXJtZWQgYnkgYW1sb2dp
-Yy4KCj4gLSBjaGlwIHJlc2V0IHdoZW4gdGhlIHRlbXBlcmF0dXJlIGV4Y2VlZHMgYSBjb25maWd1
-cmFibGUgdGhyZXNob2xkCj4gLSB1cCB0byBmb3VyIGludGVycnVwdHMgd2hlbiB0aGUgdGVtcGVy
-YXR1cmUgaGFzIHJpc2VuIGFib3ZlIGEKPiBjb25maWd1cmFibGUgdGhyZXNob2xkCj4gLSB1cCB0
-byBmb3VyIGludGVycnVwdHMgd2hlbiB0aGUgdGVtcGVyYXR1cmUgaGFzIGZhbGxlbiBiZWxvdyBh
-Cj4gY29uZmlndXJhYmxlIHRocmVzaG9sZAo+ICIKCmFncmVlZCB3aXRoIHlvdSB0byBhZGQgZGVz
-Y3JpcHRpb27CoCBhbmQgb3B0aW9uYWwgd2l0aG91dCAxNiByZWdpc3RlciBwYXJ0LgoKPgo+PiBT
-aWduZWQtb2ZmLWJ5OiBHdWlsbGF1bWUgTGEgUm9xdWUgPGdsYXJvcXVlQGJheWxpYnJlLmNvbT4K
-Pj4gLS0tCj4+ICBkcml2ZXJzL3RoZXJtYWwvS2NvbmZpZyAgICAgICAgICAgfCAgMTEgKwo+PiAg
-ZHJpdmVycy90aGVybWFsL01ha2VmaWxlICAgICAgICAgIHwgICAxICsKPj4gIGRyaXZlcnMvdGhl
-cm1hbC9hbWxvZ2ljX3RoZXJtYWwuYyB8IDMzMiArKysrKysrKysrKysrKysrKysrKysrKysrKysr
-KysKPj4gIDMgZmlsZXMgY2hhbmdlZCwgMzQ0IGluc2VydGlvbnMoKykKPj4gIGNyZWF0ZSBtb2Rl
-IDEwMDY0NCBkcml2ZXJzL3RoZXJtYWwvYW1sb2dpY190aGVybWFsLmMKPj4KPj4gZGlmZiAtLWdp
-dCBhL2RyaXZlcnMvdGhlcm1hbC9LY29uZmlnIGIvZHJpdmVycy90aGVybWFsL0tjb25maWcKPj4g
-aW5kZXggOTk2NjM2NGE2ZGViLi4wZjMxYmI0YmMzNzIgMTAwNjQ0Cj4+IC0tLSBhL2RyaXZlcnMv
-dGhlcm1hbC9LY29uZmlnCj4+ICsrKyBiL2RyaXZlcnMvdGhlcm1hbC9LY29uZmlnCj4+IEBAIC0z
-NDgsNiArMzQ4LDE3IEBAIGNvbmZpZyBNVEtfVEhFUk1BTAo+PiAgICAgICAgICAgRW5hYmxlIHRo
-aXMgb3B0aW9uIGlmIHlvdSB3YW50IHRvIGhhdmUgc3VwcG9ydCBmb3IgdGhlcm1hbCBtYW5hZ2Vt
-ZW50Cj4+ICAgICAgICAgICBjb250cm9sbGVyIHByZXNlbnQgaW4gTWVkaWF0ZWsgU29Dcwo+Pgo+
-PiArY29uZmlnIEFNTE9HSUNfVEhFUk1BTAo+IHdlIHR5cGljYWxseSB1c2UgIk1FU09OIiBpbiB0
-aGUgS2NvbmZpZyBzeW1ib2xzOgo+ICQgZ3JlcCAtYyBBTUxPR0lDIC5jb25maWcKPiAxCj4gJCBn
-cmVwIC1jIE1FU09OIC5jb25maWcKPiAzMwo+Cj4gSSBhbHNvIHdvbmRlciBpZiB3ZSBzaG91bGQg
-YWRkIEcxMiBvciBHMTJBIHNvIHdlIGRvbid0IGNvbmZsaWN0IHdpdGgKPiB1cGNvbWluZyB0aGVy
-bWFsIHNlbnNvcnMgd2l0aCBhIGRpZmZlcmVudCBkZXNpZ24gKGFzc3VtaW5nIHRoYXQgdGhpcwo+
-IHdpbGwgYmUgYSB0aGluZykuCj4gZm9yIGV4YW1wbGUgd2UgYWxyZWFkeSBoYXZlIHRocmVlIGRp
-ZmZlcmVudCBVU0IyIFBIWSBkcml2ZXJzCj4KPiBbLi4uXQoKaSBjaGVjayB3aXRoIE5laWwgYW5k
-IGZvciBuZXcgZmFtaWx5IGl0J3MgYmV0dGVyIHRvIHVzZSBBbWxvZ2ljIGluc3RlYWQgb2YgbWVz
-b24uCgppIGRvbid0IGFkZCBHMTIgYmVjYXVzZSB3ZSBhbHJlYWR5IGtub3cgaXQncyBzYW1lIHNl
-bnNvcnMgZm9yIFNNMSBTb0MgZmFtaWx5IFswXS4KCj4+ICsvKgo+PiArICogQ2FsY3VsYXRlIGEg
-dGVtcGVyYXR1cmUgdmFsdWUgZnJvbSBhIHRlbXBlcmF0dXJlIGNvZGUuCj4+ICsgKiBUaGUgdW5p
-dCBvZiB0aGUgdGVtcGVyYXR1cmUgaXMgZGVncmVlIENlbHNpdXMuCj4gaXMgaXQgcmVhbGx5IGRl
-Z3JlZSBDZWxzaXVzIG9yIG1pbGxpY2Vsc2l1cz8KZ29vZCBwb2ludCBpdCdzIGluIG1pbGxpY2Vs
-c2l1cywgaSB3aWxsIGZpeCBhbGwKPgo+PiArICovCj4+ICtzdGF0aWMgaW50IGNvZGVfdG9fdGVt
-cChzdHJ1Y3QgYW1sb2dpY190aGVybWFsICpwZGF0YSwgaW50IHRlbXBfY29kZSkKPiBQUkVGSVhf
-dGhlcm1hbF9jb2RlX3RvX21pbGxpY2Vsc2l1cz8Kb2sKPiBbLi4uXQo+PiArc3RhdGljIGludCBh
-bWxvZ2ljX3RoZXJtYWxfZW5hYmxlKHN0cnVjdCBhbWxvZ2ljX3RoZXJtYWwgKmRhdGEpCj4+ICt7
-Cj4+ICsgICAgICAgY2xrX3ByZXBhcmVfZW5hYmxlKGRhdGEtPmNsayk7Cj4gbm8gY2xvY2sgZXJy
-b3IgaGFuZGxpbmc/CgoKaSB3aWxsIGZpeAoKPgo+PiArICAgICAgIHJlZ21hcF91cGRhdGVfYml0
-cyhkYXRhLT5yZWdtYXAsIFRTRU5TT1JfQ0ZHX1JFRzEsCj4+ICsgICAgICAgICAgICAgICAgICAg
-ICAgICAgIFRTRU5TT1JfQ0ZHX1JFRzFfRU5BQkxFLCBUU0VOU09SX0NGR19SRUcxX0VOQUJMRSk7
-Cj4+ICsKPj4gKyAgICAgICByZXR1cm4gMDsKPj4gK30KPj4gKwo+PiArc3RhdGljIGludCBhbWxv
-Z2ljX3RoZXJtYWxfZGlzYWJsZShzdHJ1Y3QgYW1sb2dpY190aGVybWFsICpkYXRhKQo+PiArewo+
-PiArICAgICAgIHJlZ21hcF91cGRhdGVfYml0cyhkYXRhLT5yZWdtYXAsIFRTRU5TT1JfQ0ZHX1JF
-RzEsCj4+ICsgICAgICAgICAgICAgICAgICAgICAgICAgIFRTRU5TT1JfQ0ZHX1JFRzFfRU5BQkxF
-LCAwKTsKPj4gKyAgICAgICBjbGtfZGlzYWJsZShkYXRhLT5jbGspOwo+IGVpdGhlciBjbGtfZGlz
-YWJsZV91bnByZXBhcmUgaGVyZSBvciB1c2Ugb25seSBjbGtfZW5hYmxlIGluCj4gYW1sb2dpY190
-aGVybWFsX2VuYWJsZSBhbmQgbW92ZSBwcmVwYXJlL3VucHJlcGFyZSBzb21ld2hlcmUgZWxzZQpp
-IHdpbGwgYWxpZ24gd2l0aCBlbmFibGUgYW5kIHVzZSBjbGtfZGlzYWJsZV91bnByZXBhcmUKPgo+
-PiArCj4+ICsgICAgICAgcmV0dXJuIDA7Cj4+ICt9Cj4+ICsKPj4gK3N0YXRpYyBpbnQgYW1sb2dp
-Y190aGVybWFsX2dldF90ZW1wKHZvaWQgKmRhdGEsIGludCAqdGVtcCkKPj4gK3sKPj4gKyAgICAg
-ICB1bnNpZ25lZCBpbnQgdHZhbHVlOwo+PiArICAgICAgIHN0cnVjdCBhbWxvZ2ljX3RoZXJtYWwg
-KnBkYXRhID0gZGF0YTsKPj4gKwo+PiArICAgICAgIGlmICghZGF0YSkKPj4gKyAgICAgICAgICAg
-ICAgIHJldHVybiAtRUlOVkFMOwo+PiArCj4+ICsgICAgICAgcmVnbWFwX3JlYWQocGRhdGEtPnJl
-Z21hcCwgVFNFTlNPUl9TVEFUMCwgJnR2YWx1ZSk7Cj4+ICsgICAgICAgKnRlbXAgPSBjb2RlX3Rv
-X3RlbXAocGRhdGEsCj4+ICsgICAgICAgICAgICAgICAgICAgICAgICAgICAgdHZhbHVlICYgVFNF
-TlNPUl9SRUFEX1RFTVBfTUFTSyk7Cj4gbWF5YmUgc2ltcGx5IG1vdmUgdGhlIGltcGxlbWVudGF0
-aW9uIGZyb20gY29kZV90b190ZW1wIGhlcmU/Cgpmb3IgdGhlIG9wdGlvbmFsIGZ1bmN0aW9uIGl0
-IGNvdWxkIGJlIGEgcHJvYmxlbSBpZiBpIG1vdmUgYWxsIGluIGNvZGVfdG9fdGVtcC4KCmkgcHJl
-ZmVyIHRvIGhhdmUgYSBmdW5jdGlvbiB3aGljaCBhcmUganVzdCBkbyB0aGUgY29udmVyc2lvbi4K
-Cj4KPiBbLi4uXQo+PiArc3RhdGljIGNvbnN0IHN0cnVjdCBhbWxvZ2ljX3RoZXJtYWxfZGF0YSBh
-bWxvZ2ljX3RoZXJtYWxfZzEyX2NwdV9wYXJhbSA9IHsKPj4gKyAgICAgICAudV9lZnVzZV9vZmYg
-PSAweDEyOCwKPj4gKyAgICAgICAuc29jID0gJmFtbG9naWNfdGhlcm1hbF9nMTIsCj4gYmFzZWQg
-b24gdGhlIHZhcmlhYmxlIG5hbWUgSSBleHBlY3RlZCB0aGlzIHRvIGJlIGFuIGVudW0gb2Ygc29t
-ZSBzb3J0Lgo+IEkgd291bGQgaGF2ZSBleHBlY3RlZCBpdCB0byBiZSBjYWxsZWQgY2FsaWJyYXRp
-b25fcGFyYW1ldGVycyBvcgo+IHNpbWlsYXIgdG8gbWF0Y2ggdGhlIGV4cGxhbmF0aW9uIGluIHRo
-ZSBkcml2ZXIgZGVzY3JpcHRpb24KPiAobm8gbmVlZCB0byBjaGFuZ2UgaXQgaWYgeW91IHByZWZl
-ciBpdCBsaWtlIHRoaXMsIEkganVzdCB3YW50IHRvIG1ha2UKPiB5b3UgYXdhcmUgb2YgdGhpcykK
-b2sgdG8gcmVuYW1lIHN0cnVjdHVyZSBuYW1lCj4KPj4gKyAgICAgICAucmVnbWFwX2NvbmZpZyA9
-ICZhbWxvZ2ljX3RoZXJtYWxfcmVnbWFwX2NvbmZpZ19nMTIsCj4gaWYgcmVnbWFwX2NvbmZpZyBp
-cyBhbHdheXMgdGhlIHNhbWUgeW91IG1heSBhbHNvIHBhc3MgaXQgZGlyZWN0bHkgdG8KPiBkZXZt
-X3JlZ21hcF9pbml0X21taW8KCml0J3MgdGhlIHNhbWUgZm9yIG5vdyBidXQgd2UgZG9uJ3Qga25v
-dyBpZiBpbiB0aGUgZnV0dXJlwqAgU29DcyB1c2Ugc2FtZSByZWdtYXAuCgoKPgo+PiArfTsKPj4g
-Kwo+PiArc3RhdGljIGNvbnN0IHN0cnVjdCBhbWxvZ2ljX3RoZXJtYWxfZGF0YSBhbWxvZ2ljX3Ro
-ZXJtYWxfZzEyX2Rkcl9wYXJhbSA9IHsKPj4gKyAgICAgICAudV9lZnVzZV9vZmYgPSAweEYwLAo+
-IEkgYmVsaWV2ZSB3ZSB1c2UgbG93ZXItY2FzZSBoZXggZXZlcnl3aGVyZSBlbHNlCj4KPiBbLi4u
-XQp3aWxsIGZpeAo+PiArc3RhdGljIGNvbnN0IHN0cnVjdCBvZl9kZXZpY2VfaWQgb2ZfYW1sb2dp
-Y190aGVybWFsX21hdGNoW10gPSB7Cj4+ICsgICAgICAgewo+PiArICAgICAgICAgICAgICAgLmNv
-bXBhdGlibGUgPSAiYW1sb2dpYyxnMTItZGRyLXRoZXJtYWwiLAo+PiArICAgICAgICAgICAgICAg
-LmRhdGEgPSAmYW1sb2dpY190aGVybWFsX2cxMl9kZHJfcGFyYW0sCj4+ICsgICAgICAgfSwKPj4g
-KyAgICAgICB7Cj4+ICsgICAgICAgICAgICAgICAuY29tcGF0aWJsZSA9ICJhbWxvZ2ljLGcxMi1j
-cHUtdGhlcm1hbCIsCj4+ICsgICAgICAgICAgICAgICAuZGF0YSA9ICZhbWxvZ2ljX3RoZXJtYWxf
-ZzEyX2NwdV9wYXJhbSwKPj4gKyAgICAgICB9LAo+PiArICAgICAgIHsgLyogZW5kICovIH0KPiBv
-dGhlciBkcml2ZXJzIHVzZSAic2VudGluZWwiLCBidXQgcGVyc29uYWxseSBJIGhhdmUgbm8gcHJl
-ZmVyZW5jZSBoZXJlCj4KPiBbLi4uXQpzYW1lIGZvciBtZSBpIHdpbGwgZG8gc2FtZSBhcyBvdGhl
-ciBkcml2ZXJzCj4+ICsgICAgICAgcGRhdGEtPnR6ZCA9IGRldm1fdGhlcm1hbF96b25lX29mX3Nl
-bnNvcl9yZWdpc3Rlcgo+PiArICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICgmcGRldi0+
-ZGV2LAo+PiArICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAwLAo+PiArICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICBwZGF0YSwKPj4gKyAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgJmFtbG9naWNfdGhlcm1hbF9vcHMpOwo+IEkgYmVsaWV2ZSB0aGUgb3BlbmluZyBi
-cmFjZSBoYXMgdG8gZ28gb250byB0aGUgc2FtZSBsaW5lIGFzIHRoZSBmdW5jdGlvbiBuYW1lCj4K
-PiBbLi4uXQp3aWxsIGZpeAo+PiArICAgICAgIHJldCA9IGFtbG9naWNfdGhlcm1hbF9lbmFibGUo
-cGRhdGEpOwo+PiArICAgICAgIGlmIChyZXQpCj4+ICsgICAgICAgICAgICAgICBjbGtfdW5wcmVw
-YXJlKHBkYXRhLT5jbGspOwo+IGNsa19kaXNhYmxlX3VucHJlcGFyZSwgZWxzZSB5b3UnbGwgbGVh
-dmUgdGhlIGNsb2NrIHByZXBhcmVkCndpbGwgZml4Cj4KPj4gKyNpZmRlZiBDT05GSUdfUE1fU0xF
-RVAKPj4gK3N0YXRpYyBpbnQgYW1sb2dpY190aGVybWFsX3N1c3BlbmQoc3RydWN0IGRldmljZSAq
-ZGV2KQo+PiArewo+PiArICAgICAgIHN0cnVjdCBhbWxvZ2ljX3RoZXJtYWwgKmRhdGEgPSBkZXZf
-Z2V0X2RydmRhdGEoZGV2KTsKPj4gKwo+PiArICAgICAgIHJldHVybiBhbWxvZ2ljX3RoZXJtYWxf
-ZGlzYWJsZShkYXRhKTsKPj4gK30KPj4gKwo+PiArc3RhdGljIGludCBhbWxvZ2ljX3RoZXJtYWxf
-cmVzdW1lKHN0cnVjdCBkZXZpY2UgKmRldikKPj4gK3sKPj4gKyAgICAgICBzdHJ1Y3QgYW1sb2dp
-Y190aGVybWFsICpkYXRhID0gZGV2X2dldF9kcnZkYXRhKGRldik7Cj4+ICsKPj4gKyAgICAgICBy
-ZXR1cm4gYW1sb2dpY190aGVybWFsX2VuYWJsZShkYXRhKTsKPj4gK30KPj4gKyNlbmRpZgo+IGlu
-c3RlYWQgb2YgdXNpbmcgYW4gI2lmZGVmIGhlcmUgYW5ub3RhdGUgdGhlIHN1c3BlbmQvcmVzdW1l
-IGZ1bmN0aW9ucwo+IHdpdGggX19tYXliZV91bnVzZWQsIHNlZSBbMF0Kd2lsbCBmaXgKPgo+Cj4g
-TWFydGluCj4KPgo+IFswXSBodHRwczovL2xvcmUua2VybmVsLm9yZy9wYXRjaHdvcmsvcGF0Y2gv
-NzMyOTgxLwoKWzBdIGh0dHBzOi8vbG9yZS5rZXJuZWwub3JnL2xpbnV4LWFybS1rZXJuZWwvMjAx
-OTA3MDExMDQ3MDUuMTgyNzEtMS1uYXJtc3Ryb25nQGJheWxpYnJlLmNvbS8KCgp0aGFua3MKCkd1
-aWxsYXVtZQoKCl9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
-CmxpbnV4LWFtbG9naWMgbWFpbGluZyBsaXN0CmxpbnV4LWFtbG9naWNAbGlzdHMuaW5mcmFkZWFk
-Lm9yZwpodHRwOi8vbGlzdHMuaW5mcmFkZWFkLm9yZy9tYWlsbWFuL2xpc3RpbmZvL2xpbnV4LWFt
-bG9naWMK
+The purpose of this patchset is to improve the support of the i2s
+interface of the synopsys hdmi controller.
+
+Once applied, the interface should support all the usual i2s bus formats,
+8 channels playback and properly setup the channel number and allocation
+in the infoframes.
+
+Also, the dw-hdmi i2s interface will now provide the eld to the generic
+hdmi-codec so it can expose the related controls to user space.
+
+This work was inspired by Jonas Karlman's work, available here [0].
+
+This was tested the Amlogic meson-g12a-sei510 platform.
+For this specific platform, which uses codec2codec links, there is a
+runtime dependency for patch 8 on this ASoC series [1].
+
+[0]: https://github.com/Kwiboo/linux-rockchip/commits/rockchip-5.2-for-libreelec-v5.2.3
+[1]: https://lkml.kernel.org/r/20190725165949.29699-1-jbrunet@baylibre.com
+
+Jerome Brunet (8):
+  drm/bridge: dw-hdmi-i2s: support more i2s format
+  drm/bridge: dw-hdmi: move audio channel setup out of ahb
+  drm/bridge: dw-hdmi: set channel count in the infoframes
+  drm/bridge: dw-hdmi-i2s: enable lpcm multi channels
+  drm/bridge: dw-hdmi-i2s: set the channel allocation
+  drm/bridge: dw-hdmi-i2s: reset audio fifo before applying new params
+  drm/bridge: dw-hdmi-i2s: enable only the required i2s lanes
+  drm/bridge: dw-hdmi-i2s: add .get_eld support
+
+ .../drm/bridge/synopsys/dw-hdmi-ahb-audio.c   | 20 ++-----
+ .../gpu/drm/bridge/synopsys/dw-hdmi-audio.h   |  1 +
+ .../drm/bridge/synopsys/dw-hdmi-i2s-audio.c   | 59 +++++++++++++++++--
+ drivers/gpu/drm/bridge/synopsys/dw-hdmi.c     | 37 ++++++++++++
+ drivers/gpu/drm/bridge/synopsys/dw-hdmi.h     | 13 +++-
+ include/drm/bridge/dw_hdmi.h                  |  2 +
+ 6 files changed, 107 insertions(+), 25 deletions(-)
+
+-- 
+2.21.0
+
+
+_______________________________________________
+linux-amlogic mailing list
+linux-amlogic@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-amlogic
