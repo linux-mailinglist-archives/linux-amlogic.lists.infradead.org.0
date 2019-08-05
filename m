@@ -2,80 +2,80 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id ED516818C9
-	for <lists+linux-amlogic@lfdr.de>; Mon,  5 Aug 2019 14:04:21 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id F179D818CE
+	for <lists+linux-amlogic@lfdr.de>; Mon,  5 Aug 2019 14:05:00 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=tc9BmiB7YCPnPuCg/5lmyR9xR4f4yaQpHSBSctIDKBU=; b=YiMP6KAMVvkn2Q
-	wLWiMjLx6+7A8RXpHHS2D5VNqzDCVHm28I3fIQO6j3FFsHYUMEiwJkI8HE3lBnfR0qvWBLzm60QI8
-	ftAnU6+jQXs51R7gSkccziApmTsARsUAQGq+4KJuQbNfGos+toxzw759V/l4ydIvMyNEkfFBs8P7y
-	/LUVCzW46ZyUpCb8mmJbvjiXOYpzVg1y+QhBznBa8Q/ToDRIh+Gu0y5KJ4f8EYhdecoFTvWmLsLKY
-	lYEasurMYansx5pc3M+6Kr9WvTV1oKgjNOBPgTOoHFi1L5ajjVNbA1N3ACGdxQ1SP/ju/0nQ/kuGk
-	wgsqzDd27+lzRGEUwzkA==;
+	List-Owner; bh=2osan5KR+ceHsRqFhn+XkNWxxyKHnOj4bXknR35Nytg=; b=g+v0fEuTKyIoiq
+	1WzykZAsslD4YFGPCLRXuv/LDYlJFy8xo/O0SzR+PiVz0VZvqLmv9wtJ/lfluhK3ZKIK9q+wOCj9z
+	PIMMJ40EEsBQOREGPjtY8gXZh4rvwYzBIMkxdXjkfS3prFeLnpMinH2X4TTmkNN0piWoRyK7dKuV1
+	weMokjTLmjr+xjwLTg+o49dEQ0v13s0WOXFiGFkhqu/zT+6B/ftvJf13JahSGkGzE1tL3Bglyq1DH
+	EmtmDhfJxYXOqS1TenYFdbl1PSX5hdJAGpG+/QGTCUASr8d8CQdJJCxlMC/jZLRJymjh2PlrruUTc
+	XpaOKO2Ln1sTgAwPlPPg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hubiu-0003xm-DY; Mon, 05 Aug 2019 12:04:20 +0000
-Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
+	id 1hubjX-00050I-CU; Mon, 05 Aug 2019 12:04:59 +0000
+Received: from mail-wr1-x436.google.com ([2a00:1450:4864:20::436])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hubi4-00039S-6Y
- for linux-amlogic@lists.infradead.org; Mon, 05 Aug 2019 12:03:31 +0000
-Received: by mail-wr1-x442.google.com with SMTP id n9so84267862wru.0
- for <linux-amlogic@lists.infradead.org>; Mon, 05 Aug 2019 05:03:27 -0700 (PDT)
+ id 1hubi8-0003A4-Iz
+ for linux-amlogic@lists.infradead.org; Mon, 05 Aug 2019 12:03:35 +0000
+Received: by mail-wr1-x436.google.com with SMTP id f9so5230596wre.12
+ for <linux-amlogic@lists.infradead.org>; Mon, 05 Aug 2019 05:03:28 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=Y9sKG2U7XCHY9N45/XGVAYDqTVfRZ5wagMI5lIUYmMc=;
- b=epA4UV4EgezeHzNn4PeRLlLbsYa9NR4F8yaH6ofs3Mt0Dx9Uj0VwZ4HJsJbeX/DYMH
- /uGazRtMLTcGZCP2gbV2HlksCG1/4+2EE2pVZLjMHhI9vKmTq1bIJQCIY90nZlBX4+ZQ
- 0fpuroWX8/inOD0X9y6YJ5/1f016EBHq1QIaM/zN47aA6Z6aUgA/VyyUysXHtdHIV7KO
- WlxUcZ9CCGPSizt8MsubXYf36zS5793erBOl86Rv9WTjnr8jVcqvhlevq/1/hqedanHT
- l2Nfgo093Zx43kH4YgGnQktNGrXhym2xGajx9nPyvn0GScBebSryn6ISxu5HsDHvRcw+
- oLNQ==
+ bh=Wq+NOUXuHn9W915kfej1QDLl0G8Catrb+/a+UkGjnNI=;
+ b=EhN2WpYa+7ri803ml/bEjkzN1nY8BeU/AY+MMoupJpUIq2u1p69+yVQ7br/t7mH40P
+ lp9VfG2N8pWv83c6lN9S33D5h3Mg/GgGrJTxktOOpRJc4Qs00Zm87PR/db7y2yW3eAM6
+ uqOo8k7bHGd3mbezV1Dwr1KXDr0iOfekOTUrcq5m6jm0CTIKePQkNlLJNUaHWfovrAew
+ +b6HUE0pNdRqO0/lmBNUKx++21+RPI0IeTwUD1yG1RRAViSfofe/w7WYXAKG/1Z/+xUG
+ K4otNssxD3TWTfLz/MTLFN14SC5nJN6LkuPwF16Sd6vwDrXPfpogEAxW9ueLCgKxJYzS
+ XhEg==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=Y9sKG2U7XCHY9N45/XGVAYDqTVfRZ5wagMI5lIUYmMc=;
- b=W7F4TDf8BAuqj5ys7dcp7efsobgMtDBNEsrFnAE4XHDdUlr6wOmKsxA8ixNG2zqmE4
- 6gePjvlge7oAXFmucfGXJ4vnledynWgF6MALAJvRpAgkULIyI3dQOac6kWeor4/NMdFj
- OMkJ+zkuOj2TNLGONRl/IkcIV4OhiGpE5T/HliOjNJZuS1KYczE2a4IBQ+7DuUtaiimx
- GQNZGkFBeeEv1q9R+vgWpaZ2PeGd8vuVOfrLmvm/a5j6GCmS6xjCkXWlDiP8bd5jyT3K
- 5z+I9r7esQE2FACfCmvLU3P2KbgryLwTDQnS5ZLsbltX8vTAAEC37ql9gqjXO4lwrgfK
- 8QmA==
-X-Gm-Message-State: APjAAAUzFje3QA+9GwaljZ/dr7Vi222+ie983kajvQ2twYjz5M0zeiHD
- JKVmY/by/AHvBVNlq900YpzPpQ==
-X-Google-Smtp-Source: APXvYqw3OD05u4AblrcjmCcYW/Bk5y/c3rSjEQEnj4ecStOu5l9vedoHEuUMqP9qe4bkr2QEfRACgA==
-X-Received: by 2002:adf:dd51:: with SMTP id u17mr10783185wrm.218.1565006606374; 
- Mon, 05 Aug 2019 05:03:26 -0700 (PDT)
+ bh=Wq+NOUXuHn9W915kfej1QDLl0G8Catrb+/a+UkGjnNI=;
+ b=X7QjSZG6gdBVzxkXiN0Jp3mhgd92aVeTpSXgYJXM8R5oL7pfe95l7R/SXS7yXTBmAr
+ ltgr3MrD8m2lXOq9YvC0t2Hz9YS2iTNszTnIoOceD5WYIDnfQ41LHj4LmIttB6bnYvaU
+ jZjynhBu+jWBTy1zUAJYNPchE89uG6oZmv1b9XiU02MdouiQIALuXot97foJoD3J5//4
+ qMDODkcVHiHK1i+okxVf8t2mf5U6Kq8bzozhe2CYCUyZskCCwPLydFtBcK2HkBqoR4Fk
+ fhQmNwzYpf8a6ojxtwEkqW6KVP/QkYjixyxgQ9Vk1Hi0yHqUqRpahJEQFl1E2sFC7gE8
+ 7pkg==
+X-Gm-Message-State: APjAAAUia3UbQKB4vqd2bprer79Vbftg+dQDbEVTJbO5VlwK09OJz4UI
+ I+OzDYcoGCLzUl2qH9Vvl1j7xg==
+X-Google-Smtp-Source: APXvYqyz2oDf3zNhCGl1fmtqi/15XruskE/NYuyc7ppJN3wS25RsZliVSJ0Q+N3wlY6fZsbAF7WPyA==
+X-Received: by 2002:a5d:4949:: with SMTP id r9mr24455367wrs.289.1565006607077; 
+ Mon, 05 Aug 2019 05:03:27 -0700 (PDT)
 Received: from bender.baylibre.local
  (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
- by smtp.gmail.com with ESMTPSA id x6sm88683668wrt.63.2019.08.05.05.03.25
+ by smtp.gmail.com with ESMTPSA id x6sm88683668wrt.63.2019.08.05.05.03.26
  (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Mon, 05 Aug 2019 05:03:25 -0700 (PDT)
+ Mon, 05 Aug 2019 05:03:26 -0700 (PDT)
 From: Neil Armstrong <narmstrong@baylibre.com>
 To: robh+dt@kernel.org
-Subject: [RFCv2 1/9] dt-bindings: mailbox: meson-mhu: convert to yaml
-Date: Mon,  5 Aug 2019 14:03:12 +0200
-Message-Id: <20190805120320.32282-2-narmstrong@baylibre.com>
+Subject: [RFCv2 2/9] dt-bindings: rng: amlogic,meson-rng: convert to yaml
+Date: Mon,  5 Aug 2019 14:03:13 +0200
+Message-Id: <20190805120320.32282-3-narmstrong@baylibre.com>
 X-Mailer: git-send-email 2.22.0
 In-Reply-To: <20190805120320.32282-1-narmstrong@baylibre.com>
 References: <20190805120320.32282-1-narmstrong@baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190805_050328_418491_FBAC9D87 
-X-CRM114-Status: GOOD (  12.67  )
+X-CRM114-CacheID: sfid-20190805_050332_761417_5BC5A0A1 
+X-CRM114-Status: GOOD (  11.05  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:442 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:436 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -94,7 +94,7 @@ List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
 Cc: linux-amlogic@lists.infradead.org, devicetree@vger.kernel.org,
- jassisinghbrar@gmail.com, linux-arm-kernel@lists.infradead.org,
+ linux-crypto@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
  Neil Armstrong <narmstrong@baylibre.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
@@ -102,115 +102,86 @@ Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
 Now that we have the DT validation in place, let's convert the device tree
-bindings for the Amlogic MHU controller over to a YAML schemas.
+bindings for the Amlogic Random Number generator over to a YAML schemas.
 
 Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
 ---
- .../mailbox/amlogic,meson-gxbb-mhu.yaml       | 53 +++++++++++++++++++
- .../devicetree/bindings/mailbox/meson-mhu.txt | 34 ------------
- 2 files changed, 53 insertions(+), 34 deletions(-)
- create mode 100644 Documentation/devicetree/bindings/mailbox/amlogic,meson-gxbb-mhu.yaml
- delete mode 100644 Documentation/devicetree/bindings/mailbox/meson-mhu.txt
+ .../bindings/rng/amlogic,meson-rng.txt        | 21 -----------
+ .../bindings/rng/amlogic,meson-rng.yaml       | 37 +++++++++++++++++++
+ 2 files changed, 37 insertions(+), 21 deletions(-)
+ delete mode 100644 Documentation/devicetree/bindings/rng/amlogic,meson-rng.txt
+ create mode 100644 Documentation/devicetree/bindings/rng/amlogic,meson-rng.yaml
 
-diff --git a/Documentation/devicetree/bindings/mailbox/amlogic,meson-gxbb-mhu.yaml b/Documentation/devicetree/bindings/mailbox/amlogic,meson-gxbb-mhu.yaml
+diff --git a/Documentation/devicetree/bindings/rng/amlogic,meson-rng.txt b/Documentation/devicetree/bindings/rng/amlogic,meson-rng.txt
+deleted file mode 100644
+index 4d403645ac9b..000000000000
+--- a/Documentation/devicetree/bindings/rng/amlogic,meson-rng.txt
++++ /dev/null
+@@ -1,21 +0,0 @@
+-Amlogic Meson Random number generator
+-=====================================
+-
+-Required properties:
+-
+-- compatible : should be "amlogic,meson-rng"
+-- reg : Specifies base physical address and size of the registers.
+-
+-Optional properties:
+-
+-- clocks : phandle to the following named clocks
+-- clock-names: Name of core clock, must be "core"
+-
+-Example:
+-
+-rng {
+-	compatible = "amlogic,meson-rng";
+-	reg = <0x0 0xc8834000 0x0 0x4>;
+-	clocks = <&clkc CLKID_RNG0>;
+-	clock-names = "core";
+-};
+diff --git a/Documentation/devicetree/bindings/rng/amlogic,meson-rng.yaml b/Documentation/devicetree/bindings/rng/amlogic,meson-rng.yaml
 new file mode 100644
-index 000000000000..2536a0082cff
+index 000000000000..a9ff3cb35c5e
 --- /dev/null
-+++ b/Documentation/devicetree/bindings/mailbox/amlogic,meson-gxbb-mhu.yaml
-@@ -0,0 +1,53 @@
++++ b/Documentation/devicetree/bindings/rng/amlogic,meson-rng.yaml
+@@ -0,0 +1,37 @@
 +# SPDX-License-Identifier: (GPL-2.0 OR BSD-2-Clause)
 +# Copyright 2019 BayLibre, SAS
 +%YAML 1.2
 +---
-+$id: "http://devicetree.org/schemas/mailbox/amlogic,meson-gxbb-mhu.yaml#"
++$id: "http://devicetree.org/schemas/rng/amlogic,meson-rng.yaml#"
 +$schema: "http://devicetree.org/meta-schemas/core.yaml#"
 +
-+title: Amlogic Meson Message-Handling-Unit Controller
++title: Amlogic Meson Random number generator
 +
 +maintainers:
 +  - Neil Armstrong <narmstrong@baylibre.com>
 +
-+description: |
-+  The Amlogic's Meson SoCs Message-Handling-Unit (MHU) is a mailbox controller
-+  that has 3 independent channels/links to communicate with remote processor(s).
-+  MHU links are hardwired on a platform. A link raises interrupt for any
-+  received data. However, there is no specified way of knowing if the sent
-+  data has been read by the remote. This driver assumes the sender polls
-+  STAT register and the remote clears it after having read the data.
-+
 +properties:
 +  compatible:
 +    enum:
-+      - amlogic,meson-gxbb-mhu
++      - amlogic,meson-rng
 +
 +  reg:
 +    maxItems: 1
 +
-+  interrupts:
-+    minItems: 3
-+    maxItems: 3
-+    description:
-+      Contains the interrupt information corresponding to each of the 3 links
-+      of MHU.
++  clocks:
++    maxItems: 1
 +
-+  "#mbox-cells":
-+    const: 1
++  clock-names:
++    items:
++      - const: core
 +
 +required:
 +  - compatible
 +  - reg
-+  - interrupts
-+  - "#mbox-cells"
 +
 +examples:
 +  - |
-+    mailbox@c883c404 {
-+          compatible = "amlogic,meson-gxbb-mhu";
-+          reg = <0xc883c404 0x4c>;
-+          interrupts = <208>, <209>, <210>;
-+          #mbox-cells = <1>;
++    rng@c8834000 {
++          compatible = "amlogic,meson-rng";
++          reg = <0xc8834000 0x4>;
 +    };
-+
-diff --git a/Documentation/devicetree/bindings/mailbox/meson-mhu.txt b/Documentation/devicetree/bindings/mailbox/meson-mhu.txt
-deleted file mode 100644
-index a530310772b9..000000000000
---- a/Documentation/devicetree/bindings/mailbox/meson-mhu.txt
-+++ /dev/null
-@@ -1,34 +0,0 @@
--Amlogic Meson MHU Mailbox Driver
--================================
--
--The Amlogic's Meson SoCs Message-Handling-Unit (MHU) is a mailbox controller
--that has 3 independent channels/links to communicate with remote processor(s).
--MHU links are hardwired on a platform. A link raises interrupt for any
--received data. However, there is no specified way of knowing if the sent
--data has been read by the remote. This driver assumes the sender polls
--STAT register and the remote clears it after having read the data.
--
--Mailbox Device Node:
--====================
--
--Required properties:
----------------------
--- compatible:		Shall be "amlogic,meson-gxbb-mhu"
--- reg:			Contains the mailbox register address range (base
--			address and length)
--- #mbox-cells		Shall be 1 - the index of the channel needed.
--- interrupts:		Contains the interrupt information corresponding to
--			each of the 2 links of MHU.
--
--Example:
----------
--
--	mailbox: mailbox@c883c404 {
--		#mbox-cells = <1>;
--		compatible = "amlogic,meson-gxbb-mhu";
--		reg = <0 0xc883c404 0 0x4c>;
--		interrupts = <0 208 IRQ_TYPE_EDGE_RISING>,
--			     <0 209 IRQ_TYPE_EDGE_RISING>,
--			     <0 210 IRQ_TYPE_EDGE_RISING>;
--		#mbox-cells = <1>;
--	};
 -- 
 2.22.0
 
