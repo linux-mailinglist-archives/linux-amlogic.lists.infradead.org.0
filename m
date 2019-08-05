@@ -2,85 +2,76 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 64741826FD
-	for <lists+linux-amlogic@lfdr.de>; Mon,  5 Aug 2019 23:34:36 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 159208271F
+	for <lists+linux-amlogic@lfdr.de>; Mon,  5 Aug 2019 23:46:11 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:References
-	:In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=gxG7IcDcxdIdgs5wEBc82C1ACFzQ3JEK6wBVcZLbRcc=; b=AoCgL3rzhrgxUK
-	I65I0W6oIynhrOzzvFaSBnertL9fqwK4GJT3seQBU8xWi5Sm925aVF62jB9aNCu7PrHq4ZIQAWGxx
-	pgmsLq79u9YQuOLjzVH3bTG75E2/NN3kzv3GNJX/o7zqM87djabOcwn2bTzkbgiB5mxV+F4ot6IEX
-	Ksv/4vG4NLw+O/PBftMsHx94H9H1OUroIJVnaiGBH0qbCNIgMGKcI9pLNiIsbgiKFuQO9IBVqCGuP
-	M2tv6lC0dLssKw80IZHiP1xXoe7+BunxPM2fzQaM9AE2DYFntZ5AzdhCvaEUOLiWG3ebMPxggLCEE
-	F5hKnAgyps4NY4c/6EBA==;
+	List-Owner; bh=psv3pnhZykPrba3jHMMkHjnYCu1OQo7cwqPU9Dh49qE=; b=nIHqTtQBDw+A7S
+	qmHc0VAT9ha0IfDmnbsVefJP+meeqMBBNS7/eI9eqoYypYvkv6Am2vT7YWqAxcG6HQmYhvtd5Iw+2
+	H6FGJmbkgTLIDCLm3458J90jx0U2j3afLJ4LwpxadqlbqEqlzAGs/RESUZsvzBquAP3tx6WRlAPa1
+	eOkxvZGgcbWHGFQsa+vDQA4IRVXlXiDI2aao8tFqWdFvdHVpYGPq06MmdyMIN/eu3QCVfaSSqPSZz
+	n0itchwjk3FqJl5+rLSvSQ0LzdsyB/wVV7uFGpgydIhqtwA+ezBe6/7VHEMMNlM/u/FM4PW9CtIdt
+	EmNQTiRXhMnxq3wTC6jg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hukcg-0000gT-HM; Mon, 05 Aug 2019 21:34:30 +0000
-Received: from mail-pg1-x542.google.com ([2607:f8b0:4864:20::542])
+	id 1huknu-000564-90; Mon, 05 Aug 2019 21:46:06 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hukcV-0000Xb-Ik
- for linux-amlogic@lists.infradead.org; Mon, 05 Aug 2019 21:34:20 +0000
-Received: by mail-pg1-x542.google.com with SMTP id l21so40380806pgm.3
- for <linux-amlogic@lists.infradead.org>; Mon, 05 Aug 2019 14:34:17 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=from:to:cc:subject:in-reply-to:references:date:message-id
- :mime-version; bh=F2uX64SYkhXuVAYwXPHtsBUqPh5ENofxUHIKVtQKuPM=;
- b=0Nz+Ta1FZkq2bl59Lnwi+ADIQcEtXpO7GoSmDFotlB4DDbx+MfHAbnl61CnjEeLRy+
- MWFV38AZ15AuMNS6p9cPpTYUCALo+IltkAN2X/O/AFJcVXAHeaeV7ROG/y0UVWG+bDFt
- G+sbx4WHyImCYjwFN8l4zcfLkq5UEFFEYWxY9ps3T4TwX7CAlkSxzMYGGD4+Rz9mhdHn
- /PXXyCGtg93mkG9P0G8kEdgNiScGdTEtKIv0Wn5qElyULIj+P25BeogD08x2Y/1+cZ4e
- 1qVea2envtU49RtTa59QgbP5VgV06N2hf868AljN+byIUwSl7hO9j9TlarrWG9LQmV8n
- yqTQ==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:in-reply-to:references:date
- :message-id:mime-version;
- bh=F2uX64SYkhXuVAYwXPHtsBUqPh5ENofxUHIKVtQKuPM=;
- b=aCZv/6Dm5ahsxmYQMU++VQCiXsYxOrl7yqxBPxPkdp8VGpFJlZpCK+tyqJhe8FO/k/
- WIrHPeXFEfO9pTNLB5ijFejtzSKM9vo9/I5PA2nbt17DyV/5eVLfHy5hcxVFfQ8FzzFC
- AaV1nTeMynykDU75MjVs4d1gXqdDqp6mOaTVbr8xwoYaFZgMw5AaXBDuIfwWaFUobpBy
- hbcBcR5KlPZpYwnrmDqEFhrvrTB2POswAHtY7cXJGfWcDdE0XerbAfgvq5Ce0JFAgRjn
- T4P5zcaHjT2sce+m0aVBCvjGzWSjK9upyb4DYOo9fanzI/y1MKC8BPfqWyeheM30yYQc
- vUdQ==
-X-Gm-Message-State: APjAAAX0AN3zLpOJtv9nQrAW0y5u2/ZkbwOOZ6bof1+QqvKM59erIPj1
- jujG8VoJGNjOw/iZO9kkonYvlA==
-X-Google-Smtp-Source: APXvYqyTRc9wk/7gZzo3oYc7gfG6drD7WGtyiftHDhpF6Sr+RFqFazws+aVRlqNv57SQeqkPNr2eOw==
-X-Received: by 2002:a62:5883:: with SMTP id m125mr87689pfb.248.1565040856849; 
- Mon, 05 Aug 2019 14:34:16 -0700 (PDT)
-Received: from localhost ([2601:602:9200:a1a5:7483:80d6:7f67:2672])
- by smtp.googlemail.com with ESMTPSA id
- j5sm101076110pfi.104.2019.08.05.14.34.16
- (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
- Mon, 05 Aug 2019 14:34:16 -0700 (PDT)
-From: Kevin Hilman <khilman@baylibre.com>
-To: Carlo Caione <ccaione@baylibre.com>, srinivas.kandagatla@linaro.org, 
-Subject: Re: [PATCH v2 0/4] Rework secure-monitor driver
-In-Reply-To: <20190731082339.20163-1-ccaione@baylibre.com>
-References: <20190731082339.20163-1-ccaione@baylibre.com>
-Date: Mon, 05 Aug 2019 14:34:15 -0700
-Message-ID: <7hftmfguug.fsf@baylibre.com>
+ id 1huknp-00055X-SZ; Mon, 05 Aug 2019 21:46:03 +0000
+Received: from mail-qt1-f170.google.com (mail-qt1-f170.google.com
+ [209.85.160.170])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id 0D11620C01;
+ Mon,  5 Aug 2019 21:46:01 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1565041561;
+ bh=subSU4ANuK0qDVBd0vAG1AnkJerzP5pOi4fyuHG8xv8=;
+ h=References:In-Reply-To:From:Date:Subject:To:Cc:From;
+ b=13tUIInKnE4eHNYqfY1p4vcbK2rEnqAFvan1kVXBDW5FZeUc/8i5HWU+RjTF0itMs
+ +boDbn8fAivIGCUSTItUaBOwiciY4eztk4XvucyK4bMgGINLKBaIPaggQPc9KbX1nR
+ 7PC+lVjFWRm3eoAteReg3RaM3tm6BqPXNMJG6WrY=
+Received: by mail-qt1-f170.google.com with SMTP id r6so78278454qtt.0;
+ Mon, 05 Aug 2019 14:46:01 -0700 (PDT)
+X-Gm-Message-State: APjAAAXvt8WQpT9xLUdZP/Q/NKozVgAiU5SWTVszlwpkMYTZEssIR89r
+ +Wi6JHWypyyJ+vfrbN6wiaTvdTbEyLAGJJBivQ==
+X-Google-Smtp-Source: APXvYqzBwGXmcn81biCg4KLoojhRENYm4XDLvNlQS3MkA879bNBj02ITgrBwmCGub/Tr10uEARqqTe/pjnCfytTfQ3E=
+X-Received: by 2002:aed:3f10:: with SMTP id p16mr249407qtf.110.1565041560261; 
+ Mon, 05 Aug 2019 14:46:00 -0700 (PDT)
 MIME-Version: 1.0
+References: <20190805120320.32282-1-narmstrong@baylibre.com>
+ <20190805120320.32282-4-narmstrong@baylibre.com>
+In-Reply-To: <20190805120320.32282-4-narmstrong@baylibre.com>
+From: Rob Herring <robh+dt@kernel.org>
+Date: Mon, 5 Aug 2019 15:45:48 -0600
+X-Gmail-Original-Message-ID: <CAL_Jsq+WQ6KAE+d2_Pu03s6cSbu4PUErUWrGj81cAivTBNWBxQ@mail.gmail.com>
+Message-ID: <CAL_Jsq+WQ6KAE+d2_Pu03s6cSbu4PUErUWrGj81cAivTBNWBxQ@mail.gmail.com>
+Subject: Re: [RFCv2 3/9] dt-bindings: spi: meson: convert to yaml
+To: Neil Armstrong <narmstrong@baylibre.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190805_143419_617944_F0DEF7C2 
-X-CRM114-Status: UNSURE (   8.16  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190805_144601_966998_47ED2307 
+X-CRM114-Status: GOOD (  16.17  )
+X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-5.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:542 listed in]
- [list.dnswl.org]
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -92,32 +83,170 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, narmstrong@baylibre.com,
- Carlo Caione <ccaione@baylibre.com>, robh+dt@kernel.org,
- linux-amlogic@lists.infradead.org, tglx@linutronix.de,
- linux-arm-kernel@lists.infradead.org, jbrunet@baylibre.com
+Cc: linux-amlogic@lists.infradead.org, devicetree@vger.kernel.org,
+ "moderated list:ARM/FREESCALE IMX / MXC ARM ARCHITECTURE"
+ <linux-arm-kernel@lists.infradead.org>, linux-spi <linux-spi@vger.kernel.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Srinivas,
-
-Carlo Caione <ccaione@baylibre.com> writes:
-
-> The secure-monitor driver is currently in really bad shape, not my 
-> proudest piece of code (thanks Jerome for pointing that out ;). I tried 
-> to rework it a bit to make it a bit more tolerable.
+On Mon, Aug 5, 2019 at 6:03 AM Neil Armstrong <narmstrong@baylibre.com> wrote:
 >
-> I needed to change a bit the APIs and consequently adapt the only user 
-> we have, that is the nvmem/efuses driver. To not break bisectability I 
-> added one single commit to change both the drivers.
+> Now that we have the DT validation in place, let's convert the device tree
+> bindings for the Amlogic SPI controllers over to two separate YAML schemas.
+>
+> Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
+> ---
+>  .../bindings/spi/amlogic,meson-gx-spicc.yaml  | 67 +++++++++++++++++++
+>  .../bindings/spi/amlogic,meson6-spifc.yaml    | 53 +++++++++++++++
+>  .../devicetree/bindings/spi/spi-meson.txt     | 55 ---------------
+>  3 files changed, 120 insertions(+), 55 deletions(-)
+>  create mode 100644 Documentation/devicetree/bindings/spi/amlogic,meson-gx-spicc.yaml
+>  create mode 100644 Documentation/devicetree/bindings/spi/amlogic,meson6-spifc.yaml
+>  delete mode 100644 Documentation/devicetree/bindings/spi/spi-meson.txt
+>
+> diff --git a/Documentation/devicetree/bindings/spi/amlogic,meson-gx-spicc.yaml b/Documentation/devicetree/bindings/spi/amlogic,meson-gx-spicc.yaml
+> new file mode 100644
+> index 000000000000..49b617c98ae7
+> --- /dev/null
+> +++ b/Documentation/devicetree/bindings/spi/amlogic,meson-gx-spicc.yaml
+> @@ -0,0 +1,67 @@
+> +# SPDX-License-Identifier: (GPL-2.0 OR BSD-2-Clause)
+> +# Copyright 2019 BayLibre, SAS
+> +%YAML 1.2
+> +---
+> +$id: "http://devicetree.org/schemas/spi/amlogic,meson-gx-spicc.yaml#"
+> +$schema: "http://devicetree.org/meta-schemas/core.yaml#"
+> +
+> +title: Amlogic Meson SPI Communication Controller
+> +
+> +maintainers:
+> +  - Neil Armstrong <narmstrong@baylibre.com>
+> +
+> +allOf:
+> +  - $ref: "spi-controller.yaml#"
+> +
+> +description: |
+> +  The Meson SPICC is a generic SPI controller for general purpose Full-Duplex
+> +  communications with dedicated 16 words RX/TX PIO FIFOs.
+> +
+> +properties:
+> +  compatible:
+> +    enum:
+> +      - amlogic,meson-gx-spicc # SPICC controller on Amlogic GX and compatible SoCs
+> +      - amlogic,meson-axg-spicc # SPICC controller on Amlogic AXG and compatible SoCs
+> +
+> +  interrupts:
+> +    maxItems: 1
+> +
+> +  reg:
+> +    maxItems: 1
+> +
+> +  resets:
+> +    maxItems: 1
+> +
+> +  clocks:
+> +    maxItems: 1
+> +
+> +  clock-names:
+> +    description: input clock for the baud rate generator
+> +    items:
+> +      - const: core
+> +
+> +required:
+> +  - compatible
+> +  - reg
+> +  - interrupts
+> +  - clocks
+> +  - clock-names
+> +
+> +examples:
+> +  - |
+> +    spi@c1108d80 {
+> +          compatible = "amlogic,meson-gx-spicc";
+> +          reg = <0xc1108d80 0x80>;
+> +          interrupts = <112>;
+> +          clocks = <&clk81>;
+> +          clock-names = "core";
+> +          #address-cells = <1>;
+> +          #size-cells = <0>;
+> +
+> +          ethernet-switch@0 {
+> +              compatible = "micrel,ks8995m";
+> +              spi-max-frequency = <1000000>;
+> +              reg = <0>;
+> +          };
+> +    };
+> +
+> diff --git a/Documentation/devicetree/bindings/spi/amlogic,meson6-spifc.yaml b/Documentation/devicetree/bindings/spi/amlogic,meson6-spifc.yaml
+> new file mode 100644
+> index 000000000000..67dcedc81a5e
+> --- /dev/null
+> +++ b/Documentation/devicetree/bindings/spi/amlogic,meson6-spifc.yaml
+> @@ -0,0 +1,53 @@
+> +# SPDX-License-Identifier: (GPL-2.0 OR BSD-2-Clause)
+> +# Copyright 2019 BayLibre, SAS
+> +%YAML 1.2
+> +---
+> +$id: "http://devicetree.org/schemas/spi/amlogic,meson6-spifc.yaml#"
+> +$schema: "http://devicetree.org/meta-schemas/core.yaml#"
+> +
+> +title: Amlogic Meson SPI Flash Controller
+> +
+> +maintainers:
+> +  - Neil Armstrong <narmstrong@baylibre.com>
+> +
+> +allOf:
+> +  - $ref: "spi-controller.yaml#"
+> +
+> +description: |
+> +  The Meson SPIFC is a controller optimized for communication with SPI
+> +  NOR memories, without DMA support and a 64-byte unified transmit /
+> +  receive buffer.
+> +
+> +properties:
+> +  compatible:
+> +    enum:
+> +      - amlogic,meson6-spifc # SPI Flash Controller on Meson6 and compatible SoCs
+> +      - amlogic,meson-gxbb-spifc # SPI Flash Controller on GXBB and compatible SoCs
+> +
+> +  reg:
+> +    maxItems: 1
+> +
+> +  clocks:
+> +    maxItems: 1
+> +
+> +required:
+> +  - compatible
+> +  - reg
+> +  - clocks
+> +
+> +examples:
+> +  - |
+> +    spi@c1108c80 {
+> +          compatible = "amlogic,meson6-spifc";
+> +          reg = <0xc1108c80 0x80>;
+> +          clocks = <&clk81>;
+> +          #address-cells = <1>;
+> +          #size-cells = <0>;
+> +
+> +          flash: m25p80@0 {
 
-With your ack on the nvmem bindings and nvmem part of patch 4/4, I can
-take the series take the rest of this series through my tree for Amlogic
-SoCs.
+flash@0
 
-Kevin
+I need to write a schema for this or I'll never stop giving this comment...
+
+Otherwise,
+
+Reviewed-by: Rob Herring <robh@kernel.org>
+
+> +              compatible = "spansion,m25p80", "jedec,spi-nor";
+> +              reg = <0>;
+> +              spi-max-frequency = <40000000>;
+> +          };
+> +    };
+> +
 
 _______________________________________________
 linux-amlogic mailing list
