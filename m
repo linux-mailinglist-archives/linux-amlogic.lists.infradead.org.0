@@ -2,68 +2,67 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3ED8C863EF
-	for <lists+linux-amlogic@lfdr.de>; Thu,  8 Aug 2019 16:10:01 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 655B986403
+	for <lists+linux-amlogic@lfdr.de>; Thu,  8 Aug 2019 16:10:57 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
 	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=TcjW+HP55qQV68D2RsAqANcM8OEEguKihp5F07BiksM=; b=dZcQ+qPUdENxuH
-	iwFbkTH4UlKUjy3Herf2gtKgKfNwS1VhFsjuh/Kd730KH/mMKy3S84icc/OZUYm14U0QfRP3uMJsk
-	4zjP7W9lbWFGWsi7AXEiNqhWvXQi4M3SFCpD2WO0QXgNZoZi1DwsSE+MKvJQD+C+c1V11RWLqLWWZ
-	bvJSGBhliwHPcs3GngG0NT6PGDpRbXsI/D7gQ8wehY4d/LaCxWio5gElYjpZjccQBGE+ZfKT+m9pI
-	gTniqlqRjI23AOYmxEA74QCK8A9aZhMskqdYKtJjSgW0r/8jKcurlgMeCnpK7CKAG0LqefZgp5V8T
-	N5a9NXr6zSnSp3VQU5Eg==;
+	List-Owner; bh=eHTDBBQQTRUUFZBCAhp2JXP+EN5QRehrY07BMBwvTGw=; b=pF8bHOxvFRWeO8
+	mzhoClv5K/c7KccQS8S9CgdEi4yWrzglO54p1g7KSjD95naNsPcSt475xAcCw7YYqoEQ/rngOv5o4
+	1axHah+btFe7cR6MuQd14qebE5Vzupk1bdgaN8boGADmxA+yZyWu8nQDYqVU0MIG6v9KUBe34dp8B
+	ip4igJXE2LTjhYqW/ELZxs8B5CJAyrrciRfG4CLC2sP74VJybhZT1KxbWASxS92P2AjT15S5BlCtq
+	XU+HA2GnzsrgZlYywrTEKHUmh003f7Y1avB1xjgjsX11az7JsUguVstLSHbnWvM8Ej2zxNuOxspac
+	dxE9SizvxMECo1nwlhWw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hvj76-0006Vc-VF; Thu, 08 Aug 2019 14:09:56 +0000
-Received: from mail-wm1-x344.google.com ([2a00:1450:4864:20::344])
+	id 1hvj84-00088I-4M; Thu, 08 Aug 2019 14:10:56 +0000
+Received: from mail-wm1-x343.google.com ([2a00:1450:4864:20::343])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hvj73-0006Ur-P0
- for linux-amlogic@lists.infradead.org; Thu, 08 Aug 2019 14:09:55 +0000
-Received: by mail-wm1-x344.google.com with SMTP id s15so2581107wmj.3
- for <linux-amlogic@lists.infradead.org>; Thu, 08 Aug 2019 07:09:53 -0700 (PDT)
+ id 1hvj80-00087J-28
+ for linux-amlogic@lists.infradead.org; Thu, 08 Aug 2019 14:10:53 +0000
+Received: by mail-wm1-x343.google.com with SMTP id f72so2558673wmf.5
+ for <linux-amlogic@lists.infradead.org>; Thu, 08 Aug 2019 07:10:51 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=subject:to:cc:references:from:openpgp:autocrypt:organization
  :message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=fRzbxgOaOYK4ZYdEjfC4xN07dECOTGDAf826r4TpQPs=;
- b=SK8nH480nj/WrMqBsTFWCK4vvMh/mf+pzwiHCuJUPW1D3OlXb6m4XzFfa1GRe6PyBk
- cBnAYD8SeNv+3FWa8PqPhlhFFjrLS1AYWWgfbHaBvLiMqsQA6/V15d/mlTJ6z2tVzD64
- lgDgrFj78F4Mtfl6bhED/tDEutncBiVkHVyJ/3apd8UVMR2M1BmfWXmZxiabCN4cSXSP
- jUKpLhDRZfug6uCWm5quSKC7tFp3coH5EllSk5zpYU06H57PdFiJThyQllfe/FDnVDV7
- j5hUk4sFStNwapGnaAyL2Rp/MkrDzB9shyDQCm7h175qDusg6q2qnVUD8s/858NRmcmt
- B+0w==
+ bh=6m6gxn9LKSOYIOC2UD+jJL1y8rpnk5zVAEhh5s4nAFQ=;
+ b=bbMMDKltdkMddpB7ydaPuad3hSghabEIOlx/v1qAcXV70ngjxy16ZQkEkvLXiT39n7
+ wKYWuU+t8/gj0JNpUlZdoAtk6fOvur0TPrgmRY0zwB8WjzZ5q8E3T/f87z0B6DZJwj2N
+ Z7WGCb48mP352I8GvNi2cphG0BHWtVhpCDXOsXkRNzWTFj8iwITbfhp4LvhNjmfHfL3R
+ GLRRaZQbtBFB0OfkI6nScUoLJxBpWE1wia99gm1IgGRCN4ZXMB8nuEyf0CCvLU2pEXAa
+ gp2i2hYq/2t8Q0vKgAjSM8UABP3TtajVVifwRDFZDicJke1ipHVEPiWcibzH5QZTwcKh
+ 8+Yw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:subject:to:cc:references:from:openpgp:autocrypt
  :organization:message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=fRzbxgOaOYK4ZYdEjfC4xN07dECOTGDAf826r4TpQPs=;
- b=HtDvW+xJzmwMRnoYpZADOOIFTPL2lb6w7QzlYyo1xMZ618h2PfjpQ3Zt9QRe8Mx6+L
- OCnjs9GBK90rQvdokDITTQTW1kL0IuMBOuAu4iQ6e22uXYT+nj/yXKNYgoXe9hXbsTTz
- W7SHJa7vhV3xaoaZf2kpozLxE1cXx3hVkc8WDYwX17gmhrsTy3iT1mvtJI4zqEM+fD5y
- elljqACJn5mCd5zSg5EfT4vo3d+SyQeVPplGG4bPiaTEm8wPQBjLm8shznljn3HlPcZc
- FaWfB95YPaX4E9iSHMA236G/mkcKrwtUX9Ur0fhVaxwuBGvTnqqA4KxJfGgOS1uY0bFu
- pQLQ==
-X-Gm-Message-State: APjAAAXu/5HsNMnIWXr4+Ak7JeS5tVgBY39x7rPTWa4yp+Nm8pYLvpx4
- T2q7Nus513LxzqNDnZA3uWvccw==
-X-Google-Smtp-Source: APXvYqxp3PdDQPmSdAbC9WxolTZk3R/nQhJ96oYQMs3RR7dotLRNv9glMTIw4h4PFtic0dHZGEgDmw==
-X-Received: by 2002:a1c:2c41:: with SMTP id s62mr4713556wms.8.1565273391975;
- Thu, 08 Aug 2019 07:09:51 -0700 (PDT)
+ bh=6m6gxn9LKSOYIOC2UD+jJL1y8rpnk5zVAEhh5s4nAFQ=;
+ b=F4yUx0RNhwFG2c+ezBfpDOpg3Hrp2NJ6LRdvksibfWFj52FVDf10iwYlpIcafH5GU8
+ G5JInbfKJO3sJs2wD5pUyMH6B4pn3SbhAlA99v+Cj55yW0qv7bbacBI+hWesdBOppHWq
+ FgedzIfMDqySeM1zynx8Q59AFzmGEB2wFd1zA9Om093UKtbh7TyeQdRJr47bMOZ1Cb5v
+ gvXCRAfIo4ow0WsHf4g7KpjFV+p8yYWEC7xb43BS0P/Wzgh74ZY5e+qAE9vO7K25NrH/
+ 0uzTTxokQAUEp05DYlJpo8aefoAhaK8XD6Vha7woYcT1q0/4ir3vre5zM2QznMzhNfxS
+ mOCA==
+X-Gm-Message-State: APjAAAVYchgpVSvjGlWieZsNJmeAiHFGuS1JzDvjWiWzV4/0XJX6dBiu
+ /qX1p22VnuvGX/NotoCXAx93Fg==
+X-Google-Smtp-Source: APXvYqxLmc+sO7xMowb+RJSTyP1ooEMxclBETMdjl+uhSXebVMMNRcyl52c80GhEl3LNchoUK+Iomg==
+X-Received: by 2002:a1c:407:: with SMTP id 7mr4952733wme.113.1565273450023;
+ Thu, 08 Aug 2019 07:10:50 -0700 (PDT)
 Received: from [10.1.2.12] (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr.
  [90.63.244.31])
- by smtp.gmail.com with ESMTPSA id t14sm2906174wrv.12.2019.08.08.07.09.50
+ by smtp.gmail.com with ESMTPSA id a19sm9860294wra.2.2019.08.08.07.10.49
  (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
- Thu, 08 Aug 2019 07:09:51 -0700 (PDT)
-Subject: Re: [PATCH 4/9] drm: meson: vpp: use proper macros instead of magic
- constants
+ Thu, 08 Aug 2019 07:10:49 -0700 (PDT)
+Subject: Re: [PATCH 8/9] drm: meson: add macro used to enable HDMI PLL
 To: Kevin Hilman <khilman@baylibre.com>, 86zhm782g5.fsf@baylibre.com
-References: <86zhm782g5.fsf@baylibre.com> <86tvcf82eu.fsf@baylibre.com>
- <7h36jyy3qn.fsf@baylibre.com>
+References: <86zhm782g5.fsf@baylibre.com> <86o92n82e1.fsf@baylibre.com>
+ <7hwohawoxu.fsf@baylibre.com>
 From: Neil Armstrong <narmstrong@baylibre.com>
 Openpgp: preference=signencrypt
 Autocrypt: addr=narmstrong@baylibre.com; prefer-encrypt=mutual; keydata=
@@ -116,23 +115,23 @@ Autocrypt: addr=narmstrong@baylibre.com; prefer-encrypt=mutual; keydata=
  VsbXrP9BZ6snXyHfebPnno/te5XRqZTL9aJOytB/1iUna+1MAwBxGFPvqeEUUyT+gx1l3Acl
  ZaTUOEkgIor5losDrePdPgE=
 Organization: Baylibre
-Message-ID: <d4bb07f6-4b42-573b-abe2-5d54a8b99a92@baylibre.com>
-Date: Thu, 8 Aug 2019 16:09:50 +0200
+Message-ID: <33b9572f-59cc-a72b-c517-e85df70e3f96@baylibre.com>
+Date: Thu, 8 Aug 2019 16:10:49 +0200
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
  Thunderbird/60.8.0
 MIME-Version: 1.0
-In-Reply-To: <7h36jyy3qn.fsf@baylibre.com>
+In-Reply-To: <7hwohawoxu.fsf@baylibre.com>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190808_070953_879994_F008CD3A 
-X-CRM114-Status: GOOD (  12.95  )
+X-CRM114-CacheID: sfid-20190808_071052_103859_D7AE287B 
+X-CRM114-Status: GOOD (  14.55  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:344 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:343 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -158,41 +157,43 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On 25/06/2019 01:15, Kevin Hilman wrote:
+On 25/06/2019 01:20, Kevin Hilman wrote:
 > Julien Masson <jmasson@baylibre.com> writes:
 > 
->> This patch add new macros which are used to set the following
->> registers:
->> - VPP_OSD_SCALE_COEF_IDX
->> - VPP_DOLBY_CTRL
->> - VPP_OFIFO_SIZE
->> - VPP_HOLD_LINES
->> - VPP_SC_MISC
->> - VPP_VADJ_CTRL
+>> This patch add new macro HHI_HDMI_PLL_CNTL_EN which is used to enable
+>> HDMI PLL.
 >>
 >> Signed-off-by: Julien Masson <jmasson@baylibre.com>
-> 
-> [...]
-> 
->> @@ -97,20 +97,22 @@ void meson_vpp_init(struct meson_drm *priv)
->>  	else if (meson_vpu_is_compatible(priv, "amlogic,meson-gxm-vpu")) {
->>  		writel_bits_relaxed(0xff << 16, 0xff << 16,
->>  				    priv->io_base + _REG(VIU_MISC_CTRL1));
->> -		writel_relaxed(0x20000, priv->io_base + _REG(VPP_DOLBY_CTRL));
->> -		writel_relaxed(0x1020080,
->> +		writel_relaxed(VPP_PPS_DUMMY_DATA_MODE,
->> +			       priv->io_base + _REG(VPP_DOLBY_CTRL));
->> +		writel_relaxed(0x108080,
-> 
-> nit: still a magic constant here, and it's not obvious why it's
-> different from the current one.
+>> ---
+>>  drivers/gpu/drm/meson/meson_vclk.c | 3 ++-
+>>  1 file changed, 2 insertions(+), 1 deletion(-)
+>>
+>> diff --git a/drivers/gpu/drm/meson/meson_vclk.c b/drivers/gpu/drm/meson/meson_vclk.c
+>> index e7c2b439d0f7..be6e152fc75a 100644
+>> --- a/drivers/gpu/drm/meson/meson_vclk.c
+>> +++ b/drivers/gpu/drm/meson/meson_vclk.c
+>> @@ -96,6 +96,7 @@
+>>  #define HHI_VDAC_CNTL1		0x2F8 /* 0xbe offset in data sheet */
+>>  
+>>  #define HHI_HDMI_PLL_CNTL	0x320 /* 0xc8 offset in data sheet */
+>> +#define HHI_HDMI_PLL_CNTL_EN	BIT(30)
+>>  #define HHI_HDMI_PLL_CNTL2	0x324 /* 0xc9 offset in data sheet */
+>>  #define HHI_HDMI_PLL_CNTL3	0x328 /* 0xca offset in data sheet */
+>>  #define HHI_HDMI_PLL_CNTL4	0x32C /* 0xcb offset in data sheet */
+>> @@ -468,7 +469,7 @@ void meson_hdmi_pll_set_params(struct meson_drm *priv, unsigned int m,
+>>  
+>>  		/* Enable and unreset */
+>>  		regmap_update_bits(priv->hhi, HHI_HDMI_PLL_CNTL,
+>> -				   0x7 << 28, 0x4 << 28);
+>> +				   0x7 << 28, HHI_HDMI_PLL_CNTL_EN);
 
-This is a magic constant, it's a color, but indeed it should not change.
-
-0x1020080 is the 10bit variant of 0x108080, on purpose.
+I'll do a pass on the PLL part since it needs much more work than a cleanup,
+it's ok for me.
 
 Neil
 
+> 
+> still using a magic const for the mask.  Can use GENMASK() for this?
 > 
 > Kevin
 > 
