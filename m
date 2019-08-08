@@ -2,89 +2,67 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 48FC785862
-	for <lists+linux-amlogic@lfdr.de>; Thu,  8 Aug 2019 05:02:41 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5805F85900
+	for <lists+linux-amlogic@lfdr.de>; Thu,  8 Aug 2019 06:24:15 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:References
-	:In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=QldcsaUlyBMdtGtIIiAaBbM5fCJXgIASGBwV7+NjQsQ=; b=HeVgf3Vtx7Tqnq
-	b9FikU/uLaCsd1mJl7oC+jCGQZu+cn20psNlElYHmsURjaJxZXA6yD5apiP0u/WZeVkm1lv48+AlW
-	cyuHUHp3KIESl3JdzShWapdHpKC//lEpHdxnQqk4M6ktQYRWI7FaiHbptj6l4Zlk8xJVTn4pIuMZb
-	jUfmUNK+0M+DLWzNLQZaUKyJw/UlI7JkDBXiWAbkT0eZ77KfDOuO5bA8NFDar50haSl8D8XJtwK3r
-	EgISmlmm41ksh1MsPnXBgxIhJiMCMq+UgR9NJKo0RNgSGaxykR15upevUdQj+8SONWTgqjC3wzvYG
-	TyHX61nuObBKFQGkfRsA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=zHW+Cx1hms1yVt9xgNTE9vIHGt6wO7n2ts4rVM9dlCY=; b=dBysNqB0Aqek3j
+	Zx4QZRiyIN5B2L7+12hctuMP973HXqLRRo8TXlKRudhkrrROMR3VkWY0o1SjC/uNd+BvwcSZzHXHH
+	jQZ3BxhmLWcz00E0muysflFfozf1SDpQudGyVuAKNBEblE1fK5xnRiQ0ISOBNHhNsb2Unsh/+IiYe
+	isWNhFDepHZwhuJHS2LlS96HY7asAVP6tHe3WsOm2Tr8Tx9r16uAX3qbIF+Iddvkbb0hO38Z6oPdr
+	MvFP2ygxEh+SVvnjlkLzcsLBY9S9PXQm/FIANmEP9NMcpDI/+Z0ljQeRCMgn887BdpwX4RKYcXpyR
+	gz8pU426n0jPBYWgd0wA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hvYhL-0005mX-Rn; Thu, 08 Aug 2019 03:02:39 +0000
-Received: from mail-pf1-x444.google.com ([2607:f8b0:4864:20::444])
+	id 1hvZyE-000635-Vf; Thu, 08 Aug 2019 04:24:11 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hvYhH-0005lW-Po
- for linux-amlogic@lists.infradead.org; Thu, 08 Aug 2019 03:02:37 +0000
-Received: by mail-pf1-x444.google.com with SMTP id b13so43220797pfo.1
- for <linux-amlogic@lists.infradead.org>; Wed, 07 Aug 2019 20:02:35 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=from:to:cc:subject:in-reply-to:references:date:message-id
- :mime-version; bh=/Z7L8SyshdubRcyIY95repgYfqLBFE4FKfh7eq8hsWQ=;
- b=VMkDtAtLTGvihLldZdjOKfErDSzMhon6bH5G3BdL+lkNsLL3dhRGrdijMSDj0i4/7d
- I4trJ2cPBcfQ9b3hUyrfivjLrr4sWMt8cYYyyVntaeqVNyAvZ5dxivLyOgVXVvDiPk6c
- jkqX9k20VGWNQKfp3L0eAGSlUB+86FaeW6LxVEayaRqcWTMWv0F3CGeFSxefboLbNnsR
- S1XHjj1FrqZi3qhOfdimenhnFDt052N8RMB9eb8BKX6yHcHBDlefcglRUp7sKokpTRMx
- sd9CmtD2VJcXM8d2+Wd2EqZ/6xbNLNJMIZshGNVOVfMuYEXBx85IGCNog25/90slfPuc
- dtZg==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:in-reply-to:references:date
- :message-id:mime-version;
- bh=/Z7L8SyshdubRcyIY95repgYfqLBFE4FKfh7eq8hsWQ=;
- b=ibvBZRPbQlSjEFFXNd09VA5pz+w19jzxHsw/rYeVvZgGfgLKCK+Q5wH3xZgDjLipvn
- 8yoUTlc2s/Mz+yEaAeNvpkp+cv3pOTdxN8RYIjeDxNRd4EA55YgXYLfYiofI+IDyIYma
- 3ZUCIHU2pRgVlwtisHVIn2eAkutIbQ2A9rAFFkZhMniHVxyQdOZtpLF5GMLN7/DY767K
- fqnkEfTuEa76E412qiGAY7caSzf3GUK94/N13Qj98N+gcccPBVqk1bJXr/io50II//uw
- +17wInYZcJAn2Zht6PadTHgI4cYzPCLgEXUlGg5XLCtqWFvjpLEZswN57Me9ZKU2feEj
- rD9Q==
-X-Gm-Message-State: APjAAAXR6b/pY1Z4dEriM4hY/sPL+lIQn2zjo5Q9lw7Ig8YWgSwNOMzX
- ipwq8fHhC727A1GgSwCUWrh15A==
-X-Google-Smtp-Source: APXvYqylJQrZTaVlqLyT+6q2Nr1Mjd7x1ZREstnHaNOUKd1r3XvtkoAaiLRMfJ80fzLmRpUIRf0/6A==
-X-Received: by 2002:a62:1d8f:: with SMTP id
- d137mr13114157pfd.207.1565233355043; 
- Wed, 07 Aug 2019 20:02:35 -0700 (PDT)
-Received: from localhost (c-71-197-186-152.hsd1.wa.comcast.net.
- [71.197.186.152]) by smtp.googlemail.com with ESMTPSA id
- q126sm52203296pfb.56.2019.08.07.20.02.34
- (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
- Wed, 07 Aug 2019 20:02:34 -0700 (PDT)
-From: Kevin Hilman <khilman@baylibre.com>
-To: Rob Herring <robh@kernel.org>
-Subject: Re: [PATCH 2/6] dt-bindings: arm: amlogic: add bindings for G12B
- based S922X SoC
-In-Reply-To: <CAL_JsqL_L2qHe334sB57hR_coRhawKiqXYjKAQDJt_DHfBamBQ@mail.gmail.com>
-References: <20190731124000.22072-1-narmstrong@baylibre.com>
- <20190731124000.22072-3-narmstrong@baylibre.com>
- <7hblx3gua3.fsf@baylibre.com>
- <CAL_JsqL_L2qHe334sB57hR_coRhawKiqXYjKAQDJt_DHfBamBQ@mail.gmail.com>
-Date: Wed, 07 Aug 2019 20:02:33 -0700
-Message-ID: <7h7e7ofjg6.fsf@baylibre.com>
+ id 1hvZy6-00060T-1H; Thu, 08 Aug 2019 04:24:04 +0000
+Received: from localhost (c-71-197-186-152.hsd1.wa.comcast.net
+ [71.197.186.152])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id D658721743;
+ Thu,  8 Aug 2019 04:23:59 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1565238239;
+ bh=N/wFSY2QeHiCGs1awO6e44rKQI8CrPBMon45BpRu5Ng=;
+ h=From:To:Cc:Subject:Date:From;
+ b=KWYMkZ7G1KYXOquJ3YGp1iDdc1CQ9VmEbtgJ1eWSGag6i3PPcXIruU5G+RF2TuVB0
+ o6Lok9MTnhRFFxCezVybOJzFeFFENDH0F8vBdklRxZSlI3Qz8SGq4EQE1JHWU8htbw
+ MuKTSVZgFCVMnymyqYTf6YwY5G+zY6c5iOPhtIq8=
+From: Kevin Hilman <khilman@kernel.org>
+To: Alexandre Belloni <alexandre.belloni@bootlin.com>,
+ linux-rtc@vger.kernel.org
+Subject: [PATCH v2 0/2] rtc: add new Amlogic Virtual Wake RTC
+Date: Wed,  7 Aug 2019 21:23:55 -0700
+Message-Id: <20190808042357.4663-1-khilman@kernel.org>
+X-Mailer: git-send-email 2.22.0
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190807_200235_841986_030A820F 
-X-CRM114-Status: GOOD (  13.23  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190807_212402_106443_91EE8ABD 
+X-CRM114-Status: GOOD (  10.43  )
+X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-5.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:444 listed in]
- [list.dnswl.org]
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -96,52 +74,51 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, Neil Armstrong <narmstrong@baylibre.com>,
- Christian Hewitt <christianshewitt@gmail.com>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- linux-amlogic@lists.infradead.org,
- "moderated list:ARM/FREESCALE IMX / MXC ARM ARCHITECTURE"
- <linux-arm-kernel@lists.infradead.org>
+Cc: linux-amlogic@lists.infradead.org, Kevin Hilman <khilman@baylibre.com>,
+ linux-arm-kernel@lists.infradead.org, Neil Armstrong <narmstrong@baylibre.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Rob Herring <robh@kernel.org> writes:
+From: Kevin Hilman <khilman@baylibre.com>
 
-> On Mon, Aug 5, 2019 at 3:46 PM Kevin Hilman <khilman@baylibre.com> wrote:
->>
->> Neil Armstrong <narmstrong@baylibre.com> writes:
->>
->> > Add a specific compatible for the Amlogic G12B family based S922X SoC
->> > to differentiate with the A311D SoC from the same family.
->> >
->> > Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
->> > ---
->> >  Documentation/devicetree/bindings/arm/amlogic.yaml | 1 +
->> >  1 file changed, 1 insertion(+)
->> >
->> > diff --git a/Documentation/devicetree/bindings/arm/amlogic.yaml b/Documentation/devicetree/bindings/arm/amlogic.yaml
->> > index 325c6fd3566d..3c3bc806cd23 100644
->> > --- a/Documentation/devicetree/bindings/arm/amlogic.yaml
->> > +++ b/Documentation/devicetree/bindings/arm/amlogic.yaml
->> > @@ -139,6 +139,7 @@ properties:
->> >          items:
->> >            - enum:
->> >                - hardkernel,odroid-n2
->> > +          - const: amlogic,s922x
->> >            - const: amlogic,g12b
->>
->> nit: in previous binding docs, we were trying to keep these sorted
->> alphabetically.  I'll reorder the new "s922x" after "g12b" when
->> applying.
->
-> No, this is not documentation ordering. It's the order compatible
-> strings must be in.
+Add a new driver for the virtual wake RTC on Amlogic SoCs.
 
-Ah, thanks for clarifying,
+The RTC is virtual from the Linux side because it's a hardware timer
+managed by firmware on the secure co-processor (SCP.)  The interface
+is 1 register where a wakeup time (in seconds) is written.  The SCP then
+uses this value to program an always-on timer.
 
-Kevin
+Changes since v1:
+- add MAINTAINERS entry
+- add nop ->alarm_irq_enable() (workaround for RTC core
+  limitation pointed out by Alexandre Belloni)
+- remove unused ->read_alarm()
+- fix statics
+- move resume to dev_pm_ops
+- add suspend hook
+- don't calculate (or write) the alarm timer value until suspend time
+
+Changes since Neil's original version
+- move from do_gettimeofday() to ktime_get()
+
+Kevin Hilman (1): dt-bindings: rtc: new binding for Amlogic VRTC
+
+Neil Armstrong (1):
+  rtc: Add Amlogic Virtual Wake RTC
+
+ .../bindings/rtc/rtc-meson-vrtc.txt           |  22 +++
+ drivers/rtc/Kconfig                           |  11 ++
+ drivers/rtc/Makefile                          |   1 +
+ drivers/rtc/rtc-meson-vrtc.c                  | 149 ++++++++++++++++++
+ 4 files changed, 183 insertions(+)
+ create mode 100644 Documentation/devicetree/bindings/rtc/rtc-meson-vrtc.txt
+ create mode 100644 drivers/rtc/rtc-meson-vrtc.c
+
+-- 
+2.22.0
+
 
 _______________________________________________
 linux-amlogic mailing list
