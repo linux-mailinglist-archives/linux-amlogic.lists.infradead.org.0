@@ -2,69 +2,68 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 90BEC875EF
-	for <lists+linux-amlogic@lfdr.de>; Fri,  9 Aug 2019 11:29:35 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 64B30875F8
+	for <lists+linux-amlogic@lfdr.de>; Fri,  9 Aug 2019 11:32:05 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:References:To:From:Subject:Reply-To:Content-ID:Content-Description
+	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=5icNiM/kdpYaIBOlBSoo+kglA49uaiTVXzACjcH1loY=; b=a150OaJN/AMyy9
-	SQQM29sorIhlNNKEKIaEs0Z3xPbMVpDlN+c9lSd6agwlwDwO9syYURSJ0vOcWbIgUtRndbOZX23WN
-	otDIMvqsc1Qurstu8XtLLcQCe5mAUJhFYdl6EomQO+5D25nVVCjRmnW6j36FAUxXNuiGck/YtYg5s
-	znlmh95QGo4/ezQ2Upn4dTErC6l4R2uwKUe+iE/GUbddyJcmOhJEEvrpeySSUeH6yniIAxxFy8spO
-	o9UQbfoq9YbzRvoX4QCn1fDxJFShGhGvuGXLYQahzlF4gmcljhyKv0q6a4EkzWZbtuI5xltWgSyne
-	558JzSzoAJRZDrbOTCeg==;
+	List-Owner; bh=c+gK8qYk3q9vnTQxcnF+zbcqgf889nyJJvIg8qFHMMM=; b=KOpVn8rVfdxA34
+	W4wunonbwU2nLLsekrNeCsgqtGvsLura5Y00nQcAWNTtGxr6uuLTIzA1z7DQHORC81HGVnt0PzPct
+	IdniRY1U8E+yiWqieCw7/KMLaM4SwivYMv3UUeVQgGw/XwwF07TrwAAlg0JB1krN8aETmsVdUyyfR
+	k/ozXWUZz7dwBVuEhz2/B58ejicrt9m6RpJwseC/oBxBbjpaEFpRwFQvUO/gvmZw0LinC6CNLqI+Y
+	08SxSNp6p3LodHuPywV30JNk5wiaTD9IMRr6r2XSDNpz3ZbBeIPpkJ/QGi1gQUiGoerT1ICmX8E8b
+	5wF8nEQhDDlcxPfxaYxQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hw1DE-0001Zv-CG; Fri, 09 Aug 2019 09:29:28 +0000
-Received: from mail-wm1-x344.google.com ([2a00:1450:4864:20::344])
+	id 1hw1Fj-00031G-Tu; Fri, 09 Aug 2019 09:32:03 +0000
+Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hw1Cv-0001Ov-Q6
- for linux-amlogic@lists.infradead.org; Fri, 09 Aug 2019 09:29:11 +0000
-Received: by mail-wm1-x344.google.com with SMTP id s3so5012876wms.2
- for <linux-amlogic@lists.infradead.org>; Fri, 09 Aug 2019 02:29:09 -0700 (PDT)
+ id 1hw1Fh-00030d-95
+ for linux-amlogic@lists.infradead.org; Fri, 09 Aug 2019 09:32:02 +0000
+Received: by mail-wr1-x442.google.com with SMTP id r1so97559345wrl.7
+ for <linux-amlogic@lists.infradead.org>; Fri, 09 Aug 2019 02:32:00 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=subject:from:to:cc:references:openpgp:autocrypt:organization
+ h=subject:to:cc:references:from:openpgp:autocrypt:organization
  :message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=6Q0Y3h7yEWrHoEt2RLSMUBQOjNzMUTe7TfQE3wYnlhs=;
- b=kUpq+QYUF2AP+g53o7VNnceJybDiC42Ab24kGXiJYFQhUTvY5Ii6uxfOdQ55sYIsbx
- s5pSIl2LzNHFi8hTZ7c3+E6zZ3+ZKJrxV3kAZuKZERubWhLcrhXjn0jO/Hkub4ofUb7O
- stLFVMUeb9vqKrqzQR+6h4I4Em2ADshXffM3SL1KUsw16u/i9m1XrtGw/O6FKfpVLPX3
- UqQZrpYIRjacTYdUnH730IejJeKI9AXQ5RyPpBsAZXtTJijRwdPQNmKNvAUn9WYG+d8t
- KLMw5i/BaEIkkG0usvpn2FWz3lTfdehAYUJTFe9mW41BZoPWShvPMVKpvmc2wMzteofz
- 1VyA==
+ bh=7xl4Fxz1zkuKhZY0T+DBnZURadM5hWOlSpQpQ4x+iYI=;
+ b=zq+sCrrHuP1zwsq5Z24lxPWAOi2UiWGLr0liOc8JGvDoRtsxoeNufIes/YwhMQen4j
+ l1hjznGhPLY+PfJoLt+daMcI+S0mdvFjgxs3PeYhy0PhGoQJP2vodAE0KRguFMnO/2yU
+ 5KZt1bckXqoy0Np0gHfOoVStkcg1jVLtghC/L7pCt3NLjchm3Aor4hkqQJllJK/oOq/y
+ dplcIvZIuO7UkO10kTkbLctD78DjNu2P4FGeXppnAgvth9DjV4cv6rzjzcayTL/HIT6/
+ 6Pvf8VxpFBwFnf0OrGk8C2MEU7Lq2zRHSUdyYUR+7fhypDorjMKGZ0EiGRrmOdQobmkA
+ DAdA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:subject:from:to:cc:references:openpgp:autocrypt
+ h=x-gm-message-state:subject:to:cc:references:from:openpgp:autocrypt
  :organization:message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=6Q0Y3h7yEWrHoEt2RLSMUBQOjNzMUTe7TfQE3wYnlhs=;
- b=mgjPIoDCLjtdkISEpwayMGe087gcy2coKZ+3CYdmpe1y+we7264wChgyhjYdIV1rI8
- qT2XNrQ6guh3wys5PpLuwvJXhq3gpOxYSNc6umfot1bZtfLWcBnpdxPq9nqB7VWxUoet
- IblmvNfEsfE4j5hVCBdLixQ2kwQ+TpA7NfZMJzJqYklMQk9GW1IkhcWlDtEs1WNy77G3
- FxZMlAcRb+TgNCgnWuRFrwHsJV8XLxm7m+LS02UgR9xJdDLxaCeLJogM3/DxzNsCLIfT
- pNHykXbFRoKasS7SmojV74w46L+NQL03xKsq7GVf0+AkgpowmM6hacpA7qp9BDLzadpw
- OlUw==
-X-Gm-Message-State: APjAAAXypBF5jJ1iN+Z9pjKp/iNWeG34CGzgu/ZUq1fYJYOhdKjNdUnT
- wuAEhfnDaw8Od0NWcltu7/nkjA==
-X-Google-Smtp-Source: APXvYqyt6rtWp4t2KHhU5vpN9slMJax8fLtefttjl0W0/qzfs5/Md0ZfirCydIKVsbeBtGiVBRAaQQ==
-X-Received: by 2002:a1c:751a:: with SMTP id o26mr9569284wmc.13.1565342947567; 
- Fri, 09 Aug 2019 02:29:07 -0700 (PDT)
+ bh=7xl4Fxz1zkuKhZY0T+DBnZURadM5hWOlSpQpQ4x+iYI=;
+ b=QULbpOoeK+PZYyCtNgCB4Qc3elQfU5X0a8Mtsh9RDMQeRALnLSFTHJlpdlvcodfhwo
+ vHBC/aArvKUfF9HWvrVvTyDFYB6kaQcGonJSx15FiiNGvsXE4PnkTY+KODVkk62s7nrk
+ uLPPOkh+YNV3Cm4Syr1c+RooT2zRpUvLkVS/sYwMPmaCV0FZFPh0SuNzSedZvMt6r4oY
+ tGAPm6/7Oj6D/BWPsE5Ile3djjr4GNdufGi1FbcL/cNI/ZwagvQzhqf4mVPzMfF35QqW
+ ZP7AymepvRh7zohNBiPKoo3XIS/ZPeHEnqVhkdXFveK0S41YhuDg7xyO6AhP/+R3isyk
+ Payg==
+X-Gm-Message-State: APjAAAVlJqi7tT9pquut+1spQaX0AglfLiEJsN+UbPb8jRvIWlH3i00z
+ nL9JpJNLPoAq48gm5v4xrULfLQ==
+X-Google-Smtp-Source: APXvYqw944iPQH2qQN50PmaPHC4lvJ0N0eak5vEu5unZkeS4AMUzsRM5FGRL5u4veWWjxO8395O/Lw==
+X-Received: by 2002:adf:e5c4:: with SMTP id a4mr8213433wrn.87.1565343119382;
+ Fri, 09 Aug 2019 02:31:59 -0700 (PDT)
 Received: from [10.1.2.12] (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr.
  [90.63.244.31])
- by smtp.gmail.com with ESMTPSA id s3sm5656853wmh.27.2019.08.09.02.29.06
+ by smtp.gmail.com with ESMTPSA id t10sm491288wru.96.2019.08.09.02.31.58
  (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
- Fri, 09 Aug 2019 02:29:07 -0700 (PDT)
-Subject: Re: [PATCH 0/9] drm: meson: global clean-up (use proper macros,
- update comments ...)
+ Fri, 09 Aug 2019 02:31:58 -0700 (PDT)
+Subject: Re: [PATCH v3 0/2] dt-bindings: net: meson-dwmac: convert to yaml
+To: David Miller <davem@davemloft.net>
+References: <20190808114101.29982-1-narmstrong@baylibre.com>
+ <20190808.112033.180369877501058953.davem@davemloft.net>
 From: Neil Armstrong <narmstrong@baylibre.com>
-To: Kevin Hilman <khilman@baylibre.com>, Julien Masson <jmasson@baylibre.com>
-References: <86zhm782g5.fsf@baylibre.com> <7ho92mwor0.fsf@baylibre.com>
- <61b73415-73be-bb72-37f4-0a6060f85ffa@baylibre.com>
 Openpgp: preference=signencrypt
 Autocrypt: addr=narmstrong@baylibre.com; prefer-encrypt=mutual; keydata=
  mQENBE1ZBs8BCAD78xVLsXPwV/2qQx2FaO/7mhWL0Qodw8UcQJnkrWmgTFRobtTWxuRx8WWP
@@ -116,23 +115,23 @@ Autocrypt: addr=narmstrong@baylibre.com; prefer-encrypt=mutual; keydata=
  VsbXrP9BZ6snXyHfebPnno/te5XRqZTL9aJOytB/1iUna+1MAwBxGFPvqeEUUyT+gx1l3Acl
  ZaTUOEkgIor5losDrePdPgE=
 Organization: Baylibre
-Message-ID: <9f566ec3-ed9a-e3f5-e77c-5ecd91658015@baylibre.com>
-Date: Fri, 9 Aug 2019 11:29:06 +0200
+Message-ID: <e39ca095-d68e-7231-f746-2470e16cd2e9@baylibre.com>
+Date: Fri, 9 Aug 2019 11:31:58 +0200
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
  Thunderbird/60.8.0
 MIME-Version: 1.0
-In-Reply-To: <61b73415-73be-bb72-37f4-0a6060f85ffa@baylibre.com>
+In-Reply-To: <20190808.112033.180369877501058953.davem@davemloft.net>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190809_022909_907071_C129B167 
-X-CRM114-Status: GOOD (  15.60  )
+X-CRM114-CacheID: sfid-20190809_023201_326482_D82C5993 
+X-CRM114-Status: GOOD (  12.41  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:344 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:442 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -150,138 +149,37 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: linux-amlogic@lists.infradead.org, dri-devel@lists.freedesktop.org,
- linux-arm-kernel@lists.infradead.org, linux-kernel@vger.kernel.org
+Cc: devicetree@vger.kernel.org, martin.blumenstingl@googlemail.com,
+ netdev@vger.kernel.org, linux-kernel@vger.kernel.org, robh+dt@kernel.org,
+ linux-amlogic@lists.infradead.org, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Hi Julien,
+Hi,
 
-On 08/08/2019 16:12, Neil Armstrong wrote:
-> On 25/06/2019 01:24, Kevin Hilman wrote:
->> Julien Masson <jmasson@baylibre.com> writes:
->>
->>> This patch series aims to clean-up differents parts of the drm meson
->>> code source.
->>>
->>> Couple macros have been defined and used to set several registers
->>> instead of using magic constants.
->>>
->>> I also took the opportunity to:
->>> - add/remove/update comments
->>> - remove useless code
->>> - minor fix/improvment
->>
->> Nice set of cleanups, thanks!  I especially like the extra in-code
->> comments.
->>
->> Could you also add to the cover-letter how this was tested, and on what
->> platforms so we know it's not going to introduce any regressions.
->>
->> Thanks,
->>
->> Kevin
->>
+On 08/08/2019 20:20, David Miller wrote:
+> From: Neil Armstrong <narmstrong@baylibre.com>
+> Date: Thu,  8 Aug 2019 13:40:59 +0200
 > 
-> Apart the wrong magic value in patch 4 that I'll fix while applying,
-> Reviewed-by: Neil Armstrong <narmstrong@baylibre.com>
+>> This patchsets converts the Amlogic Meson DWMAC glue bindings over to
+>> YAML schemas using the already converted dwmac bindings.
+>>
+>> The first patch is needed because the Amlogic glue needs a supplementary
+>> reg cell to access the DWMAC glue registers.
+>>
+>> Changes since v2:
+>> - Added review tags
+>> - Updated allwinner,sun7i-a20-gmac.yaml reg maxItems
 > 
-> I'll run a few tests on all the supported SoC versions:
-> - GXBB
-> - GXL
-> - GXM
-> - G12A/G12B
-
-Tested on :
-- 1024x768x60 DVI Dell monitor
-- 3840x2160x60 HDMI2.0 Samsung TV
-
-Tested :
-- Simple DMT mode
-- Advanced HDMI2.0 4k60 mode with SCDC negotiation and scrambling
-- OSD layer and scaling
-- Video layer and scaling
-
-SoCs:
-- GXBB: meson-gxbb-odroidc2
-modetest -M meson -s 32:1024x768-60 -P 33@37:1024x768@AR24 -P 35@37:1024x768@NV12
-modetest -M meson -s 32:1024x768-60 -P 33@37:1024x768@AR24 -P 35@37:1024x768*2@NV12
-modetest -M meson -s 32:1024x768-60 -P 33@37:512x384*2@AR24 -P 35@37:2048x1536*0.5@NV12
-
-modetest -M meson -s 32:3840x2160-60 -P 33@37:3840x2160@AR24 -P 35@37:3840x2160@NV12
-modetest -M meson -s 32:3840x2160-60 -P 33@37:1920x1080*2@AR24 -P 35@37:3840x2160*0.8@NV12
-
-No visual issues
-
-- GXL: meson-gxl-s905x-libretech-cc
-modetest -M meson -s 34:1024x768-60 -P 35@39:1024x768@AR24 -P 37@39:1024x768@NV12
-modetest -M meson -s 34:1024x768-60 -P 35@39:1024x768@AR24 -P 37@39:1024x768*2@NV12
-modetest -M meson -s 34:1024x768-60 -P 35@39:512x384*2@AR24 -P 37@39:2048x1536*0.5@NV12
-modetest -M meson -s 34:3840x2160-60 -P 35@39:3840x2160@AR24 -P 37@39:3840x2160@NV12
-modetest -M meson -s 34:3840x2160-60 -P 35@39:1920x1080*2@AR24 -P 37@39:3840x2160*0.8@NV12
-
-No visual issues
-
-- GXM: meson-gxm-khadas-vim2
-modetest -M meson -s 32:1024x768-60 -P 33@37:1024x768@AR24 -P 35@37:1024x768@NV12
-modetest -M meson -s 32:1024x768-60 -P 33@37:1024x768@AR24 -P 35@37:1024x768*2@NV12
-modetest -M meson -s 32:1024x768-60 -P 33@37:512x384*2@AR24 -P 35@37:2048x1536*0.5@NV12
-
-modetest -M meson -s 32:3840x2160-60 -P 33@37:3840x2160@AR24 -P 35@37:3840x2160@NV12
-modetest -M meson -s 32:3840x2160-60 -P 33@37:1920x1080*2@AR24 -P 35@37:3840x2160*0.8@NV12
-
-With the following fix on patch 4:
-========><====================================
---- a/drivers/gpu/drm/meson/meson_vpp.c
-+++ b/drivers/gpu/drm/meson/meson_vpp.c
-@@ -98,7 +98,7 @@ void meson_vpp_init(struct meson_drm *priv)
-                                    priv->io_base + _REG(VIU_MISC_CTRL1));
-                writel_relaxed(VPP_PPS_DUMMY_DATA_MODE,
-                               priv->io_base + _REG(VPP_DOLBY_CTRL));
--               writel_relaxed(0x108080,
-+               writel_relaxed(0x1020080,
-                                priv->io_base + _REG(VPP_DUMMY_DATA1));
-        } else if (meson_vpu_is_compatible(priv, "amlogic,meson-g12a-vpu"))
-                writel_relaxed(0xf, priv->io_base + _REG(DOLBY_PATH_CTRL));
-========><====================================
-
-No visual issues
-
-- G12A/G12B: meson-g12a-sei510
-
-Issue found in patch 5, the following fix will be applied while applying onto drm-misc-next :
-========><====================================
---- a/drivers/gpu/drm/meson/meson_viu.c
-+++ b/drivers/gpu/drm/meson/meson_viu.c
-@@ -407,7 +407,7 @@ void meson_viu_init(struct meson_drm *priv)
-                               VIU_OSD_BLEND_HOLD_LINES(4),
-                               priv->io_base + _REG(VIU_OSD_BLEND_CTRL));
-
--               writel_relaxed(VIU_OSD1_POSTBLD_SRC_OSD1,
-+               writel_relaxed(OSD_BLEND_PATH_SEL_ENABLE,
-                               priv->io_base + _REG(OSD1_BLEND_SRC_CTRL));
-                writel_relaxed(OSD_BLEND_PATH_SEL_ENABLE,
-                               priv->io_base + _REG(OSD2_BLEND_SRC_CTRL));
-========><====================================
-
-modetest -M meson -s 34:800x600 -P 35@39:800x600@AR24 -P 37@39:800x600@NV12
-modetest -M meson -s 34:800x600 -P 35@39:800x600@AR24 -P 37@39:800x600*2@NV12
-modetest -M meson -s 34:800x600 -P 35@39:400x300*2@AR24 -P 37@39:1600x600*0.5@NV12
-modetest -M meson -s 34:3840x2160-60 -P 35@39:3840x2160@AR24 -P 37@39:3840x2160@NV12
-modetest -M meson -s 34:3840x2160-60 -P 35@39:1920x1080*2@AR24 -P 37@39:3840x2160*0.8@NV12
-
-No visual issues
-
-> 
-> and push to drm-misc-next.
-> 
-> Neil
+> Where is this targetted to be merged, an ARM tree?  Or one of my
+> networking trees?
 > 
 
-Applying to drm-misc-next with the fixes
+I assume you can take it in one of your net trees.
 
+Thanks,
 Neil
 
 _______________________________________________
