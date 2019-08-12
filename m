@@ -2,80 +2,80 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0103A89E71
-	for <lists+linux-amlogic@lfdr.de>; Mon, 12 Aug 2019 14:33:34 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 89D5889E81
+	for <lists+linux-amlogic@lfdr.de>; Mon, 12 Aug 2019 14:35:50 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:References
+	:In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=1knikAG9NRyy0BiST5sDd9Q8dwi+qe5PhmpzYNOdrHA=; b=VeGHCMRSzg+W0b
-	HsdnN70hBfoYZtJ0YtKQdkbDJT5ZIiSbBSHfMZoi0XPjRmjfX+qZoa0N/zHlMfzuXO87XDscRNOtC
-	+YinkkE0YzkUr+x1AEIydJy3YyY5vuypANgtSkFP7nQe/1Nx9y0EwKAVyWJVEx1E889LXBUVBwNw6
-	6iMXKTls5sLUHAb7kdKX93uaPNif45hCLnuBkq4THmhHXjiA8KJAZ4uCrzA8A3LiKt5mL+SQXUfVX
-	1WjJ/6Y4RXt6LaYvC42Es42dRq63kUpIA1fZUvcy15HUiLYh3W3u4DEUsC9lJIgCQNoEPw0GOOWwd
-	fSWDlK2HkgHZkeKcPqkQ==;
+	List-Owner; bh=frj4ugZYUnUCOwcGtITXY0AWyECv4+jXYY/aR5shzjw=; b=ogdEx+cb4C4DdV
+	mW/3/zad2kMXG0QTXLwP2Sxooqk/CWq0tVGP0goIYX7BEB5eXL9JyBbCbggGxrSeQiunbQ4TH6HeZ
+	2cV80qP/5c8zMRRxDosg2A08L9MYTBYi6jNKFWkU9eVVNuWsAE17jS/7vHF/O4FleeWEtfuQNu5Tc
+	lKrj7tlUcx3fL8aqCrYOtyExN8AFkhC4157luI3qaqTbdOzt+cg6SzkdDi91BnPyVSdpQjh8so5L1
+	C46DSW5riuU37cLJGISbplxqQPE8Gmh2RJazt2n5rQoEKwDaVJO5I9coWCEx22Vh77gwZVDhuDTQV
+	I1vLfOXCDMpiOngelQQA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hx9Vx-0003Oy-UI; Mon, 12 Aug 2019 12:33:30 +0000
-Received: from mail-wr1-x443.google.com ([2a00:1450:4864:20::443])
+	id 1hx9YB-00052A-Ic; Mon, 12 Aug 2019 12:35:47 +0000
+Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hx9VU-0003Aj-T3
- for linux-amlogic@lists.infradead.org; Mon, 12 Aug 2019 12:33:02 +0000
-Received: by mail-wr1-x443.google.com with SMTP id 31so104443955wrm.1
- for <linux-amlogic@lists.infradead.org>; Mon, 12 Aug 2019 05:33:00 -0700 (PDT)
+ id 1hx9Y6-00050h-DT
+ for linux-amlogic@lists.infradead.org; Mon, 12 Aug 2019 12:35:44 +0000
+Received: by mail-wr1-x442.google.com with SMTP id r3so10676941wrt.3
+ for <linux-amlogic@lists.infradead.org>; Mon, 12 Aug 2019 05:35:42 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=from:to:cc:subject:date:message-id:in-reply-to:references
- :mime-version:content-transfer-encoding;
- bh=dqJ4n54yjkwbFCEJq5QMHITUyQhmVlnjTeiFqDxqTrc=;
- b=kv92oP2M64Bi/XRGqe2z+1du/iOO7SPa2FaSuz5My6Bls2OISMLzxzQOJmnLEo3BeL
- M7HkQQp07U6ofG0MbpZzf9duWokZdkwK8qM/Ah+qrubLjk+v7LGFBUxOwZIXoWA8/ZAH
- eSbfFpcn99oNw61Co8/UMA12yaMZesLT5o//4C42HM8DIr3zIJH3l3spikX5rTVVBqJ5
- u1IqLYaXOF9pCyXsw6yJRjhhG40K4kcTru3eCyNTaY3AK1s0InOYefn9KaYJRylZm3wA
- tb7636NjIyS5ke7GYIp566pFb8Dx3iJu/fIz+BXeCd6eMUVcEzWIKG1mKhMItakVRjhj
- V8gg==
+ h=from:to:cc:subject:in-reply-to:references:date:message-id
+ :mime-version; bh=bI/XNvST8XNcDi45EkijYU3OEXqnGirukbOk+hlTQLA=;
+ b=ltoZPdDDIHtFi84wMSTH18qO2lGDQMLD8q+GOlpjwYklx43w44pX9RLkk/UEZFpp5n
+ bC3GzphMPhB6+tvx7gw90L/wzbAvYXiJYpTKgP7bknRq8nKamLiU29/teVYUoULSOnXe
+ xB07Udy9o+Ewk9kywDosNx9NasLrbCnySassqAWfxNE6NFMRO4BQiv20TcDX5FBVg+PZ
+ brYqdp7nHkUCz/6c1yVQyh0SMQ0UtN2WJEO78ZnxD+4ybl6lF7VHgxG0G4mdmmjyC/GP
+ 7Ry/2trw/UXrHkHdoGEa+h6YHou2Lmn7FgyUbmvc62VUHNe4NltIs8wpjufZpOKRvo8v
+ zbvA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
- :references:mime-version:content-transfer-encoding;
- bh=dqJ4n54yjkwbFCEJq5QMHITUyQhmVlnjTeiFqDxqTrc=;
- b=XKWEWfBAFEGO2Whw4IMsEftuyNc3DlN78bAehRPQ79wrk0BdBL9KZKwGobI3Js9dTW
- pnSTr6vorCF5JhJ126zMZ1qNcZsl/5CDBVRRT4nDLGh4eUMiwaaBgcO1WbibbtFvxQbY
- Y7lWgJE6VQ1DjIRQI8e/upy+RBAbF5gKM858ZKoyc6Jop+8o0LHOwibyJinYWJAhZLgX
- /Yc17lPeviWYrMMEkzbJXSuukHENeY0T1tV6T0AeZZAWdZbZhRqNs77LCwphu8hgyjN0
- TS01/my4ognDoUC8ivYISosqRiVthh72Gd7ciiF8nIYeSdWfpvwRZ4Ny3QHeV5vf59Ah
- pTvA==
-X-Gm-Message-State: APjAAAU9hTkstioauxE9XI+vlfN4PGcxS+jReNsWkacmmFgEYzJftZph
- C08zzIRzaNP8uUF0dssXcZkhoA==
-X-Google-Smtp-Source: APXvYqwqWFswOPiG61j95oJ0yTvUBxuNRukh5FHJcPalgQyz4/Z/hw+oqpV+YPw2EUIa3geP+g0NKQ==
-X-Received: by 2002:adf:a348:: with SMTP id d8mr29164772wrb.235.1565613179498; 
- Mon, 12 Aug 2019 05:32:59 -0700 (PDT)
-Received: from starbuck.baylibre.local
- (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
- by smtp.googlemail.com with ESMTPSA id z6sm15886432wre.76.2019.08.12.05.32.58
+ h=x-gm-message-state:from:to:cc:subject:in-reply-to:references:date
+ :message-id:mime-version;
+ bh=bI/XNvST8XNcDi45EkijYU3OEXqnGirukbOk+hlTQLA=;
+ b=abn6m+f/jNKRfwfPXPD8S+VB3J4pt9wy9V2tBGkuuDuLWuF3Oc/ET8fT30Hg8iLKEa
+ hBwVPuMReNMTmisEKWpCHsxzzJZyhP9th+TjC2+4kdZ0OBjQyVf8n9KMpo+ltFoztzW0
+ v9Ya6oDOz5FR0llY3wil4NTGuAfYE7eTcP7cXUGfFgw53Kdio9hEAF0Sk15o2Nyihllk
+ 5YtFEswSfhzw8DN/NgHsLa2rO75HvWQu4qbhhqum3KoIVaxzW3eycjNsL6U+Z6QGMDpE
+ kmop2PKC6rGv91VVnBbCqgVBfdmIIF1G370ZyAeiW0/G/yM74wneNJB7HhWdTPL3+ZO8
+ LsOg==
+X-Gm-Message-State: APjAAAWXNuscim8BZjd7AjILsL1MBKSDmy8PdvSa/Zxw7xSaD9/D32Q5
+ l/H+lcTz3j+sQen/Oo8gSumv1Q==
+X-Google-Smtp-Source: APXvYqwcxXo5+Ieqa7x45x82mtMfFr5hiRSw/QjuF6zvGPfArN1YfCX/7LH4MHP/oMjJqqKPm3GOmw==
+X-Received: by 2002:adf:f281:: with SMTP id k1mr40956211wro.154.1565613340871; 
+ Mon, 12 Aug 2019 05:35:40 -0700 (PDT)
+Received: from localhost (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr.
+ [90.63.244.31])
+ by smtp.gmail.com with ESMTPSA id d17sm14914204wrm.52.2019.08.12.05.35.40
  (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Mon, 12 Aug 2019 05:32:58 -0700 (PDT)
+ Mon, 12 Aug 2019 05:35:40 -0700 (PDT)
 From: Jerome Brunet <jbrunet@baylibre.com>
-To: Neil Armstrong <narmstrong@baylibre.com>
-Subject: [PATCH v2 2/2] clk: meson: axg-audio: add g12a reset support
-Date: Mon, 12 Aug 2019 14:32:53 +0200
-Message-Id: <20190812123253.4734-3-jbrunet@baylibre.com>
-X-Mailer: git-send-email 2.21.0
-In-Reply-To: <20190812123253.4734-1-jbrunet@baylibre.com>
-References: <20190812123253.4734-1-jbrunet@baylibre.com>
+To: Neil Armstrong <narmstrong@baylibre.com>,
+ Andrzej Hajda <a.hajda@samsung.com>
+Subject: Re: [PATCH v2 0/8] drm/bridge: dw-hdmi: improve i2s support
+In-Reply-To: <408dffda-fb9c-5f57-4f7b-404437359a69@baylibre.com>
+References: <20190812120726.1528-1-jbrunet@baylibre.com>
+ <408dffda-fb9c-5f57-4f7b-404437359a69@baylibre.com>
+Date: Mon, 12 Aug 2019 14:35:39 +0200
+Message-ID: <1jo90uimsk.fsf@starbuckisacylon.baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190812_053300_947441_D081B008 
-X-CRM114-Status: GOOD (  15.94  )
+X-CRM114-CacheID: sfid-20190812_053542_455747_C346819F 
+X-CRM114-Status: GOOD (  11.94  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:443 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:442 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -94,192 +94,71 @@ List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
 Cc: Kevin Hilman <khilman@baylibre.com>, linux-amlogic@lists.infradead.org,
- linux-clk@vger.kernel.org, linux-kernel@vger.kernel.org,
- Jerome Brunet <jbrunet@baylibre.com>
+ linux-kernel@vger.kernel.org, dri-devel@lists.freedesktop.org,
+ Jonas Karlman <jonas@kwiboo.se>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On the g12a, the register space dedicated to the audio clock also
-provides some resets. Let the clock controller register a reset
-provider as well for this SoC family.
+On Mon 12 Aug 2019 at 14:19, Neil Armstrong <narmstrong@baylibre.com> wrote:
 
-the axg SoC family does not appear to provide this feature.
+> Hi,
+>
+> On 12/08/2019 14:07, Jerome Brunet wrote:
+>> The purpose of this patchset is to improve the support of the i2s
+>> interface of the synopsys hdmi controller.
+>> 
+>> Once applied, the interface should support all the usual i2s bus formats,
+>> 8 channels playback and properly setup the channel number and allocation
+>> in the infoframes.
+>> 
+>> Also, the dw-hdmi i2s interface will now provide the eld to the generic
+>> hdmi-codec so it can expose the related controls to user space.
+>> 
+>> This work was inspired by Jonas Karlman's work, available here [0].
+>> 
+>> This was tested the Amlogic meson-g12a-sei510 platform.
+>> For this specific platform, which uses codec2codec links, there is a
+>> runtime dependency for patch 8 on this ASoC series [1].
+>> 
+>> Changes since v1 [2]:
+>>  * Fix copy size in .get_eld()
+>> 
+>> [0]: https://github.com/Kwiboo/linux-rockchip/commits/rockchip-5.2-for-libreelec-v5.2.3
+>> [1]: https://lkml.kernel.org/r/20190725165949.29699-1-jbrunet@baylibre.com
+>> [2]: https://lkml.kernel.org/r/20190805134102.24173-1-jbrunet@baylibre.com
+>> 
+>> Jerome Brunet (8):
+>>   drm/bridge: dw-hdmi-i2s: support more i2s format
+>>   drm/bridge: dw-hdmi: move audio channel setup out of ahb
+>>   drm/bridge: dw-hdmi: set channel count in the infoframes
+>>   drm/bridge: dw-hdmi-i2s: enable lpcm multi channels
+>>   drm/bridge: dw-hdmi-i2s: set the channel allocation
+>>   drm/bridge: dw-hdmi-i2s: reset audio fifo before applying new params
+>>   drm/bridge: dw-hdmi-i2s: enable only the required i2s lanes
+>>   drm/bridge: dw-hdmi-i2s: add .get_eld support
+>
+> Reviewed-by: Neil Armstrong <narmstrong@baylibre.com>
+>
+> Jonas, is patch 8 ok for you now ? If yes I'll apply them to
+> drm-misc-next.
 
-Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
----
- drivers/clk/meson/axg-audio.c | 107 +++++++++++++++++++++++++++++++++-
- drivers/clk/meson/axg-audio.h |   1 +
- 2 files changed, 106 insertions(+), 2 deletions(-)
+Please don't ! I did not pick the right change and what I just sent is
+just crazy, give me a second to resend
 
-diff --git a/drivers/clk/meson/axg-audio.c b/drivers/clk/meson/axg-audio.c
-index 741df7e955ca..6be9df1efce5 100644
---- a/drivers/clk/meson/axg-audio.c
-+++ b/drivers/clk/meson/axg-audio.c
-@@ -12,6 +12,7 @@
- #include <linux/platform_device.h>
- #include <linux/regmap.h>
- #include <linux/reset.h>
-+#include <linux/reset-controller.h>
- #include <linux/slab.h>
- 
- #include "axg-audio.h"
-@@ -918,6 +919,84 @@ static int devm_clk_get_enable(struct device *dev, char *id)
- 	return 0;
- }
- 
-+struct axg_audio_reset_data {
-+	struct reset_controller_dev rstc;
-+	struct regmap *map;
-+	unsigned int offset;
-+};
-+
-+static void axg_audio_reset_reg_and_bit(struct axg_audio_reset_data *rst,
-+					unsigned long id,
-+					unsigned int *reg,
-+					unsigned int *bit)
-+{
-+	unsigned int stride = regmap_get_reg_stride(rst->map);
-+
-+	*reg = (id / (stride * BITS_PER_BYTE)) * stride;
-+	*reg += rst->offset;
-+	*bit = id % (stride * BITS_PER_BYTE);
-+}
-+
-+static int axg_audio_reset_update(struct reset_controller_dev *rcdev,
-+				unsigned long id, bool assert)
-+{
-+	struct axg_audio_reset_data *rst =
-+		container_of(rcdev, struct axg_audio_reset_data, rstc);
-+	unsigned int offset, bit;
-+
-+	axg_audio_reset_reg_and_bit(rst, id, &offset, &bit);
-+
-+	regmap_update_bits(rst->map, offset, BIT(bit),
-+			assert ? BIT(bit) : 0);
-+
-+	return 0;
-+}
-+
-+static int axg_audio_reset_status(struct reset_controller_dev *rcdev,
-+				unsigned long id)
-+{
-+	struct axg_audio_reset_data *rst =
-+		container_of(rcdev, struct axg_audio_reset_data, rstc);
-+	unsigned int val, offset, bit;
-+
-+	axg_audio_reset_reg_and_bit(rst, id, &offset, &bit);
-+
-+	regmap_read(rst->map, offset, &val);
-+
-+	return !!(val & BIT(bit));
-+}
-+
-+static int axg_audio_reset_assert(struct reset_controller_dev *rcdev,
-+				unsigned long id)
-+{
-+	return axg_audio_reset_update(rcdev, id, true);
-+}
-+
-+static int axg_audio_reset_deassert(struct reset_controller_dev *rcdev,
-+				unsigned long id)
-+{
-+	return axg_audio_reset_update(rcdev, id, false);
-+}
-+
-+static int axg_audio_reset_toggle(struct reset_controller_dev *rcdev,
-+				unsigned long id)
-+{
-+	int ret;
-+
-+	ret = axg_audio_reset_assert(rcdev, id);
-+	if (ret)
-+		return ret;
-+
-+	return axg_audio_reset_deassert(rcdev, id);
-+}
-+
-+static const struct reset_control_ops axg_audio_rstc_ops = {
-+	.assert = axg_audio_reset_assert,
-+	.deassert = axg_audio_reset_deassert,
-+	.reset = axg_audio_reset_toggle,
-+	.status = axg_audio_reset_status,
-+};
-+
- static const struct regmap_config axg_audio_regmap_cfg = {
- 	.reg_bits	= 32,
- 	.val_bits	= 32,
-@@ -927,12 +1006,15 @@ static const struct regmap_config axg_audio_regmap_cfg = {
- 
- struct audioclk_data {
- 	struct clk_hw_onecell_data *hw_onecell_data;
-+	unsigned int reset_offset;
-+	unsigned int reset_num;
- };
- 
- static int axg_audio_clkc_probe(struct platform_device *pdev)
- {
- 	struct device *dev = &pdev->dev;
- 	const struct audioclk_data *data;
-+	struct axg_audio_reset_data *rst;
- 	struct regmap *map;
- 	struct resource *res;
- 	void __iomem *regs;
-@@ -984,8 +1066,27 @@ static int axg_audio_clkc_probe(struct platform_device *pdev)
- 		}
- 	}
- 
--	return devm_of_clk_add_hw_provider(dev, of_clk_hw_onecell_get,
--					   data->hw_onecell_data);
-+	ret = devm_of_clk_add_hw_provider(dev, of_clk_hw_onecell_get,
-+					data->hw_onecell_data);
-+	if (ret)
-+		return ret;
-+
-+	/* Stop here if there is no reset */
-+	if (!data->reset_num)
-+		return 0;
-+
-+	rst = devm_kzalloc(dev, sizeof(*rst), GFP_KERNEL);
-+	if (!rst)
-+		return -ENOMEM;
-+
-+	rst->map = map;
-+	rst->offset = data->reset_offset;
-+	rst->rstc.nr_resets = data->reset_num;
-+	rst->rstc.ops = &axg_audio_rstc_ops;
-+	rst->rstc.of_node = dev->of_node;
-+	rst->rstc.owner = THIS_MODULE;
-+
-+	return devm_reset_controller_register(dev, &rst->rstc);
- }
- 
- static const struct audioclk_data axg_audioclk_data = {
-@@ -994,6 +1095,8 @@ static const struct audioclk_data axg_audioclk_data = {
- 
- static const struct audioclk_data g12a_audioclk_data = {
- 	.hw_onecell_data = &g12a_audio_hw_onecell_data,
-+	.reset_offset = AUDIO_SW_RESET,
-+	.reset_num = 26,
- };
- 
- static const struct of_device_id clkc_match_table[] = {
-diff --git a/drivers/clk/meson/axg-audio.h b/drivers/clk/meson/axg-audio.h
-index 5d972d55d6c7..c00e28b2e1a9 100644
---- a/drivers/clk/meson/axg-audio.h
-+++ b/drivers/clk/meson/axg-audio.h
-@@ -22,6 +22,7 @@
- #define AUDIO_MCLK_F_CTRL	0x018
- #define AUDIO_MST_PAD_CTRL0	0x01c
- #define AUDIO_MST_PAD_CTRL1	0x020
-+#define AUDIO_SW_RESET		0x024
- #define AUDIO_MST_A_SCLK_CTRL0	0x040
- #define AUDIO_MST_A_SCLK_CTRL1	0x044
- #define AUDIO_MST_B_SCLK_CTRL0	0x048
--- 
-2.21.0
-
+>
+> Neil
+>
+>> 
+>>  .../drm/bridge/synopsys/dw-hdmi-ahb-audio.c   | 20 ++-----
+>>  .../gpu/drm/bridge/synopsys/dw-hdmi-audio.h   |  1 +
+>>  .../drm/bridge/synopsys/dw-hdmi-i2s-audio.c   | 60 +++++++++++++++++--
+>>  drivers/gpu/drm/bridge/synopsys/dw-hdmi.c     | 37 ++++++++++++
+>>  drivers/gpu/drm/bridge/synopsys/dw-hdmi.h     | 13 +++-
+>>  include/drm/bridge/dw_hdmi.h                  |  2 +
+>>  6 files changed, 108 insertions(+), 25 deletions(-)
+>> 
 
 _______________________________________________
 linux-amlogic mailing list
