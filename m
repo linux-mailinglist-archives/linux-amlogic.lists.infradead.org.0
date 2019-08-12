@@ -2,75 +2,76 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 62B4789D92
-	for <lists+linux-amlogic@lfdr.de>; Mon, 12 Aug 2019 14:07:46 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3EC1489D95
+	for <lists+linux-amlogic@lfdr.de>; Mon, 12 Aug 2019 14:07:50 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ydz0EVTEJYHXOH2eaKmzFeS7EyuXk3mnE8pgkQliBOM=; b=j+n2PH8GEmwkvx
-	gTmiRJ+66rdbppQ2NIRl/ltp0fXgJ2vvpT/lyx3Z3xZZ4+o8XfEMufWxxUwIPjKYWOFSU0Ulgu/VD
-	amJKwft2TV9/Pf7PBoy7x8dkB28PyVn/wSJG9sDKpJQ2M1Hl5P3jg2UWGwSPVr28OoPuUeY/paZ4D
-	USr8Zg2/s9OUEF/oCckPbGDS2Dxmg4iyxd29j+2T0qt4FDvRG70xKgIYnXMBBqW1cUTRfkoeGjDg3
-	DaO2yP9U362ZIfCuSqecjEV+3mRwojbCHaOu93UOtDM67Ywu2s8C/xxmtFQOfKQtES+wuYbdTChax
-	M7roGBmL0wg4PBzHF9kg==;
+	List-Owner; bh=8uUXUogdRnPdEAzki9jOODRtBbLWXRIonvUDI/fEcCw=; b=jic1gfipFXdHkI
+	GkBfHOpNcRHnNyqRN9oZcFjflDdMiy3e3/9dw2bNOs/sIi/5fTPwoEd+/xCQesVMfVjF3PRFmZyp+
+	BdalF11802qIVgcF2SeNXfgn1U6gGcTvBpAdvLs7AGfhknBGsZrALUWRJqx9uc2Qjogm1QiSRG5ex
+	TPCUmY7H8pYkRO9osKGGt5IwYP4oNVmKBpMdjN8TEsKm/+bDurVnibFDi175ZRw3cbqz5dMFXkfwS
+	DMyF6WRkxIqPfTZgy6NG3U+TyfNG4I+g3hfzbzSbqS4Jof4BHs0x7/w1aleDv906y8O/gDxo/fWBf
+	LTFxAAhPmtbaKie18SaQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hx96y-0006dw-4K; Mon, 12 Aug 2019 12:07:40 +0000
+	id 1hx973-0006jM-1m; Mon, 12 Aug 2019 12:07:45 +0000
 Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hx96q-0006aS-9p
+ id 1hx96r-0006as-2U
  for linux-amlogic@lists.infradead.org; Mon, 12 Aug 2019 12:07:35 +0000
-Received: by mail-wr1-x442.google.com with SMTP id p13so29752295wru.10
+Received: by mail-wr1-x442.google.com with SMTP id z11so2394287wrt.4
  for <linux-amlogic@lists.infradead.org>; Mon, 12 Aug 2019 05:07:32 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=ceoz58HJhiw+4Z6q1/xd/gAe7VVmzCvD6fU8sO+lm5o=;
- b=Or3uQR6QO71RP1JieY4+QIypkqR1ZLSwxIsThtNzg2pwMJw3ABCgPudYblpSyj9V9U
- Ur910YS8Rv83kYjvTFn8d8JSeGMX0uL0dP2qioI7DJ2HB81GTaYS0I7ia+Pm4V0WNunt
- 9Cep9ntP0tfqwN+EqG8JABr2Up4KQM/Fb2AsNgOkuPhktdjG+hCt6PJSr98UMiBlKvy5
- 3ibft6dtlkFlG2OgeL12AMKbPtVlpitDZfN0XFZIOZlkjRLFplktrwwat9WpWDFv4tqp
- s0pWWckNeTbPaB2h0XABYkbZFQhwX2jPQI5Hcv34lLxlKWju91BJM3kA19oGZXZImzxQ
- Nd1A==
+ bh=f27o2oE+oJHz4miX1Hf8EQ6LoL/TmaOJvKtMiSXbELE=;
+ b=aOQF4iSEbmZZ5KY0hvPeBd8BItPqgtiP29FyURV+eKXNUeVijOxMVfVCNA5pEXVaji
+ K05N5EAuVNZVkbw5HIZWo9Izbd+BKrdQneWJUE6mR8E+bFCl+BOy+iXJdUoH//looyMM
+ i6Cd2+/WCQrlwCpG+k0SFfRmr5S5ndy2CL20JE4IcoCQ+HoOQ1dxHJ/Xz9zcpiee+ahQ
+ UfLEAmK4UaIPrcB9cSrXtFILshBuSU1EESYiJu2DnqMEZBKC1EkoPtR6qYMeG7GqJFWZ
+ LG4qrbnPerpCH8mP2DWE16gQQZT8R85kXCoRm6Ncr4Z/OVzVjb+ds4OvOnBsstAWEezE
+ W5vQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=ceoz58HJhiw+4Z6q1/xd/gAe7VVmzCvD6fU8sO+lm5o=;
- b=hpuDWUSdmzDfdtHOePfTEE8b18mNtGSWUHbGDxkXXYtn89+FYkarCOzMkX1S2A0it5
- 9aQyhgowxsfr6jEnuf08KWIMYZ1K6HMJ+E3D9g4u2p0rw3rXb8v++JMdJzoH0T2cZJEv
- h+s9S2NQX0lxJtvouwYPY8PvIqOvvVEi8R6K4BpVU2pBvNF/qSsVfKrzIrGmmS1sZsW2
- iOL5ntoSqOtMiQ+k/p/ht5wZKJfxtrvK+BoO2UL/Oi0qNUI6KK/fu7Z2HM/pYdTFqbZ6
- rUqBa3XsvVsIjhEDzavlMOeDs9Naafc1CFknWNx46cTY2h2hXZ9HITOrK2A5m+6Ikqe5
- 8zRg==
-X-Gm-Message-State: APjAAAW+pKeLSzHbK5wYNX7aeLX5K5D3zBgBTWuI1txwZqvlxMjespCg
- OrYkE9oAqeNwxXK8oMg8yxluxw==
-X-Google-Smtp-Source: APXvYqy32yxW6ITSLrDXLyZ6668kqusWzhq85fvzCQmJeabhxKDQLSSVz4Wz9i/mCgPzAFNi0NpyqA==
-X-Received: by 2002:adf:f705:: with SMTP id r5mr16743424wrp.342.1565611650885; 
- Mon, 12 Aug 2019 05:07:30 -0700 (PDT)
+ bh=f27o2oE+oJHz4miX1Hf8EQ6LoL/TmaOJvKtMiSXbELE=;
+ b=KspYJ5vt0BbAGNrT82lHZC7Bzer8opSNkB+jyIokfDAhBEbeSU/rGoJ3MLmQoOXh8U
+ +RZor00pXp+nyMfxvIOX1jwYtByxt2v2BqsIUOqw50wvthJkObSNqiam4a5Sxj6b8yTz
+ ny4su7rbuy5mXIOen7T0VzMwOrLIpvQuAbUcb65uw/slh2NwRwA3R5xObyjssAmNnMt6
+ P/v0vKRDkVL9dEtT7xbcvXXFIzRrTv+PL+/Jf0OpTTBY1FARMTejr6F+9sf5OseRP/9w
+ cmnad506RVyRshpWGEnQeVmXswMrOKWDBqSuaTDyQ0pcBhsXHEb66ZZFIMMNlfIxFrKI
+ j8VA==
+X-Gm-Message-State: APjAAAVVpUia+NU7qaiKSnCSlBaXp1QXxjwkvR2z+hga8wHtCGAICiG1
+ xKebgQqiZexTiZdXn3VF5gRzqg==
+X-Google-Smtp-Source: APXvYqwQMpGaWCUJTwGWrRgVVpAUR9EHakWwjQhtB4VAuAtKJl/x804rET/ORPE8DjACKRip0STzcw==
+X-Received: by 2002:adf:a1de:: with SMTP id v30mr5234110wrv.138.1565611651778; 
+ Mon, 12 Aug 2019 05:07:31 -0700 (PDT)
 Received: from starbuck.baylibre.local
  (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
- by smtp.googlemail.com with ESMTPSA id j9sm1883415wrx.66.2019.08.12.05.07.29
+ by smtp.googlemail.com with ESMTPSA id j9sm1883415wrx.66.2019.08.12.05.07.30
  (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Mon, 12 Aug 2019 05:07:30 -0700 (PDT)
+ Mon, 12 Aug 2019 05:07:31 -0700 (PDT)
 From: Jerome Brunet <jbrunet@baylibre.com>
 To: Andrzej Hajda <a.hajda@samsung.com>,
  Neil Armstrong <narmstrong@baylibre.com>
-Subject: [PATCH v2 1/8] drm/bridge: dw-hdmi-i2s: support more i2s format
-Date: Mon, 12 Aug 2019 14:07:19 +0200
-Message-Id: <20190812120726.1528-2-jbrunet@baylibre.com>
+Subject: [PATCH v2 2/8] drm/bridge: dw-hdmi: move audio channel setup out of
+ ahb
+Date: Mon, 12 Aug 2019 14:07:20 +0200
+Message-Id: <20190812120726.1528-3-jbrunet@baylibre.com>
 X-Mailer: git-send-email 2.21.0
 In-Reply-To: <20190812120726.1528-1-jbrunet@baylibre.com>
 References: <20190812120726.1528-1-jbrunet@baylibre.com>
 MIME-Version: 1.0
 X-Patchwork-Bot: notify
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190812_050732_339350_951E198E 
-X-CRM114-Status: GOOD (  12.14  )
+X-CRM114-CacheID: sfid-20190812_050733_114447_ED7F9452 
+X-CRM114-Status: GOOD (  11.61  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -103,78 +104,123 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-The dw-hdmi-i2s supports more formats than just regular i2s.
-Add support for left justified, right justified and dsp modes
-A and B.
+Part of the channel count setup done in dw-hdmi ahb should
+actually be done whatever the interface providing the data.
 
 Reviewed-by: Jonas Karlman <jonas@kwiboo.se>
+Let's move it to dw-hdmi driver instead.
+
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
 ---
- .../drm/bridge/synopsys/dw-hdmi-i2s-audio.c   | 26 ++++++++++++++++---
- drivers/gpu/drm/bridge/synopsys/dw-hdmi.h     |  6 +++--
- 2 files changed, 27 insertions(+), 5 deletions(-)
+ .../drm/bridge/synopsys/dw-hdmi-ahb-audio.c   | 20 +++---------
+ drivers/gpu/drm/bridge/synopsys/dw-hdmi.c     | 32 +++++++++++++++++++
+ include/drm/bridge/dw_hdmi.h                  |  2 ++
+ 3 files changed, 38 insertions(+), 16 deletions(-)
 
-diff --git a/drivers/gpu/drm/bridge/synopsys/dw-hdmi-i2s-audio.c b/drivers/gpu/drm/bridge/synopsys/dw-hdmi-i2s-audio.c
-index 5cbb71a866d5..2b624cff541d 100644
---- a/drivers/gpu/drm/bridge/synopsys/dw-hdmi-i2s-audio.c
-+++ b/drivers/gpu/drm/bridge/synopsys/dw-hdmi-i2s-audio.c
-@@ -44,9 +44,8 @@ static int dw_hdmi_i2s_hw_params(struct device *dev, void *data,
- 	u8 inputclkfs = 0;
+diff --git a/drivers/gpu/drm/bridge/synopsys/dw-hdmi-ahb-audio.c b/drivers/gpu/drm/bridge/synopsys/dw-hdmi-ahb-audio.c
+index a494186ae6ce..2b7539701b42 100644
+--- a/drivers/gpu/drm/bridge/synopsys/dw-hdmi-ahb-audio.c
++++ b/drivers/gpu/drm/bridge/synopsys/dw-hdmi-ahb-audio.c
+@@ -63,10 +63,6 @@ enum {
+ 	HDMI_REVISION_ID = 0x0001,
+ 	HDMI_IH_AHBDMAAUD_STAT0 = 0x0109,
+ 	HDMI_IH_MUTE_AHBDMAAUD_STAT0 = 0x0189,
+-	HDMI_FC_AUDICONF2 = 0x1027,
+-	HDMI_FC_AUDSCONF = 0x1063,
+-	HDMI_FC_AUDSCONF_LAYOUT1 = 1 << 0,
+-	HDMI_FC_AUDSCONF_LAYOUT0 = 0 << 0,
+ 	HDMI_AHB_DMA_CONF0 = 0x3600,
+ 	HDMI_AHB_DMA_START = 0x3601,
+ 	HDMI_AHB_DMA_STOP = 0x3602,
+@@ -403,7 +399,7 @@ static int dw_hdmi_prepare(struct snd_pcm_substream *substream)
+ {
+ 	struct snd_pcm_runtime *runtime = substream->runtime;
+ 	struct snd_dw_hdmi *dw = substream->private_data;
+-	u8 threshold, conf0, conf1, layout, ca;
++	u8 threshold, conf0, conf1, ca;
  
- 	/* it cares I2S only */
--	if ((fmt->fmt != HDMI_I2S) ||
--	    (fmt->bit_clk_master | fmt->frame_clk_master)) {
--		dev_err(dev, "unsupported format/settings\n");
-+	if (fmt->bit_clk_master | fmt->frame_clk_master) {
-+		dev_err(dev, "unsupported clock settings\n");
- 		return -EINVAL;
- 	}
+ 	/* Setup as per 3.0.5 FSL 4.1.0 BSP */
+ 	switch (dw->revision) {
+@@ -434,20 +430,12 @@ static int dw_hdmi_prepare(struct snd_pcm_substream *substream)
+ 	conf1 = default_hdmi_channel_config[runtime->channels - 2].conf1;
+ 	ca = default_hdmi_channel_config[runtime->channels - 2].ca;
  
-@@ -63,6 +62,27 @@ static int dw_hdmi_i2s_hw_params(struct device *dev, void *data,
- 		break;
- 	}
- 
-+	switch (fmt->fmt) {
-+	case HDMI_I2S:
-+		conf1 |= HDMI_AUD_CONF1_MODE_I2S;
-+		break;
-+	case HDMI_RIGHT_J:
-+		conf1 |= HDMI_AUD_CONF1_MODE_RIGHT_J;
-+		break;
-+	case HDMI_LEFT_J:
-+		conf1 |= HDMI_AUD_CONF1_MODE_LEFT_J;
-+		break;
-+	case HDMI_DSP_A:
-+		conf1 |= HDMI_AUD_CONF1_MODE_BURST_1;
-+		break;
-+	case HDMI_DSP_B:
-+		conf1 |= HDMI_AUD_CONF1_MODE_BURST_2;
-+		break;
-+	default:
-+		dev_err(dev, "unsupported format\n");
-+		return -EINVAL;
-+	}
+-	/*
+-	 * For >2 channel PCM audio, we need to select layout 1
+-	 * and set an appropriate channel map.
+-	 */
+-	if (runtime->channels > 2)
+-		layout = HDMI_FC_AUDSCONF_LAYOUT1;
+-	else
+-		layout = HDMI_FC_AUDSCONF_LAYOUT0;
+-
+ 	writeb_relaxed(threshold, dw->data.base + HDMI_AHB_DMA_THRSLD);
+ 	writeb_relaxed(conf0, dw->data.base + HDMI_AHB_DMA_CONF0);
+ 	writeb_relaxed(conf1, dw->data.base + HDMI_AHB_DMA_CONF1);
+-	writeb_relaxed(layout, dw->data.base + HDMI_FC_AUDSCONF);
+-	writeb_relaxed(ca, dw->data.base + HDMI_FC_AUDICONF2);
 +
- 	dw_hdmi_set_sample_rate(hdmi, hparms->sample_rate);
++	dw_hdmi_set_channel_count(dw->data.hdmi, runtime->channels);
++	dw_hdmi_set_channel_allocation(dw->data.hdmi, ca);
  
- 	hdmi_write(audio, inputclkfs, HDMI_AUD_INPUTCLKFS);
-diff --git a/drivers/gpu/drm/bridge/synopsys/dw-hdmi.h b/drivers/gpu/drm/bridge/synopsys/dw-hdmi.h
-index 4e3ec09d3ca4..091d7c28aa17 100644
---- a/drivers/gpu/drm/bridge/synopsys/dw-hdmi.h
-+++ b/drivers/gpu/drm/bridge/synopsys/dw-hdmi.h
-@@ -869,8 +869,10 @@ enum {
+ 	switch (runtime->format) {
+ 	case SNDRV_PCM_FORMAT_IEC958_SUBFRAME_LE:
+diff --git a/drivers/gpu/drm/bridge/synopsys/dw-hdmi.c b/drivers/gpu/drm/bridge/synopsys/dw-hdmi.c
+index 218a7b2308f7..be6d6819bef4 100644
+--- a/drivers/gpu/drm/bridge/synopsys/dw-hdmi.c
++++ b/drivers/gpu/drm/bridge/synopsys/dw-hdmi.c
+@@ -645,6 +645,38 @@ void dw_hdmi_set_sample_rate(struct dw_hdmi *hdmi, unsigned int rate)
+ }
+ EXPORT_SYMBOL_GPL(dw_hdmi_set_sample_rate);
  
- /* AUD_CONF1 field values */
- 	HDMI_AUD_CONF1_MODE_I2S = 0x00,
--	HDMI_AUD_CONF1_MODE_RIGHT_J = 0x02,
--	HDMI_AUD_CONF1_MODE_LEFT_J = 0x04,
-+	HDMI_AUD_CONF1_MODE_RIGHT_J = 0x20,
-+	HDMI_AUD_CONF1_MODE_LEFT_J = 0x40,
-+	HDMI_AUD_CONF1_MODE_BURST_1 = 0x60,
-+	HDMI_AUD_CONF1_MODE_BURST_2 = 0x80,
- 	HDMI_AUD_CONF1_WIDTH_16 = 0x10,
- 	HDMI_AUD_CONF1_WIDTH_24 = 0x18,
++void dw_hdmi_set_channel_count(struct dw_hdmi *hdmi, unsigned int cnt)
++{
++	u8 layout;
++
++	mutex_lock(&hdmi->audio_mutex);
++
++	/*
++	 * For >2 channel PCM audio, we need to select layout 1
++	 * and set an appropriate channel map.
++	 */
++	if (cnt > 2)
++		layout = HDMI_FC_AUDSCONF_AUD_PACKET_LAYOUT_LAYOUT1;
++	else
++		layout = HDMI_FC_AUDSCONF_AUD_PACKET_LAYOUT_LAYOUT0;
++
++	hdmi_modb(hdmi, layout, HDMI_FC_AUDSCONF_AUD_PACKET_LAYOUT_MASK,
++		  HDMI_FC_AUDSCONF);
++
++	mutex_unlock(&hdmi->audio_mutex);
++}
++EXPORT_SYMBOL_GPL(dw_hdmi_set_channel_count);
++
++void dw_hdmi_set_channel_allocation(struct dw_hdmi *hdmi, unsigned int ca)
++{
++	mutex_lock(&hdmi->audio_mutex);
++
++	hdmi_writeb(hdmi, ca, HDMI_FC_AUDICONF2);
++
++	mutex_unlock(&hdmi->audio_mutex);
++}
++EXPORT_SYMBOL_GPL(dw_hdmi_set_channel_allocation);
++
+ static void hdmi_enable_audio_clk(struct dw_hdmi *hdmi, bool enable)
+ {
+ 	if (enable)
+diff --git a/include/drm/bridge/dw_hdmi.h b/include/drm/bridge/dw_hdmi.h
+index c402364aec0d..cf528c289857 100644
+--- a/include/drm/bridge/dw_hdmi.h
++++ b/include/drm/bridge/dw_hdmi.h
+@@ -155,6 +155,8 @@ void dw_hdmi_resume(struct dw_hdmi *hdmi);
+ void dw_hdmi_setup_rx_sense(struct dw_hdmi *hdmi, bool hpd, bool rx_sense);
  
+ void dw_hdmi_set_sample_rate(struct dw_hdmi *hdmi, unsigned int rate);
++void dw_hdmi_set_channel_count(struct dw_hdmi *hdmi, unsigned int cnt);
++void dw_hdmi_set_channel_allocation(struct dw_hdmi *hdmi, unsigned int ca);
+ void dw_hdmi_audio_enable(struct dw_hdmi *hdmi);
+ void dw_hdmi_audio_disable(struct dw_hdmi *hdmi);
+ void dw_hdmi_set_high_tmds_clock_ratio(struct dw_hdmi *hdmi);
 -- 
 2.21.0
 
