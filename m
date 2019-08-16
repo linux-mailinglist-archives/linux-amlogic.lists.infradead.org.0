@@ -2,85 +2,85 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 228EE9097D
-	for <lists+linux-amlogic@lfdr.de>; Fri, 16 Aug 2019 22:32:44 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 04A719097F
+	for <lists+linux-amlogic@lfdr.de>; Fri, 16 Aug 2019 22:32:47 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
 	Message-ID:References:To:From:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Asn2NUOU2R8jHgLhx/NBfAi9C33n+gi3q9AhtzXuIX4=; b=sp+p2HLo3H+0GA
-	tk5mT67VgB9oFXKTDOEqYmBrkBVQ7DePvD1k3439nCpC5xy94zJ1Ze5V4uETKYqjK4fSbftmeRgr6
-	/2mJN3RUB1+kPm8tsOUGDJ8qI/akdNbDrgOsz/Kk4w+z4RxrMYX2eT+s95+qW2CrV5iAMjfSZct9b
-	S7BHzzgHU0y9blyO7u/41eoWABU4rXwWPNkNBSFiQ5nalaF0A9W+Ho3LRtpuN8Y32i15n+o/wsb71
-	Heq+Y8HDWlHydC/xxVFcQKXrYFmJ0au6jtQKEL6cseFCxyisGY+4skEMMvsqBJMHQyrfplsk2mb6Q
-	w84jE8375sOsQPBzgKwg==;
+	List-Owner; bh=3tm2Mkw+QlelVRM2KYeJi4L53bgNh2qkeyPpqBpeTPo=; b=mZ7ptab/K3MXYy
+	y8bIaV9dAnWch67TpIl+kiYpgXUXEd5QD2KUSlKAVy6GuI2CJ4KWS86D+RQGKSDWGTGzF4UqaC5Ey
+	YdqzFyqnA3i5PzcIvYhX/xKQnHYvhSIgUyk3JNacTmjjJ0Y7FBjFGl0TDd8rcAC5LT5cnrUiDe3Hg
+	insBt2W6uG7t5Ze9P88fG7BXLQqwxXBNhgFnx75djTrc6oWrdlA5qfVb3NDDP/p4evjNWaCNb8RUm
+	ixaASWmAdWLT62foVUjgw3Jfjct34HI9F9hKvR0sd+pQ7I25WHLP8/xjxedY7NXj02rIKw3Q1J/Mu
+	mEWEE2ksxqjLVRNL0NsQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hyitu-00013q-4b; Fri, 16 Aug 2019 20:32:42 +0000
-Received: from mail-wr1-x441.google.com ([2a00:1450:4864:20::441])
+	id 1hyitx-00016k-LX; Fri, 16 Aug 2019 20:32:45 +0000
+Received: from mail-wr1-x431.google.com ([2a00:1450:4864:20::431])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hyitq-00012u-Ct
- for linux-amlogic@lists.infradead.org; Fri, 16 Aug 2019 20:32:39 +0000
-Received: by mail-wr1-x441.google.com with SMTP id g17so2689120wrr.5
- for <linux-amlogic@lists.infradead.org>; Fri, 16 Aug 2019 13:32:37 -0700 (PDT)
+ id 1hyitr-00013L-Rb
+ for linux-amlogic@lists.infradead.org; Fri, 16 Aug 2019 20:32:41 +0000
+Received: by mail-wr1-x431.google.com with SMTP id u16so2700202wrr.0
+ for <linux-amlogic@lists.infradead.org>; Fri, 16 Aug 2019 13:32:39 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=subject:from:to:cc:references:message-id:date:user-agent
  :mime-version:in-reply-to:content-language:content-transfer-encoding;
- bh=upg+bZO2tl76NuL5qRGzzUNcHidJHyMzxJdBLW1vxSA=;
- b=byDNfTIYBSJyv/QXUlb+z8Zt+wxNx1j+e1wWOziiixFQ5HLHeRP9whf8GNPBKrTzX4
- E4DuESKwYMaCJi5/kqC9eKeRadLazx9rA5/bvpTvwa/0u/vt+fnh/gzO5kwZIAe/UUys
- u6sTnF7H9Twsh9hNIx9Oa7pQqK+R19bVhoN+sZpUQI3wu4EBB1SeyTgoJnJfmpRcy81j
- ka70nBUUtHWwfrvppM5iKzk+difTmgPz6V/sFwGUT5izlj7KYIm/q3oa9Wwg5wtNosHC
- i1Nj5CSSgn5fiE5WxxoYaYcvchjF7v0Sf5hf+nfmx7AhU2xmDfo+UTexEaHcv6x7Ym/I
- IoFQ==
+ bh=2mx9+lMjWlDBJoaKKItBGduSQiKJLy0OqvNV+u7gJVo=;
+ b=t7+fzq1L9xHD7bUCZ2AX6xvXFGTs4mIrL0yG57pxQA4WQwa6AP7SF1s4nLVW00zseR
+ kgDtLgAm3OjfYz7ibBZdA+qqiG4AVbRF2uQC0Pjr5Mzyb5gqvDaTkgBuvu7xx1VP7Xpk
+ gifvoLx2mKPXdA92QhIRuBS/nb7BSUTvvxbRTMDditE7YvlYWN2hx5YDMbEGsv9vpPIw
+ hoZxSnNvNIUwS6JldXljosGwu02P5mslm1oAMm5wrO9hBdUwBtlMYYh9Ld+M/FTd13ky
+ Sgqw/6uri/dfkjMPon/AuItkL0/IUtiTM4+NdLTNtva7BtY4NIXEjbNVdNxKk8KMGVzl
+ 7G0A==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:subject:from:to:cc:references:message-id:date
  :user-agent:mime-version:in-reply-to:content-language
  :content-transfer-encoding;
- bh=upg+bZO2tl76NuL5qRGzzUNcHidJHyMzxJdBLW1vxSA=;
- b=aGNjt4ssDDDSVof1DIQv8hudItnLZ5TVCGy6Iz2Lk5lxpjKAhj3tZeTFWsueGJzq69
- 8aLq7tdSE/9NCg1aaxoAPAouvkCPdZq+xwwCaoJLDtuGubcY0wjiwKtwRDVHQPM2bG6L
- XR/UuLi9+MRw+lEoH9jhXpefRr0lSK2WdX+LQ3Bl0/1MQBCPws3ojcySmqc7kUPQKgEn
- x6bZpwdHPH7cqnGBMvjEXAH3kF+USxK9Aw/J+StXZBIoKNpkpoh99v/oRtM+Mns4Hi9X
- dHk4dV2/66xIsKnsUzkg+8ZQdZ1FWRl2W1pETEh1wj/3DWQge2yNBX/NVB1gTyn16zKE
- kD0g==
-X-Gm-Message-State: APjAAAX/Pzswa404fRUDU8aDYfmdYSSHz731hWe1qR0DcpGdwiDIV9Tv
- kq55+jrvWEExdHgU98I6ROv9Jijb
-X-Google-Smtp-Source: APXvYqybJyUoMp4mWW8bmZbY5bspM2sqepJoluxCLyTUXUpJVZFzc0hK+2bY3N0mqXi3f5lcafCplA==
-X-Received: by 2002:adf:8043:: with SMTP id 61mr13025994wrk.115.1565987556561; 
- Fri, 16 Aug 2019 13:32:36 -0700 (PDT)
+ bh=2mx9+lMjWlDBJoaKKItBGduSQiKJLy0OqvNV+u7gJVo=;
+ b=jylW7VwHa++cpfDvT/eElAh8IfV8E5oOTTeVyfJmKrXFUT1MZGaiuculZ4xj3ARNSy
+ 1DwQ7rbPRYgd8jcTnDejNHw04nT9EXlO6OaP6CfPSxxjdh7DR9+DThHyE1btUscACYNW
+ C+2ViVZtAyhryZug6dnGZgVLF14QDskT0RzouPC/xSILpilBKpCxAHqEKsj7P1S1YsZG
+ J5sHMKlesoR19GRBfX5uIyNDa7DHi0XFq/HfNGul0irOFGC7fWv5HfuissY4rKVa+AwJ
+ HoUfPPy8oa8ZW3ABpvl70yWQ63Lh7s2SoLQenjZosIb0ou4y5siaGaqJ/ZsvclmK3UX7
+ fwIg==
+X-Gm-Message-State: APjAAAVWnJtQ0CUytEnvA/d2738YnEoVxKZh61LEPIXWG+YOKpg87NMH
+ OiDz9kgu4ECH6GVPCtnFizf1eLnm
+X-Google-Smtp-Source: APXvYqxG65IYpoM1P7kDNVmZsnLwm7l5pbnGfBY5HWJ7PvBsDfsQ0vI/ZG2Zy3jBrjaLR6DoWgEhMg==
+X-Received: by 2002:adf:eccb:: with SMTP id s11mr12654945wro.351.1565987558024; 
+ Fri, 16 Aug 2019 13:32:38 -0700 (PDT)
 Received: from ?IPv6:2003:ea:8f2f:3200:4112:e131:7f21:ec09?
  (p200300EA8F2F32004112E1317F21EC09.dip0.t-ipconnect.de.
  [2003:ea:8f2f:3200:4112:e131:7f21:ec09])
- by smtp.googlemail.com with ESMTPSA id s19sm5034956wrb.94.2019.08.16.13.32.35
+ by smtp.googlemail.com with ESMTPSA id t63sm5004055wmt.6.2019.08.16.13.32.37
  (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
- Fri, 16 Aug 2019 13:32:36 -0700 (PDT)
-Subject: [PATCH net-next v2 2/3] net: dsa: remove calls to genphy_config_init
+ Fri, 16 Aug 2019 13:32:37 -0700 (PDT)
+Subject: [PATCH net-next v2 3/3] net: phy: remove genphy_config_init
 From: Heiner Kallweit <hkallweit1@gmail.com>
 To: Andrew Lunn <andrew@lunn.ch>, Florian Fainelli <f.fainelli@gmail.com>,
  David Miller <davem@davemloft.net>, Kevin Hilman <khilman@baylibre.com>,
  Vivien Didelot <vivien.didelot@gmail.com>
 References: <62de47ba-0624-28c0-56a1-e2fc39a36061@gmail.com>
-Message-ID: <13a9fa50-4e7d-4cb5-8c2c-0754d8a96542@gmail.com>
-Date: Fri, 16 Aug 2019 22:31:40 +0200
+Message-ID: <6c657d36-97e5-0feb-ddf2-a59e4c38c437@gmail.com>
+Date: Fri, 16 Aug 2019 22:32:19 +0200
 User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:60.0) Gecko/20100101
  Thunderbird/60.8.0
 MIME-Version: 1.0
 In-Reply-To: <62de47ba-0624-28c0-56a1-e2fc39a36061@gmail.com>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190816_133238_434932_A655C7EA 
-X-CRM114-Status: GOOD (  10.28  )
+X-CRM114-CacheID: sfid-20190816_133239_888546_B2B814DE 
+X-CRM114-Status: GOOD (  10.50  )
 X-Spam-Score: 0.1 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.1 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:441 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:431 listed in]
  [list.dnswl.org]
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
  provider (hkallweit1[at]gmail.com)
@@ -113,37 +113,88 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Supported PHY features are either auto-detected or explicitly set.
-In both cases calling genphy_config_init isn't needed.
+Now that all users have been removed we can remove genphy_config_init.
 
 Signed-off-by: Heiner Kallweit <hkallweit1@gmail.com>
 ---
- net/dsa/port.c | 5 -----
- 1 file changed, 5 deletions(-)
+ drivers/net/phy/phy_device.c | 51 ------------------------------------
+ include/linux/phy.h          |  1 -
+ 2 files changed, 52 deletions(-)
 
-diff --git a/net/dsa/port.c b/net/dsa/port.c
-index f071acf28..f75301456 100644
---- a/net/dsa/port.c
-+++ b/net/dsa/port.c
-@@ -538,10 +538,6 @@ static int dsa_port_setup_phy_of(struct dsa_port *dp, bool enable)
- 		return PTR_ERR(phydev);
+diff --git a/drivers/net/phy/phy_device.c b/drivers/net/phy/phy_device.c
+index 9c546bae9..d5db7604d 100644
+--- a/drivers/net/phy/phy_device.c
++++ b/drivers/net/phy/phy_device.c
+@@ -1885,57 +1885,6 @@ int genphy_soft_reset(struct phy_device *phydev)
+ }
+ EXPORT_SYMBOL(genphy_soft_reset);
  
- 	if (enable) {
--		err = genphy_config_init(phydev);
--		if (err < 0)
--			goto err_put_dev;
+-int genphy_config_init(struct phy_device *phydev)
+-{
+-	int val;
+-	__ETHTOOL_DECLARE_LINK_MODE_MASK(features) = { 0, };
 -
- 		err = genphy_resume(phydev);
- 		if (err < 0)
- 			goto err_put_dev;
-@@ -589,7 +585,6 @@ static int dsa_port_fixed_link_register_of(struct dsa_port *dp)
- 		mode = PHY_INTERFACE_MODE_NA;
- 	phydev->interface = mode;
+-	linkmode_set_bit_array(phy_basic_ports_array,
+-			       ARRAY_SIZE(phy_basic_ports_array),
+-			       features);
+-	linkmode_set_bit(ETHTOOL_LINK_MODE_Pause_BIT, features);
+-	linkmode_set_bit(ETHTOOL_LINK_MODE_Asym_Pause_BIT, features);
+-
+-	/* Do we support autonegotiation? */
+-	val = phy_read(phydev, MII_BMSR);
+-	if (val < 0)
+-		return val;
+-
+-	if (val & BMSR_ANEGCAPABLE)
+-		linkmode_set_bit(ETHTOOL_LINK_MODE_Autoneg_BIT, features);
+-
+-	if (val & BMSR_100FULL)
+-		linkmode_set_bit(ETHTOOL_LINK_MODE_100baseT_Full_BIT, features);
+-	if (val & BMSR_100HALF)
+-		linkmode_set_bit(ETHTOOL_LINK_MODE_100baseT_Half_BIT, features);
+-	if (val & BMSR_10FULL)
+-		linkmode_set_bit(ETHTOOL_LINK_MODE_10baseT_Full_BIT, features);
+-	if (val & BMSR_10HALF)
+-		linkmode_set_bit(ETHTOOL_LINK_MODE_10baseT_Half_BIT, features);
+-
+-	if (val & BMSR_ESTATEN) {
+-		val = phy_read(phydev, MII_ESTATUS);
+-		if (val < 0)
+-			return val;
+-
+-		if (val & ESTATUS_1000_TFULL)
+-			linkmode_set_bit(ETHTOOL_LINK_MODE_1000baseT_Full_BIT,
+-					 features);
+-		if (val & ESTATUS_1000_THALF)
+-			linkmode_set_bit(ETHTOOL_LINK_MODE_1000baseT_Half_BIT,
+-					 features);
+-		if (val & ESTATUS_1000_XFULL)
+-			linkmode_set_bit(ETHTOOL_LINK_MODE_1000baseX_Full_BIT,
+-					 features);
+-	}
+-
+-	linkmode_and(phydev->supported, phydev->supported, features);
+-	linkmode_and(phydev->advertising, phydev->advertising, features);
+-
+-	return 0;
+-}
+-EXPORT_SYMBOL(genphy_config_init);
+-
+ /**
+  * genphy_read_abilities - read PHY abilities from Clause 22 registers
+  * @phydev: target phy_device struct
+diff --git a/include/linux/phy.h b/include/linux/phy.h
+index 5ac7d2137..d26779f1f 100644
+--- a/include/linux/phy.h
++++ b/include/linux/phy.h
+@@ -1069,7 +1069,6 @@ void phy_attached_print(struct phy_device *phydev, const char *fmt, ...)
+ void phy_attached_info(struct phy_device *phydev);
  
--	genphy_config_init(phydev);
- 	genphy_read_status(phydev);
- 
- 	if (ds->ops->adjust_link)
+ /* Clause 22 PHY */
+-int genphy_config_init(struct phy_device *phydev);
+ int genphy_read_abilities(struct phy_device *phydev);
+ int genphy_setup_forced(struct phy_device *phydev);
+ int genphy_restart_aneg(struct phy_device *phydev);
 -- 
 2.22.1
 
