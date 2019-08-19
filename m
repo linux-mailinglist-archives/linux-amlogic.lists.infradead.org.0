@@ -2,56 +2,90 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 8F9D6912B5
-	for <lists+linux-amlogic@lfdr.de>; Sat, 17 Aug 2019 21:35:24 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E1F6A91DC8
+	for <lists+linux-amlogic@lfdr.de>; Mon, 19 Aug 2019 09:27:46 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:Mime-Version:References:In-Reply-To:
-	From:Subject:To:Message-Id:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=8S7CZIKcAZYIckXiLCND6oX8KPexaUkH9+C7GeGMw9I=; b=kr8LTImzFexMct
-	GzgUJTauqEUC+hgALieD0WCZD7Ci7nxaHh1j6E6E3rWfHJeHBJzwNn+FHOQguT8Q+/mVZ+q6dfWva
-	5o2OKSVHOi5+RXm8jM/ztSwIgWiIhkz2XNRbQwB+m2H8vUm4Skb1uzGNrzRFis870QGhmeLFfCpK8
-	Vr97u+L/G+dglvG2bnncxebDFtF4P4SL6D72TuK6yq4y4MMZG5qa+JlP4U7E2Jg+AkeazFy0AEh28
-	f+obcv2ETjnAg6q01BOCqB+VBwwhCwmJMJ2H2ikzZbEz1hTHOzzFzrXS/YQUCJ0GDYWzZmZsLQ8Gk
-	KQL7d2h2nij1fyC168mQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=FS1AIZcm+vSjxjoqcfXFNW008sudUgBwmVX9bPwskT8=; b=ptej4tkoAljrAJ
+	qitbo3EqG4BpJdjYGumSnwDw3JabcXfP4h2NcNzDjsqr2tszFCjlgJACV8xHkhEB7xl6mF+m+TCwD
+	LirCbn2XyMclKiHREs+7VpVNAB2dqCesIt+VK5i/63+TU24BmUJkv5idb75/pYPINKK4ThJF/1qU4
+	1vwFB1SHxmprv/vi4LJXwtAXX1e3J3snPUltXgvBJrfJ/BLeVMYMZJokW2ey7KOZqmDHuUoqjb5hy
+	TfFsRqOh91z65TkD8vsP124BBv22kSYWf1ec7F6sUkIqrL3b6HL/MxOuSQRSlggKdsbH2cpB7ZeBy
+	npE7CbWs25Oxfx5NJWwA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hz4Tu-0006tT-47; Sat, 17 Aug 2019 19:35:18 +0000
-Received: from shards.monkeyblade.net ([2620:137:e000::1:9])
+	id 1hzc4p-0006cz-SI; Mon, 19 Aug 2019 07:27:40 +0000
+Received: from mail-pf1-x441.google.com ([2607:f8b0:4864:20::441])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hz4Tq-0006t6-Le
- for linux-amlogic@lists.infradead.org; Sat, 17 Aug 2019 19:35:15 +0000
-Received: from localhost (unknown [IPv6:2601:601:9f80:35cd::d71])
- (using TLSv1 with cipher AES256-SHA (256/256 bits))
- (Client did not present a certificate)
- (Authenticated sender: davem-davemloft)
- by shards.monkeyblade.net (Postfix) with ESMTPSA id 9EA8314DB6DEB;
- Sat, 17 Aug 2019 12:35:08 -0700 (PDT)
-Date: Sat, 17 Aug 2019 12:35:03 -0700 (PDT)
-Message-Id: <20190817.123503.1634208808108251879.davem@davemloft.net>
-To: hkallweit1@gmail.com
-Subject: Re: [PATCH net-next v3 0/3] net: phy: remove genphy_config_init
-From: David Miller <davem@davemloft.net>
-In-Reply-To: <8790db9d-af10-c3b1-bc65-ee21bb99e6d9@gmail.com>
-References: <8790db9d-af10-c3b1-bc65-ee21bb99e6d9@gmail.com>
-X-Mailer: Mew version 6.8 on Emacs 26.1
-Mime-Version: 1.0
-X-Greylist: Sender succeeded SMTP AUTH, not delayed by milter-greylist-4.5.12
- (shards.monkeyblade.net [149.20.54.216]);
- Sat, 17 Aug 2019 12:35:08 -0700 (PDT)
+ id 1hzc4T-0006Mc-Vu; Mon, 19 Aug 2019 07:27:19 +0000
+Received: by mail-pf1-x441.google.com with SMTP id 129so657825pfa.4;
+ Mon, 19 Aug 2019 00:27:17 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=VQRIe3TChFRyXdxRGe3aSOX8NvTgeh2sO+MrQdRfJfQ=;
+ b=X41GCFmjZE+53yWhhAhv+BG9ETVRpdLMB39GhtJePpASGXI66HFO3qalN7vAdwxzKo
+ 2qIDZUakhTxlNhyUSrZy4vY+ZERhEDtdlalGYfSgVdB0cQYxB4WZZVk85Vm6njBK8AR5
+ HkD6qPu9LaZkVeFLX1sJyIEgU4BdywADTfKNfFLvYvIYtuuVLq+MrVj7zegdoO4t3ESX
+ 7kb5rJ0IiNbeQelLmXzpV31uhBCkkRixcU9zV2E+3bgY8piX9LKc8+bNc2H5ondH86+s
+ O588PvL8t7wv4gAd3Z84plQCoW3/WEAAewpHGOFYMRmdmmUh9R239zobJGGU07jYi5Yb
+ TwJA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=VQRIe3TChFRyXdxRGe3aSOX8NvTgeh2sO+MrQdRfJfQ=;
+ b=DlQHLgciV88AlAOw8hiBdOlkJ2QonK4QptFYSRWJZyxpB5ZBkT9/PqL6cdPXIDbK/J
+ o/ihU8AR8TzLQGrep3VLC4uaDb/hugrKW+DDdPJmUVhzV8yhyDwdTsgcmVM0g3cdhAhs
+ fcSLOLcwiH5MHW+c4h+lKAzcDCQ8joOjiaGZTkWlqjXUjTdjtI1UEofjsKtfvlA5sLaA
+ dawrbQ8u2pstEyEA7vLddY795p17Wizgy2fprutYNKk0Z6uet2SvMyp6c/5hXMIoz3L1
+ ddNFJetksImWajH8XtCCWImeOFfdBN5LhsoAgDQoOoepq8QcEvuiGHndMygLPmZrNHnx
+ lZog==
+X-Gm-Message-State: APjAAAVsODm1ELoZJ7toaFZYy36g+Tgi6kxEIbct33wSLWW9/FDww1f2
+ EUmadVNPTjHxV98fggNlbIBvt2s4
+X-Google-Smtp-Source: APXvYqzhl7TSi883y2yAyMZn4MZoHhDOoBmIbs55kK1oFVR+R13YRJoVT+8P0NhIlGTWusuc4QduiA==
+X-Received: by 2002:a17:90a:17ab:: with SMTP id
+ q40mr19679774pja.106.1566199637529; 
+ Mon, 19 Aug 2019 00:27:17 -0700 (PDT)
+Received: from localhost.localdomain ([110.225.16.165])
+ by smtp.gmail.com with ESMTPSA id p1sm14994814pfn.83.2019.08.19.00.27.15
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Mon, 19 Aug 2019 00:27:17 -0700 (PDT)
+From: Nishka Dasgupta <nishkadg.linux@gmail.com>
+To: khilman@baylibre.com, linux-arm-kernel@lists.infradead.org,
+ linux-amlogic@lists.infradead.org
+Subject: [PATCH] soc: amlogic: meson-gx-socinfo: Add of_node_put() before
+ return
+Date: Mon, 19 Aug 2019 12:57:06 +0530
+Message-Id: <20190819072706.31732-1-nishkadg.linux@gmail.com>
+X-Mailer: git-send-email 2.19.1
+MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190817_123514_714998_ED6C14D6 
-X-CRM114-Status: UNSURE (   5.40  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190819_002718_029708_D1D5ED8E 
+X-CRM114-Status: GOOD (  10.90  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:441 listed in]
+ [list.dnswl.org]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (nishkadg.linux[at]gmail.com)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -63,29 +97,42 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: andrew@lunn.ch, f.fainelli@gmail.com, netdev@vger.kernel.org,
- khilman@baylibre.com, linux-amlogic@lists.infradead.org,
- vivien.didelot@gmail.com
+Cc: Nishka Dasgupta <nishkadg.linux@gmail.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-From: Heiner Kallweit <hkallweit1@gmail.com>
-Date: Sat, 17 Aug 2019 12:28:18 +0200
+The variable np in function meson_gx_socinfo_init takes the return value
+of of_find_compatible_node, which gets a node but does not put it. If
+this node is not put it may cause a memory leak. Hence put np after its
+usefulness has been exhausted.
+Issue found with Coccinelle.
 
-> Supported PHY features are either auto-detected or explicitly set.
-> In both cases calling genphy_config_init isn't needed. All that
-> genphy_config_init does is removing features that are set as
-> supported but can't be auto-detected. Basically it duplicates the
-> code in genphy_read_abilities. Therefore remove genphy_config_init.
-> 
-> v2:
-> - remove call also from new adin driver
-> v3:
-> - pass NULL as config_init function pointer for dp83848
+Signed-off-by: Nishka Dasgupta <nishkadg.linux@gmail.com>
+---
+ drivers/soc/amlogic/meson-gx-socinfo.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
 
-Series applied.
+diff --git a/drivers/soc/amlogic/meson-gx-socinfo.c b/drivers/soc/amlogic/meson-gx-socinfo.c
+index bca34954518e..13695a72c695 100644
+--- a/drivers/soc/amlogic/meson-gx-socinfo.c
++++ b/drivers/soc/amlogic/meson-gx-socinfo.c
+@@ -138,8 +138,10 @@ static int __init meson_gx_socinfo_init(void)
+ 	}
+ 
+ 	/* check if chip-id is available */
+-	if (!of_property_read_bool(np, "amlogic,has-chip-id"))
++	if (!of_property_read_bool(np, "amlogic,has-chip-id")) {
++		of_node_put(np);
+ 		return -ENODEV;
++	}
+ 
+ 	/* node should be a syscon */
+ 	regmap = syscon_node_to_regmap(np);
+-- 
+2.19.1
+
 
 _______________________________________________
 linux-amlogic mailing list
