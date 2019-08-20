@@ -2,77 +2,78 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 59ED1969F9
-	for <lists+linux-amlogic@lfdr.de>; Tue, 20 Aug 2019 22:11:24 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D498B96A0E
+	for <lists+linux-amlogic@lfdr.de>; Tue, 20 Aug 2019 22:18:16 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
 	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=mW58agul3VmY2reEuaocVC0KfqxXcEClbxxXKZJ1GwE=; b=R/aeiDsBkLUbQJ
-	8kvuAN+qq3kP069AINcGV5+97HUOoMLwmygaD7mT4Sy+anaO2oZgL5I5uN/AoOnTbmpFFDhqrYaQG
-	HkV9S9+otF6eO0lmdyOQmJMRu9qLiwkrrx4fQS7aQVbri0T12bkPgBtURtL9SJdRzIY1ukL6FnYRv
-	P3oFDEXEUmq2qsegB+iVwe8Q4369n+aQXeWwjKplwrAU3mP6kFGMS1dohPAx+9n2lZgjCufjiT18U
-	ygl4X4OuNnjM80xzxAFwA4zVHsSL4zPrSdEVvYRJlr5MJ95ctOcsDfb1h00cKc2j5y9bREKrgNdDC
-	pa08+vE+LO71+2a/cRrg==;
+	List-Owner; bh=t9C8HDwFT058hhq5R5dTZoUwEcHr9tfj22SBPwSGiuk=; b=j3qwCQBeIlUXxr
+	LHqzm6qFdxtVtsXiySY/1XQPNwNVuC0poiv3EjG8SyGp4XTTumi8xsYxz3zzqjvWzJoeIDNXDBVQu
+	pkiaXXkUSTZGv8UJCVkIz3F2rZBJ0TqjSMRczL+DHTVxWDjrm6F7FxUIaP983aWY01Nd/IqPkzmwd
+	iRe898t27kb3BaEA0xsnO2yVx2pnLhB74W6j9NkJFW7zqEPfi1adI3Ja6lbKRoMKYA98tU8KLu5qW
+	q/LmwQ8ddEkCQlTsQer1egfBwJ5OEgJoh52JjcK4KbxJsiJx/cagS9wFQFn+xYSR8xA2tHmyZXRGd
+	8Dk9xNyNvV+YhUaq33Hw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i0ATR-0005Al-0f; Tue, 20 Aug 2019 20:11:21 +0000
-Received: from mail-ot1-x344.google.com ([2607:f8b0:4864:20::344])
+	id 1i0Aa5-0007UD-PD; Tue, 20 Aug 2019 20:18:13 +0000
+Received: from mail-oi1-x244.google.com ([2607:f8b0:4864:20::244])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i0ATN-0005AO-BY; Tue, 20 Aug 2019 20:11:18 +0000
-Received: by mail-ot1-x344.google.com with SMTP id j7so6244413ota.9;
- Tue, 20 Aug 2019 13:11:16 -0700 (PDT)
+ id 1i0AZs-0007IV-V1; Tue, 20 Aug 2019 20:18:02 +0000
+Received: by mail-oi1-x244.google.com with SMTP id q10so5144269oij.0;
+ Tue, 20 Aug 2019 13:18:00 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=googlemail.com; s=20161025;
  h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=o53I8vQ9wtrjSFvWFPcuH8kjN1+m/8dnlNo9/cVPbt8=;
- b=aXSDqapn6WcKOYaJMrG+AuEcNKR4ihdAGTy5PiUw3m0wOxgaXf8eWWtGNLruZkeHF+
- czLnhpIGWgJuzyVjWEdx1vv95qhYAr/qYfNOqYgGagknQypZ6xj7wU/kD3x9cWhZ8nTB
- aw2iKaGU2zW9/WokEhMjRrQ2klXY+U0KwY9E+qmOWYJZpfMLSG/Oj1ZtNa/vWZDg4d9P
- XBTFLjYeOhgJZFcUQly6UzktsnNuEVwviRHFOTSHooqOFd+09C1CflhTRF/NX81KEA3n
- 0pk4PDm3rRiovNg+OU6pQM454+2aIQIXprQ3MMCMymWrwCLkZ5uCmO9IRvwr0pKscDYm
- 0bdA==
+ :cc; bh=Do7rgk/e6SkhLJFZ//u+bS6ASixL3x/VgaGx7XQsINQ=;
+ b=P2NLC74e2Xs4De0rALlzIE89sgPJa7ppZiJEI9MWLGs0qL2LH2HICwhHdHB3ZKksYB
+ rB6zdVMTZjDHASjONz8yzVN77nDdxdKc68tT0WSOQFhMIuG2OB2yUqpPpz+QNIuAdSLl
+ ZW3vPXRtqZMk2lcw3bykA/IjHi/b1+p78uzKpcFWqHMXLEz+JiumEsaUigTCdHzW6mZY
+ qo557pm2wEkp3Cc/LqJpTnXLEFXbAv186VF1dX+wtWCOh+QjUTdZ41a5jsY9JttG/NdV
+ 1HJs7dGhKckeqyro77ZmRwnT3C911pJxRwMUir9fM1+tFMWjaoOhXStFjjuh6RkVduln
+ JN3w==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:mime-version:references:in-reply-to:from:date
  :message-id:subject:to:cc;
- bh=o53I8vQ9wtrjSFvWFPcuH8kjN1+m/8dnlNo9/cVPbt8=;
- b=Vi1119z00nvLIqtMXbhNtOgWWnU+luQJ5vOSObHss8Q1roeeKHAWI7KqWPlI5cJBdJ
- nC6RsuSRm/LZWJkYEcEHnVjKf/rRsElt+BcV//VI4bt0y4gtPmGNxJ+I6Ike8MxjvNRC
- xUS9Ji1KasITeTZ4pPj+phCVHJkwSrJxCrv76+E5vxVq2ERck4328C2ST4j2XWuU1FYg
- kaxwgvbK6OdkvwF/xi9LN67vr3wz2+KUNhVeF9rNX2IAvOoNxylj4UmGZR7vg4d6kYF4
- lteTtn+30PBpDqk6GQ6/XYLVQG3aTnnkMn8iufLEvwNUtocks08W2QYj1JCL0yhBACDE
- ZazA==
-X-Gm-Message-State: APjAAAUXbWEuNPRJFZvvcABLr3I5vnmkdtVvAhOTnaOTIHL3ez6qN0Ym
- UxJDFkikRAAXKnhO8zBqyEWWBDwKhHVy8LnzuEA=
-X-Google-Smtp-Source: APXvYqwn/kxALIlREivrdhOnbCiD0KjV4l6AfLiKQa88DaW3qcOfPgQzhj3tub/nIyws3g4JAhwVLjpNxTIycbzhZtc=
-X-Received: by 2002:a9d:1d5:: with SMTP id e79mr23455879ote.98.1566331875411; 
- Tue, 20 Aug 2019 13:11:15 -0700 (PDT)
+ bh=Do7rgk/e6SkhLJFZ//u+bS6ASixL3x/VgaGx7XQsINQ=;
+ b=Q9EY49ng1SKrswymuMfmYWIKD4mTNsWU1OXf6/RIwPH9NNJouT/fNw84XlHkaR51FI
+ YRl3zNMTwlH62/E8cIoiLfInBlvt50ATABKi0MHFwpmDIAnydIEjGDiNPvW5odAZvXp3
+ G9BIz6kQusuj/WDt6xhOQ9e/jkFsanZGKJNakEppkci2gy7K+OdClW9/7hKJmSSATFMT
+ dTqcbBOQh0DS5YzsvxqPT4yckz84VykEU+XFZdbVj4hZ6RvhD/668LL0ice2tAlDH7Pb
+ jSdChfvibvWDnmiBUgRAWLujpTazhTxdA8RczkwKKHQJypBqa8mXQRGXX2kdYj150SHs
+ dWyw==
+X-Gm-Message-State: APjAAAXVrHLGM6e6rkgbpDCrORap+ngRDb9BpuD57lAWkvHH5CIhafnn
+ xDpzJJ6ap1IYhnObXOYhruCjYQn/cf8jXxjGVGw=
+X-Google-Smtp-Source: APXvYqz8QBrUZytquR+jcvW5t0XCKEchKH1yCSzPctu/Wl30VX0pR70g4FhY1GPwzBppfd5C5vdN/whftMemITke8kg=
+X-Received: by 2002:a05:6808:b14:: with SMTP id
+ s20mr1332830oij.15.1566332279621; 
+ Tue, 20 Aug 2019 13:17:59 -0700 (PDT)
 MIME-Version: 1.0
-References: <20190820144052.18269-1-narmstrong@baylibre.com>
- <20190820144052.18269-7-narmstrong@baylibre.com>
-In-Reply-To: <20190820144052.18269-7-narmstrong@baylibre.com>
+References: <20190820075742.14857-1-narmstrong@baylibre.com>
+ <20190820075742.14857-2-narmstrong@baylibre.com>
+In-Reply-To: <20190820075742.14857-2-narmstrong@baylibre.com>
 From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-Date: Tue, 20 Aug 2019 22:11:04 +0200
-Message-ID: <CAFBinCCNN_DBiriJRjw-AA-OCMFc+UgYi4oSJasJSypYFSbw9g@mail.gmail.com>
-Subject: Re: [PATCH 6/6] arm64: dts: add support for SM1 based SEI Robotics
- SEI610
+Date: Tue, 20 Aug 2019 22:17:48 +0200
+Message-ID: <CAFBinCDP898fhoqh8wApfrsqAuv1dEQSoxy0yDA2hHKxoFsr+g@mail.gmail.com>
+Subject: Re: [PATCH net-next v4 1/2] dt-bindings: net: snps, dwmac: update reg
+ minItems maxItems
 To: Neil Armstrong <narmstrong@baylibre.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190820_131117_420870_1AF38822 
-X-CRM114-Status: GOOD (  13.13  )
+X-CRM114-CacheID: sfid-20190820_131801_039483_A01F5921 
+X-CRM114-Status: GOOD (  10.04  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:244 listed in]
+ [list.dnswl.org]
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
  provider (martin.blumenstingl[at]googlemail.com)
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:344 listed in]
- [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
@@ -93,47 +94,35 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: khilman@baylibre.com, linux-kernel@vger.kernel.org,
- linux-arm-kernel@lists.infradead.org, linux-amlogic@lists.infradead.org
+Cc: devicetree@vger.kernel.org, Rob Herring <robh@kernel.org>,
+ Maxime Ripard <maxime.ripard@bootlin.com>, netdev@vger.kernel.org,
+ linux-kernel@vger.kernel.org, robh+dt@kernel.org,
+ linux-amlogic@lists.infradead.org, davem@davemloft.net,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Hi Neil,
+On Tue, Aug 20, 2019 at 9:57 AM Neil Armstrong <narmstrong@baylibre.com> wrote:
+>
+> The Amlogic Meson DWMAC glue bindings needs a second reg cells for the
+> glue registers, thus update the reg minItems/maxItems to allow more
+> than a single reg cell.
+>
+> Also update the allwinner,sun7i-a20-gmac.yaml derivative schema to specify
+> maxItems to 1.
+this looks good to me because:
+- allwinner,sun7i-a20-gmac.yaml now restricts reg to maxItems 1
+- allwinner,sun8i-a83t-emac.yaml already restricts reg to maxItems 1
+- amlogic,meson-dwmac.yaml (introduced in patch 2 from this series)
+will need maxItems 2
+- (these are all yaml based schemas for DWMAC IP)
 
-On Tue, Aug 20, 2019 at 4:43 PM Neil Armstrong <narmstrong@baylibre.com> wrote:
->
-> Add support for the Amlogic SM1 Based SEI610 board.
->
-> The SM1 SoC is a derivative of the G12A SoC Family with :
-> - Cortex-A55 core instead of A53
-> - more power domains, including USB & PCIe
-> - a neural network co-processor (NNA)
-> - a CSI input and image processor
-> - some changes in the audio complex, thus not yet enabled
->
-> The SEI610 board is a derivative of the SEI510 board with :
-> - removed ADC based touch button, replaced with 3x GPIO buttons
-> - physical switch disabling on-board MICs
-> - USB-C port for USB 2.0 OTG
-> - On-board FTDI USB2SERIAL port for Linux console
->
-> Audio, Display and USB support will be added later when support of the
-> corresponding power domains will be added, for now they are kept disabled.
->
 > Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
-I don't have any details about this board but overall this looks sane, so:
-Acked-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-
-[...]
-> +       /* Used by Tuner, RGB Led & IR Emitter LED array */
-> +       vddao_3v3_t: regultor-vddao_3v3_t {
-that should be regulator-vddao_3v3_t - maybe Kevin can fix this up, if
-not then we can still fix it with a follow-up patch
-
-
-Martin
+> Acked-by: Rob Herring <robh@kernel.org>
+> Acked-by: Maxime Ripard <maxime.ripard@bootlin.com>
+Reviewed-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
 
 _______________________________________________
 linux-amlogic mailing list
