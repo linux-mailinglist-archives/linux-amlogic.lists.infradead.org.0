@@ -2,59 +2,61 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id EBE7D96605
-	for <lists+linux-amlogic@lfdr.de>; Tue, 20 Aug 2019 18:16:15 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 308B99660C
+	for <lists+linux-amlogic@lfdr.de>; Tue, 20 Aug 2019 18:16:32 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
 	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=cHgx95BD0cX5x6e1HRkGh9bGpaJAoDvoHdfLs2NYons=; b=Y1t0ajrQ4zuwS2
-	AOji3f92Pgq96WsB2jJamXyAkCGscA2h3uwjawPIKPFMIvmJaNLf6ZUSZ/Q767C8HPnS7zzHG9mwr
-	J9AcAQzZPT8kCvdq2S2e4+ndH2BLr73IUgL2FDIt/nPKJtLeaxR+uaYmMAx4jHcSdFUDQ8n+HJWS4
-	cnhMME1Kg3AOF2kQW6Ez6Ru52Tvj2O23l1AHd9ZPjXZylkwpqUvhtyptYU9pzEdNq+vD1Pp/Bb+9O
-	YGqAC3KyK7zZS1rfSiQkor3jXKIkdWgw9RqSx213OD9PQhSBiULcoBHrdQbhDJJLIhNOBROQTGMh6
-	SU7apI/Mu6iBSCQUZLTA==;
+	List-Owner; bh=jNoLz38Sb3TOuzrLjEXq30ULtIaQqMLPRf1mpD6fPJE=; b=EmjYoUudqvsYCm
+	1NkCB5Gd77heovLEV/+ZCTWY2pu0GC34r55Gn9J8C7cEwrcjPthnbscWiXihrnnD14Y85jzXer3mG
+	d9Y0b1OH5HnG4Y1xp8iFKRxn5RTXR/oIo7ZM0/GCKELleWks+XUQP6G9BR42ZUjlRDJVduPCGxGV9
+	WR6Z4py5PTfJkzxCLuemcD1nzDUjy54w1fCye7qEhUvtQgZ8T67umL6BGJfw0HdJVvC83SeUDYYqP
+	Ynqo7+EFtcAZsi40gFrNy4J3HfZr1Y5YoISmAFriu9+pmz362HK9t+ji51qPE/RAFsK6VlC8TUaOn
+	G4HFK9MdNao2RoaRAGAQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i06nq-0000Tc-8Z; Tue, 20 Aug 2019 16:16:10 +0000
+	id 1i06o7-0000lE-JQ; Tue, 20 Aug 2019 16:16:27 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i06nn-0000Sm-0G; Tue, 20 Aug 2019 16:16:08 +0000
-Received: from mail-qt1-f170.google.com (mail-qt1-f170.google.com
- [209.85.160.170])
+ id 1i06o3-0000jX-Ns; Tue, 20 Aug 2019 16:16:24 +0000
+Received: from mail-qt1-f174.google.com (mail-qt1-f174.google.com
+ [209.85.160.174])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 0514D22DD6;
- Tue, 20 Aug 2019 16:16:06 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id 4F8FE230F2;
+ Tue, 20 Aug 2019 16:16:23 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1566317766;
- bh=o+9Y1S8EJeybPB3/XiGd1VecFWcI3U1F/7ifdtRoKzQ=;
+ s=default; t=1566317783;
+ bh=bq0/jB5m4Jp2FX8tBxSzWeqfhZTnVq066dgi39PlpzE=;
  h=References:In-Reply-To:From:Date:Subject:To:Cc:From;
- b=Hq3LvZjFfnrBR33GHefdlaXFKqMqUujeYNw2kRo6h4AY/lH46aepgIsEYj17NJaEY
- d6B/fUXh/S7aVrOkFzKwupvPvyW+mRANSNf29yG8OQCAjwpbZOw7mN5hwHQTr5v2Gn
- FTSZ+jbiwvHthFu3wAs1dOgwtWnkrmiBHqzFL7Ps=
-Received: by mail-qt1-f170.google.com with SMTP id e8so6644354qtp.7;
- Tue, 20 Aug 2019 09:16:05 -0700 (PDT)
-X-Gm-Message-State: APjAAAXRjbn4FZlk9ccLGR9GXZ/7+f8aO5Tg8NZsMVM9xOKgtowFhamJ
- UfocKVgB/hws2mnpY1GUil6awH/a9Y5FpnoaiQ==
-X-Google-Smtp-Source: APXvYqz7/XDtwS8pKWW3WNm/atXtEdgaMroF8d1FCSG5RqKVSlW11FfeZTvwkmlYEEwGR9WC60bpQDx079FVVKGuyUQ=
-X-Received: by 2002:ac8:44c4:: with SMTP id b4mr26685231qto.224.1566317765244; 
- Tue, 20 Aug 2019 09:16:05 -0700 (PDT)
+ b=TClCeVoX+Lao6744v1UtRF8HhC2UQ2O5TO4HnDMwLhBzXPXaXeg3mhBCGKmLEgQD3
+ 6PHk/4MEGIVN+wNL1L4SkDQYveyMBVn1UZu/Q3GTwx3vpwjjmAUtB51+m6/ppcbkYa
+ F736nAUWf3TfUAuhGN1ohivoz5Kn+FgeyuP5FVg8=
+Received: by mail-qt1-f174.google.com with SMTP id i4so6653971qtj.8;
+ Tue, 20 Aug 2019 09:16:23 -0700 (PDT)
+X-Gm-Message-State: APjAAAX8zBPD0dVPpAZdF6Lh3WuAMMMT7WGHgVKd65Jkm2QO4mdycpcd
+ 4YAv3JrT9svjAL8R2JfygzZuaH2FeCe5vPwpEQ==
+X-Google-Smtp-Source: APXvYqwp9qLnX0fVBz6JKjNTCRZjs4AvNuGh+ir98aRhQvRHBFS366WOun9yixr1j0KWUOR7JkKRSM8t6XOkoOt3MOs=
+X-Received: by 2002:ac8:7593:: with SMTP id s19mr26991334qtq.136.1566317782530; 
+ Tue, 20 Aug 2019 09:16:22 -0700 (PDT)
 MIME-Version: 1.0
 References: <20190820144052.18269-1-narmstrong@baylibre.com>
- <20190820144052.18269-5-narmstrong@baylibre.com>
-In-Reply-To: <20190820144052.18269-5-narmstrong@baylibre.com>
+ <20190820144052.18269-6-narmstrong@baylibre.com>
+In-Reply-To: <20190820144052.18269-6-narmstrong@baylibre.com>
 From: Rob Herring <robh@kernel.org>
-Date: Tue, 20 Aug 2019 11:15:53 -0500
-X-Gmail-Original-Message-ID: <CAL_JsqKFBcstWfaG-n6k9169bF0o7DDq1Uy6EcTF4p-Ta_DOBA@mail.gmail.com>
-Message-ID: <CAL_JsqKFBcstWfaG-n6k9169bF0o7DDq1Uy6EcTF4p-Ta_DOBA@mail.gmail.com>
-Subject: Re: [PATCH 4/6] dt-bindings: arm: amlogic: add SM1 bindings
+Date: Tue, 20 Aug 2019 11:16:10 -0500
+X-Gmail-Original-Message-ID: <CAL_JsqKAL0UG2afJgOVjtzgDA9oQ35p9ieSYnzys5OPYU-RvmQ@mail.gmail.com>
+Message-ID: <CAL_JsqKAL0UG2afJgOVjtzgDA9oQ35p9ieSYnzys5OPYU-RvmQ@mail.gmail.com>
+Subject: Re: [PATCH 5/6] dt-bindings: arm: amlogic: add SEI Robotics SEI610
+ bindings
 To: Neil Armstrong <narmstrong@baylibre.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190820_091607_069034_93B89549 
-X-CRM114-Status: GOOD (  11.77  )
+X-CRM114-CacheID: sfid-20190820_091623_797381_3AE3A5A3 
+X-CRM114-Status: UNSURE (   9.30  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-5.2 points)
@@ -94,18 +96,12 @@ Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
 On Tue, Aug 20, 2019 at 9:41 AM Neil Armstrong <narmstrong@baylibre.com> wrote:
 >
-> Add bindings for the new Amlogic SM1 SoC Family.
->
-> It a derivative of the G12A SoC Family with :
-> - Cortex-A55 core instead of A53
-> - more power domains
-> - a neural network co-processor
-> - a CSI input and image processor
+> Add the compatible for the Amlogic SM1 Based SEI610 board.
 >
 > Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
 > ---
->  Documentation/devicetree/bindings/arm/amlogic.yaml | 3 +++
->  1 file changed, 3 insertions(+)
+>  Documentation/devicetree/bindings/arm/amlogic.yaml | 2 ++
+>  1 file changed, 2 insertions(+)
 
 Reviewed-by: Rob Herring <robh@kernel.org>
 
