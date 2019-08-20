@@ -2,71 +2,74 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A062A962B2
-	for <lists+linux-amlogic@lfdr.de>; Tue, 20 Aug 2019 16:43:02 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id DE069962A7
+	for <lists+linux-amlogic@lfdr.de>; Tue, 20 Aug 2019 16:42:02 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=zQHza+uCfZogaYKJ09J1Tt8m4nS3PQSbA3gsPlR3ebU=; b=rZVeD54+ootXl0
-	r2slaO6zo1oonZLGVLuij7bPQ9/hvwZ6NHG/2rYyRwfq+6ZG1eVkVmysyV06S4+PASxPHZVfjAQuU
-	VJvpM3jR6ZYXV9f+jGeCvQudaypVSEPdjyXNvZB7Q7DdfA32j7Mzg5yO2CUN75Xs/Wyqqq1b/J9Jp
-	4qlEkFBQw4qTGeoiIHb4J9NSn0AzEjminXpP8/t8vFrQhQRotihSC/dyk9t+wfuRJjAkhLHRdVhtU
-	rCBwb4vYp9tI/5kd3so0853p9LxrdMj5e+66dkGiIeYtldO3fUGk4imrW7ptVHGh3r1UZUkeYra7y
-	tKY8EXH7gsWzYMgeOn5w==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=7Hu3Esi1w5aHgEm4WDiBymzu2kSHTS8oQUClsOuo2Ik=; b=Zm5xIDkrO9wyj4
+	EIEa2ahdVCEWl3OKQdJjlX8ZQXmVUDsfb6ZkfWkDSzdodof6MtJTa37B5QoEVeiCz404icz7vAfFs
+	/PqOleyQhelaaRi5pQrBPbcQsB5iVY4qjhA4DC+tRg8KvhOrCBf/8PJtVcKdjS9IefLFL+ILZBOGm
+	TYeczRWH8zwYR+XO+m3hXxOovdcCt0qCp50qqwZzTXU4mJsfIdCtQqd+V6iuVmd7WKgyBSb52w0Xj
+	RnNnXeFEEVKkVKbC29n50x0V3a8fJRVChlzpbGCqDuFKXNkON3NAytvJWLFEn50qd++wO8inpyE/p
+	V6vAoon3GVmZyb/53BMw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i05Ld-0005Mx-Fi; Tue, 20 Aug 2019 14:42:57 +0000
+	id 1i05Kj-0004Fq-Gf; Tue, 20 Aug 2019 14:42:01 +0000
 Received: from mail-wm1-x342.google.com ([2a00:1450:4864:20::342])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i05Jh-0003T5-2j
- for linux-amlogic@lists.infradead.org; Tue, 20 Aug 2019 14:41:07 +0000
-Received: by mail-wm1-x342.google.com with SMTP id 10so2847852wmp.3
- for <linux-amlogic@lists.infradead.org>; Tue, 20 Aug 2019 07:40:56 -0700 (PDT)
+ id 1i05Jh-0003T6-DH
+ for linux-amlogic@lists.infradead.org; Tue, 20 Aug 2019 14:41:05 +0000
+Received: by mail-wm1-x342.google.com with SMTP id d16so2890019wme.2
+ for <linux-amlogic@lists.infradead.org>; Tue, 20 Aug 2019 07:40:57 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=jltHvKjAETJIx5Aet1GM8of7AnTVjLWtzilPhXCAmqM=;
- b=mPg2aaUcDg9KPuw/ljLGLzHEcQaFd1NWEWs3t2VQLRZI8Xd2HImbkHIX6nScifgjdZ
- 1NG7y5ix+iuzhExQIMYUYT+WxNMGQ1m1TmPkANC/TI0KIR8LUT0Xxyw3PjmdJVdSonGs
- QmJ9NNUpJ4oaZ1cv7pacPq8JqqOb+KGm42I7ZKBPbo5aW5tafgTPjvHJw6rpdXtHLxRg
- 5uk/udLjT8NimcTB4a9ncKfuk2PoqSSljGseBqjWL+fa9E3hEjn9gQ2qY8yrcxKD4qO/
- /ICO76K3nEL0jBQ92+a2QlF42DVj6BKq9/1KmqTffu3/EJwtafChhjP3c+HYXh0XR9h7
- ezQw==
+ h=from:to:cc:subject:date:message-id:in-reply-to:references
+ :mime-version:content-transfer-encoding;
+ bh=Qk9x+0yCuWahWTJ+d7U2hM8TpGj03opy/Zg7wU4wyWE=;
+ b=AQsuMZUZoJCGFnG8pBMu4BcPk/gvh3HXAsjo9HRD48NR6bVp/F6ie64bEd7teqsYWr
+ maNMIeLQrv2cWwsZlkYlDyAIaM6swmLWJgiQUP0iF1dyBIrG1nUK3Xrs1T8IdrwSXAzX
+ LyTMYd9DViD/+sCR2xdwOFzG2fiPqtyl5Ix3NOcCwzoUFWkLr1lWxKPNCZi+phCqmNd0
+ MErT/kb044CgXKa2Q3QiJIvhYPnEsYigSYjVB8wkZNGX/GAkG0NIq/TEtFmg4LwZJysR
+ VoxQ7XZww3rPdkk7wdO9fwJBqyiocwsJwhn+YvwX867bN0/f3hq8m9uNNeIUkiNvWGvl
+ nfOg==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=jltHvKjAETJIx5Aet1GM8of7AnTVjLWtzilPhXCAmqM=;
- b=VjiGwFJc77bvnk9ev2dze/Ni2saDg5xwVaWQHwZQlAFXMMlJ8ph4rNr5PqXsrMBPQP
- enjFO8CnbSBhWlSijW8XhzD0KzBRzM5HA4b/RMRhqOZMBAuXlNsgQO1tcYSYR7HzAIpN
- SyS/90z6nxESa920UOjwtq+SZfG75nSr7GnD6NnX9gcEOv1O6UgQNPJgiEAEQ2yyZ993
- IFZQbYHja7UGKu9S7/TdgJAbIUMrm9Cd5ALUtzi3+fQs4DD9yTZecayXbjQ6UTbxNhwx
- UtWbEUlhtdGENysBOZA3NW+zLMaGywO3ZuTfeLqUTdKSC8WHXOv9SD1zRMZ0hE2LqEfI
- 56YQ==
-X-Gm-Message-State: APjAAAX69+sCHeWyiHUEdmThxVVt1LNTHhm3fgnBK5hqabTmsWtKvlHB
- RVv/OGj7noIyYxBLu5JXJOrTEQ==
-X-Google-Smtp-Source: APXvYqzUXEINr7YBgbQt2flcEowzuqsRnsIwXi4jeC62BVn9us9eqyO5LZjv+Whh8Im/bLMUexKj4w==
-X-Received: by 2002:a1c:5402:: with SMTP id i2mr349178wmb.41.1566312055209;
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
+ :references:mime-version:content-transfer-encoding;
+ bh=Qk9x+0yCuWahWTJ+d7U2hM8TpGj03opy/Zg7wU4wyWE=;
+ b=PRW2pLRFK09a7k3uFlnTSnJ16AlatGUfH87xf/rraOegVK4g5ILPD9cXZTUkhgTSiQ
+ 9Hz+f7qzE7ZelpK5/q5BX8TC5ExytmsLF1PL7JB00hpOuBVrPTtM3PZKT1N/QYTgll+t
+ kd/H+J3zYaE8XiRnx+609MM5GCnsaGSmjkS2XhpexHutP4qLOtc8AjtRCUxthAqbtFX+
+ 7zYhK9HjaQvJ7cY2mCzP/V7Ealn4uEuldyQfbbRxrXDuR07L728J/oEPOdEnLn844TGL
+ EOzIDw7MAz5StrXKXB5nWZQalQo+GhMONqoalG4Vk58MWYFdoPBperwl9ncBMzO4bNfB
+ 1biA==
+X-Gm-Message-State: APjAAAVcNiRkL8FZlwd2GIxtk5zbLlB73kgufEpI94kIiaxi22VZQX54
+ dcU4V2dNa0vUiuGE1rlC4pAt2g==
+X-Google-Smtp-Source: APXvYqyATvzMqlJgk0npoKT6MYofXdZjDlqt0Tu0cvJTJxNhlNG0pp+89Pj2oysiKwBtg3gUHQCl6Q==
+X-Received: by 2002:a1c:eb0a:: with SMTP id j10mr337735wmh.125.1566312055993; 
  Tue, 20 Aug 2019 07:40:55 -0700 (PDT)
 Received: from bender.baylibre.local
  (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
- by smtp.gmail.com with ESMTPSA id a18sm21826750wrt.18.2019.08.20.07.40.54
+ by smtp.gmail.com with ESMTPSA id a18sm21826750wrt.18.2019.08.20.07.40.55
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Tue, 20 Aug 2019 07:40:54 -0700 (PDT)
+ Tue, 20 Aug 2019 07:40:55 -0700 (PDT)
 From: Neil Armstrong <narmstrong@baylibre.com>
 To: khilman@baylibre.com
-Subject: [PATCH 0/6] arm64: Add support for Amlogic SM1 SoC Family
-Date: Tue, 20 Aug 2019 16:40:46 +0200
-Message-Id: <20190820144052.18269-1-narmstrong@baylibre.com>
+Subject: [PATCH 1/6] soc: amlogic: meson-gx-socinfo: Add SM1 and S905X3 IDs
+Date: Tue, 20 Aug 2019 16:40:47 +0200
+Message-Id: <20190820144052.18269-2-narmstrong@baylibre.com>
 X-Mailer: git-send-email 2.22.0
+In-Reply-To: <20190820144052.18269-1-narmstrong@baylibre.com>
+References: <20190820144052.18269-1-narmstrong@baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190820_074101_649252_A0D21C4B 
-X-CRM114-Status: GOOD (  10.77  )
+X-CRM114-CacheID: sfid-20190820_074101_637568_92960408 
+X-CRM114-Status: UNSURE (   7.43  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -91,70 +94,44 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: linux-amlogic@lists.infradead.org, linux-kernel@vger.kernel.org,
- linux-arm-kernel@lists.infradead.org, Neil Armstrong <narmstrong@baylibre.com>
+Cc: Neil Armstrong <narmstrong@baylibre.com>,
+ Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
+ linux-kernel@vger.kernel.org, linux-amlogic@lists.infradead.org,
+ linux-arm-kernel@lists.infradead.org, Jerome Brunet <jbrunet@baylibre.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-The new Amlogic SM1 SoC Family is a derivative of the Amlogic G12A
-SoC Family, with the following changes :
-- Cortex-A55 cores instead of A53
-- more power domains, including USB & PCIe
-- a neural network co-processor (NNA)
-- a CSI input and image processor
-- some changes in the audio complex, thus not yet enabled
-- new clocks, for NNA, CSI and a clock tree for each CPU Core
+Add the SoC IDs for the S905X3 Amlogic SM1 SoC.
 
-This serie does not add support for NNA, CSI, Audio, USB, Display
-or DVFS, it only aligns with the current G12A Support.
+Reviewed-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+Reviewed-by: Jerome Brunet <jbrunet@baylibre.com>
+Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
+---
+ drivers/soc/amlogic/meson-gx-socinfo.c | 2 ++
+ 1 file changed, 2 insertions(+)
 
-With this serie, the SEI610 Board has supported :
-- Default-boot CPU frequency
-- Ethernet
-- LEDs
-- IR
-- GPIO Buttons
-- eMMC
-- SDCard
-- SDIO WiFi
-- UART Bluetooth
-
-Audio (HDMI, Embedded HP, MIcs), USB, HDMI, IR Output, & RGB Led
-would be supported in following patchsets.
-
-Dependencies:
-- g12-common.dtsi from the DVFS patchset at [1]
-
-Changes from rfc at [2]:
-- Removed Power domain patches & display/USB support, will resend separately
-- Removed applied AO-CEC patches
-- Fixed clk-measure IDs
-- Collected reviewed-by tags
-
-[1] https://patchwork.kernel.org/cover/11025309/
-[2] https://patchwork.kernel.org/cover/11025511/
-
-Neil Armstrong (6):
-  soc: amlogic: meson-gx-socinfo: Add SM1 and S905X3 IDs
-  dt-bindings: soc: amlogic: clk-measure: Add SM1 compatible
-  soc: amlogic: clk-measure: Add support for SM1
-  dt-bindings: arm: amlogic: add SM1 bindings
-  dt-bindings: arm: amlogic: add SEI Robotics SEI610 bindings
-  arm64: dts: add support for SM1 based SEI Robotics SEI610
-
- .../devicetree/bindings/arm/amlogic.yaml      |   5 +
- .../bindings/soc/amlogic/clk-measure.txt      |   1 +
- arch/arm64/boot/dts/amlogic/Makefile          |   1 +
- .../boot/dts/amlogic/meson-sm1-sei610.dts     | 300 ++++++++++++++++++
- arch/arm64/boot/dts/amlogic/meson-sm1.dtsi    |  68 ++++
- drivers/soc/amlogic/meson-clk-measure.c       | 134 ++++++++
- drivers/soc/amlogic/meson-gx-socinfo.c        |   2 +
- 7 files changed, 511 insertions(+)
- create mode 100644 arch/arm64/boot/dts/amlogic/meson-sm1-sei610.dts
- create mode 100644 arch/arm64/boot/dts/amlogic/meson-sm1.dtsi
-
+diff --git a/drivers/soc/amlogic/meson-gx-socinfo.c b/drivers/soc/amlogic/meson-gx-socinfo.c
+index ff86a75939e8..b9f4c6f4fd03 100644
+--- a/drivers/soc/amlogic/meson-gx-socinfo.c
++++ b/drivers/soc/amlogic/meson-gx-socinfo.c
+@@ -39,6 +39,7 @@ static const struct meson_gx_soc_id {
+ 	{ "TXHD", 0x27 },
+ 	{ "G12A", 0x28 },
+ 	{ "G12B", 0x29 },
++	{ "SM1", 0x2b },
+ };
+ 
+ static const struct meson_gx_package_id {
+@@ -66,6 +67,7 @@ static const struct meson_gx_package_id {
+ 	{ "S905X2", 0x28, 0x40, 0xf0 },
+ 	{ "S922X", 0x29, 0x40, 0xf0 },
+ 	{ "A311D", 0x29, 0x10, 0xf0 },
++	{ "S905X3", 0x2b, 0x5, 0xf },
+ };
+ 
+ static inline unsigned int socinfo_to_major(u32 socinfo)
 -- 
 2.22.0
 
