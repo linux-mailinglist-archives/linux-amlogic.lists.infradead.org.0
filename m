@@ -2,68 +2,69 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4350997BFE
-	for <lists+linux-amlogic@lfdr.de>; Wed, 21 Aug 2019 16:04:51 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C95CB97C11
+	for <lists+linux-amlogic@lfdr.de>; Wed, 21 Aug 2019 16:07:27 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
 	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=G6ZFBESsoy4zB5QF1O48lhqzWTFa2vOB8Gl5aB0V+H0=; b=Z2krd15KW5P/xI
-	s4NN+Tk00lI4A57SRBJpUz8igTuGZxlXwsuQxLFgf4eymEwk4ennM4F0XEpoFOBjiBwYf3aCSdTHJ
-	3tLg1yZS2p3rLqtfyEf93yjOCBvlh0s0zRXeGMhvSmFRPgWUdGtgJp231/N9Jk+DhZ8JasbMc5dew
-	sNesQeS9L1o7QuEqBeKlHhXVsWYtn3KfvPVKalR6fGFOW/Dtc3NIcIBoshC+yqKqREPODaSryyTDd
-	x+mKDR+IW64ZQUnXZemDPxHD2gPzjKFtFmzLCDNV8nBf6tNE1o3sNgkn5DFC/YDlP4TvPGTeNdNfx
-	Lx7PuDmr1AagSD8yWfCA==;
+	List-Owner; bh=QSen0FbprOLxZUJNdoT+qblPQawglj4mttt8r4dHVzI=; b=W5jJ7N23aXM+it
+	U9FHJ3qfkcgxNRM6xqvN1xQ5H0F28eO/Dw3m9/6GT8ev+I02WM97MZMFu9wNRgjHk1kAeLbXfnMVD
+	YoSz/hiT3FJUvopct8jAfB/54U392S0oZf3ZdTMwNi7QPc8Qs0WBsadOtvLkipMuIIV97/Tcl5HEE
+	dVm7wh7hs/YAcyLXEyhlX69fFfyr3f21JbUUHMwvoo85L8ZrikE4jJibBUzn3LsJmPgeYztKJeU3N
+	CfBL8xHxF51YzqeG9K6IaT9IfZZgnlCwwnKXpTpWYqz4OTeTH6mKxRt/B+pxQC8nGDrILGNkVTPxv
+	1TzQS1rzF7LOQm31eRpQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i0REH-0007D8-N2; Wed, 21 Aug 2019 14:04:49 +0000
-Received: from mail-wm1-x341.google.com ([2a00:1450:4864:20::341])
+	id 1i0RGm-0000sC-Kx; Wed, 21 Aug 2019 14:07:24 +0000
+Received: from mail-wm1-x344.google.com ([2a00:1450:4864:20::344])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i0REE-0007CO-By
- for linux-amlogic@lists.infradead.org; Wed, 21 Aug 2019 14:04:47 +0000
-Received: by mail-wm1-x341.google.com with SMTP id i63so2277481wmg.4
- for <linux-amlogic@lists.infradead.org>; Wed, 21 Aug 2019 07:04:46 -0700 (PDT)
+ id 1i0RGY-0000i1-6r
+ for linux-amlogic@lists.infradead.org; Wed, 21 Aug 2019 14:07:11 +0000
+Received: by mail-wm1-x344.google.com with SMTP id f72so2267512wmf.5
+ for <linux-amlogic@lists.infradead.org>; Wed, 21 Aug 2019 07:07:09 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=subject:to:cc:references:from:openpgp:autocrypt:organization
  :message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=YW1XVUPw46BgmLBZqdGXdvrEWQrMMbzpN98ck/XyChI=;
- b=ieBajjBNITn4Yw+37LqhVCDA0J6Oytv9Ruxguat/gkF9X+4PXYM6jtZz2v1kYPliA9
- kDjfRg22ViG13986kPxoEXe45MOdo76n4DXGwDYhIitI2gUQARePldV1pJ6I7FTkc355
- Etn1NEw6X+fOtP/BQN+UhW5z+T/ZA1/GownkljS3qDcvB4gANISBjRLTqRM2rkcfjeHy
- qKN8m00Uv+yq+WTKlboYpVuqIEsrEbgRr6Pi0gCT1I2EhvYnJgHDZ1+dqvUJQX5XqRAf
- ji4Or+/as9zWeubWlV4FzJq8mjrUs8K69TShgsMGCntf1ELd5h9NKiDjONb6oLk/QAS+
- qW4Q==
+ bh=oUhjfRkjOGkm9ELzvijHUs/x1QUpKZ8wRrXOGiFDrl8=;
+ b=C+heZauLukh60cWDzfa0hZEScY0R5vbFGyajHX7r+rrvVZ8x3xOq5KVn68h30idUA8
+ tYXFdcCsZWufZSKVaXmgKNKsuQL2ZA4/A82Y9dJ6hQdosvFI6A6Vsh3DoaF2aCfc8PBp
+ 0huL2JdO2CwxqSwE+kRkRLjOKdyFnOC1ZFx/xSboA7aR1cGtA1cRev8qX9s+qrfI7jc4
+ IgC7uB/kHu4lY+iyq0nanNeNCv07SJauPqYr/WtFnw394RusIssBK6BDEkFuBUL//Tu8
+ 1FzuYopdojlLU41ywE7CUxPhpqVvhXb6sR8RUlF0+/caXO0M7RvoppcHXSuCt2OHOgf7
+ s+TQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:subject:to:cc:references:from:openpgp:autocrypt
  :organization:message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=YW1XVUPw46BgmLBZqdGXdvrEWQrMMbzpN98ck/XyChI=;
- b=tZS7wAMdtRC/IWygo8Su3OyfkeKaJmRwAcRdUyDnlq1+ByqvDE2xuV01n8ltlK0a70
- 8t5nkYPph1IDMP+aUz9WMTvmL3et8FQoZ9CUjNxScTOQIScXQccI/eudcLPARPeLZmpP
- OhJsTJx5ioDc7WL7k9QZJDQnBOJGnsWfgVihRDXxUswj67+zC0Vp8+2L9ga7+fwKqPnc
- QfeCp2vMSgdxTpT+YWMTd4d7kfQhOymu5iCF/gWFU07uyK4Z6jrrXiEll2iG7CtZC9rZ
- XuX8rGyBw9rR6iutiwmsnQe/NcerSESRB03s4Q9pfHGpQdGUYKS08VB39bIeT08gW1Rf
- VSrQ==
-X-Gm-Message-State: APjAAAVvUF8q3msJqAtajW2SeoyK5U2skSOV3awfEyDqo2ESfaZgStTn
- MlDomg6g4YZAVO7/Msa38xNNGA==
-X-Google-Smtp-Source: APXvYqy7ag5L8QhXkQ8FPIk17M2mxfX8CQSyfFORtd7b41PkZTjXy/CpQmRJ1ucNVb7aFPsGkBuMmQ==
-X-Received: by 2002:a1c:a74b:: with SMTP id q72mr236306wme.96.1566396284907;
- Wed, 21 Aug 2019 07:04:44 -0700 (PDT)
+ bh=oUhjfRkjOGkm9ELzvijHUs/x1QUpKZ8wRrXOGiFDrl8=;
+ b=LHRdT76U+dKenTc+cq9EgHNeybWSsJTKiLqgKcKI8MhQ6ISVpBmhFVmkjz1DfQa1ME
+ mlj/b6G3xArKMuRo9+LAnNxA4fooDW4oErw2sQX7/5oSLSRX5BQiUn9X7MYoYM9/Bbsz
+ xplEfKEpGPoYuOrrXV1e56nAEz4cAeiVJtOigpjMk2lMyzftYcEEe/PS2uQ5bZbMcoMH
+ RiA85ITbITblfTj8JgEDEhAOz/jhrU13VdZnlTSA3hfyqQOPuBsrhEwaJdHhdsm8GZQL
+ 2UvLljTA7zLDNeU9dTiTDqQnNKcSC/nCmb5lwKTYAAXKsjfI0+tbeRu/lXX4UTZ/LEVT
+ PAsw==
+X-Gm-Message-State: APjAAAUDRlzvYwC16Jwx+VzvC+4Nhp9O9WCmgfhoTJJCHAwGfG8o5NzO
+ NeeQekJUmI+Cagw4SW7woBCPp/hmcDdU9A==
+X-Google-Smtp-Source: APXvYqxAAvjBc6PJvYfBvaR4OV8QOikUPN082WzSWa6tjG63CeieKvh07gvoK1hVcvFEgPHEOU8ytw==
+X-Received: by 2002:a1c:eb0a:: with SMTP id j10mr194381wmh.125.1566396427902; 
+ Wed, 21 Aug 2019 07:07:07 -0700 (PDT)
 Received: from [192.168.1.62] (wal59-h01-176-150-251-154.dsl.sta.abo.bbox.fr.
  [176.150.251.154])
- by smtp.gmail.com with ESMTPSA id v124sm121055wmf.23.2019.08.21.07.04.43
+ by smtp.gmail.com with ESMTPSA id 91sm65886784wrp.3.2019.08.21.07.07.06
  (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
- Wed, 21 Aug 2019 07:04:43 -0700 (PDT)
-Subject: Re: [PATCH 02/14] arm64: dts: meson-gx: drop the vpu dmc memory cell
-To: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+ Wed, 21 Aug 2019 07:07:07 -0700 (PDT)
+Subject: Re: [PATCH 08/14] arm64: dts: meson-gxl: fix internal phy compatible
+To: Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
+ jbrunet@baylibre.com
 References: <20190814142918.11636-1-narmstrong@baylibre.com>
- <20190814142918.11636-3-narmstrong@baylibre.com>
- <CAFBinCBQwsoO1dGKzzkE4Jh9VeqDhiy__m96X=CZBKSDRrHDOw@mail.gmail.com>
+ <20190814142918.11636-9-narmstrong@baylibre.com>
+ <CAFBinCAyhfk1wq0ejXazTWQ=eNqDROauB_Kbc80+ekPQ7oB9Ww@mail.gmail.com>
 From: Neil Armstrong <narmstrong@baylibre.com>
 Openpgp: preference=signencrypt
 Autocrypt: addr=narmstrong@baylibre.com; prefer-encrypt=mutual; keydata=
@@ -116,23 +117,23 @@ Autocrypt: addr=narmstrong@baylibre.com; prefer-encrypt=mutual; keydata=
  VsbXrP9BZ6snXyHfebPnno/te5XRqZTL9aJOytB/1iUna+1MAwBxGFPvqeEUUyT+gx1l3Acl
  ZaTUOEkgIor5losDrePdPgE=
 Organization: Baylibre
-Message-ID: <a2c791d0-92bf-b7a0-777f-74c4515326a2@baylibre.com>
-Date: Wed, 21 Aug 2019 16:04:43 +0200
+Message-ID: <ba66449e-504c-2937-bc68-1d2b5b03d6b9@baylibre.com>
+Date: Wed, 21 Aug 2019 16:07:06 +0200
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
  Thunderbird/60.8.0
 MIME-Version: 1.0
-In-Reply-To: <CAFBinCBQwsoO1dGKzzkE4Jh9VeqDhiy__m96X=CZBKSDRrHDOw@mail.gmail.com>
+In-Reply-To: <CAFBinCAyhfk1wq0ejXazTWQ=eNqDROauB_Kbc80+ekPQ7oB9Ww@mail.gmail.com>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190821_070446_413939_D298F272 
-X-CRM114-Status: GOOD (  12.87  )
+X-CRM114-CacheID: sfid-20190821_070710_247413_60068F9C 
+X-CRM114-Status: GOOD (  19.52  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:341 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:344 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -158,25 +159,51 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On 20/08/2019 22:28, Martin Blumenstingl wrote:
+On 20/08/2019 22:38, Martin Blumenstingl wrote:
+> adding Jerome
+> 
 > On Wed, Aug 14, 2019 at 4:31 PM Neil Armstrong <narmstrong@baylibre.com> wrote:
 >>
 >> This fixes the following DT schemas check errors:
->> meson-gxl-s805x-libretech-ac.dt.yaml: vpu@d0100000: reg-names: Additional items are not allowed ('dmc' was unexpected)
->> meson-gxl-s805x-libretech-ac.dt.yaml: vpu@d0100000: reg-names: ['vpu', 'hhi', 'dmc'] is too long
-> if you have to re-send it for whatever reason I would add:
-> "
-> The 'dmc' register area was replaced by the amlogic,canvas property
-> which was introduced in commit f1726043426c73 ("arm64: dts: meson-gx:
-> add dmcbus and canvas nodes.") and commit cf34287986d0b6 ("arm64: dts:
-> meson-gx: Add canvas provider node to the vpu> "
-
-Sure, thanks for the review !
-
-> 
+>> meson-gxl-s805x-libretech-ac.dt.yaml: ethernet-phy@8: compatible: ['ethernet-phy-id0181.4400', 'ethernet-phy-ieee802.3-c22'] is not valid under any of the given schemas
+>>
 >> Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
-> Reviewed-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+>> ---
+>>  arch/arm64/boot/dts/amlogic/meson-gxl.dtsi | 2 +-
+>>  1 file changed, 1 insertion(+), 1 deletion(-)
+>>
+>> diff --git a/arch/arm64/boot/dts/amlogic/meson-gxl.dtsi b/arch/arm64/boot/dts/amlogic/meson-gxl.dtsi
+>> index ee1ecdbcc958..43eb158bee24 100644
+>> --- a/arch/arm64/boot/dts/amlogic/meson-gxl.dtsi
+>> +++ b/arch/arm64/boot/dts/amlogic/meson-gxl.dtsi
+>> @@ -709,7 +709,7 @@
+>>                         #size-cells = <0>;
+>>
+>>                         internal_phy: ethernet-phy@8 {
+>> -                               compatible = "ethernet-phy-id0181.4400", "ethernet-phy-ieee802.3-c22";
+>> +                               compatible = "ethernet-phy-id0181.4400";
+> on G12A there was a specific reason (iirc it was because the PHY ID
+> can be any arbitrary value programmed into some register) why we added
+> it with a compatible string
+> Jerome, do we have the same situation on GXL/GXM as well?
+
+Yes the ID in encoded in the register, but we use the very basic mmio mux, but we should
+switch to the same g12a-mdio-mux at some point..
+
+=> infinite TODO list !
+
+Neil
+
 > 
+> if not I prefer to drop the compatible string because it's probably
+> from a time where the PHY dt-bindings stated "add the PHY ID
+> compatible string if you know it" while the actual suggestion was
+> "only add it if reading the ID doesn't work for some reason"
+> 
+> 
+> Martin
+> 
+
 
 _______________________________________________
 linux-amlogic mailing list
