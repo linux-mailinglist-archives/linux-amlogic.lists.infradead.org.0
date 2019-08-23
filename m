@@ -2,84 +2,80 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A2F829B300
-	for <lists+linux-amlogic@lfdr.de>; Fri, 23 Aug 2019 17:06:37 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2A0949B3B2
+	for <lists+linux-amlogic@lfdr.de>; Fri, 23 Aug 2019 17:44:46 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:References
-	:In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=6vk4jg/ExFD7AjMl+jPojpXJVLy4BAzvXdSEzhLEGCU=; b=mggiTHj5UMdR8U
-	2uQo9LhvypWBVEWv6B5YaK1j6EHMdHj9TjKJw6dJKxe0/hpEzSqhlH5Wj/fzuz1B7T/UsNuIctxRW
-	sjU0eugACkLtIYVykaTmY8qxcLVi3aG652j9kOuOpspwMEZYLaYBJeMhYzlVQRf0gCw4PeYRH13Eq
-	Z8A06NtLucXgFX4VNfPKk1FhDDTPUCd4+aYby7ho1+Bakkz0Dr/+jgXoY22Gr+3eaXYUCPBMZCv+I
-	dZB+fl52mKSQq9PUpcyMH+zHkenqKN2zEKdu8hD39hgzQX9NV/ySgvbQimWRz5bP9+H9c4Sx1L1ZQ
-	QbCHXtXOGlEId1pB+OgA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=AW5d3mKmTxEkQYoLhPNvgBYU52OqeHhJDpr8mJKPZBY=; b=mCAjeAwFOQBCf/
+	gIRuT7CQtBbsGEKVZRbzf7jOiIcRNXmRCthR/kSJMYCFOQoPWW44MKW9r1XAorIGrpVtE8u8fNbOF
+	ryd/M8/Ez963CJvS1RchONO69tgJXmSGGm9ScqTi/mJ7c7Kq3M+gwOjbqUsT/31jD/xovHaCKBrif
+	S1aV0nZtur7JxWgTEJtW7ycwFCHItL0sGZvrtmNXGO2VguONzchrCdO6JCRWpZV243nfzb8Bc5AFA
+	xXukIYsSB+wj4H+eg7giRqu0UPPDoYBI1NcblJZw9BLowSaVCjDr8lrWwaQ1Df/XtugNYvBXBuzMX
+	ry7bRpLq0mpZkV5mfzsw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i1B97-0001QY-Ks; Fri, 23 Aug 2019 15:06:33 +0000
-Received: from mail-pf1-x442.google.com ([2607:f8b0:4864:20::442])
+	id 1i1Bk4-0006tk-RB; Fri, 23 Aug 2019 15:44:44 +0000
+Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i1B93-0001Pr-Kh
- for linux-amlogic@lists.infradead.org; Fri, 23 Aug 2019 15:06:31 +0000
-Received: by mail-pf1-x442.google.com with SMTP id y9so6270821pfl.4
- for <linux-amlogic@lists.infradead.org>; Fri, 23 Aug 2019 08:06:29 -0700 (PDT)
+ id 1i1Bjx-0006qh-VU
+ for linux-amlogic@lists.infradead.org; Fri, 23 Aug 2019 15:44:40 +0000
+Received: by mail-wr1-x442.google.com with SMTP id k2so9069444wrq.2
+ for <linux-amlogic@lists.infradead.org>; Fri, 23 Aug 2019 08:44:37 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=from:to:cc:subject:in-reply-to:references:date:message-id
- :mime-version; bh=br2IEBdfnW2qlqV7gg30Z/xwOIaLVKl9bGEeCZKa9NU=;
- b=siISpHlfibAjTzKXmzvMvdMERCB8h0biNAphsfX2uljz+Okx2iR9rML7xRX4aOLa45
- G2Hej+2b3/xvgrJGt6vMT5MM5nsOSJlENKdRtjHjvUJYWQAlFT+/8pulaatvnRMmo79z
- 0vukJARO++UdwvA5MaHWvvNNJIPqDVj0WCKJPkAR+5MH3mym60HW3KXHiGIHzkv05VCZ
- 0NxHuTPkQs6KXJ3UTB1TiigWz2Ng1xU/GS8zTf5yLSmcpn+KulnVCOObrJ61y9nmhV9L
- c4l+BHt6kJeYQPHrpEbAmDFvHFLQG3KJB8Tkyo6KKDqpKlSLiWT6xNYcDeeOa/3qsrCT
- BepQ==
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=94WrC/BBgFJ3B1KulaFSwiNtZR1yN0jFyWLE8Zon3I0=;
+ b=PG4XOJ29ZJXkv/aI115bn6+yjvx6Pazp64dPnO+Zc60xH8oYL9GNUGM2NUSEslY8KR
+ 4zNar2bwmtBWE4T7J3eukHuW7BvmFFpjsFocpkP9oPdgFr+W0bnVIgNN6fQR7ZiNSmK7
+ 5x8qOo+Buv6mV+ibVqQ+y9Z0TVh0iV90pKp5eJZrBbHs5ugAkYi8QTYAGX0OtMV0ugjw
+ cvCLTVzbsy724GH6e6BzoPyM5zU1CkDKhxqGVfZ+Lzk05XiY1bqJK25kvUoFtSuxspDl
+ Hu6QfAgJB/FlSyoOYtSqaEGhMY6vHF//rr5FP0yCR6bbByNXcyjIMbg/tiEkcdz3sdgh
+ FPSQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:in-reply-to:references:date
- :message-id:mime-version;
- bh=br2IEBdfnW2qlqV7gg30Z/xwOIaLVKl9bGEeCZKa9NU=;
- b=MDx29hlEJLvPnIUvEe2Zv63+XIL/BYZgay1fmadBexHuVJGZa5dulEA6eVw9g7Jjeu
- pip1fx/xp0nBsnuoDTyXzQl1R4dD93bTngC2wQDY2EdM0hl6H/nTRC3A80eiJOSfNpd8
- hh6w+Dh/LEfs0/8p5aMAC9OMGqcbCG3YJIZkZnVRxoS11HYqJGwieCK/pMOKzN1qHgdH
- C0F4a/+MG0Igy7VPdMaLuT6gFZK6pRG7B/C7tMegF4BCko6bPU2vPSzEWPf3xcwOqiDO
- rpMDUxXrVRjsn27iIpED4nxMdSZ7m05h10oxkeyC2IQ4C4CTJCoqv1MS8UKptsGXdK/g
- t0iQ==
-X-Gm-Message-State: APjAAAWAQMFz1NCOzfwdFVGFWOvdYIzlyhLyunNzl/X6uLYrl5BgL3aL
- PMCW1OKJ9rgZ3pVFe3alKv90qQ==
-X-Google-Smtp-Source: APXvYqzhBqSLYP5ApPK5mE0oG+RMyTUh1JqA9ZAmyyVrzxAloBECYA84RJ5XVFzKAvGUUyuOwLrT5w==
-X-Received: by 2002:a17:90a:be07:: with SMTP id
- a7mr5731477pjs.88.1566572788803; 
- Fri, 23 Aug 2019 08:06:28 -0700 (PDT)
-Received: from localhost ([2601:602:9200:a1a5:89d4:68d1:fc04:721])
- by smtp.gmail.com with ESMTPSA id fa14sm2699525pjb.12.2019.08.23.08.06.27
- (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
- Fri, 23 Aug 2019 08:06:27 -0700 (PDT)
-From: Kevin Hilman <khilman@baylibre.com>
-To: Neil Armstrong <narmstrong@baylibre.com>, ulf.hansson@linaro.org
-Subject: Re: [PATCH 2/5] soc: amlogic: Add support for Everything-Else power
- domains controller
-In-Reply-To: <0ac1cf30-1796-a549-e195-0f94c4a85993@baylibre.com>
-References: <20190821114121.10430-1-narmstrong@baylibre.com>
- <20190821114121.10430-3-narmstrong@baylibre.com>
- <7hzhk25ct3.fsf@baylibre.com>
- <b6cfb770-76eb-00b1-e088-1a73b7978f33@baylibre.com>
- <7hzhk12b6m.fsf@baylibre.com>
- <0ac1cf30-1796-a549-e195-0f94c4a85993@baylibre.com>
-Date: Fri, 23 Aug 2019 08:06:26 -0700
-Message-ID: <7h36hr2a6l.fsf@baylibre.com>
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=94WrC/BBgFJ3B1KulaFSwiNtZR1yN0jFyWLE8Zon3I0=;
+ b=QI82wQsexN9eFxJKL6nMnR/6cWqoi5BsFcxZ0vGQOrspjGgk2s90uZowPziaghZgZw
+ mYQepQJYyTpnop/LToPQlUCh95aQRIr/+aTHhffmKlSsPumliVyksChBkH9u1Yfbz6UH
+ fZAFMBntR9vLxyCw2kH5ldwAI63HCjtybhE7v/7xsg3KKRr62DphyYpn2UO29ibyO1eS
+ kq3VsF4ykVrS3U1R9wXw/4Kuebxmzx96AsbVSlOorZ4+p/1ebfrTd6GZaXhN2rc+gi8n
+ QvAH8JP78b9JcRG8RxgUfd2Sz3D/h6gkH4bc3kaxwoVWdd4DlrGQN3zT2L1KhZUw4bIs
+ Nj5w==
+X-Gm-Message-State: APjAAAWwLl2DzAC0svIMsbR4YXUAhO8y+LHwlavwrgJ5F7lOTdHZpGJj
+ 8OJQYGkhp2OuzXDr9fBJMq8F2A==
+X-Google-Smtp-Source: APXvYqwezDRfZb6B8c8Y1CQApWZ9F//On7ooLCRo4hwkX0NwPYIUHhbrpO8M8TY2AesSZdBr3W4hLQ==
+X-Received: by 2002:adf:dbcd:: with SMTP id e13mr5804786wrj.314.1566575075858; 
+ Fri, 23 Aug 2019 08:44:35 -0700 (PDT)
+Received: from starbuck.baylibre.local
+ (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
+ by smtp.googlemail.com with ESMTPSA id v7sm3567342wrn.41.2019.08.23.08.44.35
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Fri, 23 Aug 2019 08:44:35 -0700 (PDT)
+From: Jerome Brunet <jbrunet@baylibre.com>
+To: Kevin Hilman <khilman@baylibre.com>
+Subject: [PATCH v2 0/2] ASoC: meson: axg-tdm-formatter: add g12a reset
+Date: Fri, 23 Aug 2019 17:44:30 +0200
+Message-Id: <20190823154432.16268-1-jbrunet@baylibre.com>
+X-Mailer: git-send-email 2.21.0
 MIME-Version: 1.0
+X-Patchwork-Bot: notify
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190823_080629_822269_23F49D69 
-X-CRM114-Status: GOOD (  16.98  )
+X-CRM114-CacheID: sfid-20190823_084438_014160_C2E26138 
+X-CRM114-Status: UNSURE (   4.87  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:442 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:442 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -97,82 +93,32 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: linux-amlogic@lists.infradead.org, linux-kernel@vger.kernel.org,
- linux-arm-kernel@lists.infradead.org, linux-pm@vger.kernel.org
+Cc: linux-amlogic@lists.infradead.org, devicetree@vger.kernel.org,
+ linux-kernel@vger.kernel.org, Jerome Brunet <jbrunet@baylibre.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Neil Armstrong <narmstrong@baylibre.com> writes:
+This patchset add the possibility to provide a reset to the tdm formatter.
+Such reset is available on the g12a SoC family and helps solve a random
+channel output shift when using more than one output lane.
 
-[...]
+Changes since v1 [0]:
+- Rebased on kevin's tree
 
->>> It's for legacy when VPU is initialized from vendor U-Boot, look at commit :
->>> 339cd0ea082287ea8e2b7e7159a5a33665a2cbe3 "soc: amlogic: meson-gx-pwrc-vpu: fix power-off when powered by bootloader"
->>>
->>>     In the case the VPU power domain has been powered on by the bootloader
->>>     and no driver are attached to this power domain, the genpd will power it
->>>     off after a certain amount of time, but the clocks hasn't been enabled
->>>     by the kernel itself and the power-off will trigger some faults.
->>>     This patch enable the clocks to have a coherent state for an eventual
->>>     poweroff and switches to the pm_domain_always_on_gov governor.
->> 
->> The key phrase there being "and no driver is attached".  Now that we
->> have a driver, it claims this domain so I don't think it will be
->> powered off:
->> 
->> # cat /sys/kernel/debug/pm_genpd/pm_genpd_summary 
->> domain                          status          slaves
->>     /device                                             runtime status
->> ----------------------------------------------------------------------
->> ETH                             on              
->>     /devices/platform/soc/ff3f0000.ethernet             unsupported
->> AUDIO                           off-0           
->> GE2D                            off-0           
->> PCI                             off-0           
->> USB                             on              
->>     /devices/platform/soc/ffe09000.usb                  active
->> NNA                             off-0           
->> VPU                             on              
->>     /devices/platform/soc/ff900000.vpu                  unsupported
->> 
->> In my tests with a framebuffer console (over HDMI), I don't see the
->> display being powered off.
->
-> It's in the case where the driver is a module loaded by the post-initramfs
-> system after the genpd timeout, or if the display driver is disabled.
->
-> In the later I had some system failures when vendor u-boot enabled the
-> display and genpd disabled the power domain later on.
+[0]: https://lkml.kernel.org/r/20190820121551.18398-1-jbrunet@baylibre.com
 
-OK, thanks for the explanation.  I get it now.
+Jerome Brunet (2):
+  arm64: dts: meson: g12a: audio clock controller provides resets
+  arm64: dts: meson: g12a: add reset to tdm formatters
 
->> 
->>> I could set always-on governor only if the domain was already enabled,
->>> what do you think ?
->> 
->> I don't think that's necessary now that we have a driver.  We really
->> want to be able to power-down this domain when the display is not in
->> use, and if you use always_on, that will never happen.
->> 
->>> And seems I'm also missing the "This patch enable the clocks".
->> 
->> I'm not sure what patch you're referring to.
->
-> It's also added in 339cd0ea082287ea8e2b7e7159a5a33665a2cbe3 "soc: amlogic: meson-gx-pwrc-vpu: fix power-off when powered by bootloader"
->
-> I would like to keep the same behavior as meson-gx-pwrc-vpu, since it works fine
-> and we debugged all the issues we got.
+ arch/arm64/boot/dts/amlogic/meson-g12-common.dtsi | 9 +++++++++
+ 1 file changed, 9 insertions(+)
 
-OK, that's fine with me.
+-- 
+2.21.0
 
-We'll have to revist when we start using runtime PM enabled drviers and
-want to power down the display IPs on idle, but that's fine to do later.
-
-Thanks,
-
-Kevin
 
 _______________________________________________
 linux-amlogic mailing list
