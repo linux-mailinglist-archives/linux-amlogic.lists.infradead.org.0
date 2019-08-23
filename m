@@ -2,73 +2,74 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2A2BB9A889
-	for <lists+linux-amlogic@lfdr.de>; Fri, 23 Aug 2019 09:19:38 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D25509A896
+	for <lists+linux-amlogic@lfdr.de>; Fri, 23 Aug 2019 09:20:32 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=2v9ixGe6dsaFn2M9r6z4ZVsL/FzLqL2LGOEnvwwCAf4=; b=K3PNDFW0lMkK2n
-	6sj4laIibd9eoHoYhNYL+WWSEC3UEKQx+/y2DYAMEPncTQ6s8VFj7YbdBNehgAqyzhA0jJ2DqmNCy
-	YH75eLbfNSjrgSzR9A6EaqKyryq9isVk8JpTDu4QMOiPYzBWqzymqD9b6fb4cY1yBrRjVyYF4T8Aa
-	7Y+jKJzhWKFOJGvTDWKeQDNapWuQX4Nluiik5/PMbAu4eslx2vTL5DYj4GKHazXRnKFKk1veamDQd
-	76Q0YEqXsh8yZTPy0Xilhdwc+kJiTtTGyzLeO5ikn6sC+xEnkXmkbhksrKX/AGSAiijWHI4dU7aRV
-	4SiOfgtLYkX+0+xCas1A==;
+	List-Owner; bh=0S2ySB7sA1pFIkbgrB9zsRpyMXE1NlKLrrPtNSc1CCc=; b=RYnX/f80X/1b4Z
+	c9x3Jrz15okqSgws4RW2JohdSuhnGnrodB4mGsSC9IF+0S3NSkdt3G19dA9xy3akGQhPThFsBULmn
+	jKZymq1uiGUltRZWQ9Kn5+TEpsTR/rhe9oU03G/eEmLklr5sGvW0Pzdm5k9bUCCbnipwt3Lw8utot
+	CBxB9HOu7Y34OJVAG7qkkjXWEg3T0YEsuAB9UMOGIQfuZzbMR4NwHuj7aHYD6VE5ehoSY6nH0AIoT
+	FDXPUo8p7Gfwun0ltBsdbovQlZTabGBQJjUk0lGtKq9lMZ1aR+QJaaSxl7WGgs9wJaCst7j3Kj+uG
+	liD3/8c5JJSaDlAOa0Aw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i13rB-0002Wl-8T; Fri, 23 Aug 2019 07:19:33 +0000
-Received: from mail-wm1-x341.google.com ([2a00:1450:4864:20::341])
+	id 1i13s7-0004Ll-DL; Fri, 23 Aug 2019 07:20:31 +0000
+Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i13bB-00014i-6n
- for linux-amlogic@lists.infradead.org; Fri, 23 Aug 2019 07:03:07 +0000
-Received: by mail-wm1-x341.google.com with SMTP id d16so8025808wme.2
- for <linux-amlogic@lists.infradead.org>; Fri, 23 Aug 2019 00:02:59 -0700 (PDT)
+ id 1i13bB-00014N-6k
+ for linux-amlogic@lists.infradead.org; Fri, 23 Aug 2019 07:03:09 +0000
+Received: by mail-wr1-x442.google.com with SMTP id b16so7590210wrq.9
+ for <linux-amlogic@lists.infradead.org>; Fri, 23 Aug 2019 00:02:58 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=8G0E0ExO/8vd2rGhXGiVb6HSb8G+1dBBdN59XPnX2pY=;
- b=GoHzf8SkZj1+SpCoyVP0Y3ZBaNamHMVTa2ltB0yOI36PwQ+quf7uqr6wqjiPeGBaT9
- edo0ve8cKUP1ou+mFnM+m/6MAHAItTL7Sem8XzG6gVtS68cGxRx8/05t4M2eODJxw7w6
- jhgneNZIMupty7Mek5jp2do8k5Bqr4C14o696uFuHx9CiEHSMBawDDUJedraA1h63Ccq
- zQ4TqdFILCQ6FchVgfQwFB01t6AXfqyUqsPxqGTUZ4j6BJfXxpDNGllhZbAEAEXsGA1h
- d6O639EAXrHr+zeKOkhJ9wnQa/7GTbNTCSFwL3w9A6TWS6phQkzaabtz8NGrQQZxpTIr
- I2Iw==
+ bh=Z/b1mhikbg+EPmNH/s2Xt1LyR+vNVX1tk6yq7Qa4/MI=;
+ b=nOu1hJ2wwRA59HSMRqpTfcIiHiskYmD68/3tC7t8v4OpPhcAvKvuh3bNdLHQK0POnp
+ FhtFeuTMXCkb6SSnCYDrKkGQWN31zpRQAsntyWJmIRqsansJmJB8bL0MtDAVYFsYc7o1
+ dvHMX9GWDaWycAn4GP5zXKfxylz7pfrp1pGOyGK8fEQaNUufNuiDe0nFGiKTV6dfIR/J
+ hrJB3C4I5O8R5vc88faq+kMormgsNPzuYggeAGBmwqnFIADMqfAG0whVOW8P9WUP1FKO
+ WhA/+NDagtIQ8/3s0OLrXUZLfMOR13KWND700Lgyev7nWSNwhB+v0ziUWpu1IkiqjYN/
+ MWzQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=8G0E0ExO/8vd2rGhXGiVb6HSb8G+1dBBdN59XPnX2pY=;
- b=bebybFkkrzFBMeDv1RCZ8/himDrC+LSwxQJACyzYm/e8/D0FSDCfd+5yNGoVQCZmrA
- gaABuwgLGvBMVrA/hjrEuM0HR3DMP6CrsuXlJ78AB1Vbla81kjM1A/gnDJrvk6VJWLJM
- MLVpSGkS1CVmRwlO/BVP6Y6eNFWIb2rbH4iXFLKp3Agg7wpkqH1ZnM4zOPdhYz5ClUlu
- uDMoKumVeN/uNVoScAOrl1diWHzPUuFnTmRirYWx71sFS7IEa6MgkcCEajBQ2aCy5oCk
- Fms3woSL2omKVtUOEKZUHFX3gbGeKuRWTZ90b8xcyXhDoVWEd5BFm1jff6l06D39eNws
- Vlnw==
-X-Gm-Message-State: APjAAAWFTSWBOrZREDo9Ls/Uu+wHjv4Qub/71Y9HryAwXqD3kr2CUMmp
- H7Yy0XcFAvEqRwmQruKm4auFGg==
-X-Google-Smtp-Source: APXvYqzUKYnWao2Wqg2Ns4yi/vxfNMHPEOhgTpeWMwDQcAu/e5rK+lJa7uHRKL6EwbWcDxwqcZ5Jsw==
-X-Received: by 2002:a7b:c4c6:: with SMTP id g6mr3436424wmk.52.1566543778710;
- Fri, 23 Aug 2019 00:02:58 -0700 (PDT)
+ bh=Z/b1mhikbg+EPmNH/s2Xt1LyR+vNVX1tk6yq7Qa4/MI=;
+ b=jMn213jN/ypPKJTwDHr/qocab9/mepCaSC0vIMVsP6E0lj2CNuJGAnQ1zoFmKUpX6l
+ HgpiPHheU8u0APleO93ZUuIxxVea45M+Mh3WRgPGoX2KgUmG9HZ/y49L7hHJR4EjR42u
+ k1F/e3pvd1URPtVT6zs5nzyonbRsfKVFgNomA0rs+q4VfrByrVnRg2WZRpjeqnXoFIfC
+ rdcmhqs45tPAcCYSqOnLxkIREZU6CNhn0VMAxX6wbtoTp3+XMvIqi1nhVtDkfK2uoeNw
+ 6tFWzYP5m7XPKdKvfSg50Ndjc+KByKRIDH1gSm5bZJNKiPiRswrVXcZcNxLVWAApYczC
+ 3pIQ==
+X-Gm-Message-State: APjAAAVUHxz0ZfROdgKXrXXXTl20dDKVNbnb+EgK/qTg8SOpD96eQX8y
+ TinLjmSBbaWeKjp/iSGkd1Rk2w==
+X-Google-Smtp-Source: APXvYqyuqMJL2L5NeOppIMame3Tj3HMfeW5/PBCBwC0GPH9k/60jj7yNgLoziG/B+Lt97Ilb64QaUg==
+X-Received: by 2002:adf:d4c6:: with SMTP id w6mr3262263wrk.98.1566543776738;
+ Fri, 23 Aug 2019 00:02:56 -0700 (PDT)
 Received: from bender.baylibre.local
  (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
- by smtp.gmail.com with ESMTPSA id a26sm1741833wmg.45.2019.08.23.00.02.57
+ by smtp.gmail.com with ESMTPSA id a26sm1741833wmg.45.2019.08.23.00.02.55
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Fri, 23 Aug 2019 00:02:57 -0700 (PDT)
+ Fri, 23 Aug 2019 00:02:56 -0700 (PDT)
 From: Neil Armstrong <narmstrong@baylibre.com>
 To: khilman@baylibre.com
-Subject: [RESEND PATCH v2 05/14] arm64: dts: meson-gx: fix watchdog compatible
-Date: Fri, 23 Aug 2019 09:02:39 +0200
-Message-Id: <20190823070248.25832-6-narmstrong@baylibre.com>
+Subject: [RESEND PATCH v2 03/14] arm64: dts: meson-gx: fix reset controller
+ compatible
+Date: Fri, 23 Aug 2019 09:02:37 +0200
+Message-Id: <20190823070248.25832-4-narmstrong@baylibre.com>
 X-Mailer: git-send-email 2.22.0
 In-Reply-To: <20190823070248.25832-1-narmstrong@baylibre.com>
 References: <20190823070248.25832-1-narmstrong@baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190823_000302_195849_0EC37B16 
-X-CRM114-Status: UNSURE (   9.56  )
+X-CRM114-CacheID: sfid-20190823_000302_207766_421645FD 
+X-CRM114-Status: UNSURE (   9.46  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -76,7 +77,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:341 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:442 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -104,8 +105,7 @@ Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
 This fixes the following DT schemas check errors:
-meson-gxbb-nanopi-k2.dt.yaml: watchdog@98d0: compatible:0: 'amlogic,meson-gx-wdt' is not one of ['amlogic,meson-gxbb-wdt']
-meson-gxl-s805x-libretech-ac.dt.yaml: watchdog@98d0: compatible:0: 'amlogic,meson-gx-wdt' is not one of ['amlogic,meson-gxbb-wdt']
+meson-gxbb-nanopi-k2.dt.yaml: reset-controller@4404: compatible:0: 'amlogic,meson-gx-reset' is not one of ['amlogic,meson8b-reset', 'amlogic,meson-gxbb-reset', 'amlogic,meson-axg-reset']
 
 Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
 Reviewed-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
@@ -114,17 +114,17 @@ Reviewed-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/arch/arm64/boot/dts/amlogic/meson-gx.dtsi b/arch/arm64/boot/dts/amlogic/meson-gx.dtsi
-index 1c580f42e818..b3fe3268af3e 100644
+index 239ec08b3023..08c01e11ba1b 100644
 --- a/arch/arm64/boot/dts/amlogic/meson-gx.dtsi
 +++ b/arch/arm64/boot/dts/amlogic/meson-gx.dtsi
-@@ -325,7 +325,7 @@
+@@ -220,7 +220,7 @@
  			};
  
- 			watchdog@98d0 {
--				compatible = "amlogic,meson-gx-wdt", "amlogic,meson-gxbb-wdt";
-+				compatible = "amlogic,meson-gxbb-wdt";
- 				reg = <0x0 0x098d0 0x0 0x10>;
- 				clocks = <&xtal>;
+ 			reset: reset-controller@4404 {
+-				compatible = "amlogic,meson-gx-reset", "amlogic,meson-gxbb-reset";
++				compatible = "amlogic,meson-gxbb-reset";
+ 				reg = <0x0 0x04404 0x0 0x9c>;
+ 				#reset-cells = <1>;
  			};
 -- 
 2.22.0
