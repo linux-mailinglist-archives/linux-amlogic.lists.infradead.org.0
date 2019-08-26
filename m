@@ -2,69 +2,70 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 27C3A9CAC3
-	for <lists+linux-amlogic@lfdr.de>; Mon, 26 Aug 2019 09:42:22 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4CE689CAD2
+	for <lists+linux-amlogic@lfdr.de>; Mon, 26 Aug 2019 09:43:23 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
 	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=mm/YesQMfXK4rZ9+EOFWg0SBMWXjd5ohbRJpvBJu2IA=; b=Y1xYV3v+haNW2K
-	2ssFIKf+IkAK4m6LtgPc1iG8eHBqPb6ZWUGM9w9tImUY5A9stpsoiliYNowwkZt4WDzuBuIoPE88M
-	j/JMOgcRK2fHluGWQGrL6B7C32BtbkUTNCtXl0HWFVYrewf8vUxWKYkFdn9t2hRTqHviyTB9sogBQ
-	1+aD0HT3rQoCTt6sCMQUIYeWkmgt8PgIGWlYIQccVxM+JixbLBT1yoDq34UJLrVAdBvM0BTS7f/mq
-	7eLDMoV7h+HNvN7F9ORWrmmH6S5mAVMnyQlAkw35zwOu69O12H6FVeGAGCuKQJT40t7uTmjFmvC/w
-	3vqsWqwpHK4it4QnVTxg==;
+	List-Owner; bh=ts6oHot3wLytJwZOjU7/rRCeIfdxlI3J7N9b/HS68RY=; b=ZiqN0gh3yxiXyw
+	6g1nOD2FWigHTSCr6HrLY7cwBAjQ3VrLEUISGgu1CUiXrQOLZzSfv0QCSKUPyTm1AEFep9FoC6Nn6
+	2i7OKhY0b+a4Cnomufhy/beXj1W3w72g6LZBcXsxbrLRMCcV2xMxDtcsVM5O5ETl9fAvC/t8ZlOV0
+	yS08VSvrHDMAXi6b291Xmrd0fKgWKEfcS6LBStbE3O3sHx2NwxMGAnktJKqVrOQ1axcz39K2W8fFE
+	zcZGB0JgbpQgBdxSvJlroWrx2OQsq51z7TEfWSvCpjVI7SEzWM1JM/E36djfGr36zIt8NaBxJIiG+
+	Ve/wvpDeNrov7ueDxUpg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i29dr-0004ui-3g; Mon, 26 Aug 2019 07:42:19 +0000
-Received: from mail-wr1-x441.google.com ([2a00:1450:4864:20::441])
+	id 1i29er-0006B6-SU; Mon, 26 Aug 2019 07:43:21 +0000
+Received: from mail-wr1-x443.google.com ([2a00:1450:4864:20::443])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i29dc-0004ld-7R
- for linux-amlogic@lists.infradead.org; Mon, 26 Aug 2019 07:42:06 +0000
-Received: by mail-wr1-x441.google.com with SMTP id z1so14268379wru.13
- for <linux-amlogic@lists.infradead.org>; Mon, 26 Aug 2019 00:42:03 -0700 (PDT)
+ id 1i29ec-0005pB-C5
+ for linux-amlogic@lists.infradead.org; Mon, 26 Aug 2019 07:43:07 +0000
+Received: by mail-wr1-x443.google.com with SMTP id j16so14271938wrr.8
+ for <linux-amlogic@lists.infradead.org>; Mon, 26 Aug 2019 00:43:06 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=subject:to:cc:references:from:openpgp:autocrypt:organization
  :message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=26+Kwh0zggxMcouYXTCArAHVq+AZ20RXMqR2e7j2Ao0=;
- b=W65hJK8NfuOyGoguFlhRFvRkiUBd+et1CWrToarSWPlQbuqvf6VX6T6oyrTCWz4bCu
- 2qXTNaEUgZc2JWR/+A/8eYCx3IQdhwG6mBOrjEcevGDRIqm63g7YEOGH19mDmcqVQHsX
- xTWgDVnoB5N7ZqfsT+c/XL2rqSZDijb3X8AxmRTdjzza/Rs0h0abDczh8A2mJXjDMhtG
- Nue/BjFZV/59qnetXwmqSri9gVjpa50RO5LX6tbZ7AOkwc4HhVcsOzozstwltHKLkKAD
- m0lW0xs9abRPpx2d+X1wcnmpMk1+LtDFLEzGV3mK6cLABLITGJT+NzLhDI4imPDtbMJG
- F5tw==
+ bh=p5oyCYaJHBmFYOFhDsV/KxDjOZ3RTaSbGo7EOXTZkuQ=;
+ b=pr5if38R/pA6yUqREb4B9B71whumkY3X8vJq/B6xy9/l4vwNtcKzRXOQlrxImRD8tE
+ OdohWPAip1+Myg+6xK8ZVA3O86ZTiAD2ixkEgn0W1vsRq7TskjGuZnMg1uMtD/kK3nLK
+ 5Ixylu6cvSiaZ95n97R0elAu8cUqcpwsAU5BNULFiCr8w/+qz9JQasEOuvqFyKPxIi1v
+ r/qR+lEgqRwXKZb7PkodK6DVZrmv0OCu3RuOPyvDsnZAkEsbajBsRTlxCHFwJ8/UPL7R
+ VklANqASZsrac9Z7RGCjCdqUtx3BSTHOcp1a//GH2i3kb1uPLTrMvEWm1EV6ONdWGN/Q
+ tNag==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:subject:to:cc:references:from:openpgp:autocrypt
  :organization:message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=26+Kwh0zggxMcouYXTCArAHVq+AZ20RXMqR2e7j2Ao0=;
- b=LLkNpPVBEVCyFzD43W4bWfOXbCW5zIMCqYgiAHsYpvvxuBxJyrWKzTONN5jANUMxma
- lhgvpAhtttkO7ua0jE4UeueMfPVk8rRQez/RTeIrM6kfUHDWyJwjGpTUw7AnfXB/Rsz4
- cDoUxAyUlAlDACqltRoOrFjO7Yh+XaXqhZlGAUG0cnxhiGMXz1VIheXcTkIKmhDnECHJ
- BAb+apdkvvhZx70zvjxQHZxBKfnv3mZNQJ2ugX4oWi7ogmpayF0sVkOSNlBFn3nj/CrA
- /wWezZLWEBIO/Omwgd0rUVDvicAVELiLAWq1/MsNr3eI8priObXlehr2kOecP4drgtWF
- 870w==
-X-Gm-Message-State: APjAAAXEb/SfDMZtCq49vGICkN8sPUTk59efcDufsNRr8lCSpiJcH0DY
- BRp8FDoy7zutLgF39Vlp84KGhQ==
-X-Google-Smtp-Source: APXvYqz7b0kZCzOiYgINgP60IIA2KeppwgMp2VTvWJGHMEb5rLAu50JxlIVRsiU+V+Lef3+SmslgVw==
-X-Received: by 2002:adf:facc:: with SMTP id a12mr9442454wrs.205.1566805322479; 
- Mon, 26 Aug 2019 00:42:02 -0700 (PDT)
+ bh=p5oyCYaJHBmFYOFhDsV/KxDjOZ3RTaSbGo7EOXTZkuQ=;
+ b=qVyua5/KsvQkBivgxUXKkHUNaueKxa+d9zxWnZWj1rxeY8l2ObNz5epQuIPLspKX4M
+ d7gvn4+oRUP0sQvh2g1PE1awsfrTt1TAzCjlIzPIForEwnT090/Hr4fzIB5ZV+pP7zxo
+ prPEMcb4xR+yy6ZcluIELMr8YnsJ9R3LGke5S3xrG+o/QlpLqv6x2rKDT3yRNxQEk5Me
+ nzvUw9SPfEDQLL6L8E1flQM4J3KqFtLIXW/DV8wP+HkOxBU9j0sa1BBLjXk60u8r/S8V
+ bAI0490GbQRa6XByE6ZPqUXMAVjyBN6TOe3txr56hWI/NrEHVRFQJP/IEG3egE05cMvB
+ QtCQ==
+X-Gm-Message-State: APjAAAXPEUOuxH3uljPh4fPwJGGKqi70by9KbNDxs9NPUaO+rsPpdPjG
+ Go5MVAH1uNJGLcudN8wLUGtFAA==
+X-Google-Smtp-Source: APXvYqz7qPD3lcPFcsPhPwWRvMw87SDHJqroufj6xUUa82+Rg/rHfw5UX4ASw8sGCUQU1xEFrG6osg==
+X-Received: by 2002:a05:6000:1189:: with SMTP id
+ g9mr22063768wrx.51.1566805384996; 
+ Mon, 26 Aug 2019 00:43:04 -0700 (PDT)
 Received: from [10.1.2.12] (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr.
  [90.63.244.31])
- by smtp.gmail.com with ESMTPSA id x6sm29392070wmf.6.2019.08.26.00.42.01
+ by smtp.gmail.com with ESMTPSA id r16sm21538843wrc.81.2019.08.26.00.43.04
  (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
- Mon, 26 Aug 2019 00:42:02 -0700 (PDT)
-Subject: Re: [PATCH 2/3] amlogic: arm: add Amlogic SM1 based Khadas VIM3
- variant bindings
+ Mon, 26 Aug 2019 00:43:04 -0700 (PDT)
+Subject: Re: [PATCH 3/3] arm64: dts: khadas-vim3: add support for the SM1
+ based VIM3
 To: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
 References: <20190823081427.17228-1-narmstrong@baylibre.com>
- <20190823081427.17228-3-narmstrong@baylibre.com>
- <CAFBinCBLVDVWPbDZ+_cPTbJNCavvzJH4A6U8D9XWVSR-j3fzFQ@mail.gmail.com>
+ <20190823081427.17228-4-narmstrong@baylibre.com>
+ <CAFBinCAH2LP2OyFEek290Prm9N=rxxAc-9gZ_jS0tY_4+utByA@mail.gmail.com>
 From: Neil Armstrong <narmstrong@baylibre.com>
 Openpgp: preference=signencrypt
 Autocrypt: addr=narmstrong@baylibre.com; prefer-encrypt=mutual; keydata=
@@ -117,23 +118,23 @@ Autocrypt: addr=narmstrong@baylibre.com; prefer-encrypt=mutual; keydata=
  VsbXrP9BZ6snXyHfebPnno/te5XRqZTL9aJOytB/1iUna+1MAwBxGFPvqeEUUyT+gx1l3Acl
  ZaTUOEkgIor5losDrePdPgE=
 Organization: Baylibre
-Message-ID: <c853d934-113c-2305-f229-1e2c7138fc3f@baylibre.com>
-Date: Mon, 26 Aug 2019 09:42:01 +0200
+Message-ID: <18abe20d-b86c-a4ed-70bc-c8451dcf5348@baylibre.com>
+Date: Mon, 26 Aug 2019 09:43:04 +0200
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
  Thunderbird/60.8.0
 MIME-Version: 1.0
-In-Reply-To: <CAFBinCBLVDVWPbDZ+_cPTbJNCavvzJH4A6U8D9XWVSR-j3fzFQ@mail.gmail.com>
+In-Reply-To: <CAFBinCAH2LP2OyFEek290Prm9N=rxxAc-9gZ_jS0tY_4+utByA@mail.gmail.com>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190826_004204_268010_DB30CFF3 
-X-CRM114-Status: GOOD (  17.85  )
+X-CRM114-CacheID: sfid-20190826_004306_410676_E85435BE 
+X-CRM114-Status: GOOD (  14.66  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:441 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:443 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -151,74 +152,33 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: khilman@baylibre.com, linux-amlogic@lists.infradead.org,
- linux-kernel@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
- devicetree@vger.kernel.org
+Cc: khilman@baylibre.com, linux-kernel@vger.kernel.org,
+ linux-arm-kernel@lists.infradead.org, linux-amlogic@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On 25/08/2019 21:51, Martin Blumenstingl wrote:
-> Hi Neil,
-> 
-> the subject should be: dt-bindings: arm: amlogic: ...
-
-damn sure
-
-> 
+On 25/08/2019 21:55, Martin Blumenstingl wrote:
 > On Fri, Aug 23, 2019 at 10:15 AM Neil Armstrong <narmstrong@baylibre.com> wrote:
 >>
->> The Khadas VIM3 is also available with the Pin-to-pin compatible
->> Amlogic SM1 SoC in the S905D3 variant package.
->>
->> Change the description to match the S905X3/D3/Y3 variants like the G12A
->> description, and add the vim3 compatible.
+>> Add the Amlogic SM1 based Khadas VIM3, sharing all the same features
+>> as the G12B based one, but:
+>> - a different DVFS support since only a single cluster is available
+>> - audio is still not available on SM1
 >>
 >> Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
->> ---
->>  Documentation/devicetree/bindings/arm/amlogic.yaml | 3 ++-
->>  1 file changed, 2 insertions(+), 1 deletion(-)
->>
->> diff --git a/Documentation/devicetree/bindings/arm/amlogic.yaml b/Documentation/devicetree/bindings/arm/amlogic.yaml
->> index b48ea1e4913a..2751dd778ce0 100644
->> --- a/Documentation/devicetree/bindings/arm/amlogic.yaml
->> +++ b/Documentation/devicetree/bindings/arm/amlogic.yaml
->> @@ -150,9 +150,10 @@ properties:
->>            - const: amlogic,s922x
->>            - const: amlogic,g12b
->>
->> -      - description: Boards with the Amlogic Meson SM1 S905X3 SoC
->> +      - description: Boards with the Amlogic Meson SM1 S905X3/D3/Y3 SoC
->>          items:
->>            - enum:
->>                - seirobotics,sei610
->> +              - khadas,vim3
+> schematics are not available yet but this looks sane so:
+> Reviewed-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+> 
 
-Khadas asked me to rename the board to "vim3l", which is the commercial name,
-should I only change the DT name or also the compatible "khadas,vim3l" ?
+I assume it's the same schematics as the A311D VIM3.
 
->>            - const: amlogic,sm1
-> on the GXL we differentiate between S905X and S905D
-> do we need to differentiate S905X3 from S905D3 (for example)?
-
-From a pure SoC die perspective they are the same, exactly like
-the S905X and S905D, only the package changes.
-So only the board DT will determine which eth PHY is used,
-if a DSI panel is connected, a demodulator is connected.. even
-if the underlying package is S905Y3 without any of these pins
-available.
-
-I'll need kevin's feedback anyway.
+BTW, as I asked on patch 2, Khadas asked me to rename the board to "vim3l",
+which is the commercial name, should I only change the DT name or also the
+compatible "khadas,vim3l" ?
 
 Neil
-
-
-> 
-> 
-> Martin
-> 
-
 
 _______________________________________________
 linux-amlogic mailing list
