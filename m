@@ -2,79 +2,78 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0BE59A0316
-	for <lists+linux-amlogic@lfdr.de>; Wed, 28 Aug 2019 15:23:37 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9AAD1A044D
+	for <lists+linux-amlogic@lfdr.de>; Wed, 28 Aug 2019 16:12:07 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
 	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=Dxa6pNIVSzVcaG6iL3pTYaKKI+VO3nHG66V+l5IzFmw=; b=g4+PAhzAHaoDMy
-	GH+j2siFTGnQD7lrANu/nqiygk7wuvWZQu939Z1f3YSkYh6cf4yEwIZSfm+Sl1PJAxT5sVuK91HFj
-	JYnUTNrgxpN/kZPmgReqmKIcbWmPGa6FF+0+oRAis7O9KcZs10EAl9PDVeAoDV9UZ9gGrKO4/IIBj
-	5iMgyzsqz8oUaYHMeOyPsX75SsTdLsOBj7qZz8DGjUH5KlTF+Z5uIN4wJkIfX//J4/e4JBjyVqMkV
-	Zr7tpG0n5zsPxnn2lo6W+m8INfb2ION/KFY47kCwMnQnr3DiVsgd8hCJcKag75y5zueTZ2yec5tX7
-	UkBMfWyDGwpOjx0+JFpQ==;
+	List-Owner; bh=pMtAcikQrpz24fm/UrzqfIbV8AE/9xyLanmjDvHIs+o=; b=BRpwnVKuYfLBDv
+	h6lzA9eUSglQqqCEKMx5byikW8KYHAN9m8x80SE5hLBvtclTITxfRR+Z8oFqETo1ZBUbIumefI8GQ
+	eMJwdEE97V0NPUun1k69TQVBvK/Ll+mM82t+CyHQdod6MWwQXtYPIMddsGARwI6jf0UQhrcoh+jjB
+	bxxH8Z6PRVBWBiGlxj3td8XXVTHBsGSDv1XWA9GMSpFUcndHEt9L7CTBznuOem8gCgbUbI1nljPWJ
+	FL+mrbRb14puZ/Kcxjv/x4/NFNz2s65ar1KjQ2fM4xu/P1V8doL42smYVf8KxaV9AYhiId7jPB7Vx
+	0QfjSmU0YI5i9N/BCsyg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i2xvA-0005rV-9A; Wed, 28 Aug 2019 13:23:32 +0000
-Received: from mail-wr1-x443.google.com ([2a00:1450:4864:20::443])
+	id 1i2yg9-0007Qs-59; Wed, 28 Aug 2019 14:12:05 +0000
+Received: from mail-wm1-x341.google.com ([2a00:1450:4864:20::341])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i2xuv-0005ih-8d
- for linux-amlogic@lists.infradead.org; Wed, 28 Aug 2019 13:23:19 +0000
-Received: by mail-wr1-x443.google.com with SMTP id e16so2503191wro.5
- for <linux-amlogic@lists.infradead.org>; Wed, 28 Aug 2019 06:23:16 -0700 (PDT)
+ id 1i2yg5-0007PI-6y
+ for linux-amlogic@lists.infradead.org; Wed, 28 Aug 2019 14:12:03 +0000
+Received: by mail-wm1-x341.google.com with SMTP id k1so237060wmi.1
+ for <linux-amlogic@lists.infradead.org>; Wed, 28 Aug 2019 07:12:00 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=from:to:cc:subject:date:message-id:mime-version
  :content-transfer-encoding;
- bh=SMEwDnA8PK409z+Aw0DoKAxN3PbjiYfTei3jRL70xXE=;
- b=Uqh5RTPxsxlgO6fW+/GUp4PHz90/PXrd2mH3+ERhbCtOXr5thlsbr2p/LwY2qGqpwp
- VuHQen7EZmGCxAiXC1cfifEbYOaAC+p3+x/DJIs3P+8EgDXQ89qvHHqwqrG8nhBdxW+c
- tJwQqCHExOTpgBG9ImlyJxpAel/U4SnSMOwbYsPe88WLxu7Pmq5UYVC9duZEaD1GaLZo
- 81vaNBLxSAlavlQjnWQ2ndvY1rZyH4+flemGFSIF98DM/qchwIzCXEG3n9t79jy2Y7TM
- jXnrU60lr0P44mWM3EoDT07kZ+I4m5LUEMwJfftMdDRo8EuKrXUMraB10G9aCyud/5+t
- tuPg==
+ bh=f1KAv8pKi0AoAgvfh+n5R42Iglf6I+wQt55KJGFF0fM=;
+ b=pc2FgNUQUjmKwzqDzFdyQRbg8Pz0IJ1f67uI8PAy3R+CZy+hUqM5zfcBwGGC0RoBeZ
+ +R0k3wlkOb2mxbERi6LKxTZZzNQu4F02boiRkENQKTIvk9fBBLIYpfPbgaADkVqMgSCJ
+ V1snUwxahhr3Mra0ax3jiesoRcDHZvl5OdK0wonGTm//SQCKQWwaX+n1REV0O+KdfyqD
+ mn8DjWAWkOKYSfHlaRQ7tEDhtYXRekb7UhNMdiz86p8XFnanbwHRSK/wRzlX3zjD0yAi
+ rSgrbYyRggylCIaxeMZ2SQxHL6BiJv3ReBDfNsga+HY/LeH7EXiW/l97aHRxzYH7MkP2
+ j4OQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
  :content-transfer-encoding;
- bh=SMEwDnA8PK409z+Aw0DoKAxN3PbjiYfTei3jRL70xXE=;
- b=Lq/w0uMehtR5KVw2KVI8WwghSYmPgWZUJNJ6489tbe78HG05YRSztWSDu+3uFYaBV9
- KyEr8Wdde7v+pjuihnt9uAnTVjzdD5NJElwfXIL4wlJGaOhxtYN68AAqs6qQuOb1vsPz
- u+aChfFhU0iAd4eFz4vA0MgdenenKDhbbP3DimH09J4bSoZAdyI4r+dEVtSdeSAS6Q6f
- qqtchXZa5fkuuO6Pg7ZByXgUgKMwR7OeeTRf2RmT2aljkZDzrj5vz3Golq3qYAIy16ce
- 62PoP2vEXofRDAyOdpODNzOG6Srzyl9rgIYdIT3YIXdHSUTQ13vmdII+tPYYFlVRsXg6
- 4kNA==
-X-Gm-Message-State: APjAAAU4mzqMtnPyiaFREq9++XCC2cijpNLh31wrTZxVsYVD/OK3juQ4
- sAnS6VQFR7G/DI51CwMl7xzSKrkZ/dXSow==
-X-Google-Smtp-Source: APXvYqwSRs75Y6JmL0J+jZ9ePz6PFEOEGjCGu9Py7xJQeuRqpBpdE3NXmyi2gk1js3KzTuh8qnnuxw==
-X-Received: by 2002:adf:ba4a:: with SMTP id t10mr4522910wrg.325.1566998595621; 
- Wed, 28 Aug 2019 06:23:15 -0700 (PDT)
+ bh=f1KAv8pKi0AoAgvfh+n5R42Iglf6I+wQt55KJGFF0fM=;
+ b=P8QbyH2UH9rXUyIjREKU1+EWDmE1kMwdRU+Pq0Ve2mNPXwN0/qIV00xaAyipDcQQCl
+ p8n/XWoqbtK9wg5nmTV4KGAZB6WwhPw7k2rEujEMiEVcJdq0qljUvEHhniGsSFwgrljj
+ LPUt1K7KKU98GX8ELfRponT17uuGS7G33JDY5rtc3IFVMt+B6oPhpgnFjURNaYbQLEH3
+ T391H9s2s0mr5e9YRn9zdCj8RlH9csV09pSB1J87hfSowSCrd5X9vcr0CM3GKgpvSQJS
+ unuVDpvHMBhOUd1t+X3yzFT14e7qBxHKsmNmzcqFE5ORvdwdGdyGN2XKkVT1zxRUb/Ih
+ gixA==
+X-Gm-Message-State: APjAAAXi7cDoZ4ghOixVjuPK65/PZ8gLmFPqj1TMO5lFA1jII7E7ghyg
+ Qn3LY+sGYi33exWzWbiN5FtvIg==
+X-Google-Smtp-Source: APXvYqz96TmPPVEmMTQIWd5o34VAawuoSnxOtUnJnMiSj9qw7YFhgfiDwSSFrKcnrJG3/uC29Gpqlg==
+X-Received: by 2002:a1c:a503:: with SMTP id o3mr4911436wme.37.1567001519544;
+ Wed, 28 Aug 2019 07:11:59 -0700 (PDT)
 Received: from bender.baylibre.local
  (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
- by smtp.gmail.com with ESMTPSA id z7sm2785505wrh.67.2019.08.28.06.23.14
+ by smtp.gmail.com with ESMTPSA id a11sm2774838wrx.59.2019.08.28.07.11.58
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Wed, 28 Aug 2019 06:23:15 -0700 (PDT)
+ Wed, 28 Aug 2019 07:11:58 -0700 (PDT)
 From: Neil Armstrong <narmstrong@baylibre.com>
-To: dri-devel@lists.freedesktop.org
-Subject: [PATCH RESEND] drm/meson: vclk: use the correct G12A frac max value
-Date: Wed, 28 Aug 2019 15:23:11 +0200
-Message-Id: <20190828132311.23881-1-narmstrong@baylibre.com>
+To: khilman@baylibre.com
+Subject: [PATCH v2 0/3] arm64: meson-sm1: add support for the SM1 based VIM3L
+Date: Wed, 28 Aug 2019 16:11:54 +0200
+Message-Id: <20190828141157.15503-1-narmstrong@baylibre.com>
 X-Mailer: git-send-email 2.22.0
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190828_062317_451990_32868456 
-X-CRM114-Status: UNSURE (   9.03  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190828_071201_256819_CDC57977 
+X-CRM114-Status: GOOD (  11.81  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:443 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:341 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -99,44 +98,46 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-When calculating the HDMI PLL settings for a DMT mode PHY frequency,
-use the correct max fractional PLL value for G12A VPU.
+This patchset adds support for the Amlogic SM1 based Khadas VIM3L variant.
 
-With this fix, we can finally setup the 1024x768-60 mode.
+The S903D3 package variant of SM1 is pin-to-pin compatible with the
+S922X and A311d, so only internal DT changes are needed :
+- DVFS support is different
+- Audio support not yet available for SM1
 
-Fixes: 202b9808f8ed ("drm/meson: Add G12A Video Clock setup")
-Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
----
-Fixed typo in commit log, 1024x76 => 1024x768
+This patchset moved all the non-g12b nodes to meson-khadas-vim3.dtsi
+and add the sm1 specific nodes into meson-sm1-khadas-vim3l.dts.
 
- drivers/gpu/drm/meson/meson_vclk.c | 9 +++++++--
- 1 file changed, 7 insertions(+), 2 deletions(-)
+Display has a color conversion bug on SM1 by using a more recent vendor
+bootloader on the SM1 based VIM3, this is out of scope of this patchset
+and will be fixed in the drm/meson driver.
 
-diff --git a/drivers/gpu/drm/meson/meson_vclk.c b/drivers/gpu/drm/meson/meson_vclk.c
-index ac491a781952..f690793ae2d5 100644
---- a/drivers/gpu/drm/meson/meson_vclk.c
-+++ b/drivers/gpu/drm/meson/meson_vclk.c
-@@ -638,13 +638,18 @@ static bool meson_hdmi_pll_validate_params(struct meson_drm *priv,
- 		if (frac >= HDMI_FRAC_MAX_GXBB)
- 			return false;
- 	} else if (meson_vpu_is_compatible(priv, VPU_COMPATIBLE_GXM) ||
--		   meson_vpu_is_compatible(priv, VPU_COMPATIBLE_GXL) ||
--		   meson_vpu_is_compatible(priv, VPU_COMPATIBLE_G12A)) {
-+		   meson_vpu_is_compatible(priv, VPU_COMPATIBLE_GXL)) {
- 		/* Empiric supported min/max dividers */
- 		if (m < 106 || m > 247)
- 			return false;
- 		if (frac >= HDMI_FRAC_MAX_GXL)
- 			return false;
-+	} else if (meson_vpu_is_compatible(priv, VPU_COMPATIBLE_G12A)) {
-+		/* Empiric supported min/max dividers */
-+		if (m < 106 || m > 247)
-+			return false;
-+		if (frac >= HDMI_FRAC_MAX_G12A)
-+			return false;
- 	}
- 
- 	return true;
+Dependencies:
+- patch 1,2: None
+- patch 3: Depends on the "arm64: meson-sm1: add support for DVFS" patchset at [1]
+
+Changes since v1:
+- renamed compatible to khadas,vim3l
+- renamed DT file to meson-sm1-khadas-vim3l.dts
+
+[1] https://patchwork.kernel.org/cover/11109411/
+
+Neil Armstrong (3):
+  arm64: dts: khadas-vim3: move common nodes into meson-khadas-vim3.dtsi
+  amlogic: arm: add Amlogic SM1 based Khadas VIM3L bindings
+  arm64: dts: khadas-vim3: add support for the SM1 based VIM3L
+
+ .../devicetree/bindings/arm/amlogic.yaml      |   3 +-
+ arch/arm64/boot/dts/amlogic/Makefile          |   1 +
+ .../amlogic/meson-g12b-a311d-khadas-vim3.dts  |   1 +
+ .../dts/amlogic/meson-g12b-khadas-vim3.dtsi   | 355 -----------------
+ .../amlogic/meson-g12b-s922x-khadas-vim3.dts  |   1 +
+ .../boot/dts/amlogic/meson-khadas-vim3.dtsi   | 360 ++++++++++++++++++
+ .../dts/amlogic/meson-sm1-khadas-vim3l.dts    |  70 ++++
+ 7 files changed, 435 insertions(+), 356 deletions(-)
+ create mode 100644 arch/arm64/boot/dts/amlogic/meson-khadas-vim3.dtsi
+ create mode 100644 arch/arm64/boot/dts/amlogic/meson-sm1-khadas-vim3l.dts
+
 -- 
 2.22.0
 
