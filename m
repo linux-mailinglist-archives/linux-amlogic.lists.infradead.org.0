@@ -2,81 +2,85 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 01084A19FF
-	for <lists+linux-amlogic@lfdr.de>; Thu, 29 Aug 2019 14:27:12 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id EC7C8A1B66
+	for <lists+linux-amlogic@lfdr.de>; Thu, 29 Aug 2019 15:27:48 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=LBjTbxX373udNCiNXLfceNpWygCxkBkRI/EiE7uJ19M=; b=MzL3Mbx4qLfyKz
-	mOssf0FB0Ouu51GPfarrPFa/lOeOFTwDO815yi/HXWwB8415fDZlicVlg7EZSZXjZswU4836nKyeS
-	41kcHmN6EE7AAUUTrZsT2cYFrNZfs+jQPvhB/kpPlYqBsv+uAI8+oqHQoosvnkurbEXkbNYfcZuft
-	zNJ6X1jRFXHnhbgCMMfoDVhysu4Ax5pHeg04j1yCVDZq8aIloLrgqQejViwwoUA7n0P6qiShx1A+b
-	KItA1C2GxQs3rwUQsxc/rdX3zmcJCh7qsE/lSz9xBIIAAExeKLNdgxp3rXNXU5PLSqAztpDyHXBvt
-	W9k36mQOLyvxu0pcHy7w==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=Tr7tIk1sa9BRratLtVVuTpByFx2vTCHpYdLpjLnDKoA=; b=VpQGQZ8eVXpf6n
+	gXr5IdvS+kMUCldkMaJ4m+xiSNhKK4lhz81r/D1ZpHsxjMclpe6ELkalceG1N+oGXFWSVnWDl2jX1
+	B64bIAKENF1cv6avGSMZiCgPAwSey1HlrX5AZ6TEsiUFcPVtPuDvvTzYCTtXOQIIrObeROkb81zQH
+	kHvCFm359pyqSg1e/KuLdMZvAUVBnbYCe/gZty2zUF98CZ8KM6F3EHFIfGJr9fkjyaA+6wYBFCJ9/
+	d4PJLCXAFw09YKWKJkWWzt2IWXCrTfD6kTgFze7sGVuAGEp34dFDab3xRE+l1U0WVf6zFf1eQCpSO
+	vyQno6glsgQdfi7Hn0IA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i3JW7-00048U-Oh; Thu, 29 Aug 2019 12:27:07 +0000
-Received: from mail-ot1-f65.google.com ([209.85.210.65])
+	id 1i3KSi-0000f7-Vw; Thu, 29 Aug 2019 13:27:41 +0000
+Received: from mail-wr1-x443.google.com ([2a00:1450:4864:20::443])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i3JW2-00047i-O4; Thu, 29 Aug 2019 12:27:04 +0000
-Received: by mail-ot1-f65.google.com with SMTP id o101so3168015ota.8;
- Thu, 29 Aug 2019 05:27:00 -0700 (PDT)
+ id 1i3KSd-0000dx-SI
+ for linux-amlogic@lists.infradead.org; Thu, 29 Aug 2019 13:27:37 +0000
+Received: by mail-wr1-x443.google.com with SMTP id c3so3430754wrd.7
+ for <linux-amlogic@lists.infradead.org>; Thu, 29 Aug 2019 06:27:32 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=baylibre-com.20150623.gappssmtp.com; s=20150623;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=ObZxzVUzRVJkzuGbqaSj0zLHjJYTKVhbZ4DRyEiw5iM=;
+ b=V+GRa2DvQOlLn0X+4NST+cS1WZ4h3PtMrz76coZnLJl7sJ0s9T6gbOS9+Tbs3b9Ntk
+ 8ghDZm6ofJrbfDX+jkkWoqRsCsFjNWULiUOthNoB9SIWFeGduuPxoSqp90V8+hUWxKBu
+ FdrwiKzfHq8mwi+ONQPyptIpRWkIAo6ji0DiGNoFxexuWDtCL9+0oD+X8fZTr0UQK8nR
+ Ca7zaolB5j1QD7H8bNSZHjQfRVf6dgdYugvY8uL0YQWBtLLXpY8BwcwSgnfo1PKAn2Jo
+ 4t08AAgTQS17cFRVCDs1hgrJfq4OkNhcJG2zCPKUAFIvu3kJh4bw4mAxb+SbL8M0vHgG
+ VMIA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=JISakUM5CfOU3yuiNb3Jx9kDoSgKiU08qnHS4spuyBM=;
- b=uMx9T41sHl//nY5JJ9Y8T3Put5bPxr0LgMqkAglGq7uqr9th4wDOOtFADiqIT+0wfM
- cfEAIk+lp2pPPC5wJjAIFnhRZczDi9rT1Nl/G6SpM8IZVoPI1xDrwCYwwomhAsJUMI5g
- hoVCIHpRphZFBV8458/yce/QOk5E/bATg2p1zqQ8MmyKCx8T11oH3+MZvgIKpf/ThNxb
- MjY0heclaxMkUF7klrWa7L+bD9427dq/CaLkrv13E8lNdvt0jUgRdYrIOw3Ba2h4+Jcn
- lkXJ+2b2qPet2VzNpk0jRULmQAGfiR52yi4NfYGxko86uUOrv2G1octTEI9DTl2yxUFp
- zxBQ==
-X-Gm-Message-State: APjAAAWsdXCsvPh2k9vhFOwn5Mkf0ABWqc+76x8h3t/XlKKBNB4wWMqF
- B51VktLE8VJn8lw9Vb5dyw==
-X-Google-Smtp-Source: APXvYqxQFzYed8B8VKY779L9N8Rwlqs155UUnDupIGmcQZ1ooy42GSMcysJRv7n+ECaVUK2B9ONlyQ==
-X-Received: by 2002:a9d:7dc6:: with SMTP id k6mr6756221otn.99.1567081619385;
- Thu, 29 Aug 2019 05:26:59 -0700 (PDT)
-Received: from localhost (24-155-109-49.dyn.grandenetworks.net.
- [24.155.109.49])
- by smtp.gmail.com with ESMTPSA id a94sm708682otb.15.2019.08.29.05.26.58
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=ObZxzVUzRVJkzuGbqaSj0zLHjJYTKVhbZ4DRyEiw5iM=;
+ b=O9Y+/tworEO2RRFT6egAuHx5jw3ul/DtI+eT7zMbI1Laurgk4YJRFY966nMQmSSEVR
+ kN94dy8HlKEn+jYyiW5Vyjurrg5Yy8z+B0NFc7FZ3VHv2CrA+c7xqsf0pFp2YB9DMbfh
+ R8mPoQ7jks1QG8jyKiFb1c6S7bng9eA3tC3oyHbvv207f+616MUMcIQga7g79slMeOld
+ WP2keTpqRvFxBAXd+nHx6CDuGd12oHJDciZxB966acw3WcjDyP4i2M/yhw8WU37A93MA
+ FH8ln1CVGqDAp1bndTUrfqeE9+Ds5eXiFwvM+GWLCPGKd+kGd4PhKs7qkKAxqBH21dQi
+ OPbQ==
+X-Gm-Message-State: APjAAAXJD6jKmJS2SaNuJ/3vOstloZwSmmb77DBcdKgBvn8nrIPJ1jbp
+ BMenDz5Q2f85aEKLDj9nHQY7sw==
+X-Google-Smtp-Source: APXvYqyOHXWpdSBnIHcSQVNTV28gpUMVgF6m5ArVN54Ou1BYOV7RZWWE14x6SLW7DnHo3o6yeQTnYA==
+X-Received: by 2002:a5d:658d:: with SMTP id q13mr4108312wru.78.1567085250674; 
+ Thu, 29 Aug 2019 06:27:30 -0700 (PDT)
+Received: from bender.baylibre.local
+ (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
+ by smtp.gmail.com with ESMTPSA id c62sm2420823wme.20.2019.08.29.06.27.29
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Thu, 29 Aug 2019 05:26:58 -0700 (PDT)
-Date: Thu, 29 Aug 2019 07:26:58 -0500
-From: Rob Herring <robh@kernel.org>
-To: Neil Armstrong <narmstrong@baylibre.com>
-Subject: Re: [PATCH v3 2/3] dt-bindings: arm: amlogic: add Amlogic SM1 based
- Khadas VIM3L bindings
-Message-ID: <20190829122658.GA10660@bogus>
-References: <20190828141816.16328-1-narmstrong@baylibre.com>
- <20190828141816.16328-3-narmstrong@baylibre.com>
+ Thu, 29 Aug 2019 06:27:30 -0700 (PDT)
+From: Neil Armstrong <narmstrong@baylibre.com>
+To: khilman@baylibre.com
+Subject: [PATCH] arm64: dts: meson-sm1-sei610: add stdout-path property back
+Date: Thu, 29 Aug 2019 15:27:28 +0200
+Message-Id: <20190829132728.20042-1-narmstrong@baylibre.com>
+X-Mailer: git-send-email 2.22.0
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20190828141816.16328-3-narmstrong@baylibre.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190829_052702_787978_D759D69F 
-X-CRM114-Status: GOOD (  11.53  )
-X-Spam-Score: 0.7 (/)
+X-CRM114-CacheID: sfid-20190829_062735_953061_3C778317 
+X-CRM114-Status: UNSURE (   7.62  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.7 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (robherring2[at]gmail.com)
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit (robherring2[at]gmail.com)
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.210.65 listed in list.dnswl.org]
- 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
+ no trust [2a00:1450:4864:20:0:0:0:443 listed in]
+ [list.dnswl.org]
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -88,27 +92,42 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: khilman@baylibre.com, linux-amlogic@lists.infradead.org,
- linux-kernel@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
- devicetree@vger.kernel.org
+Cc: linux-amlogic@lists.infradead.org, linux-kernel@vger.kernel.org,
+ linux-arm-kernel@lists.infradead.org, Neil Armstrong <narmstrong@baylibre.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On Wed, Aug 28, 2019 at 04:18:15PM +0200, Neil Armstrong wrote:
-> The Khadas VIM3 is also available as VIM3L with the Pin-to-pin compatible
-> Amlogic SM1 SoC in the S905D3 variant package.
-> 
-> Change the description to match the S905X3/D3/Y3 variants like the G12A
-> description, and add the khadas,vim3l compatible.
-> 
-> Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
-> ---
->  Documentation/devicetree/bindings/arm/amlogic.yaml | 3 ++-
->  1 file changed, 2 insertions(+), 1 deletion(-)
+The commit d4609acce187 ("arm64: dts: meson-sm1-sei610: enable DVFS")
+incorrectly removed the chosen node and the stdout-path property.
 
-Reviewed-by: Rob Herring <robh@kernel.org>
+Add these back.
+
+Fixes: d4609acce187 ("arm64: dts: meson-sm1-sei610: enable DVFS")
+Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
+---
+ arch/arm64/boot/dts/amlogic/meson-sm1-sei610.dts | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/arch/arm64/boot/dts/amlogic/meson-sm1-sei610.dts b/arch/arm64/boot/dts/amlogic/meson-sm1-sei610.dts
+index e1cac880b02c..3435aaa4e8db 100644
+--- a/arch/arm64/boot/dts/amlogic/meson-sm1-sei610.dts
++++ b/arch/arm64/boot/dts/amlogic/meson-sm1-sei610.dts
+@@ -19,6 +19,10 @@
+ 		ethernet0 = &ethmac;
+ 	};
+ 
++	chosen {
++		stdout-path = "serial0:115200n8";
++	};
++
+ 	emmc_pwrseq: emmc-pwrseq {
+ 		compatible = "mmc-pwrseq-emmc";
+ 		reset-gpios = <&gpio BOOT_12 GPIO_ACTIVE_LOW>;
+-- 
+2.22.0
+
 
 _______________________________________________
 linux-amlogic mailing list
