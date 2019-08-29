@@ -2,56 +2,56 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1E920A1F13
-	for <lists+linux-amlogic@lfdr.de>; Thu, 29 Aug 2019 17:27:39 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C3DD2A1F1E
+	for <lists+linux-amlogic@lfdr.de>; Thu, 29 Aug 2019 17:28:52 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=mTIIKqROPro5F5HR7B7p1Vk82MJ3KUN+PO+Rw8vbias=; b=MA8PHq43ddxKzF
-	Ia/YVPjucsdTcwB46gij44XsqybZhjRIGT7zpegBOKKUJNakDUBNlGEJ2pKoz25AwMb1vMFz8Sw/F
-	4GmVlSxl1bU9R9dacXMW1HCe8IrZ7FtzWbUfXTd+ViTg98uYlKP4dEGqmuITWlzs36mzLJ/jyWTBE
-	kEb5J3AeKAMzNmGOucje6JHcSe9eIBopnNYs9dZ/qlSOrL0o5CWSXJPVsg8WzYjcINFPdpj+DQ2dU
-	e0/deYBKywAo6oLoI4Qi4jwL+gZbsMZNL43ASu2oxprBbr2sosZfwDeo9jvE1zX0rqncE3P/kaXsC
-	QI6CJ1eeTH13TxnRBrSg==;
+	List-Owner; bh=BYeuImKx0ZUnIQ8mzO9TrHGOuEoRTrciXdGL9UH9Pqg=; b=BT0FQ1uGLtFUIr
+	rbKhavY3dubk2rx0ulMozO1djjOSDLWC+RSzuRSb77sti2izHcdwKp7K812tN68G4ibHOKfj+sLZG
+	Ew+8x0TzwiNWZE9AEeKTF+iMbt3DYMu98JA3otl2zezoBGFlJhu7QVwnpNc0gPvgxI02ZO8YC1y+3
+	D8sPnohSP7KJerIJ22syeDoGK1aHPgW8AijVwzR6EKEZAsTzqYPSeYPzEDz/XFge6+3HxuJFddpkF
+	nkjLFrg6H4Me+7/MSxx3bapFxl7I/ryZNnRJbae2/0qyaogVdu/OGZ0KbxAwqKRBxY1ZnAc6xCIuN
+	qs4LB/zE2LRkrZUFQjqg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i3MKh-00015J-23; Thu, 29 Aug 2019 15:27:31 +0000
-Received: from mail-wm1-x344.google.com ([2a00:1450:4864:20::344])
+	id 1i3MLv-0001Hk-7H; Thu, 29 Aug 2019 15:28:47 +0000
+Received: from mail-wm1-x341.google.com ([2a00:1450:4864:20::341])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i3MH8-0007RZ-94
- for linux-amlogic@lists.infradead.org; Thu, 29 Aug 2019 15:23:53 +0000
-Received: by mail-wm1-x344.google.com with SMTP id v15so4188169wml.0
- for <linux-amlogic@lists.infradead.org>; Thu, 29 Aug 2019 08:23:49 -0700 (PDT)
+ id 1i3MH8-0007Rv-TE
+ for linux-amlogic@lists.infradead.org; Thu, 29 Aug 2019 15:23:54 +0000
+Received: by mail-wm1-x341.google.com with SMTP id p13so4315429wmh.1
+ for <linux-amlogic@lists.infradead.org>; Thu, 29 Aug 2019 08:23:50 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=z4qtGd3bv+h29yhSk22SX0CJaSUFSLWmZFG52XETCDI=;
- b=FSUPjkY6A0N+lU17R2nDiCi+Wpu9Nhe1HAEAWHeXyRhHNhBVqXaeLlGHx/UpWWJsVG
- M1ZcrOhadokARZds3Vrl5++RopTa1GizrCVj7fCvpeFSLYsHF8okzW7sDXCHALx/4OK6
- 9e+yFPjhVkD1IQtHiNEzN/AD9ZTYqgKFBcCdC1rHJQaoBEyrOV4JSSpRDDz8q4sA8uV4
- V+8IFU0vFQHs2shx8cXJ2MtPM5ASxFtFhMCCvnmlTAUmkVCt4jwawQm+312MYg8skSkR
- P4S6qb+oxfgaChDmpCGRIsGNaxdKd3tY76Opq8vetB5Zm31ybHmb+0wblFqJxcP9SRN7
- dC+w==
+ bh=GGMiOymgVde3bgRb+DG9WorFnJ3h5/TfeAtHJfoWjlE=;
+ b=B3ZGPqjTyaCWvlxDHFPBBGVhYkZNze/okso9J4FFdKcmGYWM+M3hBtt8WlUbxOsGMl
+ Y4CDy+UqQ1yaEKiONf5+OyfRCgU8hxdZ9zCTCdAZTHZk6tqdA9974t67ns1s1MO03/jN
+ UiEYoREge9K1WCIX8aAodDh9pvdTfGJwFL9hUjwYYYd5+hkAtI4BKgzquk43GPyXEG+q
+ Uv5TSnXXQEROzP93N2JhJALRETIRDbGprFiWzSERHyL2usBfPqgLxwEl4lvARzzwLK9g
+ 9Cuv6tTMbcZzw6xGXOKuZd3d/D268t+Jo4guN2YWvkUkzlgtPF7lUi9T3rP1CbdZA06J
+ XrVA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=z4qtGd3bv+h29yhSk22SX0CJaSUFSLWmZFG52XETCDI=;
- b=cVJMjKpVbt1U6qcXLXV8DA8fmv/WTXX1j2gwIesR7Y6+uSjpe6X5nuTaZM2cZDdpga
- /qHrf3pYszaJwHlnYeTPBAAzHbK1Lynr/1Bsck6OPenAKN+rI3mGlnvP0b/krZ9EPHcF
- rtw3sUcLfIK9UChm5AlKHmCRQ8HH0iRBoCIpQ4cieDRJ93G0vzmHWqCGOJ5o1G+AmGYs
- iyd9rWwULcG6lB+8E8ThUT+OOKsfzAhxfwEC9H6CQGHIo05NoXiBDxwIjN/0NBu26WPq
- 9KVRWFt8AZwUI3Sir+sdFCoal8XlMdS7nGLBt8M/YyLyUJVRY2VAohP2bcGtnvPUXl00
- chAA==
-X-Gm-Message-State: APjAAAU/GXIuINmVWpcD3yD7/6t3D5aFD6zHzGhGwiYk+gvccbv8x4Ob
- WrbsVuIGInzad/A15JKkrL9DbA==
-X-Google-Smtp-Source: APXvYqw/3Puht71IYQQu2BpacUINPd2n8SKih/ViY/jGkwU097rCP8OcAhVLyZ/qjWn1hqHJKxJLDw==
-X-Received: by 2002:a1c:750f:: with SMTP id o15mr12778949wmc.67.1567092228593; 
- Thu, 29 Aug 2019 08:23:48 -0700 (PDT)
+ bh=GGMiOymgVde3bgRb+DG9WorFnJ3h5/TfeAtHJfoWjlE=;
+ b=BZvyr2pbBxDF3L7jhiPWHJ6MFggHdzxcwb1zY5J36vi/EDEVbPh0ORF9gjQ55ncc4p
+ J2scpzGdRX/lFfsVfK7dYy51+15ZsjZIXujvTLh9s+0y6JuWZ2cx+6+E1xP8kaP/MUYR
+ YsaaidgTgtJ5ZmleCwmrYVh4w6L8KcfHifIju0ZkW9e3UivYuETFKgChNRuNeXX6NGOf
+ yGSajKdy/5tTnaPvNvfFCHyHv1bmibVbuRtaM2LWrpQNNFfGIAJYfGtcz5pL1r8avLf1
+ 8gaWVgKpevWTIRS84k+s7OTLNwNXOn5Dq9f8BZhQVbYF4sjaMc95XC9e62INzXx8ONuO
+ UifA==
+X-Gm-Message-State: APjAAAX5tGogrUL3Z8TUHZRUindJT4clIGmphqU6qE5NxswcOPnBe7TU
+ o3E4SzqYQp9rJkwyGSuIVuiTWw==
+X-Google-Smtp-Source: APXvYqwRSgUqZVgf8FcfNwRbtUbHqSqrNKXZhIUwvNA/2Nzi/56ye1nAZMRQFiYvOjmXmn7DudBoUQ==
+X-Received: by 2002:a7b:c7c4:: with SMTP id z4mr12183286wmk.13.1567092229200; 
+ Thu, 29 Aug 2019 08:23:49 -0700 (PDT)
 Received: from bender.baylibre.local
  (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
  by smtp.gmail.com with ESMTPSA id d17sm4866871wre.27.2019.08.29.08.23.48
@@ -59,16 +59,16 @@ Received: from bender.baylibre.local
  Thu, 29 Aug 2019 08:23:48 -0700 (PDT)
 From: Neil Armstrong <narmstrong@baylibre.com>
 To: khilman@baylibre.com
-Subject: [PATCH 05/15] arm64: dts: meson-gxbb-nanopi-k2: add
+Subject: [PATCH 06/15] arm64: dts: meson-gxbb-nexbox-a95x: add
  keep-power-in-suspend property in SDIO node
-Date: Thu, 29 Aug 2019 17:23:32 +0200
-Message-Id: <20190829152342.27794-6-narmstrong@baylibre.com>
+Date: Thu, 29 Aug 2019 17:23:33 +0200
+Message-Id: <20190829152342.27794-7-narmstrong@baylibre.com>
 X-Mailer: git-send-email 2.22.0
 In-Reply-To: <20190829152342.27794-1-narmstrong@baylibre.com>
 References: <20190829152342.27794-1-narmstrong@baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190829_082351_193633_F6BCE3C4 
+X-CRM114-CacheID: sfid-20190829_082353_443510_C69C8CAD 
 X-CRM114-Status: UNSURE (   8.47  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
@@ -77,7 +77,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:344 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:341 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -109,14 +109,14 @@ suspend state.
 
 Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
 ---
- arch/arm64/boot/dts/amlogic/meson-gxbb-nanopi-k2.dts | 3 +++
+ arch/arm64/boot/dts/amlogic/meson-gxbb-nexbox-a95x.dts | 3 +++
  1 file changed, 3 insertions(+)
 
-diff --git a/arch/arm64/boot/dts/amlogic/meson-gxbb-nanopi-k2.dts b/arch/arm64/boot/dts/amlogic/meson-gxbb-nanopi-k2.dts
-index 233eb1cd7967..d6ca684e0e61 100644
---- a/arch/arm64/boot/dts/amlogic/meson-gxbb-nanopi-k2.dts
-+++ b/arch/arm64/boot/dts/amlogic/meson-gxbb-nanopi-k2.dts
-@@ -280,6 +280,9 @@
+diff --git a/arch/arm64/boot/dts/amlogic/meson-gxbb-nexbox-a95x.dts b/arch/arm64/boot/dts/amlogic/meson-gxbb-nexbox-a95x.dts
+index afcf8a9f667b..65ec7dea828c 100644
+--- a/arch/arm64/boot/dts/amlogic/meson-gxbb-nexbox-a95x.dts
++++ b/arch/arm64/boot/dts/amlogic/meson-gxbb-nexbox-a95x.dts
+@@ -220,6 +220,9 @@
  	non-removable;
  	disable-wp;
  
@@ -125,7 +125,7 @@ index 233eb1cd7967..d6ca684e0e61 100644
 +
  	mmc-pwrseq = <&sdio_pwrseq>;
  
- 	vmmc-supply = <&vddio_ao3v3>;
+ 	vmmc-supply = <&vddao_3v3>;
 -- 
 2.22.0
 
