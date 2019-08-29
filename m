@@ -2,73 +2,73 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D8A57A1F2A
-	for <lists+linux-amlogic@lfdr.de>; Thu, 29 Aug 2019 17:30:03 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 440DAA1F25
+	for <lists+linux-amlogic@lfdr.de>; Thu, 29 Aug 2019 17:29:19 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=LzNYQYebtK6rOrjMP2zwQoqn6eRlNbguoW9CdaI7qHg=; b=o4mtcv219/spA1
-	RF+1GcqLc2kUSVINZW+QleOHazz0o4PjTeV5OGW6tBD0uctby8/2O2xS6aXuNRU8dNVUnDo/wjrck
-	D/s3dSxRveYtuznG46x5YYx6m806nl1s2M5kMxBDdxriKfau/EUQ6km5r/8Dpbn/ZJz3wEGVvVW4S
-	KAUXgUDRFN8YaLiPqzqQWvcOcYcECBj/p2o9SYxoApz7bKTnJza2oBlwuK41DI7VhLuW5tTScRe65
-	/u6a7um7zutXX6z0oBapR95Ll7kzrvdhFIGj7+mDQ4IUkmDS0LPWhs2YvNNLEPprDssOIIPcUjsWq
-	F9OzP98HO7uDsYe9GmhA==;
+	List-Owner; bh=e0hAv7HSM/1yMFe3SD5+UOb8m9r+aGklTwqjp/WMj1Q=; b=mp72ftIEa7bvH9
+	JTwnl/sBbXKowsPhB1UjBSPMRAfkSc/8/BRXYGr8ZA+sVMh7i3KeAhIHrHPSuhbmCnZFBG6mo3eNT
+	/pUwkpp7MB00MgOwnc/81eGLMKSMBra7OfFDymSv2T1fK7z3SvLz8Z+vNUK5h5qWQAt0mLC7q2Kas
+	Go67fbbDTFqFw9uKvcw0gBuz5ON4hAfPLlqoJxMRny8zO8D58ishg+Mnk5RC8aj6JK0s+hAEcM66p
+	HsxtN2OC4rnAeOEdP6688mIWw8hnuMQd1puUgkO2ewmbFVbAgV2jM7XCTClgRRctQenB+Y6C5BHhm
+	y5TimzL17XmYgZRcBgJw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i3MN2-0001Sa-2T; Thu, 29 Aug 2019 15:29:56 +0000
-Received: from mail-wm1-x343.google.com ([2a00:1450:4864:20::343])
+	id 1i3MMM-0001KT-Os; Thu, 29 Aug 2019 15:29:15 +0000
+Received: from mail-wr1-x444.google.com ([2a00:1450:4864:20::444])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i3MH9-0007SH-48
+ id 1i3MH9-0007SM-Ue
  for linux-amlogic@lists.infradead.org; Thu, 29 Aug 2019 15:23:56 +0000
-Received: by mail-wm1-x343.google.com with SMTP id t17so4169185wmi.2
+Received: by mail-wr1-x444.google.com with SMTP id y19so3879211wrd.3
  for <linux-amlogic@lists.infradead.org>; Thu, 29 Aug 2019 08:23:51 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=fj/LO7/D7tssJ3to73Z9MGIPwyIiTagd9paTVbTbFLY=;
- b=rK63TRNtrq6CEarF4++/it4urtORDVjn0BExYKp022HdoDVPWrGEfG+f7RTp87ybaf
- dyYEDEj3E1mXX16W2lxXtghN6ZYRMrJX8HSaYN8OuYvUoSY7mvrYzqLD9fkMmDiwMI+C
- mmauM5+hK22brenu2p81TiLbiQ7rFU3j2gkJMeNo+RdI2+Qh+zKLCK3z8vHeG+8PP20M
- 0VhkNtV+lFhy9BwEuvjLqmgfHuZbz7GvW091pjg/3CM+5qNAyYQ9YUuwrXe5eY8BEz3I
- ZOTLrk0UV54Pf21OsyyJUppJ8LDAhRPdr7sq/uT4G5vZkmCD6UzQyoUDyQlDWs0+3a8u
- Eu/g==
+ bh=HDNcnLq+b6mBPqMQqj1uI4ke3syAlfKCQSY799vo0LM=;
+ b=dLorAy/DgPWHgQKpS9UzHskRBhT6WrHSkOcR0GwM8nusl4Jg4sN2daFt6AE5GcvhMO
+ 2RtioBnQxvK5m1Nt4mmURPkw0nsjew196jBud9NnF9Or+MzKApgoqbZtongSNtejaPCg
+ 13e4P/O0DFPCAAOvUqo4DJApwVJB2UiAQFzU7oR3ZjMhGoJBUCfhuwA5POL7vA/G/8it
+ 3c+qXohLp81m2Ku1T+PKJ7ngGADw09iRR5nVqp8tz1dFtKr2+az9yHm8QhAwe5HA3yL/
+ bSr+SKNFvvj75dZge/2ZqhhidNdFhgcUMkHBlSBqPmcIc0swIE47G2B5cdv0VV/rUI9j
+ fnxQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=fj/LO7/D7tssJ3to73Z9MGIPwyIiTagd9paTVbTbFLY=;
- b=oUq87eb1oKXxgwPpgmxvCw9GGSPMVz/wZjdedD+HAHVrdSi07uF+zG+nuAF6DeaoTa
- MIs1V9x51tbQdnnQikAcj7ZkM1odHxutVer44JLzLzUxkGwK9BT95W14Z+0SMRWOzPJm
- /i9Rmwn+GrX0XAR8GezedcjBkrWafjNaslD9gtxxRVcJ6vM+Juir1D3qsJkQ6+xgr89B
- apn2oxTbdMIo2EmY4ZvuLf7unD7mXWeNvDi2jkYCp/Wbv6Y+IKhnWE5NGSYlq4wzjssq
- tsTNNHHyd5BfdFYsAW0hXBL/EonFKdqOlltiTy7PRgxZyj1N6xQ1uuEnIq6cJBRnR7wu
- Qkpg==
-X-Gm-Message-State: APjAAAVTEbmJ4Dz7MgFo23M6jo8y89/jqQezzuBWRWf9RnhQHBY4yj68
- SDE/fJ72JOhxiS9nlJP17owN0Q==
-X-Google-Smtp-Source: APXvYqzoShKlKTer46VXGXNQxBH/E4Wn+9taYruGKsP8S+VHedlYb9VuGCuIYT/XjoXMQlbFGSW3jA==
-X-Received: by 2002:a1c:7c10:: with SMTP id x16mr749460wmc.110.1567092229816; 
- Thu, 29 Aug 2019 08:23:49 -0700 (PDT)
+ bh=HDNcnLq+b6mBPqMQqj1uI4ke3syAlfKCQSY799vo0LM=;
+ b=Q8e7jIO3wGzfzNJHX5T87Go/o4TckblusoZBGuiPzI0FsqX7dJwLee+R4t0dwg5egr
+ fuq8GolKFaJgm52q5Stwvku0z9C24PMxHsf1XZu4KcrTDjo3FdfuDoNIV6pcvhxpMGGT
+ fhZvUBgZ67rBhY48mBWJDq7e+l5286nRshPjkY6qn3wtmLenzDXlrCyGK7Jqg4dDg+vg
+ ZKgGocFBTm9tkAxL7QUq+St6gUTr1H4ChLP71GJYcw0XXgOEfvrriVRJMlgfo3rx9MgW
+ /TPzpZKQK048iIfVUDCZSaWUDPwY/eN+LV+Ouv9YJPs/pmgmKVlX/Q/0HL7wRkHJIGC3
+ bOOw==
+X-Gm-Message-State: APjAAAXMcxhyMyNxmO13HbpH/3oQZhJpm07O2I1depTq7PX/ZdUiJEFe
+ ATdVbSqOkmKZTLWNUj5N7F423w==
+X-Google-Smtp-Source: APXvYqyTy4p5gj4PxVF79IC7zf/oN42FSf8AQ/YXD/PbaxsDqieMtxf5MdKlVyNt9EAxAJmJzZ9Mdg==
+X-Received: by 2002:adf:8541:: with SMTP id 59mr12256907wrh.298.1567092230520; 
+ Thu, 29 Aug 2019 08:23:50 -0700 (PDT)
 Received: from bender.baylibre.local
  (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
  by smtp.gmail.com with ESMTPSA id d17sm4866871wre.27.2019.08.29.08.23.49
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Thu, 29 Aug 2019 08:23:49 -0700 (PDT)
+ Thu, 29 Aug 2019 08:23:50 -0700 (PDT)
 From: Neil Armstrong <narmstrong@baylibre.com>
 To: khilman@baylibre.com
-Subject: [PATCH 07/15] arm64: dts: meson-gxbb-p20x: add keep-power-in-suspend
- property in SDIO node
-Date: Thu, 29 Aug 2019 17:23:34 +0200
-Message-Id: <20190829152342.27794-8-narmstrong@baylibre.com>
+Subject: [PATCH 08/15] arm64: dts: meson-gxbb-vega-s95: add
+ keep-power-in-suspend property in SDIO node
+Date: Thu, 29 Aug 2019 17:23:35 +0200
+Message-Id: <20190829152342.27794-9-narmstrong@baylibre.com>
 X-Mailer: git-send-email 2.22.0
 In-Reply-To: <20190829152342.27794-1-narmstrong@baylibre.com>
 References: <20190829152342.27794-1-narmstrong@baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190829_082353_473747_69742CE9 
+X-CRM114-CacheID: sfid-20190829_082353_806061_A519C85D 
 X-CRM114-Status: UNSURE (   8.47  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
@@ -77,7 +77,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:343 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:444 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -109,14 +109,14 @@ suspend state.
 
 Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
 ---
- arch/arm64/boot/dts/amlogic/meson-gxbb-p20x.dtsi | 3 +++
+ arch/arm64/boot/dts/amlogic/meson-gxbb-vega-s95.dtsi | 3 +++
  1 file changed, 3 insertions(+)
 
-diff --git a/arch/arm64/boot/dts/amlogic/meson-gxbb-p20x.dtsi b/arch/arm64/boot/dts/amlogic/meson-gxbb-p20x.dtsi
-index 89f7b41b0e9e..e803a466fe4e 100644
---- a/arch/arm64/boot/dts/amlogic/meson-gxbb-p20x.dtsi
-+++ b/arch/arm64/boot/dts/amlogic/meson-gxbb-p20x.dtsi
-@@ -170,6 +170,9 @@
+diff --git a/arch/arm64/boot/dts/amlogic/meson-gxbb-vega-s95.dtsi b/arch/arm64/boot/dts/amlogic/meson-gxbb-vega-s95.dtsi
+index 43b11e3dfe11..d2ee2577d479 100644
+--- a/arch/arm64/boot/dts/amlogic/meson-gxbb-vega-s95.dtsi
++++ b/arch/arm64/boot/dts/amlogic/meson-gxbb-vega-s95.dtsi
+@@ -183,6 +183,9 @@
  	non-removable;
  	disable-wp;
  
