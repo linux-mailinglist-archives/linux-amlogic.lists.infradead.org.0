@@ -2,84 +2,82 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B29D8A2096
-	for <lists+linux-amlogic@lfdr.de>; Thu, 29 Aug 2019 18:16:49 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 48D06A2098
+	for <lists+linux-amlogic@lfdr.de>; Thu, 29 Aug 2019 18:16:54 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=MeylWwWq7Esmw67YP/mekXltMw3HW4kILz+1RFSDJs4=; b=I7I/y2PRS/kcAC
-	TicOL9OXhh6vYqyoze8+BiywEcm9j5AVvXydmRxa51oItqMLv4QXXBdWTxPCAP62G2SE7Fi83kehX
-	QEJm3DWZNtfZbGx+j1K9QioHk3JDA/kAKNr6nPxAxZHnBfJkT9IeR4Ej86XYa0GqBfkoNKD+7HHlo
-	E9+wYHplDt+1pChaKYbJ0M17loTi4tPJLFEVRCSGxBfzMFz1UpMlTKhhHV2BhX4gtHK6M48zhkFJf
-	nQjs/WvvgndmteZ+WwIDrhgsyZVXTKh9nKBj53TmzlhghX4nyGsxvQ7BagetgkMr0Yj/CWKq90w0F
-	K3Om18LUfZiRsmbQZzNA==;
+	List-Owner; bh=AjF4Um+8l3IvnVq81rvKYYy2aJRpf1WRXlgPQrY9oxg=; b=TptGxRIOYVoivM
+	FhdfQwNIP9d4fsBKlgXxqZFB2giL7OeUEmv6+/KdPT/34XOLk54mEAk3QCYJjTm7YUhfUyQVRbUDE
+	aGoSVte2TXPiZUYidgBBKbtt2y2ukj4s4rjONzcLXuVkGtTPd9+OhNyWZW4fd2xafwEprz19xYUlo
+	xZv3Ottav8UsBFkz7c7d3+bOjOkhjfYmo1iyZ/N+sW6p1k11wj90AXC4ajtL73Bl00ML8yQX+zCQ8
+	cGAWtWh002dL3Ifr+z8uAttb3zsCsxye4dRJTOccy0j/pJxM/z/1cExtfKlJiptjQEHe5WZ6P21lI
+	0QMOPypxayN3BkNNJCCQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i3N6N-0006he-TZ; Thu, 29 Aug 2019 16:16:48 +0000
-Received: from mail-wm1-x342.google.com ([2a00:1450:4864:20::342])
+	id 1i3N6Q-0006jX-CN; Thu, 29 Aug 2019 16:16:50 +0000
+Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i3N6H-0006fA-TZ
- for linux-amlogic@lists.infradead.org; Thu, 29 Aug 2019 16:16:43 +0000
-Received: by mail-wm1-x342.google.com with SMTP id y135so2422979wmc.1
- for <linux-amlogic@lists.infradead.org>; Thu, 29 Aug 2019 09:16:41 -0700 (PDT)
+ id 1i3N6J-0006fY-Go
+ for linux-amlogic@lists.infradead.org; Thu, 29 Aug 2019 16:16:45 +0000
+Received: by mail-wr1-x442.google.com with SMTP id t16so4045554wra.6
+ for <linux-amlogic@lists.infradead.org>; Thu, 29 Aug 2019 09:16:42 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=LRSXXM/9Hjh3g9tVzGv7Uh9K2mMpn/F7sp2YRf04TcA=;
- b=iUy5GOB3ydrfuUnBvxT0tgXebasbWCSqGhJqfY56RSa1bYiL6CrKIwTIGnjL9N+9V0
- xNWVb1yd8ku2sgZdEh4+UVeKVpLO6IebJPqa1VdcThqBj76hW2CO5SGwA1TSWiOLUKfc
- 2I9J80oDABJi/ub5Ee9F1swJWC6OJMeCGJppcKQDkzN1oxu0XlWjkqsAJouNwC3eSaOq
- uXzxgM/xeh9F1v610PmBCiyn2ERPOM4eaJpGNByq/I6o5SERnIHEYHH/eqqNBqmVcklC
- FRcXpd2ZBj6QQg7btuMBudGmHlgZdZgfM0So3yd+rHTqnTHb3hNk42jdUpNsL7/wzwix
- Umng==
+ bh=FmQNGjfdBr23Vmw3dpbgVM+854E1+2Ni006e4CpQSgY=;
+ b=CekDSk1MPgdxFAqrz1dEv+g1t2FTomSfKP/jYE1idgSG7KmFCCtNEyZc7vH42ZBlS9
+ Or3PdpMJCqcTW2Mx3mB0L8GJa7gIiIRgr3jtSv1GXBrUyC5sRpcfiliB/O8qni3mzeel
+ Ju7dY8ketTieBboXb9Bmka2yeL5/TOTWVI3MeG4JxlD2dcowilUc1SfVRIjio+rgC6Db
+ +l972o4mx3vVJ/MWdwqFV1uxCsBFKdyTue0yOBEJE1MdunO466r0PuAyDYc3ozOVqwmO
+ w5ZEyyXz+Ymwb63qClokwIOCNCvVTs+212NUm/KtGK8+pdwxqrFTqD+TJeb7kR1RfaCg
+ rHEA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=LRSXXM/9Hjh3g9tVzGv7Uh9K2mMpn/F7sp2YRf04TcA=;
- b=fgevj19FWLov1U5mAWw5WaTaW9b6gmUqQWqOs/0emhz0pYK4DruGGC48NSgoYdOVJ7
- KyaWdeIuYpXlRo89sG1yS5E4SK+6T1eOTMsaIjfaS4naoxx29RF3P1pSuyp26J2TcxsO
- aQICSflNBELWYyYoFylh1h0VlpqRtXELXMDNBbXQWBDO3qKNZGZ/kihLsdxJKf8x+vIl
- 9uHc/L6m5Dq5LAZdLYg/t3LU62XtqXXYtHKp68t/7bsumQa/3OsiViFNUQaqAZzbAnMY
- rvfPAPGjFRmHnnLkTeNSsVfS8kF8E3DTTUxZs72Q/P9VfuJHR1l2K4zabovezjM4uB58
- +SqQ==
-X-Gm-Message-State: APjAAAUTBbA6dd+35GzrJd3v+hfMe6jTIasnIiJbiXznwwVHVNUxiqEj
- f1PGdsmL7X3bO5uB8/QUoz78kA==
-X-Google-Smtp-Source: APXvYqy5A2xGzz3+Z5BYXuI0TCEvUQNi8cgwHdW5HQMj/N9nGUuBDXTkjcWNpsSQK93sO6clm8gUMw==
-X-Received: by 2002:a7b:c013:: with SMTP id c19mr5053414wmb.118.1567095400557; 
- Thu, 29 Aug 2019 09:16:40 -0700 (PDT)
+ bh=FmQNGjfdBr23Vmw3dpbgVM+854E1+2Ni006e4CpQSgY=;
+ b=LXGgaRViZHIGQsuR7Pmr/m9VtL0ktAdqsFms6o15KaDM8G6oCdMWO94lK42k755LEX
+ d0drDRWEFOiZPoUmW/S/LCRORpXgBJnsMZ92UhXUTSjJdCB+sTJBbviUJNzZIv+bxGqu
+ ILFmlNAh9xAbk231KyIvv+SmJO1pV4tJRrKS5zwlYKEpfwz/p2SRBsK851ulbzEjiKcO
+ On2eY5moXY2bcE9m1LLs6dDkudnPEwvgac2olnqy5SNSXeAkBphyNIFM+flcor9Zz1gY
+ sZSya0Daq8qzXTUaeatv005nQv1IqjHpcA1Nvla+IvGrYjrTI06XZ4bc8QaS0cg58tcN
+ apUg==
+X-Gm-Message-State: APjAAAWwdm+cOFLYy90rintGxCI0uatC6oB15ZbCotBiXY+U6/ZdW+XH
+ VHXyBdM8CUqCyGyeWBWdSaMURw==
+X-Google-Smtp-Source: APXvYqw9HoPeh2heiRIRHpSaq/sXvvhz1CoOdRYhphaq4Jy0pWXgJH5XT5V8jwGkKhMIclcrP3x0tg==
+X-Received: by 2002:adf:bace:: with SMTP id w14mr13278467wrg.283.1567095401578; 
+ Thu, 29 Aug 2019 09:16:41 -0700 (PDT)
 Received: from starbuck.baylibre.local
  (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
- by smtp.googlemail.com with ESMTPSA id q13sm3915424wmq.30.2019.08.29.09.16.39
+ by smtp.googlemail.com with ESMTPSA id q13sm3915424wmq.30.2019.08.29.09.16.40
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Thu, 29 Aug 2019 09:16:40 -0700 (PDT)
+ Thu, 29 Aug 2019 09:16:41 -0700 (PDT)
 From: Jerome Brunet <jbrunet@baylibre.com>
 To: Thomas Gleixner <tglx@linutronix.de>, Jason Cooper <jason@lakedaemon.net>,
  Marc Zyngier <marc.zyngier@arm.com>, Kevin Hilman <khilman@baylibre.com>
-Subject: [PATCH 1/2] dt-bindings: interrupt-controller: new binding for the
- meson sm1 SoCs
-Date: Thu, 29 Aug 2019 18:16:34 +0200
-Message-Id: <20190829161635.25067-2-jbrunet@baylibre.com>
+Subject: [PATCH 2/2] irqchip/meson-gpio: Add support for meson sm1 SoCs
+Date: Thu, 29 Aug 2019 18:16:35 +0200
+Message-Id: <20190829161635.25067-3-jbrunet@baylibre.com>
 X-Mailer: git-send-email 2.21.0
 In-Reply-To: <20190829161635.25067-1-jbrunet@baylibre.com>
 References: <20190829161635.25067-1-jbrunet@baylibre.com>
 MIME-Version: 1.0
 X-Patchwork-Bot: notify
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190829_091641_954504_A43551A4 
-X-CRM114-Status: UNSURE (   9.62  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190829_091643_558173_D497A533 
+X-CRM114-Status: GOOD (  17.08  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:342 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:442 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -104,26 +102,159 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Update the dt-binding to add support for the sm1 SoC family in the
-amlogic GPIO interrupt controller driver.
+The meson sm1 SoCs uses the same type of GPIO interrupt controller IP
+block as the other meson SoCs, A total of 100 pins can be spied on:
+
+- 223:100 undefined (no interrupt)
+- 99:97   3 pins on bank GPIOE
+- 96:77   20 pins on bank GPIOX
+- 76:61   16 pins on bank GPIOA
+- 60:53   8 pins on bank GPIOC
+- 52:37   16 pins on bank BOOT
+- 36:28   9 pins on bank GPIOH
+- 27:12   16 pins on bank GPIOZ
+- 11:0    12 pins in the AO domain
+
+Mapping is the same as the g12a family but the sm1 controller
+allows to trig an irq on both edges of the input signal. This was
+not possible with the previous SoCs families
 
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
 ---
- .../bindings/interrupt-controller/amlogic,meson-gpio-intc.txt    | 1 +
- 1 file changed, 1 insertion(+)
+ drivers/irqchip/irq-meson-gpio.c | 52 +++++++++++++++++++++++---------
+ 1 file changed, 38 insertions(+), 14 deletions(-)
 
-diff --git a/Documentation/devicetree/bindings/interrupt-controller/amlogic,meson-gpio-intc.txt b/Documentation/devicetree/bindings/interrupt-controller/amlogic,meson-gpio-intc.txt
-index 7d531d5fff29..684bb1cd75ec 100644
---- a/Documentation/devicetree/bindings/interrupt-controller/amlogic,meson-gpio-intc.txt
-+++ b/Documentation/devicetree/bindings/interrupt-controller/amlogic,meson-gpio-intc.txt
-@@ -16,6 +16,7 @@ Required properties:
-     "amlogic,meson-gxl-gpio-intc" for GXL SoCs (S905X, S912)
-     "amlogic,meson-axg-gpio-intc" for AXG SoCs (A113D, A113X)
-     "amlogic,meson-g12a-gpio-intc" for G12A SoCs (S905D2, S905X2, S905Y2)
-+    "amlogic,meson-sm1-gpio-intc" for SM1 SoCs (S905D3, S905X3, S905Y3)
- - reg : Specifies base physical address and size of the registers.
- - interrupt-controller : Identifies the node as an interrupt controller.
- - #interrupt-cells : Specifies the number of cells needed to encode an
+diff --git a/drivers/irqchip/irq-meson-gpio.c b/drivers/irqchip/irq-meson-gpio.c
+index dcdc23b9dce6..829084b568fa 100644
+--- a/drivers/irqchip/irq-meson-gpio.c
++++ b/drivers/irqchip/irq-meson-gpio.c
+@@ -24,14 +24,25 @@
+ #define REG_PIN_47_SEL	0x08
+ #define REG_FILTER_SEL	0x0c
+ 
+-#define REG_EDGE_POL_MASK(x)	(BIT(x) | BIT(16 + (x)))
++/*
++ * Note: The S905X3 datasheet reports that BOTH_EDGE is controlled by
++ * bits 24 to 31. Tests on the actual HW show that these bits are
++ * stuck at 0. Bits 8 to 15 are responsive and have the expected
++ * effect.
++ */
+ #define REG_EDGE_POL_EDGE(x)	BIT(x)
+ #define REG_EDGE_POL_LOW(x)	BIT(16 + (x))
++#define REG_BOTH_EDGE(x)	BIT(8 + (x))
++#define REG_EDGE_POL_MASK(x)    (	\
++		REG_EDGE_POL_EDGE(x) |	\
++		REG_EDGE_POL_LOW(x)  |	\
++		REG_BOTH_EDGE(x))
+ #define REG_PIN_SEL_SHIFT(x)	(((x) % 4) * 8)
+ #define REG_FILTER_SEL_SHIFT(x)	((x) * 4)
+ 
+ struct meson_gpio_irq_params {
+ 	unsigned int nr_hwirq;
++	bool support_edge_both;
+ };
+ 
+ static const struct meson_gpio_irq_params meson8_params = {
+@@ -54,6 +65,11 @@ static const struct meson_gpio_irq_params axg_params = {
+ 	.nr_hwirq = 100,
+ };
+ 
++static const struct meson_gpio_irq_params sm1_params = {
++	.nr_hwirq = 100,
++	.support_edge_both = true,
++};
++
+ static const struct of_device_id meson_irq_gpio_matches[] = {
+ 	{ .compatible = "amlogic,meson8-gpio-intc", .data = &meson8_params },
+ 	{ .compatible = "amlogic,meson8b-gpio-intc", .data = &meson8b_params },
+@@ -61,11 +77,12 @@ static const struct of_device_id meson_irq_gpio_matches[] = {
+ 	{ .compatible = "amlogic,meson-gxl-gpio-intc", .data = &gxl_params },
+ 	{ .compatible = "amlogic,meson-axg-gpio-intc", .data = &axg_params },
+ 	{ .compatible = "amlogic,meson-g12a-gpio-intc", .data = &axg_params },
++	{ .compatible = "amlogic,meson-sm1-gpio-intc", .data = &sm1_params },
+ 	{ }
+ };
+ 
+ struct meson_gpio_irq_controller {
+-	unsigned int nr_hwirq;
++	const struct meson_gpio_irq_params *params;
+ 	void __iomem *base;
+ 	u32 channel_irqs[NUM_CHANNEL];
+ 	DECLARE_BITMAP(channel_map, NUM_CHANNEL);
+@@ -168,14 +185,22 @@ static int meson_gpio_irq_type_setup(struct meson_gpio_irq_controller *ctl,
+ 	 */
+ 	type &= IRQ_TYPE_SENSE_MASK;
+ 
+-	if (type == IRQ_TYPE_EDGE_BOTH)
+-		return -EINVAL;
++	/*
++	 * New controller support EDGE_BOTH trigger. This setting takes
++	 * precedence over the other edge/polarity settings
++	 */
++	if (type == IRQ_TYPE_EDGE_BOTH) {
++		if (!ctl->params->support_edge_both)
++			return -EINVAL;
+ 
+-	if (type & (IRQ_TYPE_EDGE_RISING | IRQ_TYPE_EDGE_FALLING))
+-		val |= REG_EDGE_POL_EDGE(idx);
++		val |= REG_BOTH_EDGE(idx);
++	} else {
++		if (type & (IRQ_TYPE_EDGE_RISING | IRQ_TYPE_EDGE_FALLING))
++			val |= REG_EDGE_POL_EDGE(idx);
+ 
+-	if (type & (IRQ_TYPE_LEVEL_LOW | IRQ_TYPE_EDGE_FALLING))
+-		val |= REG_EDGE_POL_LOW(idx);
++		if (type & (IRQ_TYPE_LEVEL_LOW | IRQ_TYPE_EDGE_FALLING))
++			val |= REG_EDGE_POL_LOW(idx);
++	}
+ 
+ 	spin_lock(&ctl->lock);
+ 
+@@ -199,7 +224,7 @@ static unsigned int meson_gpio_irq_type_output(unsigned int type)
+ 	 */
+ 	if (sense & (IRQ_TYPE_LEVEL_HIGH | IRQ_TYPE_LEVEL_LOW))
+ 		type |= IRQ_TYPE_LEVEL_HIGH;
+-	else if (sense & (IRQ_TYPE_EDGE_RISING | IRQ_TYPE_EDGE_FALLING))
++	else
+ 		type |= IRQ_TYPE_EDGE_RISING;
+ 
+ 	return type;
+@@ -328,15 +353,13 @@ static int __init meson_gpio_irq_parse_dt(struct device_node *node,
+ 					  struct meson_gpio_irq_controller *ctl)
+ {
+ 	const struct of_device_id *match;
+-	const struct meson_gpio_irq_params *params;
+ 	int ret;
+ 
+ 	match = of_match_node(meson_irq_gpio_matches, node);
+ 	if (!match)
+ 		return -ENODEV;
+ 
+-	params = match->data;
+-	ctl->nr_hwirq = params->nr_hwirq;
++	ctl->params = match->data;
+ 
+ 	ret = of_property_read_variable_u32_array(node,
+ 						  "amlogic,channel-interrupts",
+@@ -385,7 +408,8 @@ static int __init meson_gpio_irq_of_init(struct device_node *node,
+ 	if (ret)
+ 		goto free_channel_irqs;
+ 
+-	domain = irq_domain_create_hierarchy(parent_domain, 0, ctl->nr_hwirq,
++	domain = irq_domain_create_hierarchy(parent_domain, 0,
++					     ctl->params->nr_hwirq,
+ 					     of_node_to_fwnode(node),
+ 					     &meson_gpio_irq_domain_ops,
+ 					     ctl);
+@@ -396,7 +420,7 @@ static int __init meson_gpio_irq_of_init(struct device_node *node,
+ 	}
+ 
+ 	pr_info("%d to %d gpio interrupt mux initialized\n",
+-		ctl->nr_hwirq, NUM_CHANNEL);
++		ctl->params->nr_hwirq, NUM_CHANNEL);
+ 
+ 	return 0;
+ 
 -- 
 2.21.0
 
