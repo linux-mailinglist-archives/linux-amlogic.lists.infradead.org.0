@@ -2,54 +2,86 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6F825A4992
-	for <lists+linux-amlogic@lfdr.de>; Sun,  1 Sep 2019 15:30:39 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9FEC1A49AA
+	for <lists+linux-amlogic@lfdr.de>; Sun,  1 Sep 2019 15:57:21 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=Wpv4nJvZoHEIVNuw1h/z3ucvqm5Aco0ENRdWVCZsauo=; b=XOUPNLVA6kgDHR
-	lhpAEuNaq5HEG9n0v/fZKg2DyujfM4BC+Z3zkrxoBJPMGbayJXCk+Ojm/7cVToaIu/iG6jfUqUC3f
-	7Nq83xNtsdaCBZQezKZVE99TuLjh5dzJ5AHbKPrZrX2i41EIZM02cxwVq9jsbuPLdROP8xRTvR0yU
-	fYQMvmrju0xtYZFAs711Sh2bwoae/aBqSN4DckixUjQeOe6J68Bb9xYVJ7vdEjhRcLKpPlVrH4zPp
-	rMuBGoAw45+fCGRqovINhMxwHtyrvD5/LGKgN0n8ykqpjvYzvzwS51Y26lF6pKSQ/eJM4dNhkc/Fw
-	l5bWMl+t5LmrIFdOXtFA==;
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=NcRhMtI9ROxLuX/ND88dRdu5Ejc3vVYRTEifwI+BscM=; b=GuzYnc4Zv17Kmr
+	J0qPiFkOVg70qz6rINjVE0UddSfg33hsdy0xnmLQsfrPrZUfeUJ4uzlON9hsPCI3niJ2kHx4XNUaT
+	HiBSvfFwaYVJh9LQ73JxDmFA5wk1ZaopUyC1jw0SOz+dxYv2nzrGMDDPVLZNMyFy6JFPo318+nqE/
+	zsi1r8+wNPwwu82ohLpF+9sQzPYmf+MLZBnAKxfTL6ASG4CLj2mXK47z5gApjhpe+6kcsAPzG87tJ
+	EhHDHRN/AGBe9XaKqFkw1G8FCy0YUYZBaWcAC86aM+mEmoYKRNoza5qK1KztlIH5Irx99Mc4Z7dPE
+	5NVW50pqyed+Btfw1yWA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i4PwA-0006ao-DP; Sun, 01 Sep 2019 13:30:34 +0000
-Received: from relay1-d.mail.gandi.net ([217.70.183.193])
+	id 1i4QM1-0006Gu-Vv; Sun, 01 Sep 2019 13:57:18 +0000
+Received: from mail-io1-xd42.google.com ([2607:f8b0:4864:20::d42])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i4Pw6-0006Zo-Ry
- for linux-amlogic@lists.infradead.org; Sun, 01 Sep 2019 13:30:32 +0000
-X-Originating-IP: 88.190.179.123
-Received: from localhost (unknown [88.190.179.123])
- (Authenticated sender: repk@triplefau.lt)
- by relay1-d.mail.gandi.net (Postfix) with ESMTPSA id 75B9B240006;
- Sun,  1 Sep 2019 13:30:20 +0000 (UTC)
-From: Remi Pommarel <repk@triplefau.lt>
-To: Yue Wang <yue.wang@Amlogic.com>,
- Lorenzo Pieralisi <lorenzo.pieralisi@arm.com>,
- Bjorn Helgaas <bhelgaas@google.com>, Kevin Hilman <khilman@baylibre.com>
-Subject: [PATCH] PCI: amlogic: Fix reset assertion via gpio descriptor
-Date: Sun,  1 Sep 2019 15:39:15 +0200
-Message-Id: <20190901133915.12899-1-repk@triplefau.lt>
-X-Mailer: git-send-email 2.20.1
+ id 1i4QLn-0006AM-N7; Sun, 01 Sep 2019 13:57:05 +0000
+Received: by mail-io1-xd42.google.com with SMTP id p12so24173122iog.5;
+ Sun, 01 Sep 2019 06:57:01 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=DlZdrf9Irxs4fo8S+BI75RsfTncmV298kgaHuNHnRpA=;
+ b=SJ2HR+ZX4CCLpMwYVrMm4tC48zXsqIaDeOJpgI3Pu3aF57K2+/GDf7STWkbYhRe2jR
+ 7G6ODjRtP47aLxPmSBBqyyqGzi3KCb2cqBA399LgCItWnhLzUke/Y463BhS5rQjdJQTK
+ 1BkGi60BKBY0TjPWuG0De2lTR4hD+X4qFbNhpF9j+6ldhAF1FEkBqt5Oy8zEpeW1sj6g
+ t3yKMcSIaRw2WJb4SzaAwvl8LSCsOy0JEyEOFMJYk4CAt+qCWeDjeABNCA6XWck+s3i4
+ L+VsTBC+P8E3bxrBz+29duUA/AtUC8ML5kSvPq7G7g0DIxZN8tFz+7M4fUgzRKVWscmj
+ GAsg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=DlZdrf9Irxs4fo8S+BI75RsfTncmV298kgaHuNHnRpA=;
+ b=iObKkhUmQK7C8+7SrFUFKN13y/wSPPeT7uVERNqh46CNlpOD6PfBpKwTmFoZ5+xT7R
+ SKDBm6eZIm/wcxtduMPHVLGazpK4hKCpFuGHr+gSQK9uNsn+G3aa6hNF1RSyOssuzvph
+ wI0LbhCNhad6cRrU0i+LLguZx3bsAXD+70IqTCiqfvFLP+GgCTHREzo1AvOEdHv+tHJq
+ hNOB2oFnJkJ+LhUFlQrvx1Ic3NLkrqDV98lxI/fVsKR+eLXZEYY0YNdbUsDm3CdISH5i
+ dO5kT61vhr+HvFUfsJ2TTiVGp/TxNAmuUtYscAD+OrVJclC0CDpeacBohxexbBZkbctI
+ OzzA==
+X-Gm-Message-State: APjAAAUv/Ov3xLmKginG7e/I91wR2lHunZN4TYHB0L+nBGCMVpQQlNdx
+ Jq8T0DWT2uJriRMTsyigzy1JEkwHRjdHwx2UUCYkGw==
+X-Google-Smtp-Source: APXvYqxYOm/Hc/RFqCzlkxBEZ30dho7qz2hnto+SyaO5xK9jP5vx8O05CRf6dpJlVvYT87HcbjJnLhCQXciWgSqFGEw=
+X-Received: by 2002:a6b:c810:: with SMTP id y16mr5973464iof.75.1567346220862; 
+ Sun, 01 Sep 2019 06:57:00 -0700 (PDT)
 MIME-Version: 1.0
+References: <20190828202723.1145-1-linux.amoon@gmail.com>
+ <20190828202723.1145-3-linux.amoon@gmail.com>
+ <CAFBinCBA-sQcshd9iAVn=ZDBKkDN3OgJs-WjKEhVLw===b0AdQ@mail.gmail.com>
+In-Reply-To: <CAFBinCBA-sQcshd9iAVn=ZDBKkDN3OgJs-WjKEhVLw===b0AdQ@mail.gmail.com>
+From: Anand Moon <linux.amoon@gmail.com>
+Date: Sun, 1 Sep 2019 19:26:47 +0530
+Message-ID: <CANAwSgTXWgcyzsU1Y6Msc4hyuRh7QPoXe9WsV5uqNc=c9_z2TA@mail.gmail.com>
+Subject: Re: [PATCHv1 2/3] arm64: dts: meson: odroid-c2: Add missing regulator
+ linked to VDDIO_AO3V3 regulator
+To: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190901_063031_056039_E2B31E55 
-X-CRM114-Status: UNSURE (   8.45  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.7 (/)
+X-CRM114-CacheID: sfid-20190901_065703_756883_C538ABCA 
+X-CRM114-Status: GOOD (  19.23  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.7 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
- low trust [217.70.183.193 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:d42 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (linux.amoon[at]gmail.com)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -61,48 +93,97 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: linux-pci@vger.kernel.org, Remi Pommarel <repk@triplefau.lt>,
- linux-amlogic@lists.infradead.org
+Cc: devicetree <devicetree@vger.kernel.org>,
+ Neil Armstrong <narmstrong@baylibre.com>, Kevin Hilman <khilman@baylibre.com>,
+ Linux Kernel <linux-kernel@vger.kernel.org>, Rob Herring <robh+dt@kernel.org>,
+ linux-amlogic@lists.infradead.org,
+ linux-arm-kernel <linux-arm-kernel@lists.infradead.org>,
+ Jerome Brunet <jbrunet@baylibre.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Normally asserting reset signal on gpio would be achieved with:
-	gpiod_set_value_cansleep(reset_gpio, 1);
+Hi Martin,
 
-Meson PCI driver set reset value to '0' instead of '1' as it takes into
-account the PERST# signal polarity. The polarity should be taken care
-in the device tree instead.
+Thanks of your review comments.
 
-This fixes the reset assertion meaning and moves out the polarity
-configuration in DT (please note that there is no DT currently using
-this driver).
+On Sun, 1 Sep 2019 at 17:11, Martin Blumenstingl
+<martin.blumenstingl@googlemail.com> wrote:
+>
+> On Wed, Aug 28, 2019 at 10:27 PM Anand Moon <linux.amoon@gmail.com> wrote:
+> >
+> > As per shematics TFLASH_VDD, TF_IO, VCC3V3 fixed regulator output which
+> typo: "schematics"
+>
+Ok
+> > is supplied by VDDIO_AO3V3.
+> please add a short sentence to the description (since you probably
+> have to re-send a v2) like:
+> "While here, move the comment name with the signal name in the
+> schematics above the gpio property to make it consistent with other
+> regulators"
+>
 
-Signed-off-by: Remi Pommarel <repk@triplefau.lt>
----
- drivers/pci/controller/dwc/pci-meson.c | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
+Ok I will append this in next version.
 
-diff --git a/drivers/pci/controller/dwc/pci-meson.c b/drivers/pci/controller/dwc/pci-meson.c
-index e35e9eaa50ee..541f37a6f6a5 100644
---- a/drivers/pci/controller/dwc/pci-meson.c
-+++ b/drivers/pci/controller/dwc/pci-meson.c
-@@ -287,9 +287,9 @@ static inline void meson_cfg_writel(struct meson_pcie *mp, u32 val, u32 reg)
- 
- static void meson_pcie_assert_reset(struct meson_pcie *mp)
- {
--	gpiod_set_value_cansleep(mp->reset_gpio, 0);
--	udelay(500);
- 	gpiod_set_value_cansleep(mp->reset_gpio, 1);
-+	udelay(500);
-+	gpiod_set_value_cansleep(mp->reset_gpio, 0);
- }
- 
- static void meson_pcie_init_dw(struct meson_pcie *mp)
--- 
-2.20.1
+> > Cc: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+> > Cc: Jerome Brunet <jbrunet@baylibre.com>
+> > Cc: Neil Armstrong <narmstrong@baylibre.com>
+> > Signed-off-by: Anand Moon <linux.amoon@gmail.com>
+> with the patch rebased (see below) and the two issues from above addressed:
+> Reviewed-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+>
+> > ---
+> >  arch/arm64/boot/dts/amlogic/meson-gxbb-odroidc2.dts | 13 ++++++++++---
+> >  1 file changed, 10 insertions(+), 3 deletions(-)
+> >
+> > diff --git a/arch/arm64/boot/dts/amlogic/meson-gxbb-odroidc2.dts b/arch/arm64/boot/dts/amlogic/meson-gxbb-odroidc2.dts
+> > index 98e742bf44c1..a078a1ee5004 100644
+> > --- a/arch/arm64/boot/dts/amlogic/meson-gxbb-odroidc2.dts
+> > +++ b/arch/arm64/boot/dts/amlogic/meson-gxbb-odroidc2.dts
+> > @@ -67,17 +67,19 @@
+> >         };
+> >
+> >         tflash_vdd: regulator-tflash_vdd {
+> > -               /*
+> > -                * signal name from schematics: TFLASH_VDD_EN
+> > -                */
+> >                 compatible = "regulator-fixed";
+> >
+> >                 regulator-name = "TFLASH_VDD";
+> >                 regulator-min-microvolt = <3300000>;
+> >                 regulator-max-microvolt = <3300000>;
+> >
+> > +               /*
+> > +                * signal name from schematics: TFLASH_VDD_EN
+> > +                */
+> >                 gpio = <&gpio GPIOY_12 GPIO_ACTIVE_HIGH>;
+> >                 enable-active-high;
+> > +               /* U16 RT9179GB */
+> > +               vin-supply = <&vddio_ao3v3>;
+> >         };
+> >
+> >         tf_io: gpio-regulator-tf_io {
+> > @@ -95,6 +97,8 @@
+> >
+> >                 states = <3300000 0
+> >                           1800000 1>;
+> > +               /* U12/U13 RT9179GB */
+> > +               vin-supply = <&vddio_ao3v3>;
+> >         };
+> thank you for the patch but I think it won't apply on top of Neil's
+> "arm64: dts: meson: fix boards regulators states format" (which was
+> applied just after you sent this series)
+>
 
+>
+> Martin
+
+Ok will re-base these changes on linux-next next time.
+
+Best Regards
+-Anand
 
 _______________________________________________
 linux-amlogic mailing list
