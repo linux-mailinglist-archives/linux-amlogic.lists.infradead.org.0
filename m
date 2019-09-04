@@ -2,65 +2,66 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id ECDDAA7E32
-	for <lists+linux-amlogic@lfdr.de>; Wed,  4 Sep 2019 10:45:33 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 32B05A84C1
+	for <lists+linux-amlogic@lfdr.de>; Wed,  4 Sep 2019 15:59:53 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=H5DbMLX9IR3Xnuh6WOggmEO5g/HoL5BpFrK49BH/Oww=; b=BEH2XHzGoQvWVB
-	BVCZl0rugS/eZkiiKhP4qV1Uel47nRp6EMGRgQ8fKD1J7jlLqDXFCOmoU3saWHBUoPD0L/7z0HqJr
-	Ipc5OI+0Zje8x7HiLZRZkgcSmcm/j3beUasWQANG+erR6gqTlCIA+04gmPcNNlW/ZF2Wa3oCEoVMH
-	HSh2TOUA/f7bzlz5uR6BmjDb8EUgY1cYwgnZyS/6piAsWqvbBT1B64tZnZkSmlBBGMJYh/6J6IY/m
-	6mzU8NndbAgQQlsljwlM/kXKKp/c1R9ytzPeHrG3IFn9Qh0otPFMkzIamhmIDetWp9xm+/IjIL+DA
-	eGCZa5Gdr3dilMKXnTqA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=ZoluUFas5Plarn5p8E7sv3qWEDj+DmVpAgJUrUIaeCw=; b=tWNmD7/W2R6m0+
+	N0wtQ1XkPEDAYGnacM+dO/BAJ/voRuZAVba78+lPU6YxeFpwxXqcKhi4eHdN2ckmMG4JGC6j7UE5/
+	+cYWi08jhr3iwJiYru85urqlbQUy8ruStMbQeH85oWzMwnC0MYeT4PKDDVJDVHykaPPY3auF5jhgg
+	j8TNXFBoK+TTlYqRd7d3x91peBaJPlNfvm+iqGOVfXX+j0UNzyGIoQ5YCCv5UK8wlrY12Twk/V8QP
+	KnCmf75t+MPNRE0xotq3Cl2XcjPjTNuyNaf/PsPlN6A2JjLyi2XpS8D7528py+8mKfwPkc+bA51n0
+	TFCuaP9fNBgVB2bDdI6Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i5Quy-00034L-HP; Wed, 04 Sep 2019 08:45:32 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1i5Vp3-0002wS-W1; Wed, 04 Sep 2019 13:59:46 +0000
+Received: from szxga06-in.huawei.com ([45.249.212.32] helo=huawei.com)
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i5Quu-00033q-EZ; Wed, 04 Sep 2019 08:45:29 +0000
-Received: from localhost (83-86-89-107.cable.dynamic.v4.ziggo.nl
- [83.86.89.107])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
- (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 81A8A22CEA;
- Wed,  4 Sep 2019 08:45:27 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1567586728;
- bh=ReJN7nfBuAkxDGWCkNioWGAoCEhadI8k72Wr8vLuB04=;
- h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
- b=q3Xt1vFW/wLgQGkDEIy6pqv/t0kVUwS6A3oiUXXAYWBOsZHrhociWsvB2liN1QZHu
- +SSN7vWvBsPVq82ASvqxK10UF/FXwJaiuidUdpOlfaeNy50XOGVJC+DRhY7DTioILy
- jS6HbwoS0Jhjv1c7g1DMdZWsb7tvNRYs2pda0vpw=
-Date: Wed, 4 Sep 2019 10:45:25 +0200
-From: Greg KH <gregkh@linuxfoundation.org>
-To: Austin Kim <austindh.kim@gmail.com>
-Subject: Re: [PATCH] media: meson: Add NULL check after the call to kmalloc()
-Message-ID: <20190904084525.GB4925@kroah.com>
-References: <20190904082232.GA171180@LGEARND20B15>
+ id 1i5Voy-0002vK-OB; Wed, 04 Sep 2019 13:59:42 +0000
+Received: from DGGEMS404-HUB.china.huawei.com (unknown [172.30.72.59])
+ by Forcepoint Email with ESMTP id 53D972AB7375EADC37DD;
+ Wed,  4 Sep 2019 21:59:35 +0800 (CST)
+Received: from localhost (10.133.213.239) by DGGEMS404-HUB.china.huawei.com
+ (10.3.19.204) with Microsoft SMTP Server id 14.3.439.0; Wed, 4 Sep 2019
+ 21:59:28 +0800
+From: YueHaibing <yuehaibing@huawei.com>
+To: <broonie@kernel.org>, <f.fainelli@gmail.com>, <rjui@broadcom.com>,
+ <sbranden@broadcom.com>, <eric@anholt.net>, <wahrenst@gmx.net>,
+ <shc_work@mail.ru>, <agross@kernel.org>, <khilman@baylibre.com>,
+ <matthias.bgg@gmail.com>, <shawnguo@kernel.org>, <s.hauer@pengutronix.de>,
+ <kernel@pengutronix.de>, <festevam@gmail.com>, <linux-imx@nxp.com>,
+ <avifishman70@gmail.com>, <tmaimon77@gmail.com>, <tali.perry1@gmail.com>,
+ <venture@google.com>, <yuenn@google.com>, <benjaminfair@google.com>,
+ <kgene@kernel.org>, <krzk@kernel.org>, <andi@etezian.org>,
+ <palmer@sifive.com>, <paul.walmsley@sifive.com>, <baohua@kernel.org>,
+ <mripard@kernel.org>, <wens@csie.org>, <ldewangan@nvidia.com>,
+ <thierry.reding@gmail.com>, <jonathanh@nvidia.com>,
+ <yamada.masahiro@socionext.com>, <michal.simek@xilinx.com>
+Subject: [PATCH -next 00/36] use devm_platform_ioremap_resource() to simplify
+ code
+Date: Wed, 4 Sep 2019 21:58:42 +0800
+Message-ID: <20190904135918.25352-1-yuehaibing@huawei.com>
+X-Mailer: git-send-email 2.10.2.windows.1
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20190904082232.GA171180@LGEARND20B15>
-User-Agent: Mutt/1.12.1 (2019-06-15)
+X-Originating-IP: [10.133.213.239]
+X-CFilter-Loop: Reflected
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190904_014528_512522_EF0CB6E6 
-X-CRM114-Status: GOOD (  13.32  )
-X-Spam-Score: -5.0 (-----)
+X-CRM114-CacheID: sfid-20190904_065940_966256_3B925FB8 
+X-CRM114-Status: UNSURE (   3.61  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.0 points)
+ Content analysis details:   (-2.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [45.249.212.32 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -72,47 +73,108 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: mjourdan@baylibre.com, devel@driverdev.osuosl.org, khilman@baylibre.com,
- linux-kernel@vger.kernel.org, linux-amlogic@lists.infradead.org,
- mchehab@kernel.org, linux-arm-kernel@lists.infradead.org,
- linux-media@vger.kernel.org
+Cc: linux-samsung-soc@vger.kernel.org, YueHaibing <yuehaibing@huawei.com>,
+ linux-arm-msm@vger.kernel.org, openbmc@lists.ozlabs.org,
+ linux-mediatek@lists.infradead.org, linux-kernel@vger.kernel.org,
+ linux-spi@vger.kernel.org, bcm-kernel-feedback-list@broadcom.com,
+ linux-rpi-kernel@lists.infradead.org, linux-tegra@vger.kernel.org,
+ linux-amlogic@lists.infradead.org, linux-riscv@lists.infradead.org,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On Wed, Sep 04, 2019 at 05:22:32PM +0900, Austin Kim wrote:
-> If the kmalloc() return NULL, the NULL pointer dereference will occur.
-> 	new_ts->ts = ts;
-> 
-> Add exception check after the call to kmalloc() is made.
-> 
-> Signed-off-by: Austin Kim <austindh.kim@gmail.com>
-> ---
->  drivers/staging/media/meson/vdec/vdec_helpers.c | 4 ++++
->  1 file changed, 4 insertions(+)
-> 
-> diff --git a/drivers/staging/media/meson/vdec/vdec_helpers.c b/drivers/staging/media/meson/vdec/vdec_helpers.c
-> index f16948b..e7e56d5 100644
-> --- a/drivers/staging/media/meson/vdec/vdec_helpers.c
-> +++ b/drivers/staging/media/meson/vdec/vdec_helpers.c
-> @@ -206,6 +206,10 @@ void amvdec_add_ts_reorder(struct amvdec_session *sess, u64 ts, u32 offset)
->  	unsigned long flags;
->  
->  	new_ts = kmalloc(sizeof(*new_ts), GFP_KERNEL);
-> +	if (!new_ts) {
-> +		dev_err(sess->core->dev, "Failed to kmalloc()\n");
+devm_platform_ioremap_resource() internally have platform_get_resource()
+and devm_ioremap_resource() in it. So instead of calling them separately
+use devm_platform_ioremap_resource() directly.
 
-Did you run this through checkpatch?  I think it will say that this line
-is not ok.
+YueHaibing (36):
+  spi: altera: use devm_platform_ioremap_resource() to simplify code
+  spi: a3700: use devm_platform_ioremap_resource() to simplify code
+  spi: ath79: use devm_platform_ioremap_resource() to simplify code
+  spi: spi-axi: use devm_platform_ioremap_resource() to simplify code
+  spi: bcm2835aux: use devm_platform_ioremap_resource() to simplify code
+  spi: bcm2835: use devm_platform_ioremap_resource() to simplify code
+  spi: bcm63xx-hsspi: use devm_platform_ioremap_resource() to simplify
+    code
+  spi: cadence: use devm_platform_ioremap_resource() to simplify code
+  spi: octeon: use devm_platform_ioremap_resource() to simplify code
+  spi: clps711x: use devm_platform_ioremap_resource() to simplify code
+  spi: coldfire-qspi: use devm_platform_ioremap_resource() to simplify
+    code
+  spi: dw-mmio: use devm_platform_ioremap_resource() to simplify code
+  spi: spi-geni-qcom: use devm_platform_ioremap_resource() to simplify
+    code
+  spi: lp-8841: use devm_platform_ioremap_resource() to simplify code
+  spi: meson-spicc: use devm_platform_ioremap_resource() to simplify
+    code
+  spi: spi-meson-spifc: use devm_platform_ioremap_resource() to simplify
+    code
+  spi: mt7621: use devm_platform_ioremap_resource() to simplify code
+  spi: mxs: use devm_platform_ioremap_resource() to simplify code
+  spi: npcm: use devm_platform_ioremap_resource() to simplify code
+  spi: nuc900: use devm_platform_ioremap_resource() to simplify code
+  spi: oc-tiny: use devm_platform_ioremap_resource() to simplify code
+  spi: pic32-sqi: use devm_platform_ioremap_resource() to simplify code
+  spi: spi-qcom-qspi: use devm_platform_ioremap_resource() to simplify
+    code
+  spi: rb4xx: use devm_platform_ioremap_resource() to simplify code
+  spi: s3c24xx: use devm_platform_ioremap_resource() to simplify code
+  spi: sifive: use devm_platform_ioremap_resource() to simplify code
+  spi: sirf: use devm_platform_ioremap_resource() to simplify code
+  spi: st-ssc4: use devm_platform_ioremap_resource() to simplify code
+  spi: sun4i: use devm_platform_ioremap_resource() to simplify code
+  spi: sun6i: use devm_platform_ioremap_resource() to simplify code
+  spi: tegra: use devm_platform_ioremap_resource() to simplify code
+  spi: uniphier: use devm_platform_ioremap_resource() to simplify code
+  spi: xlp: use devm_platform_ioremap_resource() to simplify code
+  spi: zynqmp: use devm_platform_ioremap_resource() to simplify code
+  spi: zynq-qspi: use devm_platform_ioremap_resource() to simplify code
+  spi: fsl-spi: use devm_platform_ioremap_resource() to simplify code
 
-> +		return;
+ drivers/spi/spi-altera.c         | 4 +---
+ drivers/spi/spi-armada-3700.c    | 4 +---
+ drivers/spi/spi-ath79.c          | 4 +---
+ drivers/spi/spi-axi-spi-engine.c | 4 +---
+ drivers/spi/spi-bcm2835.c        | 4 +---
+ drivers/spi/spi-bcm2835aux.c     | 4 +---
+ drivers/spi/spi-bcm63xx-hsspi.c  | 4 +---
+ drivers/spi/spi-cadence.c        | 4 +---
+ drivers/spi/spi-cavium-octeon.c  | 4 +---
+ drivers/spi/spi-clps711x.c       | 4 +---
+ drivers/spi/spi-coldfire-qspi.c  | 4 +---
+ drivers/spi/spi-dw-mmio.c        | 4 +---
+ drivers/spi/spi-fsl-cpm.c        | 6 ++----
+ drivers/spi/spi-geni-qcom.c      | 4 +---
+ drivers/spi/spi-lp8841-rtc.c     | 4 +---
+ drivers/spi/spi-meson-spicc.c    | 4 +---
+ drivers/spi/spi-meson-spifc.c    | 4 +---
+ drivers/spi/spi-mt7621.c         | 4 +---
+ drivers/spi/spi-mxs.c            | 4 +---
+ drivers/spi/spi-npcm-pspi.c      | 4 +---
+ drivers/spi/spi-nuc900.c         | 4 +---
+ drivers/spi/spi-oc-tiny.c        | 4 +---
+ drivers/spi/spi-pic32-sqi.c      | 4 +---
+ drivers/spi/spi-qcom-qspi.c      | 4 +---
+ drivers/spi/spi-rb4xx.c          | 4 +---
+ drivers/spi/spi-s3c24xx.c        | 4 +---
+ drivers/spi/spi-sifive.c         | 4 +---
+ drivers/spi/spi-sirf.c           | 4 +---
+ drivers/spi/spi-st-ssc4.c        | 4 +---
+ drivers/spi/spi-sun4i.c          | 4 +---
+ drivers/spi/spi-sun6i.c          | 4 +---
+ drivers/spi/spi-tegra20-sflash.c | 4 +---
+ drivers/spi/spi-uniphier.c       | 4 +---
+ drivers/spi/spi-xlp.c            | 4 +---
+ drivers/spi/spi-zynq-qspi.c      | 4 +---
+ drivers/spi/spi-zynqmp-gqspi.c   | 4 +---
+ 36 files changed, 37 insertions(+), 109 deletions(-)
 
-Shouldn't you return an -ENOMEM error somehow?
+-- 
+2.7.4
 
-thanks,
 
-greg k-h
 
 _______________________________________________
 linux-amlogic mailing list
