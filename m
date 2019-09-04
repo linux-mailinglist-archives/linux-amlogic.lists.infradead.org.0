@@ -2,82 +2,83 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6BFE2A7D9E
-	for <lists+linux-amlogic@lfdr.de>; Wed,  4 Sep 2019 10:22:50 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3B121A7E29
+	for <lists+linux-amlogic@lfdr.de>; Wed,  4 Sep 2019 10:43:45 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Subject:To:From
-	:Date:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=dGBQL3vwoHcN2r4uERCsPVH0Mq1CZ0/uSBetj/SMkqg=; b=XjDy9qJPzz/Uaz
-	OXbtMaPICa8SnGYR9sZe5YdLOnnSRzYrF/U95MSZ8TWHKLDcdnHiAG5VUelwhQx19jwr6RUeheWFB
-	ZmOBHhlR9fREhYX34zs3r+c0hEtmnkNgmaEFiuXyfbqL0j8BqxC80rwzKUXomSCBBhcumofj6iWcA
-	NAQiteXa3tPXBY/IfZsNDwzXXRARFo33bQObVZM5i6bkPurLTzqz0tKyQZGSL6SIsdj9OW0TigU8+
-	ggWa2/BIemAWsGrSWQOgah1QYfG4kzcu1vF1OT7764uMsvTjU224TIG2kII2BOylvrOJc2A7iH0yq
-	8viTNf34xJPICzK6nP0Q==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
+	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=J+o0ERuUt6EcskInGsZCQt3WUoR1ZYUCd4sumV7JhyI=; b=kqHBjDolmq0bfN
+	U2Xyf47vz+kiHN88YyZe0cfSKkdOzKqLffvrUcEG4P7bAODUvRy/qRUWHJYIl7vs5H5YbqGRYYBOX
+	OZiDtqAB3i3569S6HxFWPzKl6P9+a/16GlM42MB11apK84FI9l9biFvrA2ZO2Kv3+vIsF/8FGtJN1
+	dL5VSrLbIdeJj+iMfrJTcHRDdrp5Z6EMG5fwQqC6Ae8MOhth7uTFKHMvoH8Rg3AyNeMllJPwCrON4
+	1mjfeuTrGbB4oeB9xj0xDzNJhl6FmzUFuk3siD46isMoBJGN8EFI5BhFK8ot82s+i1Dl7yNygd2gV
+	xqscUeYxTC1YKbNbucEQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i5QYu-0002IY-O0; Wed, 04 Sep 2019 08:22:44 +0000
-Received: from mail-pl1-x644.google.com ([2607:f8b0:4864:20::644])
+	id 1i5QtD-0001gi-5K; Wed, 04 Sep 2019 08:43:43 +0000
+Received: from mail-lf1-x141.google.com ([2a00:1450:4864:20::141])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i5QYp-0002I7-Cc; Wed, 04 Sep 2019 08:22:40 +0000
-Received: by mail-pl1-x644.google.com with SMTP id x3so4094309plr.12;
- Wed, 04 Sep 2019 01:22:38 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=date:from:to:cc:subject:message-id:mime-version:content-disposition
- :user-agent; bh=R+MTq1VS0iR1Cmy3+6Y5RTbLGGusOaeHEDjli8lEEug=;
- b=RTBHYoMusuZZ5AhgQVW4Ifku1G8VvN4Ll0zy023Lbai0cViQEH2bR6Iui/by5YW1Ap
- Q6aYgQSGI9o/EGk+Sn2VF2wxSMZqyDRoqmknxzQNcPNtlmHeghzyeCGm/q0giQ5NFWNI
- C1HvKXxbYbV0VHTuxz6/Ip6QnSNpNZ7ZMUOImib8g8ItRoRcH8mTzwGOHTTTOy2waQ94
- nO0BsM7b0Rma+caRCrzA2ZsNaEfBYIhVnamBuZcaQOilnxF5VtbynTkCur6tN8LvjwEh
- /KdfPBtSwEEHmECBR3CasdP57gyGVdxJVcyyG2tk4EHazua53hS5K8I6uuUcqLLB9kyZ
- BY0g==
+ id 1i5Qsv-0001V2-UG
+ for linux-amlogic@lists.infradead.org; Wed, 04 Sep 2019 08:43:28 +0000
+Received: by mail-lf1-x141.google.com with SMTP id r134so14313007lff.12
+ for <linux-amlogic@lists.infradead.org>; Wed, 04 Sep 2019 01:43:23 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=rasmusvillemoes.dk; s=google;
+ h=subject:to:cc:references:from:message-id:date:user-agent
+ :mime-version:in-reply-to:content-language:content-transfer-encoding;
+ bh=22aBvTjn7JhApRUIycE5rK4HDJAGLo24z88Hc1SRWA4=;
+ b=enCoL6P3SBeQS9D5xyYEBAdoddJ9z61maY/T5ThChXtVQrjpuUkF5viAUSVLEqrTOO
+ ImWc5C+mcF/HsSThCxP2TK3SROQw3OclyEPfVNNm6K9gCy2hr99P/uyRk4d5qgMX2mRG
+ B8+d2fF3E38Wj7G9stSoSDf+B1kzactV+peRQ=
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:mime-version
- :content-disposition:user-agent;
- bh=R+MTq1VS0iR1Cmy3+6Y5RTbLGGusOaeHEDjli8lEEug=;
- b=ZCQ4DZZOQ4fcQyKBpW7K0njqy2h2K80y2p9UhZjjQk0qR7kJor7p8UUJyLZsHMIXJq
- lYKFcqjPVlfc48wtwgqZ9kZrW0DJsfK4SOOvPfA0yPbosBdDe5BQhzEf47obrNqRJ28q
- AZzpMNOYUzJ3zekmJY8DyOeWUrgbi2JOz5/8EwZnZeuijI/rMC22rQItreUyyfTGqUSc
- 03QtOzY7VT1zYAoZX70ig7c1B8NpHrnXzwC68jIphir0hSDJOIPJHWDLFGSH2YMe1W5F
- v7GICm9JalQ8DoSQeXDS853U2iYHYdHvp8/HNG7V0F2+ieION6HJalA1ZP6RKO7Gx31A
- rljA==
-X-Gm-Message-State: APjAAAXr6EqbpoI4mZ0DO7oLNU/azd4RP9ugQdaIIvTNpjQ+qeMRmY2d
- tMXGN6O6l+tBsCv7W3J+VHc=
-X-Google-Smtp-Source: APXvYqx1Bf1AOmUEnA9r1G5j3AiZRcryCIH6SYuoyG7V3crQWL4xyMzhyRlY+1SwI2QFZ3T3XLdMbA==
-X-Received: by 2002:a17:902:8345:: with SMTP id
- z5mr41132525pln.29.1567585358436; 
- Wed, 04 Sep 2019 01:22:38 -0700 (PDT)
-Received: from LGEARND20B15 ([27.122.242.75])
- by smtp.gmail.com with ESMTPSA id y8sm22025894pfe.146.2019.09.04.01.22.35
+ h=x-gm-message-state:subject:to:cc:references:from:message-id:date
+ :user-agent:mime-version:in-reply-to:content-language
+ :content-transfer-encoding;
+ bh=22aBvTjn7JhApRUIycE5rK4HDJAGLo24z88Hc1SRWA4=;
+ b=ZcSnkE6mlPNpzhWR8ApVsHzy1kuIh+Aj5kfRIrYCK7D/W+0DD23hwTLpu4ffgdW1BI
+ bjeolM/eKOFnq+pS3dYx16CFP21SFlKnw31vqGw0FteCEBe5aHFYXJjhcKL7UIb1Xnjy
+ 3+kBl9E0FNsJifkqwPoz08yDRNQXi8Kq8tti0fL91ndf5AQNxJJyghqLqTJkids+a6tf
+ dtZlhuXvRczNXgzpxqB6j22N5fExN0hB4ckqrD3+pFUio7OsX1Zn4mc3sgnDE/KFC975
+ JxZiNuFk3ttOhZKlB7o+MwjjtydB5ekX0repnXbVU4ygGuBI19OAMj1yB16oDSx/fiUn
+ SuMA==
+X-Gm-Message-State: APjAAAVaC3l1Y/zsjQpioS538xWefRkl3VhQXHWED+mtuaZbHq7JwLe/
+ /7FgCGGCLLqXiwHB06Y795RDnQ==
+X-Google-Smtp-Source: APXvYqw8OMMGAjW/bDQMQDkYA6XzdbLEjLxRR0ppAW3/TaJg6XOpuLFWIOJqftYhJvqXldXvtkGrIA==
+X-Received: by 2002:a19:6455:: with SMTP id b21mr23773070lfj.167.1567586602413; 
+ Wed, 04 Sep 2019 01:43:22 -0700 (PDT)
+Received: from [172.16.11.28] ([81.216.59.226])
+ by smtp.gmail.com with ESMTPSA id z72sm1146467ljb.98.2019.09.04.01.43.21
  (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
- Wed, 04 Sep 2019 01:22:37 -0700 (PDT)
-Date: Wed, 4 Sep 2019 17:22:32 +0900
-From: Austin Kim <austindh.kim@gmail.com>
-To: mchehab@kernel.org, khilman@baylibre.com
-Subject: [PATCH] media: meson: Add NULL check after the call to kmalloc()
-Message-ID: <20190904082232.GA171180@LGEARND20B15>
+ Wed, 04 Sep 2019 01:43:21 -0700 (PDT)
+Subject: Re: [PATCH] media: meson: Add NULL check after the call to kmalloc()
+To: Austin Kim <austindh.kim@gmail.com>, mchehab@kernel.org,
+ khilman@baylibre.com
+References: <20190904082232.GA171180@LGEARND20B15>
+From: Rasmus Villemoes <linux@rasmusvillemoes.dk>
+Message-ID: <a9ca05ec-55a9-a58c-267a-334771a1480a@rasmusvillemoes.dk>
+Date: Wed, 4 Sep 2019 10:43:20 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.8.0
 MIME-Version: 1.0
-Content-Disposition: inline
-User-Agent: Mutt/1.5.24 (2015-08-30)
+In-Reply-To: <20190904082232.GA171180@LGEARND20B15>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190904_012239_457756_426E4B8D 
-X-CRM114-Status: UNSURE (   8.86  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190904_014325_980340_BB740E03 
+X-CRM114-Status: GOOD (  15.75  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:644 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:141 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (austindh.kim[at]gmail.com)
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
@@ -105,34 +106,47 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-If the kmalloc() return NULL, the NULL pointer dereference will occur.
-	new_ts->ts = ts;
+On 04/09/2019 10.22, Austin Kim wrote:
+> If the kmalloc() return NULL, the NULL pointer dereference will occur.
+> 	new_ts->ts = ts;
+> 
+> Add exception check after the call to kmalloc() is made.
+> 
+> Signed-off-by: Austin Kim <austindh.kim@gmail.com>
+> ---
+>  drivers/staging/media/meson/vdec/vdec_helpers.c | 4 ++++
+>  1 file changed, 4 insertions(+)
+> 
+> diff --git a/drivers/staging/media/meson/vdec/vdec_helpers.c b/drivers/staging/media/meson/vdec/vdec_helpers.c
+> index f16948b..e7e56d5 100644
+> --- a/drivers/staging/media/meson/vdec/vdec_helpers.c
+> +++ b/drivers/staging/media/meson/vdec/vdec_helpers.c
+> @@ -206,6 +206,10 @@ void amvdec_add_ts_reorder(struct amvdec_session *sess, u64 ts, u32 offset)
+>  	unsigned long flags;
+>  
+>  	new_ts = kmalloc(sizeof(*new_ts), GFP_KERNEL);
+> +	if (!new_ts) {
+> +		dev_err(sess->core->dev, "Failed to kmalloc()\n");
+> +		return;
+> +	}
+>  	new_ts->ts = ts;
+>  	new_ts->offset = offset;
 
-Add exception check after the call to kmalloc() is made.
+No need to printk() on error, AFAIK the mm subsystem should already make
+some noise if an allocation fails.
+This is not a proper fix - you need to make the function return an error
+(-ENOMEM) to let the caller know allocation failed, and allow that to
+propagate the error. There's only one caller, which already seems
+capable of returning errors (there's an -EAGAIN), so it shouldn't be
+that hard - though of course one needs to undo what has been done so far.
 
-Signed-off-by: Austin Kim <austindh.kim@gmail.com>
----
- drivers/staging/media/meson/vdec/vdec_helpers.c | 4 ++++
- 1 file changed, 4 insertions(+)
+Also, unrelated to the kmalloc() handling: amvdec_add_ts_reorder() could
+be moved to esparser.c and made static, or at the very least the
+EXPORT_SYMBOL can be removed since vdec_helpers.o is linked in to the
+same module as the sole user. That probably goes for all the
+EXPORT_SYMBOL(amvdec_*).
 
-diff --git a/drivers/staging/media/meson/vdec/vdec_helpers.c b/drivers/staging/media/meson/vdec/vdec_helpers.c
-index f16948b..e7e56d5 100644
---- a/drivers/staging/media/meson/vdec/vdec_helpers.c
-+++ b/drivers/staging/media/meson/vdec/vdec_helpers.c
-@@ -206,6 +206,10 @@ void amvdec_add_ts_reorder(struct amvdec_session *sess, u64 ts, u32 offset)
- 	unsigned long flags;
- 
- 	new_ts = kmalloc(sizeof(*new_ts), GFP_KERNEL);
-+	if (!new_ts) {
-+		dev_err(sess->core->dev, "Failed to kmalloc()\n");
-+		return;
-+	}
- 	new_ts->ts = ts;
- 	new_ts->offset = offset;
- 
--- 
-2.6.2
-
+Rasmus
 
 _______________________________________________
 linux-amlogic mailing list
