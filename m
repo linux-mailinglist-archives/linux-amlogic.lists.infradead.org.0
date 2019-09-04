@@ -2,32 +2,32 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 71ADFA8510
-	for <lists+linux-amlogic@lfdr.de>; Wed,  4 Sep 2019 16:06:24 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 15D4CA8517
+	for <lists+linux-amlogic@lfdr.de>; Wed,  4 Sep 2019 16:07:00 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=PMAq/+7UFCY6yUfxnS21SgT6vqOL5oQPyu02TsE5Tdk=; b=KFkrVXpJ45p7+y
-	QQaeX7mnG9zA11E9mxCdr6WqCa6HLgAp9kKC5A9xYCSKTSfjElGsPP6TsVGoLR+UHa1mUbm/PbvXn
-	4PO5VPGslmNLsoHjIcYixZ1f2PCzW6Ocfr+fhhqzPgSCayTS/9FUJhZYFzHFwlJk8KQ8PE9KXw5gl
-	0plPQQsh69Mid/HPf35eOyLZtGq8Ryt7lgFwFWaFME9Zbi2Qt5rqca7HFaGMA/FO1pl4smaLQ7B09
-	XbN7rUqMMUAoWqhaJhoIyox2LxgOCE17UU8zwsS59X2VmuFlsTrWYlOCIcrhHfHo3fXvdAA8kDhMn
-	lXcDc4/WFaWG+vkzdGuw==;
+	List-Owner; bh=2co6ayHIqx1UlP6lVkF+3jk451mR586fwHgrnJWxONU=; b=U/CclW6/5w+Yl9
+	yfItAcMDRCC2z6+17Vz0pgjBr7FuqM4zL5mWTJN+qrYxBFy0fxQMTKPth2g4S3cO+p2cWUa++eFUl
+	v0f5Tr8aW160TXSgP8h7aSKCfXQ9TMzAqMLC6ae09WM9KhOAAHsIIAx6piDW/UJPvP3rU0aNeUI9L
+	7o9GyDopV7HOOWKmD9beRu0F3KoWcodBRcLRXc1TGJdRxLsSU/kzNT/laU7XqFzJoMKQPOCHTQccN
+	0LMg1s/QhWMD3Qv9KTuBskhRfrELPOm1De4fqhwqN2tolKv9WPOJSPZs/P7pBqxIPWlvAnnBxzu/Z
+	3ZupGzZwr5UVJTLbQB2w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i5VvQ-0004KX-5t; Wed, 04 Sep 2019 14:06:20 +0000
-Received: from szxga04-in.huawei.com ([45.249.212.190] helo=huawei.com)
+	id 1i5Vw0-0004xv-Ai; Wed, 04 Sep 2019 14:06:56 +0000
+Received: from szxga07-in.huawei.com ([45.249.212.35] helo=huawei.com)
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i5Vpr-00055F-EA; Wed, 04 Sep 2019 14:00:36 +0000
-Received: from DGGEMS410-HUB.china.huawei.com (unknown [172.30.72.60])
- by Forcepoint Email with ESMTP id 1D921DA8F8A009239BCC;
- Wed,  4 Sep 2019 22:00:33 +0800 (CST)
-Received: from localhost (10.133.213.239) by DGGEMS410-HUB.china.huawei.com
- (10.3.19.210) with Microsoft SMTP Server id 14.3.439.0; Wed, 4 Sep 2019
- 22:00:24 +0800
+ id 1i5Vpt-00058Y-Or; Wed, 04 Sep 2019 14:00:39 +0000
+Received: from DGGEMS412-HUB.china.huawei.com (unknown [172.30.72.59])
+ by Forcepoint Email with ESMTP id 6DEEA87C3895A6B5B070;
+ Wed,  4 Sep 2019 22:00:35 +0800 (CST)
+Received: from localhost (10.133.213.239) by DGGEMS412-HUB.china.huawei.com
+ (10.3.19.212) with Microsoft SMTP Server id 14.3.439.0; Wed, 4 Sep 2019
+ 22:00:27 +0800
 From: YueHaibing <yuehaibing@huawei.com>
 To: <broonie@kernel.org>, <f.fainelli@gmail.com>, <rjui@broadcom.com>,
  <sbranden@broadcom.com>, <eric@anholt.net>, <wahrenst@gmx.net>,
@@ -41,10 +41,10 @@ To: <broonie@kernel.org>, <f.fainelli@gmail.com>, <rjui@broadcom.com>,
  <mripard@kernel.org>, <wens@csie.org>, <ldewangan@nvidia.com>,
  <thierry.reding@gmail.com>, <jonathanh@nvidia.com>,
  <yamada.masahiro@socionext.com>, <michal.simek@xilinx.com>
-Subject: [PATCH -next 19/36] spi: npcm: use devm_platform_ioremap_resource()
+Subject: [PATCH -next 20/36] spi: nuc900: use devm_platform_ioremap_resource()
  to simplify code
-Date: Wed, 4 Sep 2019 21:59:01 +0800
-Message-ID: <20190904135918.25352-20-yuehaibing@huawei.com>
+Date: Wed, 4 Sep 2019 21:59:02 +0800
+Message-ID: <20190904135918.25352-21-yuehaibing@huawei.com>
 X-Mailer: git-send-email 2.10.2.windows.1
 In-Reply-To: <20190904135918.25352-1-yuehaibing@huawei.com>
 References: <20190904135918.25352-1-yuehaibing@huawei.com>
@@ -52,8 +52,8 @@ MIME-Version: 1.0
 X-Originating-IP: [10.133.213.239]
 X-CFilter-Loop: Reflected
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190904_070035_680658_878ACEF3 
-X-CRM114-Status: UNSURE (   8.00  )
+X-CRM114-CacheID: sfid-20190904_070038_125699_56C7D089 
+X-CRM114-Status: UNSURE (   8.53  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -61,7 +61,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [45.249.212.190 listed in list.dnswl.org]
+ medium trust [45.249.212.35 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
 X-BeenThere: linux-amlogic@lists.infradead.org
@@ -93,31 +93,31 @@ This is detected by coccinelle.
 Reported-by: Hulk Robot <hulkci@huawei.com>
 Signed-off-by: YueHaibing <yuehaibing@huawei.com>
 ---
- drivers/spi/spi-npcm-pspi.c | 4 +---
+ drivers/spi/spi-nuc900.c | 4 +---
  1 file changed, 1 insertion(+), 3 deletions(-)
 
-diff --git a/drivers/spi/spi-npcm-pspi.c b/drivers/spi/spi-npcm-pspi.c
-index 5c56cae..b191d57 100644
---- a/drivers/spi/spi-npcm-pspi.c
-+++ b/drivers/spi/spi-npcm-pspi.c
-@@ -341,7 +341,6 @@ static int npcm_pspi_probe(struct platform_device *pdev)
+diff --git a/drivers/spi/spi-nuc900.c b/drivers/spi/spi-nuc900.c
+index f65a029e..6140035 100644
+--- a/drivers/spi/spi-nuc900.c
++++ b/drivers/spi/spi-nuc900.c
+@@ -327,7 +327,6 @@ static int nuc900_spi_probe(struct platform_device *pdev)
  {
- 	struct npcm_pspi *priv;
+ 	struct nuc900_spi *hw;
  	struct spi_master *master;
 -	struct resource *res;
- 	unsigned long clk_hz;
- 	struct device_node *np = pdev->dev.of_node;
- 	int num_cs, i;
-@@ -368,8 +367,7 @@ static int npcm_pspi_probe(struct platform_device *pdev)
- 	priv->is_save_param = false;
- 	priv->id = pdev->id;
+ 	int err = 0;
+ 
+ 	master = spi_alloc_master(&pdev->dev, sizeof(struct nuc900_spi));
+@@ -358,8 +357,7 @@ static int nuc900_spi_probe(struct platform_device *pdev)
+ 	hw->bitbang.chipselect     = nuc900_spi_chipsel;
+ 	hw->bitbang.txrx_bufs      = nuc900_spi_txrx;
  
 -	res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
--	priv->base = devm_ioremap_resource(&pdev->dev, res);
-+	priv->base = devm_platform_ioremap_resource(pdev, 0);
- 	if (IS_ERR(priv->base)) {
- 		ret = PTR_ERR(priv->base);
- 		goto out_master_put;
+-	hw->regs = devm_ioremap_resource(&pdev->dev, res);
++	hw->regs = devm_platform_ioremap_resource(pdev, 0);
+ 	if (IS_ERR(hw->regs)) {
+ 		err = PTR_ERR(hw->regs);
+ 		goto err_pdata;
 -- 
 2.7.4
 
