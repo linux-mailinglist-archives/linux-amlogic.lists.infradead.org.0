@@ -2,32 +2,32 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7F81FA84E7
-	for <lists+linux-amlogic@lfdr.de>; Wed,  4 Sep 2019 16:03:03 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 19FFBA84F0
+	for <lists+linux-amlogic@lfdr.de>; Wed,  4 Sep 2019 16:04:07 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=GZCWIkDPk2ksZYBw37cRhhR8POZY2Q3ri9ltLL6rQ4I=; b=Oste/btwpu0Xmh
-	+2TV56F/KFC0Ns62x60GvPGe0PxeSyRqOwf2swjhW16pR6wn5xYxlnc62hLrtLJJSdW55u6+5YSLR
-	V/wf2ccjoClJnANnp05gPKHWTM+v/5C7IcJAIv4aEyfHSqlGi+rvu3ifVUWplocBbCAD3xRx16CDj
-	PdOqrQFREjQbplqOrKNAYWv9kKAzFKZWpP/Nm24F9ZBi9v03JFD8OLqVLL9DRnNB98m42j4ykXBhw
-	Ip/YeAVBH2s1ildtTWHxbzPrgY140t60TYYhu3crdH05uLnLi55fl+yu4egi7neKQiBNl3uubGa6P
-	fcbRBwKbw+CpMaA9MxTA==;
+	List-Owner; bh=mB2wTW3UrPX9v4bdTECUB5pjchP+kaaWNJ/ZuUtvLQA=; b=UNqcBVOTllXIOu
+	XrHl2luTBeMwPTFVj7t/5xt5avC7RvuStMs67Bnm/hWxBZHkCWgar80+4jQtyUYUXnRgI+/RAF1Lv
+	L4nkPEI3WPalkitw/G0rcRVRm3DmBGRdgvoz9U33FU8WjtN3WXzMDPC9JzoFjVLGvC0JHjsk4Ubpu
+	RhtTwV1KUG7YTi9POG/FfgsJSkhBWrYJ4/dadDi5O/tcKSuJhJsQNI0ZDZqXXgH6+zPOf2DlcE+NC
+	zb4ASgOu43gNEfd34OXhufLZpwAEuLodCIm5RexqlLFCA1VumlbXbIibYpx9DQ0wFMP8LlZ7Qkk8l
+	3S1JmJLNPd5JPlN9UL3w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i5VsC-0007tx-CF; Wed, 04 Sep 2019 14:03:00 +0000
+	id 1i5VtE-0000WH-2o; Wed, 04 Sep 2019 14:04:04 +0000
 Received: from szxga04-in.huawei.com ([45.249.212.190] helo=huawei.com)
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i5VpQ-0003bs-6T; Wed, 04 Sep 2019 14:00:10 +0000
-Received: from DGGEMS406-HUB.china.huawei.com (unknown [172.30.72.60])
- by Forcepoint Email with ESMTP id 814968A0F367A3694B0B;
- Wed,  4 Sep 2019 22:00:04 +0800 (CST)
-Received: from localhost (10.133.213.239) by DGGEMS406-HUB.china.huawei.com
- (10.3.19.206) with Microsoft SMTP Server id 14.3.439.0; Wed, 4 Sep 2019
- 21:59:57 +0800
+ id 1i5VpU-0004Mr-QS; Wed, 04 Sep 2019 14:00:15 +0000
+Received: from DGGEMS414-HUB.china.huawei.com (unknown [172.30.72.59])
+ by Forcepoint Email with ESMTP id 96C07BB3FB87F10F180C;
+ Wed,  4 Sep 2019 22:00:10 +0800 (CST)
+Received: from localhost (10.133.213.239) by DGGEMS414-HUB.china.huawei.com
+ (10.3.19.214) with Microsoft SMTP Server id 14.3.439.0; Wed, 4 Sep 2019
+ 22:00:00 +0800
 From: YueHaibing <yuehaibing@huawei.com>
 To: <broonie@kernel.org>, <f.fainelli@gmail.com>, <rjui@broadcom.com>,
  <sbranden@broadcom.com>, <eric@anholt.net>, <wahrenst@gmx.net>,
@@ -41,10 +41,10 @@ To: <broonie@kernel.org>, <f.fainelli@gmail.com>, <rjui@broadcom.com>,
  <mripard@kernel.org>, <wens@csie.org>, <ldewangan@nvidia.com>,
  <thierry.reding@gmail.com>, <jonathanh@nvidia.com>,
  <yamada.masahiro@socionext.com>, <michal.simek@xilinx.com>
-Subject: [PATCH -next 10/36] spi: clps711x: use
+Subject: [PATCH -next 11/36] spi: coldfire-qspi: use
  devm_platform_ioremap_resource() to simplify code
-Date: Wed, 4 Sep 2019 21:58:52 +0800
-Message-ID: <20190904135918.25352-11-yuehaibing@huawei.com>
+Date: Wed, 4 Sep 2019 21:58:53 +0800
+Message-ID: <20190904135918.25352-12-yuehaibing@huawei.com>
 X-Mailer: git-send-email 2.10.2.windows.1
 In-Reply-To: <20190904135918.25352-1-yuehaibing@huawei.com>
 References: <20190904135918.25352-1-yuehaibing@huawei.com>
@@ -52,8 +52,8 @@ MIME-Version: 1.0
 X-Originating-IP: [10.133.213.239]
 X-CFilter-Loop: Reflected
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190904_070008_497733_D07A9BCD 
-X-CRM114-Status: UNSURE (   7.88  )
+X-CRM114-CacheID: sfid-20190904_070013_939012_38B1EB26 
+X-CRM114-Status: UNSURE (   7.99  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -93,31 +93,31 @@ This is detected by coccinelle.
 Reported-by: Hulk Robot <hulkci@huawei.com>
 Signed-off-by: YueHaibing <yuehaibing@huawei.com>
 ---
- drivers/spi/spi-clps711x.c | 4 +---
+ drivers/spi/spi-coldfire-qspi.c | 4 +---
  1 file changed, 1 insertion(+), 3 deletions(-)
 
-diff --git a/drivers/spi/spi-clps711x.c b/drivers/spi/spi-clps711x.c
-index 4daba12..5e900f2 100644
---- a/drivers/spi/spi-clps711x.c
-+++ b/drivers/spi/spi-clps711x.c
-@@ -91,7 +91,6 @@ static int spi_clps711x_probe(struct platform_device *pdev)
+diff --git a/drivers/spi/spi-coldfire-qspi.c b/drivers/spi/spi-coldfire-qspi.c
+index 5ff48ab..f80e06c 100644
+--- a/drivers/spi/spi-coldfire-qspi.c
++++ b/drivers/spi/spi-coldfire-qspi.c
+@@ -339,7 +339,6 @@ static int mcfqspi_probe(struct platform_device *pdev)
  {
- 	struct spi_clps711x_data *hw;
  	struct spi_master *master;
+ 	struct mcfqspi *mcfqspi;
 -	struct resource *res;
- 	int irq, ret;
+ 	struct mcfqspi_platform_data *pdata;
+ 	int status;
  
- 	irq = platform_get_irq(pdev, 0);
-@@ -125,8 +124,7 @@ static int spi_clps711x_probe(struct platform_device *pdev)
- 		goto err_out;
- 	}
+@@ -362,8 +361,7 @@ static int mcfqspi_probe(struct platform_device *pdev)
+ 
+ 	mcfqspi = spi_master_get_devdata(master);
  
 -	res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
--	hw->syncio = devm_ioremap_resource(&pdev->dev, res);
-+	hw->syncio = devm_platform_ioremap_resource(pdev, 0);
- 	if (IS_ERR(hw->syncio)) {
- 		ret = PTR_ERR(hw->syncio);
- 		goto err_out;
+-	mcfqspi->iobase = devm_ioremap_resource(&pdev->dev, res);
++	mcfqspi->iobase = devm_platform_ioremap_resource(pdev, 0);
+ 	if (IS_ERR(mcfqspi->iobase)) {
+ 		status = PTR_ERR(mcfqspi->iobase);
+ 		goto fail0;
 -- 
 2.7.4
 
