@@ -2,85 +2,78 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0387CAB83A
-	for <lists+linux-amlogic@lfdr.de>; Fri,  6 Sep 2019 14:33:57 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 47E98ABA4D
+	for <lists+linux-amlogic@lfdr.de>; Fri,  6 Sep 2019 16:08:00 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=DFAz6rMH8/JQR7cvorJ7yXCeI0IVHtU96ONb+K3NaiE=; b=YgTaHEr6lm8fYr
-	oZ5BLIvrlewgix8n0RP3wS6FfzVYHZefR40ErrGwxXqR9PIzMPjFkfQEAm2238M0Z/PlrnrT8p68G
-	tipZp5evX4i/18udZXnyMPxD2DLKYHEZtDYdVJZcpzTMVESKqpWCj4cMM1rg33frJ2wzl+6zFCypd
-	B8qm0rY8aZoo4X3ewk/oevO7r3XA6Bdw+cIhOj9st/0/DJ+Me4v3xVE6WpLv2yrWBsU8RnQpUkc2v
-	vZzJ4EiLE7hjE+Bl9o+jzSKoadNSOFNftb4ReDC8HCa5mslHjcOoNSu9N998ztG1WSr32uhCb1ZbI
-	GFFHWP50Qq6W4p5OpwXA==;
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
+	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=NfB1yBZ5ud2FmHhTfVcOOXoNE1DkOHx3oe2KOpQvuhQ=; b=ag5
+	ivSu1/e/1vF7TAXuVjq5siXoWaMecNtX9WIsMmtBIq2Kbqnee5/2BPHNwHXrYl/pOcCkNXQwuDG6V
+	qIRQmIWUsdiNRjgnE9G6w1PYsyccm2ZEMNRLBq1KNxrNTrYYISEZcYWjAMbIWMjPjZqTN9TErtxCT
+	T4z3JbNF9vM60CaYnYOLNnomFmqilGo0sGxH3mH+PZagXlw5Ihdj/s3K+qBhBOUBT6rcR6QIJMUWm
+	Ecw5TeBLBEdrli5AChca1CN7qXwvW/i8BQl9ydxGWTz4KdQ45dpakottYtVigNq+paubR529KTt0q
+	mdtbbVIo33aniYzjwjmeyjuw2Di4fmA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i6DR5-0002LZ-JA; Fri, 06 Sep 2019 12:33:55 +0000
-Received: from mail-pf1-x444.google.com ([2607:f8b0:4864:20::444])
+	id 1i6Etz-0004xh-KB; Fri, 06 Sep 2019 14:07:51 +0000
+Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i6DQh-0001lv-AJ; Fri, 06 Sep 2019 12:33:33 +0000
-Received: by mail-pf1-x444.google.com with SMTP id q5so4361839pfg.13;
- Fri, 06 Sep 2019 05:33:31 -0700 (PDT)
+ id 1i6Es5-0004PN-Oc; Fri, 06 Sep 2019 14:05:56 +0000
+Received: by mail-wr1-x442.google.com with SMTP id h7so5726624wrw.8;
+ Fri, 06 Sep 2019 07:05:51 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=from:to:cc:subject:date:message-id:in-reply-to:references
- :mime-version:content-transfer-encoding;
- bh=XL1ecQdL6XPXwXmH0af6w6z5EAVN9fbcG5PWEOAOqeY=;
- b=O12Uv9X9eemdfbjlXdCH2RTvg+MPXjGz7vY/Gqhp9Vj6RUSWZ07sdHYmuQR8ZvgWFs
- VyKcVO1orqcRK9nyqvKzbZq5RGYpAxNtMgJbLa6CM1Ilx+S0oAEyvnSr3zJSaH+i96pu
- VOB4HBsJA+fXKbKhjPwRisv4UQFwFhd20dFfyEdwminLOg5nMmvQMsDOXDa7Wm7+dMf1
- Oz89BWwmy1YqxRSz034Wn8dVYdLSPFdh5djemm0EzoFNpsJ+rHMDQSejhkgCbKw7HZdj
- KpAeKb0mbfxTdUwKa0xjxkIy0ovq1u0rY+2gGwEgT6awyEb27GFDTn7F2Dq5IgBZZpBY
- L8iA==
+ h=from:to:cc:subject:date:message-id;
+ bh=YhOPiGQ/jKMfAKNMmBIBmilg3dwIp+IShaOpXqxWprg=;
+ b=FjxI57jI6z0XPsMkktNq3JpEyfAjsH53bwf7ysTuNIDKxiHvFK9CWMakQdziG6QSXg
+ /4kn9zNNpDKtusr+UVNL1ITjHOZ5Abmb+g2ErAiWIUiSJXWgJpo7nsJspE7WNZEDmIbf
+ OcXX6vIsGNb9E8MJZbTw/9+6Zvc6NQ4vMgKFnjslN5XJFBxIHZ9fVc5o/3cwK7zU/AH2
+ sh7pzhElxBpPxFj61sWwAOYILB+WnlUSxUbmZlJL7Tj2g8x9NnDV6B2i16CuYcl35RbW
+ lAHpzEykJcI69j0BW7NWuyluAsy1Pf12NlAULs8krx3jjoZ6YlgOp0TMwFqebdRi9GKb
+ ng5w==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
- :references:mime-version:content-transfer-encoding;
- bh=XL1ecQdL6XPXwXmH0af6w6z5EAVN9fbcG5PWEOAOqeY=;
- b=ujRgqAm+KL1vChNvHd8Yc6G4sGIH6vNKI4XAEl3sEEjTFk/xYn/TGW97y27iVGC9Li
- +9kBOQgLCaF3u/6FFfKC+BcUaB/WIwTjRG7yBSGRL4LdD2hONuM2u3UBILjQd11favPU
- aqOt3GpbPe+KJ3/Bry61lB5gZosAHa3bBWfBPu9x208JnSW/OtLtz30jlYaidppalKO6
- U5Fq8yT7vm3u5NZauPR/8pn1TtrI0dHnGoERNCirBs6IXVXKYrGi8CR9IKxnkLzfR9DD
- nNnKi2ekzW2zrzAhmgL+IrcOKEp961mwrTH6DJPuWoLwPKZ18emMudkGze90se6wBxIA
- WYzg==
-X-Gm-Message-State: APjAAAVjXMpZkrx27TdAMFwwaGIhgucvx1gT5QB6n1QJmchBdMfH7eB/
- Mu8ILGIEqI3SBIMXP4MUp3g=
-X-Google-Smtp-Source: APXvYqxYnVrJx8RQe8BwVimz0PHJn0+JCbOvLTf90TebAgJeKUBRjRR9eIXxqaR93YpHo+orEUkpSg==
-X-Received: by 2002:a63:534d:: with SMTP id t13mr7774981pgl.313.1567773210032; 
- Fri, 06 Sep 2019 05:33:30 -0700 (PDT)
-Received: from localhost.localdomain ([45.114.62.203])
- by smtp.gmail.com with ESMTPSA id h70sm4752933pgc.36.2019.09.06.05.33.27
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Fri, 06 Sep 2019 05:33:29 -0700 (PDT)
-From: Anand Moon <linux.amoon@gmail.com>
-To: Rob Herring <robh+dt@kernel.org>,
- Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
- Jerome Brunet <jbrunet@baylibre.com>,
- Neil Armstrong <narmstrong@baylibre.com>,
- Kevin Hilman <khilman@baylibre.com>
-Subject: [PATCHv3-next 3/3] arm64: dts: meson: odroid-c2: Add missing
- regulator linked to HDMI supply
-Date: Fri,  6 Sep 2019 12:32:59 +0000
-Message-Id: <20190906123259.351-4-linux.amoon@gmail.com>
-X-Mailer: git-send-email 2.23.0
-In-Reply-To: <20190906123259.351-1-linux.amoon@gmail.com>
-References: <20190906123259.351-1-linux.amoon@gmail.com>
-MIME-Version: 1.0
+ h=x-gm-message-state:from:to:cc:subject:date:message-id;
+ bh=YhOPiGQ/jKMfAKNMmBIBmilg3dwIp+IShaOpXqxWprg=;
+ b=gJfnhiai/VAu5N9t5sWFsSi5jCsz6lb2LpudC9bySIGajrQlAZWfzGQ1t7s/WyOQTo
+ 1/QFCZ46hE/eJUJNnEbdJuboOkXoKnRuuxOYxs4MM87sqWcBx9nAlFhSBVOMX5Nrefcz
+ BMmbsvAI2GZsjldK+MEtl9kup4fRPsvqQN2xeRWFWV8zArjy8Vj9kKKYiwzZkYSvXPWK
+ Sd+gKmLqO7O1u3jit96YhggudGizyv9MbKsC30NxqSFkQnqEyxbyLZgmIZNMa76EP37C
+ VCuhfIPV83ZBRk4MOXP5a8nCPMZxPeDHi1ZKjS2VUqVfCDuWmcCUsE6FFtE1vx+JytH8
+ surA==
+X-Gm-Message-State: APjAAAVxaWT0TCjL5j73ARwRlgI7U5dKmslDT09ELZ8t0Lp5JlcPL3hG
+ HVGeutt8GFFahmHIRuTKZXg=
+X-Google-Smtp-Source: APXvYqyour3/+Klmag/nD1xyNEEijuh9OxYfZsVW8R9vEdtv/6UIzhNd9mDLPuW0JOIbs21O/mlgFQ==
+X-Received: by 2002:adf:dec8:: with SMTP id i8mr7527923wrn.286.1567778749916; 
+ Fri, 06 Sep 2019 07:05:49 -0700 (PDT)
+Received: from localhost.localdomain ([94.204.252.234])
+ by smtp.gmail.com with ESMTPSA id e20sm7480542wrc.34.2019.09.06.07.05.47
+ (version=TLS1_2 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+ Fri, 06 Sep 2019 07:05:49 -0700 (PDT)
+From: Christian Hewitt <christianshewitt@gmail.com>
+To: Rob Herring <robh+dt@kernel.org>, Mark Rutland <mark.rutland@arm.com>,
+ Kevin Hilman <khilman@baylibre.com>, devicetree@vger.kernel.org,
+ linux-arm-kernel@lists.infradead.org, linux-amlogic@lists.infradead.org,
+ linux-kernel@vger.kernel.org
+Subject: [PATCH v3 0/3] arm64: meson-g12b: Add support for the Ugoos AM6
+Date: Fri,  6 Sep 2019 18:04:56 +0400
+Message-Id: <1567778699-59231-1-git-send-email-christianshewitt@gmail.com>
+X-Mailer: git-send-email 2.7.4
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190906_053331_464865_A41690E8 
-X-CRM114-Status: GOOD (  12.28  )
+X-CRM114-CacheID: sfid-20190906_070554_054239_16760F15 
+X-CRM114-Status: GOOD (  10.45  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:444 listed in]
- [list.dnswl.org]
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (linux.amoon[at]gmail.com)
+ provider (christianshewitt[at]gmail.com)
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:442 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
@@ -101,61 +94,37 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, linux-kernel@vger.kernel.org,
- linux-arm-kernel@lists.infradead.org, linux-amlogic@lists.infradead.org
+Cc: Oleg Ivanov <balbes-150@yandex.ru>,
+ Chrisitian Hewitt <christianshewitt@gmail.com>
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-As per schematics HDMI_P5V0 is supplied by P5V0 so add missing link.
+This patchset adds support for the Ugoos AM6, an Android STB based on
+the Amlogic W400 reference design with the S922X chipset.
 
-Cc: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-Cc: Jerome Brunet <jbrunet@baylibre.com>
-Cc: Neil Armstrong <narmstrong@baylibre.com>
-Reviewed-by: Neil Armstrong <narmstrong@baylibre.com>
-Reviewed-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-Signed-off-by: Anand Moon <linux.amoon@gmail.com>
----
-Changes from previous
-Patchv1
-- As per Martin's suggestion added the HDMI_P5V0 fix regulator node.
-Patchv2
-- Added Matrin's and Neil's Reviewed-by.
----
- arch/arm64/boot/dts/amlogic/meson-gxbb-odroidc2.dts | 10 ++++++++++
- 1 file changed, 10 insertions(+)
+v2: correction of minor nits
 
-diff --git a/arch/arm64/boot/dts/amlogic/meson-gxbb-odroidc2.dts b/arch/arm64/boot/dts/amlogic/meson-gxbb-odroidc2.dts
-index 5624ff034659..6ae9fafe4244 100644
---- a/arch/arm64/boot/dts/amlogic/meson-gxbb-odroidc2.dts
-+++ b/arch/arm64/boot/dts/amlogic/meson-gxbb-odroidc2.dts
-@@ -66,6 +66,15 @@
- 		regulator-always-on;
- 	};
- 
-+	hdmi_p5v0: regulator-hdmi_p5v0 {
-+		compatible = "regulator-fixed";
-+		regulator-name = "HDMI_P5V0";
-+		regulator-min-microvolt = <5000000>;
-+		regulator-max-microvolt = <5000000>;
-+		/* AP2331SA-7 */
-+		vin-supply = <&p5v0>;
-+	};
-+
- 	tflash_vdd: regulator-tflash_vdd {
- 		compatible = "regulator-fixed";
- 
-@@ -220,6 +229,7 @@
- 	status = "okay";
- 	pinctrl-0 = <&hdmi_hpd_pins>, <&hdmi_i2c_pins>;
- 	pinctrl-names = "default";
-+	hdmi-supply = <&hdmi_p5v0>;
- };
- 
- &hdmi_tx_tmds_port {
+v3: address regulator and GPIO corrections from Neil Armstrong (using
+schematic excerpts from Ugoos) and related v2 comments from Martin
+Blumenstingle. Add acks on patches 1/2 from Rob Herring.
+
+Christian Hewitt (3):
+  dt-bindings: Add vendor prefix for Ugoos
+  dt-bindings: arm: amlogic: Add support for the Ugoos AM6
+  arm64: dts: meson-g12b-ugoos-am6: add initial device-tree
+
+ Documentation/devicetree/bindings/arm/amlogic.yaml |   1 +
+ .../devicetree/bindings/vendor-prefixes.yaml       |   2 +
+ arch/arm64/boot/dts/amlogic/Makefile               |   1 +
+ .../boot/dts/amlogic/meson-g12b-ugoos-am6.dts      | 557 +++++++++++++++++++++
+ 4 files changed, 561 insertions(+)
+ create mode 100644 arch/arm64/boot/dts/amlogic/meson-g12b-ugoos-am6.dts
+
 -- 
-2.23.0
+2.7.4
 
 
 _______________________________________________
