@@ -2,93 +2,65 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C8C3AAC7B8
-	for <lists+linux-amlogic@lfdr.de>; Sat,  7 Sep 2019 18:52:28 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 39007AC9F7
+	for <lists+linux-amlogic@lfdr.de>; Sun,  8 Sep 2019 01:40:13 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=x0IJoZyuJa6eKHz5Vsm44paJcXVZbyNFAMmXWi2HsEQ=; b=C2NQjiy5eZjvc6
-	gCPTB5QvUosTbs41iqiLQfsJ2PuBnk7JK5oQcf5DUUjbjTrIcb3iPuO/lEkJESUgEDm2GX6daYEjq
-	TTVzrYyZf1bi01tgOK4emF5x7zcyuGGUlLbTj+RNHMxpzLR84x9hpHOp4xogh44Mi8pBE7Pd3dUIs
-	jmuTqJLtZ6R7E6D89XS9d0N7LJ0Mc3bhta4VHlcON4HaesY5dtnLQX2KoMd7tfxDTFhWRjRTvKCfi
-	M1FcIca09Hn8pfzcuzBkwGl4yzXNNKGkL+/p/SAp6+/3cslpqr7eq7MyJYIwZsuEQ/aa8d9399cwl
-	m5V8BqpTWbkxq1HdG5LQ==;
+	List-Owner; bh=F4qhPYRgPEAOoDq58ZEdO3hugwRVQhnWdQ926wlfeTI=; b=a9x1CCiVTxSJ6s
+	UDBibtmOCSXs45Bcp+mbQwYOBBoI8rYwalZzl5Q3hARmLNmehv52vgvbDSAZGDictJ8H2QLstAqFW
+	ZvhQaQxhlaQ/Xeq1U/Dr8JXi1+loU9wZj/w1ufimki5W0PJoYNIwly9IEWMzANRYV5LFoVKeULpyw
+	y6dyfrKCZWlFzg6RugP9b1ukwTO2ZsF9+OsO+tUM4QNc2Sr4XE2TTmydBydZcra/za4ui1ANRoSUz
+	MyxjZE38HTR1qHxdz4nvz9dm+C6gJet/g+7u8tuC4WvYP3NPaeBn+78yzwrsL2I2YofXZ8yYlGnfl
+	3DHva8h6VNzRbRQC4mGw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i6dwm-0004dd-6y; Sat, 07 Sep 2019 16:52:24 +0000
-Received: from mail-pf1-x443.google.com ([2607:f8b0:4864:20::443])
+	id 1i6kJH-0006Su-Ju; Sat, 07 Sep 2019 23:40:04 +0000
+Received: from 2.mo177.mail-out.ovh.net ([178.33.109.80])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i6dwJ-0004H2-E5; Sat, 07 Sep 2019 16:51:56 +0000
-Received: by mail-pf1-x443.google.com with SMTP id r12so6581340pfh.1;
- Sat, 07 Sep 2019 09:51:55 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=from:to:cc:subject:date:message-id:in-reply-to:references
- :mime-version:content-transfer-encoding;
- bh=NOgs26FQJd+mh+eb+SMpRPr0VcbXm8Xot4tqXkHbFIk=;
- b=Dip9+kTSWTbr6gn3P0yZFOqPtta+hwDN47LPrzX6MDjKBMFBWO9JJdcUbs5Ik9ajZa
- +ixWcapDeBlq+Yr27K6BOXXhfBAxN6Pj6Tt0MwEp//aBhpkVLyssNUhQnMxZlYSAjndW
- ptQMF5lmIUBGklV9ugMRx4tshjIRsOvEHRUv2L1CnJlMDgYemrYgHyizUpEDlwZwD7pl
- quf1Mnb8UwNTmJDOd+ahyX3tHh1y6yeqrhNg2pKkMuzIL5fUmkB3IupGf6yfM4oRNqKZ
- pTsolZ6boiDZCRwvKl5aBdw1M7p707I/QDheZ7VPwKrFLhLrTNjnFmurV8hQAd+rrgE3
- 5LtQ==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
- :references:mime-version:content-transfer-encoding;
- bh=NOgs26FQJd+mh+eb+SMpRPr0VcbXm8Xot4tqXkHbFIk=;
- b=haPzwEzQF6A047HvyXtikioexzZJpLVB6/l6VmNKkZgk0XxcdiTmn90WDS+gqxyfoU
- N8F6Wy9ZXWEYZS9gBGpv6p8OvHPqJMDPg3LXJLZD+FZvhejoRZLqEu2+aJZ5VHQZQJQW
- yuTrMXNyp8YlYom/dtnLhuxIwBuFkcgk5GYvIzdrdW4X6FtMLtFwz6D1sBdMLWsSkiyL
- X4EVDhNDAGF3dVYf3IDyVxu4sIy0u9Rjq0/lz2sT7cG5QM4uX6ZIQqsWhiGuA8QVaO92
- KKJNT6gkMbMvGQwA9FTbsDnofr9ZIbia2rsdd80Ga7sHuwhDGEhESxXqIwX9rcd5uxfH
- 7j9Q==
-X-Gm-Message-State: APjAAAWsFY2ZPdhB3zJ/CFsJ24Mri9qx8HkAPwsZxJSFGYBdvStkOUbl
- e/0EK6exz3jFa9VB7Nf3O80=
-X-Google-Smtp-Source: APXvYqyXYjonK2Ofr7tH7Sz+4FfHQ0WLG28bw9csjkdeoulwVX7aAU5EopaZVWxckKScZWJ+UM4Skw==
-X-Received: by 2002:a63:7e41:: with SMTP id o1mr13657678pgn.212.1567875114780; 
- Sat, 07 Sep 2019 09:51:54 -0700 (PDT)
-Received: from localhost.localdomain ([45.114.62.203])
- by smtp.gmail.com with ESMTPSA id v27sm20028215pgn.76.2019.09.07.09.51.52
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Sat, 07 Sep 2019 09:51:54 -0700 (PDT)
-From: Anand Moon <linux.amoon@gmail.com>
-To: Rob Herring <robh+dt@kernel.org>,
- Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
- Jerome Brunet <jbrunet@baylibre.com>,
- Neil Armstrong <narmstrong@baylibre.com>,
- Kevin Hilman <khilman@baylibre.com>
-Subject: [RFCv1 1/1] arm64: dts: meson: odroid-c2: Enable SCPI DVFS for cpu
-Date: Sat,  7 Sep 2019 16:51:32 +0000
-Message-Id: <20190907165132.464-2-linux.amoon@gmail.com>
-X-Mailer: git-send-email 2.23.0
-In-Reply-To: <20190907165132.464-1-linux.amoon@gmail.com>
-References: <20190907165132.464-1-linux.amoon@gmail.com>
+ id 1i6kIV-0006EG-8E
+ for linux-amlogic@lists.infradead.org; Sat, 07 Sep 2019 23:39:16 +0000
+Received: from player728.ha.ovh.net (unknown [10.109.146.86])
+ by mo177.mail-out.ovh.net (Postfix) with ESMTP id 473F11096D5
+ for <linux-amlogic@lists.infradead.org>; Sun,  8 Sep 2019 01:39:05 +0200 (CEST)
+Received: from etezian.org (81-175-223-118.bb.dnainternet.fi [81.175.223.118])
+ (Authenticated sender: andi@etezian.org)
+ by player728.ha.ovh.net (Postfix) with ESMTPSA id 4B47C979D591;
+ Sat,  7 Sep 2019 23:38:10 +0000 (UTC)
+Date: Sun, 8 Sep 2019 02:38:10 +0300
+From: Andi Shyti <andi@etezian.org>
+To: Yuehaibing <yuehaibing@huawei.com>
+Subject: Re: [PATCH -next 25/36] spi: s3c24xx: use
+ devm_platform_ioremap_resource() to simplify code
+Message-ID: <20190907233810.GA15768@jack.zhora.eu>
+References: <20190904135918.25352-1-yuehaibing@huawei.com>
+ <20190904135918.25352-26-yuehaibing@huawei.com>
+ <CAJKOXPdq4as1Oe3U+9znkvP0RA=sxUoiWVBCSbzf_wq_um2t=w@mail.gmail.com>
+ <3595bac1-e426-b4f9-4e24-01e104fdfe5d@huawei.com>
 MIME-Version: 1.0
+Content-Disposition: inline
+In-Reply-To: <3595bac1-e426-b4f9-4e24-01e104fdfe5d@huawei.com>
+User-Agent: Mutt/1.10.1 (2018-07-13)
+X-Ovh-Tracer-Id: 4582412622624637493
+X-VR-SPAMSTATE: OK
+X-VR-SPAMSCORE: -100
+X-VR-SPAMCAUSE: gggruggvucftvghtrhhoucdtuddrgeduvddrudekvddgvdduucetufdoteggodetrfdotffvucfrrhhofhhilhgvmecuqfggjfdpvefjgfevmfevgfenuceurghilhhouhhtmecuhedttdenucesvcftvggtihhpihgvnhhtshculddquddttddm
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190907_095155_524350_1FFF2F94 
-X-CRM114-Status: GOOD (  12.01  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190907_163915_535187_23243024 
+X-CRM114-Status: UNSURE (   7.38  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:443 listed in]
- [list.dnswl.org]
+ no trust [178.33.109.80 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (linux.amoon[at]gmail.com)
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
+ 0.0 T_SPF_PERMERROR        SPF: test of record failed (permerror)
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -100,50 +72,50 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
- linux-amlogic@lists.infradead.org
+Cc: tmaimon77@gmail.com, palmer@sifive.com, tali.perry1@gmail.com,
+ eric@anholt.net, ldewangan@nvidia.com, linux-riscv@lists.infradead.org,
+ festevam@gmail.com,
+ "linux-samsung-soc@vger.kernel.org" <linux-samsung-soc@vger.kernel.org>,
+ f.fainelli@gmail.com, benjaminfair@google.com, shc_work@mail.ru,
+ khilman@baylibre.com, openbmc@lists.ozlabs.org, michal.simek@xilinx.com,
+ Krzysztof Kozlowski <krzk@kernel.org>, jonathanh@nvidia.com, yuenn@google.com,
+ wens@csie.org, agross@kernel.org, bcm-kernel-feedback-list@broadcom.com,
+ linux-imx@nxp.com, linux-arm-msm@vger.kernel.org, linux-tegra@vger.kernel.org,
+ Andi Shyti <andi@etezian.org>, rjui@broadcom.com, s.hauer@pengutronix.de,
+ mripard@kernel.org, broonie@kernel.org, linux-mediatek@lists.infradead.org,
+ linux-rpi-kernel@lists.infradead.org, paul.walmsley@sifive.com,
+ matthias.bgg@gmail.com, linux-amlogic@lists.infradead.org,
+ linux-arm-kernel@lists.infradead.org, baohua@kernel.org, sbranden@broadcom.com,
+ yamada.masahiro@socionext.com, avifishman70@gmail.com, venture@google.com,
+ "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
+ linux-spi@vger.kernel.org, thierry.reding@gmail.com, wahrenst@gmx.net,
+ kernel@pengutronix.de, kgene@kernel.org, shawnguo@kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Enable System Control and Power Interface, DVFS for cpu
-with setting 1.54 GHz as max freq in the initial SCPI tables
-loaded by the BL2, i.e. packed with U-Boot.
+Hi Yuehaibing,
 
-Fixes: f7bcd4b6f698 (ARM64: dts: meson-gxbb-odroidc2: Disable SCPI DVFS)
-Cc: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-Cc: Jerome Brunet <jbrunet@baylibre.com>
-Cc: Neil Armstrong <narmstrong@baylibre.com>
-Cc: Kevin Hilman <khilman@baylibre.com>
-Suggested-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-Signed-off-by: Anand Moon <linux.amoon@gmail.com>
----
-In discuss on other mailing list thread below.
-[0] https://lkml.org/lkml/2019/8/30/186
+> >> Use devm_platform_ioremap_resource() to simplify the code a bit.
+> >> This is detected by coccinelle.
+> >>
+> >> Reported-by: Hulk Robot <hulkci@huawei.com>
+> > 
+> > This tag does not look real... First of all where is the report?
+> 
+> It is our internal CI robot, which is unavailable to external temporarily.
 
-Tested on mainline U-Boot 2019.07-1 (Aug 01 2019 - 23:58:01 +0000) Arch Linux ARM
-on archlinux distro.
----
- arch/arm64/boot/dts/amlogic/meson-gxbb-odroidc2.dts | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+Hulk Robot is not a person and not accountable for his report.
+If it is your internal CI, please write a sentence stating that
+the fix has been made using Huawei internal tools.
 
-diff --git a/arch/arm64/boot/dts/amlogic/meson-gxbb-odroidc2.dts b/arch/arm64/boot/dts/amlogic/meson-gxbb-odroidc2.dts
-index 6ae9fafe4244..7e822408ba26 100644
---- a/arch/arm64/boot/dts/amlogic/meson-gxbb-odroidc2.dts
-+++ b/arch/arm64/boot/dts/amlogic/meson-gxbb-odroidc2.dts
-@@ -307,7 +307,7 @@
- };
- 
- &scpi_clocks {
--	status = "disabled";
-+	status = "okay";
- };
- 
- /* SD */
--- 
-2.23.0
+Credit must be given to tools as well, but not accounts that will
+never answer an e-mail.
 
+Otherwise, the patch would look fine.
+
+Andi
 
 _______________________________________________
 linux-amlogic mailing list
