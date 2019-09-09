@@ -2,8 +2,8 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9993BADBB5
-	for <lists+linux-amlogic@lfdr.de>; Mon,  9 Sep 2019 17:03:44 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7BDD1ADBB6
+	for <lists+linux-amlogic@lfdr.de>; Mon,  9 Sep 2019 17:03:59 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,71 +11,70 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=tgGmerhbXlMGxd7SBvMZc6hAY9VsDS376Kql+vFudcI=; b=RlE+YSa1oHmj+Stehkmj41CnG5
-	iIrwFVYPNRaKFG2ix/RCZ1J2fuKfgC3GSXUtM9PnB9Q7nIl/gznuLoxpxusJmHnWVvKBmUC+JX9e3
-	PJnCjD66UmHtOdsqViLBQXgduhxx0VyEGdwty8Cs/tpxd2jI4EDBkgqSwRIgxHHBSn8L5YXg0PZbA
-	LTUeKq8CRI67oYSGS9hRhQaDRQETl4hrDHIKshCrQ1Br4nO2gbLPlpSIkxxEUmy0Iz4Xjo7Kor8w/
-	XURddi7l2iMYdWZ3CdVela2o4XdfslGhtzbw4XzYKMT3mGp750vaXGObm5QjxGuWPe58BtQIRijwD
-	RHonpwYg==;
+	bh=X4zk1P0yriG4zBqBO8dAb1aNfxzJKWIOavVJLsR2W+g=; b=get8yklMVA1kZ5YbNzOlmnRHBw
+	7pwi+Wz31t3d3iHyV1+ZfuErc8vmhwAmSlmTw81y7WIuLGWxeRzMoP4xdvIpyppEODve47jI0aIvn
+	fagAOyS3AvW0LMJPOLEkleG1zRLdh5GUKy8xgpZk4+8KHJngSbVqdtsvaXPJpwAq48NNORt+6mm8P
+	Guh13zqLCSEQOOKGkolQ02GyJVvChlmUGCl0dEy2nOq0X421frN0f7tTDX6Os9UXwwI/aOZUBAkPA
+	kv8PloO1ibw34vGhaZm+nM7B/48HZn+PVTRC3x/IB+xgNmDArAD4eKNQ5I2DrasW8lNrm2dC7BmeR
+	hv1cibEA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i7LCe-0001zr-2Z; Mon, 09 Sep 2019 15:03:40 +0000
-Received: from mail-wm1-x343.google.com ([2a00:1450:4864:20::343])
+	id 1i7LCt-0002G6-RA; Mon, 09 Sep 2019 15:03:56 +0000
+Received: from mail-wr1-x444.google.com ([2a00:1450:4864:20::444])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i7LBU-0000yz-Br; Mon, 09 Sep 2019 15:02:29 +0000
-Received: by mail-wm1-x343.google.com with SMTP id 7so4639799wme.1;
- Mon, 09 Sep 2019 08:02:26 -0700 (PDT)
+ id 1i7LBV-00010m-5Y; Mon, 09 Sep 2019 15:02:30 +0000
+Received: by mail-wr1-x444.google.com with SMTP id q17so9507349wrx.10;
+ Mon, 09 Sep 2019 08:02:28 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=from:to:cc:subject:date:message-id:in-reply-to:references;
- bh=5xqEYreEBmZYyAfTC+RKgBu5G8ylv8O/lVjj/QJ6gcw=;
- b=F2l6LxPMIDzdfSFMzT+toWLV47+x4sa8AwBmE6Hzu0V7pxptBR1Ne0ukW3Og2JE9nO
- 7lWiTWOUu4QihXaYX+K9E1qdXUdT6i27Ep+3kNlmyeqYW5z5Hiu3soyJGhD9gA3GKltL
- f+X4rrMXmhBM8e3PhA6Y4RS41qVCksT9xEUkVv4dtlVkQZ80rwbY3GPmZ0WAkLbnYjc0
- p/dNp2mvpP4h9eSFEef9fl0iXGxt7ARatCyF3h9i9Zt6HhSxZVldJ4Kro1lzGAF0swj0
- nH/vgwboS35iDkZn50CIqf8s+yAJQJaitlqHsKnXpfALCcNIz1tEFNI+vtYBMH7fw6Tx
- eYDQ==
+ bh=iM24Xqh+JVeQjH/gEqv6pKww+oCucmMlXYCmlb+bvZY=;
+ b=kFqDCDwgBoIfXwhtYQ6/ilOsVtf3vYSU4aDGpSG5KOx3xbwdd3uFqJHdPt1Az/54fM
+ QrBdNhGk+fn+dXBrO9kqnQy0NLugK+yiEneasep3dzOieEf1Y/C7DWQFx/zmMRFDCOwV
+ 04NpVNZDNxntwNnul6/twEUEXPr2Y4vV8Twuo0wkN3d3OO/bjyBGBaE06zUpXlO4Gcfa
+ kbJFgtyASRRnJm4woG1IecYu70TIiF/i1sdsCOjd2nZnGmGbxlhV7jK0s+5DMHgEG8tn
+ VhtE0H3leKdWLOun9Y1jTvpQhCK/aXSMecTBjJElZ5Nkog2xUCcR99SWD4uI3nKU755p
+ UbQQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references;
- bh=5xqEYreEBmZYyAfTC+RKgBu5G8ylv8O/lVjj/QJ6gcw=;
- b=ZxP60FHKRdK5KTEnK08CluJHqFFxzWPVXGmv7G2tbfEqO+B6Y+cfzU46lWsvHr3BdH
- sQS/5SWsD3+eFeztGNDaoj4Mp5MkUTa70hA3QXICWPA16l81hAAMC90rhxVMj4FC2+r3
- tuO+M3CziGK7yzbXmozFk/2HTZXxp323vP8NgwLyZRMRwUr4Z0fIJ/dCPZsvSPzBYnhS
- q1sZOMUKfBjiUN5eJCNc/iWX2N+gR4YVlrzLW9f9JdcWpV/RZWHUcePuOdgHK5zG4K5O
- o41ZHITmPign6OvhO7snkQsUXUODFDqoKXMgISRhgh7KteDHJ377RsqSxOYotPnEtbwY
- 4S7Q==
-X-Gm-Message-State: APjAAAU5wa3HzVVgnPoYfpyV3XaBwmLmOdOnp/M7uXKcVHzC+3tPaBfF
- lc3KrtkshNZ66h80ebrFBEc=
-X-Google-Smtp-Source: APXvYqxUDRLwK+SyWE8xuL/itq7LA23ccybuU7D+8c2JjcNssmx+4Hg3o49fxC7xXs89sGfOZc2KRQ==
-X-Received: by 2002:a1c:c1cc:: with SMTP id r195mr20418891wmf.50.1568041345217; 
- Mon, 09 Sep 2019 08:02:25 -0700 (PDT)
+ bh=iM24Xqh+JVeQjH/gEqv6pKww+oCucmMlXYCmlb+bvZY=;
+ b=NiZ/A6E1CsYeBMESQcVMClo5RmFHAhJTHxufR96iTh9yHbQCt1jVcsBF5WwEng5/mV
+ zRmWRohA7JSBQk1wc5N1qhkjrwgkpJJqYuMYqoEREboB34CCkhVpS4WwX/2z5gulFsC2
+ D0NhP1i1dc7/TA5fXm4PNe+pyYB9UTuM3pfqigPUWbv0yXzpri3axHgJ0ADrEfWSP5Eb
+ FM63bY+zDBJvqrkom9OzUY1X/yV5IO7/oMQAH8Xw2YukTeebFsLxf2uhaOBwzhISt5rr
+ MZTNY94fsYxBMccV1iUqmgPP15JTaoy0gYU6oklgYCjNm1RNkL5WRzE6JpqppilnXleV
+ nUhA==
+X-Gm-Message-State: APjAAAU/ig+Yfsq+yJ1ERqh1qFIMcSlvNJjvDkp9TVnwh9mvxCo7GDR2
+ xsXgCP1dCH6R7Wd6i6ZHi9M=
+X-Google-Smtp-Source: APXvYqy74EB9OisVuGpM0UgxPNiOr7/Cny9fMiGEMbtujXq97LrJM2vVpw9MiIyqiZUXVsdNQh98LQ==
+X-Received: by 2002:adf:dd0c:: with SMTP id a12mr18478863wrm.289.1568041347640; 
+ Mon, 09 Sep 2019 08:02:27 -0700 (PDT)
 Received: from localhost.localdomain ([94.204.252.234])
- by smtp.gmail.com with ESMTPSA id s26sm27755397wrs.63.2019.09.09.08.02.23
+ by smtp.gmail.com with ESMTPSA id s26sm27755397wrs.63.2019.09.09.08.02.25
  (version=TLS1_2 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
- Mon, 09 Sep 2019 08:02:24 -0700 (PDT)
+ Mon, 09 Sep 2019 08:02:27 -0700 (PDT)
 From: Christian Hewitt <christianshewitt@gmail.com>
 To: Rob Herring <robh+dt@kernel.org>, Mark Rutland <mark.rutland@arm.com>,
  Kevin Hilman <khilman@baylibre.com>, devicetree@vger.kernel.org,
  linux-arm-kernel@lists.infradead.org, linux-amlogic@lists.infradead.org,
  linux-kernel@vger.kernel.org
-Subject: [PATCH 3/6] arm64: dts: meson-gxm-khadas-vim2: fix uart_A bluetooth
- node
-Date: Mon,  9 Sep 2019 19:01:24 +0400
-Message-Id: <1568041287-7805-4-git-send-email-christianshewitt@gmail.com>
+Subject: [PATCH 4/6] arm64: dts: meson: libretech-ac: update model description
+Date: Mon,  9 Sep 2019 19:01:25 +0400
+Message-Id: <1568041287-7805-5-git-send-email-christianshewitt@gmail.com>
 X-Mailer: git-send-email 2.7.4
 In-Reply-To: <1568041287-7805-1-git-send-email-christianshewitt@gmail.com>
 References: <1568041287-7805-1-git-send-email-christianshewitt@gmail.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190909_080228_413227_00EEC60A 
-X-CRM114-Status: GOOD (  10.77  )
+X-CRM114-CacheID: sfid-20190909_080229_234174_1C77358D 
+X-CRM114-Status: GOOD (  12.37  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:343 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:444 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -106,27 +105,27 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Fixes: 33344e2111a ("arm64: dts: meson-gxm-khadas-vim2: fix Bluetooth support")
+Shorten the model description to improve readability in some app GUIs
+that show the string.
 
 Signed-off-by: Christian Hewitt <christianshewitt@gmail.com>
 ---
- arch/arm64/boot/dts/amlogic/meson-gxm-khadas-vim2.dts | 3 +++
- 1 file changed, 3 insertions(+)
+ arch/arm64/boot/dts/amlogic/meson-gxl-s805x-libretech-ac.dts | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/arch/arm64/boot/dts/amlogic/meson-gxm-khadas-vim2.dts b/arch/arm64/boot/dts/amlogic/meson-gxm-khadas-vim2.dts
-index 989d33a..d392062 100644
---- a/arch/arm64/boot/dts/amlogic/meson-gxm-khadas-vim2.dts
-+++ b/arch/arm64/boot/dts/amlogic/meson-gxm-khadas-vim2.dts
-@@ -409,6 +409,9 @@
- 	bluetooth {
- 		compatible = "brcm,bcm43438-bt";
- 		shutdown-gpios = <&gpio GPIOX_17 GPIO_ACTIVE_HIGH>;
-+		max-speed = <2000000>;
-+		clocks = <&wifi32k>;
-+		clock-names = "lpo";
- 	};
- };
+diff --git a/arch/arm64/boot/dts/amlogic/meson-gxl-s805x-libretech-ac.dts b/arch/arm64/boot/dts/amlogic/meson-gxl-s805x-libretech-ac.dts
+index 82b1c48..4d59494 100644
+--- a/arch/arm64/boot/dts/amlogic/meson-gxl-s805x-libretech-ac.dts
++++ b/arch/arm64/boot/dts/amlogic/meson-gxl-s805x-libretech-ac.dts
+@@ -14,7 +14,7 @@
+ / {
+ 	compatible = "libretech,aml-s805x-ac", "amlogic,s805x",
+ 		     "amlogic,meson-gxl";
+-	model = "Libre Computer Board AML-S805X-AC";
++	model = "Libre Computer AML-S805X-AC";
  
+ 	aliases {
+ 		serial0 = &uart_AO;
 -- 
 2.7.4
 
