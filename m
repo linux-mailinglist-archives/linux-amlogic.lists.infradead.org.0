@@ -2,53 +2,51 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7C0F9AF8A7
-	for <lists+linux-amlogic@lfdr.de>; Wed, 11 Sep 2019 11:15:50 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9B9F2AFAFC
+	for <lists+linux-amlogic@lfdr.de>; Wed, 11 Sep 2019 12:59:56 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=rDbMnrG42H/1pA1eczEPmxoH0GLGbJzrTzKtoaGa7z4=; b=mdTHS6HLPbPZ6Q
-	AfzZsY1p+uqo/i/DdwjyzP1pomrRaY9dCnp8ciBf7o6y8qn0N/Wr/CI0i4HXjkDOZgt1NjbL/rFrw
-	5DxtS5ETlC9VC5v8CmqwKW1N7SW5OPo0vFfYDX+hiIpgiXplIvsEjly/4841cH1LyLzW4uXQ4lAuE
-	IQS/k21Erdw11r45CYjxzINAxViPZWjQRPlOSbTw1UZdhHY2NCsjOq8+CQxSMBSNMqpjiezWGa4eY
-	O6Me2LA5hs7YELPEofpFcgK7+7sKjyGmA1Mdax+lsoGVg0Qj9BLsqtauhEPx9DlX+93oWwA6RZYlE
-	aDZ7ptT/RAkBp5YBkSvg==;
+	List-Owner; bh=HgEeAn6rkw0qV7v+yy7BVgShMmJg42JyhWstzboAQoI=; b=l0AJh4otTkDjuO
+	RQMZuie/RfKRKxRf0pK+iSPfu4uO3yMuo9bmsiMlOOhWox2sLqPsykpgRvnck+3Pd+Q/BLSc4bkec
+	fwysgeFU5l0I5GlajRRxNzPyWzrWH4cxFCFU+Zz/HYnoTntNzfLQ62iZpQPijVPYV+CNOA9uFQXsV
+	pGrjqNBYbUhKxqTW124oDlxac3/tfbzJqfxqF2+ei064ndtSs5BvXC/o+3fAn9ZQ+ya633yPQy9RM
+	khh2Vc9waZnGsjP+fTSReszFUgXgvvOeCT3NQCRWk5Q7LmT4evxO7NvihVeJXypppMc2+DsKA/jpH
+	iwY1+jEccRvxiNUeBXCw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i7yix-0008En-1C; Wed, 11 Sep 2019 09:15:39 +0000
-Received: from relay11.mail.gandi.net ([217.70.178.231])
- by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i7yir-0008E7-2D; Wed, 11 Sep 2019 09:15:35 +0000
-Received: from localhost (unknown [148.69.85.38])
- (Authenticated sender: alexandre.belloni@bootlin.com)
- by relay11.mail.gandi.net (Postfix) with ESMTPSA id 1EE6D10000D;
- Wed, 11 Sep 2019 09:15:02 +0000 (UTC)
-Date: Wed, 11 Sep 2019 11:14:58 +0200
-From: Alexandre Belloni <alexandre.belloni@bootlin.com>
+	id 1i80Li-0000xi-Hu; Wed, 11 Sep 2019 10:59:46 +0000
+Received: from foss.arm.com ([217.140.110.172])
+ by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
+ id 1i80Ld-0000wg-00; Wed, 11 Sep 2019 10:59:42 +0000
+Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
+ by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id DCDB428;
+ Wed, 11 Sep 2019 03:59:37 -0700 (PDT)
+Received: from localhost (unknown [10.37.6.20])
+ by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id 5402E3F59C;
+ Wed, 11 Sep 2019 03:59:37 -0700 (PDT)
+Date: Wed, 11 Sep 2019 11:59:35 +0100
+From: Andrew Murray <andrew.murray@arm.com>
 To: Neil Armstrong <narmstrong@baylibre.com>
-Subject: Re: [PATCH 4/7] dt-bindings: chosen: Add clocksource and clockevent
- selection
-Message-ID: <20190911091458.GD21254@piout.net>
-References: <1568123236-767-1-git-send-email-claudiu.beznea@microchip.com>
- <1568123236-767-5-git-send-email-claudiu.beznea@microchip.com>
- <81da473f-54d7-2a00-61ec-9351cdfcaaf3@baylibre.com>
+Subject: Re: [PATCH 2/6] PCI: amlogic: Fix probed clock names
+Message-ID: <20190911105935.GQ9720@e119886-lin.cambridge.arm.com>
+References: <1567950178-4466-1-git-send-email-narmstrong@baylibre.com>
+ <1567950178-4466-3-git-send-email-narmstrong@baylibre.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <81da473f-54d7-2a00-61ec-9351cdfcaaf3@baylibre.com>
-User-Agent: Mutt/1.12.1 (2019-06-15)
+In-Reply-To: <1567950178-4466-3-git-send-email-narmstrong@baylibre.com>
+User-Agent: Mutt/1.10.1+81 (426a6c1) (2018-08-26)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190911_021533_410920_C53D0BC3 
-X-CRM114-Status: GOOD (  17.12  )
-X-Spam-Score: -0.7 (/)
+X-CRM114-CacheID: sfid-20190911_035941_094283_EB8F2DE4 
+X-CRM114-Status: GOOD (  14.66  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.7 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
- low trust [217.70.178.231 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
 X-BeenThere: linux-amlogic@lists.infradead.org
@@ -62,119 +60,54 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: tmaimon77@gmail.com, linus.walleij@linaro.org, nsekhar@ti.com,
- guoren@kernel.org, linux-stm32@st-md-mailman.stormreply.com, heiko@sntech.de,
- linux-samsung-soc@vger.kernel.org, linux-rockchip@lists.infradead.org,
- khilman@baylibre.com, ludovic.desroches@microchip.com, linux-imx@nxp.com,
- u.kleine-koenig@pengutronix.de, uclinux-h8-devel@lists.sourceforge.jp,
- marc.zyngier@arm.com, s.hauer@pengutronix.de, linux-unisoc@lists.infradead.org,
- khalasa@piap.pl, tglx@linutronix.de, sbranden@broadcom.com,
- linux-kernel@vger.kernel.org, ralf@linux-mips.org, paul.burton@mips.com,
- kernel@pengutronix.de, Claudiu Beznea <claudiu.beznea@microchip.com>,
- mark.rutland@arm.com, jhogan@kernel.org, palmer@sifive.com, eric@anholt.net,
- thierry.reding@gmail.com, manivannan.sadhasivam@linaro.org,
- ysato@users.sourceforge.jp, zhang.lyra@gmail.com, daniel.lezcano@linaro.org,
- jonathanh@nvidia.com, bgolaszewski@baylibre.com, kgene@kernel.org,
- alexandre.torgue@st.com, linux-arm-msm@vger.kernel.org, sudeep.holla@arm.com,
- f.fainelli@gmail.com, john.stultz@linaro.org,
- linux-rpi-kernel@lists.infradead.org, linux-amlogic@lists.infradead.org,
- linux-arm-kernel@lists.infradead.org, baohua@kernel.org, kaloz@openwrt.org,
- sboyd@kernel.org, patrice.chotard@st.com, wahrenst@gmx.net,
- mcoquelin.stm32@gmail.com, linux-tegra@vger.kernel.org, festevam@gmail.com,
- lorenzo.pieralisi@arm.com, benjaminfair@google.com, shc_work@mail.ru,
- krzk@kernel.org, yuenn@google.com, wens@csie.org,
- bcm-kernel-feedback-list@broadcom.com, orsonzhai@gmail.com,
- linux-snps-arc@lists.infradead.org, rjui@broadcom.com, vz@mleia.com,
- john@phrozen.org, tali.perry1@gmail.com, avifishman70@gmail.com,
- venture@google.com, lftan@altera.com, linux-oxnas@groups.io,
- shawnguo@kernel.org, afaerber@suse.de, baruch@tkos.co.il,
- maxime.ripard@bootlin.com, liviu.dudau@arm.com, linux-mips@vger.kernel.org,
- linux-riscv@lists.infradead.org, openbmc@lists.ozlabs.org,
- linux@armlinux.org.uk, agross@kernel.org, slemieux.tyco@gmail.com,
- devicetree@vger.kernel.org, aou@eecs.berkeley.edu, robh+dt@kernel.org,
- linux-mediatek@lists.infradead.org, ssantosh@kernel.org,
- matthias.bgg@gmail.com, monstr@monstr.eu, baolin.wang@linaro.org,
- vgupta@synopsys.com, nicolas.ferre@microchip.com, linux@prisktech.co.nz,
- nios2-dev@lists.rocketboards.org
+Cc: lorenzo.pieralisi@arm.com, khilman@baylibre.com, linux-pci@vger.kernel.org,
+ linux-kernel@vger.kernel.org, kishon@ti.com, repk@triplefau.lt, maz@kernel.org,
+ bhelgaas@google.com, linux-amlogic@lists.infradead.org, yue.wang@Amlogic.com,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On 11/09/2019 09:34:27+0200, Neil Armstrong wrote:
-> Hi,
+On Sun, Sep 08, 2019 at 01:42:54PM +0000, Neil Armstrong wrote:
+> Fix the clock names used in the probe function according
+> to the bindings.
 > 
-> On 10/09/2019 15:47, Claudiu Beznea wrote:
-> > From: Alexandre Belloni <alexandre.belloni@bootlin.com>
-> > 
-> > Some timer drivers may behave either as clocksource or clockevent
-> > or both. Until now, in case of platforms with multiple hardware
-> > resources of the same type, the drivers were chosing the first
-> > registered hardware resource as clocksource/clockevent and the
-> > next one as clockevent/clocksource. Other were using different
-> > compatibles (one for each functionality, although its about the
-> > same hardware). Add DT bindings to be able to choose the
-> > functionality of a timer.
-> > 
-> > Signed-off-by: Alexandre Belloni <alexandre.belloni@bootlin.com>
-> > Signed-off-by: Claudiu Beznea <claudiu.beznea@microchip.com>
-> > ---
-> >  Documentation/devicetree/bindings/chosen.txt | 20 ++++++++++++++++++++
-> >  1 file changed, 20 insertions(+)
-> > 
-> > diff --git a/Documentation/devicetree/bindings/chosen.txt b/Documentation/devicetree/bindings/chosen.txt
-> > index 45e79172a646..aad3034cdbdf 100644
-> > --- a/Documentation/devicetree/bindings/chosen.txt
-> > +++ b/Documentation/devicetree/bindings/chosen.txt
-> > @@ -135,3 +135,23 @@ e.g.
-> >  		linux,initrd-end = <0x82800000>;
-> >  	};
-> >  };
-> > +
-> > +linux,clocksource and linux,clockevent
-> > +--------------------------------------
-> > +
-> > +Those nodes have a timer property. This property is a phandle to the timer to be
-> > +chosen as the clocksource or clockevent. This is only useful when the platform
-> > +has multiple identical timers and it is not possible to let linux make the
-> > +correct choice.
-> > +
-> > +/ {
-> > +	chosen {
-> > +		linux,clocksource {
-> > +			timer = <&timer0>;
-> > +		};
-> > +
-> > +		linux,clockevent {
-> > +			timer = <&timer1>;
-> > +		};
-> > +	};
-> > +};
-> > 
-> 
-> Why not in aliases ?
-> 
-> aliases {
->     clocksource0 = &timer0;
->     clockevent0 = &timer1;
-> };
-> 
-> since we can have multiple of each, we should not limit ourselves to 1 clkevent
-> and 1 clksource.
-> 
-> In the aliases case, each driver would expose both capabilities, and the core would select
-> what to enable.
-> 
+> Fixes: 9c0ef6d34fdb ("PCI: amlogic: Add the Amlogic Meson PCIe controller driver")
+> Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
 
-For extendability, you need nodes for that because at some point, you
-may need to also be able to select the timer frequency. You can't do
-that with an alias.
+Reviewed-by: Andrew Murray <andrew.murray@arm.com>
 
-
--- 
-Alexandre Belloni, Bootlin
-Embedded Linux and Kernel engineering
-https://bootlin.com
+> ---
+>  drivers/pci/controller/dwc/pci-meson.c | 6 +++---
+>  1 file changed, 3 insertions(+), 3 deletions(-)
+> 
+> diff --git a/drivers/pci/controller/dwc/pci-meson.c b/drivers/pci/controller/dwc/pci-meson.c
+> index 541f37a6f6a5..ab79990798f8 100644
+> --- a/drivers/pci/controller/dwc/pci-meson.c
+> +++ b/drivers/pci/controller/dwc/pci-meson.c
+> @@ -250,15 +250,15 @@ static int meson_pcie_probe_clocks(struct meson_pcie *mp)
+>  	if (IS_ERR(res->port_clk))
+>  		return PTR_ERR(res->port_clk);
+>  
+> -	res->mipi_gate = meson_pcie_probe_clock(dev, "pcie_mipi_en", 0);
+> +	res->mipi_gate = meson_pcie_probe_clock(dev, "mipi", 0);
+>  	if (IS_ERR(res->mipi_gate))
+>  		return PTR_ERR(res->mipi_gate);
+>  
+> -	res->general_clk = meson_pcie_probe_clock(dev, "pcie_general", 0);
+> +	res->general_clk = meson_pcie_probe_clock(dev, "general", 0);
+>  	if (IS_ERR(res->general_clk))
+>  		return PTR_ERR(res->general_clk);
+>  
+> -	res->clk = meson_pcie_probe_clock(dev, "pcie", 0);
+> +	res->clk = meson_pcie_probe_clock(dev, "pclk", 0);
+>  	if (IS_ERR(res->clk))
+>  		return PTR_ERR(res->clk);
+>  
+> -- 
+> 2.17.1
+> 
 
 _______________________________________________
 linux-amlogic mailing list
