@@ -2,74 +2,78 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D254AAF378
-	for <lists+linux-amlogic@lfdr.de>; Wed, 11 Sep 2019 01:49:06 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 0F7C4AF38C
+	for <lists+linux-amlogic@lfdr.de>; Wed, 11 Sep 2019 02:03:31 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
 	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=WhSNjA8rlWAmbjBz8ZgiwHyswDY3t0Sl6aWFuhHFG5Y=; b=NqsOPgIXV3EhhC
-	RF+FmHseEQ2DSwp3utScSZ5U9yhV4eLtHa7Ylar63B6TqL8Waj0nthZAXqIsdJ6DTyx78UMPfHSGF
-	9Yo+SdpmeleI/5A3YA50rHJdqtMmaGvdCM5yQIj3m08wxUH+MlkWaONlhkpplgbmHz7Qqxb63O3Gb
-	ny4ve88a+gIf4a+p0Iu/nDJ/ABiFfi4bpk07rjqkuFMXH4voMtGFfmIfGsULta9fVhUSkUu0NBZqe
-	+IhynCgSnlovBLEEQbBC6w2WlEgYddAoXPIgxae5sUZn/7UqLvmRTuyiBZEiXlOkvGxqx1H0WyZGS
-	9w8tiRLtZzMLIPKRoaaA==;
+	List-Owner; bh=/JEGwKkBdtGK5sahJzZZIFc+c2WDeCc98vYGxEawMYs=; b=HjNvqtSAYqO69+
+	gE5IbO6a07c48O+RBGWj36pJM8FNTJizzWxtu0+KivOp3dGoF5UwAAprBSFGqtU/CiucDWkEaXsf/
+	nJql499cIjjYxRNNIazC38t6uZqgfqa71A1Rb/v00In4mPFkVbOSLPBa30rJDtf0FkkeFTE7bmlGQ
+	aIjnr9Dav4/QNCuAZvDhyYFrrqF3I5OXYXHZNe3ec67RB94VMvdkJdg5uCdqi3h4J7WMAYm16vbGL
+	7yw6/ULVFTWm+yCgsQc9NgBuI+7W4MU/rngJTvYqa4SXBQPEvRnT11QZE7TtFe+kGO8DekE9GreS7
+	bVBnfeWYS57Yw8EQVbFQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i7psT-0000KE-C8; Tue, 10 Sep 2019 23:48:53 +0000
-Received: from mail-lf1-x144.google.com ([2a00:1450:4864:20::144])
+	id 1i7q6W-0004mW-Ng; Wed, 11 Sep 2019 00:03:24 +0000
+Received: from mail-lf1-x141.google.com ([2a00:1450:4864:20::141])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i7psN-0000Hp-3E
- for linux-amlogic@lists.infradead.org; Tue, 10 Sep 2019 23:48:48 +0000
-Received: by mail-lf1-x144.google.com with SMTP id w18so2983955lfk.7
- for <linux-amlogic@lists.infradead.org>; Tue, 10 Sep 2019 16:48:46 -0700 (PDT)
+ id 1i7q6P-0004iz-2B
+ for linux-amlogic@lists.infradead.org; Wed, 11 Sep 2019 00:03:20 +0000
+Received: by mail-lf1-x141.google.com with SMTP id r134so14898007lff.12
+ for <linux-amlogic@lists.infradead.org>; Tue, 10 Sep 2019 17:03:16 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
  h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=nL38C4T4rzT0VSsEiKY7BmomDl3hFeY7088tc9RdLq8=;
- b=fNEGUezEn4ClsVHmX/nmNiF7ZG6JTfC2btDRxEWPcdmRk0a0FsvI5GS8qdYjx25FKp
- Z5Q4/CFu+iDSAX2rFterlnGQ1MW2Sk6gR3mfMsTu8vyvU/jGEM0Jc08W0Sq44lgp0xR9
- CuSR5RUBNAD9f/xSIv24vJgfP+XgU0l/RFI3nayQNe/1yYJJGrgKDIL8s6DHZhU39Dqr
- TBKpHqE1DkJvJTHx2NFHskH6dl7p95yi4sNbTImUxUlyGuSbemOLPHLEtIfXkNBw9d7/
- rUpU1+cMWUkAMn+hR7NDiGLEM6b9jVVLEIcpdiiAIbYGINkcClRodvCdYR9vR8oMDgr8
- 5cAQ==
+ :cc; bh=3h5YhApDdKtuz+D+gnGApd0B+4LCatw0L0XfiuEsBxQ=;
+ b=NVJuR8bVMlcOgsf2yYP8qr45fff0pzpYW0BCQbtA3MsNrrnNBYVUkrPCtjMGuEx2eR
+ vHG5rVpaM7qaL5D6ZhjkHfMm284dwMFpk/jTbelXuYGLLAopmskm5XPWQcubU3dyFgQP
+ G88QxB3Jcb/plkyiz6fe5BqXD8nxBJ2xf0peSImUUZad5hQShUxqigYRk4Q9D8tv9p5a
+ a8lcoGihpXhUGZiy7buZ+CKWHWGu0mF5S/9l1l5Cy2SeI8i3kGeBCygVnoSpYlUNWgIQ
+ 22K9B0rcSqbfpLPD7mNpTKq7npU9JgB0CxGqWN97IT2niY6foO3t3Au+1txtUD0IGOth
+ +r5A==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:mime-version:references:in-reply-to:from:date
  :message-id:subject:to:cc;
- bh=nL38C4T4rzT0VSsEiKY7BmomDl3hFeY7088tc9RdLq8=;
- b=dsmdiAwKM/twpM1j/nwHoyZGhJPABykBPSCQ5b+hpN02s4q4d46Oydm4Bs/1/UMsgD
- F8NEOZl3lEl5W6b/dqfZHK4f6Bxci1mdB1PVEjxLWoctRQpHdDtyCuGH2kgIPczSQRaQ
- 8W6NZc5jFVlQZdU6oMMAerJJdFaYc8uEkngQwYfyENuXWbu2FMcj1rPZpxXIT+o1Sp6u
- gpC6schzLONPMdg9ompz3KQnNQGNDn0+V7M86F93jZOgn8onJkoSWkIUZT7C+7R1Pehb
- l+Pvmv/QvhKByzIR/itecglhpIwGVpluXjoueNaj8cUFljYgwNhKQ0TrKBGQhKeuSDtH
- 90KA==
-X-Gm-Message-State: APjAAAVIZpc3pMYQm0Ru6MKXTy0YbG50/AOKfIsmGJyFqIdXys8o3o/m
- bW5wqSvPxXJKChX5lNKQIMW1aUYsqgozafk3vkvOBw==
-X-Google-Smtp-Source: APXvYqxP4f7JH+QwULI+vOrlKcfc2e6lWO/TBU9/DTND7ll7mmRrx+NRPo2/Aht4Q5KFeqk+4RbtApAQjqBPq8BsL30=
-X-Received: by 2002:ac2:530e:: with SMTP id c14mr21391170lfh.165.1568159324971; 
- Tue, 10 Sep 2019 16:48:44 -0700 (PDT)
+ bh=3h5YhApDdKtuz+D+gnGApd0B+4LCatw0L0XfiuEsBxQ=;
+ b=U89IGB4d29p4pKJuUs7v2nI7Re9pIZ6LEiTPwg3hMH+GVFt3kIIftXJHntbK2unGuo
+ MRZIDub8UNFQRUm5NHAlSyXf1iLr7MvO1l3jLi3h0bqGvxtk0OYlmRN8XZvIcQ5YUXSf
+ QyiQ9BdTSYBkXuE6sNpNNJURXEsb+HiM3d5wNGunII7IWygJTZNTi2KbGT97cpVV1UYG
+ iy7T+ZlF0D5lQa8PCAZ9NAuV8uHLRoWOg0iwL4EcS/KD2mRWIaBjdEHKN7KgHjsgBquC
+ YI8uTMFlTYIAuc9L1rWANB8jDwl3PI27g4smgSdmcJfLY8MMvLJxOxHaHb/7lQxt2AQg
+ 9XMA==
+X-Gm-Message-State: APjAAAVpe6YJCAQ4hVjWAFiEJbqTZpSNbbeIZTqVvRySk5LRkDgiehr9
+ 6TIEdTvuwwUuIiL61z6A43qE3/kRXcHGG7inmbYNAQ==
+X-Google-Smtp-Source: APXvYqwSiGgQfEWih9ymT87LJVnnaDlghzrxFki3OwEuC0IQ+sLwt8v1OcRFgydIQHHbkPzCMKjT6aFqwtFQHE75p7Y=
+X-Received: by 2002:a19:f512:: with SMTP id j18mr3365169lfb.169.1568160195293; 
+ Tue, 10 Sep 2019 17:03:15 -0700 (PDT)
 MIME-Version: 1.0
 References: <1568123236-767-1-git-send-email-claudiu.beznea@microchip.com>
- <1568123236-767-8-git-send-email-claudiu.beznea@microchip.com>
-In-Reply-To: <1568123236-767-8-git-send-email-claudiu.beznea@microchip.com>
+ <1568123236-767-5-git-send-email-claudiu.beznea@microchip.com>
+ <20190910143231.GB14966@e107533-lin.cambridge.arm.com>
+ <ab43b209-78fa-0cab-b8ea-acd4c550e689@microchip.com>
+ <20190910150826.GA18308@e107533-lin.cambridge.arm.com>
+ <20190910151055.GX21254@piout.net>
+In-Reply-To: <20190910151055.GX21254@piout.net>
 From: Linus Walleij <linus.walleij@linaro.org>
-Date: Wed, 11 Sep 2019 00:48:33 +0100
-Message-ID: <CACRpkdYsCFUNAtarTQmaA2a3-HZjiVjxQ-Wr-7wJp9xrtQRKCg@mail.gmail.com>
-Subject: Re: [PATCH 7/7] clocksource/drivers/integrator-ap: parse the chosen
- node
-To: Claudiu Beznea <claudiu.beznea@microchip.com>
+Date: Wed, 11 Sep 2019 01:03:03 +0100
+Message-ID: <CACRpkda4mmpbPWa2nD93CvD6HWzcTUDzyyLdQxC2gNB7XiJF3w@mail.gmail.com>
+Subject: Re: [PATCH 4/7] dt-bindings: chosen: Add clocksource and clockevent
+ selection
+To: Alexandre Belloni <alexandre.belloni@bootlin.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190910_164847_185605_8A709D69 
-X-CRM114-Status: GOOD (  16.49  )
+X-CRM114-CacheID: sfid-20190910_170317_175650_AA281535 
+X-CRM114-Status: GOOD (  18.79  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:144 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:141 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -97,7 +101,7 @@ Cc: Tomer Maimon <tmaimon77@gmail.com>, "Nori, Sekhar" <nsekhar@ti.com>,
  linux-samsung-soc <linux-samsung-soc@vger.kernel.org>,
  "open list:ARM/Rockchip SoC..." <linux-rockchip@lists.infradead.org>,
  Kevin Hilman <khilman@baylibre.com>,
- Ludovic Desroches <ludovic.desroches@microchip.com>,
+ Ludovic Desroches <Ludovic.Desroches@microchip.com>,
  NXP Linux Team <linux-imx@nxp.com>,
  =?UTF-8?Q?Uwe_Kleine=2DK=C3=B6nig?= <u.kleine-koenig@pengutronix.de>,
  "moderated list:H8/300 ARCHITECTURE" <uclinux-h8-devel@lists.sourceforge.jp>,
@@ -106,10 +110,10 @@ Cc: Tomer Maimon <tmaimon77@gmail.com>, "Nori, Sekhar" <nsekhar@ti.com>,
  Thomas Gleixner <tglx@linutronix.de>, Scott Branden <sbranden@broadcom.com>,
  "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
  Ralf Baechle <ralf@linux-mips.org>, Paul Burton <paul.burton@mips.com>,
- Sascha Hauer <kernel@pengutronix.de>, Mark Rutland <mark.rutland@arm.com>,
- Alexandre Belloni <alexandre.belloni@bootlin.com>,
- James Hogan <jhogan@kernel.org>, Palmer Dabbelt <palmer@sifive.com>,
- Eric Anholt <eric@anholt.net>,
+ Sascha Hauer <kernel@pengutronix.de>,
+ Claudiu Beznea <Claudiu.Beznea@microchip.com>,
+ Mark Rutland <mark.rutland@arm.com>, James Hogan <jhogan@kernel.org>,
+ Palmer Dabbelt <palmer@sifive.com>, Eric Anholt <eric@anholt.net>,
  "thierry.reding@gmail.com" <thierry.reding@gmail.com>,
  Manivannan Sadhasivam <manivannan.sadhasivam@linaro.org>,
  Yoshinori Sato <ysato@users.sourceforge.jp>, Lyra Zhang <zhang.lyra@gmail.com>,
@@ -151,7 +155,7 @@ Cc: Tomer Maimon <tmaimon77@gmail.com>, "Nori, Sekhar" <nsekhar@ti.com>,
  Santosh Shilimkar <ssantosh@kernel.org>,
  Matthias Brugger <matthias.bgg@gmail.com>, Michal Simek <monstr@monstr.eu>,
  Baolin Wang <baolin.wang@linaro.org>, Vineet Gupta <vgupta@synopsys.com>,
- Nicolas Ferre <nicolas.ferre@microchip.com>,
+ Nicolas Ferre <Nicolas.Ferre@microchip.com>,
  Tony Prisk <linux@prisktech.co.nz>,
  "moderated list:NIOS2 ARCHITECTURE" <nios2-dev@lists.rocketboards.org>
 Content-Type: text/plain; charset="us-ascii"
@@ -159,28 +163,52 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On Tue, Sep 10, 2019 at 2:50 PM Claudiu Beznea
-<claudiu.beznea@microchip.com> wrote:
-> From: Alexandre Belloni <alexandre.belloni@bootlin.com>
+On Tue, Sep 10, 2019 at 4:11 PM Alexandre Belloni
+<alexandre.belloni@bootlin.com> wrote:
+> On 10/09/2019 16:08:26+0100, Sudeep Holla wrote:
+> > On Tue, Sep 10, 2019 at 02:51:50PM +0000, Claudiu.Beznea@microchip.com wrote:
+
+> > In that case, why can't we identify capability that with the compatibles
+> > for this timer IP ?
+> >
+> > IOW, I don't like the proposal as it's hardware limitation.
 >
-> The driver currently uses aliases to know whether the timer is the
-> clocksource or the clockevent.
+> To be clear, bot timers are exactly the same but can't be clocksource
+> and clockevent at the same time. Why would we have different compatibles
+> for the exact same IP?
 
-OK maybe that wasn't the most elegant solution.
+In that case why not just pick the first one you find as clocksource
+and the second one as clock event? As they all come to the
+same timer of init function two simple local state variables can
+solve that:
 
-> Add the /chosen/linux,clocksource and
-> /chosen/linux,clockevent parsing while keeping backward compatibility.
+static bool registered_clocksource;
+static bool registered_clockevent;
 
-This is not how I would solve this today.
+probe(timer) {
+   if (!registered_clocksource) {
+       register_clocksource(timer);
+       registrered_clocksource = true;
+       return;
+   }
+   if (!registered_clockevent) {
+       register_clockevent(timer);
+       registered_clockevent = true;
+       return;
+   }
+   pr_info("surplus timer %p\n", timer);
+}
 
-I would simply remove/comment out the IRQ from the timer
-that cannot be used for clockevent from the device tree
-(apparently it doesn't work anyway), and make the code only
-pick a timer with a valid interrupt assigned as clock event,
-while a timer without interrupt can be used for clock source.
+Clocksource and clockevent are natural singletons so there is
+no need to handle more than one of each in a driver for identical
+hardware.
 
-This has the upside of not needing any special aliases or
-chosen things.
+With the Integrator AP timer there is a real reason to select one over
+the other but as I replied to that patch it is pretty easy to just identify
+which block has this limitation by simply commenting out the IRQ
+line for it from the device tree.
+
+Maybe there is something about this I don't understand.
 
 Yours,
 Linus Walleij
