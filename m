@@ -2,68 +2,82 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C5F9FB1E36
-	for <lists+linux-amlogic@lfdr.de>; Fri, 13 Sep 2019 15:07:17 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8F1E7B221B
+	for <lists+linux-amlogic@lfdr.de>; Fri, 13 Sep 2019 16:39:00 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=YKw+WQ4GwVpIYPWp7jux808WWd7YTnPdxOL0GKDTuYA=; b=BYuhZ4fq54FnFD
-	/vEG5bD09eQbrJNOOLKz1J61xw8+gniTKkIRsUWVs/tDFL65J8tv5KtlHV3JlpyGvuH7hr7WdbcEM
-	tZQaWwgIJKkIYRvLMOsfrUjOasz2HAsJqoxNsBaDX/qgFa/0GtubL9RAwsD8pIiUtiTs7VT/vj0HJ
-	OC1j/HyT1tS4OP5noGZrd/O7aGKuq+2m9LbQJOPh+Iz+ZumVpmgpqy0UCLEVipY7Ym6CsA6Kccg6C
-	ZjkGCsgBqdJ2XDwcbFcwWcYp4869gMs/zkZbA6lyW+eewkRXfPkC1dg2jjK6AX0RHnunSfY934rcD
-	SyAhLB2F/IG0nVTeWXWQ==;
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:To:In-Reply-To:
+	References:Subject:From:Date:Message-ID:Reply-To:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:List-Owner;
+	bh=NcYgztnC+2wpW8DEjVCnnh25K3dK4vDEQ9rYg851P0A=; b=rLIJp3N/371minoh1cAa72NwhK
+	zZ7MHo52/ET3PTBHYKiBH8DIP1kehgDpdmYCTCUyfQV0U8VL7zJWL/BWImBb/W2hmOgqzzGu1Axt5
+	2ReLrugJjLckI52hMzXFfjaCquko2uhWKULhcFoyfvNM5HGQ/CLZ72zDURxoivBKnwj0l7x8KmXVN
+	6QJ3nYzKKu//8lYySiD/vYhm+XnoNVON3RnsC23AwbjcMhRrCDcyGIpXEhgg9669cvuDzziUHEDne
+	fBnfDzXwnMMM0jKfq1RnwvGTgLbKF8pKgswfPNuZydt8t7zWg3NV2HuqGakEnMj6gQobAYxXlzEJD
+	CxNJYSYw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1i8lHy-000296-SB; Fri, 13 Sep 2019 13:07:02 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1i8mip-0004ET-8H; Fri, 13 Sep 2019 14:38:51 +0000
+Received: from mail-oi1-f196.google.com ([209.85.167.196])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1i8lHq-00026T-EQ; Fri, 13 Sep 2019 13:06:58 +0000
-Received: from localhost (unknown [104.132.45.99])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
- (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id C6A18206A5;
- Fri, 13 Sep 2019 13:06:51 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1568380012;
- bh=qO9j38kTvRaom9Dympgw2PZ3SD1mqzGyLVqm6MafZvk=;
- h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
- b=DmLuAT95jpNYwx9mcqkIJBKYgBFryoL4/2NE56owCBA/8l9guoozSKta/pl1FKLao
- Ee00LCjo3EWu2DiGr/XxqrCHMqZySU/dJzXcIbr1Vmdkc9PrtyyQroCAtUSzUrWWPY
- jCLDKEymWrMobIA5yZQB5s21gjO45xSONyJBjH28=
-Date: Fri, 13 Sep 2019 14:02:26 +0100
-From: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-To: Paolo Bonzini <pbonzini@redhat.com>
-Subject: Re: KASAN: slab-out-of-bounds Read in handle_vmptrld
-Message-ID: <20190913130226.GB403359@kroah.com>
-References: <000000000000a9d4f705924cff7a@google.com>
- <87lfutei1j.fsf@vitty.brq.redhat.com>
- <5218e70e-8a80-7c5f-277b-01d9ab70692a@redhat.com>
- <20190913044614.GA120223@kroah.com>
- <db02a285-ad1d-6094-6359-ba80e6d3f2e0@redhat.com>
-MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <db02a285-ad1d-6094-6359-ba80e6d3f2e0@redhat.com>
-User-Agent: Mutt/1.12.1 (2019-06-15)
+ id 1i8mgP-0002VI-9D; Fri, 13 Sep 2019 14:36:24 +0000
+Received: by mail-oi1-f196.google.com with SMTP id e12so2834533oie.0;
+ Fri, 13 Sep 2019 07:36:21 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:message-id:date:from:subject:references
+ :in-reply-to:cc:cc:to;
+ bh=YbpiQzIM3eQL4XQ34vYEddsWeG9VMivV31FLcj+hIuc=;
+ b=q8WiDbYPzs1AdOZmwm0KN7Hmwu5jbtgwyLH6gMbMOC88CSgaSIXJlWDNcoDPhnHhEJ
+ 6pyvsydc+oAr5972jxk2KRfW34UnlzcRC7i06W/yPvrUv+jcDQYhsLkWCkqE0gSeqSVa
+ 5o3TqMswFOXBHSSdAz55o8THIpt8A/0Z73hpaVsai8O2AMwpmIfY8C9FhQcEksVEp4f2
+ zOf8raRdN42+R64rcCDBkVGbl4/BitNYlAfNPSEoVDqRNZSi9nbwi6jqxAHCJ5+mNV9w
+ Kf0TZvFsBh8lkwD6oYgOR4/fYEB+lhZlUM1/qGHUJfJgSEe8JzbcPCEaa/3t7KdTAfMV
+ mcGg==
+X-Gm-Message-State: APjAAAWwGLjCEI/jht/4c5vMoThRCXdjybF7+rHkdQV8XYpYAoR9wjHp
+ CewRZCzujdEQ6/5W/b6ZKQ==
+X-Google-Smtp-Source: APXvYqyjj6rIVWDuqKwqqDB6O49ywBjZD3PZQ4+xjM00i6c2gbMnanfPNY4AfSDhsOstHiycfTtKVQ==
+X-Received: by 2002:aca:ed0a:: with SMTP id l10mr3624662oih.83.1568385380257; 
+ Fri, 13 Sep 2019 07:36:20 -0700 (PDT)
+Received: from localhost (24-155-109-49.dyn.grandenetworks.net.
+ [24.155.109.49])
+ by smtp.gmail.com with ESMTPSA id h20sm4239119otj.81.2019.09.13.07.36.19
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Fri, 13 Sep 2019 07:36:19 -0700 (PDT)
+Message-ID: <5d7ba963.1c69fb81.4869.eb19@mx.google.com>
+Date: Fri, 13 Sep 2019 15:36:18 +0100
+From: Rob Herring <robh@kernel.org>
+Subject: Re: [PATCH 1/6] dt-bindings: pci: amlogic,
+ meson-pcie: Add G12A bindings
+References: <1567950178-4466-1-git-send-email-narmstrong@baylibre.com>
+ <1567950178-4466-2-git-send-email-narmstrong@baylibre.com>
+In-Reply-To: <1567950178-4466-2-git-send-email-narmstrong@baylibre.com>
+To: Neil Armstrong <narmstrong@baylibre.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190913_060656_425857_9A239BB5 
-X-CRM114-Status: GOOD (  22.76  )
-X-Spam-Score: -5.0 (-----)
+X-CRM114-CacheID: sfid-20190913_073623_351167_395DA4E0 
+X-CRM114-Status: UNSURE (   8.37  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.3 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.0 points)
+ Content analysis details:   (0.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [209.85.167.196 listed in list.dnswl.org]
+ 0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (robherring2[at]gmail.com)
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit (robherring2[at]gmail.com)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [209.85.167.196 listed in wl.mailspike.net]
+ 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -75,84 +89,33 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: mark.rutland@arm.com, x86@kernel.org, wanpengli@tencent.com,
- kvm@vger.kernel.org, narmstrong@baylibre.com, catalin.marinas@arm.com,
- will.deacon@arm.com, hpa@zytor.com, khilman@baylibre.com, joro@8bytes.org,
- rkrcmar@redhat.com, mingo@redhat.com, Dmitry Vyukov <dvyukov@google.com>,
- syzbot <syzbot+46f1dd7dbbe2bfb98b10@syzkaller.appspotmail.com>,
- devicetree@vger.kernel.org, syzkaller-bugs@googlegroups.com,
- robh+dt@kernel.org, bp@alien8.de, linux-amlogic@lists.infradead.org,
- tglx@linutronix.de, linux-arm-kernel@lists.infradead.org, jmattson@google.com,
- USB list <linux-usb@vger.kernel.org>, linux-kernel@vger.kernel.org,
- sean.j.christopherson@intel.com, carlo@caione.org,
- Vitaly Kuznetsov <vkuznets@redhat.com>
+Cc: devicetree@vger.kernel.org, lorenzo.pieralisi@arm.com,
+ Neil Armstrong <narmstrong@baylibre.com>, khilman@baylibre.com,
+ linux-pci@vger.kernel.org, linux-kernel@vger.kernel.org, kishon@ti.com,
+ repk@triplefau.lt, maz@kernel.org, bhelgaas@google.com,
+ linux-amlogic@lists.infradead.org, yue.wang@Amlogic.com,
+ linux-arm-kernel@lists.infradead.org
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On Fri, Sep 13, 2019 at 09:34:32AM +0200, Paolo Bonzini wrote:
-> On 13/09/19 06:46, Greg Kroah-Hartman wrote:
-> > USB drivers expect kmalloc to return DMA-able memory.  I don't know
-> > about specific alignment issues, that should only an issue for the host
-> > controller being used here, which you do not say in the above list.
+On Sun,  8 Sep 2019 13:42:53 +0000, Neil Armstrong wrote:
+> Add PCIE bindings for the Amlogic G12A SoC, the support is the same
+> but the PHY is shared with USB3 to control the differential lines.
 > 
-> I have no idea, this is just the analysis of a syzkaller report.  From 
-> the backtrace, it's one that ends up calling kmalloc; all of them should
-> have the same issue with KASAN.
+> Thus this adds a phy phandle to control the PHY, and sets invalid
+> MIPI clock as optional for G12A.
 > 
-> The specific alignment requirement for this bug comes from this call in
-> usbdev_mmap:
+> Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
+> ---
+>  .../devicetree/bindings/pci/amlogic,meson-pcie.txt   | 12 ++++++++----
+>  1 file changed, 8 insertions(+), 4 deletions(-)
 > 
-> 	if (remap_pfn_range(vma, vma->vm_start,
-> 			virt_to_phys(usbm->mem) >> PAGE_SHIFT,
-> 			size, vma->vm_page_prot) < 0) {
-> 
-> > We have had some reports that usbdev_mmap() does not do the "correct
-> > thing" for all host controllers, but a lot of the DMA work that is in
-> > linux-next for 5.4-rc1 should have helped resolve those issues.  What
-> > tree are you seeing these bug reports happening from?
-> 
-> It's in master, but the relevant code is the same in linux-next; in fact
-> in this case there is no DMA involved at all.  hcd_buffer_alloc hits
-> the case "some USB hosts just use PIO".
-> 
-> On those host controllers, it should be reproducible with just this:
-> 
-> diff --git a/drivers/usb/core/usb.c b/drivers/usb/core/usb.c
-> index 7fcb9f782931..cc0460730bce 100644
-> --- a/drivers/usb/core/usb.c
-> +++ b/drivers/usb/core/usb.c
-> @@ -905,9 +905,12 @@ EXPORT_SYMBOL_GPL(__usb_get_extra_descriptor);
->  void *usb_alloc_coherent(struct usb_device *dev, size_t size, gfp_t mem_flags,
->  			 dma_addr_t *dma)
->  {
-> +	void *buf;
->  	if (!dev || !dev->bus)
->  		return NULL;
-> -	return hcd_buffer_alloc(dev->bus, size, mem_flags, dma);
-> +	buf = hcd_buffer_alloc(dev->bus, size, mem_flags, dma);
-> +	WARN_ON_ONCE(virt_to_phys(buf) & ~PAGE_MASK);
-> +	return buf;
->  }
->  EXPORT_SYMBOL_GPL(usb_alloc_coherent);
 
-Look at linux-next, we "should" have fixed up hcd_buffer_alloc() now to
-not need this type of thing.  If we got it wrong, please let us know and
-then yes, a fix like this would be most appreciated :)
+Reviewed-by: Rob Herring <robh@kernel.org>
 
-thanks,
-
-greg k-h
-
->  
-> 
-> and CONFIG_KASAN=y or possibly just CONFIG_DEBUG_SLAB=y.  mmap-ing /dev/usb
-> should warn if my analysis is correct.
-> 
-> If you think the above patch makes sense, I can test it and submit it formally.
-> 
-> Paolo
 
 _______________________________________________
 linux-amlogic mailing list
