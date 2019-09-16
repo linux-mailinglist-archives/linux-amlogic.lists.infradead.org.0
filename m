@@ -2,87 +2,85 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 035A5B2C75
-	for <lists+linux-amlogic@lfdr.de>; Sat, 14 Sep 2019 19:41:19 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id EC42BB3AA2
+	for <lists+linux-amlogic@lfdr.de>; Mon, 16 Sep 2019 14:50:49 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=5+NZhI+ueTVGbQeiapAAeHm36le5f5kmfNKoaZy26ko=; b=MhURC97Ejr3vJD
-	6NF6gO+Ahv/F1xEk63Ol7wqtCF3mIRrTN5z39ZGcKfI7hqThvyvRBRJ2lzSA084RuD9GJ5S/srngc
-	I0r66we4RxJ3MJ/rX4e4Bg57aPHN0H7MgGrxlk6e437GmCq74ZacwHBx4b25/4JWfDsKWQnkVTedo
-	CiHbJskRAo1wBBq+TGov2yaPHr2KcYTsccFD2EwCk06s+chs5h2gFXCh4L8wal0rEqRb55GYiZVEF
-	0tfKrNIPV764yMJASlZ5VS3ixevcuNDiGNwSc0/gZ3nAOvBeMG+JT17OaskBQ5BEGqiMsq77fTIDR
-	B9GtSaJp8pt4vYtxib1g==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=s2Wa52SE+9mDqWVOdLadRqTv2X8KfneIaq7L4GB544c=; b=uKMyM1ce0k+PLc
+	TZNL+x9eBy/Z5YdKI6GdKTUw7qQ/hr9rnQqYmE/3imkX1tC2lg+cCVp8jL0J+9rVLNhnrIPt4dvGk
+	l0B4UmpYgLOcEnyGAxa50+n6UYTsbII7VC6Y9F6FacIedmU/dbP5ofNvmM4S3FQolbfj0otLvYStp
+	5zIUNX01wWSSWUpgMiiSRCMH0KReU7KPol7DxfSiOsbdI4Q73U0p5q7jKcdtzeRFiLPelukAJI9nO
+	nC3zxFBbTX+w7OlxEIdxpA3lHauL4Wzcurz2I5BjES5/Jp/VgM5FqhPVwy2fHPsijdZ4gACwvF9iT
+	BqYqzs/f2eUB9Tst+c3w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1i9C2r-0000CQ-OU; Sat, 14 Sep 2019 17:41:13 +0000
-Received: from mail-oi1-x243.google.com ([2607:f8b0:4864:20::243])
+	id 1i9qSo-0002uV-Rr; Mon, 16 Sep 2019 12:50:42 +0000
+Received: from mail-wm1-x344.google.com ([2a00:1450:4864:20::344])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1i9C2Z-0008TB-P1; Sat, 14 Sep 2019 17:40:57 +0000
-Received: by mail-oi1-x243.google.com with SMTP id v16so5179595oiv.13;
- Sat, 14 Sep 2019 10:40:55 -0700 (PDT)
+ id 1i9qSY-0002n4-Po
+ for linux-amlogic@lists.infradead.org; Mon, 16 Sep 2019 12:50:30 +0000
+Received: by mail-wm1-x344.google.com with SMTP id g207so9985032wmg.5
+ for <linux-amlogic@lists.infradead.org>; Mon, 16 Sep 2019 05:50:25 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=googlemail.com; s=20161025;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=ScwrZFTGOc+kbhhZsRu5GL1IOvADxSoY4roa9r4rvrc=;
- b=oR/DGMfb/9sZrS1uWjRRtNMdrY5WzzoMndCtZaKV+gw+KnCyNqnAKD24aJKKHJdhxu
- i7amzSzK25ME7g67a28AVFajVTK1cxb+fmXDMU3GS565nM7NXjVzmCa0GD3MOJ6wO5Pp
- sgODIbPNcyMnunPtbLm0F3kOFWFeMMfYJp/Jlt/maGebgXr3vcTwhEgPwASNRV+50Pjg
- N620uvQjpgRfC54Yg71xZ7CQbDchDgFgsYw186toIk3YCFIMqHkiTH4G8cDjv1uhtv6k
- 6CgYOUzRHIF14PfBznVGZmQpHsEl3KPgCzFYkK98WoRPBqoSUhB8ZvFYFQK2WLEceNUq
- m55g==
+ d=baylibre-com.20150623.gappssmtp.com; s=20150623;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=n0nWXjEKuyezEGLTlcOc5a95BxXTlVx30DizfXSeliY=;
+ b=rCcoPIlrwFYixV0LYkox3EHEWUvNOSmGLVZr5kMmD8v9E4IyKfdkDQSIWvEui/KKuh
+ GmfhSKP0nsPa/pvtOtmMfUqNtNxD4LOxUG4mC09v0Z+6hbiaoouuyEmbSi2R6HzIhIcp
+ 1Fxc50tbkGLdh+IpSlrXopG/0K5wIxL8/MbFIEv2eGaV9/HICIQw2mSCnYuum97wTzq1
+ Rxo3OfhlWw5DMCmwSPNejV3DzEgEkj5x7M2ucP58Kz5/FpR/eu5QlBElqOXgoC4G25vZ
+ iuIzjhePr/rH6ZSQwjjx14oCB3niPwUoex6SW6Np5cxXkaGSCDd9tPSCyJOpiF3AMrXr
+ 7bVw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=ScwrZFTGOc+kbhhZsRu5GL1IOvADxSoY4roa9r4rvrc=;
- b=SrrfFGsjhsQb3z/bbjdG42SOQVrbjRIIiXwP7YsiLpfhNp3y5geioOaH5o0GZ93+a+
- W9WXkum0+8s0W6/t6jVogh+WHJyGo0nIJ5Q52xvWfUEe1SosbehnIbMts6pD01h+PGeg
- tuVgrfBHqL/EcpdRRQzPDNdjLqE7a1c4NXZUYQXRFMRDSn1VOfSQWLdP6YOVofRjayhi
- p9oUQC51OARq68AFEFftXGRmn9UOuOZ3OscbTRR1RfPkivQkcL1v4dBobESOv9v8S0IR
- PygebrCSmXyDVsjhRUPzBLClgu6D0+zB8duhJLvM0Yc8PC+iUVxvuYXOI8i7Vb/VkWdo
- vz7Q==
-X-Gm-Message-State: APjAAAUzXJ9ULw3Wj2o0jAmRkhSIE9RAqdYNfQXE8eIf3viCUXQ8evGE
- 8Qxn7E7xLLnCj9O/5vHphCMeZiEUlbWRj+Nl768=
-X-Google-Smtp-Source: APXvYqxzDSV60TGVXBUNUlUYl4UV7zv7qNNLwQJ0PfQSVLqrKQObbcGram3Yy+w0QN7EAUgIusf4gu4nw3EU9eIuIxE=
-X-Received: by 2002:aca:4d08:: with SMTP id a8mr8328954oib.39.1568482854580;
- Sat, 14 Sep 2019 10:40:54 -0700 (PDT)
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=n0nWXjEKuyezEGLTlcOc5a95BxXTlVx30DizfXSeliY=;
+ b=gjk5Xf31pgp5gJDey5tJ1Dw6RS9NN0VNpfAzyndU7rP0Yjc38SN5fOMGn8QFTcyeKz
+ LaZ4NoNr3v/ngP8cMZNvNNz245jgvWdKPqCxOxso0kHZDy7hqd9Otrb/npQ6U3dUsr5H
+ TIfW2Plyr32Y6wa6Vh/+VnpX3D2hmdZmvUYgnV6t8Iwc8kEA/S8IKa4yb5zw5jOKLlNU
+ mhCQw7/h6DBKggdLuQcjYrVfGRLs9gtWQlGfN+oszJBtvL4DGEXD7K4tBYIve1sXVPUi
+ TCp1GoBdcVjNCNcdXzewbkvB75xSFj5UYmLch2NvC6whYMeBcY7eS+oB1lA2sY8g35/D
+ oxRw==
+X-Gm-Message-State: APjAAAUO1FJd51aSoi1TDMh0vsQ5oNuWiTUarHeug3TuZFm8HKfgOFJz
+ hPmFjkP08dzHndSXBziWR59EyA==
+X-Google-Smtp-Source: APXvYqxt1quSs6ZODA5XRA7qdpJ1rjqMP7CeuDbJm5vLj3TnHa4eGsYXp/6f5dSgZsxBwneSvqn0tQ==
+X-Received: by 2002:a7b:ce0e:: with SMTP id m14mr14440842wmc.138.1568638224331; 
+ Mon, 16 Sep 2019 05:50:24 -0700 (PDT)
+Received: from bender.baylibre.local
+ (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
+ by smtp.gmail.com with ESMTPSA id o12sm15109960wrm.23.2019.09.16.05.50.23
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Mon, 16 Sep 2019 05:50:23 -0700 (PDT)
+From: Neil Armstrong <narmstrong@baylibre.com>
+To: khilman@baylibre.com, lorenzo.pieralisi@arm.com, kishon@ti.com,
+ bhelgaas@google.com, andrew.murray@arm.com
+Subject: [PATCH v2 0/6] arm64: dts: meson-g12: add support for PCIe
+Date: Mon, 16 Sep 2019 14:50:16 +0200
+Message-Id: <20190916125022.10754-1-narmstrong@baylibre.com>
+X-Mailer: git-send-email 2.22.0
 MIME-Version: 1.0
-References: <1567780354-59472-1-git-send-email-christianshewitt@gmail.com>
- <1567780354-59472-4-git-send-email-christianshewitt@gmail.com>
-In-Reply-To: <1567780354-59472-4-git-send-email-christianshewitt@gmail.com>
-From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-Date: Sat, 14 Sep 2019 19:40:42 +0200
-Message-ID: <CAFBinCANaKMHRuwaFwubZcDjZaGYcLcVuHjJsakR0uJkmZxRMw@mail.gmail.com>
-Subject: Re: [RESEND PATCH v3 3/3] arm64: dts: meson-g12b-ugoos-am6: add
- initial device-tree
-To: Christian Hewitt <christianshewitt@gmail.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190914_104055_841056_37E3587A 
-X-CRM114-Status: UNSURE (   8.02  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190916_055027_119218_8EF5BB40 
+X-CRM114-Status: GOOD (  10.61  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:243 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:344 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (martin.blumenstingl[at]googlemail.com)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -94,109 +92,78 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- Oleg Ivanov <balbes-150@yandex.ru>, Kevin Hilman <khilman@baylibre.com>,
- linux-kernel@vger.kernel.org, Rob Herring <robh+dt@kernel.org>,
+Cc: gouwa@khadas.com, Neil Armstrong <narmstrong@baylibre.com>,
+ linux-pci@vger.kernel.org, nick@khadas.com, linux-kernel@vger.kernel.org,
+ yue.wang@Amlogic.com, repk@triplefau.lt, maz@kernel.org,
  linux-amlogic@lists.infradead.org, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Hi Christian,
+This patchset :
+- updates the Amlogic PCI bindings for G12A
+- reworks the Amlogic PCIe driver to make use of the
+G12a USB3+PCIe Combo PHY instead of directly writing in
+the PHY register
+- adds the necessary operations to the G12a USB3+PCIe Combo PHY driver
+- adds the PCIe Node for G12A, G12B and SM1 SoCs
+- adds the commented support for the S922X, A311D and S905D3 based
+VIM3 boards.
 
-my nit-picks below
+The VIM3 schematic can be found at [1].
 
-On Fri, Sep 6, 2019 at 4:34 PM Christian Hewitt
-<christianshewitt@gmail.com> wrote:
-[...]
-> +       spdif_dit: audio-codec-1 {
-> +               #sound-dai-cells = <0>;
-> +               compatible = "linux,spdif-dit";
-> +               status = "okay";
-> +               sound-name-prefix = "DIT";
-> +       };
-please move it below sdio_pwrseq (or at least somewhere below the memory node)
+This patchset is dependent on Remi's "Fix reset assertion via gpio descriptor"
+patch at [2].
 
-[...]
-> +       vcc_3v3: regulator-vcc_3v3 {
-> +               compatible = "regulator-fixed";
-> +               regulator-name = "VCC_3V3";
-> +               regulator-min-microvolt = <3300000>;
-> +               regulator-max-microvolt = <3300000>;
-> +               vin-supply = <&vddao_3v3>;
-> +               regulator-always-on;
-> +               /* FIXME: actually controlled by VDDCPU_B_EN */
-can we add the enable GPIO here now that we know how to describe the
-VDDCPU_B regulator?
+This patchset has been tested in a A311D VIM3 and S905D3 VIM3L using a
+128Go TS128GMTE110S NVMe PCIe module.
 
-[...]
-> +       usb1_pow: regulator-usb1_pow {
-for consistency with the regulators above: regulator-usb1-pow
+For indication, here is a bonnie++ run as ext4 formatted on the VIM3:
+     ------Sequential Output------ --Sequential Input- --Random-
+     -Per Chr- --Block-- -Rewrite- -Per Chr- --Block-- --Seeks--
+Size K/sec %CP K/sec %CP K/sec %CP K/sec %CP K/sec %CP /sec %CP
+  4G 93865  99 312837  96 194487  23 102808  97 415501 21 +++++ +++
 
-[...]
-> +       usb_pwr_en: regulator-usb_pwr_en {
-for consistency with the regulators above: regulator-usb-pwr-en
+and the S905D3 VIM3L version:
+     ------Sequential Output------ --Sequential Input- --Random-
+     -Per Chr- --Block-- -Rewrite- -Per Chr- --Block-- --Seeks--
+Size K/sec %CP K/sec %CP K/sec %CP K/sec %CP K/sec %CP  /sec %CP
+  4G 52144  95 71766  21 47302  10 57078  98 415469  44 +++++ +++
 
-[...]
-> +       vddao_1v8: regulator-vddao_1v8 {
-for consistency with the regulators above: regulator-vddao-1v8
+Changes since v1 at [3]:
+ - Collected Andrew's and Rob's Reviewed-by tags
+ - Added missing calls to phy_init/phy_exit
+ - Fixes has_shared_phy handling for MIPI clock
+ - Add comment in the DT concerning firmware setting the right properties
+ - Added SM1 Power Domain to PCIe node
 
-[...
-> +       vddao_3v3: regulator-vddao_3v3 {
-for consistency with the regulators above: regulator-vddao-3v3
+[1] https://docs.khadas.com/vim3/HardwareDocs.html
+[2] https://patchwork.kernel.org/patch/11125261/
+[3] https://patchwork.kernel.org/cover/11136927/
 
-[...]
-> +&cpu0 {
-> +       cpu-supply = <&vddcpu_b>;
-> +       operating-points-v2 = <&cpu_opp_table_0>;
-> +       clocks = <&clkc CLKID_CPU_CLK>;
-> +       clock-latency = <50000>;
-> +};
-> +
-> +&cpu1 {
-> +       cpu-supply = <&vddcpu_b>;
-> +       operating-points-v2 = <&cpu_opp_table_0>;
-> +       clocks = <&clkc CLKID_CPU_CLK>;
-> +       clock-latency = <50000>;
-> +};
-> +
-> +&cpu100 {
-> +       cpu-supply = <&vddcpu_a>;
-> +       operating-points-v2 = <&cpub_opp_table_1>;
-> +       clocks = <&clkc CLKID_CPUB_CLK>;
-> +       clock-latency = <50000>;
-> +};
-> +
-> +&cpu101 {
-> +       cpu-supply = <&vddcpu_a>;
-> +       operating-points-v2 = <&cpub_opp_table_1>;
-> +       clocks = <&clkc CLKID_CPUB_CLK>;
-> +       clock-latency = <50000>;
-> +};
-> +
-> +&cpu102 {
-> +       cpu-supply = <&vddcpu_a>;
-> +       operating-points-v2 = <&cpub_opp_table_1>;
-> +       clocks = <&clkc CLKID_CPUB_CLK>;
-> +       clock-latency = <50000>;
-> +};
-> +
-> +&cpu103 {
-> +       cpu-supply = <&vddcpu_a>;
-> +       operating-points-v2 = <&cpub_opp_table_1>;
-> +       clocks = <&clkc CLKID_CPUB_CLK>;
-> +       clock-latency = <50000>;
-> +};
-(not limited to this patch: there's a lot of redundancy with the CPU
-nodes across the G12B .dts)
+Neil Armstrong (6):
+  dt-bindings: pci: amlogic,meson-pcie: Add G12A bindings
+  PCI: amlogic: Fix probed clock names
+  PCI: amlogic: meson: Add support for G12A
+  phy: meson-g12a-usb3-pcie: Add support for PCIe mode
+  arm64: dts: meson-g12a: Add PCIe node
+  arm64: dts: khadas-vim3: add commented support for PCIe
 
-[...]
-> +&sd_emmc_a {
-all nodes starting here should use alphabetical sorting
+ .../bindings/pci/amlogic,meson-pcie.txt       |  12 +-
+ .../boot/dts/amlogic/meson-g12-common.dtsi    |  33 +++++
+ .../amlogic/meson-g12b-a311d-khadas-vim3.dts  |  25 ++++
+ .../amlogic/meson-g12b-s922x-khadas-vim3.dts  |  25 ++++
+ .../boot/dts/amlogic/meson-khadas-vim3.dtsi   |   4 +
+ .../dts/amlogic/meson-sm1-khadas-vim3l.dts    |  25 ++++
+ arch/arm64/boot/dts/amlogic/meson-sm1.dtsi    |   4 +
+ drivers/pci/controller/dwc/pci-meson.c        | 132 ++++++++++++++----
+ .../phy/amlogic/phy-meson-g12a-usb3-pcie.c    |  70 ++++++++--
+ 9 files changed, 292 insertions(+), 38 deletions(-)
 
+-- 
+2.22.0
 
-Martin
 
 _______________________________________________
 linux-amlogic mailing list
