@@ -2,80 +2,82 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1A1B1B766D
-	for <lists+linux-amlogic@lfdr.de>; Thu, 19 Sep 2019 11:37:05 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 35409B7672
+	for <lists+linux-amlogic@lfdr.de>; Thu, 19 Sep 2019 11:37:39 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Snj8Egynze9PuH7aFK8BrfYgTFrtFLBGDdYSaX8VJfQ=; b=fejxqKlj1rTT1c
-	OeNUiOIxl6zUz/LUmqg3t2JZUT7iQQpmgyjStwqeeD2Uj9wvO0IUt+soK8hI2VGGPG1s2eZbjiTMl
-	7CvZMQwYz5I5GLqWjMIQJJ2Qw1WfjLbEp0uXIRPiY/IsMlJfbnmnDKSLCnYNSmSr/68Vvk54iideS
-	WjmLzJcPGdMJGNq2+QLosBv4tm8pm+D5sUhM2vz9RjXP8G1UQHQKmYMUAHt4PwR4032+tuNrfMy6/
-	m1nMQ2PDnO03QNaSUNTkMOIQOZ2iivHBvZioyXdgrkQaMDMd9rMEsj4ru3EqbUNiVfWJqBL9kx7FD
-	T5vf0+RiQH9QYydxO98g==;
+	List-Owner; bh=PrNu0r+Yahy2qYKTGMQqL1euokAHzth4lZhPBb/IA+4=; b=urGNXvbeZTswKr
+	7zbcqDAa2XGjWZMWdMwDS1K1MHh6pP/8Bg62tF+VamDgm0URB0kKBhUF87ZrgVR3r/xQdEP2rj/uR
+	8Yp8TtdmIoP7IgxS+AcTmhGXM/AFaBESHVqyOY3Y7Zxq9qHAC/hNMaHhjtPwawBUkp9PUj5xFwKCE
+	oWukIhbvJKU1rE62m+DzcrRfclc7Qw8k4ogA9riDz9VOfcsSzm5ePHKvLq9p8U9C3tM+ni0IwMKUa
+	Nqc6bUtg8mEJoOC2eIeIN15fMq7Paqksg7aOViKZ8M8V/kPsYHf0GYpcpEGfvQV3TZhmLKnsS8rll
+	qxhmzpqWaXrYVeWyJK4g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iAsru-000662-Qm; Thu, 19 Sep 2019 09:36:54 +0000
-Received: from mail-wr1-x443.google.com ([2a00:1450:4864:20::443])
+	id 1iAssY-0006e3-3e; Thu, 19 Sep 2019 09:37:34 +0000
+Received: from mail-wm1-x341.google.com ([2a00:1450:4864:20::341])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iAsrY-0005qZ-Li
- for linux-amlogic@lists.infradead.org; Thu, 19 Sep 2019 09:36:34 +0000
-Received: by mail-wr1-x443.google.com with SMTP id r5so2287680wrm.12
- for <linux-amlogic@lists.infradead.org>; Thu, 19 Sep 2019 02:36:31 -0700 (PDT)
+ id 1iAsra-0005qg-7P
+ for linux-amlogic@lists.infradead.org; Thu, 19 Sep 2019 09:36:37 +0000
+Received: by mail-wm1-x341.google.com with SMTP id i16so3586469wmd.3
+ for <linux-amlogic@lists.infradead.org>; Thu, 19 Sep 2019 02:36:32 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=HU8Y6pbxWWxRHBUPCakNxeD6oqUY5n5mmhoUaSAT3gk=;
- b=ZpxIQpFM42BVxOwOhk7rXeg7LiQ/OzWnqWklrcETy22L7NdwvJOg25CPHHr/9bBzA7
- yYeWiVE3oPtqE9Erb4DWeZ/tpghfcW9ioBBOioDqpw6G892y1x48m8xMPjmcy18Nry2o
- pw9WB4k9l0ZVsvVLUzhO7itF/vALzH+A5+u7WatGxEyn2WbEkNM7f+iinKkXxLrij3nR
- X8tXVIol/mse55uThB8RwHlSkQ1nypybZx9fynaYkSTUuvRmFID1CcA0+rCFTrRVlBCl
- KMjZIRs1sRY7Iur537wQ8DVFU9fuM+Yg/pHUEo9uqHvs7dUPEpEFnBAop33UTd/G+n80
- QpPg==
+ bh=ve+wzZh8jIbj36VSXYKI7yL2XeCKd4lhGJ7BfZhWHhk=;
+ b=oNG10dYrCbn1pG2d0FdlS4/80H49wI5hR3HIWwCnhqqjA62jSItQNspBjzxvSMedTr
+ 4q8EAzYaQHcdosVIBhH6EkIz97rHE3T2imgWxPw+AJbGfy+/3bFQWAssrFRGNQyZZxws
+ BqcbL59e6P+hICngHdTLTNZQJxf+Kigt4Arc8y+Zy41JmjnfhoGqIfb0KaDnvFaZc1te
+ 7zkGKrqNzp10j43LIeTAazbGfmtTUShsFgb11nRienzG70jNMu2lh/L0WmRaiY+zrNQC
+ cECvYUo+1KTMaRsTURjUfLEAVXk7x+cvMRG9mqFeUaTb4mCSQrwEBkE0bVLHhhe+9x3Z
+ Xk2Q==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=HU8Y6pbxWWxRHBUPCakNxeD6oqUY5n5mmhoUaSAT3gk=;
- b=D0SqMCHY92rIqmtRjGq/fSZ+Vf4MwRE/KPuO1HEp+7LlWO/uQoDn3iJGw23bPnAvxZ
- /TigjglTYKyCEXIuLJczBrHCwEBdUWKnPYRKmjPJ3KBOTIVJIQTzEVbP+9VOzfJm1oaz
- Igm1mB43kQQUCq7WSCjTZ078Waz/hMNXP/UxnMEypChaZs4FDvI6SfhDfjrZD4Eowq0B
- uFfw3ZcVd/z+9pRszGBnak0qj9Bh6KuInRmKi7j8Y18jbiVbDEuAh3jhwYc0SKSR0Ewn
- chr91GjTr+WmSbbjWBeaaaidGqnw20gL+K7hCaou1ViBVlqgTKoMPmTSC/tXr9IT4qMA
- iL6Q==
-X-Gm-Message-State: APjAAAWNaMrVlASedZMYdqr+XuaSuONSUDybc4gx9bF75HbNc0adPArX
- vinb64y+5zpkjr1ymXOHVfLvzw==
-X-Google-Smtp-Source: APXvYqwcwTAoAq6ipI04IFWalCiIwGVkBNhcLNPZV6e9XreTF113hZ1ic9ciMzNKiT6P7nJFBGetVA==
-X-Received: by 2002:adf:e48f:: with SMTP id i15mr6926414wrm.26.1568885790071; 
+ bh=ve+wzZh8jIbj36VSXYKI7yL2XeCKd4lhGJ7BfZhWHhk=;
+ b=sbgaLssWY96NGqiVi2AiCePTRh66eWJj4NtYL1+i4+0LCYreEIhFATmbekmSk4lqu5
+ RHvkwB2sAeRjmV5/JFJ14gR86GrjCzJVVuohplZtDvc9UCC1Er0ZEi9O9TqGR0yrg7Bk
+ RbJl3GAr5I2vAoDx3PfQfiVrYTiJyG8aJu+n6vpKERV+OUQFhmULde1BqmQk07R6FM1p
+ 5wa6sXwNB/KPWXX/q1IpNW8ajI0CxqiKvWO7h/MRo68KcZLoqII2uDWHpLxMmYJ4O1uW
+ ce62BtLjnWmw9n1Py+I/O39y99HUW4Fgk8P9cRLE4KmnO2UaCls/ZFwJRA7ydNAtaZ6F
+ STeg==
+X-Gm-Message-State: APjAAAWFI0Wo+TGgjKqww3zt5XK4+sKnQzFAZyUGyUyrwJno+UFNLcVv
+ P748lPaxS0OeoEZ/j3jb3uytbA==
+X-Google-Smtp-Source: APXvYqz9sp/AaYazMI2H4L0eBMS1cnM6EY4+65T2+0n8IFCg9CSZgaPu7/ywo3hsKzx2hiNglBB29A==
+X-Received: by 2002:a1c:c589:: with SMTP id v131mr1915621wmf.163.1568885790845; 
  Thu, 19 Sep 2019 02:36:30 -0700 (PDT)
 Received: from bender.baylibre.local
  (wal59-h01-176-150-251-154.dsl.sta.abo.bbox.fr. [176.150.251.154])
- by smtp.gmail.com with ESMTPSA id q19sm16701186wra.89.2019.09.19.02.36.29
+ by smtp.gmail.com with ESMTPSA id q19sm16701186wra.89.2019.09.19.02.36.30
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Thu, 19 Sep 2019 02:36:29 -0700 (PDT)
+ Thu, 19 Sep 2019 02:36:30 -0700 (PDT)
 From: Neil Armstrong <narmstrong@baylibre.com>
 To: jbrunet@baylibre.com
-Subject: [PATCH 1/3] clk: meson: g12a: fix cpu clock rate setting
-Date: Thu, 19 Sep 2019 11:36:25 +0200
-Message-Id: <20190919093627.21245-2-narmstrong@baylibre.com>
+Subject: [PATCH 2/3] clk: meson: g12a: set CLK_MUX_ROUND_CLOSEST on the cpu
+ clock muxes
+Date: Thu, 19 Sep 2019 11:36:26 +0200
+Message-Id: <20190919093627.21245-3-narmstrong@baylibre.com>
 X-Mailer: git-send-email 2.22.0
 In-Reply-To: <20190919093627.21245-1-narmstrong@baylibre.com>
 References: <20190919093627.21245-1-narmstrong@baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190919_023632_773377_EB804391 
-X-CRM114-Status: GOOD (  10.05  )
+X-CRM114-CacheID: sfid-20190919_023634_268556_A02DC7EF 
+X-CRM114-Status: UNSURE (   9.00  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:443 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:341 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -101,39 +103,98 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-CLK_SET_RATE_NO_REPARENT is wrongly set on the g12a cpu premux0 clocks
-flags, and CLK_SET_RATE_PARENT is required for the g12a cpu premux0 clock
-and the g12b cpub premux0 clock, otherwise CCF always selects the SYS_PLL
-clock to feed the cpu cluster.
+When setting the 100MHz, 500MHz, 666MHz and 1GHz rate for CPU clocks,
+CCF will use the SYS_PLL to handle these frequencies, but:
+- using FIXED_PLL derived FCLK_DIV2/DIV3 clocks is more precise
+- the Amlogic G12A/G12B/SM1 Suspend handling in firmware doesn't
+  handle entering suspend using SYS_PLL for these frequencies
+
+Adding CLK_MUX_ROUND_CLOSEST on all the muxes of the non-SYS_PLL
+cpu clock tree helps CCF always selecting the FCLK_DIV2/DIV3 as source
+for these frequencies.
 
 Fixes: ffae8475b90c ("clk: meson: g12a: add notifiers to handle cpu clock change")
 Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
 ---
- drivers/clk/meson/g12a.c | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
+ drivers/clk/meson/g12a.c | 9 +++++++++
+ 1 file changed, 9 insertions(+)
 
 diff --git a/drivers/clk/meson/g12a.c b/drivers/clk/meson/g12a.c
-index ea4c791f106d..33c7e04b4a82 100644
+index 33c7e04b4a82..b3af61cc6fb9 100644
 --- a/drivers/clk/meson/g12a.c
 +++ b/drivers/clk/meson/g12a.c
-@@ -353,8 +353,7 @@ static struct clk_regmap g12a_cpu_clk_premux0 = {
- 			{ .hw = &g12a_fclk_div3.hw },
- 		},
- 		.num_parents = 3,
--		/* This sub-tree is used a parking clock */
--		.flags = CLK_SET_RATE_NO_REPARENT,
-+		.flags = CLK_SET_RATE_PARENT,
+@@ -343,6 +343,7 @@ static struct clk_regmap g12a_cpu_clk_premux0 = {
+ 		.offset = HHI_SYS_CPU_CLK_CNTL0,
+ 		.mask = 0x3,
+ 		.shift = 0,
++		.flags = CLK_MUX_ROUND_CLOSEST,
  	},
- };
- 
-@@ -533,6 +532,7 @@ static struct clk_regmap g12b_cpub_clk_premux0 = {
- 			{ .hw = &g12a_fclk_div3.hw },
- 		},
- 		.num_parents = 3,
-+		.flags = CLK_SET_RATE_PARENT,
+ 	.hw.init = &(struct clk_init_data){
+ 		.name = "cpu_clk_dyn0_sel",
+@@ -409,6 +410,7 @@ static struct clk_regmap g12a_cpu_clk_postmux0 = {
+ 		.offset = HHI_SYS_CPU_CLK_CNTL0,
+ 		.mask = 0x1,
+ 		.shift = 2,
++		.flags = CLK_MUX_ROUND_CLOSEST,
  	},
- };
- 
+ 	.hw.init = &(struct clk_init_data){
+ 		.name = "cpu_clk_dyn0",
+@@ -465,6 +467,7 @@ static struct clk_regmap g12a_cpu_clk_dyn = {
+ 		.offset = HHI_SYS_CPU_CLK_CNTL0,
+ 		.mask = 0x1,
+ 		.shift = 10,
++		.flags = CLK_MUX_ROUND_CLOSEST,
+ 	},
+ 	.hw.init = &(struct clk_init_data){
+ 		.name = "cpu_clk_dyn",
+@@ -484,6 +487,7 @@ static struct clk_regmap g12a_cpu_clk = {
+ 		.offset = HHI_SYS_CPU_CLK_CNTL0,
+ 		.mask = 0x1,
+ 		.shift = 11,
++		.flags = CLK_MUX_ROUND_CLOSEST,
+ 	},
+ 	.hw.init = &(struct clk_init_data){
+ 		.name = "cpu_clk",
+@@ -503,6 +507,7 @@ static struct clk_regmap g12b_cpu_clk = {
+ 		.offset = HHI_SYS_CPU_CLK_CNTL0,
+ 		.mask = 0x1,
+ 		.shift = 11,
++		.flags = CLK_MUX_ROUND_CLOSEST,
+ 	},
+ 	.hw.init = &(struct clk_init_data){
+ 		.name = "cpu_clk",
+@@ -522,6 +527,7 @@ static struct clk_regmap g12b_cpub_clk_premux0 = {
+ 		.offset = HHI_SYS_CPUB_CLK_CNTL,
+ 		.mask = 0x3,
+ 		.shift = 0,
++		.flags = CLK_MUX_ROUND_CLOSEST,
+ 	},
+ 	.hw.init = &(struct clk_init_data){
+ 		.name = "cpub_clk_dyn0_sel",
+@@ -567,6 +573,7 @@ static struct clk_regmap g12b_cpub_clk_postmux0 = {
+ 		.offset = HHI_SYS_CPUB_CLK_CNTL,
+ 		.mask = 0x1,
+ 		.shift = 2,
++		.flags = CLK_MUX_ROUND_CLOSEST,
+ 	},
+ 	.hw.init = &(struct clk_init_data){
+ 		.name = "cpub_clk_dyn0",
+@@ -644,6 +651,7 @@ static struct clk_regmap g12b_cpub_clk_dyn = {
+ 		.offset = HHI_SYS_CPUB_CLK_CNTL,
+ 		.mask = 0x1,
+ 		.shift = 10,
++		.flags = CLK_MUX_ROUND_CLOSEST,
+ 	},
+ 	.hw.init = &(struct clk_init_data){
+ 		.name = "cpub_clk_dyn",
+@@ -663,6 +671,7 @@ static struct clk_regmap g12b_cpub_clk = {
+ 		.offset = HHI_SYS_CPUB_CLK_CNTL,
+ 		.mask = 0x1,
+ 		.shift = 11,
++		.flags = CLK_MUX_ROUND_CLOSEST,
+ 	},
+ 	.hw.init = &(struct clk_init_data){
+ 		.name = "cpub_clk",
 -- 
 2.22.0
 
