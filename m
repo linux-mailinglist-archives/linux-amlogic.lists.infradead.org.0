@@ -2,71 +2,75 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 91F3BBD25F
-	for <lists+linux-amlogic@lfdr.de>; Tue, 24 Sep 2019 21:07:43 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id CABF4BD26A
+	for <lists+linux-amlogic@lfdr.de>; Tue, 24 Sep 2019 21:10:34 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:References
 	:In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=hZlwQGW8pRiEgBWiipJY9XuDFPsJ+e1V/oH4Fo5j/hU=; b=VlJnMPk1dVc1DB
-	X1MKTivKLuIRpMsf5a0P37lNL3G8GYbuOS5mhzp1mxlK33c27n28TSrSjtcOhzPtOz7ei297fXaHA
-	W4ZSE/QrpCc2AQ9o+hzaLCvB/sCMxqR8mKX9HJ/QXS8Od4aG75LUWobPl7ZgYLXomr+wNGN35x+Ws
-	rAbKUrM/rhj9/4PKpFXZBiWDK3fVPedVnA1nNIWzk0zX4rwbvaOxnShItdkeukNaUH3HbEy8Gpk7w
-	St71dBNSPfJ++56yTaHAGEClDj82vI5HWPZL6OaIB15ytfQ7CCLGbreqoLGq7CycM7n656TBeBcsz
-	eS9WFC/q6jZ1GfRLkxGQ==;
+	List-Owner; bh=hIZ7qHAmPj4RQIyaOseAKv4y0/uzZ5PnKvw3LALJKPw=; b=clofZK0uaCuZ9N
+	SzzjNAAuVQUYm2Jb9VOnXjTgXldr93dzvb0yS5gmOAadzHHYqNITNlJUeCrpaJdCVnvDQu4jm++TU
+	3dI51GjcI/HO5blHpM2n2PNXNNWu+DoN3S9EsscOHZOVpa99DPLOlnALT0Zdj0pvsclsErhz0Nbo4
+	u9Vp/ValPN2Gry5ruonKf3DvveeiR6stFBjzhZdcJMhvjwew/j5L/pcw27+Dl3Z/nHIzXpVZ7YXWl
+	pA8y+mD4fD74v3MQc7osNRFgpGrVwAPyJ/ZiWmEgzFyZDJGg+GKHizLf3bLYYn72JT1OpqPHqjN6L
+	6U4UYXT/fdOs0bJ3hP8g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iCq9x-0003Et-SE; Tue, 24 Sep 2019 19:07:37 +0000
-Received: from mail-pf1-x443.google.com ([2607:f8b0:4864:20::443])
+	id 1iCqCi-0005K1-NY; Tue, 24 Sep 2019 19:10:28 +0000
+Received: from mail-pf1-x441.google.com ([2607:f8b0:4864:20::441])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iCq9Z-00033j-C6
- for linux-amlogic@lists.infradead.org; Tue, 24 Sep 2019 19:07:14 +0000
-Received: by mail-pf1-x443.google.com with SMTP id y5so1917950pfo.4
- for <linux-amlogic@lists.infradead.org>; Tue, 24 Sep 2019 12:07:13 -0700 (PDT)
+ id 1iCqCN-0004yu-Cs
+ for linux-amlogic@lists.infradead.org; Tue, 24 Sep 2019 19:10:08 +0000
+Received: by mail-pf1-x441.google.com with SMTP id y5so1922289pfo.4
+ for <linux-amlogic@lists.infradead.org>; Tue, 24 Sep 2019 12:10:07 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=from:to:cc:subject:in-reply-to:references:date:message-id
- :mime-version; bh=yI20ESmRvXoTToo4YVcfDDcoV5v1nx5lGqojRvE9ORU=;
- b=K5arkwd0xs/VZSeWRsCAty8Qdy+IfBSQVFuXEZtmFnYrzoETMTK82c6fpPi5CwVNCC
- zKBzT0L0TTIpKrFGeMOZdnnxEGbaOhQl447I+dxIgiQc8TcKpMwNAEBCdloo9xFGtlqX
- d2qJdIb1sbkbFC37RWo1+KUfENx+7I1FtNHT4oKWRMD2Z2eDIwJafed6Jr1qEAxuzl+M
- XPgfBcttmwwtb/nCd8oo2lg0lXppANM9jj/GoBHDjN0Hjkh8z8XVkYz5vOE8p4VCy4F4
- El4+gcVAIq2WgrF7m/hBYywl6Y1G6jQ1UJqqgaL7CW5Qc3jxCkcprFQHzooJmMKcoE1M
- XOJA==
+ :mime-version; bh=ztDGYJ4coyv+LAVfttrEQdgcMXqg4Kriy9EN3YGCljM=;
+ b=hc1sn9qIKaebOSz9we8ltrjhoIMvLleyAzfBIFg8oVbgZeB7q2cJhQXmas+QaBgGwa
+ YJRVIUXVwHz9kWqcapUr6Ipz/YkKWU8bQ56QBM4F+kT616StfYzq1mHTTQyPKQI9C/CH
+ 8uIOTgdLeZ7flUAX/Rz6SL27oqnDGmx/pe4hErHmDDAFA1YrDPz2YjqgbGCLikM3f99P
+ kjJjgMxmLwyYf32EXJ843imgVokwY/HHzSNj1ZtQfCz97/Pv8lgHx06XEEJm7xokK9zp
+ LhIpX18Y/qNxzlhJckURdplDuevo97mSKW/ciISFXQeSuzmnXMs42TyHjyfxYIQU/dKy
+ Z6dQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:in-reply-to:references:date
  :message-id:mime-version;
- bh=yI20ESmRvXoTToo4YVcfDDcoV5v1nx5lGqojRvE9ORU=;
- b=REjFznadJlH3QR9LykacO6U5GERRjH2AvH+gXqdPTpeMugHeCKWZvZ3bXF10sXev/I
- CwnYVI66Ngyc87uQeOJVNjIDyW9I2DCCqeK+i7Lj75VPorvzUu8BXF5ul2B5lkNk2NuK
- 1EJvEKS6bOOb4qZDx4Z1oLJ9EkIUBf39HgaqwfzlpTfNCMcEIzUzR2PchOnIvk2lKxXk
- fcD2Vcxb/yiz4v+NX2mZaGJFEIIZLjatiIJO0Ic0J+ImvTs6yPOE9sqkVI4rYOo6m1G2
- O/k3X15nwjdu2vNvWCb6BHVMhkB31TFndU8xqGVPyigmySqwRb4T3L8wg5mKuKZ+fmNq
- rQmg==
-X-Gm-Message-State: APjAAAVFNw6/HorHix7f4KslfsxiW4M/dsXv/6r749lN+VnqcMYZCZ5e
- hqwP7PGQZi2sj9M05ORZVdfexg==
-X-Google-Smtp-Source: APXvYqyDTGMQ/4hG0V6O79fuxEj2FmTcML6QD0E5bVYhERVC6KkggIhTEB4+w8bmJrnSN+ivxyXPFA==
-X-Received: by 2002:a63:68c4:: with SMTP id d187mr4531647pgc.196.1569352032584; 
- Tue, 24 Sep 2019 12:07:12 -0700 (PDT)
+ bh=ztDGYJ4coyv+LAVfttrEQdgcMXqg4Kriy9EN3YGCljM=;
+ b=OMfI6LWnjRpVb37JtxtBZ7Vg75w04Hakx4fkJrmnV5FA7r1W2c2Cu70YYHfGidGjtn
+ 4daAqDt5OnCoSdA7fW4U3aEVx676HQO4F1msgQi1QRNClwb/TRsKX/ZoZEYqkTg81D1/
+ VTKNMd93Vw29dWZIsb+PhMKuQTIPmgDFOrFShvp1utBJpUOroJLHW7WwC9eAvAKpUTKz
+ nvf93uuTIqxjJM25PnWDl+/mZUotD/+ZQa2FJd275IwzFb1G7fCDABGM4hKP2V2H5LUc
+ T1bBZcfBK9GHE6pfWDtmVQJGTsd0vbsA5p4GNgy9PaUriuZfRmZumgYdcV07JqC2DOUJ
+ 3xaQ==
+X-Gm-Message-State: APjAAAU2CYY3X22JsNhbCkfSkdE0mQRP5vgOgyA/cKRY8qQeynSi4X/i
+ zjB4Z/kI7TcK67xnuNwEDccU5g==
+X-Google-Smtp-Source: APXvYqya2nPu+2RWqeknPa0vJCecXJC5BrkFYN+q1VPzP0Et4zZGP3Bc2YytDsgp84YFrMCkeCvzpw==
+X-Received: by 2002:a62:53c7:: with SMTP id h190mr5059698pfb.208.1569352206681; 
+ Tue, 24 Sep 2019 12:10:06 -0700 (PDT)
 Received: from localhost (c-71-197-186-152.hsd1.wa.comcast.net.
  [71.197.186.152])
- by smtp.gmail.com with ESMTPSA id u10sm2835484pfh.61.2019.09.24.12.07.11
+ by smtp.gmail.com with ESMTPSA id r28sm3261936pfg.62.2019.09.24.12.10.05
  (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
- Tue, 24 Sep 2019 12:07:11 -0700 (PDT)
+ Tue, 24 Sep 2019 12:10:05 -0700 (PDT)
 From: Kevin Hilman <khilman@baylibre.com>
-To: Jianxin Pan <jianxin.pan@amlogic.com>, linux-amlogic@lists.infradead.org
-Subject: Re: [PATCH v4 0/4] arm64: Add basic support for Amlogic A1 SoC Family
-In-Reply-To: <1568276370-54181-1-git-send-email-jianxin.pan@amlogic.com>
-References: <1568276370-54181-1-git-send-email-jianxin.pan@amlogic.com>
-Date: Tue, 24 Sep 2019 12:07:11 -0700
-Message-ID: <7hzhit5x9c.fsf@baylibre.com>
+To: Christian Hewitt <christianshewitt@gmail.com>,
+ Rob Herring <robh+dt@kernel.org>, Mark Rutland <mark.rutland@arm.com>,
+ devicetree@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
+ linux-amlogic@lists.infradead.org, linux-kernel@vger.kernel.org
+Subject: Re: [PATCH] arm64: dts: meson: Add capacity-dmips-mhz attributes to
+ G12B
+In-Reply-To: <1568429380-3231-1-git-send-email-christianshewitt@gmail.com>
+References: <1568429380-3231-1-git-send-email-christianshewitt@gmail.com>
+Date: Tue, 24 Sep 2019 12:10:05 -0700
+Message-ID: <7htv915x4i.fsf@baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190924_120713_463525_978EF27E 
-X-CRM114-Status: UNSURE (   8.04  )
+X-CRM114-CacheID: sfid-20190924_121007_455695_CDA9CBE0 
+X-CRM114-Status: UNSURE (   8.93  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -74,7 +78,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:443 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:441 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -92,36 +96,41 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, Hanjie Lin <hanjie.lin@amlogic.com>,
- Victor Wan <victor.wan@amlogic.com>, Jianxin Pan <jianxin.pan@amlogic.com>,
- Neil Armstrong <narmstrong@baylibre.com>,
- Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
- linux-kernel@vger.kernel.org, Qiufang Dai <qiufang.dai@amlogic.com>,
- Rob Herring <robh+dt@kernel.org>, Jian
- Hu <jian.hu@amlogic.com>, Xingyu Chen <xingyu.chen@amlogic.com>,
- Carlo Caione <carlo@caione.org>, Tao Zeng <tao.zeng@amlogic.com>,
- linux-arm-kernel@lists.infradead.org, Jerome Brunet <jbrunet@baylibre.com>
+Cc: Frank Hartung <supervisedthinking@gmail.com>,
+ Christian Hewitt <christianshewitt@gmail.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Jianxin Pan <jianxin.pan@amlogic.com> writes:
+Christian Hewitt <christianshewitt@gmail.com> writes:
 
-> A1 is an application processor designed for smart audio and IoT applications,
-> with Dual core ARM Cortex-A35 CPU. Unlike the previous GXL and G12 series,
-> there is no Cortex-M3 AO CPU in it.
+> From: Frank Hartung <supervisedthinking@gmail.com>
 >
-> This serial add basic support for the Amlogic A1 based Amlogic AD401 board:
-> which describe components as follows: Reserve Memory, CPU, GIC, IRQ,
-> Timer, UART. It's capable of booting up into the serial console.
+> From: Frank Hartung <supervisedthinking@gmail.com>
+
+nit: duplicate From line.  Removed when applying.
+
+> Meson G12B SoCs (S922X and A311D) are a big-little design where not all CPUs
+> are equal; the A53s cores are weaker than the A72s.
 >
-> The pclk for uart_AO_B need to be fixed once A1 clock driver is merged.
-> In this version, it rely on bootloader to enable the pclk gate
+> Include capacity-dmips-mhz properties to tell the OS there is a difference
+> in processing capacity. The dmips values are based on similar submissions for
+> other A53/A72 SoCs: HiSilicon 3660 [1] and Rockchip RK3399 [2].
+>
+> This change is particularly beneficial for use-cases like retro gaming where
+> emulators often run on a single core. The OS now chooses an A72 core instead
+> of an A53 core.
+>
+> [1] https://lore.kernel.org/patchwork/patch/862742/
+> [2] https://patchwork.kernel.org/patch/10836577/
+>
+> Signed-off-by: Frank Hartung <supervisedthinking@gmail.com>
+> Signed-off-by: Christian Hewitt <christianshewitt@gmail.com>
 
 Queued for v5.5,
 
-Thanks for the new SoC support,
+Thanks!
 
 Kevin
 
