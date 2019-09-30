@@ -2,85 +2,80 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 69FFEC2452
-	for <lists+linux-amlogic@lfdr.de>; Mon, 30 Sep 2019 17:32:15 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 97271C2460
+	for <lists+linux-amlogic@lfdr.de>; Mon, 30 Sep 2019 17:34:34 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:References
 	:In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=kEBC/iwdHMRdk8kNZzC/Fb3/FMVJ3/k6tSvi2erw030=; b=FoVZoKyLb6P+OX
-	FUamXtEzia6go1SAAFb2VO+h1WpNjZV5aw/iMDv4kQgb/KTPI2qsuOAO0lSXgH5bUKf/7EtKzoUgy
-	mQr14WiXSJlnQkHjYR+RMeL5ubkyccl6yLY7rNVOO4KuIjkCb5zgh4y4mungQarbS2obu4JHplIMy
-	kQguluEZ2z1KaKs2PUcdm+3arm8lfgcxdmb7nUKcU4Y8NnYxPN0X8S6dx2rJh5UXR3W+1lBFnuloy
-	6IBGBF6NE+KvVsTwSjGg2yb/Z+Ak953Lmq3vdg1IwoihrESyofGdSAeMuTrYUIjPPl3zLv4yGzKhW
-	3MNLu+JqLEv058xbG8cg==;
+	List-Owner; bh=6+gv/tq3ftlkvAiOxQCXUdU1nZynSHerBXpNwGFDfSM=; b=CGyhAzLnoEgZyp
+	49YDAhgCa7NC/ujwC3KQgXCV+kqSerUh5GjxsaJ7QbMwGVe2E9yZXCM2GV4PEFuTEBKgcdU4MslvS
+	kZgLgIZEtUfa59pN+LcTeXAjK421sBClqG+/sJx+ohNvorvwPa6R5nkukqbsoWJsIT77hvX2MSK0x
+	o0dV/lVHET8OLq1R51QZkfLJh5+OWtp2xadpfBAmE4PY+go19toKQa64vgsKF6nwG4XetBgsDgkmL
+	QfiSbmxTiyPT4VQJmH+rxBLFq5cWpwyCS5F/+8rbiBY+DpWh4C9MeckFc9eqlYW5iiNHZGVULoakt
+	K/MUiToW1z3Sx3cJFYrA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iExeh-0006gn-I1; Mon, 30 Sep 2019 15:32:07 +0000
-Received: from mail-pg1-x542.google.com ([2607:f8b0:4864:20::542])
+	id 1iExgx-00074z-Du; Mon, 30 Sep 2019 15:34:27 +0000
+Received: from mail-pf1-x444.google.com ([2607:f8b0:4864:20::444])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iExee-0006fw-3b
- for linux-amlogic@lists.infradead.org; Mon, 30 Sep 2019 15:32:05 +0000
-Received: by mail-pg1-x542.google.com with SMTP id s1so7588724pgv.8
- for <linux-amlogic@lists.infradead.org>; Mon, 30 Sep 2019 08:32:03 -0700 (PDT)
+ id 1iExgt-00074Z-KP
+ for linux-amlogic@lists.infradead.org; Mon, 30 Sep 2019 15:34:25 +0000
+Received: by mail-pf1-x444.google.com with SMTP id q7so5818854pfh.8
+ for <linux-amlogic@lists.infradead.org>; Mon, 30 Sep 2019 08:34:23 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=from:to:cc:subject:in-reply-to:references:date:message-id
- :mime-version; bh=b9OIKjSpfkGrTr/Y+X6VF1Witd9jN67vbQVGdxPPoBs=;
- b=DspFEq75s07cCzNf7CqP6PTbMlsS4I1/Y5EMMidfiBKMKPEOVkzHyfB86z4hXh5CYv
- Sb13RT2+eu/w7qNYHeavj7j9zZjYB4aDH3fEkvuCes729VTlJBHJ1UjaI8ztmdgmBRm0
- Logvd/uy6w9zJVAxYWfvbsQjCx/vF255+NMRMeA64Lsl98tV2UihbhqADqSgR+A+Wlcu
- UlMetQe7vajfPbtYGmgC1Hf8KI1Lflf6YkdwaEoUoj9yi9278RdZoZOXz55gMP3h+h2i
- 44VWq9QDXxgm6JQhORBO8WzpXqktlFGS7/AfmaeTTTtbPS+8pVDytfqNGGiZ6sYMaHNg
- 3CHA==
+ :mime-version; bh=5F08F4HtlDPyvY4r3+PCuN7SNxQH64MKcXi/kd7HCrE=;
+ b=ZOM/o25sxvjMLKRKC3Zd9rAx0hvP1hljMPVRkriGdckO5c1A91PHJh2aCVswAY0hfm
+ Z9d2+3JPNT3jJ++Tc/HA3L7SyJH4D0r0sfgBjqWhP5zpt+8otwCtBg5sX4vlJBmS/SuZ
+ 5YNNFJzir4g9iS35zxDhQYo8JdrSR8dNmcjHW2Idowx7dqtnwQ5Sz1PEy251eYdg+d99
+ 6lthotV8WxDf8zkxx1iEUo9ZoRY36KTswzYimcZUG5CAJ5wqrq03USkkzxteBV0gWX4i
+ WInmhy7mc4CXiohXjvMKqi7zldss7UX2rYu/7RCCQXiIRF+Uc3tF77p2ySjypJKTIMGT
+ 9HuQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:in-reply-to:references:date
  :message-id:mime-version;
- bh=b9OIKjSpfkGrTr/Y+X6VF1Witd9jN67vbQVGdxPPoBs=;
- b=EqgawNtm0WKFz0RXLzOZK+c+KiaJJIgrobfRxTystGNKtqN7XWU4006t6Q7ecvIO3X
- Aim/By6uUDOSWacTl2Xp3RkrpvOfHiRoGE4BpPibePx2JQYXbrae2hrC+lUJDAnkrBh7
- GtIVE6SlMh9W3Taw8zaBAeUgFdR0FvtXdbZ8u4ZkzIS6Wyd7Llhfp1eLBQBW7Cvqi8C4
- Z7RdHuJ6c+Uhiz75kZGzFySyGcwnSgE+7fusXzXdWDaKofnUe5bRxu6EJl628u7CkGcx
- jHI9gknFshBjyDS0fQ84gFo08DGB7PSpxCRifYa1+CM6myWXn0Jhlaaj2aycxwYdMcnn
- lRRw==
-X-Gm-Message-State: APjAAAVR2Plx0ik9D46JcqaLd8qvLNqi7TQnJmbXIQUbSFighqVRUyuB
- FTlLQ9V7FWd2WT51AGNmMgtLl9RGsOk=
-X-Google-Smtp-Source: APXvYqydQjTboQcTPVReW9T7Hi/m3KQq6ErGddNRlsfOxd4kT5ADyRwF+TwSTZBJlbg8hvOPivEyBA==
-X-Received: by 2002:a63:cb07:: with SMTP id p7mr24892312pgg.232.1569857522901; 
- Mon, 30 Sep 2019 08:32:02 -0700 (PDT)
+ bh=5F08F4HtlDPyvY4r3+PCuN7SNxQH64MKcXi/kd7HCrE=;
+ b=PnejuqGiBxiabtah8dYGCcs0h7wwIgneXSax6iXjshhBszzXBOqC/E3Q6pTCn6Nkxw
+ ZNe9k4wF7Krn//Rs1kYECAKSAUPdwACYDJK8T6L6A5I5CG/PvRIk7ySVdWjz7zh0sG56
+ vJzWPLPnm0ooaw3IoqhGoQWf1CZEEVvD0CVnPXepQELkImFmXbNe3AuvGtN4w8zT/TNW
+ juQ2pjVxqdOiDjNcRb6r1C0Cl1c4YgV7+y2Jeywtl3k+tnTwEh0EikcdtdbGSADhCeJZ
+ 6IqLfbESvou3B44IfooNYrAS8zO58Fg1xqXPSVEm6FEp1plcvH3QlayNV6oOi+5SnLRC
+ GgtA==
+X-Gm-Message-State: APjAAAXtHXbZ7P995llRevf/VDQBKFMQGW2gPVajH0IZ962cJMLFLtvy
+ S/60dTj78JKRod/sa1jCo2nh2cc30FA=
+X-Google-Smtp-Source: APXvYqyOvb4d+aPS0cQERmHhssgzbMyfskBVAlx/Xeu3fPMFfwDEFTsiAILnSnwHN3omJUS1nvUcwA==
+X-Received: by 2002:a63:5652:: with SMTP id g18mr5896531pgm.283.1569857662965; 
+ Mon, 30 Sep 2019 08:34:22 -0700 (PDT)
 Received: from localhost (c-71-197-186-152.hsd1.wa.comcast.net.
  [71.197.186.152])
- by smtp.gmail.com with ESMTPSA id y7sm11869079pfn.142.2019.09.30.08.32.02
+ by smtp.gmail.com with ESMTPSA id d4sm12397930pjs.9.2019.09.30.08.34.22
  (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
- Mon, 30 Sep 2019 08:32:02 -0700 (PDT)
+ Mon, 30 Sep 2019 08:34:22 -0700 (PDT)
 From: Kevin Hilman <khilman@baylibre.com>
-To: Jerome Brunet <jbrunet@baylibre.com>, linux-amlogic@lists.infradead.org,
- Neil Armstrong <narmstrong@baylibre.com>
-Subject: Re: [PATCH v2 2/2] soc: amlogic: ee-pwrc: ensure driver state maches
- HW state
-In-Reply-To: <1jd0fi19dn.fsf@starbuckisacylon.baylibre.com>
-References: <20190925213528.21515-1-khilman@kernel.org>
- <20190925213528.21515-3-khilman@kernel.org>
- <8936e777-8996-5c7b-ea9d-8e17c8d6c4b1@baylibre.com>
- <7hwodulvu6.fsf@baylibre.com>
- <21eafa69-fe26-2df1-d187-cddfe5b37951@baylibre.com>
- <1jd0fi19dn.fsf@starbuckisacylon.baylibre.com>
-Date: Mon, 30 Sep 2019 08:32:01 -0700
-Message-ID: <7hv9t9g5qm.fsf@baylibre.com>
+To: Neil Armstrong <narmstrong@baylibre.com>, Kevin Hilman <khilman@kernel.org>,
+ dri-devel@lists.freedesktop.org
+Subject: Re: [PATCH] drm/meson: enable runtime PM
+In-Reply-To: <c0db12a0-66c3-7636-a7bd-b071d0820426@baylibre.com>
+References: <20190925193154.20732-1-khilman@kernel.org>
+ <c0db12a0-66c3-7636-a7bd-b071d0820426@baylibre.com>
+Date: Mon, 30 Sep 2019 08:34:21 -0700
+Message-ID: <7ho8z1g5mq.fsf@baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190930_083204_150723_9979990E 
-X-CRM114-Status: GOOD (  11.45  )
+X-CRM114-CacheID: sfid-20190930_083423_673292_87CFA49C 
+X-CRM114-Status: GOOD (  10.85  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:542 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:444 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -98,48 +93,69 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: linux-arm-kernel@lists.infradead.org, linux-pm@vger.kernel.org
+Cc: linux-amlogic@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Jerome Brunet <jbrunet@baylibre.com> writes:
+Neil Armstrong <narmstrong@baylibre.com> writes:
 
-> On Fri 27 Sep 2019 at 08:37, Neil Armstrong <narmstrong@baylibre.com> wrote:
+> Hi Kevin,
 >
->> On 26/09/2019 21:08, Kevin Hilman wrote:
->>> Neil Armstrong <narmstrong@baylibre.com> writes:
->>> 
->>>> On 25/09/2019 23:35, Kevin Hilman wrote:
->>>>> From: Kevin Hilman <khilman@baylibre.com>
->>>>>
->>>>> During init, ensure that the driver on/off state as well as clock and
->>>>> reset state matches the hardware state.  Do this by always calling the
->>>>> drivers 'on' function, and then callling the 'off' function if the
->>>>> HW state was initially detected as off.
->>> 
->>> [...]
->>> 
->>>> I don't see what you are trying to solve except simplifying the code.
->>> 
->>> Simplifying the code is a worthwhile goal on its own, but that's not the
->>> only thing I'm tring to accomplish.
->>
->> I still find it ugly to power_on a domain to power it off right afterwards.
->> The issue is with the CCF enable handling which is not in sync with the
->> HW, if you boot with an already enabled clock, it won't be marked enabled
->> in CCF, and it's clearly bad when you want to have a fine-tuned gate state
->> handling.
->>
+> On 25/09/2019 21:31, Kevin Hilman wrote:
+>> From: Kevin Hilman <khilman@baylibre.com>
+>> 
+>> On some SoCs, the VPU is in a power-domain and needs runtime PM
+>> enabled and used in order to keep the power domain on.
+>> 
+>> Signed-off-by: Kevin Hilman <khilman@baylibre.com>
+>> ---
+>>  drivers/gpu/drm/meson/meson_drv.c | 4 ++++
+>>  1 file changed, 4 insertions(+)
+>> 
+>> diff --git a/drivers/gpu/drm/meson/meson_drv.c b/drivers/gpu/drm/meson/meson_drv.c
+>> index 2310c96fff46..256b6a0e9c6b 100644
+>> --- a/drivers/gpu/drm/meson/meson_drv.c
+>> +++ b/drivers/gpu/drm/meson/meson_drv.c
+>> @@ -14,6 +14,7 @@
+>>  #include <linux/platform_device.h>
+>>  #include <linux/component.h>
+>>  #include <linux/of_graph.h>
+>> +#include <linux/pm_runtime.h>
+>>  
+>>  #include <drm/drmP.h>
+>>  #include <drm/drm_atomic.h>
+>> @@ -274,6 +275,7 @@ static int meson_drv_bind_master(struct device *dev, bool has_components)
+>>  
+>>  	/* Hardware Initialization */
+>>  
+>> +	pm_runtime_get_sync(dev);
+>>  	meson_vpu_init(priv);
+>>  	meson_venc_init(priv);
+>>  	meson_vpp_init(priv);
+>> @@ -416,6 +418,7 @@ static int meson_drv_probe(struct platform_device *pdev)
+>>  	struct device_node *ep, *remote;
+>>  	int count = 0;
+>>  
+>> +	pm_runtime_enable(&pdev->dev);
+>>  	for_each_endpoint_of_node(np, ep) {
+>>  		remote = of_graph_get_remote_port_parent(ep);
+>>  		if (!remote || !of_device_is_available(remote)) {
+>> @@ -440,6 +443,7 @@ static int meson_drv_probe(struct platform_device *pdev)
+>>  	}
+>>  
+>>  	/* If no output endpoints were available, simply bail out */
+>> +	pm_runtime_disable(&pdev->dev);
+>>  	return 0;
+>>  };
+>>  
+>> 
 >
-> CCF should disable unused clock so, in theory, you should not have to
-> call enable() then disable() to get things in sync.
+> I'll rather implement true runtime PM instead,
 
-But CCF won't disabled unused clocks until late(ish) in the boot
-process, which is also when the unused PM domains will be disabled, so I
-think there's still a potential for race between the late "disable
-unused" features of clocks and pm-domains.
+While this is a minimum implementation, can you explain what you mean by
+"true" runtime PM?
 
 Kevin
 
