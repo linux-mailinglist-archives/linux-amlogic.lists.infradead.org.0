@@ -2,81 +2,82 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 326F2C4A8A
-	for <lists+linux-amlogic@lfdr.de>; Wed,  2 Oct 2019 11:22:56 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 0BB2FC4A90
+	for <lists+linux-amlogic@lfdr.de>; Wed,  2 Oct 2019 11:23:26 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=kiXx1KiBE74MQG9rv2bcP21WiWZFdGS3O8th6b0szxY=; b=tSnZEP4yz6dfye
-	qaidQLMT0g9HqYeTJ7appySn1L5jZd4LOvpR2UgZQkz9PIn6wyI/b/DbKHnWYO/zysrAuzGf+jXPu
-	6ak8lCfYMdzPOY4x4owRTv5BkDGwGZqAjLFrT95mksDsbugMEno4+eecYsFmxiXiBdumo7s4VZw/b
-	XgKHri6uqMhT+FbyMjgwO11bzCVYpdFiBUbWXQmhgAj820bOFZVvUcvwy35QK/IXJaVnnWiMhoaaD
-	xhhezniGTh1ieoZ6PdunTdYFXMOI3QN5y19sdrBbgmkAn0HgI7vf6WXmN4qNg6IOOtCSPloveVApJ
-	DS0YWVTh1FT/Gu1G90QQ==;
+	List-Owner; bh=xkMlFTpTC2/K6FlxUhFnuVa55K865slTcgooFittBe8=; b=QMTgesn2jBEALu
+	tMgsMGqjjIOObN7STdRdj2T7zy0rbO/T5d65sJqlqpyzzGZYRts1JZUfkbJk7FD23v6rMJ4Fl1zkD
+	c/IHGpf/mgbwXB1uqUOokxKI6CTWjjvaskmy3wlJA8/X0nTjlbsHFoy4+rTgoBoT5gbUcwzfyWi1f
+	1gmL3mq0MQOr4rKr9v/Fl/FQvYGqEfrYLU5cywZwY3XWFlMCB+3Y5l3hGjEEtbpGXQnpkGKJO8viL
+	rm+/gftYLdH0yFJSAx2ItytqTpgU5CwhUYmLzUDIowN6KMOOaDF2HjBplDlDl/lCMjCQcpiPY78WA
+	JmPo19XrECQ8zid8v92A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iFaqK-0001VL-Tk; Wed, 02 Oct 2019 09:22:44 +0000
-Received: from mail-wr1-x441.google.com ([2a00:1450:4864:20::441])
+	id 1iFaqr-0001fB-2i; Wed, 02 Oct 2019 09:23:17 +0000
+Received: from mail-wm1-x341.google.com ([2a00:1450:4864:20::341])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iFajT-00087R-7O
- for linux-amlogic@lists.infradead.org; Wed, 02 Oct 2019 09:15:51 +0000
-Received: by mail-wr1-x441.google.com with SMTP id o18so18695677wrv.13
+ id 1iFajd-00087S-4h
+ for linux-amlogic@lists.infradead.org; Wed, 02 Oct 2019 09:16:06 +0000
+Received: by mail-wm1-x341.google.com with SMTP id 3so6134188wmi.3
  for <linux-amlogic@lists.infradead.org>; Wed, 02 Oct 2019 02:15:36 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=jr85PqBhcGLPuS9IfqPXvfyfH/vk/S6Kq+krrnohXK8=;
- b=b9E91j2tOGQa80OiDbPQZnp1ooHtiOfWBRpCp09EX6LbNb5gHKXXM3bJcvLmmGHzJm
- 2hjBzxfvYCJzv5du2SdsDj3BkDJpw3SSmBx0xxtkT0uSibO7MfeQv4tKi5ZFVf/arAS/
- lSRMBDgX+BlxnsxXU8Be+xJ17IraB4IWK+1hNcZrj8/2tbQ02PuGU1ahPeR4SceY0i+1
- BxpBTdZPUeK2XhKWn9hcfayYDkjyv0BpvTW2lT23CYLjNwnek3vVnrAcbCFKtNAzLkkb
- XhvtWXr+ZjdjZMhd/YYi2jf46ptvH8vW6EjqYzlDQ+PKMY8ndnNyvcftmj4/do/E0GA/
- Yh0A==
+ bh=FPzLmAFxVlvoWlrn/cPfzD8ybuBQrABYqNe+NltmaKc=;
+ b=TjVT0D6D0IDve5evcKRh6oxGsg70BRR503/nwR27ckewQi1eA7EoYNYe69MKOT/mrw
+ IwsSwedW0AarjTBKsAb5oEBFz6Wuj7bBy4CaR+nE1y5oYJEF1aFYT3TCv3aURhSHLVev
+ VbcjX+F0OBK8G78rKEhs59ebi0KtuuuszxbZcFfphI7Im+mEOzBs3nJbkzBbrlxsQLts
+ fBoaZluHMUnbkFpavdfrqISEOvILhKJDwiEW8A9536Afgrhj7uQoUmOolVhaqh0yo17z
+ LlXhY43TWJNBti5XJbAIX3Z0FYOWaRJh6zEPPYftj10rasuNDz7noeB1U6dzImMEq/vx
+ MjnA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=jr85PqBhcGLPuS9IfqPXvfyfH/vk/S6Kq+krrnohXK8=;
- b=COG5Ubb3bSrHqSh78X4gjMNHtAtaaKJEAzs0iWdfjBL8uuX21oHmCqGvZdNK/qHSE7
- CK5LnTQxcxVKAoNq0hMkaHSqdWPGBUA3hBJqsEo5lNRmCrPfWZCUlYPOjvSttA9GEaJf
- UsWSw4oKsvPD6YNAHZ0ZpRKQjaI34MDR3Nz1YJqMVmiJHpoxTakCw/NcCyOnPF4sM6yh
- YO6nAa/dtkVkFZ8hUx9/pSCQb5XkyIdGdRqf/aJGHfbV26aXc86+WMIi3vIVi0mz5zRG
- 3GQvVnH5fpnBC4ZigSaDdD218mqHvFuh86oAzaW+HWlpVPYD1xGMhv7Smx9Am7OMR3uc
- Acsg==
-X-Gm-Message-State: APjAAAVuyj2C2WGlnqkEeqOmhkGMjkb9TXJR6N/0D64pdn8asE1b4rKz
- 7iuVwoIPksNzHgosIlTJcA8gbw==
-X-Google-Smtp-Source: APXvYqwKRhrOpTNo/XjxTlReO7lIbiWJmOmqE5Fky5rIUFB1VKrTGBOJpqMWNd1dHNrGCWAWnmvVJQ==
-X-Received: by 2002:a05:6000:1046:: with SMTP id
- c6mr1996636wrx.189.1570007733410; 
- Wed, 02 Oct 2019 02:15:33 -0700 (PDT)
+ bh=FPzLmAFxVlvoWlrn/cPfzD8ybuBQrABYqNe+NltmaKc=;
+ b=J71n1IXx0/m/dmuw4S3ukoE1sJAe2hrytFln+Bi5gNVqnB8XudcfkTzlCg7gkDGH6e
+ fjVxbxNbZd7BPD5vkyhZDSKQuvbSoBzPO4fzDIJ0+r2ypN1Th6+pAa0JxQcx0wrOeQGS
+ sBeDrlMicMQroDsqm3MmXa3qrMjD1FnbR5SiS3bqArIcDRkIica7eE78v3AHIq+EGJ5c
+ wFxtfF+SKXuy6LEAEi185nWs5wmFeV7wytEvw/MygYB0CNjXZU8WFOcovdBmRFvaVh3h
+ GPKLh5q18WSw3Nh4MwD015E3r2sfniIfYeLFz9Z99TnUEVnZAexVzfmSkp0TsTA5YxEG
+ J+hQ==
+X-Gm-Message-State: APjAAAV8wC+NQ4IHQ8cSobJsF9QxNPfWvYIcMIHYGYC1qu3V7VEkyequ
+ yTfzqU2pR8k/toRIo59H4B+0LA==
+X-Google-Smtp-Source: APXvYqyAeNIzYfZDnXVDS34M/KFIdc9BCM3rsZxBblu5PD/ay+OI5yEHpjToOgd8l9an0xWnyWUp6Q==
+X-Received: by 2002:a7b:c92d:: with SMTP id h13mr2060315wml.169.1570007734515; 
+ Wed, 02 Oct 2019 02:15:34 -0700 (PDT)
 Received: from starbuck.baylibre.local
  (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
- by smtp.googlemail.com with ESMTPSA id r13sm32913737wrn.0.2019.10.02.02.15.32
+ by smtp.googlemail.com with ESMTPSA id r13sm32913737wrn.0.2019.10.02.02.15.33
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Wed, 02 Oct 2019 02:15:32 -0700 (PDT)
+ Wed, 02 Oct 2019 02:15:33 -0700 (PDT)
 From: Jerome Brunet <jbrunet@baylibre.com>
 To: Neil Armstrong <narmstrong@baylibre.com>
-Subject: [PATCH v3 1/7] dt-bindings: clk: axg-audio: add sm1 bindings
-Date: Wed,  2 Oct 2019 11:15:23 +0200
-Message-Id: <20191002091529.17112-2-jbrunet@baylibre.com>
+Subject: [PATCH v3 2/7] dt-bindings: clock: meson: add sm1 resets to the
+ axg-audio controller
+Date: Wed,  2 Oct 2019 11:15:24 +0200
+Message-Id: <20191002091529.17112-3-jbrunet@baylibre.com>
 X-Mailer: git-send-email 2.21.0
 In-Reply-To: <20191002091529.17112-1-jbrunet@baylibre.com>
 References: <20191002091529.17112-1-jbrunet@baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191002_021541_091432_7CE3AB93 
-X-CRM114-Status: GOOD (  10.23  )
+X-CRM114-CacheID: sfid-20191002_021551_681207_7E5D3DF9 
+X-CRM114-Status: UNSURE (   7.60  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:441 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:341 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -102,49 +103,38 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Add the compatible and clock ids of the sm1 audio clock controller
+Add the reset id of the sm1 audio clock controller
 
 Reviewed-by: Neil Armstrong <narmstrong@baylibre.com>
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
 ---
- .../bindings/clock/amlogic,axg-audio-clkc.txt          |  3 ++-
- include/dt-bindings/clock/axg-audio-clkc.h             | 10 ++++++++++
- 2 files changed, 12 insertions(+), 1 deletion(-)
+ .../reset/amlogic,meson-g12a-audio-reset.h        | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
 
-diff --git a/Documentation/devicetree/bindings/clock/amlogic,axg-audio-clkc.txt b/Documentation/devicetree/bindings/clock/amlogic,axg-audio-clkc.txt
-index b3957d10d241..3a8948c04bc9 100644
---- a/Documentation/devicetree/bindings/clock/amlogic,axg-audio-clkc.txt
-+++ b/Documentation/devicetree/bindings/clock/amlogic,axg-audio-clkc.txt
-@@ -7,7 +7,8 @@ devices.
- Required Properties:
+diff --git a/include/dt-bindings/reset/amlogic,meson-g12a-audio-reset.h b/include/dt-bindings/reset/amlogic,meson-g12a-audio-reset.h
+index 14b78dabed0e..f805129ca7af 100644
+--- a/include/dt-bindings/reset/amlogic,meson-g12a-audio-reset.h
++++ b/include/dt-bindings/reset/amlogic,meson-g12a-audio-reset.h
+@@ -35,4 +35,19 @@
+ #define AUD_RESET_TOHDMITX	24
+ #define AUD_RESET_CLKTREE	25
  
- - compatible	: should be "amlogic,axg-audio-clkc" for the A113X and A113D,
--		  "amlogic,g12a-audio-clkc" for G12A.
-+		  "amlogic,g12a-audio-clkc" for G12A,
-+		  "amlogic,sm1-audio-clkc" for S905X3.
- - reg		: physical base address of the clock controller and length of
- 		  memory mapped region.
- - clocks	: a list of phandle + clock-specifier pairs for the clocks listed
-diff --git a/include/dt-bindings/clock/axg-audio-clkc.h b/include/dt-bindings/clock/axg-audio-clkc.h
-index 75901c636893..f561f5c5ef8f 100644
---- a/include/dt-bindings/clock/axg-audio-clkc.h
-+++ b/include/dt-bindings/clock/axg-audio-clkc.h
-@@ -80,5 +80,15 @@
- #define AUD_CLKID_TDM_SCLK_PAD0		160
- #define AUD_CLKID_TDM_SCLK_PAD1		161
- #define AUD_CLKID_TDM_SCLK_PAD2		162
-+#define AUD_CLKID_TOP			163
-+#define AUD_CLKID_TORAM			164
-+#define AUD_CLKID_EQDRC			165
-+#define AUD_CLKID_RESAMPLE_B		166
-+#define AUD_CLKID_TOVAD			167
-+#define AUD_CLKID_LOCKER		168
-+#define AUD_CLKID_SPDIFIN_LB		169
-+#define AUD_CLKID_FRDDR_D		170
-+#define AUD_CLKID_TODDR_D		171
-+#define AUD_CLKID_LOOPBACK_B		172
- 
- #endif /* __AXG_AUDIO_CLKC_BINDINGS_H */
++/* SM1 added resets */
++#define AUD_RESET_RESAMPLE_B	26
++#define AUD_RESET_TOVAD		27
++#define AUD_RESET_LOCKER	28
++#define AUD_RESET_SPDIFIN_LB	29
++#define AUD_RESET_FRATV		30
++#define AUD_RESET_FRHDMIRX	31
++#define AUD_RESET_FRDDR_D	32
++#define AUD_RESET_TODDR_D	33
++#define AUD_RESET_LOOPBACK_B	34
++#define AUD_RESET_EARCTX	35
++#define AUD_RESET_EARCRX	36
++#define AUD_RESET_FRDDR_E	37
++#define AUD_RESET_TODDR_E	38
++
+ #endif
 -- 
 2.21.0
 
