@@ -2,85 +2,83 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5484DCB3EC
-	for <lists+linux-amlogic@lfdr.de>; Fri,  4 Oct 2019 06:32:41 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id BC9ABCB6E8
+	for <lists+linux-amlogic@lfdr.de>; Fri,  4 Oct 2019 11:01:52 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=mAvpQyV09hyS9bzd0z0/cWrgwjJV0RLD6so1myx4IrI=; b=DlwcoX3yfelGL4
-	Hlydi+cIx2bIuiFfqNTjF9m55EeMiqSd9fRnZoAumMn3g5WAT+7PTf25WFuJuzqk3Ww1S+BOXgmUF
-	10z0H6hzbZEMNu+ngbPfC3Ow6CBeISKF1O6yHlERHbLoEdq6IyrqIFxkfuj2y1pPvBV+7XLrR1yrF
-	7Xy83h25gBGSYstjMgX7zwH4I7rgJreJ7vt5XHehrmg1pXx76E/SQ5Goe97d7sa8rlcMZNOG0gHIL
-	/IC2Tqg7sp0I61t94WTl6LRMFBqaHZTk/krtS6RsnpxvlEo52cJ//bs1mtaDexgyNa9MCYpppjxw2
-	OGuWs3ielT0I9hz+sS2A==;
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
+	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=Xrl56t9kqCZl+Zd0WqOM18ernP/OjYLBkwFLOvkQmAY=; b=u/n
+	F7/Egu8sE/KRxHF+MlDcnQd8xxgS9ibX4Ngrp++NKSpKr7qlxu/jdF/omBtrN98gCNlwRdkJmFUKF
+	V71qAL4vi7OdWkHv2s4oMitx7+qPaGv7NWV4glQCKDQA+gBXxIq5Ezij7Zb6sfyO48g6jBnxB0Ny0
+	EQ0piZAd52XRSyaTKuQuEirb4JVps2bEw1HzPQaXMmHN+wNmb7PCEwuaqnM3UZJbPJWEwi6FKFrqw
+	KFWOLBaqRfe/4rcwbdX5d61njM04bF97UZy6Kq2KFExliP3tnkz2xTcE1N9RUBsvFBz4u+o8N710R
+	cEATZbPrJJhgFUiKayZfBMBBX6jpuDQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iGFGb-0002pL-IQ; Fri, 04 Oct 2019 04:32:33 +0000
-Received: from mail-io1-xd42.google.com ([2607:f8b0:4864:20::d42])
+	id 1iGJT8-00013Z-Hq; Fri, 04 Oct 2019 09:01:46 +0000
+Received: from mail-wr1-x444.google.com ([2a00:1450:4864:20::444])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iGFGQ-0002hj-Bm; Fri, 04 Oct 2019 04:32:23 +0000
-Received: by mail-io1-xd42.google.com with SMTP id c25so10621949iot.12;
- Thu, 03 Oct 2019 21:32:21 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=U2nPEB8rA+jsS1ttiFP8H7C3sJ9YdpuV2AmlRtnRHNE=;
- b=FjGXRHWSfuV14PudxoZgKdFd8ltv961tGHcnbLKmjsa/8Uxx+EWhq7bj6GRhk0Y2Uk
- cBFZsicCoqGWvpVrqOYFxpSKDDcmO7jxewrw3RTu6BUhrTknGYpky0aitsvBQD6E35Ep
- IjUzkTkmOPkaZusSeOV42d1j3ZS+H788zPtSxBPhOEZKhwkppVUXs8PMfjT2oyx5Zrax
- MPTxOZBpZDwGqQCwLXDeVZCfi/scdGmfDlobCyraMDumz3+n+zGypsIDJl1TpJt5jx/b
- sXoc8jC3of4xksEFXbAUVC/OozUWrHyqDxEb7+xc2AsXvV5XrMeW+vNoADWPiFneIM8O
- BdNw==
+ id 1iGJSg-0000f4-PW
+ for linux-amlogic@lists.infradead.org; Fri, 04 Oct 2019 09:01:22 +0000
+Received: by mail-wr1-x444.google.com with SMTP id p14so5198352wro.4
+ for <linux-amlogic@lists.infradead.org>; Fri, 04 Oct 2019 02:01:17 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=baylibre-com.20150623.gappssmtp.com; s=20150623;
+ h=from:to:cc:subject:date:message-id;
+ bh=EFydY0lgIP899wnAH99dy6et3EG1uYQ9KTgGCBLycYs=;
+ b=qF0GVukplt92gp1dIgMULefb5vjDSNNhk+Ho8zlhKs5lWbidTiPF3rXtAV/OMf/cWA
+ YLkSKjy8nyUM1mp1oJRyBI52MX4/1ErOfaNIxvRvwAubX3kc3rBJH3v3qLHXKvMs3UbI
+ YcI/Ok0ScCFkD8rDOZoGkYDiJwXlmBWCFD3XB2uGQSV9jjBXM70JO/9HSPqcK/BGDIEC
+ xWpCVkzTSpsysEwc2JVgLgsC4zIZNcdtrpK7cDk+k73kpVSC7zypLxAG7HiTT1tBNPJo
+ 6wpcKeA3yYNu+7hfFihagaIfl0fv0Ennk/vsC72bxoG/8zycuhVhESXsBE60rKCZT7qp
+ u7MA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=U2nPEB8rA+jsS1ttiFP8H7C3sJ9YdpuV2AmlRtnRHNE=;
- b=iV+DCgSHX1kqBjBuwFsTv+fM6ij4J0VpPGpQ2dfD2djQ8BLH3M9z/kyAKLSO07A5fe
- EKeKC2AzW0IhBZXA5dqYXBd4PjKxe1wO0Su+nYNHpm781I7DlcWqSYrKij/kQx1eQirG
- 2R2U3qvzFmo6l2flTbV2LonEOyYoXOEkaGei2N/G2gr2I4wQTggqsYrTPwprF3qdUOt4
- PPGLG7EcLAtIVYc5yfTfDyrIceDmuakQkea/HHL2LvhoGHoCjZGYSjJsfj9JaYcMa4F3
- +Gdg+I3e7hu0eEMwu5OkwoNaUHyWcZxBO977uCp98v+scnt9Viwg8NYIagmDx4xf0CPl
- 4G0Q==
-X-Gm-Message-State: APjAAAVrXddTzC0VQb/R3bB9FyTMpNrHdzDZZFESys2vQnExkEQQm+EN
- 7uhUQjw8TmtEyEwdKqfN89Q0tl4LKrgIJnSCZMw=
-X-Google-Smtp-Source: APXvYqxINY9ZmOJ0xUuloWso3ea+rJC4QHAazPL//m6xavj5isViQ/kZj9Vg0IapF0O5kPX2bKwnma2M8zAZrGTvqDk=
-X-Received: by 2002:a02:245:: with SMTP id 66mr12608668jau.30.1570163540786;
- Thu, 03 Oct 2019 21:32:20 -0700 (PDT)
-MIME-Version: 1.0
-References: <20191001073901.372-1-linux.amoon@gmail.com>
- <7hv9t5vi5d.fsf@baylibre.com>
-In-Reply-To: <7hv9t5vi5d.fsf@baylibre.com>
-From: Anand Moon <linux.amoon@gmail.com>
-Date: Fri, 4 Oct 2019 10:02:08 +0530
-Message-ID: <CANAwSgTR5mnBLGSQcq6xj3yBvu6J1FDKdiLGfaVybtN6HqsAuA@mail.gmail.com>
-Subject: Re: [PATCHv3 RESEND-next 0/3] Odroid c2 missing regulator linking
-To: Kevin Hilman <khilman@baylibre.com>
+ h=x-gm-message-state:from:to:cc:subject:date:message-id;
+ bh=EFydY0lgIP899wnAH99dy6et3EG1uYQ9KTgGCBLycYs=;
+ b=UYMu1qlxOEt7VcxxESuDSI6aPC7eTTTGAuuLz+gxjhQbEKPHPNu0wPSppsc8sspN/K
+ 75IdDBZ6eBY7nrRr4m1Yc0qMl3ttFphbqvd7tk8cLVA20xWajeldteT1H3PC5D/vW5rd
+ BEy3RV7LJ2G8a2sfa+xsp8aD9jbyXyNeIvTAfcIy0zD8XsFhaekNPVo+xzGkbrM/YBwx
+ hJPw3ThxigDdjDm728wjeBJKoyGRPrn+87N35T6zJ4H3ZVoSoF/LuCXgwsj2prdKto8p
+ rzvkubueIRDAruJgG6RFv8dQ0AqJ0kfSwRsMXEp5nQeIYYQVUwsHfkPpSzzTeUrhiyma
+ 0IlQ==
+X-Gm-Message-State: APjAAAUr3vEOLNn6PuQGoQXoTxSCIuQzK5dKv6Dm5ZHTnjm82UQv+ZFt
+ PWTtBBJkwX1lklmwOvddxTyuBQ==
+X-Google-Smtp-Source: APXvYqyRiGMXW/wfqsay/UYMA7JeRdE57EW6un20v5k0NxiOZ3sdeT1X4JHfTYukfhmSHqxi20GgMQ==
+X-Received: by 2002:a5d:630d:: with SMTP id i13mr10380588wru.230.1570179676023; 
+ Fri, 04 Oct 2019 02:01:16 -0700 (PDT)
+Received: from glaroque-ThinkPad-T480.baylibre.local
+ (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
+ by smtp.gmail.com with ESMTPSA id v8sm7765170wra.79.2019.10.04.02.01.14
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Fri, 04 Oct 2019 02:01:15 -0700 (PDT)
+From: Guillaume La Roque <glaroque@baylibre.com>
+To: amit.kucheria@linaro.org, rui.zhang@intel.com, edubezval@gmail.com,
+ daniel.lezcano@linaro.org
+Subject: [PATCH v7 0/7] Add support of New Amlogic temperature sensor for G12
+ SoCs
+Date: Fri,  4 Oct 2019 11:01:07 +0200
+Message-Id: <20191004090114.30694-1-glaroque@baylibre.com>
+X-Mailer: git-send-email 2.17.1
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191003_213222_402682_3AEB5E55 
-X-CRM114-Status: UNSURE (   7.57  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20191004_020118_826218_0B09E5EA 
+X-CRM114-Status: GOOD (  11.30  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (linux.amoon[at]gmail.com)
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:444 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:d42 listed in]
- [list.dnswl.org]
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -92,43 +90,85 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree <devicetree@vger.kernel.org>,
- Neil Armstrong <narmstrong@baylibre.com>,
- Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
- Linux Kernel <linux-kernel@vger.kernel.org>, Rob Herring <robh+dt@kernel.org>,
- linux-amlogic@lists.infradead.org,
- linux-arm-kernel <linux-arm-kernel@lists.infradead.org>,
- Jerome Brunet <jbrunet@baylibre.com>
+Cc: devicetree@vger.kernel.org, linux-amlogic@lists.infradead.org,
+ linux-kernel@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
+ linux-pm@vger.kernel.org
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Hi Kevin,
+This patchs series add support of New Amlogic temperature sensor and minimal
+thermal zone for SEI510 and ODROID-N2 boards.
 
-On Thu, 3 Oct 2019 at 23:14, Kevin Hilman <khilman@baylibre.com> wrote:
->
-> Anand Moon <linux.amoon@gmail.com> writes:
->
-> > Looks like this changes got lost so resend these changes again.
->
-> Yeah, sorry about that.  Your cover letter subjects were quite similar,
-> and several versions of this series and the previoius series arrived
-> close together, so some stuff fell through the cracks.  Sorry about
-> that.
-I will keep this in my mind and do not repeat my silly mistakes.
+First implementation was doing on IIO[1] but after comments i move on thermal framework.
+Formulas and calibration values come from amlogic.
 
->
-> Queued for v5.5 now,
->
-> Thanks,
-No worries, thanks for the update!
+Changes since v6:
+ - add missing critical trip point.
 
->
-> Kevin
+Changes since v5:
+  - fix patch 5 and 6 send twice
 
-Best Regards
--Anand
+Changes since v4:
+  - Move thermal-zone in soc dtsi file
+  - Remove critical trip point and add passive one
+  - fix commit message
+  - use devm_platform_ioremap_resource instead of platform_get_resource
+
+Changes since v3:
+  - Add cooling map and trip point for hot type
+  - move compatible on g12a instead of g12 to be aligned with others
+  - add all reviewer, sorry for this mistake
+
+Changes since v2:
+  - fix yaml documention
+  - remove unneeded status variable for temperature-sensor node
+  - rework driver after Martin review
+  - add some information in commit message
+
+Changes since v1:
+  - fix enum vs const in documentation
+  - fix error with thermal-sensor-cells value set to 1 instead of 0
+  - add some dependencies needed to add cooling-maps
+
+Dependencies :
+- patch 3,4 & 5: depends on Neil's patch and series :
+              - missing dwc2 phy-names[2]
+              - patchsets to add DVFS on G12a[3] which have deps on [4] and [5]
+
+[1] https://lore.kernel.org/linux-amlogic/20190604144714.2009-1-glaroque@baylibre.com/
+[2] https://lore.kernel.org/linux-amlogic/20190625123647.26117-1-narmstrong@baylibre.com/
+[3] https://lore.kernel.org/linux-amlogic/20190729132622.7566-1-narmstrong@baylibre.com/
+[4] https://lore.kernel.org/linux-amlogic/20190731084019.8451-5-narmstrong@baylibre.com/
+[5] https://lore.kernel.org/linux-amlogic/20190729132622.7566-3-narmstrong@baylibre.com/
+
+Guillaume La Roque (7):
+  dt-bindings: thermal: Add DT bindings documentation for Amlogic
+    Thermal
+  thermal: amlogic: Add thermal driver to support G12 SoCs
+  arm64: dts: amlogic: g12: add temperature sensor
+  arm64: dts: meson: g12: Add minimal thermal zone
+  arm64: dts: amlogic: g12a: add cooling properties
+  arm64: dts: amlogic: g12b: add cooling properties
+  MAINTAINERS: add entry for Amlogic Thermal driver
+
+ .../bindings/thermal/amlogic,thermal.yaml     |  54 +++
+ MAINTAINERS                                   |   9 +
+ .../boot/dts/amlogic/meson-g12-common.dtsi    |  77 ++++
+ arch/arm64/boot/dts/amlogic/meson-g12a.dtsi   |  24 ++
+ arch/arm64/boot/dts/amlogic/meson-g12b.dtsi   |  29 ++
+ drivers/thermal/Kconfig                       |  11 +
+ drivers/thermal/Makefile                      |   1 +
+ drivers/thermal/amlogic_thermal.c             | 333 ++++++++++++++++++
+ 8 files changed, 538 insertions(+)
+ create mode 100644 Documentation/devicetree/bindings/thermal/amlogic,thermal.yaml
+ create mode 100644 drivers/thermal/amlogic_thermal.c
+
+-- 
+2.17.1
+
 
 _______________________________________________
 linux-amlogic mailing list
