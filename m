@@ -2,65 +2,66 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5DC01CBFF5
-	for <lists+linux-amlogic@lfdr.de>; Fri,  4 Oct 2019 18:02:27 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3AE21CD078
+	for <lists+linux-amlogic@lfdr.de>; Sun,  6 Oct 2019 12:32:38 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=M5pHYjFGa4oT4sP/IwB3YmHG0MyfpU0QTFPZccENesA=; b=glQFbuMg6YWXDy
-	EKsOQzjU3guvuY0JGJsac63jYyZ7Sl85MHvXq+gQYBm1ewM3fnlcarhjrmCAndvm1Ukdc+sCfned9
-	/Dk2uIXuhnUgMmZPlwmT546KFx/96zOF87AyjVpsgjIYgoQLO7YERZqOVDJ8kj8CBuEYSSWxKlhpl
-	xhiz4fw8haKRa07ZWoEXH9wyVn5DxtgKKmFHvHS+Y5dCA4wlB/mOpn6L/kPLai4D3TAMmq42Guii3
-	zmt6jonkH5xyxPq7Ohlp9ZJI7OI5ZwOLdLYSxRXoHSpN2a6x/yVivGruu1MweLMDain3MknWIiZds
-	9CA4GOfFtzo2ovfFHpCw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=X4csAwJ+YHOI4c6/8sRWU8Vh3qOIow0n701hIuUyBlQ=; b=dpDrx8BFFEY6bJ
+	uzgCD+FWgHiSut942pvq7YnwzvJQRNQBPJ62tDh8f6nhEbD7Z+Lfu4IiaiQuhEBq/RABQ6Vc/nSxk
+	bUl1aIefaxE4oC/gNFIAJY0uytHTmhq9nEW4jCVLSzlivoXqvlM7fbjuCR+uN/D9uYAfeu+AUMCzm
+	9fN/EabTcyiPe7uQYW0am4nzsBue69b81lc2cRm0Y7wLbxFmdSK4MlT5j/M0tKLH41UtCQFNmDlDv
+	wHeHVis8rMi5hfnGq+ro1sYUMGFM6fSAG2DGINz2yWy+b3AyKw4Cp0B4PbUqU0yrFhyeBffZ1ENQT
+	jqh0+DeZiNrP36/WyKZA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iGQ29-0002nc-Rn; Fri, 04 Oct 2019 16:02:21 +0000
-Received: from foss.arm.com ([217.140.110.172])
- by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iGQ26-0002mv-G7
- for linux-amlogic@lists.infradead.org; Fri, 04 Oct 2019 16:02:20 +0000
-Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
- by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id 1E8C41597;
- Fri,  4 Oct 2019 09:02:16 -0700 (PDT)
-Received: from [10.1.196.133] (e112269-lin.cambridge.arm.com [10.1.196.133])
- by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id D59923F68E;
- Fri,  4 Oct 2019 09:02:14 -0700 (PDT)
-Subject: Re: drm_sched with panfrost crash on T820
-To: "Koenig, Christian" <Christian.Koenig@amd.com>,
- Neil Armstrong <narmstrong@baylibre.com>,
- "Grodzovsky, Andrey" <Andrey.Grodzovsky@amd.com>,
- Hillf Danton <hdanton@sina.com>
-References: <e450fbe6-dec7-2704-59c2-db7e869d67f5@baylibre.com>
- <f0ab487e-8d49-987b-12b8-7a115a6543e1@amd.com>
- <20190930145228.14000-1-hdanton@sina.com>
- <d2888614-8644-7d04-b73b-3ab7c6623e9a@amd.com>
- <7339b7a1-2d1c-4379-89a0-daf8b28d81c8@baylibre.com>
- <94096e4e-0f60-79d1-69b5-c7c3e59a4d78@amd.com>
- <f44204b4-ce5c-b26e-580d-5bb21314be1f@baylibre.com>
- <8c4ecad8-c2e2-eec1-9132-48e126577baa@arm.com>
- <590a1c78-5c86-92e2-01a1-92bd31397be5@amd.com>
-From: Steven Price <steven.price@arm.com>
-Message-ID: <a09950d8-dba7-e359-da07-7383e7ac946e@arm.com>
-Date: Fri, 4 Oct 2019 17:02:13 +0100
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
- Thunderbird/60.9.0
+	id 1iH3py-00061I-NX; Sun, 06 Oct 2019 10:32:26 +0000
+Received: from szxga04-in.huawei.com ([45.249.212.190] helo=huawei.com)
+ by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
+ id 1iH3ps-0005xF-Vx; Sun, 06 Oct 2019 10:32:23 +0000
+Received: from DGGEMS412-HUB.china.huawei.com (unknown [172.30.72.60])
+ by Forcepoint Email with ESMTP id 692D91EFCA547C100FC8;
+ Sun,  6 Oct 2019 18:32:07 +0800 (CST)
+Received: from localhost (10.133.213.239) by DGGEMS412-HUB.china.huawei.com
+ (10.3.19.212) with Microsoft SMTP Server id 14.3.439.0; Sun, 6 Oct 2019
+ 18:31:58 +0800
+From: YueHaibing <yuehaibing@huawei.com>
+To: <a.zummo@towertech.it>, <alexandre.belloni@bootlin.com>, <joel@jms.id.au>, 
+ <andrew@aj.id.au>, <nicolas.ferre@microchip.com>,
+ <ludovic.desroches@microchip.com>, <computersforpeace@gmail.com>,
+ <gregory.0xf0@gmail.com>, <f.fainelli@gmail.com>,
+ <bcm-kernel-feedback-list@broadcom.com>, <linus.walleij@linaro.org>,
+ <baruch@tkos.co.il>, <paul@crapouillou.net>, <vz@mleia.com>,
+ <slemieux.tyco@gmail.com>, <khilman@baylibre.com>,
+ <eddie.huang@mediatek.com>, <sean.wang@mediatek.com>,
+ <matthias.bgg@gmail.com>, <patrice.chotard@st.com>,
+ <mcoquelin.stm32@gmail.com>, <alexandre.torgue@st.com>, <mripard@kernel.org>, 
+ <wens@csie.org>, <thierry.reding@gmail.com>, <jonathanh@nvidia.com>,
+ <linux@prisktech.co.nz>, <michal.simek@xilinx.com>
+Subject: [PATCH -next 00/34] rtc: use devm_platform_ioremap_resource() to
+ simplify code
+Date: Sun, 6 Oct 2019 18:29:19 +0800
+Message-ID: <20191006102953.57536-1-yuehaibing@huawei.com>
+X-Mailer: git-send-email 2.10.2.windows.1
 MIME-Version: 1.0
-In-Reply-To: <590a1c78-5c86-92e2-01a1-92bd31397be5@amd.com>
-Content-Language: en-GB
+X-Originating-IP: [10.133.213.239]
+X-CFilter-Loop: Reflected
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191004_090218_629686_7AC1C406 
-X-CRM114-Status: GOOD (  21.78  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20191006_033221_201050_FB3DC068 
+X-CRM114-Status: UNSURE (   3.29  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-2.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [45.249.212.190 listed in list.dnswl.org]
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -72,107 +73,99 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: Tomeu Vizoso <tomeu.vizoso@collabora.com>,
- "airlied@linux.ie" <airlied@linux.ie>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- "dri-devel@lists.freedesktop.org" <dri-devel@lists.freedesktop.org>,
- "open list:ARM/Amlogic Meson..." <linux-amlogic@lists.infradead.org>,
- Erico Nunes <nunes.erico@gmail.com>
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Cc: linux-rtc@vger.kernel.org, linux-aspeed@lists.ozlabs.org,
+ YueHaibing <yuehaibing@huawei.com>, linux-kernel@vger.kernel.org,
+ linux-mediatek@lists.infradead.org, linux-tegra@vger.kernel.org,
+ linux-amlogic@lists.infradead.org, linux-stm32@st-md-mailman.stormreply.com,
+ linux-arm-kernel@lists.infradead.org
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-T24gMDQvMTAvMjAxOSAxNjozNCwgS29lbmlnLCBDaHJpc3RpYW4gd3JvdGU6Cj4gQW0gMDQuMTAu
-MTkgdW0gMTc6Mjcgc2NocmllYiBTdGV2ZW4gUHJpY2U6Cj4+IE9uIDA0LzEwLzIwMTkgMTY6MDMs
-IE5laWwgQXJtc3Ryb25nIHdyb3RlOgo+Pj4gT24gMDQvMTAvMjAxOSAxNjo1MywgR3JvZHpvdnNr
-eSwgQW5kcmV5IHdyb3RlOgo+Pj4+IE9uIDEwLzMvMTkgNDozNCBBTSwgTmVpbCBBcm1zdHJvbmcg
-d3JvdGU6Cj4+Pj4+IEhpIEFuZHJleSwKPj4+Pj4KPj4+Pj4gTGUgMDIvMTAvMjAxOSDDoCAxNjo0
-MCwgR3JvZHpvdnNreSwgQW5kcmV5IGEgw6ljcml0IDoKPj4+Pj4+IE9uIDkvMzAvMTkgMTA6NTIg
-QU0sIEhpbGxmIERhbnRvbiB3cm90ZToKPj4+Pj4+PiBPbiBNb24sIDMwIFNlcCAyMDE5IDExOjE3
-OjQ1ICswMjAwIE5laWwgQXJtc3Ryb25nIHdyb3RlOgo+Pj4+Pj4+PiBEaWQgYSBuZXcgcnVuIGZy
-b20gNS4zOgo+Pj4+Pj4+Pgo+Pj4+Pj4+PiBbICAgMzUuOTcxOTcyXSBDYWxsIHRyYWNlOgo+Pj4+
-Pj4+PiBbICAgMzUuOTc0MzkxXSAgZHJtX3NjaGVkX2luY3JlYXNlX2thcm1hKzB4NWMvMHhmMAo+
-Pj4+Pj4+PiAJCQlmZmZmMDAwMDEwNjY3ZjM4CUZGRkYwMDAwMTA2NjdGOTQKPj4+Pj4+Pj4gCQkJ
-ZHJpdmVycy9ncHUvZHJtL3NjaGVkdWxlci9zY2hlZF9tYWluLmM6MzM1Cj4+Pj4+Pj4+Cj4+Pj4+
-Pj4+IFRoZSBjcmFzaGluZyBsaW5lIGlzIDoKPj4+Pj4+Pj4gICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICBpZiAoYmFkLT5zX2ZlbmNlLT5zY2hlZHVsZWQuY29udGV4dCA9PQo+Pj4+
-Pj4+PiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBlbnRpdHktPmZlbmNl
-X2NvbnRleHQpIHsKPj4+Pj4+Pj4KPj4+Pj4+Pj4gRG9lc24ndCBzZWVtIHJlbGF0ZWQgdG8gZ3Vp
-bHR5IGpvYi4KPj4+Pj4+PiBCYWlsIG91dCBpZiBzX2ZlbmNlIGlzIG5vIGxvbmdlciBmcmVzaC4K
-Pj4+Pj4+Pgo+Pj4+Pj4+IC0tLSBhL2RyaXZlcnMvZ3B1L2RybS9zY2hlZHVsZXIvc2NoZWRfbWFp
-bi5jCj4+Pj4+Pj4gKysrIGIvZHJpdmVycy9ncHUvZHJtL3NjaGVkdWxlci9zY2hlZF9tYWluLmMK
-Pj4+Pj4+PiBAQCAtMzMzLDYgKzMzMywxMCBAQCB2b2lkIGRybV9zY2hlZF9pbmNyZWFzZV9rYXJt
-YShzdHJ1Y3QgZHJtCj4+Pj4+Pj4gICAgIAo+Pj4+Pj4+ICAgICAJCQlzcGluX2xvY2soJnJxLT5s
-b2NrKTsKPj4+Pj4+PiAgICAgCQkJbGlzdF9mb3JfZWFjaF9lbnRyeV9zYWZlKGVudGl0eSwgdG1w
-LCAmcnEtPmVudGl0aWVzLCBsaXN0KSB7Cj4+Pj4+Pj4gKwkJCQlpZiAoIXNtcF9sb2FkX2FjcXVp
-cmUoJmJhZC0+c19mZW5jZSkpIHsKPj4+Pj4+PiArCQkJCQlzcGluX3VubG9jaygmcnEtPmxvY2sp
-Owo+Pj4+Pj4+ICsJCQkJCXJldHVybjsKPj4+Pj4+PiArCQkJCX0KPj4+Pj4+PiAgICAgCQkJCWlm
-IChiYWQtPnNfZmVuY2UtPnNjaGVkdWxlZC5jb250ZXh0ID09Cj4+Pj4+Pj4gICAgIAkJCQkgICAg
-ZW50aXR5LT5mZW5jZV9jb250ZXh0KSB7Cj4+Pj4+Pj4gICAgIAkJCQkJaWYgKGF0b21pY19yZWFk
-KCZiYWQtPmthcm1hKSA+Cj4+Pj4+Pj4gQEAgLTU0Myw3ICs1NDcsNyBAQCBFWFBPUlRfU1lNQk9M
-KGRybV9zY2hlZF9qb2JfaW5pdCk7Cj4+Pj4+Pj4gICAgIHZvaWQgZHJtX3NjaGVkX2pvYl9jbGVh
-bnVwKHN0cnVjdCBkcm1fc2NoZWRfam9iICpqb2IpCj4+Pj4+Pj4gICAgIHsKPj4+Pj4+PiAgICAg
-CWRtYV9mZW5jZV9wdXQoJmpvYi0+c19mZW5jZS0+ZmluaXNoZWQpOwo+Pj4+Pj4+IC0Jam9iLT5z
-X2ZlbmNlID0gTlVMTDsKPj4+Pj4+PiArCXNtcF9zdG9yZV9yZWxlYXNlKCZqb2ItPnNfZmVuY2Us
-IDApOwo+Pj4+Pj4+ICAgICB9Cj4+Pj4+Pj4gICAgIEVYUE9SVF9TWU1CT0woZHJtX3NjaGVkX2pv
-Yl9jbGVhbnVwKTsKPj4+Pj4gVGhpcyBmaXhlZCB0aGUgcHJvYmxlbSBvbiB0aGUgMTAgQ0kgcnVu
-cy4KPj4+Pj4KPj4+Pj4gTmVpbAo+Pj4+Cj4+Pj4gVGhlc2UgYXJlIGdvb2QgbmV3cyBidXQgSSBz
-dGlsbCBmYWlsIHRvIHNlZSBob3cgdGhpcyBmaXhlcyB0aGUgcHJvYmxlbSAtCj4+Pj4gSGlsbGYs
-IGRvIHlvdSBtaW5kIGV4cGxhaW5pbmcgaG93IHlvdSBjYW1lIHVwIHdpdGggdGhpcyBwYXJ0aWN1
-bGFyIGZpeCAtCj4+Pj4gd2hhdCB3YXMgdGhlIGJ1ZyB5b3Ugc2F3ID8KPj4+IEFzIFN0ZXZlbiBl
-eHBsYWluZWQsIHNlZW1zIHRoZSBzYW1lIGpvYiB3YXMgc3VibWl0dGVkIG9uIGJvdGggSFcgc2xv
-dHMsCj4+PiBhbmQgdGhlbiB3aGVuIHRpbWVvdXQgb2NjdXJzIGVhY2ggdGhyZWFkIGNhbGxzIHBh
-bmZyb3N0X2pvYl90aW1lZG91dAo+Pj4gd2hpY2ggbGVhZHMgdG8gZHJtX3NjaGVkX3N0b3AoKSBv
-biB0aGUgZmlyc3QgY2FsbCBhbmQgb24gdGhlCj4+PiBzZWNvbmQgY2FsbCB0aGUgam9iIHdhcyBh
-bHJlYWR5IGZyZWVkLgo+Pj4KPj4+IFN0ZXZlbiBwcm9wb3NlZCBhIHdvcmtpbmcgZml4LCBhbmQg
-dGhpcyBvbmUgZG9lcyB0aGUgc2FtZSBidXQgb24KPj4+IHRoZSBkcm1fc2NoZWQgc2lkZS4gVGhp
-cyBvbmUgbG9va3MgY2xlYW5lciwgYnV0IHBhbmZyb3N0IHNob3VsZAo+Pj4gbm90IGNhbGwgZHJt
-X3NjaGVkX3N0b3AoKSB0d2ljZSBmb3IgdGhlIHNhbWUgam9iLgo+PiBJJ20gbm90IHN1cmUgdGhh
-dCBIaWxsZidzIGZpeCBpcyBzdWZmaWNpZW50LiBJbiBwYXJ0aWN1bGFyIGluCj4+IGRybV9zY2hl
-ZF9pbmNyZWFzZV9rYXJtYSgpIEkgZG9uJ3QgdW5kZXJzdGFuZCBob3cgdGhlIHNtcF9sb2FkX2Fj
-cXVpcmUoKQo+PiBjYWxsIHByZXZlbnRzIGJhZC0+c19mZW5jZSBiZWNvbWluZyBOVUxMIGltbWVk
-aWF0ZWx5IGFmdGVyd2FyZHMgKGJ1dAo+PiBhZG1pdHRlZGx5IHRoZSB3aW5kb3cgaXMgbXVjaCBz
-bWFsbGVyKS4gQnV0IHJlYWxseSB0aGlzIGlzIGp1c3QgYQo+PiBQYW5mcm9zdCBidWcgKGNhbGxp
-bmcgZHJtX3NjaGVkX3N0b3AoKSB0d2ljZSBvbiB0aGUgc2FtZSBqb2IpLgo+Pgo+PiBUaGUgcGFy
-dCBvZiBteSBjaGFuZ2UgdGhhdCBJJ2Qgd2VsY29tZSBmZWVkYmFjayBvbiBpcyBjaGFuZ2luZwo+
-PiBjYW5jZWxfZGVsYXllZF93b3JrKCkgdG8gY2FuY2VsX2RlbGF5ZWRfd29ya19zeW5jKCkgaW4g
-ZHJtX3NjaGVkX3N0b3AoKQo+PiB3aGVuIGNhbGxlZCBvbiBkaWZmZXJlbnQgc2NoZWR1bGVyIHRv
-IHRoZSBiYWQgam9iLiBJdCdzIG5vdCBjbGVhciB0byBtZQo+PiBleGFjdGx5IHdoYXQgdGhlIHNl
-bWFudGljcyBvZiB0aGUgZnVuY3Rpb24gc2hvdWxkIGJlLCBhbmQgSSBoYXZlbid0Cj4+IHRlc3Rl
-ZCB0aGUgZWZmZWN0IG9mIHRoZSBjaGFuZ2Ugb24gZHJpdmVycyBvdGhlciB0aGFuIFBhbmZyb3N0
-Lgo+IAo+IFllYWgsIGF0IGxlYXN0IG9mIGhhbmQgdGhhdCBjaGFuZ2UgZG9lc24ndCBzZWVtIHRv
-IG1ha2Ugc2Vuc2UgdG8gbWUuCgpXZSBuZWVkIHRvIGVuc3VyZSB0aGF0IGFueSBvdGhlciB0aW1l
-b3V0cyB0aGF0IG1pZ2h0IGhhdmUgc3RhcnRlZApwcm9jZXNzaW5nIGFyZSBjb21wbGV0ZSBiZWZv
-cmUgYWN0dWFsbHkgcmVzZXR0aW5nIHRoZSBoYXJkd2FyZS4KT3RoZXJ3aXNlIGFmdGVyIHRoZSBy
-ZXNldCBhbm90aGVyIHRocmVhZCBjb3VsZCBjb21lIGFsb25nIGFuZCBhdHRlbXB0IHRvCnJlc2V0
-IHRoZSBoYXJkd2FyZSBhZ2FpbiAoYW5kIGNhdXNlIGEgZG91YmxlIGZyZWUgb2YgYSBqb2IpLiBN
-eSBjaGFuZ2UKdG8gdXNlIHRoZSBfc3luYygpIHZhcmlhbnQgcHJldmVudHMgdGhpcyBoYXBwZW5p
-bmcuCgo+IE11bHRpcGxlIHRpbWVvdXQgd29ya2VycyBjYW4gcGVyZmVjdGx5IHJ1biBpbiBwYXJh
-bGxlbCwgUGFuZnJvc3QgbmVlZHMgCj4gdG8gbWFrZSBzdXJlIHRoYXQgdGhleSBkb24ndCBhZmZl
-Y3QgZWFjaCBvdGhlci4KPiAKPiBUaGUgc2ltcGxlc3Qgd2F5IG9mIGRvaW5nIHRoaXMgaXMgdG8g
-aGF2ZSBhIG11dGV4IHlvdSB0cnlsb2NrIHdoZW4gCj4gc3RhcnRpbmcgdGhlIHJlc2V0Lgo+IAo+
-IFRoZSBmaXJzdCBvbmUgZ3JhYmJpbmcgaXQgd2lucywgYWxsIG90aGVyIGp1c3Qgc2lsZW50bHkg
-cmV0dXJuLgoKQWggdGhhdCB3b3VsZCBzaW1wbGlmeSBteSBjaGFuZ2UgcmVtb3ZpbmcgdGhlIG5l
-ZWQgZm9yIHRoZSBuZXcgdmFyaWFibGUuCkkgaGFkbid0IHRob3VnaHQgdG8gdXNlIHRyeWxvY2su
-IEknbGwgZ2l2ZSB0aGF0IGEgc3BpbiBhbmQgcG9zdCBhIG5ldwpzaW1wbGVyIHZlcnNpb24uCgpU
-aGFua3MsCgpTdGV2ZQoKPiBSZWdhcmRzLAo+IENocmlzdGlhbi4KPiAKPj4KPj4gU3RldmUKPj4K
-Pj4+IE5laWwKPj4+Cj4+Pj4gQW5kcmV5Cj4+Pj4KPj4+Pj4+IERvZXMgdGhpcyBjaGFuZ2UgaGVs
-cCB0aGUgcHJvYmxlbSA/IE5vdGUgdGhhdCBkcm1fc2NoZWRfam9iX2NsZWFudXAgaXMKPj4+Pj4+
-IGNhbGxlZCBmcm9tIHNjaGVkdWxlciB0aHJlYWQgd2hpY2ggaXMgc3RvcHBlZCBhdCBhbGwgdGlt
-ZXMgd2hlbiB3b3JrX3Rkcgo+Pj4+Pj4gdGhyZWFkIGlzIHJ1bm5pbmcgYW5kIGFueXdheSB0aGUg
-J2JhZCcgam9iIGlzIHN0aWxsIGluIHRoZQo+Pj4+Pj4gcmluZ19taXJyb3JfbGlzdCB3aGlsZSBp
-dCdzIGJlaW5nIGFjY2Vzc2VkIGZyb20KPj4+Pj4+IGRybV9zY2hlZF9pbmNyZWFzZV9rYXJtYSBz
-byBJIGRvbid0IHRoaW5rIGRybV9zY2hlZF9qb2JfY2xlYW51cCBjYW4gYmUKPj4+Pj4+IGNhbGxl
-ZCBmb3IgaXQgQkVGT1JFIG9yIHdoaWxlIGRybV9zY2hlZF9pbmNyZWFzZV9rYXJtYSBpcyBleGVj
-dXRlZC4KPj4+Pj4+Cj4+Pj4+PiBBbmRyZXkKPj4+Pj4+Cj4+Pj4+Pgo+Pj4+Pj4+ICAgICAKPj4+
-Pj4+PiAtLQo+Pj4+Pj4+Cj4+PiBfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
-X19fX19fX19fXwo+Pj4gZHJpLWRldmVsIG1haWxpbmcgbGlzdAo+Pj4gZHJpLWRldmVsQGxpc3Rz
-LmZyZWVkZXNrdG9wLm9yZwo+Pj4gaHR0cHM6Ly9saXN0cy5mcmVlZGVza3RvcC5vcmcvbWFpbG1h
-bi9saXN0aW5mby9kcmktZGV2ZWwKPj4+Cj4gCj4gX19fX19fX19fX19fX19fX19fX19fX19fX19f
-X19fX19fX19fX19fX19fX19fX18KPiBkcmktZGV2ZWwgbWFpbGluZyBsaXN0Cj4gZHJpLWRldmVs
-QGxpc3RzLmZyZWVkZXNrdG9wLm9yZwo+IGh0dHBzOi8vbGlzdHMuZnJlZWRlc2t0b3Aub3JnL21h
-aWxtYW4vbGlzdGluZm8vZHJpLWRldmVsCj4gCgoKX19fX19fX19fX19fX19fX19fX19fX19fX19f
-X19fX19fX19fX19fX19fX19fX18KbGludXgtYW1sb2dpYyBtYWlsaW5nIGxpc3QKbGludXgtYW1s
-b2dpY0BsaXN0cy5pbmZyYWRlYWQub3JnCmh0dHA6Ly9saXN0cy5pbmZyYWRlYWQub3JnL21haWxt
-YW4vbGlzdGluZm8vbGludXgtYW1sb2dpYwo=
+devm_platform_ioremap_resource() internally have platform_get_resource()
+and devm_ioremap_resource() in it. So instead of calling them separately
+use devm_platform_ioremap_resource() directly.
+
+YueHaibing (34):
+  rtc: asm9260: use devm_platform_ioremap_resource() to simplify code
+  rtc: rtc-aspeed: use devm_platform_ioremap_resource() to simplify code
+  rtc: brcmstb-waketimer: use devm_platform_ioremap_resource() to
+    simplify code
+  rtc: at91sam9: use devm_platform_ioremap_resource() to simplify code
+  rtc: cadence: use devm_platform_ioremap_resource() to simplify code
+  rtc: coh901331: use devm_platform_ioremap_resource() to simplify code
+  rtc: davinci: use devm_platform_ioremap_resource() to simplify code
+  rtc: digicolor: use devm_platform_ioremap_resource() to simplify code
+  rtc: ds1216: use devm_platform_ioremap_resource() to simplify code
+  rtc: ds1511: use devm_platform_ioremap_resource() to simplify code
+  rtc: ds1553: use devm_platform_ioremap_resource() to simplify code
+  rtc: ep93xx: use devm_platform_ioremap_resource() to simplify code
+  rtc: jz4740: use devm_platform_ioremap_resource() to simplify code
+  rtc: lpc24xx: use devm_platform_ioremap_resource() to simplify code
+  rtc: lpc32xx: use devm_platform_ioremap_resource() to simplify code
+  rtc: meson: use devm_platform_ioremap_resource() to simplify code
+  rtc: mt7622: use devm_platform_ioremap_resource() to simplify code
+  rtc: mv: use devm_platform_ioremap_resource() to simplify code
+  rtc: omap: use devm_platform_ioremap_resource() to simplify code
+  rtc: pic32: use devm_platform_ioremap_resource() to simplify code
+  rtc: rtd119x: use devm_platform_ioremap_resource() to simplify code
+  rtc: s3c: use devm_platform_ioremap_resource() to simplify code
+  rtc: sa1100: use devm_platform_ioremap_resource() to simplify code
+  rtc: spear: use devm_platform_ioremap_resource() to simplify code
+  rtc: stk17ta8: use devm_platform_ioremap_resource() to simplify code
+  rtc: ds1286: use devm_platform_ioremap_resource() to simplify code
+  rtc: st-lpc: use devm_platform_ioremap_resource() to simplify code
+  rtc: stm32: use devm_platform_ioremap_resource() to simplify code
+  rtc: sunxi: use devm_platform_ioremap_resource() to simplify code
+  rtc: tegra: use devm_platform_ioremap_resource() to simplify code
+  rtc: tx4939: use devm_platform_ioremap_resource() to simplify code
+  rtc: vt8500: use devm_platform_ioremap_resource() to simplify code
+  rtc: xgene: use devm_platform_ioremap_resource() to simplify code
+  rtc: zynqmp: use devm_platform_ioremap_resource() to simplify code
+
+ drivers/rtc/rtc-asm9260.c           | 4 +---
+ drivers/rtc/rtc-aspeed.c            | 4 +---
+ drivers/rtc/rtc-at91sam9.c          | 4 +---
+ drivers/rtc/rtc-brcmstb-waketimer.c | 4 +---
+ drivers/rtc/rtc-cadence.c           | 4 +---
+ drivers/rtc/rtc-coh901331.c         | 4 +---
+ drivers/rtc/rtc-davinci.c           | 4 +---
+ drivers/rtc/rtc-digicolor.c         | 4 +---
+ drivers/rtc/rtc-ds1216.c            | 4 +---
+ drivers/rtc/rtc-ds1286.c            | 4 +---
+ drivers/rtc/rtc-ds1511.c            | 4 +---
+ drivers/rtc/rtc-ds1553.c            | 4 +---
+ drivers/rtc/rtc-ep93xx.c            | 4 +---
+ drivers/rtc/rtc-jz4740.c            | 4 +---
+ drivers/rtc/rtc-lpc24xx.c           | 4 +---
+ drivers/rtc/rtc-lpc32xx.c           | 4 +---
+ drivers/rtc/rtc-meson.c             | 4 +---
+ drivers/rtc/rtc-mt7622.c            | 4 +---
+ drivers/rtc/rtc-mv.c                | 4 +---
+ drivers/rtc/rtc-omap.c              | 4 +---
+ drivers/rtc/rtc-pic32.c             | 4 +---
+ drivers/rtc/rtc-rtd119x.c           | 4 +---
+ drivers/rtc/rtc-s3c.c               | 4 +---
+ drivers/rtc/rtc-sa1100.c            | 4 +---
+ drivers/rtc/rtc-spear.c             | 4 +---
+ drivers/rtc/rtc-st-lpc.c            | 4 +---
+ drivers/rtc/rtc-stk17ta8.c          | 4 +---
+ drivers/rtc/rtc-stm32.c             | 4 +---
+ drivers/rtc/rtc-sunxi.c             | 4 +---
+ drivers/rtc/rtc-tegra.c             | 4 +---
+ drivers/rtc/rtc-tx4939.c            | 4 +---
+ drivers/rtc/rtc-vt8500.c            | 4 +---
+ drivers/rtc/rtc-xgene.c             | 4 +---
+ drivers/rtc/rtc-zynqmp.c            | 5 +----
+ 34 files changed, 34 insertions(+), 103 deletions(-)
+
+-- 
+2.7.4
+
+
+
+_______________________________________________
+linux-amlogic mailing list
+linux-amlogic@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-amlogic
