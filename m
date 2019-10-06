@@ -2,32 +2,32 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B23E1CD150
-	for <lists+linux-amlogic@lfdr.de>; Sun,  6 Oct 2019 12:43:48 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6E6EFCD151
+	for <lists+linux-amlogic@lfdr.de>; Sun,  6 Oct 2019 12:43:51 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=eIR6aZdZLqRArUyxFNHAaYKFTa6i/dYicvrNKLcjabo=; b=jyG+JcVIAlf+In
-	GP5dabwP80k4hlWplcS/HQZWNaOyMiPexa+wq+2TzsiZoir/lbjTkx1U0i4NqLs5eKOfXTVaxJonW
-	urbZcqnUyFZ0bPVW8XVaI6r4OK0h/8NQ3D3YKiGGrduXFEiYNIPWu5bVokZW7tWKd/VpzOoHd7Pd/
-	E36+tDqJjoqB/E0Htsq5lIAdlYlRnpEWtsyQbyq7gpG7qKalqgVbU64grJtNtfh7NAkvebDcDzig4
-	J+byLd+jHfH0biW9TvVSs06Plm2Z8LvX9A+2+d96Z4WQcTeqSVGQ7IfqC1UpBFd3CzRzwGhsdpLBX
-	zZ4WqZ6LcR8tGyD5YAOA==;
+	List-Owner; bh=NwDNWGMvKn3myPpkBtvlXxWqxmkLtx+fujhuQMz0Bwo=; b=nixiFVT1qgbHYb
+	VLmJo1gWYB3e9hkclIbcsapRrJ+STlTuRcQbwO9FCORMCMvS05kLKBF35Hkj6UrYrN8UAT3Sk7S22
+	0sIj/E/NK6xMqULhw6oE7xBPo7QjK7d6lMa6zsHM9bTD4aj9TQfTn3QTcJAasoTSuT+n8KHoa8Q54
+	jjXSUDm1TRZPgJuMHYaVZ+ZF7yFWtHI8rCCUcU5YNUmBcKrTYdDi39p8LAv1Y5L/Z5vTY98P0GO22
+	QMx7j1qUkbUNLAL5zeEAjBf1M4uc6TUTDD6xz/CJYzRDOXACFcGVlWd9oXEP/I5EbG0LU7Uj7JUv/
+	XRwS0zHIMa26s6Y6sfnA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iH40u-0002ky-TG; Sun, 06 Oct 2019 10:43:44 +0000
-Received: from szxga06-in.huawei.com ([45.249.212.32] helo=huawei.com)
+	id 1iH40x-0002nS-DC; Sun, 06 Oct 2019 10:43:47 +0000
+Received: from szxga05-in.huawei.com ([45.249.212.191] helo=huawei.com)
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iH3rZ-0007ST-05; Sun, 06 Oct 2019 10:34:06 +0000
-Received: from DGGEMS408-HUB.china.huawei.com (unknown [172.30.72.59])
- by Forcepoint Email with ESMTP id 171069924967F1A17DCC;
- Sun,  6 Oct 2019 18:34:03 +0800 (CST)
-Received: from localhost (10.133.213.239) by DGGEMS408-HUB.china.huawei.com
- (10.3.19.208) with Microsoft SMTP Server id 14.3.439.0; Sun, 6 Oct 2019
- 18:33:52 +0800
+ id 1iH3rb-0007US-0J; Sun, 06 Oct 2019 10:34:08 +0000
+Received: from DGGEMS403-HUB.china.huawei.com (unknown [172.30.72.60])
+ by Forcepoint Email with ESMTP id 0BF3DE12BDB1CF4DC750;
+ Sun,  6 Oct 2019 18:34:05 +0800 (CST)
+Received: from localhost (10.133.213.239) by DGGEMS403-HUB.china.huawei.com
+ (10.3.19.203) with Microsoft SMTP Server id 14.3.439.0; Sun, 6 Oct 2019
+ 18:33:56 +0800
 From: YueHaibing <yuehaibing@huawei.com>
 To: <a.zummo@towertech.it>, <alexandre.belloni@bootlin.com>, <joel@jms.id.au>, 
  <andrew@aj.id.au>, <nicolas.ferre@microchip.com>,
@@ -41,10 +41,10 @@ To: <a.zummo@towertech.it>, <alexandre.belloni@bootlin.com>, <joel@jms.id.au>,
  <mcoquelin.stm32@gmail.com>, <alexandre.torgue@st.com>, <mripard@kernel.org>, 
  <wens@csie.org>, <thierry.reding@gmail.com>, <jonathanh@nvidia.com>,
  <linux@prisktech.co.nz>, <michal.simek@xilinx.com>
-Subject: [PATCH -next 31/34] rtc: tx4939: use devm_platform_ioremap_resource()
+Subject: [PATCH -next 32/34] rtc: vt8500: use devm_platform_ioremap_resource()
  to simplify code
-Date: Sun, 6 Oct 2019 18:29:50 +0800
-Message-ID: <20191006102953.57536-32-yuehaibing@huawei.com>
+Date: Sun, 6 Oct 2019 18:29:51 +0800
+Message-ID: <20191006102953.57536-33-yuehaibing@huawei.com>
 X-Mailer: git-send-email 2.10.2.windows.1
 In-Reply-To: <20191006102953.57536-1-yuehaibing@huawei.com>
 References: <20191006102953.57536-1-yuehaibing@huawei.com>
@@ -52,8 +52,8 @@ MIME-Version: 1.0
 X-Originating-IP: [10.133.213.239]
 X-CFilter-Loop: Reflected
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191006_033405_236883_75A0F256 
-X-CRM114-Status: UNSURE (   8.45  )
+X-CRM114-CacheID: sfid-20191006_033407_238843_BB1479FE 
+X-CRM114-Status: UNSURE (   8.43  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -61,7 +61,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [45.249.212.32 listed in list.dnswl.org]
+ medium trust [45.249.212.191 listed in list.dnswl.org]
  -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
 X-BeenThere: linux-amlogic@lists.infradead.org
@@ -90,30 +90,30 @@ This is detected by coccinelle.
 
 Signed-off-by: YueHaibing <yuehaibing@huawei.com>
 ---
- drivers/rtc/rtc-tx4939.c | 4 +---
+ drivers/rtc/rtc-vt8500.c | 4 +---
  1 file changed, 1 insertion(+), 3 deletions(-)
 
-diff --git a/drivers/rtc/rtc-tx4939.c b/drivers/rtc/rtc-tx4939.c
-index 5a29915..715b829 100644
---- a/drivers/rtc/rtc-tx4939.c
-+++ b/drivers/rtc/rtc-tx4939.c
-@@ -236,7 +236,6 @@ static int __init tx4939_rtc_probe(struct platform_device *pdev)
+diff --git a/drivers/rtc/rtc-vt8500.c b/drivers/rtc/rtc-vt8500.c
+index d5d14cf..11859b9 100644
+--- a/drivers/rtc/rtc-vt8500.c
++++ b/drivers/rtc/rtc-vt8500.c
+@@ -200,7 +200,6 @@ static const struct rtc_class_ops vt8500_rtc_ops = {
+ static int vt8500_rtc_probe(struct platform_device *pdev)
  {
- 	struct rtc_device *rtc;
- 	struct tx4939rtc_plat_data *pdata;
--	struct resource *res;
- 	int irq, ret;
- 	struct nvmem_config nvmem_cfg = {
- 		.name = "tx4939_nvram",
-@@ -253,8 +252,7 @@ static int __init tx4939_rtc_probe(struct platform_device *pdev)
- 		return -ENOMEM;
- 	platform_set_drvdata(pdev, pdata);
+ 	struct vt8500_rtc *vt8500_rtc;
+-	struct resource	*res;
+ 	int ret;
+ 
+ 	vt8500_rtc = devm_kzalloc(&pdev->dev,
+@@ -215,8 +214,7 @@ static int vt8500_rtc_probe(struct platform_device *pdev)
+ 	if (vt8500_rtc->irq_alarm < 0)
+ 		return vt8500_rtc->irq_alarm;
  
 -	res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
--	pdata->rtcreg = devm_ioremap_resource(&pdev->dev, res);
-+	pdata->rtcreg = devm_platform_ioremap_resource(pdev, 0);
- 	if (IS_ERR(pdata->rtcreg))
- 		return PTR_ERR(pdata->rtcreg);
+-	vt8500_rtc->regbase = devm_ioremap_resource(&pdev->dev, res);
++	vt8500_rtc->regbase = devm_platform_ioremap_resource(pdev, 0);
+ 	if (IS_ERR(vt8500_rtc->regbase))
+ 		return PTR_ERR(vt8500_rtc->regbase);
  
 -- 
 2.7.4
