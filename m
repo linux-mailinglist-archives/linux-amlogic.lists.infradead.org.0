@@ -2,86 +2,88 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 62D73CED33
-	for <lists+linux-amlogic@lfdr.de>; Mon,  7 Oct 2019 22:11:13 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D411FCEF4F
+	for <lists+linux-amlogic@lfdr.de>; Tue,  8 Oct 2019 00:58:15 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:References
+	:In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=9QtIpCFe8odIynIwlUvAeg43PvmJTC2MCMg1Q3zrgw0=; b=ncS6PG1XW+UK5j
-	mVj0ug5sRLJdLhEJ+og2hUM7WqwUubX/1YFo7YVGyg6G5CThvg2eR3tMSmCMLU0WxWZi1saMI1fDb
-	RV5vMROs5yLkTE812LY6MpLYAqRG7J9Y4SDGIwblmWmhkjmr6jABAHcdY+/KaRBbk3xrwY6Y9VkDv
-	zL82sp8T/2VQartrh6B9LlegNOYV0AkGIBpDxvywQmcLmpm522fcMiODD+S/CffuJQ9phqa4c084b
-	KinnaC0+3DYvVvHaW6VqY7c7icQy2rNMFNZXAcu1AS1J/Dg/A2DYM8VdrvqGfBWovZ1pb9WX073qR
-	Shd9TM1+wkEEG5UcNojg==;
+	List-Owner; bh=Dh0J8Bg9jC9q1nkf1VIroDa4SD/6MC0h2WZUWHwv23M=; b=BNXwonvekvOvLo
+	I4+mCyhIf9JuaWnb/6pfvH4WgB0ZJWWsG1cOi/WxY/R6izjq2HljPcxuOnBtoSOg0PYsM/KGxVum9
+	XUwiIPsZfm8jEsFbFXJpg554RpikQv3y8c2IF9h3zasFzjqdW6PVljtlPtvf03JDfjQMMXDvKC9l/
+	+bMAztY6rNCH/qlOq+oQx2oSR/RBWyWK/BI3W7NWIm3Wm0z6H+s5jJDuCOulb+GBOibTF+0kWaPNA
+	MQOrKObTgPdM8xNdeht9OpvH52RAzAQ3KmDUprC1lpseKXJgki3Wq5HIbC/s3Ua6Eh6qJh6hYyjSN
+	sAB5lHO4/R3F4WfNd+yQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iHZLX-0007GB-Sj; Mon, 07 Oct 2019 20:11:07 +0000
-Received: from mail-oi1-x243.google.com ([2607:f8b0:4864:20::243])
+	id 1iHbxA-0006Mr-1z; Mon, 07 Oct 2019 22:58:08 +0000
+Received: from mail-pl1-x641.google.com ([2607:f8b0:4864:20::641])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iHZLK-00078S-Hh; Mon, 07 Oct 2019 20:10:55 +0000
-Received: by mail-oi1-x243.google.com with SMTP id x3so12854645oig.2;
- Mon, 07 Oct 2019 13:10:52 -0700 (PDT)
+ id 1iHbx5-0006Li-Sn
+ for linux-amlogic@lists.infradead.org; Mon, 07 Oct 2019 22:58:05 +0000
+Received: by mail-pl1-x641.google.com with SMTP id j11so7580945plk.3
+ for <linux-amlogic@lists.infradead.org>; Mon, 07 Oct 2019 15:58:01 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=googlemail.com; s=20161025;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=EgoI/BpstzExvfapSP/r9rpFlNEylt0wDd7mLlzkxGQ=;
- b=f0iot5HOwYxLeGOm8csmxxtd6SWMKyklIHgREALK6AUANZrtWVO1P+Ig9PU3XicIMY
- yMut937g7KW5neV7E82AY6/GnCdXDgIXELS1pXswRMIH9QYfa+NW8+0KmyXoDb2ChZua
- F7CUPT0mlXK6AOtVjbG8gsYDstqbDyCmfmFp3RURqNEDYTqUE5SGX4VVKKPqUvzHZ4iw
- e9enIXSgwdxOER9HHzPGZIXgjDV+ttJX2teWyKKjLzC3esWbyX79bhJV29RkSru9h7kC
- 3AyOWJrBIijj8QKtJ6s4vfoOaQZ+bCP2x3PHjZxUn03Od8kX83RfUR4cpatOTikgGIFX
- 7QkQ==
+ d=baylibre-com.20150623.gappssmtp.com; s=20150623;
+ h=from:to:cc:subject:in-reply-to:references:date:message-id
+ :mime-version; bh=HcljqBtqZ0n7Ky2kGCyvmwQmBy2Uww4x9f71GEl4Z8U=;
+ b=A94WXkxSy/iySlIL7pQDbk5PyEHAV56d2+iR4LFGlii5+pbrJhkGI9GamLLoNTp12V
+ g3e9CFHLq2AC728cDVClIDG2UxNJ5N3fH1AfNYALNjvbTpOSGmomeBb3eXQ08eJYoZk6
+ LU41rYaKI7Zmb1wKEoQWeSRAZ3gyy7X2TzCqPh41wNYsvmoupQFVQLsv8o0uOBqnW001
+ TNxb1jdGtt62cUx/R+dWLujDN5vi+hdJ/P/yrqpBibd5wr3zkNV+jGHXKk8g1j0fjxcL
+ ShHB6G/+3rJf1OdL2Syq7gxBYqmuuArpeguVvRhkfckQBq3io5FGAOPIrLkybmRobMO9
+ hkIg==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=EgoI/BpstzExvfapSP/r9rpFlNEylt0wDd7mLlzkxGQ=;
- b=XEInC/TWUxa1Q6ybuylJ2osW2HcYs6B1GhgAeuBS7wspmjunQI5OKtICfy8zPUAbxc
- kP3UhVUva5f97gNp2TTd1hgiQRVf2g6CSe7L1y0ZISOyH9RLCMV6IaETY0Xt9Sl0RyvT
- FRkzWUkqXmT3t0RBDcTfC7uDHVKM9X0dm/8H6e/3Ji1sDXLTj4kgWYSxVzt18gLm2ePC
- vWBlhJFBvA+CvNgnA5h5Skh7A2FyA2ffJtPv58Xf8yCeaIdYinSTih9k1U600QAyMncJ
- hE5J5WSFg06gdqmuEzd19cpIQv1dRz0aJAkMTG0iD1Gqwvb1/FuTX/yCC1aInx25fji6
- bKiQ==
-X-Gm-Message-State: APjAAAU4sds1CbdIgCSJrz4LP1bfzZCfs8KkIs+rXEt+UnbZ7hq8dXig
- 80Vr3rK+CIWCjscvrdwNTTC1wfWdWU2lfVw7WBc=
-X-Google-Smtp-Source: APXvYqyMUNIK/2LBX1NHC436+9DUvSuMC9kF8EqXAJrGmDjVk7EEXqFvCvKb9HsYzM4QU2sMjSM12j8ePZeFckHGReQ=
-X-Received: by 2002:aca:5a0b:: with SMTP id o11mr889855oib.47.1570479051451;
- Mon, 07 Oct 2019 13:10:51 -0700 (PDT)
-MIME-Version: 1.0
-References: <20191007131649.1768-1-linux.amoon@gmail.com>
- <20191007131649.1768-6-linux.amoon@gmail.com>
-In-Reply-To: <20191007131649.1768-6-linux.amoon@gmail.com>
-From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-Date: Mon, 7 Oct 2019 22:10:40 +0200
-Message-ID: <CAFBinCAoJLZj9Kh+SfF4Q+0OCzac2+huon_BU=Q3yE7Fu38U3w@mail.gmail.com>
+ h=x-gm-message-state:from:to:cc:subject:in-reply-to:references:date
+ :message-id:mime-version;
+ bh=HcljqBtqZ0n7Ky2kGCyvmwQmBy2Uww4x9f71GEl4Z8U=;
+ b=tLTD1AsVFjXn70MhFzb9uPZ3TtNLj9sLUdWWk6HWScH/DBOnjDOAlqzjQR0DMeVdlI
+ YyagMWNYxVEBy0wCtrvBv79Jkb4TW28E8WyGOu+i2nCmTBzXFOAEZqR1oCdzCafzPyte
+ HxHo4WWdGr4sYjkztibajR6VNETvjzfUnCwovs5FTbAs/M2kBqdfrTPbPARTtxE/5drA
+ Lu5UDGsWqVmdUv5oQMTv71YvtH6w9xyDNA2p8AFhCMF2YlmJ9SkD7JzdA2HnJjVf0wEk
+ R21sGsIVauMCsVws8Aq3g0UZwRnBlPruQgM2S+BDXwV8Ve7ChoEb/t42Aur82Tgpp0VA
+ sN7Q==
+X-Gm-Message-State: APjAAAXo1C3xqDNWpu2JxdUpwRTC5YaqI1zaYyBsGdsWafOugFu+NbwL
+ 5O+UYtKg83eI7NpidOsBD/63wg==
+X-Google-Smtp-Source: APXvYqzkOuhDdUWLlgA6SbWta6SkUoWU+Z0M/BpBE4YDjY9UHet/ggDjHI1KlYIoeSDu6bnRUGp2SA==
+X-Received: by 2002:a17:902:9a06:: with SMTP id
+ v6mr25829128plp.221.1570489081140; 
+ Mon, 07 Oct 2019 15:58:01 -0700 (PDT)
+Received: from localhost ([2601:602:9200:a1a5:ad34:3a95:9a31:e6bb])
+ by smtp.gmail.com with ESMTPSA id f62sm16453675pfg.74.2019.10.07.15.57.59
+ (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
+ Mon, 07 Oct 2019 15:58:00 -0700 (PDT)
+From: Kevin Hilman <khilman@baylibre.com>
+To: Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
+ Anand Moon <linux.amoon@gmail.com>
 Subject: Re: [RFCv1 5/5] arm64/ARM: configs: Change CONFIG_PWM_MESON from m to
  y
-To: Anand Moon <linux.amoon@gmail.com>
+In-Reply-To: <CAFBinCAoJLZj9Kh+SfF4Q+0OCzac2+huon_BU=Q3yE7Fu38U3w@mail.gmail.com>
+References: <20191007131649.1768-1-linux.amoon@gmail.com>
+ <20191007131649.1768-6-linux.amoon@gmail.com>
+ <CAFBinCAoJLZj9Kh+SfF4Q+0OCzac2+huon_BU=Q3yE7Fu38U3w@mail.gmail.com>
+Date: Mon, 07 Oct 2019 15:57:59 -0700
+Message-ID: <7hsgo4cgeg.fsf@baylibre.com>
+MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191007_131054_605800_A9FBAFD7 
-X-CRM114-Status: GOOD (  11.45  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20191007_155803_981374_DAB9FF3A 
+X-CRM114-Status: GOOD (  12.71  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:243 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:641 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (martin.blumenstingl[at]googlemail.com)
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -94,9 +96,9 @@ List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
 Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- Neil Armstrong <narmstrong@baylibre.com>, Kevin Hilman <khilman@baylibre.com>,
- linux-kernel@vger.kernel.org, Rob Herring <robh+dt@kernel.org>,
- Catalin Marinas <catalin.marinas@arm.com>, linux-amlogic@lists.infradead.org,
+ Neil Armstrong <narmstrong@baylibre.com>,
+ Catalin Marinas <catalin.marinas@arm.com>, linux-kernel@vger.kernel.org,
+ Rob Herring <robh+dt@kernel.org>, linux-amlogic@lists.infradead.org,
  Will Deacon <will@kernel.org>, linux-arm-kernel@lists.infradead.org,
  Jerome Brunet <jbrunet@baylibre.com>
 Content-Type: text/plain; charset="us-ascii"
@@ -104,31 +106,44 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On Mon, Oct 7, 2019 at 3:17 PM Anand Moon <linux.amoon@gmail.com> wrote:
-[...]
-> diff --git a/arch/arm64/configs/defconfig b/arch/arm64/configs/defconfig
-> index c9a867ac32d4..72f6a7dca0d6 100644
-> --- a/arch/arm64/configs/defconfig
-> +++ b/arch/arm64/configs/defconfig
-> @@ -774,7 +774,7 @@ CONFIG_MPL3115=m
->  CONFIG_PWM=y
->  CONFIG_PWM_BCM2835=m
->  CONFIG_PWM_CROS_EC=m
-> -CONFIG_PWM_MESON=m
-> +CONFIG_PWM_MESON=y
-some time ago I submitted a similar patch for the 32-bit SoCs
-it turned that that pwm-meson can be built as module because the
-kernel will run without CPU DVFS as long as the clock and regulator
-drivers are returning -EPROBE_DEFER (-517)
+Martin Blumenstingl <martin.blumenstingl@googlemail.com> writes:
 
-did you check whether there's some other problem like some unused
-clock which is being disabled at that moment?
-I've been hunting weird problems in the past where it turned out that
-changing kernel config bits changed the boot timing - that masked the
-original problem
+> On Mon, Oct 7, 2019 at 3:17 PM Anand Moon <linux.amoon@gmail.com> wrote:
+> [...]
+>> diff --git a/arch/arm64/configs/defconfig b/arch/arm64/configs/defconfig
+>> index c9a867ac32d4..72f6a7dca0d6 100644
+>> --- a/arch/arm64/configs/defconfig
+>> +++ b/arch/arm64/configs/defconfig
+>> @@ -774,7 +774,7 @@ CONFIG_MPL3115=m
+>>  CONFIG_PWM=y
+>>  CONFIG_PWM_BCM2835=m
+>>  CONFIG_PWM_CROS_EC=m
+>> -CONFIG_PWM_MESON=m
+>> +CONFIG_PWM_MESON=y
+>
+> some time ago I submitted a similar patch for the 32-bit SoCs
+> it turned that that pwm-meson can be built as module because the
+> kernel will run without CPU DVFS as long as the clock and regulator
+> drivers are returning -EPROBE_DEFER (-517)
+
+On 64-bit SoCs, the kernel boots with PWM as a module also, but DVFS
+only works sometimes, and making it built-in fixes the problem.
+Actually, it doesn't fix, it just hides the problem, which is likely a
+race or timeout happening during deferred probing.
+
+> did you check whether there's some other problem like some unused
+> clock which is being disabled at that moment?
+> I've been hunting weird problems in the past where it turned out that
+> changing kernel config bits changed the boot timing - that masked the
+> original problem
+
+Right, I would definitely prefer to not make this built-in without a lot
+more information to *why* this is needed.  In figuring that out, we'll
+probably find the race/timeout that's the root cause.
+
+Kevin
 
 
-Martin
 
 _______________________________________________
 linux-amlogic mailing list
