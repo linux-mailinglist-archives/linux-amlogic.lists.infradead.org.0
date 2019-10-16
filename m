@@ -2,64 +2,58 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B263ED8E96
-	for <lists+linux-amlogic@lfdr.de>; Wed, 16 Oct 2019 12:50:41 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B9D7DD8F68
+	for <lists+linux-amlogic@lfdr.de>; Wed, 16 Oct 2019 13:27:16 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=0z59CXMjXX9rfwn8iuRVcCpGVLEE7ZU3boQbrc9YCLM=; b=CccJe36Y8ign5H
-	2t1+DZue7FTtPf0aZEMYBF3n9oQt/W9gUJaXVlWjmY0Yj+zPotNjHEsbHHbOSey7XSbYFC3mK2X3K
-	/ib/my4bQKeErcXO6cET6IRrl9OPRngaGGvHBjfyBl7AVh6pz8dbnX/YHbh+4OhMs0KWnUr6urMW+
-	LHnCF4JYXyoZI2Sb5H/At4wfIe7FgIP2SSKxQTzceEKOk7pBTlBR9IcbDPQar9E/lbFbgHu8R0JT+
-	ywZ2dafgzPLr6ktEidME0zY6UKp6j8RLQnjTlZJypSHxD7ebj49hSBBeZxQETIVO+TIXNJfHecGa2
-	YX3cosvNy9F1qZO9wyXA==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
+	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=zz5FWu55Ny8ip3ZGAt2lguHCSRfArpl2Ys0IcVhO7MI=; b=HRJ3+2MZwmXYRB
+	oToVyoh4XXtUu4nFWNZm4oHjwFnhdu6vi3082odeD0u7nMi7c2a5eRoKSTtlwUQy9RxU8QN+YJgVx
+	SQbuu9hQtcOrqKabQGvv1NuvzD7MUWcfCu06SuSDzrFRyysVIdG+lAXHKO6pii0DViNrbKC/qs/HN
+	TOUofnjfvW7k4ED3a+0mU8x834eOuc78lKIdmB9gmdWqw7TBd9A7JD2+lSwDqgHoL8YDPW6wHpxkZ
+	UMnmgUo6lGf1Qb3/BH5lxnrRfbXzYktCQV+nJ7j2kRGnGKfiMGja99si8TWesSuDA/5butWq+g+vW
+	tUDa6oUVqjsSrFYcRzsQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iKgt5-0005tH-A3; Wed, 16 Oct 2019 10:50:39 +0000
-Received: from szxga05-in.huawei.com ([45.249.212.191] helo=huawei.com)
+	id 1iKhSQ-0005nO-GB; Wed, 16 Oct 2019 11:27:10 +0000
+Received: from mail-sh.amlogic.com ([58.32.228.43])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iKgpk-0001gx-IU; Wed, 16 Oct 2019 10:47:14 +0000
-Received: from DGGEMS410-HUB.china.huawei.com (unknown [172.30.72.60])
- by Forcepoint Email with ESMTP id 9F395AB5777B958083A6;
- Wed, 16 Oct 2019 18:47:10 +0800 (CST)
-Received: from localhost (10.133.213.239) by DGGEMS410-HUB.china.huawei.com
- (10.3.19.210) with Microsoft SMTP Server id 14.3.439.0; Wed, 16 Oct 2019
- 18:47:04 +0800
-From: YueHaibing <yuehaibing@huawei.com>
-To: <herbert@gondor.apana.org.au>, <mpm@selenic.com>, <arnd@arndb.de>,
- <gregkh@linuxfoundation.org>, <nicolas.ferre@microchip.com>,
- <alexandre.belloni@bootlin.com>, <ludovic.desroches@microchip.com>,
- <f.fainelli@gmail.com>, <rjui@broadcom.com>, <sbranden@broadcom.com>,
- <bcm-kernel-feedback-list@broadcom.com>, <eric@anholt.net>,
- <wahrenst@gmx.net>, <l.stelmach@samsung.com>, <kgene@kernel.org>,
- <krzk@kernel.org>, <khilman@baylibre.com>, <dsaxena@plexity.net>,
- <patrice.chotard@st.com>
-Subject: [PATCH -next 13/13] hwrng: xgene - use
- devm_platform_ioremap_resource() to simplify code
-Date: Wed, 16 Oct 2019 18:46:21 +0800
-Message-ID: <20191016104621.26056-14-yuehaibing@huawei.com>
-X-Mailer: git-send-email 2.10.2.windows.1
-In-Reply-To: <20191016104621.26056-1-yuehaibing@huawei.com>
-References: <20191016104621.26056-1-yuehaibing@huawei.com>
+ id 1iKhS9-0005eL-VP; Wed, 16 Oct 2019 11:26:55 +0000
+Received: from [10.18.29.227] (10.18.29.227) by mail-sh.amlogic.com
+ (10.18.11.5) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256) id 15.1.1591.10; Wed, 16 Oct
+ 2019 19:26:50 +0800
+Subject: Re: [PATCH RESEND v2 1/4] dt-bindings: power: add Amlogic secure
+ power domains bindings
+To: Rob Herring <robh@kernel.org>
+References: <1570695678-42623-1-git-send-email-jianxin.pan@amlogic.com>
+ <1570695678-42623-2-git-send-email-jianxin.pan@amlogic.com>
+ <20191014173900.GA6886@bogus>
+From: Jianxin Pan <jianxin.pan@amlogic.com>
+Message-ID: <622c7785-8254-5473-6b35-7287830f3c60@amlogic.com>
+Date: Wed, 16 Oct 2019 19:26:49 +0800
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:60.0) Gecko/20100101
+ Thunderbird/60.9.0
 MIME-Version: 1.0
-X-Originating-IP: [10.133.213.239]
-X-CFilter-Loop: Reflected
+In-Reply-To: <20191014173900.GA6886@bogus>
+Content-Language: en-US
+X-Originating-IP: [10.18.29.227]
+X-ClientProxiedBy: mail-sh.amlogic.com (10.18.11.5) To mail-sh.amlogic.com
+ (10.18.11.5)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191016_034712_810370_E6C5A71A 
-X-CRM114-Status: UNSURE (   9.22  )
+X-CRM114-CacheID: sfid-20191016_042654_011132_B5E71651 
+X-CRM114-Status: UNSURE (   9.16  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -2.3 (--)
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.3 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [45.249.212.191 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -71,51 +65,47 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: linux-samsung-soc@vger.kernel.org, YueHaibing <yuehaibing@huawei.com>,
- linux-kernel@vger.kernel.org, linux-rpi-kernel@lists.infradead.org,
- linux-amlogic@lists.infradead.org, linuxppc-dev@lists.ozlabs.org,
- linux-arm-kernel@lists.infradead.org, linux-crypto@vger.kernel.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: devicetree@vger.kernel.org, Hanjie Lin <hanjie.lin@amlogic.com>,
+ Victor Wan <victor.wan@amlogic.com>, linux-pm@vger.kernel.org,
+ Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
+ Kevin Hilman <khilman@baylibre.com>, Neil Armstrong <narmstrong@baylibre.com>,
+ linux-kernel@vger.kernel.org, Jian Hu <jian.hu@amlogic.com>,
+ Xingyu Chen <xingyu.chen@amlogic.com>, linux-amlogic@lists.infradead.org,
+ linux-arm-kernel@lists.infradead.org, Jerome Brunet <jbrunet@baylibre.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Use devm_platform_ioremap_resource() to simplify the code a bit.
-This is detected by coccinelle.
-
-Signed-off-by: YueHaibing <yuehaibing@huawei.com>
----
- drivers/char/hw_random/xgene-rng.c | 4 +---
- 1 file changed, 1 insertion(+), 3 deletions(-)
-
-diff --git a/drivers/char/hw_random/xgene-rng.c b/drivers/char/hw_random/xgene-rng.c
-index 7e568db..d7516a4 100644
---- a/drivers/char/hw_random/xgene-rng.c
-+++ b/drivers/char/hw_random/xgene-rng.c
-@@ -313,7 +313,6 @@ static struct hwrng xgene_rng_func = {
- 
- static int xgene_rng_probe(struct platform_device *pdev)
- {
--	struct resource *res;
- 	struct xgene_rng_dev *ctx;
- 	int rc = 0;
- 
-@@ -324,8 +323,7 @@ static int xgene_rng_probe(struct platform_device *pdev)
- 	ctx->dev = &pdev->dev;
- 	platform_set_drvdata(pdev, ctx);
- 
--	res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
--	ctx->csr_base = devm_ioremap_resource(&pdev->dev, res);
-+	ctx->csr_base = devm_platform_ioremap_resource(pdev, 0);
- 	if (IS_ERR(ctx->csr_base))
- 		return PTR_ERR(ctx->csr_base);
- 
--- 
-2.7.4
-
-
-
-_______________________________________________
-linux-amlogic mailing list
-linux-amlogic@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-amlogic
+SGkgUm9iLAoKT24gMjAxOS8xMC8xNSAxOjM5LCBSb2IgSGVycmluZyB3cm90ZToKPiBPbiBUaHUs
+IE9jdCAxMCwgMjAxOSBhdCAwNDoyMToxNUFNIC0wNDAwLCBKaWFueGluIFBhbiB3cm90ZToKPj4g
+QWRkIHRoZSBiaW5kaW5ncyBmb3IgdGhlIEFtbG9naWMgU2VjdXJlIHBvd2VyIGRvbWFpbnMsIGNv
+bnRyb2xsaW5nIHRoZQo+PiBzZWN1cmUgcG93ZXIgZG9tYWlucy4KPj4KPj4gVGhlIGJpbmRpbmdz
+IHRhcmdldHMgdGhlIEFtbG9naWMgQTEgYW5kIEMxIGNvbXBhdGlibGUgU29DcywgaW4gd2hpY2gg
+dGhlCj4+IHBvd2VyIGRvbWFpbiByZWdpc3RlcnMgYXJlIGluIHNlY3VyZSB3b3JsZC4KPj4KPj4g
+U2lnbmVkLW9mZi1ieTogSmlhbnhpbiBQYW4gPGppYW54aW4ucGFuQGFtbG9naWMuY29tPgo+PiAt
+LS0KPj4gIC4uLi9iaW5kaW5ncy9wb3dlci9hbWxvZ2ljLG1lc29uLXNlYy1wd3JjLnlhbWwgICAg
+IHwgNDIgKysrKysrKysrKysrKysrKysrKysrKwo+PiAgaW5jbHVkZS9kdC1iaW5kaW5ncy9wb3dl
+ci9tZXNvbi1hMS1wb3dlci5oICAgICAgICAgfCAzMiArKysrKysrKysrKysrKysrKwo+PiAgMiBm
+aWxlcyBjaGFuZ2VkLCA3NCBpbnNlcnRpb25zKCspCj4+ICBjcmVhdGUgbW9kZSAxMDA2NDQgRG9j
+dW1lbnRhdGlvbi9kZXZpY2V0cmVlL2JpbmRpbmdzL3Bvd2VyL2FtbG9naWMsbWVzb24tc2VjLXB3
+cmMueWFtbAo+PiArCj4+ICsgIHNlY3VyZS1tb25pdG9yOgo+PiArICAgIGRlc2NyaXB0aW9uOiBw
+aGFuZGxlIHRvIHRoZSBzZWN1cmUtbW9uaXRvciBub2RlCj4+ICsgICAgJHJlZjogL3NjaGVtYXMv
+dHlwZXMueWFtbCMvZGVmaW5pdGlvbnMvcGhhbmRsZQo+IAo+IFdoeSBub3QganVzdCBhIGNoaWxk
+IG5vZGUgb2YgdGhpcyBub2RlPwo+IApUaGFua3MgZm9yIHRoZSByZXZpZXcuCgpJIGZvbGxvd2Vk
+IHRoZSBzdHlsZSBvZiB0aGUgcHJldmlvdXMgc2VyaWVzIG9mIG1lc29u77yaCgogIDQ2ICAgICAg
+ICAgZWZ1c2U6IGVmdXNlIHsgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgIAogIDQ3ICAgICAgICAgICAgICAgICBjb21wYXRpYmxlID0gImFt
+bG9naWMsbWVzb24tZ3hiYi1lZnVzZSI7ICAgICAgICAgICAgICAgICAgICAgICAgIAogIDQ4ICAg
+ICAgICAgICAgICAgICBjbG9ja3MgPSA8JmNsa2MgQ0xLSURfRUZVU0U+OyAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgIAogIDQ5ICAgICAgICAgICAgICAgICAjYWRkcmVzcy1jZWxs
+cyA9IDwxPjsgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogIDUw
+ICAgICAgICAgICAgICAgICAjc2l6ZS1jZWxscyA9IDwxPjsgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgIAogIDUxICAgICAgICAgICAgICAgICByZWFkLW9ubHk7
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAog
+IDUyICAgICAgICAgICAgICAgICBzZWN1cmUtbW9uaXRvciA9IDwmc20+OyAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogIDUzICAgICAgICAgfTsKCj4gUm9iCj4gCj4g
+Lgo+IAoKCl9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fCmxp
+bnV4LWFtbG9naWMgbWFpbGluZyBsaXN0CmxpbnV4LWFtbG9naWNAbGlzdHMuaW5mcmFkZWFkLm9y
+ZwpodHRwOi8vbGlzdHMuaW5mcmFkZWFkLm9yZy9tYWlsbWFuL2xpc3RpbmZvL2xpbnV4LWFtbG9n
+aWMK
