@@ -2,32 +2,32 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C45B4D8E8B
-	for <lists+linux-amlogic@lfdr.de>; Wed, 16 Oct 2019 12:49:14 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 28341D8E8D
+	for <lists+linux-amlogic@lfdr.de>; Wed, 16 Oct 2019 12:49:21 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=KjSj1ZJgsimbrpX4hewNAfPCotMet3QSqlRwiZ6hm/U=; b=eT5m4IStM2bYKd
-	/eZtcgE1SStkrxPAXx/3dm/KNRo0x5fDlv1VRwjksjif0UrQhvxDqL5dhfl0nT7uyBvrj/2fh0scT
-	2/11pmlwvz/KbR1mvCFqL+VTM61fw+l5sCYVcWvifIvS6JQU0lggbfrt2zZveB4bw79E7wS2MiaDR
-	sfM3w0K0DvftgWLseCnVQeOsbYqxKztkFldKaxOVUAbreuPMOwO2kfHFNuMIl1uZk6X4qUbyjKohv
-	ZLYOjIdGtY3wor9TEA8PPeKH69AqMk4BDO+V+jt3nJRegDU203o/9D0TrCXBWTkiksa0+7POXmxPi
-	WRgNObm6ftQnu44X2IWQ==;
+	List-Owner; bh=xJjWpGjs3Bmvxt3E4+gsghsQ/l7OM3QuePxRBhZ4v6E=; b=d8xA9k9neatcY8
+	MqUxE1Gk0WIQ96nYnLyXmU0BkewyxrzoJYChxlWjq8ApUWGkLNUvMvewD5iz74yYsbjHMgIran/FV
+	bR0NWSU/UWO7hVYw/1fO1COpB5dIubViJEV57SIQFCBRW4KfHnNarF4Q7MXEPJfFE9z9I1qjcv9bS
+	4D6Wo/hXdM4Hqs2EpNkO2YhsbtC08MMrehRmNJFd395fUJ0hd4dgBOPeyG+/mVCobg1tzxYTNnayQ
+	gOUYFfydgEnNpOODEMVcxirHDc+aQ4YnO+L47EY1FwGrheiG4/sG6aXIRlm9MQkUTrzF2O24zwMp1
+	xwlP4SDPt0R09SXR8RQw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iKgrf-0003RJ-0A; Wed, 16 Oct 2019 10:49:11 +0000
-Received: from szxga06-in.huawei.com ([45.249.212.32] helo=huawei.com)
+	id 1iKgrn-0003ao-CY; Wed, 16 Oct 2019 10:49:19 +0000
+Received: from szxga07-in.huawei.com ([45.249.212.35] helo=huawei.com)
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iKgpa-0001Z4-F7; Wed, 16 Oct 2019 10:47:03 +0000
-Received: from DGGEMS406-HUB.china.huawei.com (unknown [172.30.72.59])
- by Forcepoint Email with ESMTP id 63C8FED70F4B7B250492;
- Wed, 16 Oct 2019 18:47:00 +0800 (CST)
-Received: from localhost (10.133.213.239) by DGGEMS406-HUB.china.huawei.com
- (10.3.19.206) with Microsoft SMTP Server id 14.3.439.0; Wed, 16 Oct 2019
- 18:46:52 +0800
+ id 1iKgpe-0001ce-Na; Wed, 16 Oct 2019 10:47:08 +0000
+Received: from DGGEMS401-HUB.china.huawei.com (unknown [172.30.72.58])
+ by Forcepoint Email with ESMTP id D622657E9FA331F7CEE7;
+ Wed, 16 Oct 2019 18:47:04 +0800 (CST)
+Received: from localhost (10.133.213.239) by DGGEMS401-HUB.china.huawei.com
+ (10.3.19.201) with Microsoft SMTP Server id 14.3.439.0; Wed, 16 Oct 2019
+ 18:46:54 +0800
 From: YueHaibing <yuehaibing@huawei.com>
 To: <herbert@gondor.apana.org.au>, <mpm@selenic.com>, <arnd@arndb.de>,
  <gregkh@linuxfoundation.org>, <nicolas.ferre@microchip.com>,
@@ -37,10 +37,10 @@ To: <herbert@gondor.apana.org.au>, <mpm@selenic.com>, <arnd@arndb.de>,
  <wahrenst@gmx.net>, <l.stelmach@samsung.com>, <kgene@kernel.org>,
  <krzk@kernel.org>, <khilman@baylibre.com>, <dsaxena@plexity.net>,
  <patrice.chotard@st.com>
-Subject: [PATCH -next 08/13] hwrng: omap - use
+Subject: [PATCH -next 09/13] hwrng: pasemi - use
  devm_platform_ioremap_resource() to simplify code
-Date: Wed, 16 Oct 2019 18:46:16 +0800
-Message-ID: <20191016104621.26056-9-yuehaibing@huawei.com>
+Date: Wed, 16 Oct 2019 18:46:17 +0800
+Message-ID: <20191016104621.26056-10-yuehaibing@huawei.com>
 X-Mailer: git-send-email 2.10.2.windows.1
 In-Reply-To: <20191016104621.26056-1-yuehaibing@huawei.com>
 References: <20191016104621.26056-1-yuehaibing@huawei.com>
@@ -48,8 +48,8 @@ MIME-Version: 1.0
 X-Originating-IP: [10.133.213.239]
 X-CFilter-Loop: Reflected
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191016_034702_701200_FDDA1BF0 
-X-CRM114-Status: UNSURE (   8.39  )
+X-CRM114-CacheID: sfid-20191016_034706_974021_A7718461 
+X-CRM114-Status: UNSURE (   8.49  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -57,7 +57,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [45.249.212.32 listed in list.dnswl.org]
+ medium trust [45.249.212.35 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
 X-BeenThere: linux-amlogic@lists.infradead.org
@@ -85,31 +85,25 @@ This is detected by coccinelle.
 
 Signed-off-by: YueHaibing <yuehaibing@huawei.com>
 ---
- drivers/char/hw_random/omap-rng.c | 4 +---
+ drivers/char/hw_random/pasemi-rng.c | 4 +---
  1 file changed, 1 insertion(+), 3 deletions(-)
 
-diff --git a/drivers/char/hw_random/omap-rng.c b/drivers/char/hw_random/omap-rng.c
-index b27f396..b3f4a00 100644
---- a/drivers/char/hw_random/omap-rng.c
-+++ b/drivers/char/hw_random/omap-rng.c
-@@ -432,7 +432,6 @@ static int get_omap_rng_device_details(struct omap_rng_dev *omap_rng)
- static int omap_rng_probe(struct platform_device *pdev)
+diff --git a/drivers/char/hw_random/pasemi-rng.c b/drivers/char/hw_random/pasemi-rng.c
+index 24b1460..2498d4e 100644
+--- a/drivers/char/hw_random/pasemi-rng.c
++++ b/drivers/char/hw_random/pasemi-rng.c
+@@ -86,10 +86,8 @@ static struct hwrng pasemi_rng = {
+ static int rng_probe(struct platform_device *pdev)
  {
- 	struct omap_rng_dev *priv;
+ 	void __iomem *rng_regs;
 -	struct resource *res;
- 	struct device *dev = &pdev->dev;
- 	int ret;
- 
-@@ -449,8 +448,7 @@ static int omap_rng_probe(struct platform_device *pdev)
- 	platform_set_drvdata(pdev, priv);
- 	priv->dev = dev;
  
 -	res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
--	priv->base = devm_ioremap_resource(dev, res);
-+	priv->base = devm_platform_ioremap_resource(pdev, 0);
- 	if (IS_ERR(priv->base)) {
- 		ret = PTR_ERR(priv->base);
- 		goto err_ioremap;
+-	rng_regs = devm_ioremap_resource(&pdev->dev, res);
++	rng_regs = devm_platform_ioremap_resource(pdev, 0);
+ 	if (IS_ERR(rng_regs))
+ 		return PTR_ERR(rng_regs);
+ 
 -- 
 2.7.4
 
