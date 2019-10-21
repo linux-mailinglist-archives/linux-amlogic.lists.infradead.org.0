@@ -2,80 +2,84 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id DA046DE7E7
-	for <lists+linux-amlogic@lfdr.de>; Mon, 21 Oct 2019 11:19:31 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id A1BAADE7EB
+	for <lists+linux-amlogic@lfdr.de>; Mon, 21 Oct 2019 11:19:52 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=n4hb1okdiefsktUnV1mqFdPwxNAkSQiapQuoxIUh7SA=; b=dohUwaNiWltIGq
-	OVW4mfPcnnHt1ZGsXd0l5C/I2XNbyrmalTbk7ZHQDoeEt+F6OeS6I5iGuKbxT70EeaDzER7QFarne
-	qB1D9kEIgnrhucIwLTfZb3u217ZTUK2FE3UkobQriYIlA6JdFC/W3BxT9iwNDuilBwfwtJVTBNUka
-	jAUjNSiVgT26S6rrwY5g81TU4Ow1UGrX3l6UrmPVSO/QXiYTVbSmxPgY1Azp0OsWL9igDlqa6YxO4
-	Ba6OarKJGL1ctF15eHV0RdSbIAuFZnZCWTp5v9OxAz66gRKwMgbBDVl4w+t0+CnqtE+T2Uo1snP5p
-	nyQevuzpWqhu7vvjPpHw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:
+	In-reply-to:Subject:To:From:References:Reply-To:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:List-Owner;
+	bh=I8GNSw+XdC60QrNw/cgTBRnIancXuBwaPlnXhxq6VcY=; b=p3aSih4G/Uz81DonXU6/XdnTyo
+	pdsoZzVa8aey6OAHF8I83CYjIjlWwpNB8E5+PChx/2R3C/7jWxlsi1a5pGj3ekvZqC7MRs87++AtI
+	fXG6xBH0utKtjxXoO6AAdhKrgZ7UdUyM130e0M0wZGB67ROloK34vCf/mKua/wqlmqqoCp32ZPn1M
+	Jra6BxZoRPhcpN6pX/U5gC8pEwgo/l5C4QyfD3XL52rKzfIDiE2AsA028Ezf+dy+a0KqDIidREmwO
+	MNRmSjL+L1eqBXFHTAu/bBaN2w6UcF3lk5cAmgXcUXqhRbREb/zMGU8Mg/Z1yZmo81k0oHQ8wMy8e
+	tz62rlkQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iMTqY-0005m4-Vq; Mon, 21 Oct 2019 09:19:26 +0000
-Received: from mail-wm1-x344.google.com ([2a00:1450:4864:20::344])
+	id 1iMTqv-00068P-1a; Mon, 21 Oct 2019 09:19:49 +0000
+Received: from mail-wm1-x342.google.com ([2a00:1450:4864:20::342])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iMTma-0002kN-IE
- for linux-amlogic@lists.infradead.org; Mon, 21 Oct 2019 09:15:28 +0000
-Received: by mail-wm1-x344.google.com with SMTP id i16so12381047wmd.3
- for <linux-amlogic@lists.infradead.org>; Mon, 21 Oct 2019 02:15:20 -0700 (PDT)
+ id 1iMToW-0004A6-VL
+ for linux-amlogic@lists.infradead.org; Mon, 21 Oct 2019 09:17:24 +0000
+Received: by mail-wm1-x342.google.com with SMTP id f22so11953657wmc.2
+ for <linux-amlogic@lists.infradead.org>; Mon, 21 Oct 2019 02:17:19 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=from:to:cc:subject:date:message-id:in-reply-to:references
- :mime-version:content-transfer-encoding;
- bh=BI7/GGnf7LyKGTIxdHfJEkCTbGlJPGbjilZnBILY85c=;
- b=ER00yFInnm2n+UrJGw6fSOXxdGwLgCwHMOoyd15c4MEBVt0/lH1dhBMwlPTfTEr6Ee
- ngHglotiy5TmUP7YrDOkwVX3FuwVcsbF2RqsedolqLyiqQo31pXn1FRXtuXfEFU+IrpQ
- LwkQW4OUW5VqmQIGuz9OAffD90RB8x73MnSUDQlaXV2HaGA++7EP192vUy0BxnwKRseA
- 9BQp7atfM/UnXYf6VDuAHXNPbOa/W3LeVrWzSKuaq8/Axg6Ow7ZkzpiD0lbXMkTvn2X1
- ag5pzZgLM1Pk02kyDzNKg0fnFF6eiOYS6ndxt69PbFV3YQLdmzLPZ+TKq02f+dCFrqCT
- JDQg==
+ h=references:user-agent:from:to:cc:subject:in-reply-to:date
+ :message-id:mime-version;
+ bh=fyXVzNh3bAaYBk42fBdJzICclG09jxX+kSBbHAatABk=;
+ b=p4S4M34gvq7oiAB7J7289QTGzutBGVytHXmZcMwYdJALNOpROj/preCC22gLSwW5TA
+ SZs3A+KB5ZLSMPlDwl+QqnbvsdWVWFULUMjp9tYBU0MwSYNvYf9UUTMNbRmzMM1EnayT
+ 578LwJ+f5/z6e/UV0xFr1Tgnd3uik7trySc2j5I4N0yn8wCA9nzqA/oR4CQk7UXXjaTP
+ +VKoQ4TUgX0iNs0XTVtH+X7HcNzxcButh2wy1rSmARSZmcuZm14bzgbx8Vq7CvY2qMMX
+ f/lEMkuP1Evq6gn2STPlsSqrhq3BURnK3x9rCVJ2tO/KCFF3HQ/jv3lr8L34ooUyPPHi
+ u5lw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
- :references:mime-version:content-transfer-encoding;
- bh=BI7/GGnf7LyKGTIxdHfJEkCTbGlJPGbjilZnBILY85c=;
- b=gqwOVH+tdvChTxqP80vMt/ltdgfPoLdB2H+G7xGECKdJZ0Swmyl75P0/2e39/XY4KN
- O3OXmzGearQuZNpdgs/O7NiO5xkKWJ9tcJKiy4r/OeKb3b3XR/WtLE7A2lpOQOQ884IH
- /ZTYDGbaWWKJlansTkmqJM+LUzuY940suveRX+pqQE2p+2RmXOszNPwvBb8UYozccKLk
- wlVKEluwn0WCXZYhwXOkXLPZUwtK3nkYtUYeCFaZGj00ddysNUnHnfj8qM6YnXpRcd4m
- H1h5WegbJw6Ou2+w4aUYtw6sPQu3luQ78eCUjDYZcAcfpHQatQxO+pJIC3WatjyLPXIv
- hnJA==
-X-Gm-Message-State: APjAAAUSpLRU6WMgllbxGCCdQjWdvviGkqkH58uMJs3NJDLOboqWDt5R
- ZGk1SNpFR4FrQw+QbWsKiB0I0g==
-X-Google-Smtp-Source: APXvYqz5kg405DoTSLqWUJdxrTCmpf7doYKj695/q7infDCDeYEQdJqYii08eWdp4wLiFzTD2WKxIg==
-X-Received: by 2002:a1c:a657:: with SMTP id p84mr5141637wme.35.1571649318821; 
- Mon, 21 Oct 2019 02:15:18 -0700 (PDT)
-Received: from localhost.localdomain
- (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
- by smtp.gmail.com with ESMTPSA id t13sm20281595wra.70.2019.10.21.02.15.18
+ h=x-gm-message-state:references:user-agent:from:to:cc:subject
+ :in-reply-to:date:message-id:mime-version;
+ bh=fyXVzNh3bAaYBk42fBdJzICclG09jxX+kSBbHAatABk=;
+ b=jzjV7fdit+9AQHvrzX+liDQ4G1UB3aKvy6DYjXIzas5gPbidGPnS9N3BUCFNpksXLl
+ kHaQaGLh+9KgaUf7ddhu9IGTwsmTgx7onSyMdBBhXZ9mwL4zGCKcqjVMk4AZ4LDV3lFo
+ GIzns6sm0toX8rvqGcmM1a2TPqBaAyJfthRZEFAUCOi8uNvsLcYqYxKgLpQbee03F33M
+ G5f6epWs4N8ecSYPrfiiHpryqYVwfIej6PJyihy8M4YYkqzj3/F0tj3ZTeLyGsqgRlFH
+ 7fXQ4AaowtbzRWvNDfGvx++m5+R2HemEj+Romw38nYbOv4smRjBZPi4WrHCQ5Xix+50n
+ r20A==
+X-Gm-Message-State: APjAAAUknSR4FJv/PpzeeB/YdMbaZB+8e8kIyvrmPZx6FzOrg3XZc74R
+ oEKppd7o7qEVTwNYyVlZ8NDGZQ==
+X-Google-Smtp-Source: APXvYqw+pd4xa5lgOL/v6WOYLZfNpXm5PjaGaVCXIE4K2rWe5kR78a5m76bsxJwfBU9kEbLI6J5SiA==
+X-Received: by 2002:a1c:ed04:: with SMTP id l4mr19199540wmh.116.1571649437343; 
+ Mon, 21 Oct 2019 02:17:17 -0700 (PDT)
+Received: from localhost (lmontsouris-657-1-212-31.w90-63.abo.wanadoo.fr.
+ [90.63.244.31])
+ by smtp.gmail.com with ESMTPSA id f6sm13170666wrm.61.2019.10.21.02.17.16
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Mon, 21 Oct 2019 02:15:18 -0700 (PDT)
-From: Neil Armstrong <narmstrong@baylibre.com>
-To: dri-devel@lists.freedesktop.org
-Subject: [PATCH v3 9/9] drm/meson: crtc: add OSD1 plane AFBC commit
-Date: Mon, 21 Oct 2019 11:15:09 +0200
-Message-Id: <20191021091509.3864-10-narmstrong@baylibre.com>
-X-Mailer: git-send-email 2.22.0
-In-Reply-To: <20191021091509.3864-1-narmstrong@baylibre.com>
-References: <20191021091509.3864-1-narmstrong@baylibre.com>
+ Mon, 21 Oct 2019 02:17:16 -0700 (PDT)
+References: <1571637541-119016-1-git-send-email-jianxin.pan@amlogic.com>
+ <fc1f61e1-b156-11e6-3f21-c498d2f0a8c6@baylibre.com>
+User-agent: mu4e 1.3.3; emacs 26.2
+From: Jerome Brunet <jbrunet@baylibre.com>
+To: Neil Armstrong <narmstrong@baylibre.com>,
+ Jianxin Pan <jianxin.pan@amlogic.com>, Ulf Hansson <ulf.hansson@linaro.org>,
+ Kevin Hilman <khilman@baylibre.com>
+Subject: Re: [PATCH] mmc: fix mmc dma operation
+In-reply-to: <fc1f61e1-b156-11e6-3f21-c498d2f0a8c6@baylibre.com>
+Date: Mon, 21 Oct 2019 11:17:15 +0200
+Message-ID: <1jwocybgpw.fsf@starbuckisacylon.baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191021_021520_645420_6C7C849C 
-X-CRM114-Status: GOOD (  14.60  )
+X-CRM114-CacheID: sfid-20191021_021721_200855_3115EC14 
+X-CRM114-Status: GOOD (  18.18  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:344 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:342 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -93,186 +97,119 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: khilman@baylibre.com, linux-amlogic@lists.infradead.org,
- ayan.halder@arm.com, linux-arm-kernel@lists.infradead.org,
- Neil Armstrong <narmstrong@baylibre.com>
+Cc: linux-amlogic@lists.infradead.org, linux-mmc@vger.kernel.org,
+ Nan Li <nan.li@amlogic.com>, Victor Wan <victor.wan@amlogic.com>,
+ linux-kernel@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Finally, setup the VIU registers and start the AFBC decoder to support
-displaying AFBC encoded buffers on Amlogic GXM and G12A SoCs.
 
-The RDMA is used here to reset and program the AFBC decoder unit
-on each vsync without involving the interrupt handler that can
-be masked for a long period of time, producing display glitches.
+On Mon 21 Oct 2019 at 09:57, Neil Armstrong <narmstrong@baylibre.com> wrote:
 
-The vsync irq must still be left enabled otherwise the RDMA modules isn't
-trigerred when the interrupt line is masked.
+> Hi,
+>
+> Thanks for the fix.
+>
+> First, you should add "mmc: meson-gx:" in the subject.
+>
+> On 21/10/2019 07:59, Jianxin Pan wrote:
+>> From: Nan Li <nan.li@amlogic.com>
+>> 
+>> In MMC dma transfer, the region requested by dma_map_sg() may be released
+>> by dma_unmap_sg() before the transfer is completed.
+>> 
+>> Put the unmap operation in front of mmc_request_done() to avoid this.
+>
 
-Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
----
- drivers/gpu/drm/meson/meson_crtc.c | 77 ++++++++++++++++++++++++++++--
- 1 file changed, 72 insertions(+), 5 deletions(-)
+Since we have seen this problem (yet), could you briefly how you've
+triggered it ?
 
-diff --git a/drivers/gpu/drm/meson/meson_crtc.c b/drivers/gpu/drm/meson/meson_crtc.c
-index d478fa232951..8366a0ed37af 100644
---- a/drivers/gpu/drm/meson/meson_crtc.c
-+++ b/drivers/gpu/drm/meson/meson_crtc.c
-@@ -23,7 +23,9 @@
- #include "meson_registers.h"
- #include "meson_venc.h"
- #include "meson_viu.h"
-+#include "meson_rdma.h"
- #include "meson_vpp.h"
-+#include "meson_osd_afbcd.h"
- 
- #define MESON_G12A_VIU_OFFSET	0x5ec0
- 
-@@ -35,7 +37,11 @@ struct meson_crtc {
- 	struct meson_drm *priv;
- 	void (*enable_osd1)(struct meson_drm *priv);
- 	void (*enable_vd1)(struct meson_drm *priv);
-+	void (*enable_osd1_afbc)(struct meson_drm *priv);
-+	void (*disable_osd1_afbc)(struct meson_drm *priv);
- 	unsigned int viu_offset;
-+	bool vsync_forced;
-+	bool vsync_disabled;
- };
- #define to_meson_crtc(x) container_of(x, struct meson_crtc, base)
- 
-@@ -46,6 +52,7 @@ static int meson_crtc_enable_vblank(struct drm_crtc *crtc)
- 	struct meson_crtc *meson_crtc = to_meson_crtc(crtc);
- 	struct meson_drm *priv = meson_crtc->priv;
- 
-+	meson_crtc->vsync_disabled = false;
- 	meson_venc_enable_vsync(priv);
- 
- 	return 0;
-@@ -56,7 +63,10 @@ static void meson_crtc_disable_vblank(struct drm_crtc *crtc)
- 	struct meson_crtc *meson_crtc = to_meson_crtc(crtc);
- 	struct meson_drm *priv = meson_crtc->priv;
- 
--	meson_venc_disable_vsync(priv);
-+	if (!meson_crtc->vsync_forced) {
-+		meson_crtc->vsync_disabled = true;
-+		meson_venc_disable_vsync(priv);
-+	}
- }
- 
- static const struct drm_crtc_funcs meson_crtc_funcs = {
-@@ -236,6 +246,26 @@ static void meson_crtc_enable_osd1(struct meson_drm *priv)
- 			    priv->io_base + _REG(VPP_MISC));
- }
- 
-+static void meson_crtc_g12a_enable_osd1_afbc(struct meson_drm *priv)
-+{
-+	writel_relaxed(priv->viu.osd1_blk2_cfg4,
-+		       priv->io_base + _REG(VIU_OSD1_BLK2_CFG_W4));
-+
-+	writel_bits_relaxed(OSD_MEM_LINEAR_ADDR, OSD_MEM_LINEAR_ADDR,
-+			    priv->io_base + _REG(VIU_OSD1_CTRL_STAT));
-+
-+	writel_relaxed(priv->viu.osd1_blk1_cfg4,
-+		       priv->io_base + _REG(VIU_OSD1_BLK1_CFG_W4));
-+
-+	meson_viu_g12a_enable_osd1_afbc(priv);
-+
-+	writel_bits_relaxed(OSD_MEM_LINEAR_ADDR, OSD_MEM_LINEAR_ADDR,
-+			    priv->io_base + _REG(VIU_OSD1_CTRL_STAT));
-+
-+	writel_bits_relaxed(OSD_MALI_SRC_EN, OSD_MALI_SRC_EN,
-+			    priv->io_base + _REG(VIU_OSD1_BLK0_CFG_W0));
-+}
-+
- static void meson_g12a_crtc_enable_osd1(struct meson_drm *priv)
- {
- 	writel_relaxed(priv->viu.osd_blend_din0_scope_h,
-@@ -293,6 +323,20 @@ void meson_crtc_irq(struct meson_drm *priv)
- 				priv->io_base + _REG(VIU_OSD1_BLK0_CFG_W3));
- 		writel_relaxed(priv->viu.osd1_blk0_cfg[4],
- 				priv->io_base + _REG(VIU_OSD1_BLK0_CFG_W4));
-+
-+		if (priv->viu.osd1_afbcd) {
-+			if (meson_crtc->enable_osd1_afbc)
-+				meson_crtc->enable_osd1_afbc(priv);
-+		} else {
-+			if (meson_crtc->disable_osd1_afbc)
-+				meson_crtc->disable_osd1_afbc(priv);
-+			if (priv->afbcd.ops) {
-+				priv->afbcd.ops->reset(priv);
-+				priv->afbcd.ops->disable(priv);
-+			}
-+			meson_crtc->vsync_forced = false;
-+		}
-+
- 		writel_relaxed(priv->viu.osd_sc_ctrl0,
- 				priv->io_base + _REG(VPP_OSD_SC_CTRL0));
- 		writel_relaxed(priv->viu.osd_sc_i_wh_m1,
-@@ -314,15 +358,25 @@ void meson_crtc_irq(struct meson_drm *priv)
- 		writel_relaxed(priv->viu.osd_sc_v_ctrl0,
- 				priv->io_base + _REG(VPP_OSD_VSC_CTRL0));
- 
--		meson_canvas_config(priv->canvas, priv->canvas_id_osd1,
--				priv->viu.osd1_addr, priv->viu.osd1_stride,
--				priv->viu.osd1_height, MESON_CANVAS_WRAP_NONE,
--				MESON_CANVAS_BLKMODE_LINEAR, 0);
-+		if (!priv->viu.osd1_afbcd)
-+			meson_canvas_config(priv->canvas, priv->canvas_id_osd1,
-+					    priv->viu.osd1_addr,
-+					    priv->viu.osd1_stride,
-+					    priv->viu.osd1_height,
-+					    MESON_CANVAS_WRAP_NONE,
-+					    MESON_CANVAS_BLKMODE_LINEAR, 0);
- 
- 		/* Enable OSD1 */
- 		if (meson_crtc->enable_osd1)
- 			meson_crtc->enable_osd1(priv);
- 
-+		if (priv->viu.osd1_afbcd) {
-+			priv->afbcd.ops->reset(priv);
-+			priv->afbcd.ops->setup(priv);
-+			priv->afbcd.ops->enable(priv);
-+			meson_crtc->vsync_forced = true;
-+		}
-+
- 		priv->viu.osd1_commit = false;
- 	}
- 
-@@ -545,6 +599,9 @@ void meson_crtc_irq(struct meson_drm *priv)
- 		priv->viu.vd1_commit = false;
- 	}
- 
-+	if (meson_crtc->vsync_disabled)
-+		return;
-+
- 	drm_crtc_handle_vblank(priv->crtc);
- 
- 	spin_lock_irqsave(&priv->drm->event_lock, flags);
-@@ -581,10 +638,20 @@ int meson_crtc_create(struct meson_drm *priv)
- 		meson_crtc->enable_osd1 = meson_g12a_crtc_enable_osd1;
- 		meson_crtc->enable_vd1 = meson_g12a_crtc_enable_vd1;
- 		meson_crtc->viu_offset = MESON_G12A_VIU_OFFSET;
-+		meson_crtc->enable_osd1_afbc =
-+					meson_crtc_g12a_enable_osd1_afbc;
-+		meson_crtc->disable_osd1_afbc =
-+					meson_viu_g12a_disable_osd1_afbc;
- 		drm_crtc_helper_add(crtc, &meson_g12a_crtc_helper_funcs);
- 	} else {
- 		meson_crtc->enable_osd1 = meson_crtc_enable_osd1;
- 		meson_crtc->enable_vd1 = meson_crtc_enable_vd1;
-+		if (meson_vpu_is_compatible(priv, VPU_COMPATIBLE_GXM)) {
-+			meson_crtc->enable_osd1_afbc =
-+					meson_viu_gxm_enable_osd1_afbc;
-+			meson_crtc->disable_osd1_afbc =
-+					meson_viu_gxm_disable_osd1_afbc;
-+		}
- 		drm_crtc_helper_add(crtc, &meson_crtc_helper_funcs);
- 	}
- 
--- 
-2.22.0
+>
+> You should add a "Fixes:" tag so it can be backported on stable kernels.
+>
+>> 
+>> Signed-off-by: Nan Li <nan.li@amlogic.com>
+>> Signed-off-by: Jianxin Pan <jianxin.pan@amlogic.com>
+>> ---
+>>  drivers/mmc/host/meson-gx-mmc.c | 15 ++++++++-------
+>>  1 file changed, 8 insertions(+), 7 deletions(-)
+>> 
+>> diff --git a/drivers/mmc/host/meson-gx-mmc.c b/drivers/mmc/host/meson-gx-mmc.c
+>> index e712315..7667e8a 100644
+>> --- a/drivers/mmc/host/meson-gx-mmc.c
+>> +++ b/drivers/mmc/host/meson-gx-mmc.c
+>> @@ -173,6 +173,7 @@ struct meson_host {
+>>  	int irq;
+>>  
+>>  	bool vqmmc_enabled;
+>> +	bool needs_pre_post_req;
+>>  };
+>>  
+>>  #define CMD_CFG_LENGTH_MASK GENMASK(8, 0)
+>> @@ -654,6 +655,8 @@ static void meson_mmc_request_done(struct mmc_host *mmc,
+>>  	struct meson_host *host = mmc_priv(mmc);
+>>  
+>>  	host->cmd = NULL;
+>> +	if (host->needs_pre_post_req)
+>> +		meson_mmc_post_req(mmc, mrq, 0);
+>>  	mmc_request_done(host->mmc, mrq);
+>>  }
+>>  
+>> @@ -803,25 +806,23 @@ static void meson_mmc_start_cmd(struct mmc_host *mmc, struct mmc_command *cmd)
+>>  static void meson_mmc_request(struct mmc_host *mmc, struct mmc_request *mrq)
+>>  {
+>>  	struct meson_host *host = mmc_priv(mmc);
+>> -	bool needs_pre_post_req = mrq->data &&
+>> +
+>> +	host->needs_pre_post_req = mrq->data &&
+>>  			!(mrq->data->host_cookie & SD_EMMC_PRE_REQ_DONE);
+>>  
+>> -	if (needs_pre_post_req) {
+>> +	if (host->needs_pre_post_req) {
+>>  		meson_mmc_get_transfer_mode(mmc, mrq);
+>>  		if (!meson_mmc_desc_chain_mode(mrq->data))
+>> -			needs_pre_post_req = false;
+>> +			host->needs_pre_post_req = false;
+>>  	}
+>>  
+>> -	if (needs_pre_post_req)
+>> +	if (host->needs_pre_post_req)
+>>  		meson_mmc_pre_req(mmc, mrq);
+>>  
+>>  	/* Stop execution */
+>>  	writel(0, host->regs + SD_EMMC_START);
+>>  
+>>  	meson_mmc_start_cmd(mmc, mrq->sbc ?: mrq->cmd);
+>> -
+>> -	if (needs_pre_post_req)
+>> -		meson_mmc_post_req(mmc, mrq, 0);
+>>  }
+
+The code around all this is getting quite difficult to follow eventhough
+it does not actually do much
+
+The root of the problem seems be that meson_mmc_pre_req() and
+meson_mmc_post_req() are passed to framework but also called manually
+from meson_mmc_request().
+
+Because of this, some code is added to make sure we don't do things twice.
+Maybe I'm missing something but it look weird ? Ulf, could you give us
+your view ?
+
+As far as I can tell:
+ * pre_req : determine if we use CHAIN_MODE or not AND
+             dma_map_sg() if we do
+ * post_req : dma_unmap_sg() if previously allocated
+
+Do we really need to do all this meson_mmc_request() ? Shouldn't we let the
+framework do the calls to pre/post_req for us ?
+
+>>  
+>>  static void meson_mmc_read_resp(struct mmc_host *mmc, struct mmc_command *cmd)
+>>
+> Neil
 
 
 _______________________________________________
