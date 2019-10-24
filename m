@@ -2,51 +2,86 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E7138E3BC3
-	for <lists+linux-amlogic@lfdr.de>; Thu, 24 Oct 2019 21:04:18 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B8892E3C68
+	for <lists+linux-amlogic@lfdr.de>; Thu, 24 Oct 2019 21:51:00 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:Cc:
-	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
-	In-Reply-To:MIME-Version:References:Message-ID:Subject:To:From:Date:Reply-To:
-	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=Ai/T7xQbFSkC8A87l7BH+jbg8QFdSwOov93wgWtx3sk=; b=HZPduu400yJqZ19m+TkfRUiE5
-	f/jxtADZGZb+mFemiNO2CuyzW4lOgh6W/ggoXCfuMOuMvum7ph7q4KUHUB5dcPPEtD17QBkmzPCUM
-	q9ACSRLnzrBHOkHH1h+XjMVud70fswzY2amTJKziP4tmBB7XPgvC66zbHjbV+CM4svGWa4yRldO/C
-	TVdTd2yxWjIytO8gJscV2H6T3bN5VsiP+nGOScqYJKhM9HxyImhVbWhrteV4hngrSFbRuDsv43DDs
-	PjfxCJgX+FWOcPP4ImRKwFPOcZBCXz7nbT+HeYWDeYTj+YJTBzbthLF0O1HPg/+Wow0qz6LPCtogR
-	zMSOwy7fg==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=hcYoDNPLovnWoA8dCIDpV3zIiwk36tresz+ODM/LHAw=; b=Im6LMOVE5y/X4r
+	xcqkY6OjcFziDYG6nptuG1qw4s7KXxGuUJ5ppXZA7qRd7oJ1t46uuNdE9fQUQdUETiqXXX67xWDB/
+	S8GUpaBrU96vQu7HEiD7O1Ges2EYtWOxU4lDJND3r7BEw2jn0NLcbezPaHjAyUXYLVbMvLnUz/fyA
+	/eTWIUDvrYZdXaPQrxqkUz2YmYzvAUieItRmrOYQs68pyvQ27t+1leUoz0vqY/nGardbJ0/mWVEvX
+	Fh898J7PkhS+ZBC1PfN0X3BiUVhcSOpI4ANulMCPhgrPETB2TrDYKyADowWQIVdc2qhhN1zQQdQ06
+	nFosoNI22BlaiND8fwsg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iNiP6-0007XR-S5; Thu, 24 Oct 2019 19:04:12 +0000
-Received: from sauhun.de ([88.99.104.3] helo=pokefinder.org)
- by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iNiP3-0007Wx-2S; Thu, 24 Oct 2019 19:04:10 +0000
-Received: from localhost (x4d0bc9de.dyn.telefonica.de [77.11.201.222])
- by pokefinder.org (Postfix) with ESMTPSA id 4C7302C011D;
- Thu, 24 Oct 2019 21:04:08 +0200 (CEST)
-Date: Thu, 24 Oct 2019 21:04:07 +0200
-From: Wolfram Sang <wsa@the-dreams.de>
-To: Neil Armstrong <narmstrong@baylibre.com>
-Subject: Re: [PATCH] dt-bindings: i2c: meson: convert to yaml
-Message-ID: <20191024190407.GG1870@kunai>
-References: <20191021140053.9525-1-narmstrong@baylibre.com>
+	id 1iNj8H-0007qY-Pa; Thu, 24 Oct 2019 19:50:53 +0000
+Received: from mail-oi1-x243.google.com ([2607:f8b0:4864:20::243])
+ by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
+ id 1iNj8E-0007py-O4; Thu, 24 Oct 2019 19:50:52 +0000
+Received: by mail-oi1-x243.google.com with SMTP id j7so2983060oib.3;
+ Thu, 24 Oct 2019 12:50:48 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=googlemail.com; s=20161025;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=obOaJfYPGUFMBdJ+GFQAYWd7jIJzRz2RvyNeFwhCwqc=;
+ b=NCfTLHjlbgJYN9lpItCC3wyK0gNVuM4U9DSlxbPK0EpUIoR4v5tAhulLLZtiiIO7Sf
+ 6VOOfxx4kF7UZCx0vTa8gWHltGDFLyzVVSKJWoNH5Yc4+G99eA8vVCVCi7bH2TW0CF+U
+ BQPpM8M5NsvjEUV31BQMA2SQL9JeKZy3fpGrrDkl9ZdCCO0NX61tJi1OW4NgJNJM2lZa
+ LBAGeN7fNx3FUeS3GP+/TAbus4kdH5sCNx5FbueK9qM4weHgda+EVFJ2dIY8VpZeeJuo
+ AGU77VNP8VPk8VEe8qzdOSFPnOL/oHOqwmsGtSpDEEFpZSPk2ImzImmCD1suJLEEYjQP
+ 9e0A==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=obOaJfYPGUFMBdJ+GFQAYWd7jIJzRz2RvyNeFwhCwqc=;
+ b=r7CZWtAGcvR/Gjj5++0EenO1a9cT/Le6MKVuVipKQLS5txGaHF6VHCr1O9wdHBARc6
+ o1QnxKvo1omHd/eiLC1qyZ1GafXwcckV0MECfYvv15R8UEdM4+O/wktfrmCanNaVrPF+
+ h9MabZzu9UuBWwRJIdFddgNIqxjtN0q3Hp6buqLukjPmj8Wh7VBxR5cerIMN46RwKyDD
+ XsR/JNpSELGfL4rofzx93MXtfYGy7ennve06r+S2idPGDeFQ8tRbii74pBLVLtKoo/XF
+ rV84rzxntfYVIMYuTHqpH/PLxnYTLbkJhZeq9R8DPq6OJhafoBomni2Wn4sqg2mtR2u6
+ TknA==
+X-Gm-Message-State: APjAAAVQgH2aywvyB3HtrO4U736MQ/SOF2nJDUjCJLhLNX+LMkHq+sAC
+ Q3dlWgNiPGRQTi5ioDYuXd65na0sf3Bnx9SQPWY=
+X-Google-Smtp-Source: APXvYqxQGKa/dRUXVPSOSFXXQKDj8etCne7ZHnOYBVb6ZrUtCaweeYFBd5Yj1la5eq8jLWjRNlFy65R3H8uw+cSuBYM=
+X-Received: by 2002:aca:dd02:: with SMTP id u2mr954574oig.39.1571946647940;
+ Thu, 24 Oct 2019 12:50:47 -0700 (PDT)
 MIME-Version: 1.0
-In-Reply-To: <20191021140053.9525-1-narmstrong@baylibre.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+References: <20191021142904.12401-1-narmstrong@baylibre.com>
+In-Reply-To: <20191021142904.12401-1-narmstrong@baylibre.com>
+From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+Date: Thu, 24 Oct 2019 21:50:36 +0200
+Message-ID: <CAFBinCD7NzK8EphtVTx77aSQxRytm4F8JhzbJMZ1aXfaQyFVMg@mail.gmail.com>
+Subject: Re: [PATCH 0/5] arm64: dts: meson: new fixes following YAML bindings
+ schemas conversion
+To: Neil Armstrong <narmstrong@baylibre.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191024_120409_262057_0DEF1A2B 
-X-CRM114-Status: UNSURE (   5.41  )
+X-CRM114-CacheID: sfid-20191024_125050_807999_FD0AEDA0 
+X-CRM114-Status: UNSURE (   9.18  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.0 (/)
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [88.99.104.3 listed in list.dnswl.org]
+ no trust [2607:f8b0:4864:20:0:0:0:243 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (martin.blumenstingl[at]googlemail.com)
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -58,69 +93,43 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, linux-kernel@vger.kernel.org,
- Beniamino Galvani <b.galvani@gmail.com>, robh+dt@kernel.org,
- linux-i2c@vger.kernel.org, linux-amlogic@lists.infradead.org,
- linux-arm-kernel@lists.infradead.org
-Content-Type: multipart/mixed; boundary="===============4911028081679079750=="
+Cc: khilman@baylibre.com, linux-kernel@vger.kernel.org,
+ linux-arm-kernel@lists.infradead.org, linux-amlogic@lists.infradead.org
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
+Hi Neil,
 
---===============4911028081679079750==
-Content-Type: multipart/signed; micalg=pgp-sha512;
-	protocol="application/pgp-signature"; boundary="df+09Je9rNq3P+GE"
-Content-Disposition: inline
-
-
---df+09Je9rNq3P+GE
-Content-Type: text/plain; charset=us-ascii
-Content-Disposition: inline
-
-
-> +maintainers:
-> +  - Neil Armstrong <narmstrong@baylibre.com>
-> +  - Beniamino Galvani <b.galvani@gmail.com>
-
-I need an ack from Beniamino for this.
-
-Also, do you want to maintain only this file or also the driver? The
-latter would be much appreciated, of course!
-
-
---df+09Je9rNq3P+GE
-Content-Type: application/pgp-signature; name="signature.asc"
-
------BEGIN PGP SIGNATURE-----
-
-iQIzBAABCgAdFiEEOZGx6rniZ1Gk92RdFA3kzBSgKbYFAl2x9aMACgkQFA3kzBSg
-KbYdvg/+I66+7PaxoK7MBHF/nRgJqPVDLQhjQDooZshe6FUVx8HXsHSFQDULtRqi
-tIw9QoVOtDxrcF+Z+v6XqdOXEZhN1d8pai4kIQqwT1v3xoAcmxIubyws2E8YqCGp
-IXaQmA8BY/cDVmPzTlbJwFVGoMWMsNCCAJV4iwJtwAlVUZIrxTsvg768wgdW5LIf
-NVhBmLpzL/Hsq5G21rQA2oYk4FNZDCSjFARRTxGRVC05mzqRHTmyM3SMC94HKDS9
-i5X37Hxxa/0SlrdE/33pg6mqULeZ87tP8BADAsKpbAuCFQqZ2OrUNbZwn8wajOLE
-E4Z4svOFOhXryo7N4T4wWW7wcOAXhybE65YrHFrLcqfTrYaXqc4gKDdOyC0ve5g+
-EtYxDjsJe+7YGIl/HDw9/YiGglcCwAYnIKAtVn+RFwtCWvfJWJ+mBQcOj4B/GWl2
-zaOhW6y4mAgiFezJg2B6j7BbZKUYI5usECiGU2QCI862/OTicX5nliEO1KYl4XXi
-BIPVmSdQSgjT/OqzrzgwsZlhRIzH1ON/aFKI+BaWC4a5vuUmB0vJa8/x5wnDQxNU
-RUWY2dmH/3FeBpz2h6lqBfIJZmxYxRopUJyPsXe/rR+11Hgch/zjyt2LOvCWlcP0
-sPNMJmBFnW+hFz2fGNdlIlzzOTP3zNX6pJftw2lROMWtn6VhDT8=
-=GtGt
------END PGP SIGNATURE-----
-
---df+09Je9rNq3P+GE--
+On Mon, Oct 21, 2019 at 4:29 PM Neil Armstrong <narmstrong@baylibre.com> wrote:
+>
+> This is the first set of DT fixes following the first YAML bindings conversion
+> at [1], [2], [3] and [4] and v5.4-rc1 bindings changes.
+>
+> These are only cosmetic changes, and should not break drivers implementation
+> following the bindings.
+>
+> [1] https://patchwork.kernel.org/patch/11202077/
+> [2] https://patchwork.kernel.org/patch/11202183/
+> [3] https://patchwork.kernel.org/patch/11202207/
+> [4] https://patchwork.kernel.org/patch/11202265/
+>
+> Neil Armstrong (5):
+>   arm64: dts: meson-g12a: fix gpu irq order
+>   arm64: dts: meson-gxm: fix gpu irq order
+>   arm64: dts: meson-g12b-odroid-n2: add missing amlogic,s922x compatible
+>   arm64: dts: meson-gx: cec node should be disabled by default
+>   arm64: dts: meson-gx: fix i2c compatible
+for the whole series:
+Reviewed-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
 
 
---===============4911028081679079750==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
+Thank you!
+
+Martin
 
 _______________________________________________
 linux-amlogic mailing list
 linux-amlogic@lists.infradead.org
 http://lists.infradead.org/mailman/listinfo/linux-amlogic
-
---===============4911028081679079750==--
-
