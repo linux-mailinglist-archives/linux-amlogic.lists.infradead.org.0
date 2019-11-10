@@ -2,86 +2,74 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1ACBFF61F6
-	for <lists+linux-amlogic@lfdr.de>; Sun, 10 Nov 2019 01:30:53 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 43F96F6290
+	for <lists+linux-amlogic@lfdr.de>; Sun, 10 Nov 2019 03:44:09 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:References
-	:In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=p4CBuEJPwQWH6RTnTlpvfZriZy6BfV6gNaMYLY0sVGM=; b=bATfJxG126K9rj
-	vjmg4KMRPRDW21fLlvcsKMt7YycRqou2LyfekQ6cJowcEuqJ+Mynt5ZIraHaKDmlN9X9tzEWYObLW
-	rP3zowqlt89ki0VgXGPhm20SN6tcbrKegtfv02t6+PB05GyKVRnMO15O3ACEZieHfwXnWQFphHlg7
-	ulFha6hwSv1lwO0vvXsjTf27iE9sQzJHDvZGpPpFXATssHkZ1En3+nbB4vKuoi7ribUWFLwdDbFaX
-	dpt4eFP14ij3GKEjj16RH0v/7IPJt9NpJcXFZy58hb5MaVF5rDVSmtvMQ33hE3ah90ghDdNEzb98Y
-	r2TatK6nAzSifwcsSCqQ==;
+	List-Owner; bh=AGBIpLf/kRtTZf5SqfIl1YZuFdu9Nwcopglex0zdyMc=; b=n2xsr7Gl/cgyR+
+	X1+34fmWi1H1mxkXKN1fy8Hy/WUKnhr7jyBwHiLkv35lO17b2M5PwjM0NOxsECfGiDATiBLUIXgty
+	A3l+Qh23vcMf3YE/AU999iwwYXrrfexkZOgWqmCxba4Ur293Nuvi5OHbJl7Hhyxdvt/bl6izbVWQx
+	GguYp/eYhP13YzgL7Qqf80NfQ99gTg8MzozE93xebfCdiyzlLSTbmKeV5I4KhBem8LUdhBCU3gF+J
+	HuOxbOBzEucldqu2Zeh9dpiA14/vo3YIqz9+rIzKVl3FcrFjVz8wXqwZXjDJKPCLY5jRmYstSa50K
+	lMO1M57hmWBJZitx48AQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iTb7w-00040B-Rs; Sun, 10 Nov 2019 00:30:48 +0000
-Received: from mail-pf1-x441.google.com ([2607:f8b0:4864:20::441])
+	id 1iTdCv-0001bn-JG; Sun, 10 Nov 2019 02:44:05 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iTb7m-0003qi-8X
- for linux-amlogic@lists.infradead.org; Sun, 10 Nov 2019 00:30:41 +0000
-Received: by mail-pf1-x441.google.com with SMTP id n13so7707948pff.1
- for <linux-amlogic@lists.infradead.org>; Sat, 09 Nov 2019 16:30:37 -0800 (PST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=from:to:cc:subject:in-reply-to:references:date:message-id
- :mime-version; bh=FxRt4BUNwVB8zpfl5d2aejL9uK6mBbXTP9pbXJEAVIA=;
- b=hiJmGSlnDpaF08YRgBaxyr5f68zjU/4xnmI2rZb2yHXrJ1OZXYRrhl8+qkrr+c1C+l
- EbOMxgoRmtBsn2DjinkASy5uaaEf4N42L3g9V6T33JIv8OsXTEb0pvk7bbZQUMjbclEW
- XxXWO9yFY8Cc0Rkr0nqGX0uMnF5CBJyvOav2c0wtaH1l3MVAV2yngr/8YpOjwN2GYOoX
- qtHMUzLYJ1DUO2kBPcErJTGREA+ykx7mVZZbuwcK2g0qOlPdimrE2jtAmteGys5e0mhe
- Ux5OkTsaK+1mLq1wmj6ricPdwe4/SfZS7Jdbbbaz2RnCccIxpR4iKPOc3NBU9/wiPycj
- M0lg==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:in-reply-to:references:date
- :message-id:mime-version;
- bh=FxRt4BUNwVB8zpfl5d2aejL9uK6mBbXTP9pbXJEAVIA=;
- b=GAiu6ADYry6HyaKvEgjf2D/rRhGITlXLKiPmcL5Q2C2qxaaKqyqZvYErityJbYtgL8
- 3FRTDsms7GKExkVby6MAa1cDsK+CB3hrdepC3pmUGmNClxFsOwW8M1xBdvgkFYHi4B3c
- 7r7NUA13/esQqfV/13p2cbfQeG9cPdMF2OOmTt9/rtMg/zzpAIAX+RWvol/ShojuPv5a
- AxGlyzzPkTM8s4XfIDu1jqlCdYOnI9hThSFumThMx43VBdi0DxXppJ2VZrgL+f2U2KFC
- K55k5lVOXnYa3MDL7kgic4gJHXbaj3MRSiJpN+QFL0PtVllhl0z71zcS6bF9Abxfs2C6
- zufg==
-X-Gm-Message-State: APjAAAXNPN5MT25sm1Mx1BABYSzhX6ui4Vn+KLMUJ0gJds4wKA3E99XG
- dEuQ1xIeWFNcdNB44l0dTjyung==
-X-Google-Smtp-Source: APXvYqwts4OUgpJJOzYRq313xaamUKaByPW6r3ZrRxsi3tbQNzWseZBolyT2WkJLe0WrONs9SgepGA==
-X-Received: by 2002:a63:6b82:: with SMTP id
- g124mr20819408pgc.178.1573345837340; 
- Sat, 09 Nov 2019 16:30:37 -0800 (PST)
-Received: from localhost ([2601:602:9200:a1a5:7c60:912:1380:6df8])
- by smtp.gmail.com with ESMTPSA id f19sm4460187pfk.109.2019.11.09.16.30.36
- (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
- Sat, 09 Nov 2019 16:30:36 -0800 (PST)
-From: Kevin Hilman <khilman@baylibre.com>
-To: Jianxin Pan <jianxin.pan@amlogic.com>, linux-amlogic@lists.infradead.org
-Subject: Re: [PATCH v4 2/4] firmware: meson_sm: Add secure power domain support
-In-Reply-To: <1572868028-73076-3-git-send-email-jianxin.pan@amlogic.com>
-References: <1572868028-73076-1-git-send-email-jianxin.pan@amlogic.com>
- <1572868028-73076-3-git-send-email-jianxin.pan@amlogic.com>
-Date: Sat, 09 Nov 2019 21:11:09 +0100
-Message-ID: <7hk188stcy.fsf@baylibre.com>
+ id 1iTdCs-0001ay-TX
+ for linux-amlogic@lists.infradead.org; Sun, 10 Nov 2019 02:44:04 +0000
+Received: from sasha-vm.mshome.net (c-73-47-72-35.hsd1.nh.comcast.net
+ [73.47.72.35])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id 9B02521655;
+ Sun, 10 Nov 2019 02:44:01 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1573353842;
+ bh=CGJbKln3Rkg2sxB7qY0MAuLx3+hEzsvt48vMiraYkKs=;
+ h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
+ b=NkkOtPuh3D9aHujc6Y70hHLwYQm9ujsLtTRrTR44dj0Bq5Iyo3wgIlDxh/aLFGTMH
+ Lx2Rcj4WKJRq0Qhs+BhAkphEyIzNkbcgVurYq8Rwbg9Ov8BHXKMtMGS9NXt2mCHEAM
+ ZRvN74fPrmZIxTqSvLcJNODB7F34LMgJJtjcbEEU=
+From: Sasha Levin <sashal@kernel.org>
+To: linux-kernel@vger.kernel.org,
+	stable@vger.kernel.org
+Subject: [PATCH AUTOSEL 4.19 130/191] ARM: dts: meson8b: odroidc1: enable the
+ SAR ADC
+Date: Sat,  9 Nov 2019 21:39:12 -0500
+Message-Id: <20191110024013.29782-130-sashal@kernel.org>
+X-Mailer: git-send-email 2.20.1
+In-Reply-To: <20191110024013.29782-1-sashal@kernel.org>
+References: <20191110024013.29782-1-sashal@kernel.org>
 MIME-Version: 1.0
+X-stable: review
+X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191109_163038_301318_75106967 
-X-CRM114-Status: GOOD (  10.54  )
-X-Spam-Score: 1.1 (+)
+X-CRM114-CacheID: sfid-20191109_184402_975869_C6E93197 
+X-CRM114-Status: UNSURE (   8.25  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (1.1 points)
+ Content analysis details:   (-5.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:441 listed in]
- [list.dnswl.org]
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 1.1 DATE_IN_PAST_03_06     Date: is 3 to 6 hours before Received: date
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -93,63 +81,49 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, Hanjie Lin <hanjie.lin@amlogic.com>,
- Victor Wan <victor.wan@amlogic.com>, Jianxin Pan <jianxin.pan@amlogic.com>,
- linux-pm@vger.kernel.org,
- Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
- Neil Armstrong <narmstrong@baylibre.com>, linux-kernel@vger.kernel.org,
- Rob Herring <robh+dt@kernel.org>, Jian Hu <jian.hu@amlogic.com>,
- Xingyu Chen <xingyu.chen@amlogic.com>, linux-arm-kernel@lists.infradead.org,
- Jerome Brunet <jbrunet@baylibre.com>
+Cc: Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
+ Kevin Hilman <khilman@baylibre.com>, devicetree@vger.kernel.org,
+ linux-amlogic@lists.infradead.org, Sasha Levin <sashal@kernel.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Jianxin Pan <jianxin.pan@amlogic.com> writes:
+From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
 
-> The Amlogic Meson A1/C1 Secure Monitor implements calls to control power
-> domain.
->
-> Signed-off-by: Jianxin Pan <jianxin.pan@amlogic.com>
-> ---
->  drivers/firmware/meson/meson_sm.c       | 2 ++
->  include/linux/firmware/meson/meson_sm.h | 2 ++
->  2 files changed, 4 insertions(+)
->
-> diff --git a/drivers/firmware/meson/meson_sm.c b/drivers/firmware/meson/meson_sm.c
-> index 1d5b4d7..7ec09f5 100644
-> --- a/drivers/firmware/meson/meson_sm.c
-> +++ b/drivers/firmware/meson/meson_sm.c
-> @@ -44,6 +44,8 @@ static const struct meson_sm_chip gxbb_chip = {
->  		CMD(SM_EFUSE_WRITE,	0x82000031),
->  		CMD(SM_EFUSE_USER_MAX,	0x82000033),
->  		CMD(SM_GET_CHIP_ID,	0x82000044),
-> +		CMD(SM_PWRC_SET,	0x82000093),
-> +		CMD(SM_PWRC_GET,	0x82000095),
->  		{ /* sentinel */ },
->  	},
->  };
-> diff --git a/include/linux/firmware/meson/meson_sm.h b/include/linux/firmware/meson/meson_sm.h
-> index 6669e2a..4ed3989 100644
-> --- a/include/linux/firmware/meson/meson_sm.h
-> +++ b/include/linux/firmware/meson/meson_sm.h
-> @@ -12,6 +12,8 @@ enum {
->  	SM_EFUSE_WRITE,
->  	SM_EFUSE_USER_MAX,
->  	SM_GET_CHIP_ID,
-> +	SM_PWRC_SET,
-> +	SM_PWRC_GET,
+[ Upstream commit fd6643142a0c5ab4d423ed7173a0be414d509214 ]
 
-These new IDs are unique to the A1/C1 family.  Maybe we should add a
-prefix to better indicate that.  Maybe:
+Odroid-C1 exposes ADC channels 0 and 1 on the GPIO headers. NOTE: Due
+to the SoC design these are limited to 1.8V (instead of 3.3V like all
+other pins).
+Enable the SAR ADC to enable voltage measurements on these pins.
 
-       SM_A1_PWRC_SET,
-       SM_A1_PWRC_GET,
+Signed-off-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+Signed-off-by: Kevin Hilman <khilman@baylibre.com>
+Signed-off-by: Sasha Levin <sashal@kernel.org>
+---
+ arch/arm/boot/dts/meson8b-odroidc1.dts | 5 +++++
+ 1 file changed, 5 insertions(+)
 
-Thoughts?
+diff --git a/arch/arm/boot/dts/meson8b-odroidc1.dts b/arch/arm/boot/dts/meson8b-odroidc1.dts
+index 8fdeeffecbdbc..8a09071d712a5 100644
+--- a/arch/arm/boot/dts/meson8b-odroidc1.dts
++++ b/arch/arm/boot/dts/meson8b-odroidc1.dts
+@@ -153,6 +153,11 @@
+ 	pinctrl-names = "default";
+ };
+ 
++&saradc {
++	status = "okay";
++	vref-supply = <&vcc_1v8>;
++};
++
+ &sdio {
+ 	status = "okay";
+ 
+-- 
+2.20.1
 
-Kevin
 
 _______________________________________________
 linux-amlogic mailing list
