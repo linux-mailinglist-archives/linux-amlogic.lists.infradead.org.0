@@ -2,8 +2,8 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 8306CF9680
-	for <lists+linux-amlogic@lfdr.de>; Tue, 12 Nov 2019 18:02:34 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id C8554F96C4
+	for <lists+linux-amlogic@lfdr.de>; Tue, 12 Nov 2019 18:13:01 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
@@ -11,53 +11,53 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-reply-to:Subject:To:From:References:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=f3w8Ui0OmqaEK7ViN4bkQGqDS5+NdRGdta5t65z0Ic0=; b=TNbNDjbyoQFMijJlaJ5CT8ayHi
-	nTjQ3KzwOqqbq1dFqC3br1X/O+ss10NyrSCtO+WaLB7J1LUtbr6dm2cAtIuxcSQmSXgDpwGJ8/x9y
-	5CWnkPglR/0vzhFVp98PpNNHp2s+Qq1AihhecBO0RIpBc/EY0nId1HF4hH9j0RbrAkP0UA4oagfMO
-	b05f6rEZP7tGGaTCXRRTkA41CA7ZZk8eCqeONu8tzIhN0P8z1bwCRVuAqK2L5N66zeRAzcA+d6aaM
-	PJPGI3xlwwLDnYIYPXCSucM5uqs0gGvwesI+LGbfW3eFhk/UrtRlpuBCSLWhdqBbRDt8yvchF1y01
-	o4t36XXw==;
+	bh=q+iGiqo6xA0UA2LKq9JArePEJjsyGcaaESz10UgMoAc=; b=CwL8kVfBkItjz9FwTdWrFH4gl9
+	8J+BbW73EOKKLwCd6L+UyVaJxpKBr/pdd7UhJ/VXUul322vVQT9pu+Mjp7nvRuh+IN4BsSsTRlTQO
+	l1eUtd5B8X15JqwyxTcmWrx86Tu1Yjh51yo8ctSm7altjiO5qGHUSNbhxWBKX6NnQ+9uAfkbgL1at
+	6aXEt8ipEVuHh5vtQfGzJ7ozMLV/PVrdJJ+12nKE/JomCbP0tkl311+5Xfd81ISXi8yL70qg1Y+R0
+	tSlL6rGISP69WWCqIGSm++nqIO9bh7AybkqA8x4aRfv9svPG66dnvLb2AgHD7ozkh+TJqAdVdgrnu
+	OnGqx3Ow==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iUZYl-0003ND-Am; Tue, 12 Nov 2019 17:02:31 +0000
+	id 1iUZir-0007ov-Up; Tue, 12 Nov 2019 17:12:57 +0000
 Received: from mail-wr1-x443.google.com ([2a00:1450:4864:20::443])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iUZYi-0003Mk-9w
- for linux-amlogic@lists.infradead.org; Tue, 12 Nov 2019 17:02:29 +0000
-Received: by mail-wr1-x443.google.com with SMTP id w9so12570615wrr.0
- for <linux-amlogic@lists.infradead.org>; Tue, 12 Nov 2019 09:02:28 -0800 (PST)
+ id 1iUZin-0007oI-RS
+ for linux-amlogic@lists.infradead.org; Tue, 12 Nov 2019 17:12:56 +0000
+Received: by mail-wr1-x443.google.com with SMTP id a15so19372293wrf.9
+ for <linux-amlogic@lists.infradead.org>; Tue, 12 Nov 2019 09:12:53 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=references:user-agent:from:to:cc:subject:in-reply-to:date
  :message-id:mime-version;
- bh=nEAXtzDBm38sh308ifQWQizcwae+A2CoWPbIiFYwKrk=;
- b=LZPycnekykDy+3tCiWfVwLE36sDID8Ih91KLiTQsDq2UDK0g+60HWQTUSJeQOiTlgm
- HLun017COts3Oj49wRtR7jYQnffJpNSKdCgH1t6JSFMBRdVbPo+zdxDNsjx4izyrLTou
- vR2EMSCd60AIz+fhhXUONam91Y+brzLhlRNz+KOxzohyjjZ0MX22dKVS9bS3l7reBCNv
- zamdsjIOQrRThhJKGjahl1vt2XmE4bO+I/D2k8a2N6BosYO3/oEUoYD7EkAoo8h0Z62I
- 7fGRjKVZg7rERLDNxNUrJoCXfC+jBchzsk8m6TdIrsiShDBTWVpg3+7oPlF+wydkukyX
- PRZA==
+ bh=ZxA7qLekk+N/Dav/LrYpCZKrEOoovHS5Dd7O1QxXvPg=;
+ b=iGA4sXN2p266Ip8URNSy7dqjA/Z0C+WYgUk+6xMsl8LgS8bQgxVyULQaD2vb0SR7j2
+ b0jhJlUwjYJvkMwRbwUwpaVWo7gx+SAZpqX1vVRK6QL489vU1ZEdKUra77E8EtGU9uhd
+ yZqI3JL4SvYL3q2fpJuUdqnj0+6CYdXOe3ZAUe8+8Y+ZAqwKXk1l4hbcJjN7ksDyiMkv
+ ishUSxPcrA6ABohA6CRqfS6BQLRS0usW5wBDdATWnpCMk+yVjagnw17hoxiwrVaKeaqt
+ NOvBrHvX8TmE6a0vkaYOk/ykSY4EPIB6Qoj6yTd8XczCrvFovihLLqBkLJjVpgJYkiP2
+ XfEw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:references:user-agent:from:to:cc:subject
  :in-reply-to:date:message-id:mime-version;
- bh=nEAXtzDBm38sh308ifQWQizcwae+A2CoWPbIiFYwKrk=;
- b=suryVSqpdLQL0PuA276vXPib2M14J8oT/SqLSLzC1EVBWcAIkcffI5KiUQZaGtVKon
- oKGzAWXa/3wIDxkCzXZhwmTFGSg0a1zk5PAZTwcbhoZKg96yKRGpqsDohv0kksA8W3Bd
- 5BLwA8L1+mkNMscKWblGIORzTLSiUY0xsq2aF0+1BvKcjHKaKKEg2VkSFPlWTjUizc4I
- PDQmSBWTFZRa/Ixy/Q8w0s2OlATr60vX8HML9VfhP5/XjqOG5Tq5hiL/zcW3w9hgQGD4
- PNuMeknxAlD6R42qQ3ZwzviGIgGbn5yxUTE//XQdSLpdecbfMhIhdwVQzlhlMthgzesY
- kKvA==
-X-Gm-Message-State: APjAAAUYmZ/h2/s0EKCjLXZlgCfjOyTmw86EBTF0y+Qef1mi+VtGf2Wp
- a4cWVBpGVEXAJjl2eqc4RmBDCg==
-X-Google-Smtp-Source: APXvYqyrOgNBh3quDHMJVl6ILGuxddDkKPP6rBQ+oFb7GG/5HGQ/FvsKzXhjCK/JDGuSJw+RE1Be5w==
-X-Received: by 2002:adf:db41:: with SMTP id f1mr25303742wrj.351.1573578147017; 
- Tue, 12 Nov 2019 09:02:27 -0800 (PST)
+ bh=ZxA7qLekk+N/Dav/LrYpCZKrEOoovHS5Dd7O1QxXvPg=;
+ b=Ob7p8sWZVDRRczKbg1sNhpzFRoj9PGoj7mIu6kwp+g2chEe4YgiNzQRj2qbZdZGsjx
+ QfKMR4vXsvMxxkBXnebv9Ziv2PlewqNSync2HVNy996KinJMM0erAK2T1KtsLb17Yn3n
+ DahFZr3pZMRr5+FOYmu2DPUUGP6n+HSV0HpyW4gPMwBvWyb++GmVPt2DW+pb6GmgoV7T
+ lJDr2cqnlw1jtF3YwSRI1qBUMcXeO9LzG/m5Ug0ZMRhEr/XvMMCB4RYe7qkipnqxH1wx
+ HAfm5/fdkIlF67ZEH8P8GILSRrTUIYVLTkw7Zc9i63sIAYqmi7kbzm5PkKQkiCH8oJ5v
+ GRUQ==
+X-Gm-Message-State: APjAAAVr1r6TkqkaBj8I4tZEovxJHkXebYvu8s4MErFwoOBIHIJ+KEOi
+ wOzfvIubWnMAcwXXvIQ+YYeIVSmtI6w=
+X-Google-Smtp-Source: APXvYqxXk4QOi5t3c39JBIu/PqABL6KO249PbGRNZPb3VwQ97nfEmIS7gx53xgfuocXSPkN34AVp8Q==
+X-Received: by 2002:adf:d4d0:: with SMTP id w16mr2761615wrk.184.1573578772462; 
+ Tue, 12 Nov 2019 09:12:52 -0800 (PST)
 Received: from localhost (laubervilliers-658-1-213-31.w90-63.abo.wanadoo.fr.
  [90.63.244.31])
- by smtp.gmail.com with ESMTPSA id p4sm23274824wrx.71.2019.11.12.09.02.25
+ by smtp.gmail.com with ESMTPSA id r15sm42846928wrc.5.2019.11.12.09.12.51
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Tue, 12 Nov 2019 09:02:26 -0800 (PST)
+ Tue, 12 Nov 2019 09:12:51 -0800 (PST)
 References: <1572868495-84816-1-git-send-email-jianxin.pan@amlogic.com>
  <1ja79b4mje.fsf@starbuckisacylon.baylibre.com>
  <e80cb817-e58a-68ce-a3c6-d82636aaf7d3@amlogic.com>
@@ -66,20 +66,19 @@ References: <1572868495-84816-1-git-send-email-jianxin.pan@amlogic.com>
  <1j7e4e4sab.fsf@starbuckisacylon.baylibre.com>
  <dee789ae-6825-3f4c-16e7-227e064562d6@amlogic.com>
  <1j5zjy4fif.fsf@starbuckisacylon.baylibre.com>
- <399e3fda-91c0-6dcb-5040-a117fe78519d@amlogic.com>
+ <ec705819-9763-b0d2-9480-949e7ccd1cb9@amlogic.com>
 User-agent: mu4e 1.3.3; emacs 26.2
 From: Jerome Brunet <jbrunet@baylibre.com>
 To: Nan Li <Nan.Li@amlogic.com>, Jianxin Pan <Jianxin.Pan@amlogic.com>,
  Ulf Hansson <ulf.hansson@linaro.org>, Kevin Hilman <khilman@baylibre.com>
 Subject: Re: [PATCH v2] mmc: meson-gx: fix mmc dma operation
-In-reply-to: <399e3fda-91c0-6dcb-5040-a117fe78519d@amlogic.com>
-Date: Tue, 12 Nov 2019 18:02:25 +0100
-Message-ID: <1jftitf2ou.fsf@starbuckisacylon.baylibre.com>
+In-reply-to: <ec705819-9763-b0d2-9480-949e7ccd1cb9@amlogic.com>
+Date: Tue, 12 Nov 2019 18:12:50 +0100
+Message-ID: <1jeeydf27h.fsf@starbuckisacylon.baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191112_090228_341164_D13C0303 
-X-CRM114-Status: UNSURE (   5.94  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20191112_091253_891992_55FE93A2 
+X-CRM114-Status: GOOD (  11.85  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -114,20 +113,43 @@ Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
 
-On Thu 07 Nov 2019 at 04:07, Nan Li <Nan.Li@amlogic.com> wrote:
+On Wed 06 Nov 2019 at 04:28, Nan Li <Nan.Li@amlogic.com> wrote:
 
-> On 2019/11/5 21:30, Jerome Brunet wrote:
->> 
->> On Tue 05 Nov 2019 at 10:05, Nan Li <Nan.Li@amlogic.com> wrote:
->> 
->> Nan Li, please fix your mailer to use plain text properly, your reply
->> are near impossible to read
->> 
-> Sorry, maybe there is something wrong with my email address. Please help 
-> me check whether my reply is in accordance with the format.
+>
+> I see what you mean, pre/post_req already provides callbacks in meson_mmc_ops for the framework to decide whether to invoke the chain mode or not.
+>
+> However, I searched the frame of MMC and found the use of mmc_pre_req() for this callback in the block layer mmc_blk_mq_issue_rw_rq().
+>
+> Block layer mmc_blk_mq_issue_rw_rq() may be useful for emmc and SD card devices.
+>
+> But it may not be useful for reading and writing operations of sdio wifi, and the sdio device communication may not use the chain mode.
+>
+>
+> Our chain-mode is a way to transfer data using dma.
+>
+> This approach is very efficient for reading and writing large amounts of data.
+>
+> If you don't do it that way, you'll do it the other way, the bounce buf way, which is limited by the size of the buf, so when you do big data reads and writes, it affects the transfer rate.
+>
+> Therefore, our chain mode means that emmc, SD card or sdio device will use dma to transfer data when reading and writing operations, so our previous driver and the patch behind me all ensure this.
 >
 
-Please use plain text instead on html when replying on these mailing list.
+I see.
+The problem is that you are providing the same function to pre/post_req
+callbacks and the request()
+
+IOW, things mapped in the pre_req() callback might be unmapped by
+request_done() instead post_req() which, I think, is not great.
+
+It's been like that so far, your patch is not making much worse, so I
+guess you can go ahead with it but we need to look a this before it
+blows again
+
+In the future, we should probably use the cookie to distinguish the 2
+cases ... or drop pre/post_req in the ops.
+
+Regards
+Jerome
 
 _______________________________________________
 linux-amlogic mailing list
