@@ -2,70 +2,71 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 59C561001FB
-	for <lists+linux-amlogic@lfdr.de>; Mon, 18 Nov 2019 11:04:05 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 052F2100209
+	for <lists+linux-amlogic@lfdr.de>; Mon, 18 Nov 2019 11:05:07 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
 	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=xy2d26uqQRQwvItulBa83v7xp72BBeq/2364iP9Gdjg=; b=PMTxSwz4Z+EJu2
-	a0W4LBGkhC/2CpU6gejCX6TBFerVR64bdDpTboUHbcKFmXmfb8MuC0Gs5QgTHFL2PQBid1B4+q4xl
-	ra5ViyJ76dJFZs9jH/btSHZd9orDAp4Dpt/vmPw7XGrbK/FEUGNSNOwbxImLXpmMaAFtCo+I3tT9H
-	+Zjo9L6SBOiu+H6r2a5pUfaJfK0WxfteudJXsSUUUhq+sn2ci2e+RscTImCTdhakUDPisq9QhFFIx
-	znZ/hCenXwpZUihDkxE3TYFvJxzOmfAdz7nH/ylQ3ZM4M/hQyOJTsjPr+spYz/LaX3XyEagRi5OzX
-	6yNiJgGTLA8zvwl2kJ+g==;
+	List-Owner; bh=yV7B/ZV1GwR5GFU09z54UqqgnRTKBrFtrYHHKhmUYF4=; b=JkwkpW5zNf2bMM
+	+43aK/vYR1S3nB3NIiD3LJED3eDh7i80A0tKJ+XVA99Du87s55JuiZi8ccO9jWW9SEpkXrh03VXOK
+	e/DnnE8Hixt/5U0UR5X5hcQpWPtSgNFYdMk8IbSQIGgiweAS4xGAOTNNy0y5E4n9S6RbGYv0HQC5V
+	Q1Oyy4Mmo+rxVmpf14s8/7N8iMny8+XRhR2e0REfKQm1pGpV9EVurwUBBMnzIIL0OjgTQM47m8aZn
+	x1NBZhnFQpH8bmYaq/+VV4EdvVDioGKWKP3ZGZwuiLuyxxV947jmczSGEHu0Kwdu7icTM0hut+6og
+	FRsY31mBgm+GWT/IC3oQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iWdt5-0007fg-W4; Mon, 18 Nov 2019 10:04:04 +0000
-Received: from mail-wr1-x441.google.com ([2a00:1450:4864:20::441])
+	id 1iWdu5-0008PT-EV; Mon, 18 Nov 2019 10:05:05 +0000
+Received: from mail-wr1-x444.google.com ([2a00:1450:4864:20::444])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iWdt2-0007cv-Ii
- for linux-amlogic@lists.infradead.org; Mon, 18 Nov 2019 10:04:02 +0000
-Received: by mail-wr1-x441.google.com with SMTP id t1so18656302wrv.4
- for <linux-amlogic@lists.infradead.org>; Mon, 18 Nov 2019 02:04:00 -0800 (PST)
+ id 1iWdu1-0008CC-1n
+ for linux-amlogic@lists.infradead.org; Mon, 18 Nov 2019 10:05:02 +0000
+Received: by mail-wr1-x444.google.com with SMTP id z10so18638728wrs.12
+ for <linux-amlogic@lists.infradead.org>; Mon, 18 Nov 2019 02:05:00 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=subject:to:cc:references:from:openpgp:autocrypt:organization
  :message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=4Wqv+uX/8kHQzWtfn2CsXpGYkiMjRw4EUmdLGI7cSCE=;
- b=QmIKMFTCPKTpsVugiT9374+cX/Li1FtzIQedUmrv291hkTlgB/GEnnl6ujm+Eg1WSR
- iX0mz90zOPGUu66/8WSuxR42orht4vHoix+7mZ4BSVzLaAPbyojybhfuuE9iC4UdTar7
- 6diSX0K3QRP3eiaJH2qUd8q7kpI+1GaTwlUapCnDmf6yATDNro6fnn2m4+GKZMyp9WmF
- 25pdwc8xaBY/60S7Bf5fhZKsgv7Rv3wzrK5pT0R4Cc5XJps9AAmvdxLwlyULaA5v0g7k
- avvK4bFVcVbd2K6TO0mvF0toDaP8V8UVO57rtrvBQmh2Ax4L7RqTpiNNCaUkf/JXlgmH
- r+rQ==
+ bh=uHDOMZ37yNgCR7vTGPsGK7epgcWZ/WmdIAqGlnpnBD8=;
+ b=1rFC3N+s0Tubu8STaAwRxgoSAy2c+Js/SotPR7rhzKjy51lyPInmz4/gWcbZUS28KL
+ lOIkzf6WP4zOQntrgTMrfMp45cllMkJt27I563cLtyaCqL+f0QrONW4nI/t8OewZHVLS
+ wwUZL6D8maNkaCYaarSUyIYV7hzLUEMraICw021RqpkdurIvpfkddV1XegZNpTCr/8+c
+ 3EDKgyA+LU8cOFhvV4m4Thjp/m7saUjNuJP7obvA892/Dmw28BVQybWBBA1Kh/pbmKHN
+ MhPXnDi6nbff/Cic8pctB/11r1JyfxEh7dFU/eeh3aST7CAg7gdDDYxSxidjA1INfYf5
+ RcDw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:subject:to:cc:references:from:openpgp:autocrypt
  :organization:message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=4Wqv+uX/8kHQzWtfn2CsXpGYkiMjRw4EUmdLGI7cSCE=;
- b=a/BH4yjaRj53HAqFYU+EMZXOv4SaW8OhXu3a2Q1rndMpTLe0d/VUvARWT8VRnvsnM0
- ko5rnZYpfvikj6ytsGbuhfZw0q4beIJyAeZES0OpbhVfCICEhfowaxhqXPEoRkNLB2W6
- +E77zhWiwc4pxAX6b5pY8AhKiYxmGhRzx10XfLAk3NkIJB9nujObVvBLCIrDiwoim8TX
- NgGti9WieDZ+/goggsNcR/mCb5yxPvm3OcKYS3iYiNcczHKpKb1RrpwLRhmAUwCeSCY/
- k1df2UwaFjRccFKmEHASQT0gJQ+MKJ2536MWOrHUAWbS0xGWydlAAneuocObiXTGgE8n
- Pw1A==
-X-Gm-Message-State: APjAAAW0Zxxv+L8wR+GQ8XxTaClBsUcKRx765EuD4cc3z7RYwbbguQ9J
- IhXwSMyEHP4bGwJsy7/qWcMIMg==
-X-Google-Smtp-Source: APXvYqxap9gQZ76dtuMnth+n6Zqf7RFjYrzzgDAi6lJ/PmGiHErBkKmD9Qz9gP7FasRWLbfvKZgycQ==
-X-Received: by 2002:adf:ef0e:: with SMTP id e14mr19739312wro.204.1574071438868; 
- Mon, 18 Nov 2019 02:03:58 -0800 (PST)
+ bh=uHDOMZ37yNgCR7vTGPsGK7epgcWZ/WmdIAqGlnpnBD8=;
+ b=um9j4Pb3wquydTUyNqjh8azqArGu/7hGjCzoba4q5Mq3cvV3RfLWFRhO3fP4I5kMvh
+ jcAdewQw8wCmX3LbF41+TuMGq4ny0S5MvN78801sJ+mnEaUQzIkIl0upyQzWZLd5cXCC
+ K6Lf3kWI/eyE9/RDzEAmxUUhUov7rOliXaR1CFaGqNan1qKmgT9EXmGWJ6D00iFImB/W
+ TeUfdsZuL0jYs3xBhpVu3M4msIgUIa3TkldBxpBvkItB80vg/bDQW2jmSeTToW8xFeg3
+ UKzmRQco0Bd69EiHfr4Djgns70TjvSyQ3vlSd3eaDFtBBYZEyFF7QfN2iSEV837Wu/zy
+ aVoQ==
+X-Gm-Message-State: APjAAAUGHE1IWOsOmTYMX4qfo0lKSLOIYZWzjWxhgqN258InIKUWfmfE
+ RpCb9Ox20nAzPtV92jKmiy/fOg==
+X-Google-Smtp-Source: APXvYqxXUJhjPMRUsqsGwHWXoxs7Q5d+PyVeqZ3q38j9rR1PrZt9Hem+eKHzwFtwZ/a0J7jCfXXaiQ==
+X-Received: by 2002:adf:b1cb:: with SMTP id r11mr20165524wra.246.1574071498805; 
+ Mon, 18 Nov 2019 02:04:58 -0800 (PST)
 Received: from [192.168.1.62] (176-150-251-154.abo.bbox.fr. [176.150.251.154])
  by smtp.gmail.com with ESMTPSA id
- t14sm22024576wrw.87.2019.11.18.02.03.58
+ g11sm20029644wmh.27.2019.11.18.02.04.57
  (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
- Mon, 18 Nov 2019 02:03:58 -0800 (PST)
-Subject: Re: [RFC PATCH 1/4] dt-bindings: Add vendor prefix for Videostrong
- Technology Co., Ltd.
+ Mon, 18 Nov 2019 02:04:58 -0800 (PST)
+Subject: Re: [RFC PATCH 4/4] Bluetooth: btbcm: Add entry for BCM4335A0 UART
+ bluetooth
 To: Mohammad Rasim <mohammad.rasim96@gmail.com>,
- linux-amlogic@lists.infradead.org, devicetree@vger.kernel.org,
- Rob Herring <robh+dt@kernel.org>, Mark Rutland <mark.rutland@arm.com>
+ linux-amlogic@lists.infradead.org, linux-bluetooth@vger.kernel.org,
+ Johan Hedberg <johan.hedberg@gmail.com>,
+ Marcel Holtmann <marcel@holtmann.org>
 References: <20191117175606.5050-1-mohammad.rasim96@gmail.com>
- <20191117175606.5050-2-mohammad.rasim96@gmail.com>
+ <20191117175606.5050-5-mohammad.rasim96@gmail.com>
 From: Neil Armstrong <narmstrong@baylibre.com>
 Openpgp: preference=signencrypt
 Autocrypt: addr=narmstrong@baylibre.com; prefer-encrypt=mutual; keydata=
@@ -118,23 +119,23 @@ Autocrypt: addr=narmstrong@baylibre.com; prefer-encrypt=mutual; keydata=
  VsbXrP9BZ6snXyHfebPnno/te5XRqZTL9aJOytB/1iUna+1MAwBxGFPvqeEUUyT+gx1l3Acl
  ZaTUOEkgIor5losDrePdPgE=
 Organization: Baylibre
-Message-ID: <d83ccdbf-eefd-69b2-9381-4689f6d92406@baylibre.com>
-Date: Mon, 18 Nov 2019 11:03:57 +0100
+Message-ID: <de37f562-77eb-755d-5f27-c534ec028356@baylibre.com>
+Date: Mon, 18 Nov 2019 11:04:57 +0100
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
  Thunderbird/60.9.0
 MIME-Version: 1.0
-In-Reply-To: <20191117175606.5050-2-mohammad.rasim96@gmail.com>
+In-Reply-To: <20191117175606.5050-5-mohammad.rasim96@gmail.com>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191118_020400_632140_8D9430AB 
-X-CRM114-Status: GOOD (  12.78  )
+X-CRM114-CacheID: sfid-20191118_020501_099905_841EDF7F 
+X-CRM114-Status: GOOD (  17.04  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:441 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:444 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -160,29 +161,67 @@ Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
 On 17/11/2019 18:56, Mohammad Rasim wrote:
-> Videostrong Technology Co., Ltd., A manufacturer of Android Players & STB( Android with DVB Hybrid box &DVB-T2/S2/C/ISDB-T/DTMB-TH/ATSC,,)as well as HD media players.
+> This patch adds the device ID for the BCM4335A0 module (part of the AMPAK AP6335 WIFI/Bluetooth combo)
+> 
+> hciconfig output:
+> ```
+> hci1:   Type: Primary  Bus: UART
+>         BD Address: 43:35:B0:07:1F:AC  ACL MTU: 1021:8  SCO MTU: 64:1
+>         UP RUNNING
+>         RX bytes:5079 acl:0 sco:0 events:567 errors:0
+>         TX bytes:69065 acl:0 sco:0 commands:567 errors:0
+>         Features: 0xbf 0xfe 0xcf 0xff 0xdf 0xff 0x7b 0x87
+>         Packet type: DM1 DM3 DM5 DH1 DH3 DH5 HV1 HV2 HV3
+>         Link policy: RSWITCH SNIFF
+>         Link mode: SLAVE ACCEPT
+>         Name: 'alarm'
+>         Class: 0x000000
+>         Service Classes: Unspecified
+>         Device Class: Miscellaneous,
+>         HCI Version: 4.0 (0x6)  Revision: 0x161
+>         LMP Version: 4.0 (0x6)  Subversion: 0x4106
+>         Manufacturer: Broadcom Corporation (15)
+> ```
 > 
 > Signed-off-by: Mohammad Rasim <mohammad.rasim96@gmail.com>
 > ---
->  Documentation/devicetree/bindings/vendor-prefixes.yaml | 2 ++
->  1 file changed, 2 insertions(+)
+>  drivers/bluetooth/btbcm.c   | 1 +
+>  drivers/bluetooth/hci_bcm.c | 1 +
+>  2 files changed, 2 insertions(+)
 > 
-> diff --git a/Documentation/devicetree/bindings/vendor-prefixes.yaml b/Documentation/devicetree/bindings/vendor-prefixes.yaml
-> index 967e78c5ec0a..e4bd0a9fd4e5 100644
-> --- a/Documentation/devicetree/bindings/vendor-prefixes.yaml
-> +++ b/Documentation/devicetree/bindings/vendor-prefixes.yaml
-> @@ -1006,6 +1006,8 @@ patternProperties:
->      description: Variscite Ltd.
->    "^via,.*":
->      description: VIA Technologies, Inc.
-> +  "^videostrong,.*":
-> +    description: Videostrong Technology Co., Ltd.
->    "^virtio,.*":
->      description: Virtual I/O Device Specification, developed by the OASIS consortium
->    "^vishay,.*":
+> diff --git a/drivers/bluetooth/btbcm.c b/drivers/bluetooth/btbcm.c
+> index 2d2e6d862068..22464bf8cda3 100644
+> --- a/drivers/bluetooth/btbcm.c
+> +++ b/drivers/bluetooth/btbcm.c
+> @@ -339,6 +339,7 @@ static const struct bcm_subver_table bcm_uart_subver_table[] = {
+>  	{ 0x220e, "BCM20702A1"  },	/* 001.002.014 */
+>  	{ 0x4217, "BCM4329B1"   },	/* 002.002.023 */
+>  	{ 0x6106, "BCM4359C0"	},	/* 003.001.006 */
+> +	{ 0x4106, "BCM4335A0"	},	/* 002.001.006 */
+
+Ack for this one
+
+>  	{ }
+>  };
+>  
+> diff --git a/drivers/bluetooth/hci_bcm.c b/drivers/bluetooth/hci_bcm.c
+> index 7646636f2d18..7eba10b0ae6c 100644
+> --- a/drivers/bluetooth/hci_bcm.c
+> +++ b/drivers/bluetooth/hci_bcm.c
+> @@ -1422,6 +1422,7 @@ static const struct of_device_id bcm_bluetooth_of_match[] = {
+>  	{ .compatible = "brcm,bcm4345c5" },
+>  	{ .compatible = "brcm,bcm4330-bt" },
+>  	{ .compatible = "brcm,bcm43438-bt" },
+> +	{ .compatible = "brcm,bcm4335a0" },
+
+This could be omitted if the I/F is the same as "brcm,bcm43438-bt".
+
+>  	{ },
+>  };
+>  MODULE_DEVICE_TABLE(of, bcm_bluetooth_of_match);
 > 
 
-Reviewed-by: Neil Armstrong <narmstrong@baylibre.com>
+Neil
 
 _______________________________________________
 linux-amlogic mailing list
