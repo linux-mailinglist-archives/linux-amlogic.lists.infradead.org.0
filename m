@@ -2,80 +2,82 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 762F710386A
-	for <lists+linux-amlogic@lfdr.de>; Wed, 20 Nov 2019 12:15:41 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 17CDF10386C
+	for <lists+linux-amlogic@lfdr.de>; Wed, 20 Nov 2019 12:15:46 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=9kebknWGpd+CGKnBRpf2nwSru3UIMxDgOq0rdkvqrmU=; b=SU0fYLY1Ew57fC
-	Ps/stVF6aCIapgAZ0bRj9EulVBgL0lXlsDeSQ11ryRuErev1lP3k86C++UCpuXsH7+Yt7TEAcIj6N
-	4rqUGazFYwoVBvJykhSp9P9IrWeCbQuLAR+0rsvuKJLNKzHOf2vYC0rY4T5qQDT6kvS5OW5KfuiDg
-	a+Fn3E/VaKihO6e35Go7hH4bDzvnHWwv0ic8THNwClAFafdrBzj6PtEqiF2WiuKtMvTLGIxjfcAdt
-	f92iNWxp7TWrN1ZBmdyG0BZlYumFxvaRRTrxlXJPRBock6HX14IiyDm/qYDVxlbfVZRV24bV80X73
-	ZfKcnF7Gm1vPAaf2N2Jw==;
+	List-Owner; bh=NxnPPIT4p/nX5eiwuDsQy7iWVJSD9iwbo2iubKs9cKQ=; b=ECjP8JIDhbpZZO
+	gad9XZyjt6cx8nz0+WC2tGeFNifsKvuurXG8gJHHAth/9o0N/dOMSJZBf2GzMVPq6GxyW+CWj/EKw
+	leglZ/WyqM4+liJaMiuj+3qTgFVeV6Zh5yR21A2ejWlCKrxCTKrhQ0i9+IUyertYajWo09i3v7kcT
+	TFcAnc8hhwKOvc/Nej8rae/etbCbgJEzI3IhTp5dzki2v9ahExi0W3Yea90jQVj38IW0UQWH6mCW/
+	nVTLqRqE8jpjc5CPWn2pjV5+Pt4spMlBzUijCx1PYeDiO7zUwtfxBeR+YKFWUGwRkMK+ADGbdXqBD
+	IFeyTAOAbzTUqEmWECSw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iXNxT-0000Zr-TJ; Wed, 20 Nov 2019 11:15:39 +0000
-Received: from mail-wr1-x444.google.com ([2a00:1450:4864:20::444])
+	id 1iXNxY-0000fs-Ef; Wed, 20 Nov 2019 11:15:44 +0000
+Received: from mail-wm1-x342.google.com ([2a00:1450:4864:20::342])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iXNwU-0006pX-8d
- for linux-amlogic@lists.infradead.org; Wed, 20 Nov 2019 11:14:41 +0000
-Received: by mail-wr1-x444.google.com with SMTP id q15so14842413wrw.7
- for <linux-amlogic@lists.infradead.org>; Wed, 20 Nov 2019 03:14:38 -0800 (PST)
+ id 1iXNwW-0006qZ-1d
+ for linux-amlogic@lists.infradead.org; Wed, 20 Nov 2019 11:14:44 +0000
+Received: by mail-wm1-x342.google.com with SMTP id j18so4838177wmk.1
+ for <linux-amlogic@lists.infradead.org>; Wed, 20 Nov 2019 03:14:39 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=UaaaJx+p0JcZMcJnhGqWQZjIziF6Ba/MI0EsQk5V9qA=;
- b=TiQtiHkg0RMZ4S1Hs+toam+n7rYmoAgGqr2fC0USfYF5jbHTN26ImCnqI+q6vBmfWC
- DPjb+lCTY9oewXNbiW/iLqfrdOhTSyLYUfZFtalDNjXTBp7qe544NZwVvg3nUPeVP36Y
- Zb6xGy99sZg42k9nanEDwH0/H43gZBKK1FekzfDRXJpGAPGWUVbdSx+AK/IhzMZXDCbn
- vlO+4HhsJgJLHcdWQVLJPXN3SLHR6K1YQQxyqQEiKc6A7VXWuXV5STmD1U0BhbFtO350
- 9lOT0q2m+fPKelLaCjuzXVltIzPrdVOa2Ep1VUqmtYSyn4Zbah6jGKlEwzh75/ePaHuO
- 21iQ==
+ bh=cvIKYbv02jfkUFc5yq+y3wt+kyYSZpa4lPRFM3efvsQ=;
+ b=uxjV/l32qVppX/6hMVYuLEHcOzTj2V82Am9eU53lR9/+lCm7uQx0b9YxSnHTPQ2RO2
+ kL/nKisP9MMXL2jYLueogpXsVMaPPbGFTCb/jGhjw4leb0TyI0idM0AlU2tAuOWqhNxM
+ Bqk/fIB8fJYIkxRuSMzWrXXUER86zpAKud6mSMe1uPEW+wBRA3rKKt83LHZv3tJdfkWY
+ TnWsDxjkeZ1Nd32BfTPn0Vqv9FCyLBzt5Vbaunp905EyhrTtIijoXRk7/6RgHOP/7KYx
+ lsmVWz5XokU4Yky4+lN8W8NzSRK6N3Ht8/cHS+kEb5i70Q5qlu6u6CpFJo3P6qvgeycm
+ /sGA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=UaaaJx+p0JcZMcJnhGqWQZjIziF6Ba/MI0EsQk5V9qA=;
- b=jf+ycOi5SahVKo2g8UTKFHpw/ulBArC5jZm7DrYolAjiT/+LEoagF1fWbtK8pb1fP5
- q7JfPHjpguXxy8yi8/2RcSDm+rxZGOquuq2xI2ybWUGmpFFdEiUF0S5jxqk4eN1Ehd90
- kcFjxudzXmzLLQjNinsXsmxZwnvNlmXrRCfvfECCuUsjjPYMQXXlh7bJIHHG8x1nHdW9
- zvIMmyWMVdVEm5vaeTKc7QFLqUZHS2M3yHeTucvOnEJMRs10SIrNZGTimmUVY0/npE9U
- RsYZxKAFoUwCb01GaiE6mQ2NOp4whDHIYG3YeCGaOA50BmXW0uyr3h2Fap9LDPichhWH
- 4W2g==
-X-Gm-Message-State: APjAAAU1/yzX2ulTltGhXVU2BU+RPXk5IFUrSF0SQKbcMzglDUN5fuHi
- 5WK8snUas4n2ukKcz9z0PSjOAA==
-X-Google-Smtp-Source: APXvYqwLPjL06Kr41Bjy6DnwXl4SgLoNVUW1i3UYwiHotB5RWxvZ4emQVFEOMzeVHlniyLpXWeeRww==
-X-Received: by 2002:adf:e312:: with SMTP id b18mr2650458wrj.203.1574248476778; 
- Wed, 20 Nov 2019 03:14:36 -0800 (PST)
+ bh=cvIKYbv02jfkUFc5yq+y3wt+kyYSZpa4lPRFM3efvsQ=;
+ b=IGwEwNaHhuLwz312vFRSGuG4VcU+LXNLPjbIcyKHcypAAOiQ6lCMaUb+LRIT2Dy/Hh
+ odWeLTxM7Wpc32nudygzw5pMwgTs4dgrepl2ClJR1s9fdRpaYiPSDnp3hHgUR6qKaUwW
+ 3w2TXjQdqeQvZODECwW1U2/eRXr1ViVPugSVRxMwFHKPUVP4/IfwZU+w41oaXIFLDPjm
+ Vedtv+qkpXdL3EoHPCnnHNfoKJwagHNMAVJcL/KCTZKeA/7kyWn6pq1k5+Vmh3OEqq0B
+ ISu3u3jEHUgE8IEFhuzRn2CQH7deppHTxL6bhBgRdbeek1K3f4Y6rEhXkXC+9kScfKek
+ SJ1Q==
+X-Gm-Message-State: APjAAAWadlAoO1uCxIBJ8wZ9st3OlBOSMXSp8mVe5eJnsLNanC5+cahN
+ TFEgfzjLbt6vBu4s3eC2lc0nLw==
+X-Google-Smtp-Source: APXvYqzweKOlyuKQyMd1c/pQf5Z3HB8SFvqepcvQaZ5FjDPXqF7JOhs3aoQy+ZURieFYrTLyR80vzQ==
+X-Received: by 2002:a05:600c:299:: with SMTP id
+ 25mr2616954wmk.50.1574248477850; 
+ Wed, 20 Nov 2019 03:14:37 -0800 (PST)
 Received: from bender.baylibre.local
  (laubervilliers-658-1-213-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
  by smtp.gmail.com with ESMTPSA id u1sm6061748wmc.3.2019.11.20.03.14.36
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Wed, 20 Nov 2019 03:14:36 -0800 (PST)
+ Wed, 20 Nov 2019 03:14:37 -0800 (PST)
 From: Neil Armstrong <narmstrong@baylibre.com>
 To: mjourdan@baylibre.com
-Subject: [PATCH 3/4] media: meson: vdec: add g12a platform
-Date: Wed, 20 Nov 2019 12:14:29 +0100
-Message-Id: <20191120111430.29552-4-narmstrong@baylibre.com>
+Subject: [PATCH 4/4] arm64: dts: meson-g12-common: add video decoder node
+Date: Wed, 20 Nov 2019 12:14:30 +0100
+Message-Id: <20191120111430.29552-5-narmstrong@baylibre.com>
 X-Mailer: git-send-email 2.22.0
 In-Reply-To: <20191120111430.29552-1-narmstrong@baylibre.com>
 References: <20191120111430.29552-1-narmstrong@baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191120_031438_304926_9F2C5052 
-X-CRM114-Status: GOOD (  12.84  )
+X-CRM114-CacheID: sfid-20191120_031440_097900_5D0E3A38 
+X-CRM114-Status: UNSURE (   7.89  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:444 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:342 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -103,133 +105,48 @@ Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
 From: Maxime Jourdan <mjourdan@baylibre.com>
 
-Add support for the G12A platform by:
-- adding the G12A codec support, here MPEG1 & MPEG2
-- getting the new hevcf clock for the upcoming HEVC/VP9 decoding support
+Add the video decoder node for the Amlogic G12A and compatible SoC.
 
 Signed-off-by: Maxime Jourdan <mjourdan@baylibre.com>
 Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
 ---
- drivers/staging/media/meson/vdec/vdec.c       | 13 ++++++--
- drivers/staging/media/meson/vdec/vdec.h       |  1 +
- .../staging/media/meson/vdec/vdec_platform.c  | 30 +++++++++++++++++++
- .../staging/media/meson/vdec/vdec_platform.h  |  2 ++
- 4 files changed, 44 insertions(+), 2 deletions(-)
+ .../boot/dts/amlogic/meson-g12-common.dtsi    | 23 +++++++++++++++++++
+ 1 file changed, 23 insertions(+)
 
-diff --git a/drivers/staging/media/meson/vdec/vdec.c b/drivers/staging/media/meson/vdec/vdec.c
-index 0a1a04fd5d13..875a12be9c9e 100644
---- a/drivers/staging/media/meson/vdec/vdec.c
-+++ b/drivers/staging/media/meson/vdec/vdec.c
-@@ -956,6 +956,8 @@ static const struct of_device_id vdec_dt_match[] = {
- 	  .data = &vdec_platform_gxm },
- 	{ .compatible = "amlogic,gxl-vdec",
- 	  .data = &vdec_platform_gxl },
-+	{ .compatible = "amlogic,g12a-vdec",
-+	  .data = &vdec_platform_g12a },
- 	{}
- };
- MODULE_DEVICE_TABLE(of, vdec_dt_match);
-@@ -1003,6 +1005,15 @@ static int vdec_probe(struct platform_device *pdev)
- 	if (IS_ERR(core->canvas))
- 		return PTR_ERR(core->canvas);
+diff --git a/arch/arm64/boot/dts/amlogic/meson-g12-common.dtsi b/arch/arm64/boot/dts/amlogic/meson-g12-common.dtsi
+index 3f39e020f74e..6fe7dead5a92 100644
+--- a/arch/arm64/boot/dts/amlogic/meson-g12-common.dtsi
++++ b/arch/arm64/boot/dts/amlogic/meson-g12-common.dtsi
+@@ -2152,6 +2152,29 @@
+ 			};
+ 		};
  
-+	of_id = of_match_node(vdec_dt_match, dev->of_node);
-+	core->platform = of_id->data;
++		vdec: video-decoder@ff620000 {
++			compatible = "amlogic,g12a-vdec";
++			reg = <0x0 0xff620000 0x0 0x10000>,
++			      <0x0 0xffd0e180 0x0 0xe4>;
++			reg-names = "dos", "esparser";
++			interrupts = <GIC_SPI 44 IRQ_TYPE_EDGE_RISING>,
++				     <GIC_SPI 32 IRQ_TYPE_EDGE_RISING>;
++			interrupt-names = "vdec", "esparser";
 +
-+	if (core->platform->revision == VDEC_REVISION_G12A) {
-+		core->vdec_hevcf_clk = devm_clk_get(dev, "vdec_hevcf");
-+		if (IS_ERR(core->vdec_hevcf_clk))
-+			return -EPROBE_DEFER;
-+	}
++			amlogic,ao-sysctrl = <&rti>;
++			amlogic,canvas = <&canvas>;
 +
- 	core->dos_parser_clk = devm_clk_get(dev, "dos_parser");
- 	if (IS_ERR(core->dos_parser_clk))
- 		return -EPROBE_DEFER;
-@@ -1045,8 +1056,6 @@ static int vdec_probe(struct platform_device *pdev)
- 		goto err_vdev_release;
- 	}
- 
--	of_id = of_match_node(vdec_dt_match, dev->of_node);
--	core->platform = of_id->data;
- 	core->vdev_dec = vdev;
- 	core->dev_dec = dev;
- 	mutex_init(&core->lock);
-diff --git a/drivers/staging/media/meson/vdec/vdec.h b/drivers/staging/media/meson/vdec/vdec.h
-index d811e7976519..0faa1ec4858e 100644
---- a/drivers/staging/media/meson/vdec/vdec.h
-+++ b/drivers/staging/media/meson/vdec/vdec.h
-@@ -74,6 +74,7 @@ struct amvdec_core {
- 	struct clk *dos_clk;
- 	struct clk *vdec_1_clk;
- 	struct clk *vdec_hevc_clk;
-+	struct clk *vdec_hevcf_clk;
- 
- 	struct reset_control *esparser_reset;
- 
-diff --git a/drivers/staging/media/meson/vdec/vdec_platform.c b/drivers/staging/media/meson/vdec/vdec_platform.c
-index 824dbc7f46f5..7845a889ce24 100644
---- a/drivers/staging/media/meson/vdec/vdec_platform.c
-+++ b/drivers/staging/media/meson/vdec/vdec_platform.c
-@@ -82,6 +82,30 @@ static const struct amvdec_format vdec_formats_gxm[] = {
- 	},
- };
- 
-+static const struct amvdec_format vdec_formats_g12a[] = {
-+	{
-+		.pixfmt = V4L2_PIX_FMT_MPEG1,
-+		.min_buffers = 8,
-+		.max_buffers = 8,
-+		.max_width = 1920,
-+		.max_height = 1080,
-+		.vdec_ops = &vdec_1_ops,
-+		.codec_ops = &codec_mpeg12_ops,
-+		.firmware_path = "meson/vdec/gxl_mpeg12.bin",
-+		.pixfmts_cap = { V4L2_PIX_FMT_NV12M, V4L2_PIX_FMT_YUV420M, 0 },
-+	}, {
-+		.pixfmt = V4L2_PIX_FMT_MPEG2,
-+		.min_buffers = 8,
-+		.max_buffers = 8,
-+		.max_width = 1920,
-+		.max_height = 1080,
-+		.vdec_ops = &vdec_1_ops,
-+		.codec_ops = &codec_mpeg12_ops,
-+		.firmware_path = "meson/vdec/gxl_mpeg12.bin",
-+		.pixfmts_cap = { V4L2_PIX_FMT_NV12M, V4L2_PIX_FMT_YUV420M, 0 },
-+	},
-+};
++			clocks = <&clkc CLKID_PARSER>,
++				 <&clkc CLKID_DOS>,
++				 <&clkc CLKID_VDEC_1>,
++				 <&clkc CLKID_VDEC_HEVC>,
++				 <&clkc CLKID_VDEC_HEVCF>;
++			clock-names = "dos_parser", "dos", "vdec_1",
++				      "vdec_hevc", "vdec_hevcf";
++			resets = <&reset RESET_PARSER>;
++			reset-names = "esparser";
++		};
 +
- const struct vdec_platform vdec_platform_gxbb = {
- 	.formats = vdec_formats_gxbb,
- 	.num_formats = ARRAY_SIZE(vdec_formats_gxbb),
-@@ -99,3 +123,9 @@ const struct vdec_platform vdec_platform_gxm = {
- 	.num_formats = ARRAY_SIZE(vdec_formats_gxm),
- 	.revision = VDEC_REVISION_GXM,
- };
-+
-+const struct vdec_platform vdec_platform_g12a = {
-+	.formats = vdec_formats_g12a,
-+	.num_formats = ARRAY_SIZE(vdec_formats_g12a),
-+	.revision = VDEC_REVISION_G12A,
-+};
-diff --git a/drivers/staging/media/meson/vdec/vdec_platform.h b/drivers/staging/media/meson/vdec/vdec_platform.h
-index f6025326db1d..7c61b941b39f 100644
---- a/drivers/staging/media/meson/vdec/vdec_platform.h
-+++ b/drivers/staging/media/meson/vdec/vdec_platform.h
-@@ -15,6 +15,7 @@ enum vdec_revision {
- 	VDEC_REVISION_GXBB,
- 	VDEC_REVISION_GXL,
- 	VDEC_REVISION_GXM,
-+	VDEC_REVISION_G12A,
- };
- 
- struct vdec_platform {
-@@ -26,5 +27,6 @@ struct vdec_platform {
- extern const struct vdec_platform vdec_platform_gxbb;
- extern const struct vdec_platform vdec_platform_gxm;
- extern const struct vdec_platform vdec_platform_gxl;
-+extern const struct vdec_platform vdec_platform_g12a;
- 
- #endif
+ 		vpu: vpu@ff900000 {
+ 			compatible = "amlogic,meson-g12a-vpu";
+ 			reg = <0x0 0xff900000 0x0 0x100000>,
 -- 
 2.22.0
 
