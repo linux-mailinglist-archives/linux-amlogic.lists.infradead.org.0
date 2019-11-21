@@ -2,67 +2,85 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5D3721059A8
-	for <lists+linux-amlogic@lfdr.de>; Thu, 21 Nov 2019 19:37:19 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4CA71105A63
+	for <lists+linux-amlogic@lfdr.de>; Thu, 21 Nov 2019 20:28:25 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=5Nvkm89BocvOCSFH/riEJMTTcASmcIQHRNPh414Y70U=; b=VUmsXOT8Foluo4
-	Fwgq6DehK7gf5Xd4fUy14BTqGqIuE+Kn7IhFaeNXMNf2fpo/kE8zgnsTrO1uZUfttbu0nxZEyk9de
-	kxzDrzX8/GqUry9ouc8zNZaHWB54LqbCLQifcJodb8KV45vCLIng2VDCpL2Ha3kkmmf9yaobGFQ4y
-	UuMnJaeis3Wzbf7SQIvtw8+hjN5DSsXMwEiwac2CjnkPUcjsu1hJtwiIbOXl+BsN2dHCFP4CTXDEl
-	teirM+vQLCitbiZZdcKc6brYQ8FjonJQInVP7ewxNwH85YxxR1vPqHoC/rh/k+qZJr0AAI2Pl5PKH
-	t00C1/X7FJuJulUlfb7w==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=J8WtjyLdMjWU7cIXZ/YOHy8XZXiEHYI6XBk7+nOoykE=; b=Ve6f99d0DPBHiR
+	CkXkdKk6vYznkIeocakG9do/ZoRsnczPrCl9vkBzqgOTUGFiG6NKc8UWZ83buKjq05MoKG5fixvtj
+	D9V0I8Swr9emragDBeDi/vNT/3NwBweI2gZYeKtBlZbl4dvOCRQ9+0xmFh44MroEpVwJnN7gbf2+9
+	42hOvE6Fo0bMmcB+suF1SL26Gr4BotOsjrjmWXmCuqmudSaQfgzTToM8tkt+ajSFvbH+3gcn+9SES
+	S/6eD2ArkNCt6n/RVgGhFYZJYDuKSR7cudlWsJiwHeKDO6JxbiITkep9kFxqunXSYHNeYwHXC5fP/
+	q9FBij5EG2Yf8W0N6eJQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iXrKN-0005cA-JB; Thu, 21 Nov 2019 18:37:15 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1iXs7q-00066o-8y; Thu, 21 Nov 2019 19:28:22 +0000
+Received: from mail-ot1-f66.google.com ([209.85.210.66])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iXrKK-0005bp-Jn; Thu, 21 Nov 2019 18:37:13 +0000
-Received: from localhost (c-71-197-186-152.hsd1.wa.comcast.net
- [71.197.186.152])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
- (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id A5EBB20672;
- Thu, 21 Nov 2019 18:37:11 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1574361431;
- bh=bvBt/Z3IcnbICHqI86zDLVlsM35yTFdoVqsRRTB0fyk=;
- h=From:To:Cc:Subject:Date:From;
- b=NZcJa5SNue4TX21Z/7clNxhT6htYrnii9lAAOTqbZ2/hYlXzd6Vy4Ae6SgUjeBpdL
- l8L61V+30siHIs77rllCs4s3daq01vSI4paG1cWuNu7tIkzyT2Z+NS5/R02yyB60sW
- 3XwBnNinCWQLg4pOtI6pLyaDVVtslx2oPzcHiXQQ=
-From: Kevin Hilman <khilman@kernel.org>
-To: linux-amlogic@lists.infradead.org
-Subject: [PATCH 1/1] arm64: dts: meson-sm1-sei610: gpio-keys: switch to IRQs
-Date: Thu, 21 Nov 2019 10:37:11 -0800
-Message-Id: <20191121183711.19785-1-khilman@kernel.org>
-X-Mailer: git-send-email 2.22.0
+ id 1iXs7m-000660-Hv; Thu, 21 Nov 2019 19:28:19 +0000
+Received: by mail-ot1-f66.google.com with SMTP id l14so3977088oti.10;
+ Thu, 21 Nov 2019 11:28:18 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:in-reply-to:user-agent;
+ bh=CHTfKDAdZLhL1Zm6CO6s2kP8nxK/JV3N7UW7tF4nQP4=;
+ b=NtJJm3ZWy+UzDnIfTpRXd53uu8RFR/1vedLc7p85yCOXohuMYpOU99bbKU+XjUFgwn
+ 0BOEcl9WjkIeUY5lO2CYRkm955jVMOwL4pJnSA83JnPeud4f6qKPvrjM4vCQNAJG7iKl
+ 3sZdSuVF8O7Fq/pb8VoE+OuIDTaUkAhGdUtEpp3Y/YBd8cpyrze4l+FkjhoyzeQIqzLH
+ RvYlxHLkX7rkofjC6QTXBlkm9BZlqg/JF61ZdVVdEuRtrXdtHtuiEgbKfi8QvwELdfcz
+ bpEJAko7qXJKC0QP/w66jICSFKuCbbzVsQXXpSldIpZrQm4OUu7yuq8/VvjfpPameECX
+ C2cw==
+X-Gm-Message-State: APjAAAWd7k21CXHjS/lYYulUPiI91PbpCyYJSXy4n6nTKCfIeQzf+bv5
+ UulHiJuvgUu0XNwvrsUJvg==
+X-Google-Smtp-Source: APXvYqwSY+m1VVKP1lJWWFMDzjmXAD1VirqNMJL368kLdu7zD5Tqa73Qd9dLlvlXyGQDu+Uma4tvig==
+X-Received: by 2002:a9d:365:: with SMTP id 92mr8439326otv.9.1574364497464;
+ Thu, 21 Nov 2019 11:28:17 -0800 (PST)
+Received: from localhost (24-155-109-49.dyn.grandenetworks.net.
+ [24.155.109.49])
+ by smtp.gmail.com with ESMTPSA id u204sm1219085oig.35.2019.11.21.11.28.16
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Thu, 21 Nov 2019 11:28:16 -0800 (PST)
+Date: Thu, 21 Nov 2019 13:28:16 -0600
+From: Rob Herring <robh@kernel.org>
+To: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+Subject: Re: [PATCH v2 1/2] dt-bindings: mmc: Document the Amlogic Meson SDHC
+ MMC host controller
+Message-ID: <20191121192816.GA7377@bogus>
+References: <20191117142716.154764-1-martin.blumenstingl@googlemail.com>
+ <20191117142716.154764-2-martin.blumenstingl@googlemail.com>
 MIME-Version: 1.0
+Content-Disposition: inline
+In-Reply-To: <20191117142716.154764-2-martin.blumenstingl@googlemail.com>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191121_103712_668855_0F47C580 
-X-CRM114-Status: UNSURE (   9.36  )
+X-CRM114-CacheID: sfid-20191121_112818_587441_F096EB07 
+X-CRM114-Status: UNSURE (   9.72  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -5.2 (-----)
+X-Spam-Score: 0.8 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+ Content analysis details:   (0.8 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [209.85.210.66 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (robherring2[at]gmail.com)
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit (robherring2[at]gmail.com)
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+ [209.85.210.66 listed in wl.mailspike.net]
+ 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
+ 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -74,80 +92,29 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: linux-arm-kernel@lists.infradead.org,
- =?UTF-8?q?J=C3=A9r=C3=B4me=20Brunet?= <jbrunet@baylibre.com>
+Cc: mark.rutland@arm.com, devicetree@vger.kernel.org, ulf.hansson@linaro.org,
+ jianxin.pan@amlogic.com, linux-mmc@vger.kernel.org,
+ linux-kernel@vger.kernel.org, yinxin_1989@aliyun.com,
+ linux-amlogic@lists.infradead.org, linux-arm-kernel@lists.infradead.org,
+ lnykww@gmail.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-From: Kevin Hilman <khilman@baylibre.com>
+On Sun, Nov 17, 2019 at 03:27:15PM +0100, Martin Blumenstingl wrote:
+> This documents the devicetree bindings for the SDHC MMC host controller
+> found in Meson6, Meson8, Meson8b and Meson8m2 SoCs. It can use a
+> bus-width of 1/4/8-bit and it supports eMMC spec 4.4x/4.5x including
+> HS200 mode (up to 100MHz clock).
+> 
+> Signed-off-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+> ---
+>  .../bindings/mmc/amlogic,meson-mx-sdhc.yaml   | 64 +++++++++++++++++++
+>  1 file changed, 64 insertions(+)
+>  create mode 100644 Documentation/devicetree/bindings/mmc/amlogic,meson-mx-sdhc.yaml
 
-Switch the GPIO buttons/switches to use interrupts instead of polling.
-While at it, add the mic mute switch and the power button.
-
-Signed-off-by: Kevin Hilman <khilman@baylibre.com>
----
- .../boot/dts/amlogic/meson-sm1-sei610.dts     | 26 +++++++++++++++++--
- 1 file changed, 24 insertions(+), 2 deletions(-)
-
-diff --git a/arch/arm64/boot/dts/amlogic/meson-sm1-sei610.dts b/arch/arm64/boot/dts/amlogic/meson-sm1-sei610.dts
-index 5bd07469766b..2c90f4713d0e 100644
---- a/arch/arm64/boot/dts/amlogic/meson-sm1-sei610.dts
-+++ b/arch/arm64/boot/dts/amlogic/meson-sm1-sei610.dts
-@@ -46,25 +46,47 @@
- 	};
- 
- 	gpio-keys {
--		compatible = "gpio-keys-polled";
--		poll-interval = <100>;
-+		compatible = "gpio-keys";
- 
- 		key1 {
- 			label = "A";
- 			linux,code = <BTN_0>;
- 			gpios = <&gpio GPIOH_6 GPIO_ACTIVE_LOW>;
-+			interrupt-parent = <&gpio_intc>;
-+			interrupts = <34 IRQ_TYPE_EDGE_BOTH>;
- 		};
- 
- 		key2 {
- 			label = "B";
- 			linux,code = <BTN_1>;
- 			gpios = <&gpio GPIOH_7 GPIO_ACTIVE_LOW>;
-+			interrupt-parent = <&gpio_intc>;
-+			interrupts = <35 IRQ_TYPE_EDGE_BOTH>;
- 		};
- 
- 		key3 {
- 			label = "C";
- 			linux,code = <BTN_2>;
- 			gpios = <&gpio_ao GPIOAO_2 GPIO_ACTIVE_LOW>;
-+			interrupt-parent = <&gpio_intc>;
-+			interrupts = <2 IRQ_TYPE_EDGE_BOTH>;
-+		};
-+
-+		mic_mute {
-+			label = "MicMute";
-+			linux,code = <SW_MUTE_DEVICE>;
-+			linux,input-type = <EV_SW>;
-+			gpios = <&gpio_ao GPIOE_2 GPIO_ACTIVE_LOW>;
-+			interrupt-parent = <&gpio_intc>;
-+			interrupts = <99 IRQ_TYPE_EDGE_BOTH>;
-+		};
-+
-+		power_key {
-+			label = "PowerKey";
-+			linux,code = <KEY_POWER>;
-+			gpios = <&gpio_ao GPIOAO_3 GPIO_ACTIVE_LOW>;
-+			interrupt-parent = <&gpio_intc>;
-+			interrupts = <3 IRQ_TYPE_EDGE_BOTH>;
- 		};
- 	};
- 
--- 
-2.22.0
-
+Reviewed-by: Rob Herring <robh@kernel.org>
 
 _______________________________________________
 linux-amlogic mailing list
