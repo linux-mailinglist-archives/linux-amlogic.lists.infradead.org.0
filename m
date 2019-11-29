@@ -2,72 +2,49 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 53F7C10BE01
-	for <lists+linux-amlogic@lfdr.de>; Wed, 27 Nov 2019 22:33:21 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id F394C10D754
+	for <lists+linux-amlogic@lfdr.de>; Fri, 29 Nov 2019 15:46:57 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ywqarMfoPI4kk4BgvtgHOEckg12h3ivEYVP2Q+RbDy8=; b=h2O4JWgBy+I9xv
-	YHrubWNc8lgkoG2l1atce1OX80FD5bnhaAlq7Kd6d0C+WnS3XJSUPCnWEqLvXLPfazdQAirxkvMNO
-	qW7G4hie1h418RBLlBEGL8vWCrq2FoWFHjAmCWoSIVOHOEdCyXzLIHNUkVjLOeWek6VRBRwRG1pB1
-	l/SP59q2m6zzYzMNDeyy0SFk7v6jh66TK7uBsQyqP3I6qoo1T0EaFIkF2gjP5/xwLqDuMlMR5WH8U
-	SD0rQPQmUHT7i4xv8N2HwhBLBMRqzphvo+onnG31Pf6Wq9UlbSdsDaNWQrMSRoF7SGCsFmY8xhaD1
-	Ow7wUv7T0I/i0LZsVXxA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=y8ogP/lKT0o1wUSxjwie0KOFX9jkwcP8nDIwH0MfYxo=; b=GPxRIMpXxU1oP/
+	5yM0TUG+DtL5T51NOb7D8YV/U79ShTAwSX/U8QLfaeR7nOt+Nnh5MTMVRuQIYcGZm+ICy3Z1fJMjz
+	rNvrMRLeQ/jElx9QD36FWXwqzlkjHOa9x6j6mru+9yXa93piz3Q/tWLskmDUJq9KG6FsY5VaXsnbj
+	q1m2wu/UzX4yjiaLnkeCEoMKPR5vviIwNmMJcMOMtLBN2wjPHde4q+us/AJV53nGirRc4YehPXlI/
+	NzVHwrNo8idDoVcpsqYu+lU6zZ5MM0Ik4Ojx8331z6SE/YyHZfKfC6Ximtw3qUAxD+AZl2K58EZtT
+	kdU8IHhz2ejs2CQMnxsw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ia4w0-0004f1-Sl; Wed, 27 Nov 2019 21:33:16 +0000
-Received: from smtprelay0174.hostedemail.com ([216.40.44.174]
- helo=smtprelay.hostedemail.com)
+	id 1iahXj-0003oZ-3o; Fri, 29 Nov 2019 14:46:47 +0000
+Received: from mail-sz.amlogic.com ([211.162.65.117])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ia4vx-0004ed-64; Wed, 27 Nov 2019 21:33:14 +0000
-Received: from filter.hostedemail.com (clb03-v110.bra.tucows.net
- [216.40.38.60])
- by smtprelay04.hostedemail.com (Postfix) with ESMTP id 49DF1180020E4;
- Wed, 27 Nov 2019 21:33:08 +0000 (UTC)
-X-Session-Marker: 6A6F6540706572636865732E636F6D
-X-Spam-Summary: 50, 0, 0, , d41d8cd98f00b204, joe@perches.com,
- :::::::::::::::::::::::::::::::::::::::,
- RULES_HIT:41:355:379:599:800:960:967:973:982:988:989:1260:1277:1311:1313:1314:1345:1359:1437:1515:1516:1518:1534:1539:1593:1594:1711:1730:1747:1777:1792:2393:2525:2553:2560:2563:2682:2685:2828:2859:2895:2933:2937:2939:2942:2945:2947:2951:2954:3022:3138:3139:3140:3141:3142:3352:3622:3865:3867:3868:3871:3872:3874:3934:3936:3938:3941:3944:3947:3950:3953:3956:3959:4321:5007:6117:6119:6742:7901:9025:10004:10400:11232:11658:11914:12043:12050:12297:12740:12895:13069:13161:13229:13255:13311:13357:13439:13894:14181:14659:14721:21080:21627:21788:30054:30060:30090:30091,
- 0, RBL:none, CacheIP:none, Bayesian:0.5, 0.5, 0.5, Netcheck:none,
- DomainCache:0, MSF:not bulk, SPF:, MSBL:0, DNSBL:none, Custom_rules:0:0:0,
- LFtime:1, LUA_SUMMARY:none
-X-HE-Tag: cows61_381bf37cb8f3e
-X-Filterd-Recvd-Size: 2684
-Received: from XPS-9350.home (unknown [47.151.135.224])
- (Authenticated sender: joe@perches.com)
- by omf19.hostedemail.com (Postfix) with ESMTPA;
- Wed, 27 Nov 2019 21:33:05 +0000 (UTC)
-Message-ID: <b2cbe247a33dd9f6c747fce180f964b88d5dc70a.camel@perches.com>
-Subject: Re: [PATCH 4/5] pinctrl: sh-pfc: Use the correct style for SPDX
- License Identifier
-From: Joe Perches <joe@perches.com>
-To: Geert Uytterhoeven <geert@linux-m68k.org>
-Date: Wed, 27 Nov 2019 13:32:39 -0800
-In-Reply-To: <CAMuHMdUSSHvQ74c156tuhWShp05TQuSmXa-kY3HNbYj0VL_d4g@mail.gmail.com>
-References: <cover.1574871463.git.nishadkamdar@gmail.com>
- <5a7ed2e4b58ba7ff2f0638a2435a3a1e1c62c9f6.1574871463.git.nishadkamdar@gmail.com>
- <CAMuHMdUqfRioTBV27AKx9zv9YuSqEod6x+A4aguf=h20TDXr6w@mail.gmail.com>
- <9bacc7d9-6bd9-0b7c-18cd-d614796397dd@suse.de>
- <ae40eb808f420f5de4a140b8757dfbc426a8cf90.camel@perches.com>
- <CAMuHMdUSSHvQ74c156tuhWShp05TQuSmXa-kY3HNbYj0VL_d4g@mail.gmail.com>
-User-Agent: Evolution 3.34.1-2 
+ id 1iahXV-0003gZ-6H; Fri, 29 Nov 2019 14:46:37 +0000
+Received: from droid15-sz.amlogic.com (10.28.8.25) by mail-sz.amlogic.com
+ (10.28.11.5) with Microsoft SMTP Server id 15.1.1591.10; Fri, 29 Nov 2019
+ 22:46:36 +0800
+From: Jian Hu <jian.hu@amlogic.com>
+To: Jerome Brunet <jbrunet@baylibre.com>, Neil Armstrong
+ <narmstrong@baylibre.com>
+Subject: [PATCH v3 0/7] add Amlogic A1 clock controller driver
+Date: Fri, 29 Nov 2019 22:45:58 +0800
+Message-ID: <20191129144605.182774-1-jian.hu@amlogic.com>
+X-Mailer: git-send-email 2.24.0
 MIME-Version: 1.0
+X-Originating-IP: [10.28.8.25]
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191127_133313_287774_224443AA 
-X-CRM114-Status: UNSURE (   8.34  )
+X-CRM114-CacheID: sfid-20191129_064636_384375_E2D00E8B 
+X-CRM114-Status: UNSURE (   8.08  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.40.44.174 listed in list.dnswl.org]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -79,50 +56,80 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: Geert Uytterhoeven <geert+renesas@glider.be>,
- Nishad Kamdar <nishadkamdar@gmail.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Kevin Hilman <khilman@baylibre.com>, Linus Walleij <linus.walleij@linaro.org>,
- Sean Wang <sean.wang@kernel.org>,
- Linux Kernel Mailing List <linux-kernel@vger.kernel.org>,
- linux-stm32@st-md-mailman.stormreply.com,
- Linux-Renesas <linux-renesas-soc@vger.kernel.org>,
- linux-gpio <linux-gpio@vger.kernel.org>, linux-mediatek@lists.infradead.org,
- Maxime Coquelin <mcoquelin.stm32@gmail.com>,
- Manivannan Sadhasivam <manivannan.sadhasivam@linaro.org>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Uwe =?ISO-8859-1?Q?Kleine-K=F6nig?= <u.kleine-koenig@pengutronix.de>,
- linux-amlogic <linux-amlogic@lists.infradead.org>,
- Andreas =?ISO-8859-1?Q?F=E4rber?= <afaerber@suse.de>,
- Linux ARM <linux-arm-kernel@lists.infradead.org>,
- Alexandre Torgue <alexandre.torgue@st.com>
-Content-Type: text/plain; charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
+Cc: Rob Herring <robh@kernel.org>, Victor Wan <victor.wan@amlogic.com>,
+ Jianxin Pan <jianxin.pan@amlogic.com>, devicetree@vger.kernel.org,
+ Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
+ Kevin Hilman <khilman@baylibre.com>,
+ Michael Turquette <mturquette@baylibre.com>, linux-kernel@vger.kernel.org,
+ Stephen Boyd <sboyd@kernel.org>, Jian Hu <jian.hu@amlogic.com>,
+ linux-arm-kernel@lists.infradead.org, Qiufang Dai <qiufang.dai@amlogic.com>,
+ linux-amlogic@lists.infradead.org, linux-clk@vger.kernel.org,
+ Chandle Zou <chandle.zou@amlogic.com>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On Wed, 2019-11-27 at 22:12 +0100, Geert Uytterhoeven wrote:
-> On Wed, Nov 27, 2019 at 9:59 PM Joe Perches <joe@perches.com> wrote:
-> > On Wed, 2019-11-27 at 21:55 +0100, Andreas F=E4rber wrote:
-> > > However, if we're touching these lines anyway, shouldn't we be updati=
-ng
-> > > the SPDX Identifier to GPL-2.0-only while at it?
-> > =
+add support for Amlogic A1 clock driver, the clock includes 
+three parts: peripheral clocks, pll clocks, CPU clocks.
+sys pll and CPU clocks will be sent in next patch.
 
-> > Probably better to do that with a treewide script one day.
-> =
+Changes since v1 at [2]:
+-add probe function for A1
+-seperate the clock driver into two patch
+-change some clock flags and ops
+-add support for a1 PLL ops
+-add A1 clock node
 
-> Yeah... But it's already more than one year after
-> =
+Changes since v1 at [1]:
+-place A1 config alphabetically
+-add actual reason for RO ops, CLK_IS_CRITICAL, CLK_IGNORE_UNUSED
+-separate the driver into two driver: peripheral and pll driver
+-delete CLK_IGNORE_UNUSED flag for pwm b/c/d/e/f clock, dsp clock
+-delete the change in Kconfig.platforms, address to Kevin alone
+-remove the useless comments
+-modify the meson pll driver to support A1 PLLs
 
-> > https://lkml.org/lkml/2018/8/16/487
-> =
+[1] https://lkml.kernel.org/r/1569411888-98116-1-git-send-email-jian.hu@amlogic.com
+[2] https://lkml.kernel.org/r/1571382865-41978-1-git-send-email-jian.hu@amlogic.com
 
-> and Documentation/process/license-rules.rst (which is the authoritive
-> rule?) still hasn't been updated...
+Jian Hu (7):
+  dt-bindings: clock: meson: add A1 PLL clock controller bindings
+  clk: meson: add support for A1 PLL clock ops
+  clk: meson: eeclk: refactor eeclk common driver to support A1
+  clk: meson: a1: add support for Amlogic A1 PLL clock driver
+  dt-bindings: clock: meson: add A1 peripheral clock controller bindings
+  clk: meson: a1: add support for Amlogic A1 Peripheral clock driver
+  arm64: dts: meson: add A1 PLL and periphs clock controller
 
-The patch still applies today...
+ .../bindings/clock/amlogic,a1-clkc.yaml       |   70 +
+ .../bindings/clock/amlogic,a1-pll-clkc.yaml   |   56 +
+ arch/arm64/boot/dts/amlogic/meson-a1.dtsi     |   26 +
+ drivers/clk/meson/Kconfig                     |   20 +
+ drivers/clk/meson/Makefile                    |    2 +
+ drivers/clk/meson/a1-pll.c                    |  334 +++
+ drivers/clk/meson/a1-pll.h                    |   56 +
+ drivers/clk/meson/a1.c                        | 2309 +++++++++++++++++
+ drivers/clk/meson/a1.h                        |  120 +
+ drivers/clk/meson/clk-pll.c                   |   21 +
+ drivers/clk/meson/clk-pll.h                   |    1 +
+ drivers/clk/meson/meson-eeclk.c               |   59 +-
+ drivers/clk/meson/meson-eeclk.h               |    2 +
+ drivers/clk/meson/parm.h                      |    1 +
+ include/dt-bindings/clock/a1-clkc.h           |   98 +
+ include/dt-bindings/clock/a1-pll-clkc.h       |   16 +
+ 16 files changed, 3181 insertions(+), 10 deletions(-)
+ create mode 100644 Documentation/devicetree/bindings/clock/amlogic,a1-clkc.yaml
+ create mode 100644 Documentation/devicetree/bindings/clock/amlogic,a1-pll-clkc.yaml
+ create mode 100644 drivers/clk/meson/a1-pll.c
+ create mode 100644 drivers/clk/meson/a1-pll.h
+ create mode 100644 drivers/clk/meson/a1.c
+ create mode 100644 drivers/clk/meson/a1.h
+ create mode 100644 include/dt-bindings/clock/a1-clkc.h
+ create mode 100644 include/dt-bindings/clock/a1-pll-clkc.h
 
+-- 
+2.24.0
 
 
 _______________________________________________
