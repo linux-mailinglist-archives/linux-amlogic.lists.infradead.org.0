@@ -2,87 +2,88 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5F39510DDF3
-	for <lists+linux-amlogic@lfdr.de>; Sat, 30 Nov 2019 15:59:16 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id B2DEB10DE61
+	for <lists+linux-amlogic@lfdr.de>; Sat, 30 Nov 2019 18:11:34 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=oYPuj0bhu/02L9r1Ep1yzWMK8Q7R0QSC3CUFE0UMhHs=; b=f5qN1n6fyUqNXx
-	T7dgwUwVGTKE1ZyKlJNNFg8d5Xwf8YDa82+oF8Nz7ygVFx+ylN+Vsa0EjY0O6s+jfRLGYUKFus4q7
-	mgSdht525I0Hx3VGK5cOWGilLrFdyVg3XNGCu7mRJ/uRq+sOWxQi04HmTbp5DQ8Z2q4cd1aYBOISy
-	xTfsoB8byAWvG8wx9k09YPH1SZ5nBzsu74TXhJeQ/ZeIpAz/Yr2BGodRbqYhTmts3JanQTjdhcn4Y
-	NaDZIcHTAQ7RC0e6ZOBI9ponlujZWKagCC9TDbMDjg6UasbOzD/HnI6yZKLKDogrrIHkohlMSAkoE
-	ylj49Tzf1SZGpuBO0NAg==;
+	List-Owner; bh=aF/3PIgiXZJIbPlqCumNby39ryuTzPZHMZCRW7iPnoY=; b=rlGeFMLfYJahWd
+	FOyuXY0+uSOXRsYXTYzHoL678dhmz2wdHLlH5hGOeJZ/LVbeq1ib5Nw/92zHfbtMPeJ0CEgQieKgZ
+	Qi+pqvwLIXzBHwUjeRjhEKbl5cf3ZUVlAcah24VQvVdITTKAS9ae5VzUTnET49SvRqE/YaKHVhZyN
+	PZGAm/LQ93kymAn3Ffu5CMh0ryxSQYGcCLfwLxxa+WYilNiWEWNg15stDh8cJn3yTjOLGop1uj3oO
+	DPNXg7kjjet71HqGEfOt2hc5WxbWGMWONxFJfF5kiUPjrpeDCpGaZ/78CXnOGcIkjku5C8kTqMo8+
+	n8ENiq9byD3VEVz/M+bw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ib4DK-0008Cw-En; Sat, 30 Nov 2019 14:59:14 +0000
-Received: from mail-wr1-x444.google.com ([2a00:1450:4864:20::444])
+	id 1ib6HL-0000ko-DU; Sat, 30 Nov 2019 17:11:31 +0000
+Received: from mail-wr1-x441.google.com ([2a00:1450:4864:20::441])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ib4Cd-0007e7-VW; Sat, 30 Nov 2019 14:58:34 +0000
-Received: by mail-wr1-x444.google.com with SMTP id q10so2292017wrm.11;
- Sat, 30 Nov 2019 06:58:31 -0800 (PST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=googlemail.com; s=20161025;
- h=from:to:cc:subject:date:message-id:in-reply-to:references
- :mime-version:content-transfer-encoding;
- bh=bUD5FdR6g2ASiBzE14YJrcmNzasb1Y2tz62iUE7N/xc=;
- b=UBvp/ytW4dLm9uvAfDdpEY+sIk0DHBNJsf9eC1RyWRYMIsvDbpmkW8ofy4BC422sTB
- +M1vbn1upImJvydQUcRb4uFJUGQ1E5v6u5UUXQmjkpNllnVCIKwLpd/Loc1l0imHGbNh
- vGOWZTXZ/SHfuhcvMyCAtqoL3oewv7FnK3qiAL4MVjFYXNpK7qUD09bx+r6UDzuqvVqT
- 7Q/uxFF/rrWw9q3VcXMdweNFjbc4ehrHVXkXTRN6bX7tGo6FHh3ZqvzJNv9vbfG29tl7
- 3TUbqM4XsXs+xz8ovggd2m9Mvwlk81d855Xx9aBSCZjxWhua+JIFgMgcO0zHtV8/riLJ
- MaIg==
+ id 1ib6HJ-0000kI-BV
+ for linux-amlogic@lists.infradead.org; Sat, 30 Nov 2019 17:11:30 +0000
+Received: by mail-wr1-x441.google.com with SMTP id a15so38720087wrf.9
+ for <linux-amlogic@lists.infradead.org>; Sat, 30 Nov 2019 09:11:28 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=date:from:to:cc:subject:message-id:references:mime-version
+ :content-disposition:in-reply-to;
+ bh=UQL+AVMYlXHuUQ/VgmF2hZDjdLHQZNOvD2MO7e4tukA=;
+ b=rU803rKaqI4eJSixM3JP0QLOI3hYlebb+dCaUz+d9ZGGl6FR1nNELe+sA4WRNCPAWO
+ Q2G+9ZLwIxMZqgHCTe//BHqKljOfR921M4ccImOjiiopIZOgWT/3iVLHEF5WT4hOoAjn
+ roMGCizkPGUdk5lfTNrSVd1fGGLnTmek+/iba74+Jo/2+1wKH3pbvln8nxSe3Pqh7/PW
+ UofqCXP7FF8BqQ1kO13CHSy92+gvbTlPoVPDt+yH79fx2NHZPCflBKQmUBxTvXgPxjME
+ 8rqzBRgzv1nkyvUf8BC8G430o8woLvRA1r8c4zrAd1rDkAs72y3ybWzlkzSXKMeoB9vN
+ PWTw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
- :references:mime-version:content-transfer-encoding;
- bh=bUD5FdR6g2ASiBzE14YJrcmNzasb1Y2tz62iUE7N/xc=;
- b=dZLMxa70mEEF39wnUlLxviA5NsR9KBpGVrfrCEpVyhkY4cnpYh5Qrbks7ls9J1XGfl
- HA3EYLlckRAVqNBejuF2VhocxAkHlBOsxe5JzgRgwvNXFUCAtV+jnCCA6tKsQNN2CgXA
- gd8GSqv8cJlx69TfDZiyQHJRJ3x8RU6bAyQKgbnQink91LgEFnjtxgPnU/Ltp5DQLqtm
- zKFtqNFjTK/P2CGQuC+R/D5HXQfo0jRqVpH8fwmOqDS3h1zu4jgsfXMtp/eqvs4oOep2
- h7/Dkf6ynWkpV+J2LNnCJBJRTVzeBdT3cKkBj556wXsE3Is5h2UM6N24YcYY3bzKtMn8
- 89Nw==
-X-Gm-Message-State: APjAAAWQ26fJUHjxmMtduCOjhhi5zKJvCbT8mB3HJ3Q21oU7E7NITngn
- QSSfFaE0LPw6Bmc/b2vNaK/VVeSy
-X-Google-Smtp-Source: APXvYqw7/FFUtU7ZgBNzxnCt5W3VfthKgCKSSFdtQHPDyIi7xYUPTHYjqDMaMOPtQVwn54Dr0WNesQ==
-X-Received: by 2002:adf:da4d:: with SMTP id r13mr42788144wrl.307.1575125909679; 
- Sat, 30 Nov 2019 06:58:29 -0800 (PST)
-Received: from localhost.localdomain
- (p200300F1371CB100428D5CFFFEB99DB8.dip0.t-ipconnect.de.
- [2003:f1:371c:b100:428d:5cff:feb9:9db8])
- by smtp.googlemail.com with ESMTPSA id c9sm3510202wmc.47.2019.11.30.06.58.28
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:in-reply-to;
+ bh=UQL+AVMYlXHuUQ/VgmF2hZDjdLHQZNOvD2MO7e4tukA=;
+ b=o7Nqjn+rRpFTj2QDNHJSOu/QpmpjDm/xXm3vxs+NbIRh01tfqE7xAgnbMkunRbDLSs
+ KHELHHRHvPmyViGSsQaKwHWz/3jEGVrcM3W0EQpTgr15scmz7aDkI8vTtf4JA1arWOD6
+ Dz+urNqEmSmuIL4I5M+skxjBpRGQcVP1KH7HH4hGE7a8HeM2I89/qsQJbz5Tidlp9b9b
+ obTGbeSqbzHCfCkVJImWmast2Rce3K6bQ6EJgYa0+ut7DLuYRmaltkJQgkp0UHGOh7zO
+ uyzAX6UvMqtY78QqorUVXCGKsb0OD4fycPj2GRc7ra8cqfsIhXCNHTsrU4LJyUDXfTlL
+ noAA==
+X-Gm-Message-State: APjAAAUF3Rxsm/B/oUOlqOk05S8wDM8VvKvV9VN7BaxNiW2ioOV7t3an
+ ogZj0cC1tBrkkmh6x/fLwytIdzOeX0Dsaw==
+X-Google-Smtp-Source: APXvYqw6jbkQFYeaVC7kFrelTbJ4a+slCVnwEENHqo1UFXL7HMSIb1GuXHqNAVYfY3OuhDTbqc4akA==
+X-Received: by 2002:adf:ef92:: with SMTP id d18mr23092195wro.234.1575133887755; 
+ Sat, 30 Nov 2019 09:11:27 -0800 (PST)
+Received: from localhost ([37.238.188.27])
+ by smtp.gmail.com with ESMTPSA id a26sm16844378wmm.14.2019.11.30.09.11.26
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Sat, 30 Nov 2019 06:58:28 -0800 (PST)
-From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-To: linux-amlogic@lists.infradead.org, khilman@baylibre.com,
- narmstrong@baylibre.com
-Subject: [PATCH RESEND v1 2/2] soc: amlogic: meson-ee-pwrc: propagate errors
- from pm_genpd_init()
-Date: Sat, 30 Nov 2019 15:58:21 +0100
-Message-Id: <20191130145821.1490349-3-martin.blumenstingl@googlemail.com>
-X-Mailer: git-send-email 2.24.0
-In-Reply-To: <20191130145821.1490349-1-martin.blumenstingl@googlemail.com>
-References: <20191130145821.1490349-1-martin.blumenstingl@googlemail.com>
+ Sat, 30 Nov 2019 09:11:27 -0800 (PST)
+Date: Sat, 30 Nov 2019 20:11:24 +0300
+From: Mohammad Rasim <mohammad.rasim96@gmail.com>
+To: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+Subject: Re: [PATCH v3 1/2] dt-bindings: Add vendor prefix for Videostrong
+Message-ID: <20191130171124.3a2ifmkpfymxztlr@manjaro.localdomain>
+References: <20191130115824.31778-1-mohammad.rasim96@gmail.com>
+ <20191130115824.31778-2-mohammad.rasim96@gmail.com>
+ <CAFBinCCg5GdHprEKfXU1LBtgQi2G7P30=bmLh8Acrn82vYGfeg@mail.gmail.com>
 MIME-Version: 1.0
+Content-Disposition: inline
+In-Reply-To: <CAFBinCCg5GdHprEKfXU1LBtgQi2G7P30=bmLh8Acrn82vYGfeg@mail.gmail.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191130_065832_013452_9608B906 
-X-CRM114-Status: GOOD (  12.55  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20191130_091129_418593_9184F152 
+X-CRM114-Status: UNSURE (   8.36  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.1 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.1 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:444 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:441 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (martin.blumenstingl[at]googlemail.com)
+ provider (mohammad.rasim96[at]gmail.com)
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit (mohammad.rasim96[at]gmail.com)
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
@@ -101,67 +102,30 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
- linux-kernel@vger.kernel.org, linux-arm-kernel@lists.infradead.org
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ Neil Armstrong <narmstrong@baylibre.com>, Kevin Hilman <khilman@baylibre.com>,
+ Rob Herring <robh+dt@kernel.org>, linux-amlogic@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-pm_genpd_init() can return an error. Propagate the error code to prevent
-the driver from indicating that it successfully probed while there were
-errors during pm_genpd_init().
-
-Fixes: eef3c2ba0a42a6 ("soc: amlogic: Add support for Everything-Else power domains controller")
-Signed-off-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
----
- drivers/soc/amlogic/meson-ee-pwrc.c | 20 ++++++++++++++------
- 1 file changed, 14 insertions(+), 6 deletions(-)
-
-diff --git a/drivers/soc/amlogic/meson-ee-pwrc.c b/drivers/soc/amlogic/meson-ee-pwrc.c
-index df734a45da56..3f0261d53ad9 100644
---- a/drivers/soc/amlogic/meson-ee-pwrc.c
-+++ b/drivers/soc/amlogic/meson-ee-pwrc.c
-@@ -323,6 +323,8 @@ static int meson_ee_pwrc_init_domain(struct platform_device *pdev,
- 				     struct meson_ee_pwrc *pwrc,
- 				     struct meson_ee_pwrc_domain *dom)
- {
-+	int ret;
-+
- 	dom->pwrc = pwrc;
- 	dom->num_rstc = dom->desc.reset_names_count;
- 	dom->num_clks = dom->desc.clk_names_count;
-@@ -368,15 +370,21 @@ static int meson_ee_pwrc_init_domain(struct platform_device *pdev,
-          * prepare/enable counters won't be in sync.
-          */
- 	if (dom->num_clks && dom->desc.get_power && !dom->desc.get_power(dom)) {
--		int ret = clk_bulk_prepare_enable(dom->num_clks, dom->clks);
-+		ret = clk_bulk_prepare_enable(dom->num_clks, dom->clks);
- 		if (ret)
- 			return ret;
- 
--		pm_genpd_init(&dom->base, &pm_domain_always_on_gov, false);
--	} else
--		pm_genpd_init(&dom->base, NULL,
--			      (dom->desc.get_power ?
--			       dom->desc.get_power(dom) : true));
-+		ret = pm_genpd_init(&dom->base, &pm_domain_always_on_gov,
-+				    false);
-+		if (ret)
-+			return ret;
-+	} else {
-+		ret = pm_genpd_init(&dom->base, NULL,
-+				    (dom->desc.get_power ?
-+				     dom->desc.get_power(dom) : true));
-+		if (ret)
-+			return ret;
-+	}
- 
- 	return 0;
- }
--- 
-2.24.0
-
+On 19/11/30 02:45PM, Martin Blumenstingl wrote:
+> Hi Mohammad,
+>
+> On Sat, Nov 30, 2019 at 12:58 PM Mohammad Rasim
+> <mohammad.rasim96@gmail.com> wrote:
+> >
+> > Videostrong Technology Co., Ltd., A manufacturer of Android Players & STB
+> > (Android with DVB Hybrid box & DVB-T2/S2/C/ISDB-T/DTMB-TH/ATSC )as well as
+> the space after ATSC should be after the ")"
+>
+Thanks, will fix that
+> > HD media players.
+> >
+> > Signed-off-by: Mohammad Rasim <mohammad.rasim96@gmail.com>
+> with above typo fixed:
+> Acked-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
 
 _______________________________________________
 linux-amlogic mailing list
