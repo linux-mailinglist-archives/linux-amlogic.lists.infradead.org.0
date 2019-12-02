@@ -2,56 +2,96 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 869C510E5B2
-	for <lists+linux-amlogic@lfdr.de>; Mon,  2 Dec 2019 07:01:46 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9C37510E6A0
+	for <lists+linux-amlogic@lfdr.de>; Mon,  2 Dec 2019 09:02:20 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
-	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=7QGlzY3Qq5gR76uybmzSkhxu98iGBMeW3deXbng3bBk=; b=mf3IyPGEi2bfoGsasR/SSVcxA
-	Lcd7PRhvxyomW/w8tCADcNZ1kpK3BPDUJS9E7xx8QMSpBLUoUN1xIZY0hioApoosI55NJIHZVkFDF
-	HVacV91WTm5xk3lW8LzQ419GApIyKuKlkf9LAcnRuF/VX9f7xVgZS+NliR/tWC4/NrBtDyAgtZ/lx
-	AkwoKWGkI32RORE0/71sBpERMYbttESk45wHofC+t7D9g7MWe2kxmik0LyDNMPFV96dCuPqHlFujN
-	I/ed14o+FA+VIX1bCv6gxtDslqd7Ed4E1uJsw7XEaGwZcbor0wbUPZRXGBETAJdVG8InFGC9nT8M6
-	rb1kVlfdg==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=bprF0WbG6KJMPVu8LbgX9polpf6yyk3iN1DSBR1ONQw=; b=QU5UEXAfsP93h2
+	Ft9/5vBTn9ZizKUkCsK21Di/T+UP6wRMxvfoLzVO0wjMBzQjE/TSWZNCGEiOLxVXW4WwT42mGaarB
+	rUviyiaQwjd7NuMtahKz21llj/QD0egK6LABpbfVjGApoEeN4dZtuzmd3/uPeidC7yd2yFa3Lel7I
+	r82/EMImWeXhyUrqhSD4IQg04dXnP9mCauwpymoNlIhj0zAChaL8WBStU/NlKnJycrB/o1ctP92Kt
+	e1L0Tu/7X7Wi9IYNTeaB7bokhI+007WEKfmlr+ygJYkgMFutQgP7wQbcOzRTe/F4RjchaQ1ggW+ej
+	DcfZGD1BSKF9Oy9nuRLg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ibemE-0008Ua-TE; Mon, 02 Dec 2019 06:01:42 +0000
-Received: from mail-sz.amlogic.com ([211.162.65.117])
+	id 1ibgeq-0007AO-JA; Mon, 02 Dec 2019 08:02:12 +0000
+Received: from mail-wr1-x443.google.com ([2a00:1450:4864:20::443])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ibem2-0008La-Cq; Mon, 02 Dec 2019 06:01:32 +0000
-Received: from [10.28.39.99] (10.28.39.99) by mail-sz.amlogic.com (10.28.11.5)
- with Microsoft SMTP Server (version=TLS1_2,
- cipher=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256) id 15.1.1591.10; Mon, 2 Dec
- 2019 14:01:47 +0800
-Subject: Re: [PATCH v3 0/7] add Amlogic A1 clock controller driver
-To: Jerome Brunet <jbrunet@baylibre.com>, Neil Armstrong
- <narmstrong@baylibre.com>
-References: <20191129144605.182774-1-jian.hu@amlogic.com>
- <1jwobi7lcy.fsf@starbuckisacylon.baylibre.com>
-From: Jian Hu <jian.hu@amlogic.com>
-Message-ID: <63d776af-6ded-02d2-cc34-1b3733e2625b@amlogic.com>
-Date: Mon, 2 Dec 2019 14:01:47 +0800
-User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:60.0) Gecko/20100101
- Thunderbird/60.9.1
+ id 1ibgen-0007A4-Bk
+ for linux-amlogic@lists.infradead.org; Mon, 02 Dec 2019 08:02:10 +0000
+Received: by mail-wr1-x443.google.com with SMTP id n1so42956554wra.10
+ for <linux-amlogic@lists.infradead.org>; Mon, 02 Dec 2019 00:02:07 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=date:from:to:cc:subject:message-id:references:mime-version
+ :content-disposition:in-reply-to;
+ bh=eObgtd5YnXMirZPt7QMUEmAc3hSdu9SksehJdyatM0s=;
+ b=GudKFDVkIXgVvSEc21ZdU47PmDzbC+AedL8FhZIDDQ2X3zRURqR11cL9cNIOewQGn9
+ 8Fs1cpG8fp/vW06dxPy88jXNqoTCLaGxLK+mfw2hmmb0IAa5bjiA22PoKZBPJwqSmRVm
+ bv2yqHLCd4UJOog0ulgaCrSUNV2GYyZ5FjiGkNeoiIXEZ+AMwcAJ/QGmAdmuE+oqlXZv
+ Mboqq5Yk5u5uzikJVyHdyCdbWN1lP8rnqKvUoXELfsMQ2CDp3d76B4C1yjnxmkD7A/lP
+ QZ7X30rqGRChjX/45dvwyiSgy98HhdDjdHSvAs75JIJqZGBoRJmNXZ0357DNMdeQRAJ7
+ NcGQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:in-reply-to;
+ bh=eObgtd5YnXMirZPt7QMUEmAc3hSdu9SksehJdyatM0s=;
+ b=Xj9blurBkZE6YwW+0PJuqhpwgOcXf5FArrqfF/c2AG/e1vb9cQW1s6HfremnNeiw9B
+ YX3wWCbXqQAd/plQ5nWkN/JLxGNbRbciyz0KBCQCzzTAImm+A2qg65Ph/F74ALMt54vo
+ 3vBYFqEr+qW4uMFJ8pRzIT/o5mi2fa4/R/YKvKstO2H+rYWJUlkf9QSzs+tBW6YgI+Ig
+ fPJWAXxF+lFZhxbfgTzMPeGRlJNJTOksh0Fe7ieQ3b7CIRYFsyDDnziIFe5HE6+cbzeW
+ 3cPnW0D48u+L3DX1geByaRsXfwpr3ZktWFXzvZIDHqYk/+HA0mep7+Ht/EQ/o0NxLdBe
+ LOAQ==
+X-Gm-Message-State: APjAAAVjgwG6mashckNeLEcsEs3VjB3YaKe8mQWoqmjdUoBEI9eCqNUP
+ yFvXdYo+UjTGJQ5ynMtUkpI=
+X-Google-Smtp-Source: APXvYqzmon6W+H8JN4yolgbpixrbflgEV30ECY4FKu4nkuXowRbAy1fYbCsnX/8mSqthL7aEdJ8Ijw==
+X-Received: by 2002:a5d:4481:: with SMTP id j1mr5103360wrq.348.1575273726282; 
+ Mon, 02 Dec 2019 00:02:06 -0800 (PST)
+Received: from localhost ([37.238.189.20])
+ by smtp.gmail.com with ESMTPSA id a64sm25450152wmc.18.2019.12.02.00.02.05
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Mon, 02 Dec 2019 00:02:05 -0800 (PST)
+Date: Mon, 2 Dec 2019 11:02:03 +0300
+From: Mohammad Rasim <mohammad.rasim96@gmail.com>
+To: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+Subject: Re: [PATCH v4 3/3] arm64: dts: meson-gxbb: add support for
+ Videostrong KII Pro
+Message-ID: <20191202080203.js5fciajlf7qkgvw@manjaro.localdomain>
+References: <20191130195335.17740-1-mohammad.rasim96@gmail.com>
+ <20191130195335.17740-4-mohammad.rasim96@gmail.com>
+ <CAFBinCCYzThAM_DkQyDZ2LrF-6bJoxeNZDtfADmWOxLH+B3AUw@mail.gmail.com>
 MIME-Version: 1.0
-In-Reply-To: <1jwobi7lcy.fsf@starbuckisacylon.baylibre.com>
-Content-Language: en-US
-X-Originating-IP: [10.28.39.99]
-X-ClientProxiedBy: mail-sz.amlogic.com (10.28.11.5) To mail-sz.amlogic.com
- (10.28.11.5)
+Content-Disposition: inline
+In-Reply-To: <CAFBinCCYzThAM_DkQyDZ2LrF-6bJoxeNZDtfADmWOxLH+B3AUw@mail.gmail.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191201_220130_844212_8B887670 
-X-CRM114-Status: GOOD (  15.49  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20191202_000209_426154_A52F24FF 
+X-CRM114-Status: UNSURE (   8.14  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.1 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (0.1 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:443 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (mohammad.rasim96[at]gmail.com)
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit (mohammad.rasim96[at]gmail.com)
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -63,114 +103,32 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: Rob Herring <robh@kernel.org>, Victor Wan <victor.wan@amlogic.com>,
- Jianxin Pan <jianxin.pan@amlogic.com>, devicetree@vger.kernel.org,
- Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
- Kevin Hilman <khilman@baylibre.com>,
- Michael Turquette <mturquette@baylibre.com>, linux-kernel@vger.kernel.org,
- Stephen Boyd <sboyd@kernel.org>, Qiufang Dai <qiufang.dai@amlogic.com>,
- Chandle Zou <chandle.zou@amlogic.com>, linux-amlogic@lists.infradead.org,
- linux-clk@vger.kernel.org, linux-arm-kernel@lists.infradead.org
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ Neil Armstrong <narmstrong@baylibre.com>, Kevin Hilman <khilman@baylibre.com>,
+ Rob Herring <robh+dt@kernel.org>, linux-amlogic@lists.infradead.org
+Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
-Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
+On 19/12/01 11:21PM, Martin Blumenstingl wrote:
+> [...]
+> > +       leds {
+> > +               compatible = "gpio-leds";
+> > +               status {
+> > +                       gpios = <&gpio_ao GPIOAO_13 GPIO_ACTIVE_LOW>;
+> > +                       default-state = "off";
+> > +                       color = <LED_COLOR_ID_RED>;
+> > +                       function = LED_FUNCTION_STATUS;
+> why is LED_FUNCTION_STATUS not enclosed in <> like color above?
+>
+Well, the examples in the documentation enclose the color and don't
+enclose function
+https://github.com/torvalds/linux/blob/596cf45cbf6e4fa7bcb0df33e373a7d062b644b5/Documentation/devicetree/bindings/leds/common.txt#L140
 
-
-On 2019/11/29 23:28, Jerome Brunet wrote:
-> 
-> On Fri 29 Nov 2019 at 15:45, Jian Hu <jian.hu@amlogic.com> wrote:
-> 
->> add support for Amlogic A1 clock driver, the clock includes
->> three parts: peripheral clocks, pll clocks, CPU clocks.
->> sys pll and CPU clocks will be sent in next patch.
->>
->> Changes since v1 at [2]:
-> 
-> v2 or v1 ??
-It is v2 here, I will fix it in next version.
-> 
->> -add probe function for A1
->> -seperate the clock driver into two patch
->> -change some clock flags and ops
->> -add support for a1 PLL ops
->> -add A1 clock node
->>
->> Changes since v1 at [1]:
->> -place A1 config alphabetically
->> -add actual reason for RO ops, CLK_IS_CRITICAL, CLK_IGNORE_UNUSED
->> -separate the driver into two driver: peripheral and pll driver
->> -delete CLK_IGNORE_UNUSED flag for pwm b/c/d/e/f clock, dsp clock
->> -delete the change in Kconfig.platforms, address to Kevin alone
->> -remove the useless comments
->> -modify the meson pll driver to support A1 PLLs
->>
->> [1] https://lkml.kernel.org/r/1569411888-98116-1-git-send-email-jian.hu@amlogic.com
->> [2] https://lkml.kernel.org/r/1571382865-41978-1-git-send-email-jian.hu@amlogic.com
->>
->> Jian Hu (7):
->>    dt-bindings: clock: meson: add A1 PLL clock controller bindings
->>    clk: meson: add support for A1 PLL clock ops
->>    clk: meson: eeclk: refactor eeclk common driver to support A1
->>    clk: meson: a1: add support for Amlogic A1 PLL clock driver
->>    dt-bindings: clock: meson: add A1 peripheral clock controller bindings
->>    clk: meson: a1: add support for Amlogic A1 Peripheral clock driver
->>    arm64: dts: meson: add A1 PLL and periphs clock controller
-> 
-> The arm64 is for the DT maintainer. Please send it separately after this
-> series is applied (if it gets applied)
-> 
->> Please fix the underlying issue, then you can post your series again.
-> 
-> This was a comment on your v2. Did you fix the orphan/ordering issue ?
-
-> If you did, you probably should mention it here.
-Yes, I have fixed it in A1 periphs driver, not fixed it in CCF.
-I have realised a probe function for A1 periphs driver, Not using the 
-common probe interface in meson-eeclk.c. Skip registering xtal_fixedpll 
-and xtal_hifipll clocks when register all periphs clocks. And after the 
-provider registration. Registering xtal_fixedpll and xtal_hifipll clock 
-alone.
-
-I will add some comments here about orphan issue.
-
-And I have noticed you have fixed it in CCF,  I will update the A1 
-periphs driver, drop the probe function in the next vertion.
-Could I send the v4 after your patch 'clk: walk orphan list on clock 
-provider registration' is applied? Or I can send v4 based on your patch now.
-
-> If you did not, I'm probably not going to review this further until you do.
-> 
->>
->>   .../bindings/clock/amlogic,a1-clkc.yaml       |   70 +
->>   .../bindings/clock/amlogic,a1-pll-clkc.yaml   |   56 +
->>   arch/arm64/boot/dts/amlogic/meson-a1.dtsi     |   26 +
->>   drivers/clk/meson/Kconfig                     |   20 +
->>   drivers/clk/meson/Makefile                    |    2 +
->>   drivers/clk/meson/a1-pll.c                    |  334 +++
->>   drivers/clk/meson/a1-pll.h                    |   56 +
->>   drivers/clk/meson/a1.c                        | 2309 +++++++++++++++++
->>   drivers/clk/meson/a1.h                        |  120 +
->>   drivers/clk/meson/clk-pll.c                   |   21 +
->>   drivers/clk/meson/clk-pll.h                   |    1 +
->>   drivers/clk/meson/meson-eeclk.c               |   59 +-
->>   drivers/clk/meson/meson-eeclk.h               |    2 +
->>   drivers/clk/meson/parm.h                      |    1 +
->>   include/dt-bindings/clock/a1-clkc.h           |   98 +
->>   include/dt-bindings/clock/a1-pll-clkc.h       |   16 +
->>   16 files changed, 3181 insertions(+), 10 deletions(-)
->>   create mode 100644 Documentation/devicetree/bindings/clock/amlogic,a1-clkc.yaml
->>   create mode 100644 Documentation/devicetree/bindings/clock/amlogic,a1-pll-clkc.yaml
->>   create mode 100644 drivers/clk/meson/a1-pll.c
->>   create mode 100644 drivers/clk/meson/a1-pll.h
->>   create mode 100644 drivers/clk/meson/a1.c
->>   create mode 100644 drivers/clk/meson/a1.h
->>   create mode 100644 include/dt-bindings/clock/a1-clkc.h
->>   create mode 100644 include/dt-bindings/clock/a1-pll-clkc.h
-> 
-> .
-> 
+Regards
+>
+> Martin
 
 _______________________________________________
 linux-amlogic mailing list
