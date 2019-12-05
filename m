@@ -2,89 +2,85 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2FB9B113CC3
-	for <lists+linux-amlogic@lfdr.de>; Thu,  5 Dec 2019 09:06:25 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id F01A6113DCE
+	for <lists+linux-amlogic@lfdr.de>; Thu,  5 Dec 2019 10:25:25 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=yowmOlluyzd4vbXgVK90bjoen/Bqpbh8RNf8vIibXPw=; b=uccsaXjR2v7+sv
-	ogx8PLYGy4A/1sQWSMBSjiujUBzoklYxsiN3ssSXCbPwtplFWjiWIt0LAhQo+Lko00WLdkLLYFznV
-	14gFu3atL4qGVXZsqP9VvZShIi8oCLMBuf/Hc5/furFeQx4YlpAbq5ROkGMcbzI4gSQadgluLRm4F
-	+4/zckc9P8cyZ6fGfLM+FuzaaxQM+KDfkjGSqmn2yccdsJnGySPZ8iOFpbQUZOrvqWMPXoDnuYY4S
-	NSO50QqN8TBAnGTLSLOKsQbU8bAlTpiyXpvKFPJZqvQ40phUD5+e0rMJG82Kl2thA8gPN/Z09rKIO
-	jT9Lo92x0ll64oMS1WnQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=JSWkrRhq0M8i48IITUrvVolFweT6vo/DhV96gtMBZIk=; b=VOkxB85yphKoul
+	QkCC7pZeUMrGDVtcHYpH7/21caeOFWtNkW+Y+BUe7nyrm4P2A9uFCN7m1UN/69Wxt+mPNkwH0/hom
+	rTkL2fjObtLFg36wW7otvk3RhI/u/eSoeCveVOcjafdQRriJMHIrzlV/bGXFPQPv0lyF4+GrMxjoe
+	gPYovV1jHf7rppT0YzgE5kM4KGZNIKpnnRB2wBSdY7bgtKI53XXe1oseMtgbTzmdG5DGm2TK/Z7ne
+	Iwx5IIXIJGsSDZ0+ahbuDIb6VYYteBlJygv6RIhKzUwKRMx+OTXizMopQubx1ddySzcev8Ylddie+
+	/JIdZMECeJ71Geo4i5SA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1icm9T-0003oH-4e; Thu, 05 Dec 2019 08:06:19 +0000
-Received: from mail-pg1-x544.google.com ([2607:f8b0:4864:20::544])
+	id 1icnNw-0003vT-Ks; Thu, 05 Dec 2019 09:25:20 +0000
+Received: from mail-wm1-x342.google.com ([2a00:1450:4864:20::342])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1icm9P-0003nI-P9; Thu, 05 Dec 2019 08:06:17 +0000
-Received: by mail-pg1-x544.google.com with SMTP id k3so588213pgc.3;
- Thu, 05 Dec 2019 00:06:14 -0800 (PST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=date:from:to:cc:subject:message-id:references:mime-version
- :content-disposition:in-reply-to:user-agent;
- bh=sbOWUl/LYyug4BpNjD/sLnbb5ya8VzzTl8Cu9V2yvRY=;
- b=nmGXMlWXu2JCqHKwG7oK8kS1mCgH+HBN4/eM/NOEeCk2in3RGF5oWu656B48kWYzV4
- mY3bSWyZ30MR/SPNmvS/GgUUll2YMsfMQo4qX+RVLHY0NPjYtazSfiBM5ugleCHjtKdG
- /Pbz/f5x5rYSo2Hy4VnzwlqqGlLPdKzWeC6AtTnUUMau3dNCpKjv7aAy3QyOCwm8dRb9
- s41ylI9rrYu3yOGBb4X3BRQLyBLwUu77hjkAhn3AKb1ti3c9OPbwoPdLzlc1yuCbLZrO
- P8A/jaKiNBktktPIGGLu3Ewlo84+vLm4GxiQksazqDrPb7d4VxWAHjyWP95q5eFbVCuR
- KDNQ==
+ id 1icnNa-0002Wn-Pk
+ for linux-amlogic@lists.infradead.org; Thu, 05 Dec 2019 09:25:01 +0000
+Received: by mail-wm1-x342.google.com with SMTP id q9so2797475wmj.5
+ for <linux-amlogic@lists.infradead.org>; Thu, 05 Dec 2019 01:24:58 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=baylibre-com.20150623.gappssmtp.com; s=20150623;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=mBF644RxUTBZva0im+niDbPkyL2AEsuC+ZFykTwNHIk=;
+ b=jvHufdfywsSJ0HvGIzqsFTbHETU81IekWnO0l26AzmkTTAa7gwuMH1lsx7yrrzARg8
+ mESZtima5ozmNO3vRaRMCjp15FqTL5zwSufZ6+Lfbd0KcpiBBAXTeTuc2su6FqnSLlzo
+ PkhJ86WNgNijHeqHvopJM7YcU5GL0nlg6JpSpR33XOA2e8tpTBl7vR22glskgdaArJDg
+ GKg+xOU7m/Z/8bKSfnM6G+McYokTd02Qw/YW3qwsArMn0EjzGZpsCcwfle7pXWXtVkGw
+ PUa3WZn+OJaJ7sO5gV1FgxQe0ZhiOLHZcN52wLkPCA0GTCipPXbUnVrbP3jrGVMnbptL
+ T1Dg==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=sbOWUl/LYyug4BpNjD/sLnbb5ya8VzzTl8Cu9V2yvRY=;
- b=q3+IxsjLU2HZHTisIutDuFleuRC+FCAx+0LWTVNKFgzGTGMtnd44zwsXf8vNRg7PrH
- 7G078XjthGe1VIVg7ksA5BEqABRwuzOyxtnXoQhm8TYaPXrffZzpJguSP4izvY83/HYa
- MWel0bdOb02UydeYLOnqyRxjY9Y8fFSz+b3oX8K/WxGMGP0a0NpRDdd2SI48Lz/8KgXh
- OowlRjWL/3Uj+GTVnCJbvgvn0ZNm4ze2krbnx2iUV7jM9LJUmZKz0dgI/TB+LSTe5dlI
- sP1bGEHJQMbfSRf7Ff+82bEPZ4ZIBtMov7QsiJsK8dQW8yAj+ch2Fxvl4nwRsh8Ft0mA
- RuUA==
-X-Gm-Message-State: APjAAAWAy9cD5VHlXqnTaX7fJnv0BdNgNyPL0yLko5PXgsCnxlYq7SDV
- FSXASeYkgQWlVyi51e8fpCk=
-X-Google-Smtp-Source: APXvYqyk7FdG4hnofsNwSjWrXOupDwiMK/1MsIp6Jp00Uhte+xvNi4jEmcD2YJExVKTWuST0cGuFFg==
-X-Received: by 2002:a63:3cb:: with SMTP id 194mr8219400pgd.123.1575533173934; 
- Thu, 05 Dec 2019 00:06:13 -0800 (PST)
-Received: from localhost ([2401:fa00:8f:203:250d:e71d:5a0a:9afe])
- by smtp.gmail.com with ESMTPSA id w4sm8996292pjt.21.2019.12.05.00.06.12
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=mBF644RxUTBZva0im+niDbPkyL2AEsuC+ZFykTwNHIk=;
+ b=jFSO80NSfj6OGeuaILwdMtbWYDwiQGzVibqWGiD0apmTEgZ4qlolCnvY4b27iwkA80
+ ymnxGzxk8fLOSfzONNPjDfQCr3FZhj4X9BQBdKIsT2RdHJ+f+j01o8DHnmLwx5teuDOF
+ WmWfISYB0H874XfRre9QER2INm+Nvmw1xlMVE412CZhuJTn6/uGHw/+tVhKEwr9F5D7+
+ yrnFUZ3zEJcSnUhvu/PPRfJiuEy2lY/pryo1MCSb9R0CWz4EBWZ/0+PKbzG4XhXv1V6J
+ vl5B07XSlJpRig8z7ohhNdV37UkclimXdLYBy4dL6AIzxcTBJkWYItonbzKKJgfgsq04
+ 7hkA==
+X-Gm-Message-State: APjAAAX06lSGVxziyySfvptTelJ93NbuneTs3vtYbDyuV7R7ZgkoOnOM
+ rCfx+5wBXjC0esSzedlHbNdusg==
+X-Google-Smtp-Source: APXvYqzb9PZe4p/FaxkjRz+yIx4cEG1Ar/uArvNnrvahc13Bn+ryPAUa9ho0yU4y6s6dzxJC54jQkA==
+X-Received: by 2002:a05:600c:22c8:: with SMTP id
+ 8mr3810490wmg.178.1575537897038; 
+ Thu, 05 Dec 2019 01:24:57 -0800 (PST)
+Received: from bender.baylibre.local
+ (wal59-h01-176-150-251-154.dsl.sta.abo.bbox.fr. [176.150.251.154])
+ by smtp.gmail.com with ESMTPSA id t5sm11642620wrr.35.2019.12.05.01.24.56
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Thu, 05 Dec 2019 00:06:12 -0800 (PST)
-Date: Thu, 5 Dec 2019 17:06:11 +0900
-From: Sergey Senozhatsky <sergey.senozhatsky.work@gmail.com>
-To: Colin King <colin.king@canonical.com>
-Subject: Re: [PATCH] media: meson: add missing allocation failure check on
- new_buf
-Message-ID: <20191205080611.GY93017@google.com>
-References: <20191204141159.1432387-1-colin.king@canonical.com>
+ Thu, 05 Dec 2019 01:24:56 -0800 (PST)
+From: Neil Armstrong <narmstrong@baylibre.com>
+To: mchehab@kernel.org,
+	hans.verkuil@cisco.com
+Subject: [PATCH 0/5] media: meson: vdec: Add VP9 decoding support
+Date: Thu,  5 Dec 2019 10:24:49 +0100
+Message-Id: <20191205092454.26075-1-narmstrong@baylibre.com>
+X-Mailer: git-send-email 2.22.0
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20191204141159.1432387-1-colin.king@canonical.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191205_000615_819623_FB9E29B0 
-X-CRM114-Status: GOOD (  10.07  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20191205_012458_831839_04979E3F 
+X-CRM114-Status: UNSURE (   7.97  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:544 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:342 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (sergey.senozhatsky.work[at]gmail.com)
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
 X-BeenThere: linux-amlogic@lists.infradead.org
@@ -98,35 +94,179 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: Maxime Jourdan <mjourdan@baylibre.com>, devel@driverdev.osuosl.org,
- Kevin Hilman <khilman@baylibre.com>, kernel-janitors@vger.kernel.org,
- linux-kernel@vger.kernel.org, Hans Verkuil <hverkuil-cisco@xs4all.nl>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Mauro Carvalho Chehab <mchehab+samsung@kernel.org>,
- linux-amlogic@lists.infradead.org, linux-arm-kernel@lists.infradead.org,
- linux-media@vger.kernel.org
+Cc: linux-amlogic@lists.infradead.org, linux-media@vger.kernel.org,
+ linux-kernel@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
+ Neil Armstrong <narmstrong@baylibre.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On (19/12/04 14:11), Colin King wrote:
-[..]
-> diff --git a/drivers/staging/media/meson/vdec/vdec.c b/drivers/staging/media/meson/vdec/vdec.c
-> index 0a1a04fd5d13..8dd1396909d7 100644
-> --- a/drivers/staging/media/meson/vdec/vdec.c
-> +++ b/drivers/staging/media/meson/vdec/vdec.c
-> @@ -133,6 +133,8 @@ vdec_queue_recycle(struct amvdec_session *sess, struct vb2_buffer *vb)
->  	struct amvdec_buffer *new_buf;
->
->  	new_buf = kmalloc(sizeof(*new_buf), GFP_KERNEL);
-> +	if (!new_buf)
-> +		return;
->  	new_buf->vb = vb;
+Hello,
 
-So the buffer is not getting recycled? IOW is leaked?
+This patchset aims to bring VP9 decoding support to Amlogic GXL, G12A & SM1
+platforms for the amlogic stateful video decoder driver.
 
-	-ss
+With this, it passes v4l2-compliance with streaming on Amlogic G12A and
+Amlogic SM1 SoCs successfully using the stream at [1] with a fixed
+pyv4l2compliance script for VP9 at [2].
+
+The original script kept the IVF headers in the stream, confusing the
+decoder. The fixed script only extracts the payload from the IVF container.
+
+The decoder has been tested using the Google CTS TestVectorsIttiam VP9 yuv420
+samples, passing 82 resolutions test streams, with 13 fails by pixel
+differences and 3 timeouts.
+
+This patchset depends on :
+- G12A enablement at [3]
+- SM1 enablement at [4]
+- H.264 and compliance at [5]
+
+[1] https://github.com/superna9999/pyv4l2compliance/raw/tests/output/Jellyfish_1080_10s_5MB.vp9.hdr
+[2] https://github.com/superna9999/pyv4l2compliance
+[3] https://lore.kernel.org/linux-media/20191120111430.29552-1-narmstrong@baylibre.com
+[4] https://lore.kernel.org/linux-media/20191121101429.23831-1-narmstrong@baylibre.com
+[5] https://lore.kernel.org/linux-media/20191126093733.32404-1-narmstrong@baylibre.com
+
+The compliance log is:
+# v4l2-compliance --stream-from-hdr Jellyfish_1080_10s_5MB.vp9.hdr -s 200
+v4l2-compliance SHA: 7ead0e1856b89f2e19369af452bb03fd0cd16793, 64 bits
+
+Compliance test for meson-vdec device /dev/video0:
+
+Driver Info:
+	Driver name      : meson-vdec
+	Card type        : Amlogic Video Decoder
+	Bus info         : platform:meson-vdec
+	Driver version   : 5.4.0
+	Capabilities     : 0x84204000
+		Video Memory-to-Memory Multiplanar
+		Streaming
+		Extended Pix Format
+		Device Capabilities
+	Device Caps      : 0x04204000
+		Video Memory-to-Memory Multiplanar
+		Streaming
+		Extended Pix Format
+	Detected Stateful Decoder
+
+Required ioctls:
+	test VIDIOC_QUERYCAP: OK
+
+Allow for multiple opens:
+	test second /dev/video0 open: OK
+	test VIDIOC_QUERYCAP: OK
+	test VIDIOC_G/S_PRIORITY: OK
+	test for unlimited opens: OK
+
+Debug ioctls:
+	test VIDIOC_DBG_G/S_REGISTER: OK (Not Supported)
+	test VIDIOC_LOG_STATUS: OK (Not Supported)
+
+Input ioctls:
+	test VIDIOC_G/S_TUNER/ENUM_FREQ_BANDS: OK (Not Supported)
+	test VIDIOC_G/S_FREQUENCY: OK (Not Supported)
+	test VIDIOC_S_HW_FREQ_SEEK: OK (Not Supported)
+	test VIDIOC_ENUMAUDIO: OK (Not Supported)
+	test VIDIOC_G/S/ENUMINPUT: OK (Not Supported)
+	test VIDIOC_G/S_AUDIO: OK (Not Supported)
+	Inputs: 0 Audio Inputs: 0 Tuners: 0
+
+Output ioctls:
+	test VIDIOC_G/S_MODULATOR: OK (Not Supported)
+	test VIDIOC_G/S_FREQUENCY: OK (Not Supported)
+	test VIDIOC_ENUMAUDOUT: OK (Not Supported)
+	test VIDIOC_G/S/ENUMOUTPUT: OK (Not Supported)
+	test VIDIOC_G/S_AUDOUT: OK (Not Supported)
+	Outputs: 0 Audio Outputs: 0 Modulators: 0
+
+Input/Output configuration ioctls:
+	test VIDIOC_ENUM/G/S/QUERY_STD: OK (Not Supported)
+	test VIDIOC_ENUM/G/S/QUERY_DV_TIMINGS: OK (Not Supported)
+	test VIDIOC_DV_TIMINGS_CAP: OK (Not Supported)
+	test VIDIOC_G/S_EDID: OK (Not Supported)
+
+Control ioctls:
+	test VIDIOC_QUERY_EXT_CTRL/QUERYMENU: OK
+	test VIDIOC_QUERYCTRL: OK
+	test VIDIOC_G/S_CTRL: OK
+	test VIDIOC_G/S/TRY_EXT_CTRLS: OK
+	test VIDIOC_(UN)SUBSCRIBE_EVENT/DQEVENT: OK
+	test VIDIOC_G/S_JPEGCOMP: OK (Not Supported)
+	Standard Controls: 2 Private Controls: 0
+
+Format ioctls:
+	test VIDIOC_ENUM_FMT/FRAMESIZES/FRAMEINTERVALS: OK
+	test VIDIOC_G/S_PARM: OK (Not Supported)
+	test VIDIOC_G_FBUF: OK (Not Supported)
+	test VIDIOC_G_FMT: OK
+	test VIDIOC_TRY_FMT: OK
+	test VIDIOC_S_FMT: OK
+	test VIDIOC_G_SLICED_VBI_CAP: OK (Not Supported)
+	test Cropping: OK (Not Supported)
+	test Composing: OK (Not Supported)
+	test Scaling: OK (Not Supported)
+
+Codec ioctls:
+	test VIDIOC_(TRY_)ENCODER_CMD: OK (Not Supported)
+	test VIDIOC_G_ENC_INDEX: OK (Not Supported)
+	test VIDIOC_(TRY_)DECODER_CMD: OK
+
+Buffer ioctls:
+	test VIDIOC_REQBUFS/CREATE_BUFS/QUERYBUF: OK
+	test VIDIOC_EXPBUF: OK
+	test Requests: OK (Not Supported)
+
+Test input 0:
+
+Streaming ioctls:
+	test read/write: OK (Not Supported)
+	test blocking wait: OK
+	Video Capture Multiplanar: Captured 200 buffers   
+	test MMAP (select): OK
+	Video Capture Multiplanar: Captured 200 buffers   
+	test MMAP (epoll): OK
+	test USERPTR (select): OK (Not Supported)
+	test DMABUF: Cannot test, specify --expbuf-device
+
+Total for meson-vdec device /dev/video0: 49, Succeeded: 49, Failed: 0, Warnings: 0
+
+Maxime Jourdan (4):
+  media: meson: vdec: add helpers for lossless framebuffer compression
+    buffers
+  media: meson: vdec: add common HEVC decoder support
+  media: meson: vdec: add VP9 input support
+  media: meson: vdec: add VP9 decoder support
+
+Neil Armstrong (1):
+  media: meson: vdec: align stride on 32 bytes
+
+ drivers/staging/media/meson/vdec/Makefile     |    4 +-
+ .../media/meson/vdec/codec_hevc_common.c      |  285 ++++
+ .../media/meson/vdec/codec_hevc_common.h      |   77 ++
+ drivers/staging/media/meson/vdec/codec_vp9.c  | 1192 +++++++++++++++++
+ drivers/staging/media/meson/vdec/codec_vp9.h  |   13 +
+ drivers/staging/media/meson/vdec/esparser.c   |  142 +-
+ drivers/staging/media/meson/vdec/hevc_regs.h  |  218 +++
+ drivers/staging/media/meson/vdec/vdec.c       |   10 +-
+ .../staging/media/meson/vdec/vdec_helpers.c   |   31 +-
+ .../staging/media/meson/vdec/vdec_helpers.h   |    4 +
+ drivers/staging/media/meson/vdec/vdec_hevc.c  |  231 ++++
+ drivers/staging/media/meson/vdec/vdec_hevc.h  |   13 +
+ .../staging/media/meson/vdec/vdec_platform.c  |   38 +
+ 13 files changed, 2245 insertions(+), 13 deletions(-)
+ create mode 100644 drivers/staging/media/meson/vdec/codec_hevc_common.c
+ create mode 100644 drivers/staging/media/meson/vdec/codec_hevc_common.h
+ create mode 100644 drivers/staging/media/meson/vdec/codec_vp9.c
+ create mode 100644 drivers/staging/media/meson/vdec/codec_vp9.h
+ create mode 100644 drivers/staging/media/meson/vdec/hevc_regs.h
+ create mode 100644 drivers/staging/media/meson/vdec/vdec_hevc.c
+ create mode 100644 drivers/staging/media/meson/vdec/vdec_hevc.h
+
+-- 
+2.22.0
+
 
 _______________________________________________
 linux-amlogic mailing list
