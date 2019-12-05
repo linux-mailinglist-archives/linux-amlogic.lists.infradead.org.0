@@ -2,83 +2,80 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B5F3D1143A9
-	for <lists+linux-amlogic@lfdr.de>; Thu,  5 Dec 2019 16:34:36 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id AD2D41143B6
+	for <lists+linux-amlogic@lfdr.de>; Thu,  5 Dec 2019 16:35:23 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=PopceeU67LKIVbylKip++C2dliKxAffyhpKoDdE6dF4=; b=hY6GhgJ76J1PHF
-	RmZT46iM7Pps61ERKfUFKj2JFzvATYBoxuwgHCpzQUtl1EWRK/cjJPkOUotcjrYbXm/8mMLhRkKIQ
-	szQ6KzQ7n5EJ5wkAaTEEKh5Y5nABp6IirM/JlmuXVY6lsRzkQatbJP2b8ReE5C2uta2Pj1ynWvUD3
-	OijxWVS93rVwVf62+n2kMg8Uaxs7R8bPrmeduqpTCDRecS3udLvQZ3LCwpx3UH3kx/c7jGFHlThLJ
-	5tgJFk7DbpDVTVO+Ps5VNJvpTWsmyeKx34NoDA6g8fj8x414vcmi8M0L7H9S1rtXCif36RSBlUCC7
-	Hl+UWQCWzjUM1yvP4jVw==;
+	List-Owner; bh=9kebknWGpd+CGKnBRpf2nwSru3UIMxDgOq0rdkvqrmU=; b=Osw9CmIqZAG6Ck
+	e08bvbDVkrA7jVN5LIqcVPXLxyCDP299FbWwn2SXWDkj6K4DSRQTDcnSz52pYLTRZUjj0Emf+kNUK
+	bYqD8BsAfloImu1w6UxDPtDgL7A3g02yUHsHEwFYbXK/U4buvSXYwWiEiIvCeF7CT2nm6l973ibkx
+	g5ZjpDRxtX3GCmFFT2FscAt5HPhF2mWvK0st6loUscy+LezFoZsMz56HpjqqH7ei8PN/rKJpTeDmI
+	J1dBMVbu9Lj7+infDdmogcIyQo0UOV8mS4wIVMVT4V5sAEBqA0ozL3/B1Ute9OAMYrHFQ97WO3J08
+	LKoU01Ccrr92hEdfH29Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ict9C-0003hQ-NY; Thu, 05 Dec 2019 15:34:30 +0000
-Received: from mail-wr1-x42b.google.com ([2a00:1450:4864:20::42b])
+	id 1ictA1-0005eP-PU; Thu, 05 Dec 2019 15:35:21 +0000
+Received: from mail-wr1-x443.google.com ([2a00:1450:4864:20::443])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ict8y-0003Td-Gj
- for linux-amlogic@lists.infradead.org; Thu, 05 Dec 2019 15:34:18 +0000
-Received: by mail-wr1-x42b.google.com with SMTP id t2so4183284wrr.1
- for <linux-amlogic@lists.infradead.org>; Thu, 05 Dec 2019 07:34:16 -0800 (PST)
+ id 1ict8z-0003Uh-JI
+ for linux-amlogic@lists.infradead.org; Thu, 05 Dec 2019 15:34:19 +0000
+Received: by mail-wr1-x443.google.com with SMTP id g17so4178830wro.2
+ for <linux-amlogic@lists.infradead.org>; Thu, 05 Dec 2019 07:34:17 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=KzKSFA37zQ+fSsnCSfsJqcJWA1YqoEpujyYe82jiosA=;
- b=1RAkL/YqqEmrVPedzEg2Pc0Ov3GvHhQDDskUsdP88FKftcpyQigTss9I7/RJeNaUWJ
- 8SxDYfPOP10oekWk/HW52CxH3vycbaZGijkt/iEktSBaQIOyZ+ZFiih4FwRMEvQrBtKt
- q40mxhTIaXZm6rmsGymyE03yDP1zjMp5GsS4ojcVZP+c8ME5ZADLF9qLjLlhNtZPpVna
- v40EMCUiDKqq0m4nYJfbIXt1EDhDHbUXfxR+luG/18Z936G2of2baLTrugjU1n9HO3i+
- M1BlbA/SLFnu4eSJEi3Ts5ZyZKM7eCVemr2cYZJV0SNcv33nR7gSciCyUWMV6MMUmrRs
- bYDg==
+ bh=UaaaJx+p0JcZMcJnhGqWQZjIziF6Ba/MI0EsQk5V9qA=;
+ b=SsQlx0EdEl63XJ/HnmbRpjA+iF4o0EXju+t87rSKoPFMp+JTSzYbVSxit2KzmBjYzx
+ o64hxlj56w8J9TBpeUhcTwOeKq401gVOYgejhgGSIOVOe7csfMP6z2JPKNINHh+95D7P
+ T1oGIjVQDgAu4YTBwBr5HhnnNSXqGQ/a9dprBEDJgSIHFPFn+2Uvfnxrf1IBZw9xj/XT
+ R55tIodbyRoG06aEswk/uEcMlwDZbCL5QSpcB21HE4mjKOPyj5mw1Wjt7/8zsG5CYFzl
+ EcVObHYYUD5j2GyDtYbPIth5sUPk0iZnglS7xmTC+0LHxOeFv6r+rRzoNCAh0G1drmnr
+ Hj5g==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=KzKSFA37zQ+fSsnCSfsJqcJWA1YqoEpujyYe82jiosA=;
- b=DryqvTc/0UbaxW9bPQ0bhI3nw565Y9j9Uzp8h6cwSWI5POt7jICsEdft33xPCobojH
- U1EeuhKJR0VhmQcAxLoIdYO9R1P7NA/oB0fUEUc15ih3YIhuKFJZAJRQyPOY3gpTR+Wf
- OCBvNpdxDEkurIC889y4emYkkMJgS15dbTpbNPxv+Yesgy1RNzdguc2Ph3wUeDPjL7nQ
- 9PGsQwLQjZHhPTdbyeLxXb20NOMyc3yDnpT1V0u2wcORay8NgVCDq71Oc0hhfO/E/u5C
- OiTpwpSWaITe9dwMy/eke8+Zyz0Occi8xpi7+Bj3iXESwlmhewcBawe6CutUIftwl1oJ
- 6D2Q==
-X-Gm-Message-State: APjAAAVUxQ39WoUwpF4Pnkl7YpHzLExzxzmW/sFKl0rSb+zs6Emgvw87
- wug+o8tOvAv6fRoRpUy3MW2r3A==
-X-Google-Smtp-Source: APXvYqzZBXKnAbQRB+UN+TlYuRc21RIUf2MlSS34PJhj5LkssDhww4cmP6eaWU2qSaFmGTFxlmAbFw==
-X-Received: by 2002:adf:83c7:: with SMTP id 65mr10264958wre.368.1575560054836; 
- Thu, 05 Dec 2019 07:34:14 -0800 (PST)
+ bh=UaaaJx+p0JcZMcJnhGqWQZjIziF6Ba/MI0EsQk5V9qA=;
+ b=Q9tziST+LpQi4V+43C7u8AZ893S5sP3wMI5ut9JwB4Ywl1dZDYzIazTRhgI719NDS0
+ AzwfI3Bia0l/3k+bvoOqcJw46coVzxsqJa1vvN3bd6WhtywhlbSp/nw86pdi2HP83wTe
+ iSvxo0HmsFsNWJPjZJNWOzWNitz/y/80N2klFATtqBwINJI+rb3pHOSFQzft+2Z6Z/2U
+ wNFWOnPRHviRWSmlaksF+cWovzUfOad/kXFj61+2GSROOSAaDcYthsIK45M72U2rVNl6
+ DIlFXln8agKIbFmjqnXCXMTM7tK8EjwC1DUuvTNGeCdXqvRzw9Cm4agFfD9ESdHXXs5a
+ S1FA==
+X-Gm-Message-State: APjAAAX6nY0pZcuc/u3GccbYJHdWc21QnQdd4CQTQw0Rs/5jDwSBQvfv
+ FVVIoMsoG62nTBbg7ctoaT+cqQ==
+X-Google-Smtp-Source: APXvYqzSDhJjXYGJIJ+YYADKAvJe9L/6vuvfpBWFKy0dLuJZWqEeXFx7aeIqHxKr25C1dYADLH5f0Q==
+X-Received: by 2002:adf:e6c5:: with SMTP id y5mr10667279wrm.210.1575560056101; 
+ Thu, 05 Dec 2019 07:34:16 -0800 (PST)
 Received: from bender.baylibre.local
  (wal59-h01-176-150-251-154.dsl.sta.abo.bbox.fr. [176.150.251.154])
- by smtp.gmail.com with ESMTPSA id u26sm191894wmj.9.2019.12.05.07.34.13
+ by smtp.gmail.com with ESMTPSA id u26sm191894wmj.9.2019.12.05.07.34.14
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Thu, 05 Dec 2019 07:34:13 -0800 (PST)
+ Thu, 05 Dec 2019 07:34:15 -0800 (PST)
 From: Neil Armstrong <narmstrong@baylibre.com>
-To: mjourdan@baylibre.com,
-	devicetree@vger.kernel.org
-Subject: [PATCH v2 2/4] dt-bindings: media: amlogic,
- gx-vdec: add bindings for G12A family
-Date: Thu,  5 Dec 2019 16:34:06 +0100
-Message-Id: <20191205153408.26500-3-narmstrong@baylibre.com>
+To: mjourdan@baylibre.com
+Subject: [PATCH v2 3/4] media: meson: vdec: add g12a platform
+Date: Thu,  5 Dec 2019 16:34:07 +0100
+Message-Id: <20191205153408.26500-4-narmstrong@baylibre.com>
 X-Mailer: git-send-email 2.22.0
 In-Reply-To: <20191205153408.26500-1-narmstrong@baylibre.com>
 References: <20191205153408.26500-1-narmstrong@baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191205_073416_560734_F716F72A 
-X-CRM114-Status: UNSURE (   8.59  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20191205_073417_669049_000C5CDF 
+X-CRM114-Status: GOOD (  12.85  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:42b listed in]
+ no trust [2a00:1450:4864:20:0:0:0:443 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -96,100 +93,143 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: linux-amlogic@lists.infradead.org, linux-media@vger.kernel.org,
+Cc: linux-amlogic@lists.infradead.org, Neil Armstrong <narmstrong@baylibre.com>,
  linux-kernel@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
- Neil Armstrong <narmstrong@baylibre.com>
+ linux-media@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Add bindings to support the Amlogic Video Decoder on the Amlogic G12A
-family.
+From: Maxime Jourdan <mjourdan@baylibre.com>
 
-For the G12A family, a supplementary clock is needed to operate the
-HEVC/VP9 decoder.
+Add support for the G12A platform by:
+- adding the G12A codec support, here MPEG1 & MPEG2
+- getting the new hevcf clock for the upcoming HEVC/VP9 decoding support
 
+Signed-off-by: Maxime Jourdan <mjourdan@baylibre.com>
 Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
 ---
- .../bindings/media/amlogic,gx-vdec.yaml       | 42 ++++++++++++++++---
- 1 file changed, 37 insertions(+), 5 deletions(-)
+ drivers/staging/media/meson/vdec/vdec.c       | 13 ++++++--
+ drivers/staging/media/meson/vdec/vdec.h       |  1 +
+ .../staging/media/meson/vdec/vdec_platform.c  | 30 +++++++++++++++++++
+ .../staging/media/meson/vdec/vdec_platform.h  |  2 ++
+ 4 files changed, 44 insertions(+), 2 deletions(-)
 
-diff --git a/Documentation/devicetree/bindings/media/amlogic,gx-vdec.yaml b/Documentation/devicetree/bindings/media/amlogic,gx-vdec.yaml
-index 878944867d6e..cc8dc264fc72 100644
---- a/Documentation/devicetree/bindings/media/amlogic,gx-vdec.yaml
-+++ b/Documentation/devicetree/bindings/media/amlogic,gx-vdec.yaml
-@@ -27,12 +27,15 @@ description: |
+diff --git a/drivers/staging/media/meson/vdec/vdec.c b/drivers/staging/media/meson/vdec/vdec.c
+index 0a1a04fd5d13..875a12be9c9e 100644
+--- a/drivers/staging/media/meson/vdec/vdec.c
++++ b/drivers/staging/media/meson/vdec/vdec.c
+@@ -956,6 +956,8 @@ static const struct of_device_id vdec_dt_match[] = {
+ 	  .data = &vdec_platform_gxm },
+ 	{ .compatible = "amlogic,gxl-vdec",
+ 	  .data = &vdec_platform_gxl },
++	{ .compatible = "amlogic,g12a-vdec",
++	  .data = &vdec_platform_g12a },
+ 	{}
+ };
+ MODULE_DEVICE_TABLE(of, vdec_dt_match);
+@@ -1003,6 +1005,15 @@ static int vdec_probe(struct platform_device *pdev)
+ 	if (IS_ERR(core->canvas))
+ 		return PTR_ERR(core->canvas);
  
- properties:
-   compatible:
--    items:
-+    oneOf:
-+      - items:
-+        - enum:
-+          - amlogic,gxbb-vdec # GXBB (S905)
-+          - amlogic,gxl-vdec # GXL (S905X, S905D)
-+          - amlogic,gxm-vdec # GXM (S912)
-+        - const: amlogic,gx-vdec
-       - enum:
--        - amlogic,gxbb-vdec # GXBB (S905)
--        - amlogic,gxl-vdec # GXL (S905X, S905D)
--        - amlogic,gxm-vdec # GXM (S912)
--      - const: amlogic,gx-vdec
-+        - amlogic,g12a-vdec # G12A (S905X2, S905D2)
- 
-   interrupts:
-     minItems: 2
-@@ -59,13 +62,17 @@ properties:
- 
-   clocks:
-     minItems: 4
-+    maxItems: 5
- 
-   clock-names:
-+    minItems: 4
-+    maxItems: 5
-     items:
-       - const: dos_parser
-       - const: dos
-       - const: vdec_1
-       - const: vdec_hevc
-+      - const: vdec_hevcf
- 
-   amlogic,ao-sysctrl:
-     description: should point to the AOBUS sysctrl node
-@@ -77,6 +84,31 @@ properties:
-     allOf:
-       - $ref: /schemas/types.yaml#/definitions/phandle
- 
-+allOf:
-+  - if:
-+      properties:
-+        compatible:
-+          contains:
-+            enum:
-+              - amlogic,gx-vdec
++	of_id = of_match_node(vdec_dt_match, dev->of_node);
++	core->platform = of_id->data;
 +
-+    then:
-+      properties:
-+        clock-names:
-+          maxItems: 4
++	if (core->platform->revision == VDEC_REVISION_G12A) {
++		core->vdec_hevcf_clk = devm_clk_get(dev, "vdec_hevcf");
++		if (IS_ERR(core->vdec_hevcf_clk))
++			return -EPROBE_DEFER;
++	}
 +
-+  - if:
-+      properties:
-+        compatible:
-+          contains:
-+            enum:
-+              - amlogic,g12a-vdec
+ 	core->dos_parser_clk = devm_clk_get(dev, "dos_parser");
+ 	if (IS_ERR(core->dos_parser_clk))
+ 		return -EPROBE_DEFER;
+@@ -1045,8 +1056,6 @@ static int vdec_probe(struct platform_device *pdev)
+ 		goto err_vdev_release;
+ 	}
+ 
+-	of_id = of_match_node(vdec_dt_match, dev->of_node);
+-	core->platform = of_id->data;
+ 	core->vdev_dec = vdev;
+ 	core->dev_dec = dev;
+ 	mutex_init(&core->lock);
+diff --git a/drivers/staging/media/meson/vdec/vdec.h b/drivers/staging/media/meson/vdec/vdec.h
+index d811e7976519..0faa1ec4858e 100644
+--- a/drivers/staging/media/meson/vdec/vdec.h
++++ b/drivers/staging/media/meson/vdec/vdec.h
+@@ -74,6 +74,7 @@ struct amvdec_core {
+ 	struct clk *dos_clk;
+ 	struct clk *vdec_1_clk;
+ 	struct clk *vdec_hevc_clk;
++	struct clk *vdec_hevcf_clk;
+ 
+ 	struct reset_control *esparser_reset;
+ 
+diff --git a/drivers/staging/media/meson/vdec/vdec_platform.c b/drivers/staging/media/meson/vdec/vdec_platform.c
+index 824dbc7f46f5..7845a889ce24 100644
+--- a/drivers/staging/media/meson/vdec/vdec_platform.c
++++ b/drivers/staging/media/meson/vdec/vdec_platform.c
+@@ -82,6 +82,30 @@ static const struct amvdec_format vdec_formats_gxm[] = {
+ 	},
+ };
+ 
++static const struct amvdec_format vdec_formats_g12a[] = {
++	{
++		.pixfmt = V4L2_PIX_FMT_MPEG1,
++		.min_buffers = 8,
++		.max_buffers = 8,
++		.max_width = 1920,
++		.max_height = 1080,
++		.vdec_ops = &vdec_1_ops,
++		.codec_ops = &codec_mpeg12_ops,
++		.firmware_path = "meson/vdec/gxl_mpeg12.bin",
++		.pixfmts_cap = { V4L2_PIX_FMT_NV12M, V4L2_PIX_FMT_YUV420M, 0 },
++	}, {
++		.pixfmt = V4L2_PIX_FMT_MPEG2,
++		.min_buffers = 8,
++		.max_buffers = 8,
++		.max_width = 1920,
++		.max_height = 1080,
++		.vdec_ops = &vdec_1_ops,
++		.codec_ops = &codec_mpeg12_ops,
++		.firmware_path = "meson/vdec/gxl_mpeg12.bin",
++		.pixfmts_cap = { V4L2_PIX_FMT_NV12M, V4L2_PIX_FMT_YUV420M, 0 },
++	},
++};
 +
-+    then:
-+      properties:
-+        clock-names:
-+          minItems: 5
+ const struct vdec_platform vdec_platform_gxbb = {
+ 	.formats = vdec_formats_gxbb,
+ 	.num_formats = ARRAY_SIZE(vdec_formats_gxbb),
+@@ -99,3 +123,9 @@ const struct vdec_platform vdec_platform_gxm = {
+ 	.num_formats = ARRAY_SIZE(vdec_formats_gxm),
+ 	.revision = VDEC_REVISION_GXM,
+ };
 +
- required:
-   - compatible
-   - reg
++const struct vdec_platform vdec_platform_g12a = {
++	.formats = vdec_formats_g12a,
++	.num_formats = ARRAY_SIZE(vdec_formats_g12a),
++	.revision = VDEC_REVISION_G12A,
++};
+diff --git a/drivers/staging/media/meson/vdec/vdec_platform.h b/drivers/staging/media/meson/vdec/vdec_platform.h
+index f6025326db1d..7c61b941b39f 100644
+--- a/drivers/staging/media/meson/vdec/vdec_platform.h
++++ b/drivers/staging/media/meson/vdec/vdec_platform.h
+@@ -15,6 +15,7 @@ enum vdec_revision {
+ 	VDEC_REVISION_GXBB,
+ 	VDEC_REVISION_GXL,
+ 	VDEC_REVISION_GXM,
++	VDEC_REVISION_G12A,
+ };
+ 
+ struct vdec_platform {
+@@ -26,5 +27,6 @@ struct vdec_platform {
+ extern const struct vdec_platform vdec_platform_gxbb;
+ extern const struct vdec_platform vdec_platform_gxm;
+ extern const struct vdec_platform vdec_platform_gxl;
++extern const struct vdec_platform vdec_platform_g12a;
+ 
+ #endif
 -- 
 2.22.0
 
