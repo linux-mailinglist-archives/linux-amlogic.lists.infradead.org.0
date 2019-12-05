@@ -2,102 +2,83 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E96091142F7
-	for <lists+linux-amlogic@lfdr.de>; Thu,  5 Dec 2019 15:49:19 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 48D641143A8
+	for <lists+linux-amlogic@lfdr.de>; Thu,  5 Dec 2019 16:34:36 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=LulLPyxuqBXr2OlVTLUWYd6WZIVtDMvQkMqYhJqLIxs=; b=pneh5FrnBj0mpz
-	ICGAMLdoWpvlo4h5E+Bo6oY0lyZktj1m7X8QbsCCJT5HrGdvgrEnJtJQDbc0lw4ynAHqxE0gXprw/
-	wbxmUauQqJ1zxNYZqbOfTeGe1owWjcJpqvGbvCrBE83ByLHZcU1gUtZMyhOGGsdGQDh0oLwVsmcZT
-	2PhaqdUTrFuCeRQwgg/KwwnerIH4g6Hhq3R/ppoIzNXzxBr+nIxRxwAxi8lFBZhVvwJcoKCFaGQZm
-	LIVjJGrZxbi/i+S8qkO+dmYSZDtQrXgQwf7rTijJGqN0tLr+9UszueXFlAnvWwpJvATDAZkPg/4lA
-	J5qjZVq4TVb7lr38ufrg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=lyucXwT/UQzJv6SVZ4CDBF/HKEJekB6PlMNLas7gLZg=; b=W688bv97VglS81
+	y3CK1Gx5bmfL/NStpoIYsD4saBQt6m0alnPEJJoC42sCPTwq5KuZTZ3+UcUwb13DDtpwlbsCcO/1i
+	pc+Fz0zkj8r3+BOXvYLLw+wfCr2vJgmEpXNcDHwUDoGq0W0gqz9WejOUaJoWfni57enmva1Jq3TqQ
+	4zAToeyEZWOlLD2oZMz1gJdMmPXatwlR67cRuaBz0iEznxggvYDoLx8qbgmC6iXoM4ZdYauHiq9Uk
+	jvBwNQ9LnMz5ll7SBd7NRISjbCLcMq8Ghuegi6oSbMnpXWY3sMPQbDu915cjZDYEQ5ENWCjsXS8oq
+	0exI8PGZ5gJPFUqRRqlA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1icsRN-00049h-NJ; Thu, 05 Dec 2019 14:49:13 +0000
-Received: from mail-pg1-x542.google.com ([2607:f8b0:4864:20::542])
+	id 1ict9B-0003ek-BV; Thu, 05 Dec 2019 15:34:29 +0000
+Received: from mail-wr1-x443.google.com ([2a00:1450:4864:20::443])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1icsR9-0003yD-QZ; Thu, 05 Dec 2019 14:49:01 +0000
-Received: by mail-pg1-x542.google.com with SMTP id b137so1716689pga.6;
- Thu, 05 Dec 2019 06:48:59 -0800 (PST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=date:from:to:cc:subject:message-id:references:mime-version
- :content-disposition:content-transfer-encoding:in-reply-to
- :user-agent; bh=zerf2jeTJ9T1+KiLBXKGAOgo3NLhscKc1xofy5L3cP8=;
- b=tEjy3aWT847idRVE/j0aVnV+HovrelpV9vx0sXBsnUpcJaSTMtuUK9EonXSlEmpgl1
- C9VryYh2cCZrCnW8vu2GEUIhS1quctAlNiL9Goa66xRuo0oShIqxqmUSmNhGAeIJPKeY
- /A3gYs7IiEIeQA4LyulxkKV9s+CaUGdgFzH+NntG0IJb9eilyvi8inTVBpLPGMehSs4w
- lehgRMa8jyYGgcqGj5AaOkBlnGaKbs6EkfVa5PiGSw9yWeIiUj8f1Ys/bthnCuqbtMi6
- vVroLppUxdUsWEDqOJWh3TBslzixAHJdllVIo9pZnzHDN0pMjuA/LYn3EKuhbYS6pzSL
- T3sA==
+ id 1ict8x-0003Sj-TG
+ for linux-amlogic@lists.infradead.org; Thu, 05 Dec 2019 15:34:17 +0000
+Received: by mail-wr1-x443.google.com with SMTP id d16so4102755wre.10
+ for <linux-amlogic@lists.infradead.org>; Thu, 05 Dec 2019 07:34:14 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=baylibre-com.20150623.gappssmtp.com; s=20150623;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=GIebstkH20puIVZWgC2hGKzku3yRSI4A3CVg92MDVQs=;
+ b=RgVylUW7KveDxJ3ohhKWc4l3cCuIRuSxVDGHkWxQkyJAq73UqLAdPV5ykqeEWOigV6
+ kPpYyUfLkJwt8IUI7hhNJv/97o+h4NHtlJazgz6EhwrKqxF9drvekDzXRe5tjwM29eUR
+ ou0SaXgUYQl6RGpaa/vdtqqHjcM41TwNDT/A4IYz3ZVnjEBr86CwYX+iwkPTmAamoCFN
+ h9xXbU3THxhkfLDA6APB86DdG30Tcpup3M1NbJY9FVtUa0dQimhFEg+OSFlfEKDW1EPp
+ Xwej+fYV2ZOfw5abJAN/P9svXvtmQEdIUi8mQfIb18Eynf5CuyQAcOdy13tj9b1xXNN4
+ uZUQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:content-transfer-encoding
- :in-reply-to:user-agent;
- bh=zerf2jeTJ9T1+KiLBXKGAOgo3NLhscKc1xofy5L3cP8=;
- b=DaeGzxuvnm1KlVryHZuB86b/nphHgD+/J8UFofocZXz5yU8T7ac+mS1mrtekwpL2Qj
- YzO1/Y0lBD61OIac3J9Q4Szz+6Xk8xj22nLDcCEXDnmQ4I+J6kySDi/ivDOBZ7GPJ3dg
- V/pOJGppZeSVsavB+GD/lRfS6nrjAeQODs/VUB8ldC3o8GgLBR/g7CzAyf5+oP+3OnqU
- H67aprIrWfWBZxwJGDLodLOkoalACPJ7QYDweAQSgPY7HZzX3aYjUSUcV3zAqSnlS+jT
- +yn/kLwS4dcXizH/U5T/V0FCaG7ZHI3Iemzm7usq6VfOruL1JN74u6n5mIBJuYR2EWd4
- gh8w==
-X-Gm-Message-State: APjAAAW4mkNerTbLZKMW389FebLA6M4MUqwz7r5SPAsQVmaCJQBVkhCh
- Ilnqa0v7O1Uej3q3cu7UUXj+bELnH7s=
-X-Google-Smtp-Source: APXvYqyoEwFvj/ecUcKGhOn5iUEfeT3IoooJMwY33IQjpCOk/nMjVc0JZT4J+N3pT6rDv4VDA3+2oQ==
-X-Received: by 2002:aa7:98cd:: with SMTP id e13mr9039200pfm.56.1575557338720; 
- Thu, 05 Dec 2019 06:48:58 -0800 (PST)
-Received: from nishad ([106.51.232.103])
- by smtp.gmail.com with ESMTPSA id z130sm12175224pgz.6.2019.12.05.06.48.52
- (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
- Thu, 05 Dec 2019 06:48:58 -0800 (PST)
-Date: Thu, 5 Dec 2019 20:18:48 +0530
-From: Nishad Kamdar <nishadkamdar@gmail.com>
-To: Andreas =?utf-8?Q?F=C3=A4rber?= <afaerber@suse.de>,
- Manivannan Sadhasivam <manivannan.sadhasivam@linaro.org>,
- Sean Wang <sean.wang@kernel.org>, Linus Walleij <linus.walleij@linaro.org>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Kevin Hilman <khilman@baylibre.com>,
- Geert Uytterhoeven <geert+renesas@glider.be>,
- Maxime Coquelin <mcoquelin.stm32@gmail.com>,
- Alexandre Torgue <alexandre.torgue@st.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Joe Perches <joe@perches.com>,
- Uwe =?utf-8?Q?Kleine-K=C3=B6nig?= <u.kleine-koenig@pengutronix.de>
-Subject: Re: [PATCH 1/5] pinctrl: actions: Use the correct style for SPDX
- License Identifier
-Message-ID: <20191205144844.GA2903@nishad>
-References: <cover.1574871463.git.nishadkamdar@gmail.com>
- <5b588fc885efca6efdc73869aa4b1eeeb3d6f6c5.1574871463.git.nishadkamdar@gmail.com>
- <c76290a7-b9bb-7f70-e750-04fe6fdbb7e1@suse.de>
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=GIebstkH20puIVZWgC2hGKzku3yRSI4A3CVg92MDVQs=;
+ b=IOqKW8puD1rn6FBlXdXLV4CP/HJc7r86yH/QmaQ52V+QMqWRbCV4sKIF4jVDSkL6yL
+ dD07d7hpEFqrRuKmWqDLZaHPpdgtkLAGLX94CqkuSZOP6VMfo5z7rmwffXnop4S0ETM4
+ 8LuAD9CLxpN1VOe29OpuiflAOATQSZBy8V7oD2G5uyCQMhdEA5THFQWdbnqWhyCwdC3s
+ XO0qZaI5jjcT7tH0AFQsgn7asAD/6g4OQn+QKmJhgK3si6U6a6npQD/0u+OxOoP8xe8R
+ GxAVkQavjOh4sWdySZd55OO4Au1kvFJAxwS3Xvtg4hOe0zJV4iR4Kc4hfoBr5TSJwE30
+ BY9A==
+X-Gm-Message-State: APjAAAXh9hPTcJoz9J1734Z2EkvzxZ81jqhHi73FHE6maKT2EeeXHbug
+ tVj7pQYjF7N5NEMWVVXkfWUz8A==
+X-Google-Smtp-Source: APXvYqzISVFwgl00Y4cT7qU6re/o5QIa1Ua3iwxFaohFbaqWWtF4alAmwbSyhxysbWxjiZGXBlFlxA==
+X-Received: by 2002:adf:cd0a:: with SMTP id w10mr10564920wrm.107.1575560052661; 
+ Thu, 05 Dec 2019 07:34:12 -0800 (PST)
+Received: from bender.baylibre.local
+ (wal59-h01-176-150-251-154.dsl.sta.abo.bbox.fr. [176.150.251.154])
+ by smtp.gmail.com with ESMTPSA id u26sm191894wmj.9.2019.12.05.07.34.11
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Thu, 05 Dec 2019 07:34:11 -0800 (PST)
+From: Neil Armstrong <narmstrong@baylibre.com>
+To: mjourdan@baylibre.com
+Subject: [PATCH v2 0/4] media: meson: vdec: add g12a platform
+Date: Thu,  5 Dec 2019 16:34:04 +0100
+Message-Id: <20191205153408.26500-1-narmstrong@baylibre.com>
+X-Mailer: git-send-email 2.22.0
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <c76290a7-b9bb-7f70-e750-04fe6fdbb7e1@suse.de>
-User-Agent: Mutt/1.9.4 (2018-02-28)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191205_064859_886287_A6D69004 
-X-CRM114-Status: GOOD (  21.77  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20191205_073415_943489_46C49CE0 
+X-CRM114-Status: UNSURE (   8.92  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:542 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:443 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (nishadkamdar[at]gmail.com)
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
 X-BeenThere: linux-amlogic@lists.infradead.org
@@ -111,52 +92,141 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: linux-kernel@vger.kernel.org, linux-renesas-soc@vger.kernel.org,
- linux-gpio@vger.kernel.org, linux-mediatek@lists.infradead.org,
- linux-amlogic@lists.infradead.org, linux-stm32@st-md-mailman.stormreply.com,
- linux-arm-kernel@lists.infradead.org
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Cc: linux-amlogic@lists.infradead.org, linux-media@vger.kernel.org,
+ linux-kernel@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
+ Neil Armstrong <narmstrong@baylibre.com>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-T24gV2VkLCBOb3YgMjcsIDIwMTkgYXQgMTA6MDI6MDhQTSArMDEwMCwgQW5kcmVhcyBGw6RyYmVy
-IHdyb3RlOgo+IEFtIDI3LjExLjE5IHVtIDE3OjQwIHNjaHJpZWIgTmlzaGFkIEthbWRhcjoKPiA+
-IFRoaXMgcGF0Y2ggY29ycmVjdHMgdGhlIFNQRFggTGljZW5zZSBJZGVudGlmaWVyIHN0eWxlIGlu
-Cj4gPiBoZWFkZXIgZmlsZSByZWxhdGVkIEFjdGlvbnMgU2VtaSBPV0wgcGluY3RybCBkcml2ZXIu
-Cj4gCj4gT3dsCj4gCkkgdXNlZCB0aGUgc2FtZSBmb3JtYXQgbWVudGlvbmVkIGJlbG93LCB3aGlj
-aCBhbHNvIHNheXMgT1dMLgpNZXliZSB3ZSBjYW4gY2hhbmdlIGJvdGggb2YgdGhlbSBpbiBhIHNl
-cGFyYXRlIHBhdGNoLgoKPiA+IEZvciBDIGhlYWRlciBmaWxlcyBEb2N1bWVudGF0aW9uL3Byb2Nl
-c3MvbGljZW5zZS1ydWxlcy5yc3QKPiA+IG1hbmRhdGVzIEMtbGlrZSBjb21tZW50cyAob3Bwb3Nl
-ZCB0byBDIHNvdXJjZSBmaWxlcyB3aGVyZQo+ID4gQysrIHN0eWxlIHNob3VsZCBiZSB1c2VkKS4K
-PiA+IAo+ID4gQ2hhbmdlcyBtYWRlIGJ5IHVzaW5nIGEgc2NyaXB0IHByb3ZpZGVkIGJ5IEpvZSBQ
-ZXJjaGVzIGhlcmU6Cj4gPiBodHRwczovL2xrbWwub3JnL2xrbWwvMjAxOS8yLzcvNDYuCj4gPiAK
-PiA+IFN1Z2dlc3RlZC1ieTogSm9lIFBlcmNoZXMgPGpvZUBwZXJjaGVzLmNvbT4KPiA+IFNpZ25l
-ZC1vZmYtYnk6IE5pc2hhZCBLYW1kYXIgPG5pc2hhZGthbWRhckBnbWFpbC5jb20+Cj4gPiAtLS0K
-PiA+ICBkcml2ZXJzL3BpbmN0cmwvYWN0aW9ucy9waW5jdHJsLW93bC5oIHwgMiArLQo+ID4gIDEg
-ZmlsZSBjaGFuZ2VkLCAxIGluc2VydGlvbigrKSwgMSBkZWxldGlvbigtKQo+ID4gCj4gPiBkaWZm
-IC0tZ2l0IGEvZHJpdmVycy9waW5jdHJsL2FjdGlvbnMvcGluY3RybC1vd2wuaCBiL2RyaXZlcnMv
-cGluY3RybC9hY3Rpb25zL3BpbmN0cmwtb3dsLmgKPiA+IGluZGV4IGRhZTJlODM2M2ZkNS4uZmVl
-ZTdhZDdlMjdlIDEwMDY0NAo+ID4gLS0tIGEvZHJpdmVycy9waW5jdHJsL2FjdGlvbnMvcGluY3Ry
-bC1vd2wuaAo+ID4gKysrIGIvZHJpdmVycy9waW5jdHJsL2FjdGlvbnMvcGluY3RybC1vd2wuaAo+
-ID4gQEAgLTEsNCArMSw0IEBACj4gPiAtLy8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IEdQTC0y
-LjArCj4gPiArLyogU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IEdQTC0yLjArICovCj4gCj4gVGhp
-cyBpcyBub3QgYSB1YXBpIG9yIGFzbSBoZWFkZXIsIHdoaWNoIHRoYXQgLyogKi8gcnVsZSB3YXMg
-bGF0ZXIgYWRkZWQKPiBmb3IsIEkgdGhvdWdodD8KPgoKSSBtaWdodCBiZSB3cm9uZyBidXQgSSB0
-aGluayBpdCBhcHBsaWVzIHRvIHRoaXMgZmlsZSB0b28gYXMgdGhlcmUgYXMgdGhlcmUgaXMgYSBT
-UERYCmlkZW50aWZpZXIgaW4gdGhlIGZpcnN0IHBsYWNlLgo+ID4gIC8qCj4gPiAgICogT1dMIFNv
-QydzIFBpbmN0cmwgZGVmaW5pdGlvbnMKPiA+ICAgKgo+IAo+IE5vdCBvYmplY3RpbmcsIGp1c3Qg
-bWFraW5nIHN1cmUgd2UncmUgbm90IGJsaW5kbHkgcmVmYWN0b3JpbmcgY29kZS4KPiAKCkkgYW0g
-bm90IHN1cmUgd2hhdCB5b3UgYXJlIHRyeWluZyB0byBzYXkgaGVyZSwgYnV0IHRoZSBTUERYIGlk
-ZW50aWZpZXIKcmVxdWlyZXMgYW4gaW5kZXBlbmRlbnQgYmxvY2sgY29tbWVudC4gSGVuY2UgcGxh
-Y2VkIHRoZSBvYm92ZSBjb2RlIGluIGEKc2VwYXJhdGUgYmxvY2sgY29tbWVudC4gRXZlcnl0aGlu
-ZyBlbHNlIGlzIGFzIGl0IGlzLgoKPiBJZiBkb2luZyB0aGlzLCBJIHN1Z2dlc3QgdXBkYXRpbmcg
-dG8gR1BMLTIuMC1vci1sYXRlci4KPiAKCldlIGNhbiBkbyB0aGlzIGluIGEgc2VwYXJhdGUgcGF0
-Y2ggYXMgdGhpcyBwYXRjaCBvbmx5IHRhbGtzIGFib3V0CnRoZSBzdHlsZS4KCj4gUmVnYXJkcywK
-PiBBbmRyZWFzCj4gCj4gLS0gCj4gU1VTRSBTb2Z0d2FyZSBTb2x1dGlvbnMgR2VybWFueSBHbWJI
-Cj4gTWF4ZmVsZHN0ci4gNSwgOTA0MDkgTsO8cm5iZXJnLCBHZXJtYW55Cj4gR0Y6IEZlbGl4IElt
-ZW5kw7ZyZmZlcgo+IEhSQiAzNjgwOSAoQUcgTsO8cm5iZXJnKQoKVGhhbmtzIHZlcnkgbXVjaCBm
-b3IgeW91ciB0aW1lIGFuZCByZXZpZXcuCgpSZWdhcmRzLApOaXNoYWQKCl9fX19fX19fX19fX19f
-X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fCmxpbnV4LWFtbG9naWMgbWFpbGluZyBs
-aXN0CmxpbnV4LWFtbG9naWNAbGlzdHMuaW5mcmFkZWFkLm9yZwpodHRwOi8vbGlzdHMuaW5mcmFk
-ZWFkLm9yZy9tYWlsbWFuL2xpc3RpbmZvL2xpbnV4LWFtbG9naWMK
+This patchset adds support for the current Amlogic Video Decoder
+driver for the Amlogic G12A & compatible SoCs.
+
+The bindings are converted to YAML and dt-schemes to ease validation
+of the bindings and the Amlogic DT.
+
+Then support is added for the currently supported MPEG1 & MPEG2 decoders
+and additional clock for upcoming HEVC/VP9 decoder support.
+
+M2M Decoder compliance is handled in a separate patchset at [1].
+
+# v4l2-compliance
+v4l2-compliance SHA: 7ead0e1856b89f2e19369af452bb03fd0cd16793, 64 bits
+
+Compliance test for meson-vdec device /dev/video0:
+
+Driver Info:
+	Driver name      : meson-vdec
+	Card type        : Amlogic Video Decoder
+	Bus info         : platform:meson-vdec
+	Driver version   : 5.4.0
+	Capabilities     : 0x84204000
+		Video Memory-to-Memory Multiplanar
+		Streaming
+		Extended Pix Format
+		Device Capabilities
+	Device Caps      : 0x04204000
+		Video Memory-to-Memory Multiplanar
+		Streaming
+		Extended Pix Format
+	Detected Stateful Decoder
+
+Required ioctls:
+	test VIDIOC_QUERYCAP: OK
+
+Allow for multiple opens:
+	test second /dev/video0 open: OK
+	test VIDIOC_QUERYCAP: OK
+	test VIDIOC_G/S_PRIORITY: OK
+	test for unlimited opens: OK
+
+Debug ioctls:
+	test VIDIOC_DBG_G/S_REGISTER: OK (Not Supported)
+	test VIDIOC_LOG_STATUS: OK (Not Supported)
+
+Input ioctls:
+	test VIDIOC_G/S_TUNER/ENUM_FREQ_BANDS: OK (Not Supported)
+	test VIDIOC_G/S_FREQUENCY: OK (Not Supported)
+	test VIDIOC_S_HW_FREQ_SEEK: OK (Not Supported)
+	test VIDIOC_ENUMAUDIO: OK (Not Supported)
+	test VIDIOC_G/S/ENUMINPUT: OK (Not Supported)
+	test VIDIOC_G/S_AUDIO: OK (Not Supported)
+	Inputs: 0 Audio Inputs: 0 Tuners: 0
+
+Output ioctls:
+	test VIDIOC_G/S_MODULATOR: OK (Not Supported)
+	test VIDIOC_G/S_FREQUENCY: OK (Not Supported)
+	test VIDIOC_ENUMAUDOUT: OK (Not Supported)
+	test VIDIOC_G/S/ENUMOUTPUT: OK (Not Supported)
+	test VIDIOC_G/S_AUDOUT: OK (Not Supported)
+	Outputs: 0 Audio Outputs: 0 Modulators: 0
+
+Input/Output configuration ioctls:
+	test VIDIOC_ENUM/G/S/QUERY_STD: OK (Not Supported)
+	test VIDIOC_ENUM/G/S/QUERY_DV_TIMINGS: OK (Not Supported)
+	test VIDIOC_DV_TIMINGS_CAP: OK (Not Supported)
+	test VIDIOC_G/S_EDID: OK (Not Supported)
+
+Control ioctls:
+	test VIDIOC_QUERY_EXT_CTRL/QUERYMENU: OK
+	test VIDIOC_QUERYCTRL: OK
+	test VIDIOC_G/S_CTRL: OK
+	test VIDIOC_G/S/TRY_EXT_CTRLS: OK
+	test VIDIOC_(UN)SUBSCRIBE_EVENT/DQEVENT: OK
+	test VIDIOC_G/S_JPEGCOMP: OK (Not Supported)
+	Standard Controls: 2 Private Controls: 0
+
+Format ioctls:
+	test VIDIOC_ENUM_FMT/FRAMESIZES/FRAMEINTERVALS: OK
+	test VIDIOC_G/S_PARM: OK (Not Supported)
+	test VIDIOC_G_FBUF: OK (Not Supported)
+	test VIDIOC_G_FMT: OK
+	test VIDIOC_TRY_FMT: OK
+	test VIDIOC_S_FMT: OK
+	test VIDIOC_G_SLICED_VBI_CAP: OK (Not Supported)
+	test Cropping: OK (Not Supported)
+	test Composing: OK (Not Supported)
+	test Scaling: OK (Not Supported)
+
+Codec ioctls:
+	test VIDIOC_(TRY_)ENCODER_CMD: OK (Not Supported)
+	test VIDIOC_G_ENC_INDEX: OK (Not Supported)
+	test VIDIOC_(TRY_)DECODER_CMD: OK
+
+Buffer ioctls:
+	test VIDIOC_REQBUFS/CREATE_BUFS/QUERYBUF: OK
+	test VIDIOC_EXPBUF: OK
+	test Requests: OK (Not Supported)
+
+Total for meson-vdec device /dev/video0: 44, Succeeded: 44, Failed: 0, Warnings: 0
+
+[1] https://lore.kernel.org/linux-media/20191126093733.32404-1-narmstrong@baylibre.com
+
+Maxime Jourdan (2):
+  media: meson: vdec: add g12a platform
+  arm64: dts: meson-g12-common: add video decoder node
+
+Neil Armstrong (2):
+  dt-bindings: media: amlogic,vdec: convert to yaml
+  dt-bindings: media: amlogic,gx-vdec: add bindings for G12A family
+
+ .../bindings/media/amlogic,gx-vdec.yaml       | 139 ++++++++++++++++++
+ .../bindings/media/amlogic,vdec.txt           |  72 ---------
+ .../boot/dts/amlogic/meson-g12-common.dtsi    |  23 +++
+ drivers/staging/media/meson/vdec/vdec.c       |  13 +-
+ drivers/staging/media/meson/vdec/vdec.h       |   1 +
+ .../staging/media/meson/vdec/vdec_platform.c  |  30 ++++
+ .../staging/media/meson/vdec/vdec_platform.h  |   2 +
+ 7 files changed, 206 insertions(+), 74 deletions(-)
+ create mode 100644 Documentation/devicetree/bindings/media/amlogic,gx-vdec.yaml
+ delete mode 100644 Documentation/devicetree/bindings/media/amlogic,vdec.txt
+
+-- 
+2.22.0
+
+
+_______________________________________________
+linux-amlogic mailing list
+linux-amlogic@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-amlogic
