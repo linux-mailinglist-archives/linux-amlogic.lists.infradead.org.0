@@ -2,79 +2,85 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 81201116349
-	for <lists+linux-amlogic@lfdr.de>; Sun,  8 Dec 2019 19:05:38 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 64DF1116351
+	for <lists+linux-amlogic@lfdr.de>; Sun,  8 Dec 2019 19:06:05 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=u6kkJmjOJjC0yLPzgJxGa4UU/V19QbiOnubcDy+qCfU=; b=snTPxsNNpkL65P
-	LfIR6LR3djFhwLb9FDxVTE+2DDsObHZfvNxfWV5F4bzRrRrpuENSKvsRPHxBGtk0PV/5KebQc/6IK
-	IC+Wjs5dteKjfTdv4gTbTE1Qjfq1V/b4dG6MQHvELmdB5nyeNFdep4HIjoB204zdURR4/Dtb4Hf4A
-	KORckxGOQwvS+poxh8z84uQv39uBPAkqIecNeBF/S81v/zKrbzNwTgwpVB6fFlq8DYBs2xhOUoS8d
-	WNj8g7oKwIzt0jmXuYydz+EhaIgim4Sg2sl0W+0H0PtqoJ8fBvYjX9uFpP10EFk5yuvyERRprtJt2
-	cH8FWtg6ELapST1QTTdA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=1ku3yHbsS3ywju6oFHgXYKwHE0qyam/aHPxdpkvEFIo=; b=SFezlMgcjF9avw
+	QSqf698EYdpY2EyIRY7roBe53fW8o/nG39HsfK1Brxn+9Zl3yRiL8MipdLXv/JFKJ7+c0Gdl1njTs
+	6rmIYzfcjIcitoXMwYUL6xJocg6oUU3PrqLgKqQrmzkAohdkijNI0dpQ5X+JWuVvPgogVLQGiHzCC
+	ep/fRad04h1pefLlffYtUi9PD//hGN+EEOSMPva3aCH3JBE5I2YsCtwt74cv8PRIegrmOtxH8z5fF
+	e78CoTMyEHjBnAgIfYq9dCPKmx5r5JfZT+HOXtTt9KsvlKiq18FMgcJEflM8Xow9YGoJmj5FTL5A/
+	tStq12W/j2ZSIQruVOiQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ie0w3-0003Gc-RP; Sun, 08 Dec 2019 18:05:35 +0000
-Received: from mail-oi1-x244.google.com ([2607:f8b0:4864:20::244])
+	id 1ie0wV-0003cs-8X; Sun, 08 Dec 2019 18:06:03 +0000
+Received: from mail-wr1-x444.google.com ([2a00:1450:4864:20::444])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ie0w0-0003FM-FU
- for linux-amlogic@lists.infradead.org; Sun, 08 Dec 2019 18:05:33 +0000
-Received: by mail-oi1-x244.google.com with SMTP id 6so4354372oix.7
- for <linux-amlogic@lists.infradead.org>; Sun, 08 Dec 2019 10:05:28 -0800 (PST)
+ id 1ie0wE-0003J3-Cc; Sun, 08 Dec 2019 18:05:47 +0000
+Received: by mail-wr1-x444.google.com with SMTP id w15so13521688wru.4;
+ Sun, 08 Dec 2019 10:05:43 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=googlemail.com; s=20161025;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=mTKk2xaW6izThy3AlF0F8z6eeCX0vy7qq8T/sGHhvO8=;
- b=K319RU8L98AdTYk+TFFH07liuRfMqrUGSHeB1yVizEaZI6tXBYIJ9U1sVAHlpPqkeV
- 8tT9kA6NvUJ6/a38fuTRpRIzIrjkaJosKJZy9PLidQKCmNHsJCabru0flsca74oTBtSs
- IdKJzEC3hiUvqROeWgwGkV7LfATiSnJNBePgk8ilsolml224mUrQI9KxGk0LZjn+LhSs
- nQl2G+dPsJAnsQj4j67dwKHH+6DyM17L2T76Gf9zhNekSINUnp0fNEZAwe4r4PtxmZGC
- /CP1KywXsi2+YdqjsISyMOiL3rx8neF68UBtXhPwFwdg2qVq9WgHkxHgr8jmC26B4+4S
- 3CRg==
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=lrbyKEPUyhJODwpL6MZk6uOXEO7AfKjtrzxgQThGJVE=;
+ b=tOtvps2xdgPd/1jyKlCLBio5DsXVEy3vnppk0Yv/f9a3OJdDHkwvYpDVY5qbjyvXVl
+ ZYvaKRXUqKo5flNBkkKapRk46BE25YUTqqqwoh/s8Ax+2iJjbyoOQ/aXwKCFiuGUZvUs
+ VDjSZfIJI+ndzu6URsxwSuNzc7nmD6Cy6Hw/77UV0OTpKVMy10Kx/3qn7e83fIt8v9jm
+ 1j6aJURXBrU0Wi0kP5I81DZ4Qk2g/Gwreb1Tgm4putx11K8ElxKiftuFRuCpUsorAduP
+ dFZjdyw01P4z/hG+iC/jCQAgGyeRIdTBLlQmQ9+hDEdN9G4gYmQLkwq3RngID9NkuybZ
+ GxHw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=mTKk2xaW6izThy3AlF0F8z6eeCX0vy7qq8T/sGHhvO8=;
- b=A/bEtWM3ueyZPZT3qIK7GvJL+YB/J728+di+8YEWNQvGvwzsNTcet2eIim9nXETlyg
- N7gjdi3rTnB8Nif/vcmKFltDEo7CoH0hzJ43S/lkk3zhHRYDGimUH9+lljkebb3lmuwN
- 6KkcpncSIaJnu/ftY/Rd9XGAI5y2MoORzY5Riokq55BWUvigqrTukxR6HbbCVyxC6tLJ
- gL/3v2LfuEZHVbVcrVRgMayqHNYWwlT/SJC04kxJZYTiQ6+UWVTeNr/dWSC/TcP6Wv3a
- Lqf41/5wwmSyF6bHjhWHZU2DFAx/+HTXo8OupM304+RGYgR2kZuBilxU+fl4AqLGzUDn
- ktOw==
-X-Gm-Message-State: APjAAAVapvSzR2zTlWGIDNRJTtBUNxcbA9VmFQEyIYs5Lh3FPgXeoq+h
- RcceSS3MOqbdaPrvmZCL92NsC0jbV6vQCnzsPCI=
-X-Google-Smtp-Source: APXvYqwP8CfD4nzvIAMNoJSw6b/s3OlcStAt+9hJdYSDZk0uioly16Xg/QyBa2wBGQwlsNfEfJZOqcez8T1vcmuzP90=
-X-Received: by 2002:aca:dc45:: with SMTP id t66mr15872202oig.39.1575828327856; 
- Sun, 08 Dec 2019 10:05:27 -0800 (PST)
-MIME-Version: 1.0
-References: <20191206100218.480348-1-jbrunet@baylibre.com>
- <20191206100218.480348-5-jbrunet@baylibre.com>
-In-Reply-To: <20191206100218.480348-5-jbrunet@baylibre.com>
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=lrbyKEPUyhJODwpL6MZk6uOXEO7AfKjtrzxgQThGJVE=;
+ b=rf3TU5n7mRMwjm1+pZHs3jP5k1Blo3+gv/pOG2QFbuvzMGfMrWcvRqb4kVCf6Lj8dm
+ oftprBRUTmnXaTD8ao2anduy8poKnQRecmjrXbysRhNfQcAFyaUrkqv/ZIX5YA3y+IXt
+ BLL4+GVtJN+SO4VftrNexdedy5ozhbiMZ2llr0CSz1+bGPNdvdR2vy7zYm2LtdVr/wsu
+ 480YjkOThjxuMWPaZFsLbR9OkgQwbR+k5UF7DVae9U/285YCxjsy3d67nupyUBtoASpw
+ FQvRWQ5ijpM16W2P0efp9CAKrrGSkwuy03Lz53E+KJ2p7/ce/Xq17vy2EXy4F3P0xqzb
+ xHOA==
+X-Gm-Message-State: APjAAAVlOPXfIJHc8V+ljyrKBbaHXeXxReXwJyYTkTidownbNARe0AL7
+ lXYK0iInEl5O2AJMWloILeYgMs7U
+X-Google-Smtp-Source: APXvYqz9wd7kfXtCdLV1zh29Di2rYYLEmHEcb9PsQ0KjiqQTKyoqQa9+1756o6yKsX1N8clbMXTGtA==
+X-Received: by 2002:a5d:44ca:: with SMTP id z10mr28615833wrr.266.1575828341552; 
+ Sun, 08 Dec 2019 10:05:41 -0800 (PST)
+Received: from localhost.localdomain
+ (p200300F1371AD700428D5CFFFEB99DB8.dip0.t-ipconnect.de.
+ [2003:f1:371a:d700:428d:5cff:feb9:9db8])
+ by smtp.googlemail.com with ESMTPSA id a64sm11797687wmc.18.2019.12.08.10.05.40
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Sun, 08 Dec 2019 10:05:40 -0800 (PST)
 From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-Date: Sun, 8 Dec 2019 19:05:16 +0100
-Message-ID: <CAFBinCDMxf6tJt+bkfN7W5CMJrqZ+F1zTC=q8xmYtxg7gpEJxg@mail.gmail.com>
-Subject: Re: [PATCH 4/4] arm64: dts: meson: add libretech-pc boards support
-To: Jerome Brunet <jbrunet@baylibre.com>
+To: linux-amlogic@lists.infradead.org, khilman@baylibre.com,
+ jbrunet@baylibre.com
+Subject: [PATCH 0/3] ARM: dts: meson: clock updates
+Date: Sun,  8 Dec 2019 19:05:22 +0100
+Message-Id: <20191208180525.1076152-1-martin.blumenstingl@googlemail.com>
+X-Mailer: git-send-email 2.24.0
+MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191208_100532_518918_C11A8E87 
-X-CRM114-Status: GOOD (  16.58  )
+X-CRM114-CacheID: sfid-20191208_100546_424676_14A315BC 
+X-CRM114-Status: UNSURE (   8.20  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:244 listed in]
- [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
  provider (martin.blumenstingl[at]googlemail.com)
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:444 listed in]
+ [list.dnswl.org]
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
@@ -93,97 +99,55 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: Kevin Hilman <khilman@baylibre.com>, devicetree@vger.kernel.org,
- linux-kernel@vger.kernel.org, linux-amlogic@lists.infradead.org
+Cc: Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
+ linux-kernel@vger.kernel.org, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Hi Jerome,
+This series moves the XTAL clock out of the main (HHI) clock controller
+because it's an actual dedicated crystal on the PCBs.
 
-this is looking good overall - I have some questions / nit-picks below
-
-On Fri, Dec 6, 2019 at 11:02 AM Jerome Brunet <jbrunet@baylibre.com> wrote:
-[...]
-> +       adc_keys {
-on most boards we use "adc-keys" instead of "adc_keys"
-
-[...]
-> +               button-onoff {
-> +                       label = "On/Off";
-> +                       linux,code = <KEY_VENDOR>;
-based on the label I assumed that the code is KEY_POWER
-why is KEY_VENDOR the better choice here?
-
-[...]
-> +       cvbs-connector {
-> +               compatible = "composite-video-connector";
-> +               status = "disabled";
-is there CVBS on the board? if I remember correctly the VPU driver
-works fine when omitting the CVBS connector
-so if the board doesn't have it you may drop the whole node instead of
-keeping it disabled
-
-[...]
-> +       leds {
-> +               compatible = "gpio-leds";
-> +
-> +               green {
-> +                       label = "librecomputer:green:disk";
-you can use the "function" and "color" properties instead of the (now
-deprecated) "label"
-
-[...]
-> +&external_mdio {
-> +       external_phy: ethernet-phy@0 {
-> +               reg = <0>;
-it would be great to have a comment above which PHY is used on this board
-
-> +               max-speed = <1000>;
-> +               reset-assert-us = <10000>;
-> +               reset-deassert-us = <30000>;
-> +               reset-gpios = <&gpio GPIOZ_14 GPIO_ACTIVE_LOW>;
-> +               interrupt-parent = <&gpio_intc>;
-a comment like /* MAC_INTR on GPIOZ_15 */ would be great here
-> +               interrupts = <25 IRQ_TYPE_LEVEL_LOW>;
-
-[...]
-> +&pinctrl_periphs {
-> +       /*
-> +        * Make sure the reset pin of the usb HUB is driven high to take
-> +        * it out of reset.
-> +        */
-> +       usb1_rst_pins: usb1_rst_irq {
-> +               mux {
-> +                       groups = "GPIODV_3";
-> +                       function = "gpio_periphs";
-> +                       bias-disable;
-> +                       output-high;
-> +               };
-> +       };
-on other boards (like Odroid-C2) we use a GPIO hog for this. I'm not
-sure which one is better
-
-[...]
-> +&pinctrl_periphs {
-> +       /*
-> +        * Make sure the irq pin of the TYPE C controller is not driven
-> +        * by the SoC.
-is this because the SoC default configuration pulls the IRQ line LOW,
-which then generates "phantom" IRQs?
-
-[...]
-> +       fusb302@22 {
-typec-portc@22
-
-[...]
-> +               interrupt-parent = <&gpio_intc>;
-> +               interrupts = <59 IRQ_TYPE_LEVEL_LOW>;
-a comment above with the GPIO number would be great
+The last two patches add the DDR clock controller whose output is used
+as input for some of the audio clocks.
 
 
-Martin
+Dependencies:
+- patch #1 has a runtime dependency on my other series:
+  "provide the XTAL clock via OF on Meson8/8b/8m2" [0]
+  Jerome has already queued this for v5.6
+- patches #2 and #3 have a compile time dependency on my other series:
+  "add the DDR clock controller on Meson8 and Meson8b" [1]
+  Jerome has already queued this for v5.6, but you need an immutable
+  tag for the dt-bindings
+
+
+Jerome: can you please rebase the v5.6/dt branch tomorrow on top of
+v5.6-rc1 and provide a tag so Kevin can apply this series?
+
+
+[0] https://patchwork.kernel.org/cover/11248377/
+[1] https://patchwork.kernel.org/cover/11248423/
+
+
+Martin Blumenstingl (3):
+  ARM: dts: meson: provide the XTAL clock using a fixed-clock
+  ARM: dts: meson8: add the DDR clock controller
+  ARM: dts: meson8b: add the DDR clock controller
+
+ arch/arm/boot/dts/meson.dtsi           |  7 +++++++
+ arch/arm/boot/dts/meson6.dtsi          |  7 -------
+ arch/arm/boot/dts/meson8.dtsi          | 24 +++++++++++++++++-------
+ arch/arm/boot/dts/meson8b-ec100.dts    |  2 +-
+ arch/arm/boot/dts/meson8b-mxq.dts      |  2 +-
+ arch/arm/boot/dts/meson8b-odroidc1.dts |  2 +-
+ arch/arm/boot/dts/meson8b.dtsi         | 24 +++++++++++++++++-------
+ 7 files changed, 44 insertions(+), 24 deletions(-)
+
+-- 
+2.24.0
+
 
 _______________________________________________
 linux-amlogic mailing list
