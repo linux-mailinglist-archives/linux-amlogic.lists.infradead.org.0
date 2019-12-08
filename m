@@ -2,80 +2,82 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E8915116329
-	for <lists+linux-amlogic@lfdr.de>; Sun,  8 Dec 2019 18:19:14 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1083A11632B
+	for <lists+linux-amlogic@lfdr.de>; Sun,  8 Dec 2019 18:19:17 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=hgJAcd+XIDWddduJ38gzoM2nG+MVHBXVT9Tc8gfPNng=; b=fkCE6KzRSe2v47
-	HqVlpqSYq6fxYx/Y4ShubHqbNILjHmB9pDKrmC1ld4AIg3427v6vDTDkiKw9VYB1Schq7e24ayReg
-	EGcJk1LIxRArmBqPwTwP6CnWaHO40i9keCwAMWJGZYs3paFDjAZm2QIBbqMANUKbrTYxRoJ1HOsuJ
-	8DngGKNouqAXxmE5HtF9jh+mie+MixPh2BC20bU7YdAmfD72DL9kk0+JfLaGLI4GFQMi2ymFfQAgC
-	RdIGtW85ABniHD8BRaMRNRbTftFTr8fzMWcxi1X7W3N003+/nSIqC9rfT+nBJIVqFq/oiMHFUvvHX
-	357EZk1/LqAR0QgtJXog==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=raEykL3N56L+umHcEqACT0ZOyHvMjEWvwLED+iRGpak=; b=HWCelgY9erqpx5
+	5OSgXKS0t4GPlwBZ1Bw8wIahKs9XeQeC+s48zwPB7J1+hxbjvOGZTnZNq9r9oAqPQ6BhLIqAAmtv7
+	dT1TDk7S309GRBli6XND2oCGMHGKycSuxmSYnfV9BunxK0F26JfFzYBcaFL7cmB+81InzLYWai6Dm
+	izA8zWSAQuU93tsXvftAPw6j6sNOnQNK7iTJHZNroqJObg4DTcdLRU8TqClnWrEvsWQFzdbyv88LD
+	nhfM7oAcrjT/5izmaK/k+W7gPALhxUkzhCz20bg56LX8LM0tsBtI9KzZ2Q5D0Nq4pBhx+1fqFMK5d
+	FLF5hFW3/WWVue1LnuwA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ie0D7-0002uH-5n; Sun, 08 Dec 2019 17:19:09 +0000
-Received: from mail-wm1-x343.google.com ([2a00:1450:4864:20::343])
+	id 1ie0D7-0002uu-SO; Sun, 08 Dec 2019 17:19:09 +0000
+Received: from mail-wm1-x341.google.com ([2a00:1450:4864:20::341])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ie0D3-0002sb-Nz; Sun, 08 Dec 2019 17:19:07 +0000
-Received: by mail-wm1-x343.google.com with SMTP id y23so13645450wma.0;
- Sun, 08 Dec 2019 09:19:01 -0800 (PST)
+ id 1ie0D3-0002sc-Nz; Sun, 08 Dec 2019 17:19:07 +0000
+Received: by mail-wm1-x341.google.com with SMTP id f129so12390019wmf.2;
+ Sun, 08 Dec 2019 09:19:02 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=googlemail.com; s=20161025;
- h=from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=Gu+8XaIloextUHW957Mh8GSvlNfk6Ho+2WvTpE6YLbI=;
- b=ntEJWwp25ChtTEmus7kaTseWRnnt4433csuQqPdH/cYACBb1MO4xJwO6wWHQSbA1zX
- fnvaiAiCgGo6ynY4RRumZL14YYOP3zCqSF4rsoFfG1tolFIeD7zxZmUrSvCozM1FYu24
- W6dBfwOmS1aJ9rdS0GUPN8FNgBc0R8OOKA60VHUzqem2s824NyrULJx866i9Ki4Qc/sr
- UtmZIGkGJvCe7lkSG7zeMxMcAEaaksaFIAjCP9+FuItI1MzF1rF3XUfTuG4dUaYTGTOl
- 8BvS68O2VO0h1jM4/ypFZCnn/tkW44q/aSUi/ciFzL8FS7nu1DEJBpchEeiwDIRmeVI4
- q5sA==
+ h=from:to:cc:subject:date:message-id:in-reply-to:references
+ :mime-version:content-transfer-encoding;
+ bh=/08gW13TofccXenPvhotNWPtw70ZwPRo+rtrcdU/+VA=;
+ b=RRaXPEPB4QQdctB7WfH81TtTfrknUORtdviB7JWOyEw4ddrTwxWAKUr3grmdAiKVw7
+ GWjQ6C7MkW8YZYcXN39l2E1cWuLIQnoJkYmORRJp7eWCBwkJKcoXzs+PmgeTyE+pXBLU
+ aG1d51PbsZEKMUB3H/e7dLI2xSgV8bgmB1jvLVLbIhn9qaJl8QEbHwVACTBejtCdtM0v
+ 6xqXG2FnHAAgE671NQJx2ElfdheX1Gzh0NT67meKI/W6X9Z9TytDRj/MNCfcwmzSABdc
+ PPiH01A88ITC3kjCyiLrtDI0xVDprYxkRJanqvoVHjconPk8EK/bEBUh2HKW/TgW5q0e
+ o7FA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=Gu+8XaIloextUHW957Mh8GSvlNfk6Ho+2WvTpE6YLbI=;
- b=HC52utbGIP4ovMiQJNtKGDakIpWRBUxGgbuG+AmbAHy35D6e0VSpKOCC+rDgWL7kR7
- hLekuPbqvmG4+/wzPqfX8MjPavsJyMil3nnVWWibr8VRGyhQV0H7BYOGSPYa9+ZQyA3I
- dAhe0S3tRdpOjJyZYcOe1qEDHbXoZ2zDWj7pA3lZHjnidVnRmBnnhK477ooYPQlTn+bq
- kLHK2voV5fs6ETfGfQFYvBLvD5K2kkFKodfPG3c+vD9ztEZ6i+6Lz0FsKhhM9pR5BY8B
- 3KpeckSUeP2KrjGYPUGImpm5RByE4WZ0nTqVtuWtUSMj/Flmj+zbucPJeKiZjZhrMszF
- dSFQ==
-X-Gm-Message-State: APjAAAU90dJMAze+6kPaZNj4ztPF9hOlHzYvmEoeGwRqEWlz2Nof46Rr
- 7hVskRRSsmNHmljlPo2uPfYJzoMt
-X-Google-Smtp-Source: APXvYqwl5vSlTNtHmhBHy96IhpgjESZ2vDOODYVSQ2Xh9Rx4mQ3d3VrOlJuOKtGiQrnauWl4d2kqKA==
-X-Received: by 2002:a7b:c0d8:: with SMTP id s24mr21854540wmh.30.1575825539428; 
- Sun, 08 Dec 2019 09:18:59 -0800 (PST)
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
+ :references:mime-version:content-transfer-encoding;
+ bh=/08gW13TofccXenPvhotNWPtw70ZwPRo+rtrcdU/+VA=;
+ b=EkdNrN+TW2xLzn/6xPxgvqbuuuYV/82rJsDwa9QcyjV3/gy5wt/P4RO/MPpbKFL9V5
+ KJJVVLcNtU22b2ELWY76NzUPCYdQAJO6+q2iajXnWtMOEMY0V43VAGT3iuUeRlbIDQ/6
+ ar7YY7NCEnmsB6ZHQTU6saEqZpIyR2wM7MXg/WZwU+cr4aX0ygUxNzPI3XaPIjNzxjhS
+ iXfirWhELh/t/tKvqFkEt8sTzVKOTTncCxestTVLUrxB96DINIZ/t89JZEAISFLJw2y7
+ ryr1C+CzuZ94kUL6JhiV0Q4yDdMm3LxViiPhgzgV/M1QnOWMQ0CgPvu+OK4xgL4ZaXme
+ SqRw==
+X-Gm-Message-State: APjAAAWIYLzOKAtpxrMJ/ctx374Yiu1i0gZD9+W3IXf796qMHHMbIDO8
+ j0wfMid0CfXLn724SirFj7Uv56Xw
+X-Google-Smtp-Source: APXvYqzl065F05Yt2j+aTRbWAW7DyJzxv18Zx1ZqmxuQS7SJlPzVCkEImtiMCQ5YaYB9e0PK14tHWg==
+X-Received: by 2002:a1c:9e49:: with SMTP id h70mr22066604wme.79.1575825540738; 
+ Sun, 08 Dec 2019 09:19:00 -0800 (PST)
 Received: from localhost.localdomain
  (p200300F1371AD700428D5CFFFEB99DB8.dip0.t-ipconnect.de.
  [2003:f1:371a:d700:428d:5cff:feb9:9db8])
- by smtp.googlemail.com with ESMTPSA id g25sm11791383wmh.3.2019.12.08.09.18.58
+ by smtp.googlemail.com with ESMTPSA id g25sm11791383wmh.3.2019.12.08.09.18.59
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Sun, 08 Dec 2019 09:18:58 -0800 (PST)
+ Sun, 08 Dec 2019 09:18:59 -0800 (PST)
 From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
 To: linux-amlogic@lists.infradead.org,
 	narmstrong@baylibre.com
-Subject: [PATCH v2 0/2] Meson VPU: fix CVBS output
-Date: Sun,  8 Dec 2019 18:18:30 +0100
-Message-Id: <20191208171832.1064772-1-martin.blumenstingl@googlemail.com>
+Subject: [PATCH v2 1/2] drm: meson: venc: cvbs: deduplicate the
+ meson_cvbs_mode lookup code
+Date: Sun,  8 Dec 2019 18:18:31 +0100
+Message-Id: <20191208171832.1064772-2-martin.blumenstingl@googlemail.com>
 X-Mailer: git-send-email 2.24.0
+In-Reply-To: <20191208171832.1064772-1-martin.blumenstingl@googlemail.com>
+References: <20191208171832.1064772-1-martin.blumenstingl@googlemail.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191208_091905_785277_3C658A3B 
-X-CRM114-Status: UNSURE (   6.96  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20191208_091905_784790_A68505A2 
+X-CRM114-Status: GOOD (  14.20  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:343 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:341 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -108,26 +110,90 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-The goal of this series is to fix the CVBS output with the Meson VPU
-driver. Prior to this series kmscube reported:
-  failed to set mode: Invalid argument
+Use a utility function to remove a bit of code duplication between
+meson_venc_cvbs_encoder_atomic_check() and
+meson_venc_cvbs_encoder_mode_set(). Both need to look up the struct
+meson_venc_cvbs based on a drm_display_mode.
 
-Changes since v1 at [0]:
-- add patch to remove duplicate code (to match patch #2 easier)
-- use drm_mode_match without DRM_MODE_MATCH_ASPECT_RATIO as suggested
-  by Neil
+Signed-off-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+---
+ drivers/gpu/drm/meson/meson_venc_cvbs.c | 44 +++++++++++++------------
+ 1 file changed, 23 insertions(+), 21 deletions(-)
 
-
-[0] https://patchwork.kernel.org/patch/11268161/
-
-
-Martin Blumenstingl (2):
-  drm: meson: venc: cvbs: deduplicate the meson_cvbs_mode lookup code
-  drm: meson: venc: cvbs: fix CVBS mode matching
-
- drivers/gpu/drm/meson/meson_venc_cvbs.c | 48 ++++++++++++++-----------
- 1 file changed, 27 insertions(+), 21 deletions(-)
-
+diff --git a/drivers/gpu/drm/meson/meson_venc_cvbs.c b/drivers/gpu/drm/meson/meson_venc_cvbs.c
+index 9ab27aecfcf3..6b8a074e4ff4 100644
+--- a/drivers/gpu/drm/meson/meson_venc_cvbs.c
++++ b/drivers/gpu/drm/meson/meson_venc_cvbs.c
+@@ -64,6 +64,21 @@ struct meson_cvbs_mode meson_cvbs_modes[MESON_CVBS_MODES_COUNT] = {
+ 	},
+ };
+ 
++static const struct meson_cvbs_mode *
++meson_cvbs_get_mode(const struct drm_display_mode *req_mode)
++{
++	int i;
++
++	for (i = 0; i < MESON_CVBS_MODES_COUNT; ++i) {
++		struct meson_cvbs_mode *meson_mode = &meson_cvbs_modes[i];
++
++		if (drm_mode_equal(req_mode, &meson_mode->mode))
++			return meson_mode;
++	}
++
++	return NULL;
++}
++
+ /* Connector */
+ 
+ static void meson_cvbs_connector_destroy(struct drm_connector *connector)
+@@ -136,14 +151,8 @@ static int meson_venc_cvbs_encoder_atomic_check(struct drm_encoder *encoder,
+ 					struct drm_crtc_state *crtc_state,
+ 					struct drm_connector_state *conn_state)
+ {
+-	int i;
+-
+-	for (i = 0; i < MESON_CVBS_MODES_COUNT; ++i) {
+-		struct meson_cvbs_mode *meson_mode = &meson_cvbs_modes[i];
+-
+-		if (drm_mode_equal(&crtc_state->mode, &meson_mode->mode))
+-			return 0;
+-	}
++	if (meson_cvbs_get_mode(&crtc_state->mode))
++		return 0;
+ 
+ 	return -EINVAL;
+ }
+@@ -191,24 +200,17 @@ static void meson_venc_cvbs_encoder_mode_set(struct drm_encoder *encoder,
+ 				   struct drm_display_mode *mode,
+ 				   struct drm_display_mode *adjusted_mode)
+ {
++	const struct meson_cvbs_mode *meson_mode = meson_cvbs_get_mode(mode);
+ 	struct meson_venc_cvbs *meson_venc_cvbs =
+ 					encoder_to_meson_venc_cvbs(encoder);
+ 	struct meson_drm *priv = meson_venc_cvbs->priv;
+-	int i;
+ 
+-	for (i = 0; i < MESON_CVBS_MODES_COUNT; ++i) {
+-		struct meson_cvbs_mode *meson_mode = &meson_cvbs_modes[i];
++	if (meson_mode) {
++		meson_venci_cvbs_mode_set(priv, meson_mode->enci);
+ 
+-		if (drm_mode_equal(mode, &meson_mode->mode)) {
+-			meson_venci_cvbs_mode_set(priv,
+-						  meson_mode->enci);
+-
+-			/* Setup 27MHz vclk2 for ENCI and VDAC */
+-			meson_vclk_setup(priv, MESON_VCLK_TARGET_CVBS,
+-					 MESON_VCLK_CVBS, MESON_VCLK_CVBS,
+-					 MESON_VCLK_CVBS, true);
+-			break;
+-		}
++		/* Setup 27MHz vclk2 for ENCI and VDAC */
++		meson_vclk_setup(priv, MESON_VCLK_TARGET_CVBS, MESON_VCLK_CVBS,
++				 MESON_VCLK_CVBS, MESON_VCLK_CVBS, true);
+ 	}
+ }
+ 
 -- 
 2.24.0
 
