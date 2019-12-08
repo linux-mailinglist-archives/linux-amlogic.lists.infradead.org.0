@@ -2,61 +2,92 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 97A941150DD
-	for <lists+linux-amlogic@lfdr.de>; Fri,  6 Dec 2019 14:14:10 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id E8915116329
+	for <lists+linux-amlogic@lfdr.de>; Sun,  8 Dec 2019 18:19:14 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:Message-ID:References:In-Reply-To:From:Date:
-	MIME-Version:Subject:To:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=5fTYoroGh/C2BhV8HTPhsXleIMk2WC2zeZxioMvH3hg=; b=cjmXy1R4bLNLyBYopJGhS8yj6
-	Hgo7XyYftO+HZTKCrAkhXZjEe+yRXtuNmbNbrrpP2gwmaVcmw4ZIkoaBn89TsMz3zW4mnQh43Fw2F
-	/xySxshKZpkSPnBozo3kUTUF06BkDBWnWdBp8J1kvdg7k3rCSouhiUe9W0SXMu1ewi0YW2SonQLJW
-	90qsjllCRVDCpdNiPrY0HmoIQ0ZqGKj2k93sQRiBcMlEvcWzkDYYC/f4zaPtRv9wTgkQ7LQ1zf86u
-	/Q4gy2q8W7SAzhiWnXMhvZB8TTy+xWnavCX9DcuyBobqe3XNzrTa4Bd/3qQUrySIOH8kyiku04k9s
-	RRLYxHzTw==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=hgJAcd+XIDWddduJ38gzoM2nG+MVHBXVT9Tc8gfPNng=; b=fkCE6KzRSe2v47
+	HqVlpqSYq6fxYx/Y4ShubHqbNILjHmB9pDKrmC1ld4AIg3427v6vDTDkiKw9VYB1Schq7e24ayReg
+	EGcJk1LIxRArmBqPwTwP6CnWaHO40i9keCwAMWJGZYs3paFDjAZm2QIBbqMANUKbrTYxRoJ1HOsuJ
+	8DngGKNouqAXxmE5HtF9jh+mie+MixPh2BC20bU7YdAmfD72DL9kk0+JfLaGLI4GFQMi2ymFfQAgC
+	RdIGtW85ABniHD8BRaMRNRbTftFTr8fzMWcxi1X7W3N003+/nSIqC9rfT+nBJIVqFq/oiMHFUvvHX
+	357EZk1/LqAR0QgtJXog==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1idDQu-0004Jm-Ig; Fri, 06 Dec 2019 13:14:08 +0000
-Received: from inca-roads.misterjones.org ([213.251.177.50])
+	id 1ie0D7-0002uH-5n; Sun, 08 Dec 2019 17:19:09 +0000
+Received: from mail-wm1-x343.google.com ([2a00:1450:4864:20::343])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1idDQj-0004B2-Ev; Fri, 06 Dec 2019 13:13:59 +0000
-Received: from www-data by cheepnis.misterjones.org with local (Exim 4.80)
- (envelope-from <maz@kernel.org>)
- id 1idDQc-0003C4-G3; Fri, 06 Dec 2019 14:13:50 +0100
-To: Qianggui Song <qianggui.song@amlogic.com>
-Subject: Re: [PATCH 2/4] irqchip/meson-gpio: rework meson irqchip driver to
- support meson-A1 SoCs
-X-PHP-Originating-Script: 0:main.inc
+ id 1ie0D3-0002sb-Nz; Sun, 08 Dec 2019 17:19:07 +0000
+Received: by mail-wm1-x343.google.com with SMTP id y23so13645450wma.0;
+ Sun, 08 Dec 2019 09:19:01 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=googlemail.com; s=20161025;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=Gu+8XaIloextUHW957Mh8GSvlNfk6Ho+2WvTpE6YLbI=;
+ b=ntEJWwp25ChtTEmus7kaTseWRnnt4433csuQqPdH/cYACBb1MO4xJwO6wWHQSbA1zX
+ fnvaiAiCgGo6ynY4RRumZL14YYOP3zCqSF4rsoFfG1tolFIeD7zxZmUrSvCozM1FYu24
+ W6dBfwOmS1aJ9rdS0GUPN8FNgBc0R8OOKA60VHUzqem2s824NyrULJx866i9Ki4Qc/sr
+ UtmZIGkGJvCe7lkSG7zeMxMcAEaaksaFIAjCP9+FuItI1MzF1rF3XUfTuG4dUaYTGTOl
+ 8BvS68O2VO0h1jM4/ypFZCnn/tkW44q/aSUi/ciFzL8FS7nu1DEJBpchEeiwDIRmeVI4
+ q5sA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=Gu+8XaIloextUHW957Mh8GSvlNfk6Ho+2WvTpE6YLbI=;
+ b=HC52utbGIP4ovMiQJNtKGDakIpWRBUxGgbuG+AmbAHy35D6e0VSpKOCC+rDgWL7kR7
+ hLekuPbqvmG4+/wzPqfX8MjPavsJyMil3nnVWWibr8VRGyhQV0H7BYOGSPYa9+ZQyA3I
+ dAhe0S3tRdpOjJyZYcOe1qEDHbXoZ2zDWj7pA3lZHjnidVnRmBnnhK477ooYPQlTn+bq
+ kLHK2voV5fs6ETfGfQFYvBLvD5K2kkFKodfPG3c+vD9ztEZ6i+6Lz0FsKhhM9pR5BY8B
+ 3KpeckSUeP2KrjGYPUGImpm5RByE4WZ0nTqVtuWtUSMj/Flmj+zbucPJeKiZjZhrMszF
+ dSFQ==
+X-Gm-Message-State: APjAAAU90dJMAze+6kPaZNj4ztPF9hOlHzYvmEoeGwRqEWlz2Nof46Rr
+ 7hVskRRSsmNHmljlPo2uPfYJzoMt
+X-Google-Smtp-Source: APXvYqwl5vSlTNtHmhBHy96IhpgjESZ2vDOODYVSQ2Xh9Rx4mQ3d3VrOlJuOKtGiQrnauWl4d2kqKA==
+X-Received: by 2002:a7b:c0d8:: with SMTP id s24mr21854540wmh.30.1575825539428; 
+ Sun, 08 Dec 2019 09:18:59 -0800 (PST)
+Received: from localhost.localdomain
+ (p200300F1371AD700428D5CFFFEB99DB8.dip0.t-ipconnect.de.
+ [2003:f1:371a:d700:428d:5cff:feb9:9db8])
+ by smtp.googlemail.com with ESMTPSA id g25sm11791383wmh.3.2019.12.08.09.18.58
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Sun, 08 Dec 2019 09:18:58 -0800 (PST)
+From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+To: linux-amlogic@lists.infradead.org,
+	narmstrong@baylibre.com
+Subject: [PATCH v2 0/2] Meson VPU: fix CVBS output
+Date: Sun,  8 Dec 2019 18:18:30 +0100
+Message-Id: <20191208171832.1064772-1-martin.blumenstingl@googlemail.com>
+X-Mailer: git-send-email 2.24.0
 MIME-Version: 1.0
-Date: Fri, 06 Dec 2019 13:13:50 +0000
-From: Marc Zyngier <maz@kernel.org>
-In-Reply-To: <20191206121714.14579-3-qianggui.song@amlogic.com>
-References: <20191206121714.14579-1-qianggui.song@amlogic.com>
- <20191206121714.14579-3-qianggui.song@amlogic.com>
-Message-ID: <542e3e819e584d6e433d2c4276c3b379@www.loen.fr>
-X-Sender: maz@kernel.org
-User-Agent: Roundcube Webmail/0.7.2
-X-SA-Exim-Connect-IP: <locally generated>
-X-SA-Exim-Rcpt-To: qianggui.song@amlogic.com, tglx@linutronix.de,
- jason@lakedaemon.net, khilman@baylibre.com, narmstrong@baylibre.com,
- jbrunet@baylibre.com, jianxin.pan@amlogic.com, xingyu.chen@amlogic.com,
- hanjie.lin@amlogic.com, linux-kernel@vger.kernel.org,
- linux-arm-kernel@lists.infradead.org, linux-amlogic@lists.infradead.org
-X-SA-Exim-Mail-From: maz@kernel.org
-X-SA-Exim-Scanned: No (on cheepnis.misterjones.org);
- SAEximRunCond expanded to false
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191206_051357_650100_6B46100E 
-X-CRM114-Status: GOOD (  18.50  )
-X-Spam-Score: 1.0 (+)
+X-CRM114-CacheID: sfid-20191208_091905_785277_3C658A3B 
+X-CRM114-Status: UNSURE (   6.96  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (1.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:343 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (martin.blumenstingl[at]googlemail.com)
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -68,244 +99,38 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: Hanjie Lin <hanjie.lin@amlogic.com>, Jason Cooper <jason@lakedaemon.net>,
- Jianxin Pan <jianxin.pan@amlogic.com>,
- Neil Armstrong <narmstrong@baylibre.com>, Kevin Hilman <khilman@baylibre.com>,
- linux-kernel@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
- linux-amlogic@lists.infradead.org, Thomas Gleixner <tglx@linutronix.de>,
- Xingyu Chen <xingyu.chen@amlogic.com>, Jerome Brunet <jbrunet@baylibre.com>
+Cc: airlied@linux.ie, linux-kernel@vger.kernel.org,
+ dri-devel@lists.freedesktop.org,
+ Martin Blumenstingl <martin.blumenstingl@googlemail.com>, daniel@ffwll.ch,
+ linux-arm-kernel@lists.infradead.org
+Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
-Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On 2019-12-06 12:17, Qianggui Song wrote:
-> Since Meson-A1 Socs register layout of gpio interrupt controller have
-> difference with previous chips, registers to decide irq line and 
-> offset
-> of trigger method are all changed, the current driver should be 
-> modified.
->
-> Signed-off-by: Qianggui Song <qianggui.song@amlogic.com>
-> ---
->  drivers/irqchip/irq-meson-gpio.c | 79 
-> ++++++++++++++++++++++++--------
->  1 file changed, 60 insertions(+), 19 deletions(-)
->
-> diff --git a/drivers/irqchip/irq-meson-gpio.c
-> b/drivers/irqchip/irq-meson-gpio.c
-> index 829084b568fa..1824ffc30de2 100644
-> --- a/drivers/irqchip/irq-meson-gpio.c
-> +++ b/drivers/irqchip/irq-meson-gpio.c
-> @@ -30,44 +30,74 @@
->   * stuck at 0. Bits 8 to 15 are responsive and have the expected
->   * effect.
->   */
-> -#define REG_EDGE_POL_EDGE(x)	BIT(x)
-> -#define REG_EDGE_POL_LOW(x)	BIT(16 + (x))
-> -#define REG_BOTH_EDGE(x)	BIT(8 + (x))
-> -#define REG_EDGE_POL_MASK(x)    (	\
-> -		REG_EDGE_POL_EDGE(x) |	\
-> -		REG_EDGE_POL_LOW(x)  |	\
-> -		REG_BOTH_EDGE(x))
-> +#define REG_EDGE_POL_EDGE(params, 
-> x)	BIT((params)->edge_single_offset + (x))
-> +#define REG_EDGE_POL_LOW(params, x)	BIT((params)->pol_low_offset + 
-> (x))
-> +#define REG_BOTH_EDGE(params, x)	BIT((params)->edge_both_offset + 
-> (x))
-> +#define REG_EDGE_POL_MASK(params, x)    (	\
-> +		REG_EDGE_POL_EDGE(params, x) |	\
-> +		REG_EDGE_POL_LOW(params, x)  |	\
-> +		REG_BOTH_EDGE(params, x))
->  #define REG_PIN_SEL_SHIFT(x)	(((x) % 4) * 8)
->  #define REG_FILTER_SEL_SHIFT(x)	((x) * 4)
->
-> +#define INIT_MESON8_COMMON_DATA					\
-> +	.edge_single_offset = 0,				\
-> +	.pol_low_offset = 16,					\
-> +	.pin_sel_mask = 0xff,					\
-> +	.ops = {						\
-> +		.gpio_irq_sel_pin = meson8_gpio_irq_sel_pin,	\
-> +	},
+The goal of this series is to fix the CVBS output with the Meson VPU
+driver. Prior to this series kmscube reported:
+  failed to set mode: Invalid argument
 
-Please place the #defines that operate on the various data structures
-*after* the definition of the structures. It would greatly help
-reading the changes.
+Changes since v1 at [0]:
+- add patch to remove duplicate code (to match patch #2 easier)
+- use drm_mode_match without DRM_MODE_MATCH_ASPECT_RATIO as suggested
+  by Neil
 
-> +
-> +struct meson_gpio_irq_controller;
-> +static void meson8_gpio_irq_sel_pin(struct meson_gpio_irq_controller 
-> *ctl,
-> +				    unsigned int channel, unsigned long hwirq);
-> +struct irq_ctl_ops {
-> +	void (*gpio_irq_sel_pin)(struct meson_gpio_irq_controller *ctl,
-> +					 unsigned int channel,
-> +					 unsigned long hwirq);
-> +	void (*gpio_irq_init)(struct meson_gpio_irq_controller *ctl);
-> +};
-> +
->  struct meson_gpio_irq_params {
->  	unsigned int nr_hwirq;
->  	bool support_edge_both;
-> +	unsigned int edge_both_offset;
-> +	unsigned int edge_single_offset;
-> +	unsigned int pol_low_offset;
-> +	unsigned int pin_sel_mask;
-> +	struct irq_ctl_ops ops;
->  };
->
->  static const struct meson_gpio_irq_params meson8_params = {
->  	.nr_hwirq = 134,
-> +	INIT_MESON8_COMMON_DATA
->  };
->
->  static const struct meson_gpio_irq_params meson8b_params = {
->  	.nr_hwirq = 119,
-> +	INIT_MESON8_COMMON_DATA
->  };
->
->  static const struct meson_gpio_irq_params gxbb_params = {
->  	.nr_hwirq = 133,
-> +	INIT_MESON8_COMMON_DATA
->  };
->
->  static const struct meson_gpio_irq_params gxl_params = {
->  	.nr_hwirq = 110,
-> +	INIT_MESON8_COMMON_DATA
->  };
->
->  static const struct meson_gpio_irq_params axg_params = {
->  	.nr_hwirq = 100,
-> +	INIT_MESON8_COMMON_DATA
->  };
->
->  static const struct meson_gpio_irq_params sm1_params = {
->  	.nr_hwirq = 100,
->  	.support_edge_both = true,
-> +	.edge_both_offset = 8,
-> +	INIT_MESON8_COMMON_DATA
->  };
 
-OK, this isn't great. The least you could do is to make
-your initializer parametric, so that it takes the nr_hwirq as
-a parameter.
+[0] https://patchwork.kernel.org/patch/11268161/
 
-Then, any additional member that overrides common behaviour
-should come after the main initializer.
 
-Also, do you need 'support_edge_both'? Isn't a non-zero
-'edge_both_offset' enough to detect the feature?
+Martin Blumenstingl (2):
+  drm: meson: venc: cvbs: deduplicate the meson_cvbs_mode lookup code
+  drm: meson: venc: cvbs: fix CVBS mode matching
 
->
->  static const struct of_device_id meson_irq_gpio_matches[] = {
-> @@ -100,9 +130,18 @@ static void meson_gpio_irq_update_bits(struct
-> meson_gpio_irq_controller *ctl,
->  	writel_relaxed(tmp, ctl->base + reg);
->  }
->
-> -static unsigned int meson_gpio_irq_channel_to_reg(unsigned int 
-> channel)
-> +static void meson8_gpio_irq_sel_pin(struct meson_gpio_irq_controller 
-> *ctl,
-> +				    unsigned int channel, unsigned long hwirq)
->  {
-> -	return (channel < 4) ? REG_PIN_03_SEL : REG_PIN_47_SEL;
-> +	unsigned int reg_offset;
-> +	unsigned int bit_offset;
-> +
-> +	reg_offset = (channel < 4) ? REG_PIN_03_SEL : REG_PIN_47_SEL;
-> +	bit_offset = REG_PIN_SEL_SHIFT(channel);
-> +
-> +	meson_gpio_irq_update_bits(ctl, reg_offset,
-> +				   ctl->params->pin_sel_mask << bit_offset,
-> +				   hwirq << bit_offset);
->  }
->
->  static int
-> @@ -110,7 +149,7 @@ meson_gpio_irq_request_channel(struct
-> meson_gpio_irq_controller *ctl,
->  			       unsigned long  hwirq,
->  			       u32 **channel_hwirq)
->  {
-> -	unsigned int reg, idx;
-> +	unsigned int idx;
->
->  	spin_lock(&ctl->lock);
->
-> @@ -129,10 +168,7 @@ meson_gpio_irq_request_channel(struct
-> meson_gpio_irq_controller *ctl,
->  	 * Setup the mux of the channel to route the signal of the pad
->  	 * to the appropriate input of the GIC
->  	 */
-> -	reg = meson_gpio_irq_channel_to_reg(idx);
-> -	meson_gpio_irq_update_bits(ctl, reg,
-> -				   0xff << REG_PIN_SEL_SHIFT(idx),
-> -				   hwirq << REG_PIN_SEL_SHIFT(idx));
-> +	ctl->params->ops.gpio_irq_sel_pin(ctl, idx, hwirq);
->
->  	/*
->  	 * Get the hwirq number assigned to this channel through
-> @@ -173,7 +209,9 @@ static int meson_gpio_irq_type_setup(struct
-> meson_gpio_irq_controller *ctl,
->  {
->  	u32 val = 0;
->  	unsigned int idx;
-> +	const struct meson_gpio_irq_params *params;
->
-> +	params = ctl->params;
->  	idx = meson_gpio_irq_get_channel_idx(ctl, channel_hwirq);
->
->  	/*
-> @@ -190,22 +228,22 @@ static int meson_gpio_irq_type_setup(struct
-> meson_gpio_irq_controller *ctl,
->  	 * precedence over the other edge/polarity settings
->  	 */
->  	if (type == IRQ_TYPE_EDGE_BOTH) {
-> -		if (!ctl->params->support_edge_both)
-> +		if (!params->support_edge_both)
->  			return -EINVAL;
->
-> -		val |= REG_BOTH_EDGE(idx);
-> +		val |= REG_BOTH_EDGE(params, idx);
->  	} else {
->  		if (type & (IRQ_TYPE_EDGE_RISING | IRQ_TYPE_EDGE_FALLING))
-> -			val |= REG_EDGE_POL_EDGE(idx);
-> +			val |= REG_EDGE_POL_EDGE(params, idx);
->
->  		if (type & (IRQ_TYPE_LEVEL_LOW | IRQ_TYPE_EDGE_FALLING))
-> -			val |= REG_EDGE_POL_LOW(idx);
-> +			val |= REG_EDGE_POL_LOW(params, idx);
->  	}
->
->  	spin_lock(&ctl->lock);
->
->  	meson_gpio_irq_update_bits(ctl, REG_EDGE_POL,
-> -				   REG_EDGE_POL_MASK(idx), val);
-> +				   REG_EDGE_POL_MASK(params, idx), val);
->
->  	spin_unlock(&ctl->lock);
->
-> @@ -371,6 +409,9 @@ static int __init meson_gpio_irq_parse_dt(struct
-> device_node *node,
->  		return ret;
->  	}
->
-> +	if (ctl->params->ops.gpio_irq_init)
-> +		ctl->params->ops.gpio_irq_init(ctl);
+ drivers/gpu/drm/meson/meson_venc_cvbs.c | 48 ++++++++++++++-----------
+ 1 file changed, 27 insertions(+), 21 deletions(-)
 
-It would make sense to provide a dummy init() method, since
-you have all the infrastructure already.
-
-> +
->  	return 0;
->  }
-
-Thanks,
-
-         M.
 -- 
-Jazz is not dead. It just smells funny...
+2.24.0
+
 
 _______________________________________________
 linux-amlogic mailing list
