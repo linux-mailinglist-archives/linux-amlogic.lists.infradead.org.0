@@ -2,66 +2,67 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 235A811D78C
-	for <lists+linux-amlogic@lfdr.de>; Thu, 12 Dec 2019 20:58:14 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5944211D7A9
+	for <lists+linux-amlogic@lfdr.de>; Thu, 12 Dec 2019 21:06:01 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
 	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=RtmIPt5/c4ft5YCiImG0uVAEpBaXuG28fafrrCxgswg=; b=fH6kR/dyQ7AgWF
-	FZYW/h5FrBDTBJ/lTh+0KMhTnqo+946GyrPJI0dLwLQXU4YQZ02udfWWJlfd0YSlGhGMYVqZBKFoU
-	pXMoVYG9auGL28MHR1KtOcdoRq1KdsUOE+R/fMFGAURewlhYkaLgrFJeIKidqku75vDbIzd2OiiVo
-	+ZGC1tSvAMpZmXqiwxhmAlFAFQrTpEFZceESTnF4UC15esqOi8CCNU+f1GGSpC1qYMKC82sczDvOJ
-	RELEcxfae/SC5CVjtSQcK/czsne3jiDRb5F8C0W2HI4urWRydtcwsgNb67C8uS36RFxPo+qHe4/l/
-	k6vohYaGqJWHhcjEUu5A==;
+	List-Owner; bh=1MOB0wgJaW7DWPU1GB9trW8OOtT9zZqiyvVKoBUQXtY=; b=EhWublLPYBpdOW
+	jdeu5jreDdiIZMD4SXNn6sQll27e1+NwC86dmcpWQXArnyo+5zy1U5IkfYi5pBzJiZxCDUN5kyVaI
+	GGH3pEZ6pbzbj7o4/MqTxOeQ5ycQ8QOT+REmvgzbW96wYFjxCSbV25umuM2dBFw0x0q1QtcoSXbBN
+	UQ/0GWVvTMh06DP1DwlWJhbg4bHy3TYEkJmWTMKTYZxxsruPsz1nrJLpHld7KZvjAW7Gm/IG6MWHu
+	Rx7h+1Q7gn2TSRnqklUffo1UDS+eBblWBTay6eAc7ecmggUG8UQE9pXJ09YFU2JPyYDxYEu/p2cpI
+	0VdHmdYdWoPWrIVgyFVQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ifUbD-0004uH-OY; Thu, 12 Dec 2019 19:58:11 +0000
-Received: from mail-ot1-x344.google.com ([2607:f8b0:4864:20::344])
+	id 1ifUil-0000LP-0I; Thu, 12 Dec 2019 20:05:59 +0000
+Received: from mail-ot1-x343.google.com ([2607:f8b0:4864:20::343])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ifUbA-0004ta-Jm; Thu, 12 Dec 2019 19:58:09 +0000
-Received: by mail-ot1-x344.google.com with SMTP id i15so3246459oto.7;
- Thu, 12 Dec 2019 11:58:08 -0800 (PST)
+ id 1ifUia-0000DN-D8; Thu, 12 Dec 2019 20:05:50 +0000
+Received: by mail-ot1-x343.google.com with SMTP id h20so3288034otn.5;
+ Thu, 12 Dec 2019 12:05:46 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=googlemail.com; s=20161025;
  h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=DFLlahyHI5CWddupsVreSqNy/vA0cEJats5492jOSIs=;
- b=TD7g7jwnUfDkDTZXvxve3OJXxK3GHfe5bBkdC7pt5OmvM0NMo9LVvJUmtVK+yMpQgy
- vQgMoNCRNgIPGk6R5mhXxZWioE7nsHSI6ypVusSjEl7CjyUu3EgqXGSybzS7OkzpOsSb
- mcmhXX1vYjnkVSefiLRylfhtoyJ9Vy39jDMVZLuZYqVTpzRQWrobagHQbcOPc1HsXqqF
- y/kSNaw3ZaaGT3WDFKb/HmEQ8tHXojg9ICTqbAEDBP/HnjJ5Rbzd8E4ODkxLXWOHxQgZ
- kjs1aVUkYxcYB1+tQil4sFBJqJe4E+3ubKfq45Cxfg8dyMV0PoAWKl+Ix78PTZOq33op
- TL1w==
+ :cc; bh=437EO4ykMGZ70j4wdecX6upxaV7ChyHqB8vxhf7BSCU=;
+ b=E8Z+ULO8qgHol6Rsi27z38zqVd4Xbc69LcKOkoFJGjXc3bmNgWG2BjcxceM3WYQcaE
+ 0KTVJu9KLALvHSqBEHOFect79UpcXnATI2AEuL4PE3CGlT7M5TOp1+Tj7ARIChSG0soK
+ 52pRTSCXoU7TW26gajeHDZG5GZ515idA3tF6dPKasIPPd/PIrSj6++yhlQzy3OToSOZs
+ wkx9d66oFG7yGe3U/Hm4ibJywLk8HSryYKpEXlNm8d2ZWxcvNb3U4FvqZdH8k3L643vY
+ hn+LHgt1lFtDNUfQKxkep4qyRWKZXeg7bpRpK2fnx/I6QxfHB7IdgeCEIfGcYOSjBDJQ
+ Suag==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:mime-version:references:in-reply-to:from:date
  :message-id:subject:to:cc;
- bh=DFLlahyHI5CWddupsVreSqNy/vA0cEJats5492jOSIs=;
- b=MzMeY/SDViOW6Oq8ieA+501EG7LIBvWFUwhjJoZXUO7KrtouoMK9pxb0KjPwmQr2lZ
- uC8j//c6mv1677dUfjU5e/neF0PmbznmKe9djLKNRo7b2qKkuCbt+9ANCghu0OmQDebQ
- wxhMgWcQO7zPBGLLHMd/EhB03BgJ9W/BNtei2sLpiFmy2hpZm0GC5YJ++HgEopvJp0rm
- T6luFMY2RD+rgQym3J4x9q+yxH7qUZ30LbSgtb3kXX0pG4o1NczfXODA1y96KapeIDaw
- a9hXDRkvtSTRiWWRjAhuYwtZYRSrZUVP49RWoJPwdJnIHuFJ++Qk0ysTCfHoHWlLtAal
- lUjw==
-X-Gm-Message-State: APjAAAWRGIPQnu+sSUyGeinI2nwCx9HwrIooiDjoLDhVgY9xst1vaMhC
- cJ6bHWxL1DUwuH7vxaPMolq9qQfzrfpieG9z2po=
-X-Google-Smtp-Source: APXvYqzBv7wgx408g13iewCw+znrFEZiUL++7s01qX7XO3cSWn27p9E1tGYyz8Gwyf9GVrZPOlySmA8XV5OfmM/myAQ=
-X-Received: by 2002:a9d:6a4c:: with SMTP id h12mr10313165otn.81.1576180687595; 
- Thu, 12 Dec 2019 11:58:07 -0800 (PST)
+ bh=437EO4ykMGZ70j4wdecX6upxaV7ChyHqB8vxhf7BSCU=;
+ b=bN0jaXA82OLU2AO1e3/esbhdDcq1zP9Q+JBD29JW3KQ8zWoD3prYKpZZKtueyeaZYA
+ FhSRocZ2fRceCIw3VIVNiis/18C0gimUYMZO87OiSCFlk2ADzLZxpwz34Vc/60+FLmQN
+ JkXtFdj/nC/zoslMp1yG57ZgD291KH1WntzmQlw7jIALFFbp3QINYflnQoUtOw+7qIqr
+ xT5h23KMrI2MHFwzBbp5Q84cV7QpaQb0YuQsgpMn1wEOvuK9KG5S3zijHAJlkyG0rXGv
+ svKgBBhL3f306YRBYyjCrkBHBKlSK/ooeBuUG91xy8fogCEWb6Yba4P/wljRyKnbOuXj
+ wwxA==
+X-Gm-Message-State: APjAAAXimRyOzxGpKesOX14gWKxMKb1Z8iCu5H0j7ZuHbRxsETO6W3qD
+ iWy2dOGlF09OEN1WnYctlV+YF0a+6D9hhSnnMIFUjkpb
+X-Google-Smtp-Source: APXvYqzNrNV1NDqP8CepWCfv6Hd8n0AT4q6WjL/e97tNxNuu2sXH1BK40ukL5qB/y5FaxInRXC3FHM5D/HKulk5FNlo=
+X-Received: by 2002:a9d:7342:: with SMTP id l2mr10117519otk.98.1576181145181; 
+ Thu, 12 Dec 2019 12:05:45 -0800 (PST)
 MIME-Version: 1.0
-References: <20191212145925.32123-1-glaroque@baylibre.com>
- <20191212145925.32123-4-glaroque@baylibre.com>
-In-Reply-To: <20191212145925.32123-4-glaroque@baylibre.com>
+References: <1576153187-28378-1-git-send-email-xingyu.chen@amlogic.com>
+ <1576153187-28378-3-git-send-email-xingyu.chen@amlogic.com>
+In-Reply-To: <1576153187-28378-3-git-send-email-xingyu.chen@amlogic.com>
 From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-Date: Thu, 12 Dec 2019 20:57:56 +0100
-Message-ID: <CAFBinCDjfzQX=ZG=cgTYo=icGNU-t4Kqnu0Bu5qRLsRk_s6S_Q@mail.gmail.com>
-Subject: Re: [PATCH 3/3] media: platform: meson-ao-cec-g12a: add wakeup support
-To: Guillaume La Roque <glaroque@baylibre.com>
+Date: Thu, 12 Dec 2019 21:05:34 +0100
+Message-ID: <CAFBinCBHLqgPExPsVaSWdSOr0Oj-jeYa4Z82U-pJ=fS+D1wGnA@mail.gmail.com>
+Subject: Re: [PATCH v5 2/4] dt-bindings: watchdog: add new binding for meson
+ secure watchdog
+To: Xingyu Chen <xingyu.chen@amlogic.com>, Rob Herring <robh+dt@kernel.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191212_115808_649021_1950A888 
-X-CRM114-Status: UNSURE (   9.21  )
+X-CRM114-CacheID: sfid-20191212_120548_473612_0879C1CC 
+X-CRM114-Status: UNSURE (   8.36  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -69,7 +70,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:344 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:343 listed in]
  [list.dnswl.org]
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
  provider (martin.blumenstingl[at]googlemail.com)
@@ -93,53 +94,44 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, Neil Armstrong <narmstrong@baylibre.com>,
- khilman@baylibre.com, linux-kernel@vger.kernel.org, hverkuil-cisco@xs4all.nl,
- linux-amlogic@lists.infradead.org, mchehab@kernel.org,
- linux-arm-kernel@lists.infradead.org,
- linux-media <linux-media@vger.kernel.org>
+Cc: Qianggui Song <qianggui.song@amlogic.com>, devicetree@vger.kernel.org,
+ linux-watchdog@vger.kernel.org, Jianxin Pan <jianxin.pan@amlogic.com>,
+ Neil Armstrong <narmstrong@baylibre.com>, Kevin Hilman <khilman@baylibre.com>,
+ linux-kernel@vger.kernel.org, Jian Hu <jian.hu@amlogic.com>,
+ linux-arm-kernel@lists.infradead.org, linux-amlogic@lists.infradead.org,
+ Wim Van Sebroeck <wim@linux-watchdog.org>, Guenter Roeck <linux@roeck-us.net>,
+ Jerome Brunet <jbrunet@baylibre.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Hi Guillaume,
+Hi Xingyu and Rob,
 
-(I don't know the specifics of this hardware but I have two general
-comments below)
-
-On Thu, Dec 12, 2019 at 4:00 PM Guillaume La Roque
-<glaroque@baylibre.com> wrote:
-> +#define CECB_FUNC_CFG_REG              0xA0
-> +#define CECB_FUNC_CFG_MASK             GENMASK(6, 0)
-> +#define CECB_FUNC_CFG_CEC_ON           0x01
-> +#define CECB_FUNC_CFG_OTP_ON           0x02
-> +#define CECB_FUNC_CFG_AUTO_STANDBY     0x04
-> +#define CECB_FUNC_CFG_AUTO_POWER_ON    0x08
-> +#define CECB_FUNC_CFG_ALL              0x2f
-> +#define CECB_FUNC_CFG_NONE             0x0
-> +
-> +#define CECB_LOG_ADDR_REG      0xA4
-> +#define CECB_LOG_ADDR_MASK     GENMASK(22, 16)
-do these registers have some RTI_* prefix in the datasheet?
-that would make it easier to spot that these registers belong to AO /
-RTI (while all other registers belong to the CEC controller)
-
+On Thu, Dec 12, 2019 at 1:20 PM Xingyu Chen <xingyu.chen@amlogic.com> wrote:
 [...]
-> +       if (ao_cec->regmap_ao_sysctrl)
-> +               ret |= regmap_update_bits(ao_cec->regmap_ao_sysctrl,
-> +                                        CECB_LOG_ADDR_REG,
-> +                                         CECB_FUNC_CFG_MASK,
-why do we need to mask CECB_FUNC_CFG_MASK (from register 0xa0) in the
-CECB_LOG_ADDR_REG register (0xa4)?
+> +examples:
+> +  - |
+> +    watchdog {
+> +          compatible = "amlogic,meson-sec-wdt";
+> +          timeout-sec = <60>;
+> +    };
+in v3 of this patch Rob commented that there shouldn't be an OF node
+if there are no additional properties
+with timeout-sec there's now an additional property so my
+understanding is that it's fine to have an OF node
 
-> +                                         logical_addr << CECB_LOG_ADDR_SHIFT);
-FIELD_PREP(CECB_FUNC_CFG_MASK, logical_addr) would make it consistent
-with the rest of the driver
-then you can also drop the #define CECB_LOG_ADDR_SHIFT
+what I don't understand yet is where this node should be placed.
+is it supposed to be a child node of the secure monitor node (for
+which we already have a binding here:
+Documentation/devicetree/bindings/firmware/meson/meson_sm.txt) or
+where else would we place it inside the .dts?
 
 
 Martin
+
+
+[0] https://patchwork.kernel.org/patch/11211399/
 
 _______________________________________________
 linux-amlogic mailing list
