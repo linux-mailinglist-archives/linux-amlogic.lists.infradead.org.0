@@ -2,91 +2,89 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0B57E11D892
-	for <lists+linux-amlogic@lfdr.de>; Thu, 12 Dec 2019 22:30:48 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id EB64C11DA66
+	for <lists+linux-amlogic@lfdr.de>; Fri, 13 Dec 2019 01:07:22 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=SKMmZ5g8n6FCOezkBH5Oxom151I/0FelC5QlwBcSVls=; b=dbfB9ss8K46Rbg
-	uFNDmhrEc/S/J5P8fec8CPn/dzqo4S1vZ2+8/raoTc/oi9utA0AQz1nn0QB1KhaeZz6m+UczGV8O5
-	Nqyxsk4l0FYeb9jH7LctfiCsl9QQ2eRqtML23yo+5HDwok7kXjgdmoa/Wvknmb4fPVgJHMFDGZD2O
-	oM5a93dIJFS3YxdJch95PgVsiMNJ0eVan5uiqqOl5MPh/Kv/yr3zLH09Yng0oKdyjboKQYRgZpeui
-	e9FWCDL276ig9CXtVDfBgZvxcPeWu10poqvZ+crgBLifwYFPa1RT16MWfPIbQvo7yxD5H/JoyZwey
-	wmHJ3fvApIpyj2eVxg/A==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=B1kKjbfLWWIW9F/oXAeiI61hsxaVkIDmq6/+DjBMkKU=; b=kG4qaIYo/Cwb3q
+	ZCYYJeuesOZPTjOkk9qJ9EpLnZ8XbMJHXHedJ6ZBPI8PzlQCipCgaeLtrWtBojHdFCKYJRYt1tVJD
+	PhOYjj0fLh8hcafn8DTAvNgd7dcABSBztna5IHwUfxexNuw1jWPrTo4QF+NzmMjceGGHHidEC7d/D
+	MEMJxzH1uY64lGYNoYbbiN6wDiWy9dJLitb8dwt7kw5UDZe6G+0SlyrEiSN7t5BS+xpESaE1KijWS
+	9TOr/H1vkK8TaFAlYweNmaX7rgZTuwfBKu5DEjJ2KuTXrvm+HXpIWsM1juXAwb9w6DSElg99ZAoAR
+	mELQgTQRAQvkMy4jrOSA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ifW2n-0005bJ-NJ; Thu, 12 Dec 2019 21:30:45 +0000
-Received: from mail-wr1-x443.google.com ([2a00:1450:4864:20::443])
+	id 1ifYUJ-0003eN-3t; Fri, 13 Dec 2019 00:07:19 +0000
+Received: from mail-pf1-x441.google.com ([2607:f8b0:4864:20::441])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ifW2k-0005aO-1S
- for linux-amlogic@lists.infradead.org; Thu, 12 Dec 2019 21:30:44 +0000
-Received: by mail-wr1-x443.google.com with SMTP id c14so4344315wrn.7
- for <linux-amlogic@lists.infradead.org>; Thu, 12 Dec 2019 13:30:41 -0800 (PST)
+ id 1ifYUF-0003df-Tw
+ for linux-amlogic@lists.infradead.org; Fri, 13 Dec 2019 00:07:17 +0000
+Received: by mail-pf1-x441.google.com with SMTP id l127so398483pfl.1
+ for <linux-amlogic@lists.infradead.org>; Thu, 12 Dec 2019 16:07:15 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=subject:to:cc:references:from:message-id:date:user-agent
- :mime-version:in-reply-to:content-transfer-encoding:content-language;
- bh=Ar3WGUfhwEDSSCq+9U1VZWrSE5XYUNVdZnayKnIhqMo=;
- b=tohT6lXBhBc2QJ3oUJgFUSmQ7INkSx6FdEKCFGb0sJVtpqkXC+tujNgxj/fj2RPgvC
- /ojbALCKFzuioc5m2Oc5vymHLHGEc1677h4HuhZrW9jfDHZOVEJgtMRcb3dSSvjHnkvu
- cnn2i2s9LuMyaFISELlYzr70zXQ+oHotcglIWaf7KuMdUj0mikYSoHWHeQMZE0a4gs3E
- c8MHuf4nOcEzqckIyTI7p0PVThKQ0grDjWKV7smF3qVSELFnMMsW1jxkx9ZEbrlwcHMV
- GeV3IATLxC5H7dJ0BUR96f3PGXYDZ6dqb0OpaIxx7YWvLonmEEpd2alYGb1eqgcvn1CG
- As8g==
+ d=arista.com; s=googlenew;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=iu0ZHHpoa2S/s6q/AtXMlnqWAKo36xS0Mhh784bJZYw=;
+ b=QiGJQwcgFjSO13uljrEjqqU+gpfX3BearZe4cm0Fxz712OWJLfhV+4r3S4IUDdWe3q
+ jUzW78JOYK/SejZUC83GaY+As3EQc2QE6jEMaRVazPojdNRbpnNI1BDGsdQSBZUNTLIf
+ l42Fn7f++Ak+1t/Eso6neZ1309/jr9t/hERGHDFs3hJ4VPixZQ7WRmV7HwqQCtGGK8/M
+ ZKoNcqnpS08Pt/533IO03qs9PMh6saC3HiQpwVwJ8CEJ/8KH7x+2mU1loULtGwAV7VT1
+ 4+B9pU9gbNIVphVxkpEsZjw3pEtNKf160OHo1klwj3oEy7rWBaxYyHGHQoEMvkKrGnMy
+ piQA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:subject:to:cc:references:from:message-id:date
- :user-agent:mime-version:in-reply-to:content-transfer-encoding
- :content-language;
- bh=Ar3WGUfhwEDSSCq+9U1VZWrSE5XYUNVdZnayKnIhqMo=;
- b=Y5HU8CQ3GMNk/3YkIakQoZ9nJuEvHzKaZqHe4nKkzmktO/q8AIMeTj+trO2wlYC8WC
- HIg7PRy1/X0BPa6evBXqJakBqgWNDVyhp/F4P+PYtn5/LzdUYLV15JebuMlnnftFYBeT
- U2ZBeZEcN5mKIont4bI+L7asxF72pwWGREKq41VZOjRwU6F0Wi2BgPGN7uVWubig5kRf
- B4yyNmKvIdr8MqgX0hafKGUgR203WiB22WNTbaLpgKWkO2BbC3DCCFbdHteWBBNeylFY
- soccgfUOuUbSIL5LIYZ9tjYgj2yC8ppd+Lphk6dGn292jusG8beX7mYvCkTKfp2qde5p
- GVIQ==
-X-Gm-Message-State: APjAAAUXfDSfjkAPOJYo2Se+RkNo/hXf1diXIEPiKXPulLhXwFONDG4/
- 0mG31Iq1b4/YHEV6yqwLOZv5aw==
-X-Google-Smtp-Source: APXvYqxdK6wPYL6bpRlBDpDABeuKHmVhx787FfsFi1e5hzInLniJKOGj9A9UNuqksGO6GoeLEepgOA==
-X-Received: by 2002:adf:e3c1:: with SMTP id k1mr8247798wrm.151.1576186240242; 
- Thu, 12 Dec 2019 13:30:40 -0800 (PST)
-Received: from ?IPv6:2a01:cb1d:6e7:d500:82a9:347a:43f3:d2ca?
- ([2a01:cb1d:6e7:d500:82a9:347a:43f3:d2ca])
- by smtp.gmail.com with ESMTPSA id n8sm7605285wrx.42.2019.12.12.13.30.39
- (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Thu, 12 Dec 2019 13:30:39 -0800 (PST)
-Subject: Re: [PATCH 3/3] media: platform: meson-ao-cec-g12a: add wakeup support
-To: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-References: <20191212145925.32123-1-glaroque@baylibre.com>
- <20191212145925.32123-4-glaroque@baylibre.com>
- <CAFBinCDjfzQX=ZG=cgTYo=icGNU-t4Kqnu0Bu5qRLsRk_s6S_Q@mail.gmail.com>
-From: guillaume La Roque <glaroque@baylibre.com>
-Message-ID: <b923c0f0-3627-121a-fa4f-49bd0c40825b@baylibre.com>
-Date: Thu, 12 Dec 2019 22:30:38 +0100
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101
- Thunderbird/68.2.1
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=iu0ZHHpoa2S/s6q/AtXMlnqWAKo36xS0Mhh784bJZYw=;
+ b=rUS+aPssO1q8RKRKfzoD+3B/KLToreEgB87Y4ZOxDRenocGoVyUtH/ui03/+UqUyzy
+ hzNCfI5aYEH4XyYrlhFPxQ+CYtSWgJOuiro6teiQzMENQMvDkuNmThf6/xtxcLVqnY35
+ 4/LQDjfcsY32fHMX7xQrnAmjMo2i5LRHVSOqT6TwN9+4mGaLZDa4gdvLD+cH94/hHnkA
+ eP9ZU/0ZeW1XhFZfb/MXUP4Ki75k4c6vRFLKYEZGJgRPkVaKHtdcfZ1oUm3eAvV5rUrd
+ mO7E+EfDQjxqR33jZciwct7d3gKGzenGuWtadKgSL3cMiTC0thLFKi10O0BHetBKMkGp
+ AzEQ==
+X-Gm-Message-State: APjAAAVSEsUVnv/Qyc7t0cM+D7PcpfyTqFtIThWjZ7B0tlKwIL76nWFw
+ mjziZWy6Kh5eUixbsMz4BohtWQ==
+X-Google-Smtp-Source: APXvYqzCsSFyDW1VNoPiCFbPpjDPM2JXmKeMPce+jSVN1BtS0JF+BuC7yZV1+AcEYKFQ0q0Fv4jYJA==
+X-Received: by 2002:a62:e50d:: with SMTP id n13mr5086768pff.201.1576195634578; 
+ Thu, 12 Dec 2019 16:07:14 -0800 (PST)
+Received: from Mindolluin.ire.aristanetworks.com ([217.173.96.166])
+ by smtp.gmail.com with ESMTPSA id j38sm8317647pgj.27.2019.12.12.16.07.05
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Thu, 12 Dec 2019 16:07:13 -0800 (PST)
+From: Dmitry Safonov <dima@arista.com>
+To: linux-kernel@vger.kernel.org
+Subject: [PATCH 00/58] serial/sysrq: Cleanup ifdeffery
+Date: Fri, 13 Dec 2019 00:05:59 +0000
+Message-Id: <20191213000657.931618-1-dima@arista.com>
+X-Mailer: git-send-email 2.24.0
 MIME-Version: 1.0
-In-Reply-To: <CAFBinCDjfzQX=ZG=cgTYo=icGNU-t4Kqnu0Bu5qRLsRk_s6S_Q@mail.gmail.com>
-Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191212_133042_224803_0BEB31AF 
-X-CRM114-Status: GOOD (  14.44  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20191212_160715_977618_EDDA2B71 
+X-CRM114-Status: UNSURE (   9.44  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:443 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:441 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -98,65 +96,183 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, Neil Armstrong <narmstrong@baylibre.com>,
- khilman@baylibre.com, linux-kernel@vger.kernel.org, hverkuil-cisco@xs4all.nl,
- linux-amlogic@lists.infradead.org, mchehab@kernel.org,
- linux-arm-kernel@lists.infradead.org,
- linux-media <linux-media@vger.kernel.org>
+Cc: Alexandre Belloni <alexandre.belloni@bootlin.com>,
+ linux-aspeed@lists.ozlabs.org,
+ Benjamin Herrenschmidt <benh@kernel.crashing.org>,
+ Dmitry Safonov <0x7f454c46@gmail.com>,
+ Bjorn Andersson <bjorn.andersson@linaro.org>,
+ Paul Mackerras <paulus@samba.org>, "Maciej W. Rozycki" <macro@linux-mips.org>,
+ sparclinux@vger.kernel.org, Shawn Guo <shawnguo@kernel.org>,
+ Fabio Estevam <festevam@gmail.com>, linux-stm32@st-md-mailman.stormreply.com,
+ Kees Cook <keescook@chromium.org>, Vasiliy Khoruzhick <vasilykh@arista.com>,
+ Alexander Shiyan <shc_work@mail.ru>, Dmitry Safonov <dima@arista.com>,
+ Michael Ellerman <mpe@ellerman.id.au>, Russell King <linux@armlinux.org.uk>,
+ Ludovic Desroches <ludovic.desroches@microchip.com>,
+ Andy Gross <agross@kernel.org>, bcm-kernel-feedback-list@broadcom.com,
+ Joel Stanley <joel@jms.id.au>, linux-serial@vger.kernel.org,
+ Jiri Slaby <jslaby@suse.com>, Orson Zhai <orsonzhai@gmail.com>,
+ Iurii Zaikin <yzaikin@google.com>, Kevin Hilman <khilman@baylibre.com>,
+ NXP Linux Team <linux-imx@nxp.com>, Michal Simek <michal.simek@xilinx.com>,
+ Alexandre Torgue <alexandre.torgue@st.com>, linux-arm-msm@vger.kernel.org,
+ Sascha Hauer <s.hauer@pengutronix.de>,
+ =?UTF-8?q?Uwe=20Kleine-K=C3=B6nig?= <u.kleine-koenig@pengutronix.de>,
+ Johan Hovold <johan@kernel.org>, linux-fsdevel@vger.kernel.org,
+ Florian Fainelli <f.fainelli@gmail.com>, Chunyan Zhang <zhang.lyra@gmail.com>,
+ linux-amlogic@lists.infradead.org, linux-arm-kernel@lists.infradead.org,
+ Maxime Coquelin <mcoquelin.stm32@gmail.com>, Timur Tabi <timur@kernel.org>,
+ Andrew Jeffery <andrew@aj.id.au>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ Patrice Chotard <patrice.chotard@st.com>, Tony Prisk <linux@prisktech.co.nz>,
+ Richard Genoud <richard.genoud@gmail.com>,
+ Luis Chamberlain <mcgrof@kernel.org>,
+ Pengutronix Kernel Team <kernel@pengutronix.de>,
+ Vineet Gupta <vgupta@synopsys.com>, Baolin Wang <baolin.wang7@gmail.com>,
+ linuxppc-dev@lists.ozlabs.org, "David S. Miller" <davem@davemloft.net>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Hi Martin,
+The original purpose of the patches set was to add a way to enable
+sysrq on a uart where currently it can be constantly either on or off
+(CONFIG_MAGIC_SYSRQ_SERIAL), see the last patch:
+  "serial/sysrq: Add MAGIC_SYSRQ_SERIAL_SEQUENCE"
 
+But to do that, I had to add uart_try_toggle_sysrq() and I didn't want
+to bloat serial_core.h even more. So, I did cleanup by removing
+SUPPORT_SYSRQ resulting in a nice diff-stat and lesser ifdeffery.
 
-thanks for review
+Most patches are one-liners, I decided to keep them separated per-driver
+to let reviewers easier follow the purpose.
 
-On 12/12/19 8:57 PM, Martin Blumenstingl wrote:
-> Hi Guillaume,
->
-> (I don't know the specifics of this hardware but I have two general
-> comments below)
->
-> On Thu, Dec 12, 2019 at 4:00 PM Guillaume La Roque
-> <glaroque@baylibre.com> wrote:
->> +#define CECB_FUNC_CFG_REG              0xA0
->> +#define CECB_FUNC_CFG_MASK             GENMASK(6, 0)
->> +#define CECB_FUNC_CFG_CEC_ON           0x01
->> +#define CECB_FUNC_CFG_OTP_ON           0x02
->> +#define CECB_FUNC_CFG_AUTO_STANDBY     0x04
->> +#define CECB_FUNC_CFG_AUTO_POWER_ON    0x08
->> +#define CECB_FUNC_CFG_ALL              0x2f
->> +#define CECB_FUNC_CFG_NONE             0x0
->> +
->> +#define CECB_LOG_ADDR_REG      0xA4
->> +#define CECB_LOG_ADDR_MASK     GENMASK(22, 16)
-> do these registers have some RTI_* prefix in the datasheet?
-> that would make it easier to spot that these registers belong to AO /
-> RTI (while all other registers belong to the CEC controller)
+Cc: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+Cc: Jiri Slaby <jslaby@suse.com>
+Cc: Vasiliy Khoruzhick <vasilykh@arista.com>
+Cc: linux-serial@vger.kernel.org
 
-as i say register info come from amlogic BSP.
+Dmitry Safonov (58):
+  sysrq: Remove sysrq_handler_registered
+  serial: Move sysrq members above
+  serial_core: Un-ifdef sysrq SUPPORT_SYSRQ
+  tty/serial: Migrate aspeed_vuart to use has_sysrq
+  tty/serial: Migrate 8250_fsl to use has_sysrq
+  tty/serial: Migrate bcm63xx_uart to use has_sysrq
+  tty/serial: Migrate 8250_omap to use has_sysrq
+  tty/serial: Migrate 8250_port to use has_sysrq
+  tty/serial: Migrate amba-pl01* to use has_sysrq
+  tty/serial: Migrate apbuart to use has_sysrq
+  tty/serial: Migrate arc_uart to use has_sysrq
+  tty/serial: Migrate atmel_serial to use has_sysrq
+  tty/serial: Migrate clps711x to use has_sysrq
+  tty/serial: Migrate cpm_uart to use has_sysrq
+  tty/serial: Migrate dz to use has_sysrq
+  tty/serial: Migrate efm32-uart to use has_sysrq
+  tty/serial: Migrate fsl_linflexuart to use has_sysrq
+  tty/serial: Migrate fsl_lpuart to use has_sysrq
+  tty/serial: Migrate imx to use has_sysrq
+  tty/serial: Migrate ip22zilog to use has_sysrq
+  tty/serial: Migrate meson_uart to use has_sysrq
+  tty/serial: Migrate milbeaut_usio to use has_sysrq
+  tty/serial: Migrate mpc52xx_uart to use has_sysrq
+  tty/serial: Don't zero port->sysrq
+  tty/serial: Migrate msm_serial to use has_sysrq
+  tty/serial: Migrate mux to use has_sysrq
+  tty/serial: Migrate mxs-auart to use has_sysrq
+  tty/serial: Migrate omap-serial to use has_sysrq
+  tty/serial: Migrate pch_uart to use has_sysrq
+  tty/serial: Don't check port->sysrq
+  tty/serial: Migrate pmac_zilog to use has_sysrq
+  tty/serial: Migrate pnx8xxx_uart to use has_sysrq
+  serial/f81534: Don't check port->sysrq
+  tty/serial: Migrate pxa to use has_sysrq
+  tty/serial: Migrate qcom_geni_serial to use has_sysrq
+  tty/serial: Migrate sa1100 to use has_sysrq
+  tty/serial: Migrate samsung_tty to use has_sysrq
+  tty/serial: Migrate sb1250-duart to use has_sysrq
+  tty/serial: Migrate sccnxp to use has_sysrq
+  tty/serial: Migrate serial_txx9 to use has_sysrq
+  tty/serial: Migrate sh-sci to use has_sysrq
+  tty/serial: Migrate sprd_serial to use has_sysrq
+  tty/serial: Migrate st-asc to use has_sysrq
+  tty/serial: Migrate stm32-usart to use has_sysrq
+  tty/serial: Migrate sunhv to use has_sysrq
+  tty/serial: Migrate sunsab to use has_sysrq
+  tty/serial: Migrate sunsu to use has_sysrq
+  tty/serial: Migrate sunzilog to use has_sysrq
+  serial/ucc_uart: Remove ifdef SUPPORT_SYSRQ
+  tty/serial: Migrate vr41xx_siu to use has_sysrq
+  tty/serial: Migrate vt8500_serial to use has_sysrq
+  tty/serial: Migrate xilinx_uartps to use has_sysrq
+  tty/serial: Migrate zs to use has_sysrq
+  serial_core: Remove SUPPORT_SYSRQ ifdeffery
+  usb/serial: Don't handle break when CONFIG_MAGIC_SYSRQ is disabled
+  serial_core: Move sysrq functions from header file
+  sysctl/sysrq: Remove __sysrq_enabled copy
+  serial/sysrq: Add MAGIC_SYSRQ_SERIAL_SEQUENCE
 
-nothing in datasheet unfortunately. in amlogic code , this register are called AO_DEBUG_REG0 and AO_DEBUG_REG1 in amlogic BSP...
+ arch/powerpc/kernel/legacy_serial.c         |   4 +-
+ drivers/tty/serial/8250/8250_aspeed_vuart.c |   5 +-
+ drivers/tty/serial/8250/8250_fsl.c          |   4 -
+ drivers/tty/serial/8250/8250_of.c           |   4 +-
+ drivers/tty/serial/8250/8250_omap.c         |   5 +-
+ drivers/tty/serial/8250/8250_port.c         |   5 +-
+ drivers/tty/serial/amba-pl010.c             |   5 +-
+ drivers/tty/serial/amba-pl011.c             |   6 +-
+ drivers/tty/serial/apbuart.c                |   5 +-
+ drivers/tty/serial/arc_uart.c               |   5 +-
+ drivers/tty/serial/atmel_serial.c           |   9 +-
+ drivers/tty/serial/bcm63xx_uart.c           |   5 +-
+ drivers/tty/serial/clps711x.c               |   5 +-
+ drivers/tty/serial/cpm_uart/cpm_uart_core.c |   9 +-
+ drivers/tty/serial/dz.c                     |   5 +-
+ drivers/tty/serial/efm32-uart.c             |   5 +-
+ drivers/tty/serial/fsl_linflexuart.c        |   8 +-
+ drivers/tty/serial/fsl_lpuart.c             |   9 +-
+ drivers/tty/serial/imx.c                    |   7 +-
+ drivers/tty/serial/ip22zilog.c              |   7 +-
+ drivers/tty/serial/meson_uart.c             |   5 +-
+ drivers/tty/serial/milbeaut_usio.c          |   5 +-
+ drivers/tty/serial/mpc52xx_uart.c           |  11 +-
+ drivers/tty/serial/msm_serial.c             |   5 +-
+ drivers/tty/serial/mux.c                    |   5 +-
+ drivers/tty/serial/mxs-auart.c              |   5 +-
+ drivers/tty/serial/omap-serial.c            |   5 +-
+ drivers/tty/serial/pch_uart.c               |  12 +-
+ drivers/tty/serial/pmac_zilog.c             |   5 +-
+ drivers/tty/serial/pnx8xxx_uart.c           |   7 +-
+ drivers/tty/serial/pxa.c                    |   5 +-
+ drivers/tty/serial/qcom_geni_serial.c       |   5 +-
+ drivers/tty/serial/sa1100.c                 |   7 +-
+ drivers/tty/serial/samsung_tty.c            |   5 +-
+ drivers/tty/serial/sb1250-duart.c           |   5 +-
+ drivers/tty/serial/sccnxp.c                 |   5 +-
+ drivers/tty/serial/serial_core.c            | 123 ++++++++++++++++++++
+ drivers/tty/serial/serial_txx9.c            |   5 +-
+ drivers/tty/serial/sh-sci.c                 |  10 +-
+ drivers/tty/serial/sprd_serial.c            |   5 +-
+ drivers/tty/serial/st-asc.c                 |   5 +-
+ drivers/tty/serial/stm32-usart.c            |   5 +-
+ drivers/tty/serial/sunhv.c                  |   5 +-
+ drivers/tty/serial/sunsab.c                 |   5 +-
+ drivers/tty/serial/sunsu.c                  |   5 +-
+ drivers/tty/serial/sunzilog.c               |   6 +-
+ drivers/tty/serial/ucc_uart.c               |   2 -
+ drivers/tty/serial/vr41xx_siu.c             |   5 +-
+ drivers/tty/serial/vt8500_serial.c          |   5 +-
+ drivers/tty/serial/xilinx_uartps.c          |   5 +-
+ drivers/tty/serial/zs.c                     |   5 +-
+ drivers/tty/sysrq.c                         |  16 +--
+ drivers/usb/serial/f81534.c                 |   6 +-
+ drivers/usb/serial/generic.c                |  10 +-
+ include/linux/serial_core.h                 |  92 ++-------------
+ include/linux/sysrq.h                       |   1 +
+ kernel/sysctl.c                             |  41 ++++---
+ lib/Kconfig.debug                           |   8 ++
+ 58 files changed, 238 insertions(+), 346 deletions(-)
 
->
-> [...]
->> +       if (ao_cec->regmap_ao_sysctrl)
->> +               ret |= regmap_update_bits(ao_cec->regmap_ao_sysctrl,
->> +                                        CECB_LOG_ADDR_REG,
->> +                                         CECB_FUNC_CFG_MASK,
-> why do we need to mask CECB_FUNC_CFG_MASK (from register 0xa0) in the
-> CECB_LOG_ADDR_REG register (0xa4)?
-good point, it's an error i will fix
->
->> +                                         logical_addr << CECB_LOG_ADDR_SHIFT);
-> FIELD_PREP(CECB_FUNC_CFG_MASK, logical_addr) would make it consistent
-> with the rest of the driver
-> then you can also drop the #define CECB_LOG_ADDR_SHIFT
-i will
->
-> Martin
+-- 
+2.24.0
+
 
 _______________________________________________
 linux-amlogic mailing list
