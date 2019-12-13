@@ -2,85 +2,71 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4F4F511E2C6
-	for <lists+linux-amlogic@lfdr.de>; Fri, 13 Dec 2019 12:28:44 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 66F9811E472
+	for <lists+linux-amlogic@lfdr.de>; Fri, 13 Dec 2019 14:21:48 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Content-Type:To:
-	Subject:Message-ID:Date:From:In-Reply-To:References:MIME-Version:Reply-To:
-	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=AVJW6CNZeJC4p7xjfrMb25nRCy9I5WbD9fngdBeAwIE=; b=fUs1doZQiK5We8uvxCITKMcCV
-	bKQ5KOF3QOHpB8kup9GeX7AChq/kQzRfrvg4NinUUKVlOMSICvCUny9MX5YLEBwU6TbMb8vtded/p
-	2+OIeAlZQWE7oVfZuvDt/kJ5M1CKBk33knCvNGYh77kZDF+j5bNth+KoNFF5Pt/44LBxAmjZUTk4w
-	zOERKsLTwq4GzCG8LXS32uEI6yf+nX4DlbtXnP3e5iBYTLVyKNxkZDAyGMKRcDNfP6ers8prW0JW4
-	vXxx2shlAb/YpKnVJt2k4KqhKhPpStz2V9aHdRaOlGCyqMrvfCILTaq48Uwlqd8Dkst/vHBasDOBj
-	NTTz0z8ZQ==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
+	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=DDuaQsSnisSQ+ivPhdtMr0STtK2nKCFNNWeMnlxdZIk=; b=KQJ8t1vHXsz40i
+	VDvglJb9f5I9Kv2lYtmPGCgypeH4YlKqBYzjA4TSB4lqt/ZM12ZhUOiFKn5usW98pDm+dSue+/AaN
+	8Q+pJxiT/RP8MkedYP/jO/CpumyxnwdgUOQ1+kCG/vX5yR92kbfVbBpnHBm5irl2T44sCeQ4Wkx5a
+	NfXI+2xyBxcG5Khnef6XLOuDdAQd7ljwPuThQDm1yQ/OMn+xJWkCtVz6TgCuz9vwt6SBc9OYwH5T/
+	hqUZvR05jbdpi+O0R1Dgv1L/ATyP0EYB4VbHCyWyarQRWS/iXv8zwQugewKdsnGN/N/E0uJn7tUhL
+	Q0cjq5pcDfyd6Qm3XxwA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ifj7i-0005bM-6v; Fri, 13 Dec 2019 11:28:42 +0000
-Received: from mail-il1-x141.google.com ([2607:f8b0:4864:20::141])
+	id 1ifkt5-00043r-NY; Fri, 13 Dec 2019 13:21:43 +0000
+Received: from lb3-smtp-cloud9.xs4all.net ([194.109.24.30])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ifj7U-0005GY-37; Fri, 13 Dec 2019 11:28:30 +0000
-Received: by mail-il1-x141.google.com with SMTP id n1so1787007ilm.6;
- Fri, 13 Dec 2019 03:28:27 -0800 (PST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=SApHZXxkyc33oQaGK6ky4W1VLNyP7mSMuSzcqHJ/PMo=;
- b=HhDJni7Z8Yno+RYPsfonnh9u7UmeNE60s3l8GDJ5FsG12OyvWMXhrinljTrHbKD4+5
- 2xIpEk4Q7aekunme4PXh2CTzJbYFHwJzPzJh13yXzDlZud3PxhDGfbmyel4AAMP50yWg
- HwNS9GiuiS9hnITqC41XdouC/rSjpT/LD2iRHgubIHsbTaxIAJHG7OQKE3zqCw2E+KGs
- ohASwrdD4mWl+9NEypLgSLJCBkyTXr6e9IBxJlxiPTvBVHBS86ps752U9g+ESSuOeUIV
- zdXXirsH0aCVba3F/hRWGAx831heB78XEk+MMfBwXApnBgmLefFw5I1mIiRan+GyhwR1
- +txg==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=SApHZXxkyc33oQaGK6ky4W1VLNyP7mSMuSzcqHJ/PMo=;
- b=r2OWDtwsz/2duQVqoiX4ZbMM1Y4nHtSnkby0Sq+QWHGHw8LDiFmyaLhHis6mO2wCgz
- 7kGI/ZT77x6QHSBX4BjoEmzQx4cxVmHa1WewEGDpyiuq8sp+PQqV90luMa7p08X7Yc2s
- Rgxf4eHb9MZ7iiCAZBM3j2LKz1hh+OwR4Zv14BF0dAZ4zAba/nR4lwGI8ANgqXce9J/4
- pWMtdZrfoWmTGY85a2L2nJWsVJbxIJvfZA8FmxiS6ELNnOwIrfKmqLpZUN4qACXwavne
- QUdu3OCo2GlOWMPnR+TvvaKrPG8ZcYVKO463Rue6Gzkl6m6CIwTfonTBrdGELo4HWCiJ
- ogRQ==
-X-Gm-Message-State: APjAAAVu/9A4OZdKzAqBIhbW/cWMXps77JQVgYb6TxfpqK6251MLnqRP
- P5dFpk51FwfPF11/VQBO5BfbMiAcUFrgZvjxfdk=
-X-Google-Smtp-Source: APXvYqwg0FT6i21iRj8cES5CzIZe+O41zVwBf4zrhT9VlubUT5C87Ye5zvW1/OTnwkaaVp0JwGsy31bWMWtRA/EdKSQ=
-X-Received: by 2002:a92:49d1:: with SMTP id k78mr13607183ilg.6.1576236506638; 
- Fri, 13 Dec 2019 03:28:26 -0800 (PST)
+ id 1ifksz-00041a-6C; Fri, 13 Dec 2019 13:21:41 +0000
+Received: from [IPv6:2001:983:e9a7:1:c93c:45bd:1710:e478]
+ ([IPv6:2001:983:e9a7:1:c93c:45bd:1710:e478])
+ by smtp-cloud9.xs4all.net with ESMTPA
+ id fksoihjoeGyJwfkspi1ER9; Fri, 13 Dec 2019 14:21:29 +0100
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=xs4all.nl; s=s1;
+ t=1576243289; bh=7EgWnmlezgqj/BVCt+K0pvVbA4FXbio5mhVaiZ5dfQs=;
+ h=Subject:To:From:Message-ID:Date:MIME-Version:Content-Type:From:
+ Subject;
+ b=AdH5iv0YH+McIOrsn1DAaopGdWufZ29ioADupUDcGxWk1oLktScwdR5k9bi0JYjtg
+ OEJK6H7Fs4R+OjlFrPBN4D0PRNP5Wlu8iyhe2rW2cTOe9a5r07vHBWpV+1CiGFxEit
+ FDmKC4Ad2ub/oF4hqHsgOFOlZVxT1VPQmEfUvBA6OpYc84sg2ABsUu5DDgjqrLAGqi
+ 9P++BEXVdoVvRdzUPw/lz2ko24IEbZDeawl3d5bm1HVwMbvP/QFwC/h3KjwxcDEXKd
+ dGTRPc7vl+n5+2qN5eSI/APzP226yXtfpxo8ojhRe2fG1eTM4qjmXWj6nUZtNOy5S3
+ GnxofjNCHZf+w==
+Subject: Re: [PATCH v3 2/4] media: vicodec: use v4l2-mem2mem draining, stopped
+ and next-buf-is-last states handling
+To: Neil Armstrong <narmstrong@baylibre.com>, mchehab@kernel.org,
+ hans.verkuil@cisco.com
+References: <20191209122028.13714-1-narmstrong@baylibre.com>
+ <20191209122028.13714-3-narmstrong@baylibre.com>
+From: Hans Verkuil <hverkuil@xs4all.nl>
+Message-ID: <0eb52de8-97a9-40cf-a926-262b1ecdc3e9@xs4all.nl>
+Date: Fri, 13 Dec 2019 14:21:26 +0100
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.9.0
 MIME-Version: 1.0
-References: <20191101143126.2549-1-linux.amoon@gmail.com>
- <7hfthtrvvv.fsf@baylibre.com>
- <c89791de-0a46-3ce2-b3e2-3640c364cd0f@baylibre.com>
- <CANAwSgQx3LjQe60TGgKyk6B5BD5y1caS2tA+O+GFES7=qCFeKg@mail.gmail.com>
- <7hfthsqcap.fsf@baylibre.com>
- <CAFBinCBfgxXhPKpBLdoq9AimrpaneYFgzgJoDyC-2xhbHmihpA@mail.gmail.com>
- <7hpngvontu.fsf@baylibre.com>
- <4e1339b4-c751-3edc-3a2e-36931ad1c503@baylibre.com>
- <CAFBinCCgKcwXSLxS_CRvz9JZvQo8PcUGm=egBbabVZSrkSc30Q@mail.gmail.com>
-In-Reply-To: <CAFBinCCgKcwXSLxS_CRvz9JZvQo8PcUGm=egBbabVZSrkSc30Q@mail.gmail.com>
-From: Anand Moon <linux.amoon@gmail.com>
-Date: Fri, 13 Dec 2019 16:58:13 +0530
-Message-ID: <CANAwSgSFR3kftWLPqyoYfyxdQ5dcp2W7NgRCaFNkMj-xEDY1Kw@mail.gmail.com>
-Subject: Re: [RFC-next 0/1] Odroid C2: Enable DVFS for cpu
-To: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-Content-Type: multipart/mixed; boundary="0000000000000fd7b0059994291b"
+In-Reply-To: <20191209122028.13714-3-narmstrong@baylibre.com>
+Content-Language: en-US
+X-CMAE-Envelope: MS4wfCTmMw6UMTjLOJUPkCDlqks83iiillHmwdMzsgRBSoe9Hv36xB2m2JCtI2vE2e4HNUGyqznMLbJoF3O9tW1gv12rxYmLfCQHCIdKdX/s71xthDM0vOuU
+ HptJYccltFJSVGvxkzTfO99gMJZGZHBu5Vaz88vywlnqQyIHp7vUCxeCldEda8taB9ZWImjzwda5M8IGmaVSwhVj/RtSopo8exf74kxYjqitarmaTOAGUEXy
+ vrzJ4cE+GJJJMmriatdi6aScio5XLtqjkI02MJ3d+f/ClZOULw85BjGx+ORfwXifQSucKlUlhu/xQzwlpjCEAGZXUUFdP4dUcUqtZXKVCsKq6dC7S9BG2fib
+ U2B6nyFsPBXuSCSUEXYE6U+PLxXEOBxttOov6+KYCDYkbns0RFk6rnSCz50+rb1qFMCepkIn8mY+WPW+tp+kCXYaMTbI7Wndg8mxwSJ5BgIxf+ZL3TiWviKE
+ mphrMYzQ/VJUOTuejb9Z9e5J+hETayO1cXafObf1FnWicRf6w1sQNFZY5t2uDbKz4tzh1UjYQ+YeTUf1
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191213_032828_169137_A3A40562 
-X-CRM114-Status: GOOD (  25.12  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20191213_052139_093348_C47AFE4B 
+X-CRM114-Status: GOOD (  10.15  )
+X-Spam-Score: -0.9 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-0.9 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:141 listed in]
- [list.dnswl.org]
+ -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
+ low trust [194.109.24.30 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (linux.amoon[at]gmail.com)
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
@@ -99,254 +85,92 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree <devicetree@vger.kernel.org>,
- Neil Armstrong <narmstrong@baylibre.com>, Kevin Hilman <khilman@baylibre.com>,
- Linux Kernel <linux-kernel@vger.kernel.org>, Rob Herring <robh+dt@kernel.org>,
- linux-amlogic@lists.infradead.org,
- linux-arm-kernel <linux-arm-kernel@lists.infradead.org>,
- Jerome Brunet <jbrunet@baylibre.com>
+Cc: Maxime Jourdan <mjourdan@baylibre.com>, linux-amlogic@lists.infradead.org,
+ linux-kernel@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
+ linux-media@vger.kernel.org
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
---0000000000000fd7b0059994291b
-Content-Type: text/plain; charset="UTF-8"
+On 12/9/19 1:20 PM, Neil Armstrong wrote:
+> Use the previously introduced v4l2-mem2mem core APIs to handle the drainig,
+> stopped and next-buf-is-last states.
+> 
+> With these changes, the v4l2-compliance still passes with the following
+> commands :
+> # v4l2-ctl --stream-mmap --stream-out-mmap --stream-to-hdr out.comp --stream-from in.yuv
+>>>>> <><><><><><><><><><><><><><><><>< 15.53 fps
+>  15.53 fps
+>> <><><><><><><><><><><><>< 13.99 fps
+>  13.99 fps
+>> <><><><><><><><><><><>< 13.52 fps
+>  13.52 fps
+>> <><><><><><><><><><><><>< 13.41 fps
+>  13.41 fps
+>> <><><><><><><><><><><><>< 13.21 fps
+>  13.21 fps
+>> <><><><><><><><><><><>< 13.09 fps
+>  13.09 fps
+>> <><><><><><><
+> STOP ENCODER
+> <<<
+> EOS EVENT
+> 
+> # v4l2-compliance --stream-from in.yuv -s
+> v4l2-compliance SHA: 7ead0e1856b89f2e19369af452bb03fd0cd16793, 64 bits
+> [...]
+> Total for vicodec device /dev/video0: 50, Succeeded: 50, Failed: 0, Warnings: 0
+> 
+> The full output is available at [1]
+> 
+> # v4l2-compliance -d1 --stream-from-hdr out.comp -s
+> v4l2-compliance SHA: 7ead0e1856b89f2e19369af452bb03fd0cd16793, 64 bits
+> [...]
+> Total for vicodec device /dev/video1: 50, Succeeded: 50, Failed: 0, Warnings: 0
+> 
+> The full output is available at [2]
+> 
+> No functional changes should be noticed.
 
-Hi Martin
+Ah, unfortunately there *are* functional changes.
 
-On Fri, 13 Dec 2019 at 01:40, Martin Blumenstingl
-<martin.blumenstingl@googlemail.com> wrote:
->
-> Hi Neil,
->
-> On Wed, Dec 11, 2019 at 9:49 AM Neil Armstrong <narmstrong@baylibre.com> wrote:
-> >
-> > On 10/12/2019 22:47, Kevin Hilman wrote:
-> > > Martin Blumenstingl <martin.blumenstingl@googlemail.com> writes:
-> > >
-> > >> On Tue, Dec 10, 2019 at 7:13 PM Kevin Hilman <khilman@baylibre.com> wrote:
-> > >>>
-> > >>> Anand Moon <linux.amoon@gmail.com> writes:
-> > >>>
-> > >>>> Hi Neil / Kevin,
-> > >>>>
-> > >>>> On Tue, 10 Dec 2019 at 14:13, Neil Armstrong <narmstrong@baylibre.com> wrote:
-> > >>>>>
-> > >>>>> On 09/12/2019 23:12, Kevin Hilman wrote:
-> > >>>>>> Anand Moon <linux.amoon@gmail.com> writes:
-> > >>>>>>
-> > >>>>>>> Some how this patch got lost, so resend this again.
-> > >>>>>>>
-> > >>>>>>> [0] https://patchwork.kernel.org/patch/11136545/
-> > >>>>>>>
-> > >>>>>>> This patch enable DVFS on GXBB Odroid C2.
-> > >>>>>>>
-> > >>>>>>> DVFS has been tested by running the arm64 cpuburn
-> > >>>>>>> [1] https://github.com/ssvb/cpuburn-arm/blob/master/cpuburn-a53.S
-> > >>>>>>> PM-QA testing
-> > >>>>>>> [2] https://git.linaro.org/power/pm-qa.git [cpufreq testcase]
-> > >>>>>>>
-> > >>>>>>> Tested on latest U-Boot 2019.07-1 (Aug 01 2019 - 23:58:01 +0000) Arch Linux ARM
-> > >>>>>>
-> > >>>>>> Have you tested with the Harkernel u-boot?
-> > >>>>>>
-> > >>>>>> Last I remember, enabling CPUfreq will cause system hangs with the
-> > >>>>>> Hardkernel u-boot because of improperly enabled frequencies, so I'm not
-> > >>>>>> terribly inclined to merge this patch.
-> > >>>>
-> > >>>> HK u-boot have many issue with loading the kernel, with load address
-> > >>>> *it's really hard to build the kernel for HK u-boot*,
-> > >>>> to get the configuration correctly.
-> > >>>>
-> > >>>> Well I have tested with mainline u-boot with latest ATF .
-> > >>>> I would prefer mainline u-boot for all the Amlogic SBC, since
-> > >>>> they sync with latest driver changes.
-> > >>>
-> > >>> Yes, we would all prefer mainline u-boot, but the mainline kernel needs
-> > >>> to support the vendor u-boot that is shipping with the boards.  So
-> > >>> until Hardkernel (and other vendors) switch to mainline u-boot we do not
-> > >>> want to have upstream kernel defaults that will not boot with the vendor
-> > >>> u-boot.
-> > >>>
-> > >>> We can always support these features, but they just cannot be enabled
-> > >>> by default.
-> > >> (I don't have an Odroid-C2 but I'm curious)
-> > >> should Anand submit a patch to mainline u-boot instead?
-> > >
-> > > It would be in addition to $SUBJECT patch, not instead, I think.
-> > >
-> > >> the &scpi_clocks node could be enabled at runtime by mainline u-boot
-> > >
-> > > That would work, but I don't know about u-boot maintainers opinions on
-> > > this kind of thing, so let's see what Neil thinks.
-> >
-> > U-Boot doesn't anything to do with SCPI, SCPI discusses directly with the SCP
-> > processor, and the CPU clock is set to 1,56GHz by the BL2 boot stage before
-> > U-boot starts.
-> >
-> > The only viable solution I see now is to find if we could add a DT OPP table
-> > only for Odroid-C2 dts to bypass the SCPI OPP table.
-> my understanding is that mainline u-boot (with whatever SCP firmware
-> it uses) provides the *correct* OPP table
+There is a (much) more extensive test that is done in the test-media script.
 
-Right now I am not sure how this OPP table is populated.
-But I saw the same freq table used in 3.16.x kernel after enable the clk.
+In v4l-utils, go to contrib/test. Now run (as root): test-media vicodec
 
-> in this case it would be "safe" to have SCPI enabled with mainline u-boot
-> @Anand: please correct me if I misunderstood you
->
+This test now fails on some tests for the stateful decoder:
 
-As per my understanding DVFS OPP frequency table for SCPI firmware set
-for 1.536 GHz
-somewhere in BL2 as pointed by Neil.
+Streaming ioctls:
+        test read/write: OK (Not Supported)
+        test blocking wait: OK
+                fail: v4l2-test-buffers.cpp(943): ret == 0
+                fail: v4l2-test-buffers.cpp(1353): captureBufs(node, node_m2m_cap, q, m2m_q, frame_count, pollmode, capture_count)
+        test MMAP (select): FAIL
+                fail: v4l2-test-buffers.cpp(951): ret == 0
+                fail: v4l2-test-buffers.cpp(1353): captureBufs(node, node_m2m_cap, q, m2m_q, frame_count, pollmode, capture_count)
+        test MMAP (epoll): FAIL
+                fail: v4l2-test-buffers.cpp(943): ret == 0
+                fail: v4l2-test-buffers.cpp(1607): captureBufs(node, node_m2m_cap, q, m2m_q, frame_count, pollmode, capture_count)
+        test USERPTR (select): FAIL
+                fail: v4l2-test-buffers.cpp(943): ret == 0
+                fail: v4l2-test-buffers.cpp(1761): captureBufs(node, node_m2m_cap, q, m2m_q, frame_count, pollmode, capture_count)
+        test DMABUF (select): FAIL
 
-Arm Trusted firmware added new secure SCPI communication with
-Cortex-M3 co processor.
-[0] https://github.com/ARM-software/arm-trusted-firmware/blob/master/docs/plat/meson-gxbb.rst
-[1] https://github.com/ARM-software/arm-trusted-firmware/blob/master/plat/amlogic/common/aml_scpi.c
+I also see this:
 
-ATF generated the *bl1.bin* which is replace the Amlogic's bl1.bin
-while preparing
-the new u-boot *u-boot.gxbb* image.
+cmp: EOF on /tmp/tmp.7KAXKAIkVZ/raw.yu12.1280.24 after byte 23500800, in line 1
 
-> my idea to "enable SCPI with mainline u-boot" is to have u-boot update
-> the "status" property of the scpi_clocks node.
-> u-boot does something similar with the mac-address property of the
-> Ethernet controller for example.
-> as result of this users of mainline u-boot would have working CPU
-> DVFS, while users of the old vendor u-boot would run at fixed 1.54GHz.
->
->
-> Martin
+which shouldn't be there either.
 
-Right now as per my understanding 1.536 GHz max is bit under clocked.
+I can recommend the test-media script: it can test all the virtual drivers and it is
+part of the daily build to check for regressions.
 
-Some time ago on Odroid Forum tried to over clock the cpu to 2GHz.
-[3] https://forum.odroid.com/viewtopic.php?f=139&t=18738
-So more investigation need to done in this line.
+Regards,
 
-I also tried the same with HardKernel Image, with modifying the boot.ini
-I could increase the max DVFS cpu frequency to 1.90 GHz,
-This is just proof of concept.
-
-odroid:~# cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies
-100000 250000 500000 1000000 1296000 1536000 1656000 1680000 1752000 1896000
-
-I have some minimal stress testing attached are the results for HK
-3.16.x kernel.
-
-For now we should not enable this clock.
-Until we can possible to check for higher clock frequency to work stable
-on all Amlogic S905X SBC.
-
-I like the Neil's approach to use it's own dts OPP table for SCPI protocol.
-
--Anand
-
---0000000000000fd7b0059994291b
-Content-Type: text/plain; charset="US-ASCII"; name="cpufreq_odroid_c2_3.16.78-48.txt"
-Content-Disposition: attachment; filename="cpufreq_odroid_c2_3.16.78-48.txt"
-Content-Transfer-Encoding: base64
-Content-ID: <f_k4414bbd0>
-X-Attachment-Id: f_k4414bbd0
-
-cm9vdEBvZHJvaWQ6fiMgc3lzYmVuY2ggLS10ZXN0PWNwdSAtLXRocmVhZHM9NCAtLWNwdS1tYXgt
-cHJpbWU9MjAwMDAwMCBydW4NCldBUk5JTkc6IHRoZSAtLXRlc3Qgb3B0aW9uIGlzIGRlcHJlY2F0
-ZWQuIFlvdSBjYW4gcGFzcyBhIHNjcmlwdCBuYW1lIG9yIHBhdGggb24gdGhlIGNvbW1hbmQgbGlu
-ZSB3aXRob3V0IGFueSBvcHRpb25zLg0Kc3lzYmVuY2ggMS4wLjExICh1c2luZyBzeXN0ZW0gTHVh
-SklUIDIuMS4wLWJldGEzKQ0KDQpSdW5uaW5nIHRoZSB0ZXN0IHdpdGggZm9sbG93aW5nIG9wdGlv
-bnM6DQpOdW1iZXIgb2YgdGhyZWFkczogNA0KSW5pdGlhbGl6aW5nIHJhbmRvbSBudW1iZXIgZ2Vu
-ZXJhdG9yIGZyb20gY3VycmVudCB0aW1lDQoNCg0KUHJpbWUgbnVtYmVycyBsaW1pdDogMjAwMDAw
-MA0KDQpJbml0aWFsaXppbmcgd29ya2VyIHRocmVhZHMuLi4NCg0KVGhyZWFkcyBzdGFydGVkIQ0K
-DQpDUFUgc3BlZWQ6DQogICAgZXZlbnRzIHBlciBzZWNvbmQ6ICAgICAwLjA5DQoNCkdlbmVyYWwg
-c3RhdGlzdGljczoNCiAgICB0b3RhbCB0aW1lOiAgICAgICAgICAgICAgICAgICAgICAgICAgNDYu
-NDc5OXMNCiAgICB0b3RhbCBudW1iZXIgb2YgZXZlbnRzOiAgICAgICAgICAgICAgNA0KDQpMYXRl
-bmN5IChtcyk6DQogICAgICAgICBtaW46ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMzEz
-MTkuODINCiAgICAgICAgIGF2ZzogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAzODU4My4z
-Nw0KICAgICAgICAgbWF4OiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDQ2NDc4LjUzDQog
-ICAgICAgICA5NXRoIHBlcmNlbnRpbGU6ICAgICAgICAgICAgICAgICAgNDYxMDMuNTINCiAgICAg
-ICAgIHN1bTogICAgICAgICAgICAgICAgICAgICAgICAgICAgIDE1NDMzMy40Nw0KDQpUaHJlYWRz
-IGZhaXJuZXNzOg0KICAgIGV2ZW50cyAoYXZnL3N0ZGRldik6ICAgICAgICAgICAxLjAwMDAvMC4w
-MA0KICAgIGV4ZWN1dGlvbiB0aW1lIChhdmcvc3RkZGV2KTogICAzOC41ODM0LzYuOTgNCnJvb3RA
-b2Ryb2lkOn4jIGNwdWZyZXEtDQpjcHVmcmVxLWFwZXJmICBjcHVmcmVxLWluZm8gICBjcHVmcmVx
-LXNldA0Kcm9vdEBvZHJvaWQ6fiMgY3B1ZnJlcS1pbmZvDQpjcHVmcmVxdXRpbHMgMDA4OiBjcHVm
-cmVxLWluZm8gKEMpIERvbWluaWsgQnJvZG93c2tpIDIwMDQtMjAwOQ0KUmVwb3J0IGVycm9ycyBh
-bmQgYnVncyB0byBjcHVmcmVxQHZnZXIua2VybmVsLm9yZywgcGxlYXNlLg0KYW5hbHl6aW5nIENQ
-VSAwOg0KICBkcml2ZXI6IG1lc29uX2NwdWZyZXENCiAgQ1BVcyB3aGljaCBydW4gYXQgdGhlIHNh
-bWUgaGFyZHdhcmUgZnJlcXVlbmN5OiAwIDEgMiAzDQogIENQVXMgd2hpY2ggbmVlZCB0byBoYXZl
-IHRoZWlyIGZyZXF1ZW5jeSBjb29yZGluYXRlZCBieSBzb2Z0d2FyZTogMCAxIDIgMw0KICBtYXhp
-bXVtIHRyYW5zaXRpb24gbGF0ZW5jeTogMjAwIHVzLg0KICBoYXJkd2FyZSBsaW1pdHM6IDEwMC4w
-IE1IeiAtIDEuOTAgR0h6DQogIGF2YWlsYWJsZSBmcmVxdWVuY3kgc3RlcHM6IDEwMC4wIE1Ieiwg
-MjUwIE1IeiwgNTAwIE1IeiwgMTAwMCBNSHosIDEuMzAgR0h6LCAxLjU0IEdIeiwgMS42NiBHSHos
-IDEuNjggR0h6LCAxLjc1IEdIeiwgMS45MCBHSHoNCiAgYXZhaWxhYmxlIGNwdWZyZXEgZ292ZXJu
-b3JzOiBob3RwbHVnLCBpbnRlcmFjdGl2ZSwgY29uc2VydmF0aXZlLCBvbmRlbWFuZCwgdXNlcnNw
-YWNlLCBwb3dlcnNhdmUsIHBlcmZvcm1hbmNlDQogIGN1cnJlbnQgcG9saWN5OiBmcmVxdWVuY3kg
-c2hvdWxkIGJlIHdpdGhpbiAxMDAuMCBNSHogYW5kIDEwMC4wIE1Iei4NCiAgICAgICAgICAgICAg
-ICAgIFRoZSBnb3Zlcm5vciAicGVyZm9ybWFuY2UiIG1heSBkZWNpZGUgd2hpY2ggc3BlZWQgdG8g
-dXNlDQogICAgICAgICAgICAgICAgICB3aXRoaW4gdGhpcyByYW5nZS4NCiAgY3VycmVudCBDUFUg
-ZnJlcXVlbmN5IGlzIDEwMC4wIE1IeiAoYXNzZXJ0ZWQgYnkgY2FsbCB0byBoYXJkd2FyZSkuDQog
-IGNwdWZyZXEgc3RhdHM6IDEwMC4wIE1IejoyOC41NCUsIDI1MCBNSHo6MC4wMCUsIDUwMCBNSHo6
-MC4wMCUsIDEwMDAgTUh6OjAuMDAlLCAxLjMwIEdIejowLjAwJSwgMS41NCBHSHo6MC4wMCUsIDEu
-NjYgR0h6OjAuMDAlLCAxLjY4IEdIejowLjAwJSwgMS43NSBHSHo6MC4wMCUsIDEuOTAgR0h6Ojcx
-LjQ2JSAgKDIpDQphbmFseXppbmcgQ1BVIDE6DQogIGRyaXZlcjogbWVzb25fY3B1ZnJlcQ0KICBD
-UFVzIHdoaWNoIHJ1biBhdCB0aGUgc2FtZSBoYXJkd2FyZSBmcmVxdWVuY3k6IDAgMSAyIDMNCiAg
-Q1BVcyB3aGljaCBuZWVkIHRvIGhhdmUgdGhlaXIgZnJlcXVlbmN5IGNvb3JkaW5hdGVkIGJ5IHNv
-ZnR3YXJlOiAwIDEgMiAzDQogIG1heGltdW0gdHJhbnNpdGlvbiBsYXRlbmN5OiAyMDAgdXMuDQog
-IGhhcmR3YXJlIGxpbWl0czogMTAwLjAgTUh6IC0gMS45MCBHSHoNCiAgYXZhaWxhYmxlIGZyZXF1
-ZW5jeSBzdGVwczogMTAwLjAgTUh6LCAyNTAgTUh6LCA1MDAgTUh6LCAxMDAwIE1IeiwgMS4zMCBH
-SHosIDEuNTQgR0h6LCAxLjY2IEdIeiwgMS42OCBHSHosIDEuNzUgR0h6LCAxLjkwIEdIeg0KICBh
-dmFpbGFibGUgY3B1ZnJlcSBnb3Zlcm5vcnM6IGhvdHBsdWcsIGludGVyYWN0aXZlLCBjb25zZXJ2
-YXRpdmUsIG9uZGVtYW5kLCB1c2Vyc3BhY2UsIHBvd2Vyc2F2ZSwgcGVyZm9ybWFuY2UNCiAgY3Vy
-cmVudCBwb2xpY3k6IGZyZXF1ZW5jeSBzaG91bGQgYmUgd2l0aGluIDEwMC4wIE1IeiBhbmQgMTAw
-LjAgTUh6Lg0KICAgICAgICAgICAgICAgICAgVGhlIGdvdmVybm9yICJwZXJmb3JtYW5jZSIgbWF5
-IGRlY2lkZSB3aGljaCBzcGVlZCB0byB1c2UNCiAgICAgICAgICAgICAgICAgIHdpdGhpbiB0aGlz
-IHJhbmdlLg0KICBjdXJyZW50IENQVSBmcmVxdWVuY3kgaXMgMTAwLjAgTUh6IChhc3NlcnRlZCBi
-eSBjYWxsIHRvIGhhcmR3YXJlKS4NCiAgY3B1ZnJlcSBzdGF0czogMTAwLjAgTUh6OjI4LjU0JSwg
-MjUwIE1IejowLjAwJSwgNTAwIE1IejowLjAwJSwgMTAwMCBNSHo6MC4wMCUsIDEuMzAgR0h6OjAu
-MDAlLCAxLjU0IEdIejowLjAwJSwgMS42NiBHSHo6MC4wMCUsIDEuNjggR0h6OjAuMDAlLCAxLjc1
-IEdIejowLjAwJSwgMS45MCBHSHo6NzEuNDYlICAoMikNCmFuYWx5emluZyBDUFUgMjoNCiAgZHJp
-dmVyOiBtZXNvbl9jcHVmcmVxDQogIENQVXMgd2hpY2ggcnVuIGF0IHRoZSBzYW1lIGhhcmR3YXJl
-IGZyZXF1ZW5jeTogMCAxIDIgMw0KICBDUFVzIHdoaWNoIG5lZWQgdG8gaGF2ZSB0aGVpciBmcmVx
-dWVuY3kgY29vcmRpbmF0ZWQgYnkgc29mdHdhcmU6IDAgMSAyIDMNCiAgbWF4aW11bSB0cmFuc2l0
-aW9uIGxhdGVuY3k6IDIwMCB1cy4NCiAgaGFyZHdhcmUgbGltaXRzOiAxMDAuMCBNSHogLSAxLjkw
-IEdIeg0KICBhdmFpbGFibGUgZnJlcXVlbmN5IHN0ZXBzOiAxMDAuMCBNSHosIDI1MCBNSHosIDUw
-MCBNSHosIDEwMDAgTUh6LCAxLjMwIEdIeiwgMS41NCBHSHosIDEuNjYgR0h6LCAxLjY4IEdIeiwg
-MS43NSBHSHosIDEuOTAgR0h6DQogIGF2YWlsYWJsZSBjcHVmcmVxIGdvdmVybm9yczogaG90cGx1
-ZywgaW50ZXJhY3RpdmUsIGNvbnNlcnZhdGl2ZSwgb25kZW1hbmQsIHVzZXJzcGFjZSwgcG93ZXJz
-YXZlLCBwZXJmb3JtYW5jZQ0KICBjdXJyZW50IHBvbGljeTogZnJlcXVlbmN5IHNob3VsZCBiZSB3
-aXRoaW4gMTAwLjAgTUh6IGFuZCAxMDAuMCBNSHouDQogICAgICAgICAgICAgICAgICBUaGUgZ292
-ZXJub3IgInBlcmZvcm1hbmNlIiBtYXkgZGVjaWRlIHdoaWNoIHNwZWVkIHRvIHVzZQ0KICAgICAg
-ICAgICAgICAgICAgd2l0aGluIHRoaXMgcmFuZ2UuDQogIGN1cnJlbnQgQ1BVIGZyZXF1ZW5jeSBp
-cyAxMDAuMCBNSHogKGFzc2VydGVkIGJ5IGNhbGwgdG8gaGFyZHdhcmUpLg0KICBjcHVmcmVxIHN0
-YXRzOiAxMDAuMCBNSHo6MjguNTQlLCAyNTAgTUh6OjAuMDAlLCA1MDAgTUh6OjAuMDAlLCAxMDAw
-IE1IejowLjAwJSwgMS4zMCBHSHo6MC4wMCUsIDEuNTQgR0h6OjAuMDAlLCAxLjY2IEdIejowLjAw
-JSwgMS42OCBHSHo6MC4wMCUsIDEuNzUgR0h6OjAuMDAlLCAxLjkwIEdIejo3MS40NiUgICgyKQ0K
-YW5hbHl6aW5nIENQVSAzOg0KICBkcml2ZXI6IG1lc29uX2NwdWZyZXENCiAgQ1BVcyB3aGljaCBy
-dW4gYXQgdGhlIHNhbWUgaGFyZHdhcmUgZnJlcXVlbmN5OiAwIDEgMiAzDQogIENQVXMgd2hpY2gg
-bmVlZCB0byBoYXZlIHRoZWlyIGZyZXF1ZW5jeSBjb29yZGluYXRlZCBieSBzb2Z0d2FyZTogMCAx
-IDIgMw0KICBtYXhpbXVtIHRyYW5zaXRpb24gbGF0ZW5jeTogMjAwIHVzLg0KICBoYXJkd2FyZSBs
-aW1pdHM6IDEwMC4wIE1IeiAtIDEuOTAgR0h6DQogIGF2YWlsYWJsZSBmcmVxdWVuY3kgc3RlcHM6
-IDEwMC4wIE1IeiwgMjUwIE1IeiwgNTAwIE1IeiwgMTAwMCBNSHosIDEuMzAgR0h6LCAxLjU0IEdI
-eiwgMS42NiBHSHosIDEuNjggR0h6LCAxLjc1IEdIeiwgMS45MCBHSHoNCiAgYXZhaWxhYmxlIGNw
-dWZyZXEgZ292ZXJub3JzOiBob3RwbHVnLCBpbnRlcmFjdGl2ZSwgY29uc2VydmF0aXZlLCBvbmRl
-bWFuZCwgdXNlcnNwYWNlLCBwb3dlcnNhdmUsIHBlcmZvcm1hbmNlDQogIGN1cnJlbnQgcG9saWN5
-OiBmcmVxdWVuY3kgc2hvdWxkIGJlIHdpdGhpbiAxMDAuMCBNSHogYW5kIDEwMC4wIE1Iei4NCiAg
-ICAgICAgICAgICAgICAgIFRoZSBnb3Zlcm5vciAicGVyZm9ybWFuY2UiIG1heSBkZWNpZGUgd2hp
-Y2ggc3BlZWQgdG8gdXNlDQogICAgICAgICAgICAgICAgICB3aXRoaW4gdGhpcyByYW5nZS4NCiAg
-Y3VycmVudCBDUFUgZnJlcXVlbmN5IGlzIDEwMC4wIE1IeiAoYXNzZXJ0ZWQgYnkgY2FsbCB0byBo
-YXJkd2FyZSkuDQogIGNwdWZyZXEgc3RhdHM6IDEwMC4wIE1IejoyOC41NSUsIDI1MCBNSHo6MC4w
-MCUsIDUwMCBNSHo6MC4wMCUsIDEwMDAgTUh6OjAuMDAlLCAxLjMwIEdIejowLjAwJSwgMS41NCBH
-SHo6MC4wMCUsIDEuNjYgR0h6OjAuMDAlLCAxLjY4IEdIejowLjAwJSwgMS43NSBHSHo6MC4wMCUs
-IDEuOTAgR0h6OjcxLjQ1JSAgKDIpDQpyb290QG9kcm9pZDp+Iw0K
---0000000000000fd7b0059994291b
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
+	Hans
 
 _______________________________________________
 linux-amlogic mailing list
 linux-amlogic@lists.infradead.org
 http://lists.infradead.org/mailman/listinfo/linux-amlogic
-
---0000000000000fd7b0059994291b--
-
