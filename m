@@ -2,59 +2,93 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E798B11E535
-	for <lists+linux-amlogic@lfdr.de>; Fri, 13 Dec 2019 15:07:51 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6769E11E582
+	for <lists+linux-amlogic@lfdr.de>; Fri, 13 Dec 2019 15:23:57 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
-	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=H8tbrjkGpVU/3Pud2WyCK1va3mmaAKBaZct7Jwy6tcA=; b=dzTiARxYZN12abPIlD85PyuOs
-	7Gs0nnt6k+LpFviNXjjFF/tAxuLGhJprsIxRGNZOD9iidfABluhj23+hs31YATq3/fpi0A3WXLN7d
-	zNAiVYcdKkW8niL2buFn48OdPIBsMkT7EePE3ecALDOTKvgFYQ2Uhu3vu2JNZQwiErI64EoEuxCSC
-	CoQvXZWTN37DYgaJhnHEtTqif2EEGvkjhkhL/QUcfS9DaQ12nZKO/TEAVeKZHIL5bxJbLtuu4yZNi
-	L4ywgFD4qZLmOIv4g8A+AQa9KG3o6PXB5RuLaHIfXShXQn1nbaEeMTfg7InsF9F9ibXOkzd6MNMQy
-	oRnTqVDkQ==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=ecLm+YIdW14rIHeQmygju6bsDMPTr5ZA5/1BYmVfoq0=; b=YAvlVfi4qNKjLW
+	cgPCfohtnnuAkjCuxUaBP060J/yS5qLs94JLaxMoLB1a1SV0ytuMwOxqrk2dQZEbmE+SPvEaNl6hC
+	8G7w62NMbNiuSadNTR9dIMeCZuZd6Q3R91e/ikrBLwJZU0/YkAmb4AguFWQ6iqVCCuM2iNPIkieFf
+	Chc5UTda77sMCHAX7HWAdMSBt/XcMFN6mhyI5z3BxmZJ3WXONi2V0snh3dLz+gxM7VUlbDofK1w4k
+	K75ThkrJgpX3b4rlNpDMc8+FoQYw3YXV5Qe3pLUITHTZ33Px3d8zbYMBQTAo13md9bZCrRUMi2Kcq
+	D7UtcY3KpdtIaC+owWNA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iflbh-0007WK-2B; Fri, 13 Dec 2019 14:07:49 +0000
-Received: from foss.arm.com ([217.140.110.172])
- by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iflbb-0006u7-9X; Fri, 13 Dec 2019 14:07:47 +0000
-Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
- by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id E3A39139F;
- Fri, 13 Dec 2019 06:07:39 -0800 (PST)
-Received: from [10.1.196.37] (e121345-lin.cambridge.arm.com [10.1.196.37])
- by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id 3AB773F52E;
- Fri, 13 Dec 2019 06:07:34 -0800 (PST)
-Subject: Re: [RFC 00/25] arm64: realtek: Add Xnano X5 and implement
- TM1628/FD628/AiP1618 LED controllers
-To: =?UTF-8?Q?Andreas_F=c3=a4rber?= <afaerber@suse.de>
-References: <20191212033952.5967-1-afaerber@suse.de>
- <7110806f-ddbd-f055-e107-7a1f7e223102@arm.com>
- <c86c6bc0-b0e5-c46e-da87-9d910b95f9f3@suse.de>
-From: Robin Murphy <robin.murphy@arm.com>
-Message-ID: <04e7d7cd-a8bc-621b-9205-1a058521cabe@arm.com>
-Date: Fri, 13 Dec 2019 14:07:28 +0000
-User-Agent: Mozilla/5.0 (X11; Linux aarch64; rv:60.0) Gecko/20100101
- Thunderbird/60.9.0
+	id 1iflrF-0005Cv-0G; Fri, 13 Dec 2019 14:23:53 +0000
+Received: from mail-io1-xd42.google.com ([2607:f8b0:4864:20::d42])
+ by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
+ id 1iflr1-00054u-93; Fri, 13 Dec 2019 14:23:41 +0000
+Received: by mail-io1-xd42.google.com with SMTP id t26so2512723ioi.13;
+ Fri, 13 Dec 2019 06:23:38 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=oY4foPWzvMWBhrOb3ctOq9TVV5hU0NFwbmMTS0Zd/UU=;
+ b=WA/Nl5/qzxziow27rNFDBN6AR0i/0NcNiRvRVp80t0u9W0JQMaMjKJ1FXpSIJvFRsA
+ 9XNtyo7R3tvMIJvxC8oiNyOk4J2wtKS7B3Ts81LXhTeznVpJDzP2bBwTq3eNp8TT5jGC
+ JeJnDQdKIfDwUHRy+/BauHNwzMIsrHZwY1yL13K6S1JG3p8bmPr43mrdPMlvRX974Db3
+ sejJ6jhmsn/JNHCDsnNqd+DX6Vt5JKtCkrXbQGX1nBV17cl/Lwbv1gGNky1WX5xz6cB9
+ qNaJLQ5sYArh6IQ72EsTE5mzorok1Y/tT0dn2XFjhtREMCr3CwECOoTe5T6M5fG+Ice6
+ rw+Q==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=oY4foPWzvMWBhrOb3ctOq9TVV5hU0NFwbmMTS0Zd/UU=;
+ b=pYqriNq1VAF9zPFZSUtjkBZ+kXKu7KIM1kII/QOgT78uDmi7ND5JLNCAnC6Qx4azjE
+ OuLm879dsqBIJyEys4jtz703hTEKFjmUMso2jx5fi17hEu9zbavON3X3/azaJ9BeuJST
+ H4BxT/SjeqZdZnjn6O/+vXm+LFsMWangsdNgW3QjogMLIcIZhGfqyF8mryVW+fHCtidG
+ EsrQibc9KEF7cBThOhdocBItK4aoSrHCTZ+9VOX8sayZzapjcQM5q8Khn6C70pO1XLi2
+ HH+fnMOw8uDXresgw3ElULTTTE7H6P5pg/qfTj/xXZlczf2OZIh7TAqrqdt9BTAkH33e
+ DhHA==
+X-Gm-Message-State: APjAAAV+0kAgogyKfJj0sKEhpcy3WgqbLpgNe1yIO4heO/yhoJdEPLRO
+ ypGBTmEe+XMrEAfolEXte8YXm/TE5U7F6vYC+a4=
+X-Google-Smtp-Source: APXvYqw9fo8CyH8rZgTkDXi/QpomXN7jj5DggXjh44v4tlkbINHuyaaFmy+kLmhjIEG8wBfM6tVMJ2kyLjCLt4kAyek=
+X-Received: by 2002:a02:844e:: with SMTP id l14mr2634809jah.30.1576247017731; 
+ Fri, 13 Dec 2019 06:23:37 -0800 (PST)
 MIME-Version: 1.0
-In-Reply-To: <c86c6bc0-b0e5-c46e-da87-9d910b95f9f3@suse.de>
-Content-Language: en-GB
+References: <20191101143126.2549-1-linux.amoon@gmail.com>
+ <7hfthtrvvv.fsf@baylibre.com>
+ <c89791de-0a46-3ce2-b3e2-3640c364cd0f@baylibre.com>
+ <CANAwSgQx3LjQe60TGgKyk6B5BD5y1caS2tA+O+GFES7=qCFeKg@mail.gmail.com>
+ <7hfthsqcap.fsf@baylibre.com>
+ <CAFBinCBfgxXhPKpBLdoq9AimrpaneYFgzgJoDyC-2xhbHmihpA@mail.gmail.com>
+ <7hpngvontu.fsf@baylibre.com>
+ <4e1339b4-c751-3edc-3a2e-36931ad1c503@baylibre.com>
+ <CAFBinCCgKcwXSLxS_CRvz9JZvQo8PcUGm=egBbabVZSrkSc30Q@mail.gmail.com>
+ <CANAwSgSFR3kftWLPqyoYfyxdQ5dcp2W7NgRCaFNkMj-xEDY1Kw@mail.gmail.com>
+ <83791a71-a45c-383d-0406-b0f4e0a0c215@baylibre.com>
+In-Reply-To: <83791a71-a45c-383d-0406-b0f4e0a0c215@baylibre.com>
+From: Anand Moon <linux.amoon@gmail.com>
+Date: Fri, 13 Dec 2019 19:53:26 +0530
+Message-ID: <CANAwSgSsJ8oc--SxtOnsqAfRHQwtBi=ExWg0hqWX7QKga=OYRw@mail.gmail.com>
+Subject: Re: [RFC-next 0/1] Odroid C2: Enable DVFS for cpu
+To: Neil Armstrong <narmstrong@baylibre.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191213_060743_453893_EC4A9DBA 
-X-CRM114-Status: GOOD (  30.63  )
-X-Spam-Score: 0.5 (/)
+X-CRM114-CacheID: sfid-20191213_062339_345036_0DC16271 
+X-CRM114-Status: GOOD (  28.37  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.5 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [217.140.110.172 listed in list.dnswl.org]
+ no trust [2607:f8b0:4864:20:0:0:0:d42 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.5 URI_NOVOWEL            URI: URI hostname has long non-vowel sequence
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (linux.amoon[at]gmail.com)
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -66,138 +100,174 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: linux-rtc@vger.kernel.org, Alessandro Zummo <a.zummo@towertech.it>,
- Alexandre Belloni <alexandre.belloni@bootlin.com>, csd@princeton.com.tw,
- linux-realtek-soc@lists.infradead.org, sales@fdhisi.com,
- linux-kernel@vger.kernel.org, Rob Herring <robh+dt@kernel.org>,
- linux-spi@vger.kernel.org, linux-rockchip@lists.infradead.org,
- devicetree@vger.kernel.org, Mark Brown <broonie@kernel.org>,
- Jacek Anaszewski <jacek.anaszewski@gmail.com>, Pavel Machek <pavel@ucw.cz>,
- zypeng@titanmec.com, linux-amlogic@lists.infradead.org,
- Dan Murphy <dmurphy@ti.com>, linux-leds@vger.kernel.org,
- linux-arm-kernel@lists.infradead.org
-Content-Transfer-Encoding: base64
-Content-Type: text/plain; charset="utf-8"; Format="flowed"
+Cc: devicetree <devicetree@vger.kernel.org>,
+ Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
+ Kevin Hilman <khilman@baylibre.com>,
+ Linux Kernel <linux-kernel@vger.kernel.org>, Rob Herring <robh+dt@kernel.org>,
+ linux-amlogic@lists.infradead.org,
+ linux-arm-kernel <linux-arm-kernel@lists.infradead.org>,
+ Jerome Brunet <jbrunet@baylibre.com>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-T24gMTIvMTIvMjAxOSA4OjU1IHBtLCBBbmRyZWFzIEbDpHJiZXIgd3JvdGU6Cj4gSGkgUm9iaW4s
-Cj4gCj4gWy0gUm9jIEhlLCArIGxpbnV4LXJvY2tjaGlwXQo+IAo+IEFtIDEyLjEyLjE5IHVtIDE0
-OjE0IHNjaHJpZWIgUm9iaW4gTXVycGh5Ogo+PiBPbiAxMi8xMi8yMDE5IDM6MzkgYW0sIEFuZHJl
-YXMgRsOkcmJlciB3cm90ZToKPj4+IFRoaXMgcGF0Y2ggc2VyaWVzIGltcGxlbWVudHMgdGhlIExF
-RCBjb250cm9sbGVycyBmb3VuZCBpbiBzb21lIFJURDEyOTUKPj4+IGJhc2VkCj4+PiBUViBzZXQt
-dG9wIGJveGVzLgo+IFsuLi5dCj4+PiBUTTE2MjggYW5kIHJlbGF0ZWQgY2hpcHNldHMgaGF2ZSBh
-biBpbnRlcm5hbCBEaXNwbGF5IFJBTSwgZnJvbSB3aGljaCB0aGV5Cj4+PiBjb250cm9sIGEgdHdv
-LWRpbWVuc2lvbmFsIGFycmF5IG9mIExFRCBjb21wb25lbnRzLCBvZnRlbiB1c2VkIGZvcgo+Pj4g
-c2V2ZW4tc2VnbWVudCBkaXNwbGF5cywgaS5lLiBjbG9jayBkaXNwbGF5LCBidXQgYWxzbyBmb3Ig
-aW5kaWNhdG9ycy4KPj4+IEluZGl2aWR1YWwgTEVEcyBjYW4gYmUgdHVybmVkIG9uL29mZiwgYnV0
-IGJyaWdodG5lc3MgaXMgYXBwbGllZCBnbG9iYWxseS4KPj4+IFNvbWUgY2hpcHNldHMgYWxzbyBz
-dXBwb3J0IHBvbGxpbmcgYSB0d28tZGltZW5zaW9uYWwga2V5IHBhZC4KPiBbLi4uXQo+Pj4gU29t
-ZSBtb3JlIG5vdGVzOgo+Pj4gKiBQdWJsaWMgVE0xNjI4IFYxLjEgZGF0YXNoZWV0IGlzIGluIENo
-aW5lc2Ugb25seSBhbmQgZGlmZmVycyBmcm9tIHRoZQo+Pj4gIMKgwqAgdW52ZXJzaW9uZWQgRW5n
-bGlzaCB2ZXJzaW9uIGZvdW5kIGVsc2V3aGVyZSBvbiBkYXRhc2hlZXQgc2l0ZXMgYnkKPj4+ICDC
-oMKgIGRvY3VtZW50aW5nIG1vcmUgZGlzcGxheSBtb2RlcywgaW5jbHVkZWQgaGVyZSAoZ3Vlc3Nl
-ZCBmcm9tIEFyYWJpYwo+Pj4gbnVtYmVycykuCj4+PiAqIFB1YmxpYyBGRDYyOCBkYXRhc2hlZXQg
-aXMgQ2hpbmVzZSBvbmx5IChndWVzc2VzIGJhc2VkIG9uIEFyYWJpYwo+Pj4gbnVtYmVycykuCj4+
-PiAgwqDCoCBGRDYyMyBhcHBlYXJzIHRvIGhhdmUgbW9yZSBvdXRwdXQgbGluZXMsIHdoaWNoIHdv
-dWxkIGZpdCBjdXJyZW50Cj4+PiBkYXRhIHR5cGVzLgo+Pj4gKiBBaVAxNjE4IGxpbmtzIHdlcmUg
-YWxsIGJyb2tlbiAoNDA0KTsgdHJ5IEdvb2dsZSAic2l0ZTpzemZkd2R6LmNvbSIKPj4+IHNlYXJj
-aAo+Pj4gIMKgwqAgdG8gYWN0dWFsbHkgZmluZCB0aGUgZG9jdW1lbnRzIGF2YWlsYWJsZSBvbiB0
-aGVpciBzaXRlLgo+Pj4gKiBQcmluY2V0b24gUFQ2OTY0IGlzIGFub3RoZXIgcmVsYXRlZCBMRUQg
-Y29udHJvbGxlciB3aXRoIHB1YmxpYwo+Pj4gZGF0YXNoZWV0Cj4+PiAgwqDCoCB0aGF0IEkgZGlk
-IG5vdCBlbmNvdW50ZXIgaW4gbXkgVFYgYm94ZXMgeWV0LCB0aHVzIG5vdCBpbmNsdWRlZCBoZXJl
-Lgo+Pj4gIMKgwqAgRGF0YXNoZWV0cyBhcmUgbGlua2VkIG9ubHkgZm9yIFBUNjk1OSBhbmQgUFQ2
-OTY3LCBidXQgUFQ2OTY0IFYxLjMKPj4+IGFuZCBWMS40Cj4+PiAgwqDCoCBhcmUgYXZhaWxhYmxl
-IGVsc2V3aGVyZS4gUFQ2OTY3IGhhcyBtb3JlIG91dHB1dCBsaW5lcywgd2hpY2ggbXkKPj4+IGN1
-cnJlbnQKPj4+ICDCoMKgIGRhdGEgdHlwZXMgY291bGQgYmFyZWx5IGhvbGQuIE1heWJlIGJ1bXAg
-dGhlbSBhbGwgdG8gdTMyIHR5cGUgcmlnaHQKPj4+IGF3YXk/Cj4+PiAqIFRNMTYyOCBpcyBhbHNv
-IGZvdW5kIG9uIE1lTEUgVjkgVFYgYm94LCB0byBiZSB0ZXN0ZWQuCj4+PiAqIEZENjI4IGlzIGFs
-c28gZm91bmQgb24gQW1sb2dpYyBTOTA1WDIgYmFzZWQgVm9udGFyIFg5NiBNYXggVFYgYm94LAo+
-Pj4gIMKgwqAgdG8gYmUgdGVzdGVkIChvbmNlIFVBUlQgaXMgc29sZGVyZWQpLgo+Pj4gKiBBaVAx
-NjE4IHdhcyBmb3VuZCBvbiBBdmEgYW5kIExha2UgSSBUViBib3hlcywgdG8gYmUgdGVzdGVkLgo+
-Pj4gKiBJdCByZW1haW5lZCB1bmNsZWFyIHRvIG1lIHdoaWNoIG9mIHRoZXNlIG1hbnkgc2ltaWxh
-ciBjaGlwc2V0cyB3YXMKPj4+IGZpcnN0Lgo+Pj4gIMKgwqAgTXkgZHJpdmVyIG5hbWUgaXMgdGhl
-cmVmb3JlIGJhc2VkIG9uIHRoZSBjaGlwIEkgZW5jb3VudGVyZWQgZmlyc3QuCj4+Cj4+IEl0J3Mg
-cHJldHR5IGNvb2wgdG8gc2VlIHRoaXMhCj4gCj4gR2xhZCBzb21lb25lIGVsc2UgZmluZHMgaXQg
-dXNlZnVsLiA6KQo+IAo+PiBNeSBSb2NrY2hpcCBib3ggaGFzIGFuIEFpUDE2MTgtZHJpdmVuCj4+
-IGRpc3BsYXkgWy4uLl0KPiAKPiBZb3UgZG9uJ3QgbWVudGlvbiB0aGUgbW9kZWw6IERvZXMgaXQg
-aGF2ZSBhIG1haW5saW5lIC5kdHMgd2UgY2FuIGV4dGVuZD8KPiBJZiBub3QsIEknZCBhc2sgeW91
-IHRvIGdldCB0aGF0IG1lcmdlZCBpbnRvIC1uZXh0LCB0aGVuIEkgY2FuIGhhcHBpbHkKPiBwaWNr
-IHVwIHBhdGNoZXMgYWRkaW5nIHRoZSBMRUQgY29udHJvbGxlciBmb3IgeW91ciBUViBib3ggaW50
-byB0aGlzCj4gc2VyaWVzIGFzIGl0IGV2b2x2ZXMuIChJJ20gZXhwZWN0aW5nIGF0IGxlYXN0IHR3
-byBtb3JlIFJGQyBpdGVyYXRpb25zLikKCkl0J3MgdGhlIEJlZWxpbmsgQTEsIHdoaWNoIHdlIGhh
-dmUgaW5kZWVkIGp1c3QgbGFuZGVkIGEgRFQgZm9yIC0gSSdsbCAKY2VydGFpbmx5IHNoYXJlIHdo
-YXRldmVyIHBhdGNoIEkgY29tZSB1cCB3aXRoLiBJIGFsc28gaGF2ZSBvbmUgb2YgdGhlIApIOTYg
-TWF4IGJveGVzICh3aGljaCBJIHBpY2tlZCB1cCBvdXQgb2YgY3VyaW9zaXR5IGZvciB0aGUgbXlz
-dGVyaW91cyAKUkszMzE4KSB3aXRoIGFuIEZENjU1MSwgYWx0aG91Z2ggSSd2ZSBub3QgYXR0YWNr
-ZWQgdGhhdCBvbmUgd2l0aCB0aGUgCmxvZ2ljIGFuYWx5c2VyIHlldCB0byBzZWUgaG93IHNpbWls
-YXIgaXQgaXMuCgo+IFNpbWlsYXJseSwgSSdtIHBsYW5uaW5nIHRvIGRyb3AgWG5hbm8gWDUgaW4g
-djIsIGlmIGl0IGRvZXNuJ3QgcmVxdWlyZSBhCj4gcmVzcGluLCBzbyB0aGF0IG5vIFJlYWx0ZWst
-c3BlY2lmaWMgcGFydHMgb3RoZXIgdGhhbiAuZHRzIG5vZGUgYWRkaXRpb25zCj4gcmVtYWluIGhl
-cmUuCj4gCj4+IEluIGNhc2UgaXQgaGVscHMsIGluIG15IHJlc2VhcmNoIEkgZm91bmQgdGhhdCBB
-UlRTQ0hJUCBhcmUgYW5vdGhlcgo+PiB2ZW5kb3Igb2YgdGhlc2UgdGhpbmdzIHdpdGggYWNjZXNz
-aWJsZSBkYXRhc2hlZXRzWzFdLAo+IAo+IFRoYW5rcywgdGhlaXIgSFQxNjI4IGluZGVlZCBsb29r
-cyBjb21wYXRpYmxlLgo+IAo+IFN1bm1vb24gTWljcm9lbGVjdHJvbmljcyBTTTE2MjggYWxzbyBs
-b29rcyBjb21wYXRpYmxlLgo+IGh0dHA6Ly93d3cuY2hpbmFhc2ljLmNvbS9wcm9kdWN0LmpzcCNp
-dGVtPW90aGVyI3N0eWxlPTI3I2lkPTEzOAo+IAo+PiBhbmQgYXMgZmFyIGFzIEkKPj4gY291bGQg
-dGVsbCB0aGUgY29tbWFuZCBzZXQgYXBwZWFycyB0byBkZXJpdmUgZnJvbSAob3IgaXMgYXQgbGVh
-c3QgY29tbW9uCj4+IHRvKSBzb21lIG9sZCBIb2x0ZWsgVkZEIGNvbnRyb2xsZXJzLgo+IAo+IEht
-bSwgSFQxNjUxNSBsb29rcyBzaW1pbGFyIGFuZCBoYXMgbW9yZSBsaW5lcywgUkFNIGFuZCBtb2Rl
-IGJpdHMgdGhhbiBJCj4gcHJlcGFyZWQgaGVyZS4KPiBodHRwczovL3d3dy5ob2x0ZWsuY29tL3By
-b2R1Y3RkZXRhaWwvLS92Zy9odDE2NTE1Cj4gCj4gU28gSSdkIG5lZWQgdG8gbWFrZSBtb3JlIG51
-bWJlcnMgbW9kZWwtZGVwZW5kZW50IGFuZCBhbGxvY2F0ZSB0aGUKPiBEaXNwbGF5IFJBTSBidWZm
-ZXIgZHluYW1pY2FsbHkuCj4gCj4gV2hlcmVhcyBIVDE2RDM1QSBzZWVtcyBpbmNvbXBhdGlibGUg
-Y29tbWFuZC13aXNlLCBhbmQgSFQxNjUyOCBhcHBlYXJzIHRvCj4gYmUgb3V0IG9mIHNjb3BlLCBm
-b3IgZG90IGRpc3BsYXlzIGFuZCB3aXRoIGZhbmN5IGVtYmVkZGVkIGNoYXJhY3RlciBtYXAuCj4g
-Cj4gTm8gSG9sdGVrIGVtYWlsIGFsaWFzIHRoYXQgSSBjYW4gcXVpY2tseSBzcG90Lgo+IAo+IEJ1
-dCBnaXZlbiB0aGF0IEknbSBwcm9wb3NpbmcgdmVuZG9yLXNwZWNpZmljIGNvbXBhdGlibGVzIGp1
-c3QgaW4gY2FzZSwKPiB0aGUgbWFpbiBkZWNpc2lvbnMgd2lsbCBiZSB0aGUgS2NvbmZpZyBzeW1i
-b2wgYW5kIG1vZHVsZSBuYW1lLiBUaGUKPiBkcml2ZXIgY29kZSBpdHNlbGYgd2UgY291bGQgYWx3
-YXlzIHJlZmFjdG9yIGFmdGVyIG1lcmdpbmcsIGFuZCByZW5hbWluZwo+IHRoZSBzY2hlbWEgZmls
-ZSAoYXMgb3Bwb3NlZCB0byBjb21wYXRpYmxlKSBzaG91bGQgYWxzbyBiZSBwb3NzaWJsZS4KClll
-YWgsIEknbSBub3Qgc3VyZSB0aGF0IGl0IHJlYWxseSBtYXR0ZXJzLCBhcyBJIGRvdWJ0IHRoZXJl
-IGFyZSBtYW55IApMaW51eC1jYXBhYmxlIGRldmljZXMgd2l0aCBhIHJlYWwgVkZEIGFueXdheTsg
-aXQganVzdCBzZWVtZWQgbGlrZSBhbiAKaW50ZXJlc3RpbmcgZGF0YXBvaW50IHRoYXQgZmVsbCBv
-dXQgb2Ygc2NvdXJpbmcgdGhlIHdlYiB0cnlpbmcgdG8gZmluZCAKYW55IGV2aWRlbmNlIGZvciB3
-aGljaCB0aGUgImNhbm9uaWNhbCIgMTYxOCBtaWdodCBiZSAoYW5kIHRoZSBIb2x0ZWsgCmNvbm5l
-Y3Rpb24gd2FzIGFjdHVhbGx5IGEgY29pbmNpZGVuY2UgZnJvbSBhIG1pc2lkZW50aWZpY2F0aW9u
-IG9mIHRoZSAKQVJUU0NISVAgcGFydCBudW1iZXIpLgoKPj4gSWYgSSBjYW4gZmlndXJlIG91dCB0
-aGUgRFQgcGFydHMgKHdoaWNoIHdhcyBvbmUgb2YgdGhlIGFyZWFzIHRoYXQKPj4gc3RhbGxlZCBt
-eSBhdHRlbXB0KSBJJ2xsIHRyeSB0byBoYXZlIGEgcGxheSB3aXRoIHRoaXMgc2VyaWVzIG92ZXIg
-dGhlCj4+IGhvbGlkYXlzLgo+IAo+IFRoYXQgcmVtaW5kZWQgbWUgdGhhdCBJIGZvcmdvdCB0byBw
-dXNoIC0gZG9uZSBpbiB0aGUgbWVhbnRpbWUuIDopCj4gCj4+IE9uZSB0aG91Z2h0IHRvIHBvbmRl
-ciBpcyB0aGF0IEkgaGF2ZSBhbiAiODg6ODgiIGRpc3BsYXkgd2hlcmUKPj4gdGhlIGVudGlyZSBt
-aWRkbGUgZ3JpZCBpcyByZXNlcnZlZCBmb3IgdGhlIGNvbG9uICh3aGljaCBpcyB3aXJlZCB0byBq
-dXN0Cj4+IG9uZSBzZWdtZW50KSAtIEknbSBub3Qgc3VyZSBob3cgdGhhdCBjb3VsZCBiZSBzYW5l
-bHkgZGVzY3JpYmVkIDovCj4gCj4gV2VsbCwgdGhhdCBzb3VuZHMgZXhhY3RseSBsaWtlIG15IGJp
-bmRpbmdzIGV4YW1wbGUgYW5kIFg5Uy4gWW91J2xsIGZpbmQKPiB0aGUgY29sb24gY29uZmlndXJl
-ZCBhcyBMRUQsIHNlcGFyYXRlIGZyb20gdGhlIGZvdXIgZGlnaXRzLCB3aGljaCBkb24ndAo+IG5l
-ZWQgdG8gYmUgY29udGlndW91cyBkdWUgdG8gc2VwYXJhdGUgcmVnIGVudHJpZXMgcGVyIGRpZ2l0
-LgoKQWhhLCB5ZXMsIEkgc2hvdWxkIGhhdmUgZW5nYWdlZCB0aGUgYnJhaW4gYSBiaXQgbW9yZSBv
-biB0aGF0IG9uZSA6KQoKPiBXaGlsZSBpdCBtYXkgYmUgcG9zc2libGUgdG8gcHV0IG1vcmUgY2xl
-dmVybmVzcyBpbnRvIHRleHRfc3RvcmUoKSB0byBzZXQKPiB0aGUgY29sb24gYXMgcGFydCBvZiBm
-aXZlLWNoYXIgIjg4Ojg4IiB0ZXh0LCB3ZSdkIGxpa2VseSB3YW50IHRvIGJsaW5rCj4gaXQgZXZl
-cnkgaGFsZiBzZWNvbmQsIHdoaWNoIHdlIHNob3VsZCBiZXR0ZXIgZG8gd2l0aG91dCB1cGRhdGlu
-ZyB0aGUKPiBmdWxsIGRpc3BsYXkgdGV4dCBmcm9tICI4ODo4OCIgdG8gIjg4IDg4Ii4gIjg4ODgi
-IHVwZGF0ZWQgZXZlcnkgbWludXRlCj4gc291bmRzIGxlc3MgcHJvYmxlbWF0aWMuCgpTdXJlIC0g
-cGVyaGFwcyBhdCB0aGF0IHBvaW50IHRleHRfc3RvcmUoKSBjb3VsZCBhbHNvIGdyb3cgc29tZSBj
-YWNoaW5nIAphbmQgcGFydGlhbCB1cGRhdGUgbG9naWMgdG8gZGVjaWRlIGlmIHdyaXRpbmcgaW5k
-aXZpZHVhbCBncmlkcyBpcyAKY2hlYXBlciB0aGFuIGNsb2NraW5nIG91dCB0aGUgd2hvbGUgZGlz
-cGxheSBmb3IgYSBnaXZlbiBjaGFuZ2UsIGJ1dCB0aGlzIAppbml0aWFsIGFwcHJvYWNoIGRvZXMg
-c2VlbSBnb29kIGVub3VnaCB0byBzdGFydCB3aXRoLiBMdW1waW5nIGNvbG9ucyBpbiAKd2l0aCB0
-aGUgb3RoZXIgbWlzY2VsbGFuZW91cyBpbmRpY2F0b3JzIG1hbnkgb2YgdGhlc2UgZGlzcGxheXMg
-aGF2ZSBkb2VzIAphdCBsZWFzdCBoYXZlIGEgc2VsZi1jb25zaXN0ZW50IGxvZ2ljIGluIHRlcm1z
-IG9mICJ0aGluZ3MgdGhhdCBhcmVuJ3QgCjctc2VnbWVudCBncmlkcyIuCgpUaGFua3MsClJvYmlu
-LgoKPiBVZ2x5IHdpdGggdGhlIGNvbG9uIExFRCBpcyB0aGF0IHRoZSByZWRvbmUgTEVEIGJpbmRp
-bmdzIGRvbid0IHlldCBoYXZlIGEKPiBmdW5jdGlvbiBkZWZpbmVkIGZvciB0aGlzLCBzbyBJJ20g
-Y3VycmVudGx5IG1pc3VzaW5nIHdoYXRldmVyIHdhcyB0aGVyZS4KPiBJIHNob3VsZCBwcmVwYXJl
-IGEgYmluZGluZ3MgYWRkaXRpb24sIGlmIHdlIHdhbnQgdG8gdXNlIGFuIExFRCBub2RlLgo+IAo+
-IFJlZ2FyZHMsCj4gQW5kcmVhcwo+IAo+PiBbMV0KPj4gaHR0cDovL3d3dy5hcnRzY2hpcC5jb20v
-cHJvZHVjdHMuYXNwP2x4PXNtYWxsJmFuaWQ9Nzc5JlBhcmVudE5hbWU9U2lnbmFsJTIwbWFuYWdl
-bWVudCUyMF9JX08lMjBFeHRlbmRlcgo+Pgo+Pj4gVGhpcyBzZXJpZXMgaXMgYmFzZWQgb24gbXkg
-bm90LXlldC1wb3N0ZWQgUlREMTI5NSBwaW5jdHJsIGFuZCBHUElPCj4+PiBkcml2ZXJzLgo+Pj4K
-Pj4+IExhdGVzdCBleHBlcmltZW50YWwgcGF0Y2hlcyBhdDoKPj4+IGh0dHBzOi8vZ2l0aHViLmNv
-bS9hZmFlcmJlci9saW51eC9jb21taXRzL3J0ZDEyOTUtbmV4dAo+IFtzbmlwXQo+IAoKX19fX19f
-X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18KbGludXgtYW1sb2dpYyBt
-YWlsaW5nIGxpc3QKbGludXgtYW1sb2dpY0BsaXN0cy5pbmZyYWRlYWQub3JnCmh0dHA6Ly9saXN0
-cy5pbmZyYWRlYWQub3JnL21haWxtYW4vbGlzdGluZm8vbGludXgtYW1sb2dpYwo=
+Hi Neil
+
+On Fri, 13 Dec 2019 at 18:54, Neil Armstrong <narmstrong@baylibre.com> wrote:
+>
+> On 13/12/2019 12:28, Anand Moon wrote:
+> > Hi Martin
+> >
+> > On Fri, 13 Dec 2019 at 01:40, Martin Blumenstingl
+> > <martin.blumenstingl@googlemail.com> wrote:
+> >>
+> >> Hi Neil,
+> >>
+> >> On Wed, Dec 11, 2019 at 9:49 AM Neil Armstrong <narmstrong@baylibre.com> wrote:
+> >>>
+> >>> On 10/12/2019 22:47, Kevin Hilman wrote:
+> >>>> Martin Blumenstingl <martin.blumenstingl@googlemail.com> writes:
+> >>>>
+> >>>>> On Tue, Dec 10, 2019 at 7:13 PM Kevin Hilman <khilman@baylibre.com> wrote:
+> >>>>>>
+> >>>>>> Anand Moon <linux.amoon@gmail.com> writes:
+> >>>>>>
+> >>>>>>> Hi Neil / Kevin,
+> >>>>>>>
+> >>>>>>> On Tue, 10 Dec 2019 at 14:13, Neil Armstrong <narmstrong@baylibre.com> wrote:
+> >>>>>>>>
+> >>>>>>>> On 09/12/2019 23:12, Kevin Hilman wrote:
+> >>>>>>>>> Anand Moon <linux.amoon@gmail.com> writes:
+> >>>>>>>>>
+> >>>>>>>>>> Some how this patch got lost, so resend this again.
+> >>>>>>>>>>
+> >>>>>>>>>> [0] https://patchwork.kernel.org/patch/11136545/
+> >>>>>>>>>>
+> >>>>>>>>>> This patch enable DVFS on GXBB Odroid C2.
+> >>>>>>>>>>
+> >>>>>>>>>> DVFS has been tested by running the arm64 cpuburn
+> >>>>>>>>>> [1] https://github.com/ssvb/cpuburn-arm/blob/master/cpuburn-a53.S
+> >>>>>>>>>> PM-QA testing
+> >>>>>>>>>> [2] https://git.linaro.org/power/pm-qa.git [cpufreq testcase]
+> >>>>>>>>>>
+> >>>>>>>>>> Tested on latest U-Boot 2019.07-1 (Aug 01 2019 - 23:58:01 +0000) Arch Linux ARM
+> >>>>>>>>>
+> >>>>>>>>> Have you tested with the Harkernel u-boot?
+> >>>>>>>>>
+> >>>>>>>>> Last I remember, enabling CPUfreq will cause system hangs with the
+> >>>>>>>>> Hardkernel u-boot because of improperly enabled frequencies, so I'm not
+> >>>>>>>>> terribly inclined to merge this patch.
+> >>>>>>>
+> >>>>>>> HK u-boot have many issue with loading the kernel, with load address
+> >>>>>>> *it's really hard to build the kernel for HK u-boot*,
+> >>>>>>> to get the configuration correctly.
+> >>>>>>>
+> >>>>>>> Well I have tested with mainline u-boot with latest ATF .
+> >>>>>>> I would prefer mainline u-boot for all the Amlogic SBC, since
+> >>>>>>> they sync with latest driver changes.
+> >>>>>>
+> >>>>>> Yes, we would all prefer mainline u-boot, but the mainline kernel needs
+> >>>>>> to support the vendor u-boot that is shipping with the boards.  So
+> >>>>>> until Hardkernel (and other vendors) switch to mainline u-boot we do not
+> >>>>>> want to have upstream kernel defaults that will not boot with the vendor
+> >>>>>> u-boot.
+> >>>>>>
+> >>>>>> We can always support these features, but they just cannot be enabled
+> >>>>>> by default.
+> >>>>> (I don't have an Odroid-C2 but I'm curious)
+> >>>>> should Anand submit a patch to mainline u-boot instead?
+> >>>>
+> >>>> It would be in addition to $SUBJECT patch, not instead, I think.
+> >>>>
+> >>>>> the &scpi_clocks node could be enabled at runtime by mainline u-boot
+> >>>>
+> >>>> That would work, but I don't know about u-boot maintainers opinions on
+> >>>> this kind of thing, so let's see what Neil thinks.
+> >>>
+> >>> U-Boot doesn't anything to do with SCPI, SCPI discusses directly with the SCP
+> >>> processor, and the CPU clock is set to 1,56GHz by the BL2 boot stage before
+> >>> U-boot starts.
+> >>>
+> >>> The only viable solution I see now is to find if we could add a DT OPP table
+> >>> only for Odroid-C2 dts to bypass the SCPI OPP table.
+> >> my understanding is that mainline u-boot (with whatever SCP firmware
+> >> it uses) provides the *correct* OPP table
+> >
+> > Right now I am not sure how this OPP table is populated.
+> > But I saw the same freq table used in 3.16.x kernel after enable the clk.
+> >
+> >> in this case it would be "safe" to have SCPI enabled with mainline u-boot
+> >> @Anand: please correct me if I misunderstood you
+> >>
+> >
+> > As per my understanding DVFS OPP frequency table for SCPI firmware set
+> > for 1.536 GHz
+> > somewhere in BL2 as pointed by Neil.
+> >
+> > Arm Trusted firmware added new secure SCPI communication with
+> > Cortex-M3 co processor.
+> > [0] https://github.com/ARM-software/arm-trusted-firmware/blob/master/docs/plat/meson-gxbb.rst
+> > [1] https://github.com/ARM-software/arm-trusted-firmware/blob/master/plat/amlogic/common/aml_scpi.c
+> >
+> > ATF generated the *bl1.bin* which is replace the Amlogic's bl1.bin
+> > while preparing
+> > the new u-boot *u-boot.gxbb* image.
+> >
+> >> my idea to "enable SCPI with mainline u-boot" is to have u-boot update
+> >> the "status" property of the scpi_clocks node.
+> >> u-boot does something similar with the mac-address property of the
+> >> Ethernet controller for example.
+> >> as result of this users of mainline u-boot would have working CPU
+> >> DVFS, while users of the old vendor u-boot would run at fixed 1.54GHz.
+> >>
+> >>
+> >> Martin
+> >
+> > Right now as per my understanding 1.536 GHz max is bit under clocked.
+> >
+> > Some time ago on Odroid Forum tried to over clock the cpu to 2GHz.
+>
+> This is the point, the Odroid-C2 is *not* stable at 2GHz,
+> a large amount of board doesn't support 2GHz, this is why Amlogic
+> dropped the freq > 1.536 GHz for the GXBB family.
+>
+> But HardKernel still delivers the SCPI table with > 1.536 GHz which breaks
+> on most of the boards, but doesn't on 3.14 since they have a hack disabling
+> higher freqs with a cmdline set in boot.ini.
+>
+> > [3] https://forum.odroid.com/viewtopic.php?f=139&t=18738
+> > So more investigation need to done in this line.
+> >
+> > I also tried the same with HardKernel Image, with modifying the boot.ini
+> > I could increase the max DVFS cpu frequency to 1.90 GHz,
+> > This is just proof of concept.
+> >
+> > odroid:~# cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies
+> > 100000 250000 500000 1000000 1296000 1536000 1656000 1680000 1752000 1896000
+> >
+> > I have some minimal stress testing attached are the results for HK
+> > 3.16.x kernel.
+> >
+> > For now we should not enable this clock.
+> > Until we can possible to check for higher clock frequency to work stable
+> > on all Amlogic S905X SBC.
+> >
+> > I like the Neil's approach to use it's own dts OPP table for SCPI protocol.
+>
+> The various tests gave very little perf enhancement by going > 1,536 GHz, seriously
+> it's not worth the pain.
+>
+> Neil
+>
+
+Ok Thanks for your expert knowledge.
+I agree with you completely on this to set max freq to 1,536 GHz for
+all S905 SoC.
+
+-Anand
+
+_______________________________________________
+linux-amlogic mailing list
+linux-amlogic@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-amlogic
