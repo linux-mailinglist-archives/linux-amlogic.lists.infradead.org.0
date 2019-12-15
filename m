@@ -2,74 +2,81 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3952011F793
-	for <lists+linux-amlogic@lfdr.de>; Sun, 15 Dec 2019 13:00:21 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 31F9211F9F7
+	for <lists+linux-amlogic@lfdr.de>; Sun, 15 Dec 2019 18:51:55 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=vEOG5w425TmunmzsiPZaZPt5aXS8fki7gKr5k8aRGrE=; b=Y/3ScllGVuNGvq
-	VACJ0WHHzBilhh2Jcmz43XEz7ngx23kY4C+6ihbu3cC75gyVFH19sYRcnu/CM4Kb402WWuSsk7qE3
-	+9uVv+RDdMbBQIRxptzTHFe9spJNslDf1iwcuIYQWtNaxNJGQKAc3cn0ehBZGvJdWmpyMGo55yhJX
-	CKTCLy65KtniEuUg6UpjYM9gs67USlQc90cfgq4IIn1I8UV71ikTzmfduoKEO2ziZrRCQnASf3ksY
-	IKYQ7dogV1Dovc38yeXWyvdhbWT4KscMMKlEGJEb/1dCETyokYt9cHPEx/EsyXFHB5SaoWAadlh/m
-	6gGaBIyYlORZGRNMyGjg==;
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
+	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=WXWBKAgXGMmyz29yV30CIJ6Z7o4fWmNYJ/Q6QI1qDRA=; b=NaW
+	/tHZvuRy8aY3xPzuOgvyZUeQLmJ8EaumKU+h2AECOyFzabss5jdCCQ112aSYI3wADqpmbHuGOU8ho
+	wKhogxLNTblvcjQOu/PhYzMkzcCBglyxTkmUMzhvMf5qDYxGot/G6j4svJvbLMpqkXpRl9y2a9pov
+	sE254WF9lJLc4U/QWKsjNfKU2TsfzkxUpPU99gMgDrORkJYok6pXi8WIZvhNOhgb5kdP+tYOt43tG
+	1wQlQ5tNytKQL8FlveQFHZoZK2tn1i6ycY7bvapNUK2a5D2OYzXHybCXAX63OyiMWdSTqMCMBm4T4
+	3Q129bKxP5r7yW5Vhx1siDnYySVjrig==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1igSZO-0002tC-R6; Sun, 15 Dec 2019 12:00:18 +0000
-Received: from mail-io1-xd41.google.com ([2607:f8b0:4864:20::d41])
+	id 1igY3Z-0003jn-Oq; Sun, 15 Dec 2019 17:51:49 +0000
+Received: from mail-pj1-x1041.google.com ([2607:f8b0:4864:20::1041])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1igSZK-0002rg-DB; Sun, 15 Dec 2019 12:00:15 +0000
-Received: by mail-io1-xd41.google.com with SMTP id z193so540182iof.1;
- Sun, 15 Dec 2019 04:00:14 -0800 (PST)
+ id 1igY3G-0003UW-5t; Sun, 15 Dec 2019 17:51:31 +0000
+Received: by mail-pj1-x1041.google.com with SMTP id w23so1972220pjd.2;
+ Sun, 15 Dec 2019 09:51:29 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=U32Ya4ZtyKRe0g31iyaOrg9bNIbVTfXKPEbGivDkS10=;
- b=OSen5Gcvcdj9lEzBZB15Tn6QiRTI9MWlO/rPN49bMq0K83mAgq18VHkzQ7zVlPrjML
- gszdUGt2eF1kyYhDFF+GP7FeP1RPEnPsfH7wY9I095RPAYClYjywGRCaSteDEqN+zK62
- IKehzG864B+NpPZLPI1yH3m0V9J02rnTKvgIZxkccK3VNzHuy++Doo+IV2cQKWeFpyGv
- sOw1S4YJdTl9C8RnFpAVjILHeJMichKHxPUSI98wDRt0UmqQkWCWFLtA7q2g+jukhVzx
- EloylsApJVNnAMvbYem3m+vszDWIyz4reg4yOYbOHfUjbut1/oBMn1uR67AGYca3deCP
- DSrg==
+ h=from:to:cc:subject:date:message-id;
+ bh=z1jBRqifD9uwR57sxHEm4IG5SvaRCOY1FJ5LXadeqP4=;
+ b=LD9i0Sz6s6XSzCMt0KxGg8AkP/88Gm29YgxJKl/PIqRJ29V1U4k/Q1BcW2j8KkXiun
+ oYLm5Oj4XhSh35ez2t6kOADhXR1IKCNrHdK9Tq2IoifZqzGaoUiYkTDOgVZVjEzxGucW
+ t0yMqBvCvtGLkldgOTt6EEETTw6diR2m8JWhrciDiz8t0r6oWa5FoiiSjOFWVrwjKVO1
+ 3SculOLAtHzrOynoET+zghiGzyI5dGzUZlCNZ+YHnez/tYiMyMo2tB4pHUN2jVptR1lv
+ GPXHLuxviOJVUKzri0wyTsmwSmsOOjY0g7WapaSEIWGMR1TvUxQrPW9ddrdvJOARMD1R
+ OveQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=U32Ya4ZtyKRe0g31iyaOrg9bNIbVTfXKPEbGivDkS10=;
- b=Ox9khvQK28UlWRysi1owebpg6ISPT+U3GDWX7ukkmZcLxxsE4usOyJP1GFm0i5X6yW
- zTH4kZvU/rkK5sEXjDmYxZ21k64uD/+Gg3CjLvJ9guqrqvDc/7J1aq0PzNidiBWe18sJ
- 7kSFK9d6tGVSiGO3J3Rpqdurm6TeMfaoU7QoeI2Kwp4qDc63MqmshSTke3NSzE7olekf
- qH0emWXgpkea84AY9C43yzlYOUxC4jaNQQEFFSPSNY3cV/xGwCcqyf5c2/fw0rkLyDcA
- 0He9kUW0gAXiHQpE+YjNBETq88X0PHqqF9bFMynizvF9JEzSy/lBqi8Y5b7RkHV2zlmE
- 7U3Q==
-X-Gm-Message-State: APjAAAUkSBYVRbYlE56IpKsgHaFadhGbo0/WknU46e29g8A16us6o76J
- KOnxobrnG+PEOeYzkzzitiDGVGhFtAcfzmamWkE=
-X-Google-Smtp-Source: APXvYqytWwvnLfUD+171nhXHDbJqlTikV21tQNc2dQdQlOI6X6lJ/eLQFLTNTro7mQyhFx4wzdvzbYn6q+tytdyDIA8=
-X-Received: by 2002:a5d:9f05:: with SMTP id q5mr14678305iot.295.1576411213379; 
- Sun, 15 Dec 2019 04:00:13 -0800 (PST)
-MIME-Version: 1.0
-References: <20191214175447.25482-1-tiny.windzz@gmail.com>
- <20191214175447.25482-10-tiny.windzz@gmail.com>
- <20191215104824.658889d3@why>
-In-Reply-To: <20191215104824.658889d3@why>
-From: Frank Lee <tiny.windzz@gmail.com>
-Date: Sun, 15 Dec 2019 20:00:01 +0800
-Message-ID: <CAEExFWtgXt2pGM1fGfmxNdk_7S_53gnhN0-bProWA4-vOaNN3w@mail.gmail.com>
-Subject: Re: [PATCH 10/10] soc: qcom: convert to devm_platform_ioremap_resource
-To: Marc Zyngier <maz@kernel.org>
+ h=x-gm-message-state:from:to:cc:subject:date:message-id;
+ bh=z1jBRqifD9uwR57sxHEm4IG5SvaRCOY1FJ5LXadeqP4=;
+ b=p6sWZSASE4FLBEiE9PL7x5x8SZe0hKpgCdengkS7Sx/kok10zyKa9wwbL9fTnYO1jD
+ v9pmwAqP0YRLC8auGju2p9cp50HSxCZUKcH01+iim6KEzqvUkiWTJJaeTjqhI6pC+mPg
+ pQf14m8+JjXZiDZR3cIx0nGs3ulaMuFCLZRDJ+/+FCpWT6by1zn7gTnirdT3yadkWoMk
+ pg6SfHZmImSwo61NpAeZAfuKvcFELkv6BmfzkBVVP+CkaJFq6COmZzup5rm2d0dT8deq
+ gcJJcCdSgMHvHzOOURSTr8/PNP9//RliQen0JWBe2PxxaKYii24fS6zv3XtqNabFYs1Z
+ vcwA==
+X-Gm-Message-State: APjAAAX1WYRb0Hbjz1iE0ZobXTPYWoZP0KkLvkKvBUpJILHOQlbeKzsU
+ txM9OGr2/2ndVstu3BwpN+Q=
+X-Google-Smtp-Source: APXvYqzWCydMHykUpEys8y8YK57hVRHOWOHSqS0Ui0zvmzlWq1mTCq8BkWpBBEPrjneRePs+lPMvMg==
+X-Received: by 2002:a17:902:59c9:: with SMTP id
+ d9mr11602644plj.184.1576432289298; 
+ Sun, 15 Dec 2019 09:51:29 -0800 (PST)
+Received: from localhost ([2001:19f0:6001:12c8:5400:2ff:fe72:6403])
+ by smtp.gmail.com with ESMTPSA id q6sm19291374pfl.140.2019.12.15.09.51.27
+ (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
+ Sun, 15 Dec 2019 09:51:28 -0800 (PST)
+From: Yangtao Li <tiny.windzz@gmail.com>
+To: manuel.lauss@gmail.com, ulf.hansson@linaro.org, khilman@baylibre.com,
+ chaotian.jing@mediatek.com, matthias.bgg@gmail.com, nico@fluxnic.net,
+ adrian.hunter@intel.com, agross@kernel.org, bjorn.andersson@linaro.org,
+ ben-linux@fluff.org, jh80.chung@samsung.com, vireshk@kernel.org,
+ mripard@kernel.org, wens@csie.org, wsa+renesas@sang-engineering.com,
+ gregkh@linuxfoundation.org, kstewart@linuxfoundation.org,
+ yamada.masahiro@socionext.com, tglx@linutronix.de, allison@lohutok.net,
+ yoshihiro.shimoda.uh@renesas.com, geert+renesas@glider.be,
+ linus.walleij@linaro.org
+Subject: [PATCH 01/13] mmc: sunxi-mmc: convert to
+ devm_platform_ioremap_resource
+Date: Sun, 15 Dec 2019 17:51:08 +0000
+Message-Id: <20191215175120.3290-1-tiny.windzz@gmail.com>
+X-Mailer: git-send-email 2.17.1
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191215_040014_475285_C43D3923 
-X-CRM114-Status: GOOD (  14.64  )
+X-CRM114-CacheID: sfid-20191215_095130_245755_D98DBBC1 
+X-CRM114-Status: UNSURE (   9.64  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:d41 listed in]
- [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
  provider (tiny.windzz[at]gmail.com)
@@ -92,76 +99,40 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: john@phrozen.org, Linux Kernel Mailing List <linux-kernel@vger.kernel.org>,
- linux-samsung-soc@vger.kernel.org, khilman@baylibre.com, krzk@kernel.org,
- Chen-Yu Tsai <wens@csie.org>, agross@kernel.org, linux-arm-msm@vger.kernel.org,
- Maxime Ripard <mripard@kernel.org>, khalasa@piap.pl, ssantosh@kernel.org,
- Matthias Brugger <matthias.bgg@gmail.com>, linux-amlogic@lists.infradead.org,
- bjorn.andersson@linaro.org, Linux ARM <linux-arm-kernel@lists.infradead.org>,
- shawnguo@kernel.org, linux-mips@vger.kernel.org, leoyang.li@nxp.com,
- kgene@kernel.org, linux-mediatek@lists.infradead.org, jun.nie@linaro.org,
- linuxppc-dev@lists.ozlabs.org
+Cc: Yangtao Li <tiny.windzz@gmail.com>, linux-arm-msm@vger.kernel.org,
+ linux-mmc@vger.kernel.org, linux-kernel@vger.kernel.org,
+ linux-mediatek@lists.infradead.org, linux-amlogic@lists.infradead.org,
+ linux-arm-kernel@lists.infradead.org
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On Sun, Dec 15, 2019 at 6:48 PM Marc Zyngier <maz@kernel.org> wrote:
->
-> On Sat, 14 Dec 2019 17:54:47 +0000
-> Yangtao Li <tiny.windzz@gmail.com> wrote:
->
-> > Use devm_platform_ioremap_resource() to simplify code.
-> >
-> > Signed-off-by: Yangtao Li <tiny.windzz@gmail.com>
-> > ---
-> >  drivers/soc/qcom/llcc-qcom.c    | 7 +------
-> >  drivers/soc/qcom/qcom-geni-se.c | 4 +---
-> >  drivers/soc/qcom/qcom_aoss.c    | 4 +---
-> >  drivers/soc/qcom/qcom_gsbi.c    | 5 +----
-> >  drivers/soc/qcom/spm.c          | 4 +---
-> >  5 files changed, 5 insertions(+), 19 deletions(-)
-> >
-> > diff --git a/drivers/soc/qcom/llcc-qcom.c b/drivers/soc/qcom/llcc-qcom.c
-> > index 429b5a60a1ba..99e19df76889 100644
-> > --- a/drivers/soc/qcom/llcc-qcom.c
-> > +++ b/drivers/soc/qcom/llcc-qcom.c
-> > @@ -387,7 +387,6 @@ static int qcom_llcc_remove(struct platform_device *pdev)
-> >  static struct regmap *qcom_llcc_init_mmio(struct platform_device *pdev,
-> >               const char *name)
-> >  {
-> > -     struct resource *res;
-> >       void __iomem *base;
-> >       struct regmap_config llcc_regmap_config = {
-> >               .reg_bits = 32,
-> > @@ -396,11 +395,7 @@ static struct regmap *qcom_llcc_init_mmio(struct platform_device *pdev,
-> >               .fast_io = true,
-> >       };
-> >
-> > -     res = platform_get_resource_byname(pdev, IORESOURCE_MEM, name);
-> > -     if (!res)
-> > -             return ERR_PTR(-ENODEV);
-> > -
-> > -     base = devm_ioremap_resource(&pdev->dev, res);
-> > +     base = devm_platform_ioremap_resource(pdev, 0);
->
-> What guarantees do you have that entry 0 matches name?
+Use devm_platform_ioremap_resource() to simplify code.
 
-Yeah, this place is wrong. I intruduce another helper.
+Signed-off-by: Yangtao Li <tiny.windzz@gmail.com>
+---
+ drivers/mmc/host/sunxi-mmc.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
 
-https://lore.kernel.org/patchwork/patch/1165186/
+diff --git a/drivers/mmc/host/sunxi-mmc.c b/drivers/mmc/host/sunxi-mmc.c
+index d577a6b0ceae..f87d7967457f 100644
+--- a/drivers/mmc/host/sunxi-mmc.c
++++ b/drivers/mmc/host/sunxi-mmc.c
+@@ -1273,8 +1273,7 @@ static int sunxi_mmc_resource_request(struct sunxi_mmc_host *host,
+ 	if (ret)
+ 		return ret;
+ 
+-	host->reg_base = devm_ioremap_resource(&pdev->dev,
+-			      platform_get_resource(pdev, IORESOURCE_MEM, 0));
++	host->reg_base = devm_platform_ioremap_resource(pdev, 0);
+ 	if (IS_ERR(host->reg_base))
+ 		return PTR_ERR(host->reg_base);
+ 
+-- 
+2.17.1
 
-Thx,
-Yangtao
-
-
->
-> I find these changes pointless: they don't add much to the readability
-> or maintainability of the code, and instead introduce creative bugs.
->
->         M.
-> --
-> Jazz is not dead. It just smells funny...
 
 _______________________________________________
 linux-amlogic mailing list
