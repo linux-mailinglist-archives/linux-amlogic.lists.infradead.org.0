@@ -2,58 +2,87 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2EB5D1227C3
-	for <lists+linux-amlogic@lfdr.de>; Tue, 17 Dec 2019 10:36:00 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7536F1229BE
+	for <lists+linux-amlogic@lfdr.de>; Tue, 17 Dec 2019 12:20:44 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
-	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=gCmuGeXC/fFGCrlwQM7/sD7dOIIw6YNO8P8U47Iwn1w=; b=btCP15hLETZxt6K4rccFoG28m
-	sI/tccKjSLauR+THKEgmPr1ee2m0xB2eaUSEF5QZaX4o9bVMQd2Zy7SLwjzBaKR+357L/WFZVKZsK
-	BtHDTbt8ZYajG7q/mvH5zEbJEJZSSz+EuSm5xabD0ps62il/AQK9aNYiU0600heVBcxmkpWyinXYm
-	d2GB5gEp56MEfyYK4SoCgLg081lB77IoLVczbjhcfC4w9+0o7hfNOXynU2DB/YOVcFmreaJBDj86Y
-	Nc/Ne2xMTXCwqQA0F0tLNWsQpsFhcAKXdTQhBJbmtIT0zRvmc/J1dWLY/bT0AehWLvyNhEwGljTMf
-	Lz6uDK4hA==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=abtRn1OtCIJDF0NQ+dyrrVZRN6kAatrinhJtf0xcmKY=; b=BUGBGE4f24IiW+
+	+v6PHKBc1nei3gaeFnLcPAFzrPGUWLVLzvYAP4YEAwWT24y21EOUgHUAxJHxNojhMFFEV57WQG4rO
+	92w7fXj/UMTFknSMRlZ4+D4uN+A0oa3R4KiwjwSCuYILa71mhtKQKCkXjGuYIMHFGFDHsKmlZSHU3
+	PTwGkavBQSCjPLqgtiFnCvfLLLEbQuSzs2V+bPzac99oqcsziPnTkG6VcxtR0NyL5/vjzVYdxn1y9
+	RwckqDrvJ9+4YCJusyLXrBdwgemch7E72SJ7yBAbaoQI/pBmI96/OAOMEyIir4+dPxzITHvdwPjBR
+	gMKxQe5/cfROEzIurkyA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ih9Gn-0007Cq-Fh; Tue, 17 Dec 2019 09:35:57 +0000
-Received: from mail-sz.amlogic.com ([211.162.65.117])
+	id 1ihAu9-00064b-IV; Tue, 17 Dec 2019 11:20:41 +0000
+Received: from mail-wr1-x443.google.com ([2a00:1450:4864:20::443])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ih9GZ-00072F-CR; Tue, 17 Dec 2019 09:35:44 +0000
-Received: from [10.28.39.99] (10.28.39.99) by mail-sz.amlogic.com (10.28.11.5)
- with Microsoft SMTP Server (version=TLS1_2,
- cipher=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256) id 15.1.1591.10; Tue, 17 Dec
- 2019 17:36:17 +0800
-Subject: Re: [PATCH v4 3/6] clk: meson: eeclk: refactor eeclk common driver to
- support A1
-To: Jerome Brunet <jbrunet@baylibre.com>, Neil Armstrong
- <narmstrong@baylibre.com>
-References: <20191206074052.15557-1-jian.hu@amlogic.com>
- <20191206074052.15557-4-jian.hu@amlogic.com>
- <1j7e31lub4.fsf@starbuckisacylon.baylibre.com>
-From: Jian Hu <jian.hu@amlogic.com>
-Message-ID: <4cb9088c-bacb-ea3b-df43-103ce8902376@amlogic.com>
-Date: Tue, 17 Dec 2019 17:36:17 +0800
-User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:60.0) Gecko/20100101
- Thunderbird/60.9.1
+ id 1ihAtE-0004K3-Ue
+ for linux-amlogic@lists.infradead.org; Tue, 17 Dec 2019 11:19:48 +0000
+Received: by mail-wr1-x443.google.com with SMTP id g17so10878069wro.2
+ for <linux-amlogic@lists.infradead.org>; Tue, 17 Dec 2019 03:19:43 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=baylibre-com.20150623.gappssmtp.com; s=20150623;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=duai3FK28zjcbMhcUgDo5+KoH8DD1idmOoMVv7+EZuk=;
+ b=MNVwO8ywrt0h1JXjnsdrW+O8OXYN56KyyyVIoaZX6h5xzTjfuQUDr0LVOwD1H/fo5T
+ OXR9dT24ClnzOqZa/QdnnJUa9JmM0hvBbwQwNaqC7a/OJ3+gtJEaZhbf4OiIoy6zt6l+
+ Puha81qPBEjalyoA8QVPfOgvHkhxod0L+l0UXFbLolIMvNhKaQNnmelwu9uQnzWnvgX5
+ eERQeerUPmgnS7/CYRsDG9tm11trt+tdXxupTsf5jWXZeVnlyNbqrXn/dqDfdxFAQBBP
+ 53U8pDy2w6ShY+R+XOsmhnUzSsPiSbTUznDcs70bsiImmukPab6nAr3BJECrztRsBUlm
+ Qz6g==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=duai3FK28zjcbMhcUgDo5+KoH8DD1idmOoMVv7+EZuk=;
+ b=fYRywVXtY/Jox6gcyRzdqL6iBnxVK8eeRBVbo4ytWT9QRpmdjbXBT0jc2CW+vINakp
+ RpqHkrBUsiuDL/hwwIIW2v5u/eCUz/IGz6ZM0+TtbyriJu92qO/G6vYeNCVAxYO4oi7z
+ GSLoQ7LNZRLbH1Vxw/Fvis9rnsL3GstfavNh40JxopcftCZeB4ZE2bNpBrpRkz9ZA9kn
+ TdDLsZPfs1jelBmJGU5cyiJ0l7+ty1TTWmTgb2zw4D6Kb5AVEBSIrfe3LRtvLMVFe2Se
+ MGFcUW+dBVyq+ZRZ+KqCosNS5Aiv6byo4V702ogdkx22edUNXD2exy3n4puiOMYLx5lt
+ 6aLg==
+X-Gm-Message-State: APjAAAV3SkfEMwXlXTRiYsrjgALlg1wHO4/R9USeKm7alyV3SjqUuHS3
+ 4vgLQUMJ8kn/WGxdFDr6tVo4vA==
+X-Google-Smtp-Source: APXvYqwY0zFDEKcdmcPHfQP/ksC26XWoL66WRkLRg7/mXGwLIP3YEwBYo71PW13hSUDy/YYcWZBeig==
+X-Received: by 2002:a05:6000:1142:: with SMTP id
+ d2mr34345334wrx.253.1576581582072; 
+ Tue, 17 Dec 2019 03:19:42 -0800 (PST)
+Received: from bender.baylibre.local
+ (lfbn-nic-1-505-157.w90-116.abo.wanadoo.fr. [90.116.92.157])
+ by smtp.gmail.com with ESMTPSA id a184sm2713113wmf.29.2019.12.17.03.19.41
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Tue, 17 Dec 2019 03:19:41 -0800 (PST)
+From: Neil Armstrong <narmstrong@baylibre.com>
+To: mchehab@kernel.org,
+	hans.verkuil@cisco.com
+Subject: [PATCH v2 0/5] media: meson: vdec: Add VP9 decoding support
+Date: Tue, 17 Dec 2019 12:19:34 +0100
+Message-Id: <20191217111939.10387-1-narmstrong@baylibre.com>
+X-Mailer: git-send-email 2.22.0
 MIME-Version: 1.0
-In-Reply-To: <1j7e31lub4.fsf@starbuckisacylon.baylibre.com>
-Content-Language: en-US
-X-Originating-IP: [10.28.39.99]
-X-ClientProxiedBy: mail-sz.amlogic.com (10.28.11.5) To mail-sz.amlogic.com
- (10.28.11.5)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191217_013543_424062_FD456B31 
-X-CRM114-Status: GOOD (  15.55  )
+X-CRM114-CacheID: sfid-20191217_031944_989524_B2B9FB8A 
+X-CRM114-Status: UNSURE (   9.69  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:443 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -65,145 +94,186 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: Rob Herring <robh@kernel.org>, Victor Wan <victor.wan@amlogic.com>,
- Jianxin Pan <jianxin.pan@amlogic.com>,
- Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
- Kevin Hilman <khilman@baylibre.com>,
- Michael Turquette <mturquette@baylibre.com>, linux-kernel@vger.kernel.org,
- Stephen Boyd <sboyd@kernel.org>, Qiufang Dai <qiufang.dai@amlogic.com>,
- Chandle Zou <chandle.zou@amlogic.com>, linux-amlogic@lists.infradead.org,
- linux-clk@vger.kernel.org, linux-arm-kernel@lists.infradead.org
+Cc: linux-amlogic@lists.infradead.org, linux-media@vger.kernel.org,
+ linux-kernel@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
+ Neil Armstrong <narmstrong@baylibre.com>
+Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
-Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
+Hello,
 
+This patchset aims to bring VP9 decoding support to Amlogic GXL, G12A & SM1
+platforms for the amlogic stateful video decoder driver.
 
-On 2019/12/12 18:19, Jerome Brunet wrote:
-> 
-> On Fri 06 Dec 2019 at 08:40, Jian Hu <jian.hu@amlogic.com> wrote:
-> 
->> Introduce a common probe function for A1 series, the way to get
->> regmap is different between A1 series and the previous series.
->> The register region is only for one clock driver, the function of
->> meson_eeclkc_probe is not fit for A1, So it is necessary to
->> introduce a new function.
-> 
-> Please drop this patch
-> 
-> #1 you are patching the EE driver for something that is no longer an EE
->   driver
-> #2 Let's get the basics right, you can move (re)factoring afterward
-> 
-> Your probe function is simple enough. Just properly write it in each
-> driver for now.
-OK, I will realize it in each driver.
-> 
->>
->> Signed-off-by: Jian Hu <jian.hu@amlogic.com>
->> ---
->>   drivers/clk/meson/meson-eeclk.c | 59 +++++++++++++++++++++++++++------
->>   drivers/clk/meson/meson-eeclk.h |  1 +
->>   2 files changed, 50 insertions(+), 10 deletions(-)
->>
->> diff --git a/drivers/clk/meson/meson-eeclk.c b/drivers/clk/meson/meson-eeclk.c
->> index a7cb1e7aedc4..12ceb1caabd8 100644
->> --- a/drivers/clk/meson/meson-eeclk.c
->> +++ b/drivers/clk/meson/meson-eeclk.c
->> @@ -13,25 +13,37 @@
->>   #include "clk-regmap.h"
->>   #include "meson-eeclk.h"
->>   
->> -int meson_eeclkc_probe(struct platform_device *pdev)
->> +static struct regmap_config clkc_regmap_config = {
->> +	.reg_bits       = 32,
->> +	.val_bits       = 32,
->> +	.reg_stride     = 4,
->> +};
->> +
->> +static struct regmap *meson_regmap_resource(struct platform_device *pdev)
->> +{
->> +	struct resource *res;
->> +	void __iomem *base;
->> +	struct device *dev = &pdev->dev;
->> +
->> +	res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
->> +
->> +	base = devm_ioremap_resource(dev, res);
->> +	if (IS_ERR(base))
->> +		return ERR_CAST(base);
->> +
->> +	return devm_regmap_init_mmio(dev, base, &clkc_regmap_config);
->> +}
->> +
->> +static int meson_common_probe(struct platform_device *pdev, struct regmap *map)
->>   {
->>   	const struct meson_eeclkc_data *data;
->>   	struct device *dev = &pdev->dev;
->> -	struct regmap *map;
->>   	int ret, i;
->>   
->>   	data = of_device_get_match_data(dev);
->>   	if (!data)
->>   		return -EINVAL;
->>   
->> -	/* Get the hhi system controller node */
->> -	map = syscon_node_to_regmap(of_get_parent(dev->of_node));
->> -	if (IS_ERR(map)) {
->> -		dev_err(dev,
->> -			"failed to get HHI regmap\n");
->> -		return PTR_ERR(map);
->> -	}
->> -
->>   	if (data->init_count)
->>   		regmap_multi_reg_write(map, data->init_regs, data->init_count);
->>   
->> @@ -54,3 +66,30 @@ int meson_eeclkc_probe(struct platform_device *pdev)
->>   	return devm_of_clk_add_hw_provider(dev, of_clk_hw_onecell_get,
->>   					   data->hw_onecell_data);
->>   }
->> +
->> +int meson_eeclkc_probe(struct platform_device *pdev)
->> +{
->> +	struct device *dev = &pdev->dev;
->> +	struct regmap *map;
->> +
->> +	/* Get the hhi system controller node */
->> +	map = syscon_node_to_regmap(of_get_parent(dev->of_node));
->> +	if (IS_ERR(map)) {
->> +		dev_err(dev,
->> +			"failed to get HHI regmap\n");
->> +		return PTR_ERR(map);
->> +	}
->> +
->> +	return meson_common_probe(pdev, map);
->> +}
->> +
->> +int meson_clkc_probe(struct platform_device *pdev)
->> +{
->> +	struct regmap *map;
->> +
->> +	map = meson_regmap_resource(pdev);
->> +	if (IS_ERR(map))
->> +		return PTR_ERR(map);
->> +
->> +	return meson_common_probe(pdev, map);
->> +}
->> diff --git a/drivers/clk/meson/meson-eeclk.h b/drivers/clk/meson/meson-eeclk.h
->> index 77316207bde1..a2e9ab3a4f6b 100644
->> --- a/drivers/clk/meson/meson-eeclk.h
->> +++ b/drivers/clk/meson/meson-eeclk.h
->> @@ -21,5 +21,6 @@ struct meson_eeclkc_data {
->>   };
->>   
->>   int meson_eeclkc_probe(struct platform_device *pdev);
->> +int meson_clkc_probe(struct platform_device *pdev);
->>   
->>   #endif /* __MESON_CLKC_H */
-> 
-> .
-> 
+With this, it passes v4l2-compliance with streaming on Amlogic G12A and
+Amlogic SM1 SoCs successfully using the stream at [1] with a fixed
+pyv4l2compliance script for VP9 at [2].
+
+The original script kept the IVF headers in the stream, confusing the
+decoder. The fixed script only extracts the payload from the IVF container.
+
+The decoder has been tested using the Google CTS TestVectorsIttiam VP9 yuv420
+samples and the VP9 Decoder Performance streams at [5], decoding all streams from
+Profile 0 and 2 up to Level 4.1, with 10bit downsampling to 8bit.
+
+This patchset depends on :
+- H.264 and compliance at [4]
+
+Changes since v2 at [3]:
+- Fixed compliance for delta frame resize, but proper ref keeping is broken
+- Added warns for delta frame resize, to be fixed in a following patchset
+- Added VP9 probabilities parsing and transformation support to decore the VP9 performance streams
+- Fixed refs keeping, avoid deleting necessary refs for next frame
+- Properly used the kernel clamp_val() macros
+- Zeroed the workspace to avoid refs handling glitches
+- Add lock around the flush & stop to avoid race between IRQ and drain/stop
+
+[1] https://github.com/superna9999/pyv4l2compliance/raw/tests/output/Jellyfish_1080_10s_5MB.vp9.hdr
+[2] https://github.com/superna9999/pyv4l2compliance
+[3] https://lore.kernel.org/linux-media/
+[4] https://lore.kernel.org/linux-media/20191126093733.32404-1-narmstrong@baylibre.com
+[5] https://www.webmproject.org/vp9/levels/
+
+The compliance log is:
+# v4l2-compliance --stream-from-hdr Jellyfish_1080_10s_5MB.vp9.hdr -s 200
+v4l2-compliance SHA: 7ead0e1856b89f2e19369af452bb03fd0cd16793, 64 bits
+
+Compliance test for meson-vdec device /dev/video0:
+
+Driver Info:
+	Driver name      : meson-vdec
+	Card type        : Amlogic Video Decoder
+	Bus info         : platform:meson-vdec
+	Driver version   : 5.5.0
+	Capabilities     : 0x84204000
+		Video Memory-to-Memory Multiplanar
+		Streaming
+		Extended Pix Format
+		Device Capabilities
+	Device Caps      : 0x04204000
+		Video Memory-to-Memory Multiplanar
+		Streaming
+		Extended Pix Format
+	Detected Stateful Decoder
+
+Required ioctls:
+	test VIDIOC_QUERYCAP: OK
+
+Allow for multiple opens:
+	test second /dev/video0 open: OK
+	test VIDIOC_QUERYCAP: OK
+	test VIDIOC_G/S_PRIORITY: OK
+	test for unlimited opens: OK
+
+Debug ioctls:
+	test VIDIOC_DBG_G/S_REGISTER: OK (Not Supported)
+	test VIDIOC_LOG_STATUS: OK (Not Supported)
+
+Input ioctls:
+	test VIDIOC_G/S_TUNER/ENUM_FREQ_BANDS: OK (Not Supported)
+	test VIDIOC_G/S_FREQUENCY: OK (Not Supported)
+	test VIDIOC_S_HW_FREQ_SEEK: OK (Not Supported)
+	test VIDIOC_ENUMAUDIO: OK (Not Supported)
+	test VIDIOC_G/S/ENUMINPUT: OK (Not Supported)
+	test VIDIOC_G/S_AUDIO: OK (Not Supported)
+	Inputs: 0 Audio Inputs: 0 Tuners: 0
+
+Output ioctls:
+	test VIDIOC_G/S_MODULATOR: OK (Not Supported)
+	test VIDIOC_G/S_FREQUENCY: OK (Not Supported)
+	test VIDIOC_ENUMAUDOUT: OK (Not Supported)
+	test VIDIOC_G/S/ENUMOUTPUT: OK (Not Supported)
+	test VIDIOC_G/S_AUDOUT: OK (Not Supported)
+	Outputs: 0 Audio Outputs: 0 Modulators: 0
+
+Input/Output configuration ioctls:
+	test VIDIOC_ENUM/G/S/QUERY_STD: OK (Not Supported)
+	test VIDIOC_ENUM/G/S/QUERY_DV_TIMINGS: OK (Not Supported)
+	test VIDIOC_DV_TIMINGS_CAP: OK (Not Supported)
+	test VIDIOC_G/S_EDID: OK (Not Supported)
+
+Control ioctls:
+	test VIDIOC_QUERY_EXT_CTRL/QUERYMENU: OK
+	test VIDIOC_QUERYCTRL: OK
+	test VIDIOC_G/S_CTRL: OK
+	test VIDIOC_G/S/TRY_EXT_CTRLS: OK
+	test VIDIOC_(UN)SUBSCRIBE_EVENT/DQEVENT: OK
+	test VIDIOC_G/S_JPEGCOMP: OK (Not Supported)
+	Standard Controls: 2 Private Controls: 0
+
+Format ioctls:
+	test VIDIOC_ENUM_FMT/FRAMESIZES/FRAMEINTERVALS: OK
+	test VIDIOC_G/S_PARM: OK (Not Supported)
+	test VIDIOC_G_FBUF: OK (Not Supported)
+	test VIDIOC_G_FMT: OK
+	test VIDIOC_TRY_FMT: OK
+	test VIDIOC_S_FMT: OK
+	test VIDIOC_G_SLICED_VBI_CAP: OK (Not Supported)
+	test Cropping: OK (Not Supported)
+	test Composing: OK (Not Supported)
+	test Scaling: OK (Not Supported)
+
+Codec ioctls:
+	test VIDIOC_(TRY_)ENCODER_CMD: OK (Not Supported)
+	test VIDIOC_G_ENC_INDEX: OK (Not Supported)
+	test VIDIOC_(TRY_)DECODER_CMD: OK
+
+Buffer ioctls:
+	test VIDIOC_REQBUFS/CREATE_BUFS/QUERYBUF: OK
+	test VIDIOC_EXPBUF: OK
+	test Requests: OK (Not Supported)
+
+Test input 0:
+
+Streaming ioctls:
+	test read/write: OK (Not Supported)
+	test blocking wait: OK
+	Video Capture Multiplanar: Captured 198 buffers   
+	test MMAP (select): OK
+	Video Capture Multiplanar: Captured 198 buffers   
+	test MMAP (epoll): OK
+	test USERPTR (select): OK (Not Supported)
+	test DMABUF: Cannot test, specify --expbuf-device
+
+Total for meson-vdec device /dev/video0: 49, Succeeded: 49, Failed: 0, Warnings: 0
+
+Maxime Jourdan (4):
+  media: meson: vdec: add helpers for lossless framebuffer compression
+    buffers
+  media: meson: vdec: add common HEVC decoder support
+  media: meson: vdec: add VP9 input support
+  media: meson: vdec: add VP9 decoder support
+
+Neil Armstrong (1):
+  media: meson: vdec: align stride on 32 bytes
+
+ drivers/staging/media/meson/vdec/Makefile     |    4 +-
+ .../media/meson/vdec/codec_hevc_common.c      |  285 +++
+ .../media/meson/vdec/codec_hevc_common.h      |   77 +
+ drivers/staging/media/meson/vdec/codec_vp9.c  | 2139 +++++++++++++++++
+ drivers/staging/media/meson/vdec/codec_vp9.h  |   13 +
+ drivers/staging/media/meson/vdec/esparser.c   |  142 +-
+ drivers/staging/media/meson/vdec/hevc_regs.h  |  218 ++
+ drivers/staging/media/meson/vdec/vdec.c       |   15 +-
+ .../staging/media/meson/vdec/vdec_helpers.c   |   35 +-
+ .../staging/media/meson/vdec/vdec_helpers.h   |    4 +
+ drivers/staging/media/meson/vdec/vdec_hevc.c  |  231 ++
+ drivers/staging/media/meson/vdec/vdec_hevc.h  |   13 +
+ .../staging/media/meson/vdec/vdec_platform.c  |   38 +
+ 13 files changed, 3201 insertions(+), 13 deletions(-)
+ create mode 100644 drivers/staging/media/meson/vdec/codec_hevc_common.c
+ create mode 100644 drivers/staging/media/meson/vdec/codec_hevc_common.h
+ create mode 100644 drivers/staging/media/meson/vdec/codec_vp9.c
+ create mode 100644 drivers/staging/media/meson/vdec/codec_vp9.h
+ create mode 100644 drivers/staging/media/meson/vdec/hevc_regs.h
+ create mode 100644 drivers/staging/media/meson/vdec/vdec_hevc.c
+ create mode 100644 drivers/staging/media/meson/vdec/vdec_hevc.h
+
+-- 
+2.22.0
+
 
 _______________________________________________
 linux-amlogic mailing list
