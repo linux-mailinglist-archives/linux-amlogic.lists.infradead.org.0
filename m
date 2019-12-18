@@ -2,51 +2,53 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E6E71124053
-	for <lists+linux-amlogic@lfdr.de>; Wed, 18 Dec 2019 08:30:47 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 25EDA124074
+	for <lists+linux-amlogic@lfdr.de>; Wed, 18 Dec 2019 08:37:46 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
 	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
 	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
 	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
 	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=cXOe42U3kW7Dc6LakkquJpTMRD5kL+D9ggOpqpaaVQ4=; b=ER3bwJOJO/FOh5AyXdjRVmo/N
-	Ml9g0SPB3tks1FSPTMfG4YpeEGUVxGjPBMpDsbF9ELPU+3KgmYuBBOOrhCYJg3LXsgzsHUn+2D2+Z
-	puWQxsDTy2w8bX0f3npg1unuT4etLdsi7BSFXn4x5fJGOluivfk/mUChlry04JBU4P43MrRhmN5OW
-	nqOLKke+xADjAcYv3zxCFUPTgZreTjWAGBDl5eORCAC1gP5M893y2ISUWghOBf/SFy7UNB72t8V6P
-	ptg7xQbgud6JH9Mon6Z+/CSsf2ZB3Q0jkRCu5CeXDN1XLhSiigfIAaSDjwN4aYh31PPnr7UrOZgbh
-	gj6kLgl7g==;
+	 bh=AOn/uvidp5G9yik755VTjLu0w9NaEUjwgg/FPw6H5g4=; b=iA6J9KPS2YJDz2/DgWU6pbgrH
+	SUTy9c/Cnr/grb4hMqH7bOueS9u+UpgdZA/i3xy0UhGpSTyxpq+J5lzKIXBsUBPeusGjAJvJjS1J4
+	4RAwdOoyLQdF2xYyX7AARr/r+Dn1gpQOPVuBgxuDhKwvChPdKnauiqClfWXeqreK5wnuHjSI1gL+e
+	nIcfh8tH8EsTnYizy8TTGO20ljTUm1bedzsy6wWsELnnPmJlsjKfp6ewzHwoDqIlD/IMd+3T+Ewzh
+	W518UiEhAa/zUICYPLGMoafr1BdlLrz4GRIeDCs6s2UfpDycy9xrmZ8bcBJ4LK+AczwZTrJnlF0m4
+	/daPBuF7Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ihTnB-0001KG-KU; Wed, 18 Dec 2019 07:30:45 +0000
+	id 1ihTtv-0003so-Is; Wed, 18 Dec 2019 07:37:43 +0000
 Received: from mail-sz.amlogic.com ([211.162.65.117])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ihTmo-0008Lb-OB; Wed, 18 Dec 2019 07:30:24 +0000
-Received: from [10.28.39.99] (10.28.39.99) by mail-sz.amlogic.com (10.28.11.5)
- with Microsoft SMTP Server (version=TLS1_2,
+ id 1ihTtZ-0003PJ-WC; Wed, 18 Dec 2019 07:37:27 +0000
+Received: from [10.28.19.135] (10.28.19.135) by mail-sz.amlogic.com
+ (10.28.11.5) with Microsoft SMTP Server (version=TLS1_2,
  cipher=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256) id 15.1.1591.10; Wed, 18 Dec
- 2019 15:30:40 +0800
-Subject: Re: [PATCH 1/2] dt-bindings: clock: meson: add A1 clock controller
- bindings
-To: Rob Herring <robh@kernel.org>
-References: <1569411888-98116-1-git-send-email-jian.hu@amlogic.com>
- <1569411888-98116-2-git-send-email-jian.hu@amlogic.com>
- <CAL_JsqL8r-8J_bSaQax3cJkOUL8D7P+6_PcCqaC1k8=zS18moQ@mail.gmail.com>
-From: Jian Hu <jian.hu@amlogic.com>
-Message-ID: <27cd846b-fee9-da50-baf5-1bf2a9fddc17@amlogic.com>
-Date: Wed, 18 Dec 2019 15:30:39 +0800
+ 2019 15:37:49 +0800
+Subject: Re: [PATCH v5 2/4] dt-bindings: watchdog: add new binding for meson
+ secure watchdog
+To: Guenter Roeck <linux@roeck-us.net>, Martin Blumenstingl
+ <martin.blumenstingl@googlemail.com>, Rob Herring <robh+dt@kernel.org>
+References: <1576153187-28378-1-git-send-email-xingyu.chen@amlogic.com>
+ <1576153187-28378-3-git-send-email-xingyu.chen@amlogic.com>
+ <CAFBinCBHLqgPExPsVaSWdSOr0Oj-jeYa4Z82U-pJ=fS+D1wGnA@mail.gmail.com>
+ <f7b0afe7-e317-2422-de7e-878837f9f238@amlogic.com>
+ <a8f5ab1d-264c-5b2c-e72b-3774b9f44c22@roeck-us.net>
+From: Xingyu Chen <xingyu.chen@amlogic.com>
+Message-ID: <1da513d7-20e1-726a-dcc4-952cbfbbe63a@amlogic.com>
+Date: Wed, 18 Dec 2019 15:37:49 +0800
 User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:60.0) Gecko/20100101
  Thunderbird/60.9.1
 MIME-Version: 1.0
-In-Reply-To: <CAL_JsqL8r-8J_bSaQax3cJkOUL8D7P+6_PcCqaC1k8=zS18moQ@mail.gmail.com>
-Content-Language: en-US
-X-Originating-IP: [10.28.39.99]
+In-Reply-To: <a8f5ab1d-264c-5b2c-e72b-3774b9f44c22@roeck-us.net>
+Content-Language: en-GB
+X-Originating-IP: [10.28.19.135]
 X-ClientProxiedBy: mail-sz.amlogic.com (10.28.11.5) To mail-sz.amlogic.com
  (10.28.11.5)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191217_233023_037571_B2BEC08E 
-X-CRM114-Status: UNSURE (   9.99  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20191217_233723_274484_D775EAE7 
+X-CRM114-Status: GOOD (  14.84  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -65,58 +67,64 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, Jianxin Pan <jianxin.pan@amlogic.com>,
- Neil Armstrong <narmstrong@baylibre.com>,
- Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
- Kevin Hilman <khilman@baylibre.com>,
- Michael Turquette <mturquette@baylibre.com>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- Stephen Boyd <sboyd@kernel.org>, Qiufang Dai <qiufang.dai@amlogic.com>,
- linux-amlogic@lists.infradead.org, linux-clk <linux-clk@vger.kernel.org>,
- "moderated list:ARM/FREESCALE IMX / MXC ARM
- ARCHITECTURE" <linux-arm-kernel@lists.infradead.org>,
- Jerome Brunet <jbrunet@baylibre.com>
-Content-Transfer-Encoding: 7bit
-Content-Type: text/plain; charset="us-ascii"; Format="flowed"
+Cc: Qianggui Song <qianggui.song@amlogic.com>, devicetree@vger.kernel.org,
+ linux-watchdog@vger.kernel.org, Jianxin Pan <jianxin.pan@amlogic.com>,
+ Neil Armstrong <narmstrong@baylibre.com>, Kevin Hilman <khilman@baylibre.com>,
+ linux-kernel@vger.kernel.org, Jian Hu <jian.hu@amlogic.com>,
+ linux-amlogic@lists.infradead.org, Wim Van Sebroeck <wim@linux-watchdog.org>,
+ linux-arm-kernel@lists.infradead.org, Jerome Brunet <jbrunet@baylibre.com>
+Content-Transfer-Encoding: base64
+Content-Type: text/plain; charset="utf-8"; Format="flowed"
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Hi Rob
-
-Thanks for your review
-
-On 2019/9/28 4:10, Rob Herring wrote:
-> On Wed, Sep 25, 2019 at 6:45 AM Jian Hu <jian.hu@amlogic.com> wrote:
->>
->> Add the documentation to support Amlogic A1 clock driver,
->> and add A1 clock controller bindings.
->>
->> Signed-off-by: Jian Hu <jian.hu@amlogic.com>
->> Signed-off-by: Jianxin Pan <jianxin.pan@amlogic.com>
->> ---
->>   .../devicetree/bindings/clock/amlogic,a1-clkc.yaml |  65 +++++++++++++
->>   include/dt-bindings/clock/a1-clkc.h                | 102 +++++++++++++++++++++
->>   2 files changed, 167 insertions(+)
->>   create mode 100644 Documentation/devicetree/bindings/clock/amlogic,a1-clkc.yaml
->>   create mode 100644 include/dt-bindings/clock/a1-clkc.h
->>
->> diff --git a/Documentation/devicetree/bindings/clock/amlogic,a1-clkc.yaml b/Documentation/devicetree/bindings/clock/amlogic,a1-clkc.yaml
->> new file mode 100644
->> index 0000000..f012eb2
->> --- /dev/null
->> +++ b/Documentation/devicetree/bindings/clock/amlogic,a1-clkc.yaml
->> @@ -0,0 +1,65 @@
->> +/* SPDX-License-Identifier: (GPL-2.0+ OR MIT) */
-> 
-> (GPL-2.0-only OR BSD-2-Clause) please.
-> 
-Sorry, I missed your reply. I will change it in next version v5.
-> Rob
-> 
-> .
-> 
-
-_______________________________________________
-linux-amlogic mailing list
-linux-amlogic@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-amlogic
+SGksIEd1ZW50ZXIgTWFydGluCgpPbiAyMDE5LzEyLzE2IDIxOjMwLCBHdWVudGVyIFJvZWNrIHdy
+b3RlOgo+IE9uIDEyLzE1LzE5IDEwOjAzIFBNLCBYaW5neXUgQ2hlbiB3cm90ZToKPj4gSGksIE1h
+cnRpbgo+Pgo+PiBTb3JyeSBmb3IgdGhlIGxhdGUgcmVwbHkuCj4+Cj4+IE9uIDIwMTkvMTIvMTMg
+NDowNSwgTWFydGluIEJsdW1lbnN0aW5nbCB3cm90ZToKPj4+IEhpIFhpbmd5dSBhbmQgUm9iLAo+
+Pj4KPj4+IE9uIFRodSwgRGVjIDEyLCAyMDE5IGF0IDE6MjAgUE0gWGluZ3l1IENoZW4gCj4+PiA8
+eGluZ3l1LmNoZW5AYW1sb2dpYy5jb20+IHdyb3RlOgo+Pj4gWy4uLl0KPj4+PiArZXhhbXBsZXM6
+Cj4+Pj4gK8KgIC0gfAo+Pj4+ICvCoMKgwqAgd2F0Y2hkb2cgewo+Pj4+ICvCoMKgwqDCoMKgwqDC
+oMKgwqAgY29tcGF0aWJsZSA9ICJhbWxvZ2ljLG1lc29uLXNlYy13ZHQiOwo+Pj4+ICvCoMKgwqDC
+oMKgwqDCoMKgwqAgdGltZW91dC1zZWMgPSA8NjA+Owo+Pj4+ICvCoMKgwqAgfTsKPj4+IGluIHYz
+IG9mIHRoaXMgcGF0Y2ggUm9iIGNvbW1lbnRlZCB0aGF0IHRoZXJlIHNob3VsZG4ndCBiZSBhbiBP
+RiBub2RlCj4+PiBpZiB0aGVyZSBhcmUgbm8gYWRkaXRpb25hbCBwcm9wZXJ0aWVzCj4+PiB3aXRo
+IHRpbWVvdXQtc2VjIHRoZXJlJ3Mgbm93IGFuIGFkZGl0aW9uYWwgcHJvcGVydHkgc28gbXkKPj4+
+IHVuZGVyc3RhbmRpbmcgaXMgdGhhdCBpdCdzIGZpbmUgdG8gaGF2ZSBhbiBPRiBub2RlCj4+IFlv
+dXIgdW5kZXJzdGFuZGluZyBpcyBjb3JyZWN0Lgo+Pj4KPj4+IHdoYXQgSSBkb24ndCB1bmRlcnN0
+YW5kIHlldCBpcyB3aGVyZSB0aGlzIG5vZGUgc2hvdWxkIGJlIHBsYWNlZC4KPj4+IGlzIGl0IHN1
+cHBvc2VkIHRvIGJlIGEgY2hpbGQgbm9kZSBvZiB0aGUgc2VjdXJlIG1vbml0b3Igbm9kZSAoZm9y
+Cj4+PiB3aGljaCB3ZSBhbHJlYWR5IGhhdmUgYSBiaW5kaW5nIGhlcmU6Cj4+PiBEb2N1bWVudGF0
+aW9uL2RldmljZXRyZWUvYmluZGluZ3MvZmlybXdhcmUvbWVzb24vbWVzb25fc20udHh0KSBvcgo+
+Pj4gd2hlcmUgZWxzZSB3b3VsZCB3ZSBwbGFjZSBpdCBpbnNpZGUgdGhlIC5kdHM/Cj4+IElNTyzC
+oCBBbHRob3VnaCB0aGUgd2F0Y2hkb2cgbm9kZSBuZWVkIHRvIHJlZmVyZW5jZSB0aGUgbWVzb25f
+c20gbm9kZSwgCj4+IHRoZXJlIGlzIG5vCj4+IGJ1cy1saWtlIGRlcGVuZGVuY2llcyBiZXR3ZWVu
+IHRoZSBkZXZpY2VzIHdoaWNoIHRoZSB0d28gbm9kZXMgCj4+IGNvcnJlc3BvbmRpbmcgdG8uCj4+
+IHNvIGkgdGhpbmsgdGhhdCB0aGUgd2F0Y2hkb2cgbm9kZSBhcyBjaGlsZCBub2RlIG9mIG1lc29u
+X3NtIG1heWJlIG5vdCAKPj4gYXBwcm9wcmlhdGUuCj4KPiBUaGUgd2F0Y2hkb2cgZHJpdmVyIG5l
+ZWRzIHRoZSBtZXNvbiBTTSdzIGR0IG5vZGUsIGFuZCBpdCBkZXBlbmRzIG9uIAo+IHRoZSBleGlz
+dGVuY2UKPiBvZiB0aGF0IG5vZGUuIFRoYXQgc2VlbXMgZW5vdWdoIG9mIGEgcmVsYXRpb25zaGlw
+IHRvIHdhcnJhbnQgaGF2aW5nIGl0IAo+IGFzIGNoaWxkIG5vdGUuClRoYW5rcyBmb3IgeW91ciBy
+ZXBseSwgaWYgaSB0YWtlIHRoZSB3ZHQgbm9kZSBhcyBjaGlsZCBvZiBzZWN1cmUgbW9uaXRvciAK
+KHNtKSwgaG93IHNob3VsZAppIHJlZ2lzdGVyIG9yIGZpbmQgdGhlIHdkdCBkZXZpY2UgPwoKSSBv
+bmx5IHRoaW5rIG9mIHRoZSBmb2xsb3dpbmcgdGhyZWUgbWV0aG9kcyA6CjEpLiB1cGRhdGUgdGhl
+IHNtIGRyaXZlcu+8jGFuZCBzY2FuJnJlZ2lzdGVyIHdkdCBkZXZpY2Ugd2hlbiB0aGUgc20gZHJp
+dmVyIApwcm9iZXMoSXQgaXMgbGlrZSBpMmMpLCBidXQgdGhlcmUKYXJlIHRvbyBtYW55IGNoYW5n
+ZXMgaW52b2x2ZWQuCgoyKS4gYWRkICJzaW1wbGUtYnVzIiBrZXkgc3RyaW5nIHRvIGNvbXBhdGli
+bGUgb2Ygc20gbm9kZSwgYW5kIGl0IHdpbGwgCm1ha2UgdGhlIGNoaWxkIG5vZGUgaXMgcmVnaXN0
+ZXJlZCBhcwpwbGF0Zm9ybSBkZXZpY2UsIGJ1dCBpdCBzZWVtcyB0aGF0IHRoZSBrZXkgc3RyaW5n
+IGlzIG5vdCBtYXRjaCBjdXJyZW50IApzY2VuZS4KCnNlY3VyZS1tb25pdG9yIHsKIMKgwqDCoCBj
+b21wYXRpYmxlID0gImFtbG9naWMsbWVzb24tZ3hiYi1zbSIswqAgInNpbXBsZS1idXMiOwoKIMKg
+wqDCoCB3YXRjaGRvZyB7CiDCoMKgwqAgwqDCoMKgIGNvbXBhdGlibGUgPSAiYW1sb2dpYyxtZXNv
+bi1zZWMtd2R0IjsKIMKgwqDCoCDCoMKgwqAgdGltZW91dC1zZWMgPSA8NjA+OwogwqDCoMKgIH0K
+fQoKMykuwqAgZG9uJ3QgcmVnaXN0ZXIgZGV2aWNlLCBhbmQgZmluZCBkaXJlY3RseSB0aGUgd2F0
+Y2hkb2cgbm9kZSBieSB1c2luZyAKdGhlIG9mXyogQVBJIGluIHdhdGNoZG9nCmRyaXZlciAoRWc6
+IGxpbnV4LTQueC9kcml2ZXJzL3RlZS9vcHRlZS9jb3JlLmMpCgpzZWN1cmUtbW9uaXRvciB7CiDC
+oMKgwqAgY29tcGF0aWJsZSA9ICJhbWxvZ2ljLG1lc29uLWd4YmItc20iOwoKIMKgwqDCoCB3YXRj
+aGRvZyB7CiDCoMKgwqDCoMKgwqDCoCBjb21wYXRpYmxlID0gImFtbG9naWMsbWVzb24tc2VjLXdk
+dCI7CiDCoMKgwqDCoMKgwqDCoCB0aW1lb3V0LXNlYyA9IDw2MD47CiDCoMKgwqAgfQp9CgpUaGUg
+bWV0aG9kIDMgbG9va3MgYmV0dGVyIGZvciBtZSwgZG8geW91IGhhdmUgYSBiZXR0ZXIgc3VnZ2Vz
+dGlvbiA/IFRoYW5rcwoKQlIKPgo+IEd1ZW50ZXIKPgo+IC4KPgoKX19fX19fX19fX19fX19fX19f
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX18KbGludXgtYW1sb2dpYyBtYWlsaW5nIGxpc3QK
+bGludXgtYW1sb2dpY0BsaXN0cy5pbmZyYWRlYWQub3JnCmh0dHA6Ly9saXN0cy5pbmZyYWRlYWQu
+b3JnL21haWxtYW4vbGlzdGluZm8vbGludXgtYW1sb2dpYwo=
