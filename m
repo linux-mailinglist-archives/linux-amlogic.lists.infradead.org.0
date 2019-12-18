@@ -2,45 +2,45 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 01460125296
-	for <lists+linux-amlogic@lfdr.de>; Wed, 18 Dec 2019 21:05:45 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8001F125297
+	for <lists+linux-amlogic@lfdr.de>; Wed, 18 Dec 2019 21:05:46 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
 	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:
 	In-Reply-To:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	References:List-Owner; bh=BPvp8bguj8TbFXgBU75wPxA/4pot/HZ/MuyQxIxukgQ=; b=iWN
-	Y1UUU1+uUfi1nvAI1i7KSGPhiEsl5FwYFjbQohJJTHVzqNBE+8hFdxnYj+SH4KTKHC40iP04GDvAf
-	/cbVl2f1F6x7FcDKmzJAHBIvZZc+JvZcf54AbD9U46njvDs/F4znJ7XTGzORgYaeTd1pe46SWiqVr
-	JqAnfwGkRAjcG0ap+de1l3cKUNYGhqX3/0KIdKawoIhHcTX6kd3LDHHJKr1d78APC7PspOaeo2oYO
-	3ZHbHCGT205PXNuuAkocBdAdqMEvYG22lWyKK+fN/99FcuFZRKeUPVih5qnpG318PwwDH6TAHcFhj
-	JSTGvKm+obztU7l2RB3TvK3qNmUOgug==;
+	References:List-Owner; bh=1SnwQ+AaN2D1KkLnhMdh2tsG7i1rKWY6CA3LbXo5ZdY=; b=bC8
+	0dv7nfqyFJWbcGRnaoQRi5p9JCNXdgN4np5XN1/MTyKAkud5ppsjt8jOFE3f9R5PjA8uSGOX3hIQN
+	mpv2FEAlJ9U9KD5mWIVgcCGuQ2eAxjJo/MXIaBk3DXkQps8AY/DEfq6tm3re8Cg0CmUh3HVWoqC5Y
+	bYbbDcZau1+v3JmJe+kPT4skCb3Bx0FGWhfinhjmekvK0NZa7yHpIKMBlzshN8b0UVZ+ewjt5bili
+	YZxXlezowc6YXwTn7N//DIFiTgU0NOLp7GOln+lXYbJ2Zb4IHrXQo5zIC2jqWu4VfUL/CKMtw8YJQ
+	uu0hyfLcaFahRRvy7mt6Ll3HMNL6xvg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ihfZl-0006RF-Vi; Wed, 18 Dec 2019 20:05:41 +0000
+	id 1ihfZp-0006Sn-5P; Wed, 18 Dec 2019 20:05:45 +0000
 Received: from foss.arm.com ([217.140.110.172])
  by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ihfZj-0006QU-5P
- for linux-amlogic@lists.infradead.org; Wed, 18 Dec 2019 20:05:40 +0000
+ id 1ihfZk-0006Qt-W2
+ for linux-amlogic@lists.infradead.org; Wed, 18 Dec 2019 20:05:42 +0000
 Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
- by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id 0CD7311B3;
- Wed, 18 Dec 2019 12:05:38 -0800 (PST)
+ by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id 8369611FB;
+ Wed, 18 Dec 2019 12:05:40 -0800 (PST)
 Received: from localhost (unknown [10.37.6.21])
- by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id 7FC0D3F67D;
- Wed, 18 Dec 2019 12:05:37 -0800 (PST)
-Date: Wed, 18 Dec 2019 20:05:35 +0000
+ by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id F3F263F67D;
+ Wed, 18 Dec 2019 12:05:39 -0800 (PST)
+Date: Wed, 18 Dec 2019 20:05:38 +0000
 From: Mark Brown <broonie@kernel.org>
 To: Jerome Brunet <jbrunet@baylibre.com>
-Subject: Applied "ASoC: meson: axg-fifo: relax period size constraints" to the
- asoc tree
-In-Reply-To: <20191218172420.1199117-5-jbrunet@baylibre.com>
-Message-Id: <applied-20191218172420.1199117-5-jbrunet@baylibre.com>
+Subject: Applied "ASoC: meson: axg-fifo: improve depth handling" to the asoc
+ tree
+In-Reply-To: <20191218172420.1199117-4-jbrunet@baylibre.com>
+Message-Id: <applied-20191218172420.1199117-4-jbrunet@baylibre.com>
 X-Patchwork-Hint: ignore
 X-Bad-Reply: In-Reply-To but no 'Re:' in Subject.
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191218_120539_292222_9EFB7884 
-X-CRM114-Status: GOOD (  14.15  )
+X-CRM114-CacheID: sfid-20191218_120541_118393_3D4951A4 
+X-CRM114-Status: GOOD (  21.08  )
 X-Spam-Score: 0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.2 points)
@@ -75,7 +75,7 @@ Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
 The patch
 
-   ASoC: meson: axg-fifo: relax period size constraints
+   ASoC: meson: axg-fifo: improve depth handling
 
 has been applied to the asoc tree at
 
@@ -100,70 +100,117 @@ to this mail.
 Thanks,
 Mark
 
-From 42b5ac832b0c3bf5b0bf98ea6d99efa5fb5d5075 Mon Sep 17 00:00:00 2001
+From 23b89e1d62c75f2c1985449e968886e8a97860c0 Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
-Date: Wed, 18 Dec 2019 18:24:20 +0100
-Subject: [PATCH] ASoC: meson: axg-fifo: relax period size constraints
+Date: Wed, 18 Dec 2019 18:24:19 +0100
+Subject: [PATCH] ASoC: meson: axg-fifo: improve depth handling
 
-Now that the fifo depths and thresholds are properly in the axg-fifo
-driver, we can relax the constraints on period. As long as the period is a
-multiple of the fifo burst size (8 bytes) things should be OK.
+Let the fifo driver parse the fifo depth from DT. Eventually all DT should
+have this property. Until it is actually the case, default to 256 bytes if
+the property is missing. 256 bytes is the size of the smallest fifo on the
+supported SoCs.
+
+On the supported SoC, fifo A is usually bigger than the other ones.  With
+depth known, we can improve the usage of the fifo and adapt the setup of
+request threshold.
 
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
-Link: https://lore.kernel.org/r/20191218172420.1199117-5-jbrunet@baylibre.com
+Link: https://lore.kernel.org/r/20191218172420.1199117-4-jbrunet@baylibre.com
 Signed-off-by: Mark Brown <broonie@kernel.org>
 ---
- sound/soc/meson/axg-fifo.c | 8 ++++----
- sound/soc/meson/axg-fifo.h | 2 --
- 2 files changed, 4 insertions(+), 6 deletions(-)
+ sound/soc/meson/axg-fifo.c  | 19 +++++++++++++++++--
+ sound/soc/meson/axg-fifo.h  |  1 +
+ sound/soc/meson/axg-frddr.c | 13 ++++---------
+ 3 files changed, 22 insertions(+), 11 deletions(-)
 
 diff --git a/sound/soc/meson/axg-fifo.c b/sound/soc/meson/axg-fifo.c
-index c2742a02d866..c12b0d5e8ebf 100644
+index 4365086c9a31..c2742a02d866 100644
 --- a/sound/soc/meson/axg-fifo.c
 +++ b/sound/soc/meson/axg-fifo.c
-@@ -34,7 +34,7 @@ static struct snd_pcm_hardware axg_fifo_hw = {
- 	.rate_max = 192000,
- 	.channels_min = 1,
- 	.channels_max = AXG_FIFO_CH_MAX,
--	.period_bytes_min = AXG_FIFO_MIN_DEPTH,
-+	.period_bytes_min = AXG_FIFO_BURST,
- 	.period_bytes_max = UINT_MAX,
- 	.periods_min = 2,
- 	.periods_max = UINT_MAX,
-@@ -227,17 +227,17 @@ int axg_fifo_pcm_open(struct snd_soc_component *component,
+@@ -132,8 +132,7 @@ int axg_fifo_pcm_hw_params(struct snd_soc_component *component,
+ 	 * - Half the fifo size
+ 	 * - Half the period size
+ 	 */
+-	threshold = min(period / 2,
+-			(unsigned int)AXG_FIFO_MIN_DEPTH / 2);
++	threshold = min(period / 2, fifo->depth / 2);
  
  	/*
- 	 * Make sure the buffer and period size are multiple of the FIFO
--	 * minimum depth size
-+	 * burst
- 	 */
- 	ret = snd_pcm_hw_constraint_step(ss->runtime, 0,
- 					 SNDRV_PCM_HW_PARAM_BUFFER_BYTES,
--					 AXG_FIFO_MIN_DEPTH);
-+					 AXG_FIFO_BURST);
- 	if (ret)
- 		return ret;
+ 	 * With the threshold in bytes, register value is:
+@@ -320,6 +319,7 @@ int axg_fifo_probe(struct platform_device *pdev)
+ 	const struct axg_fifo_match_data *data;
+ 	struct axg_fifo *fifo;
+ 	void __iomem *regs;
++	int ret;
  
- 	ret = snd_pcm_hw_constraint_step(ss->runtime, 0,
- 					 SNDRV_PCM_HW_PARAM_PERIOD_BYTES,
--					 AXG_FIFO_MIN_DEPTH);
-+					 AXG_FIFO_BURST);
- 	if (ret)
- 		return ret;
+ 	data = of_device_get_match_data(dev);
+ 	if (!data) {
+@@ -370,6 +370,21 @@ int axg_fifo_probe(struct platform_device *pdev)
+ 	if (IS_ERR(fifo->field_threshold))
+ 		return PTR_ERR(fifo->field_threshold);
  
++	ret = of_property_read_u32(dev->of_node, "amlogic,fifo-depth",
++				   &fifo->depth);
++	if (ret) {
++		/* Error out for anything but a missing property */
++		if (ret != -EINVAL)
++			return ret;
++		/*
++		 * If the property is missing, it might be because of an old
++		 * DT. In such case, assume the smallest known fifo depth
++		 */
++		fifo->depth = 256;
++		dev_warn(dev, "fifo depth not found, assume %u bytes\n",
++			 fifo->depth);
++	}
++
+ 	return devm_snd_soc_register_component(dev, data->component_drv,
+ 					       data->dai_drv, 1);
+ }
 diff --git a/sound/soc/meson/axg-fifo.h b/sound/soc/meson/axg-fifo.h
-index 521b54e98fd3..b63acd723c87 100644
+index c442195ba191..521b54e98fd3 100644
 --- a/sound/soc/meson/axg-fifo.h
 +++ b/sound/soc/meson/axg-fifo.h
-@@ -31,8 +31,6 @@ struct snd_soc_pcm_runtime;
- 					 SNDRV_PCM_FMTBIT_IEC958_SUBFRAME_LE)
+@@ -68,6 +68,7 @@ struct axg_fifo {
+ 	struct clk *pclk;
+ 	struct reset_control *arb;
+ 	struct regmap_field *field_threshold;
++	unsigned int depth;
+ 	int irq;
+ };
  
- #define AXG_FIFO_BURST			8
--#define AXG_FIFO_MIN_CNT		64
--#define AXG_FIFO_MIN_DEPTH		(AXG_FIFO_BURST * AXG_FIFO_MIN_CNT)
+diff --git a/sound/soc/meson/axg-frddr.c b/sound/soc/meson/axg-frddr.c
+index df104303351f..c3ae8ac30745 100644
+--- a/sound/soc/meson/axg-frddr.c
++++ b/sound/soc/meson/axg-frddr.c
+@@ -50,7 +50,7 @@ static int axg_frddr_dai_startup(struct snd_pcm_substream *substream,
+ 				 struct snd_soc_dai *dai)
+ {
+ 	struct axg_fifo *fifo = snd_soc_dai_get_drvdata(dai);
+-	unsigned int fifo_depth;
++	unsigned int val;
+ 	int ret;
  
- #define FIFO_INT_ADDR_FINISH		BIT(0)
- #define FIFO_INT_ADDR_INT		BIT(1)
+ 	/* Enable pclk to access registers and clock the fifo ip */
+@@ -61,15 +61,10 @@ static int axg_frddr_dai_startup(struct snd_pcm_substream *substream,
+ 	/* Apply single buffer mode to the interface */
+ 	regmap_update_bits(fifo->map, FIFO_CTRL0, CTRL0_FRDDR_PP_MODE, 0);
+ 
+-	/*
+-	 * TODO: We could adapt the fifo depth and the fifo threshold
+-	 * depending on the expected memory throughput and lantencies
+-	 * For now, we'll just use the same values as the vendor kernel
+-	 * Depth and threshold are zero based.
+-	 */
+-	fifo_depth = AXG_FIFO_MIN_CNT - 1;
++	/* Use all fifo depth */
++	val = (fifo->depth / AXG_FIFO_BURST) - 1;
+ 	regmap_update_bits(fifo->map, FIFO_CTRL1, CTRL1_FRDDR_DEPTH_MASK,
+-			   CTRL1_FRDDR_DEPTH(fifo_depth));
++			   CTRL1_FRDDR_DEPTH(val));
+ 
+ 	return 0;
+ }
 -- 
 2.20.1
 
