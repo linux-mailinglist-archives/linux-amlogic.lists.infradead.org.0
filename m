@@ -2,94 +2,82 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 174BA1278A7
-	for <lists+linux-amlogic@lfdr.de>; Fri, 20 Dec 2019 10:58:37 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8DFC1128534
+	for <lists+linux-amlogic@lfdr.de>; Fri, 20 Dec 2019 23:48:19 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=fv6C9kGmjUvQeJz+cwGJFs6o1oBW2xDhZHtqOX0eHH4=; b=S4c1wi4HleaUoH
-	FW5Tw2WELwJm7cM42BMiMbJ760ozxw6pXsTgjvhYtNTtj0a6ErI+lYP7TiueamPCzjwryILnRrZji
-	CK0l70Hu7edX8XjhMiyZS0sXtEZzN27Gkm60zrStWzOD9wVR52dgxhMuMDcaFQ6CF4t5U3M7YXxBh
-	V3Z6fW5bQC8jBQqioNKjYtIFl7wIoaGWMINyjo+BLmL2SXc86UaLlH0PPODqetBTWiKpHcxxYBumk
-	8aHpol0OsVHH6ZU12q4tQdy8s0C1/x/sKW5xYBvOBVYN35SJJu2lUzemzCDt4tZegZ6DeRKqAFRUM
-	8xdKv/7G4GytsxpsgIXg==;
+	List-Owner; bh=EcYPTxLSDMtW0Rad7PAeD52Si5ALvXADnasXKua8puU=; b=pFWKUrBxQHloqI
+	jG2vrH5cvrpw9kHP4cGLJlsQ1jkRbmIprMfe+xuw9+xWK4s0bFw8CKWoogu8bzD9gnKlwyF7AF+A3
+	xQ5c63/RyfYYWtqOIXNQZRiKN9wNyAu5RYTrb7+uGBvVD9E5DaSoUAUTGcp6wMhcxP7zftEP7FU9y
+	66M4ufR1SoKV7ING7bLNFxGOG4QjPPdcczwRMr7sIvdOZ7roqeYJ7UTq6sUSnkLueGDhrPuun3gcx
+	vMg43kABlZabs+LcE8U26vp5KPlMgWF0uIR7FegBxuRRlU5SD0Xks8UCWuAip4xvd8HAKQfBkzR28
+	+BIv4ru/Q0mVjvooHxnw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iiF3K-0002i8-4m; Fri, 20 Dec 2019 09:58:34 +0000
-Received: from mail-ot1-x32a.google.com ([2607:f8b0:4864:20::32a])
+	id 1iiR4C-0002MV-CU; Fri, 20 Dec 2019 22:48:16 +0000
+Received: from mail-il1-f196.google.com ([209.85.166.196])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iiF3G-0002hF-RU; Fri, 20 Dec 2019 09:58:32 +0000
-Received: by mail-ot1-x32a.google.com with SMTP id p8so11210317oth.10;
- Fri, 20 Dec 2019 01:58:30 -0800 (PST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=74femySzIwPJDHG5x9zdNa+AfjyKAyPCNlMsQcYBmhs=;
- b=MfZuZxlt/5aTM+eWADTAw1+ssMbTLO93nEPqcsWwi/PUCtCdYBBhFq6E7twghkXe1r
- 3hp+yhXgEhLdNM6yDFWsoqF0UQJYMvFLehRnFAl3EhwPF/6iUd7v5eIxRMCLrsEqTQcE
- XBYzzVrEKNlWwW7NqXkTst1JFiYNMcHIMQsY7U8IYPwqM+K6d26bjDgKuk9s2gXYSTsM
- WqWJpZAVCOk7XLCw/do4YsLvzuVHICVPZE7bnDmq/HSOPd5QXY3J8bzsK1WF5YqXE998
- QLU7JhuIYTf/2c2caV3odpCQxCTt55p17hrVFqe/W+Cr6y3NDfSoZgOuS2aWRN6bWFOX
- DJcg==
+ id 1iiR40-0002CW-H8; Fri, 20 Dec 2019 22:48:05 +0000
+Received: by mail-il1-f196.google.com with SMTP id v69so9265216ili.10;
+ Fri, 20 Dec 2019 14:48:04 -0800 (PST)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=74femySzIwPJDHG5x9zdNa+AfjyKAyPCNlMsQcYBmhs=;
- b=q9nK1CLyaL4rk9pyVZZQqanzv4XBzjwvdguXXF/DQDuR0i2afWO0+FPNQ7eNtU2CHq
- 33YqRv7Rrj1x66HgC0v/e3sDiQ1sAboaLrSDdt6FfdM8ddS0Vx/iuk04bAOljGRRUmtV
- HCCTLbd2KvYuR75rb5l8Bx2kehKmhe2RsqfslZ00bXjrzFk8Ck103jRWQj+EHsQ4O6h0
- 4dQ6aumz77Lz6ou+zLiXNG256wh8h/JXEtWv7jlaSe9+oEOG7Sj8kSVi4J9riJ4rvUs3
- lelyTdC2/BaiQL08zrXUNytXCNlpThnvmK7DaZhSAK2+yPhzdjH1Bl2ddAC0rADXxEsp
- 5OrA==
-X-Gm-Message-State: APjAAAWmqVqmF1QsomYxO3zCQhgDWBmnVWcL5/zNe2bs09/Ox/VD3GtB
- R+jhrd7wHZA7+2GOVYrWRjWSY4bfA2kVboPeRe4=
-X-Google-Smtp-Source: APXvYqxNwbRenNNC3ee/+YtenI0dYdUuu8d469Q65xkASBDJ4VTai2GdRpnIGeCbklPsIf5o+/BCp8RjQDL4Dgpv5gE=
-X-Received: by 2002:a9d:478:: with SMTP id 111mr13874039otc.359.1576835909674; 
- Fri, 20 Dec 2019 01:58:29 -0800 (PST)
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:in-reply-to:user-agent;
+ bh=5ydh8/8SwQZQURpsj7H5OMlNH6BqWqcQ+ZSr278ZEo8=;
+ b=NfCijt5f3ZcIPG7Fz7oWMAQCWsXvqfVqs/enQPc1rH9qwFaC1xu7Qhj+ekre35/sQ7
+ pk7/Wdm3FCdnlzhgrjRVlTsixly0CyMQ0yNk7w3blzh2lS509fQNe7PREvMW0u6sHSei
+ 8OAtXPNKSYUE/EOQq2gD0iI/UgHduDvoz92oImnPPNG7v1HJ4wlRS+EEVryyUlboUbQg
+ 2Ah4R8KVj519OsnHVnJkqn/VfPcsqVkuZOMOYr8D+Y1AFf/5dSrp65AECEWY3lpKma12
+ umLGfMMgkxrVuTFyPoUigpxkz18IyNCCVgrat3cqJ0AdG7AXS4RfI0IW9OPiGnAp6ncQ
+ YvnA==
+X-Gm-Message-State: APjAAAVW64kTUC2gMrUdveBiK3F0MIrPA4KmWw3DTyzLcjhuYcyFGtrN
+ MqOUD85vxDwwzdPRBpZa5wtjIYo=
+X-Google-Smtp-Source: APXvYqzy+s5mc7VlnG7SFlraOtuA08IEQUgo479SMw+kCniTuFHiYyY/N6k1UpCt0aeX1y2CIkVv9Q==
+X-Received: by 2002:a92:af08:: with SMTP id n8mr14166376ili.217.1576882083423; 
+ Fri, 20 Dec 2019 14:48:03 -0800 (PST)
+Received: from localhost ([64.188.179.251])
+ by smtp.gmail.com with ESMTPSA id j26sm3918819iok.3.2019.12.20.14.48.02
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Fri, 20 Dec 2019 14:48:02 -0800 (PST)
+Date: Fri, 20 Dec 2019 15:48:02 -0700
+From: Rob Herring <robh@kernel.org>
+To: Benjamin Gaignard <benjamin.gaignard@st.com>
+Subject: Re: [PATCH] dt-bindings: usb: amlogic, meson-g12a-usb-ctrl: fix clock
+ names
+Message-ID: <20191220224802.GA26316@bogus>
+References: <20191218142613.13683-1-benjamin.gaignard@st.com>
 MIME-Version: 1.0
-References: <20191014141718.22603-1-narmstrong@baylibre.com>
- <20191014141718.22603-2-narmstrong@baylibre.com>
- <20191023201141.GA21235@bogus>
- <CA+3zgmsJPsvXgsjDQKKrSG+UNdY3SK+hKCTD2X3hGG+OXejHig@mail.gmail.com>
- <CAKgpwJWU3jB0DWEKE09TOV+YLceBFJ75ZirAXQbuhj8v3FwjXg@mail.gmail.com>
- <c32007f5-88b9-45c5-b542-b1dc4dbc76ea@baylibre.com>
- <CAKgpwJVHF6Ytdt9kq5SwiixFDLym_UPG51aXag1nVVay0pzofQ@mail.gmail.com>
- <45212db9-e366-2669-5c0a-3c5bd06287f6@synopsys.com>
- <ce35b6d2-7ed1-be2d-6e38-4c6e89340a40@baylibre.com>
- <CA+3zgmtWQwdJG5NT-t7__Mqt5u_U3m4+HEL6p4PWxx5NES7_AQ@mail.gmail.com>
-In-Reply-To: <CA+3zgmtWQwdJG5NT-t7__Mqt5u_U3m4+HEL6p4PWxx5NES7_AQ@mail.gmail.com>
-From: Tim <elatllat@gmail.com>
-Date: Fri, 20 Dec 2019 04:58:18 -0500
-Message-ID: <CA+3zgmsAWRYTqT+Q6t73ikYmm=L2gLmB6PEOUqLuMULfUcPKUg@mail.gmail.com>
-Subject: Re: [PATCH 1/3] doc: dt: bindings: usb: dwc3: Update entries for
- disabling SS instances in park mode
-To: Neil Armstrong <narmstrong@baylibre.com>
+Content-Disposition: inline
+In-Reply-To: <20191218142613.13683-1-benjamin.gaignard@st.com>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191220_015830_885639_A0D59C0B 
-X-CRM114-Status: UNSURE (   7.20  )
+X-CRM114-CacheID: sfid-20191220_144804_570718_E22BA8BC 
+X-CRM114-Status: UNSURE (   8.78  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-Spam-Score: 0.7 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:32a listed in]
- [list.dnswl.org]
+ no trust [209.85.166.196 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit (robherring2[at]gmail.com)
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (elatllat[at]gmail.com)
+ provider (robherring2[at]gmail.com)
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [209.85.166.196 listed in wl.mailspike.net]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -101,32 +89,29 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: "devicetree@vger.kernel.org" <devicetree@vger.kernel.org>,
- Jianxin Pan <jianxin.pan@amlogic.com>, Felipe Balbi <balbi@kernel.org>,
- Thinh Nguyen <Thinh.Nguyen@synopsys.com>,
- "linux-usb@vger.kernel.org" <linux-usb@vger.kernel.org>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- Jun Li <lijun.kernel@gmail.com>, "khilman@baylibre.com" <khilman@baylibre.com>,
- Dongjin Kim <tobetter@gmail.com>,
- "linux-amlogic@lists.infradead.org" <linux-amlogic@lists.infradead.org>,
- Rob Herring <robh@kernel.org>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>
+Cc: mark.rutland@arm.com, devicetree@vger.kernel.org,
+ Benjamin Gaignard <benjamin.gaignard@st.com>, gregkh@linuxfoundation.org,
+ linux-usb@vger.kernel.org, linux-kernel@vger.kernel.org, robh+dt@kernel.org,
+ khilman@baylibre.com, linux-amlogic@lists.infradead.org,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-This patch is still good on 5.4 and 5.5, and the following network lag
-was solved by separating the USB and NIC smp_affinity_list.
+On Wed, 18 Dec 2019 15:26:13 +0100, Benjamin Gaignard wrote:
+> dwc2 bindings require clock-names to be "otg".
+> Fix the example in amlogic,meson-g12a-usb-ctrl to follow this requirement.
+> 
+> Signed-off-by: Benjamin Gaignard <benjamin.gaignard@st.com>
+> ---
+>  Documentation/devicetree/bindings/usb/amlogic,meson-g12a-usb-ctrl.yaml | 2 +-
+>  1 file changed, 1 insertion(+), 1 deletion(-)
+> 
 
-On Tue, Dec 10, 2019, 7:45 PM Tim <elatllat@gmail.com> wrote:
->
-> Just writing to say;
-> this patch is still performing well on 5.5.0-rc1, and
-> there is no speed improvement by adding DWC3_GUCTL_NAK_PER_ENH_HS BIT(17)
->     I get up to 3890 ms second lag with "ping -s 5120 $IP" when
-> copying between USB HDDs either way, but at least this patch stops the
-> crashing.
+Applied, thanks.
+
+Rob
 
 _______________________________________________
 linux-amlogic mailing list
