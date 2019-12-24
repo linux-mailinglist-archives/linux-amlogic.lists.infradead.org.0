@@ -2,87 +2,62 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id F403912A086
-	for <lists+linux-amlogic@lfdr.de>; Tue, 24 Dec 2019 12:28:59 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 19B6212A09C
+	for <lists+linux-amlogic@lfdr.de>; Tue, 24 Dec 2019 12:36:16 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:Message-ID:From:To:Subject:MIME-Version
+	:References:In-Reply-To:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Y3le+0QdBbxQeIx8kT7xLzotueIHcnZkGd3HZPkjz7Q=; b=kr9vFdLZv6iif/
-	OXMvdINBWj/jPyMa6w4puCxLSm+/B2usR1jwX5ssWQjbadKeY+BwJm+9uBbXkN0gGJqEHZRBtOy4z
-	I39luestLJtPrq2DIDIdy3XR31OoPbDo/0DH25uy06teZSXukQb+Q3pjakoLmQg0jBUsBF5Gjemxs
-	g/b8CBgor/2kn75Ft7E6nC97nJHPAGCiUEwrSl8SvAPU23GERdnSh+DMmmldKPa4G1L4PyzDkbrLU
-	I/6A5TVmURven1+Ay7Nlc6+hYEzZdJuLAMnxgeTTuxS7nveN0+xPHkvsKlEafTvNK495UdEBYbpI9
-	b6/ns6qHuMawwDAkddoQ==;
+	List-Owner; bh=+MnpInvdPIgDiCi9duf1pJDHKkhyiz9Rm6yIEpYJbKI=; b=VNO+2BI2yAGg9a
+	3t21/dox+Tda1gSDvkAVlWeQiGOX6waoOLyY5PFe5712elMaN5+HvVMHVAwOzhMTQB9fXuHOzOcyb
+	SqN8g8Elrti1+LfKB6nAVYynBVj0aOT/MnNjXaMPNmUt5W69MZ1FkmxiydZOTbXfkKehBcZL8bif6
+	qKmAu/caXrLWuyBpHRsMs/SrIAXyvRKOP9lSBAjnWLcdFyqeqDK/Bx7UWZ/kPw6SjDd8WfgLaD+e/
+	x8fHuMLzs/WuNQw5tBWgjzP5uwvwz9bOULJpKNGhlWzqS6Ba+TCyGHcsBacJbpYaj3P/XOvmHpfNj
+	YhSAwbTZ4XbfVDGkRMZw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ijiMz-0001re-S7; Tue, 24 Dec 2019 11:28:57 +0000
-Received: from mail-ed1-x541.google.com ([2a00:1450:4864:20::541])
+	id 1ijiU2-0004me-0S; Tue, 24 Dec 2019 11:36:14 +0000
+Received: from balrog.mythic-beasts.com ([2a00:1098:0:82:1000:0:2:1])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ijiMv-0001qi-UX; Tue, 24 Dec 2019 11:28:55 +0000
-Received: by mail-ed1-x541.google.com with SMTP id m8so17700762edi.13;
- Tue, 24 Dec 2019 03:28:53 -0800 (PST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=googlemail.com; s=20161025;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=Yaa4+iEZ46im79+sodnyaIwi0xim0AIqzXbOWPR6HKg=;
- b=sIrcJv4TUYAe5BHQg2t71AAnx6Nx94wYr993rP4u32UoTOgjy3LEDQ3fDxVI+G7AHK
- q+sWW3GX1SAXlPCCrPXm+Ws7/5w6Bd2hhYhLv5JGLqnOj6hcUij5REcUN7+DSPz8Pp5t
- Yhv5GTY5XZzc4Mr9gNU4jpakCj1sn9ItanhF0MU43kVy+hd0g8wpaFGq9kZSQ4EvzfeU
- Wf0meWFnOAL2fyNrs4I4u9OyAmncTZvIIfMzDlSsFfrG0YwsvX4mEdIlQQDcKqk4STgI
- QLYaGp6Dtm0ekk3Y2seHZbvCuLFJyZKaGXwGK3SZCpwHzwzoRNU1bZ0jeCvdseMJ9zHJ
- 9VWg==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=Yaa4+iEZ46im79+sodnyaIwi0xim0AIqzXbOWPR6HKg=;
- b=Yj63CJfMeyQvjpmuNSKOnG1TxGdMvE4xPRAyxOz7KwJwAmdAvNhglYRY1Hn0lsxLzJ
- J73au+/o4n/JpLSidUOGbHeTaKE0RXX63zGu1jvymoiMmxowXICltevekS7FAcOBujRQ
- rMGsfz9b0R6cOEXyYN+15m9B7YjaAR1lkMkAkRY62xnr7Kptd4zy5S3jlFM0orgXgSfi
- XrUyvMMNc+LM5PDO6cgoRNNS0obz5FDBjWVJMNFHcEWp/7Tna6qY7uRdxefRjATmJjy4
- NtnU7pvrBfDdsEYInwW+JThDDssYrVhTkJfpgbkPNbQSKxXkvo0fS+itkjZEO7PoC79w
- Biuw==
-X-Gm-Message-State: APjAAAX4T+dHPubE7T7WyrLVqeXFGvitPSbWkLIKhASwTfk2ga15RjjO
- xjIhwWsOXBPB7aEKGFGZGdFM2i6a8lG6RCZ/q6ql6E26
-X-Google-Smtp-Source: APXvYqz4kTKGwv6SPDwKOT61Zb8NcQu1uqXgs9fWzT9X8E/7hDxnWyW00OC7RSCNm35l0R9eR3N23za84e9iE4u9E04=
-X-Received: by 2002:a17:906:260b:: with SMTP id
- h11mr37038328ejc.327.1577186932440; 
- Tue, 24 Dec 2019 03:28:52 -0800 (PST)
-MIME-Version: 1.0
+ id 1ijiTy-0004mF-LR; Tue, 24 Dec 2019 11:36:12 +0000
+Received: from [199.195.250.187] (port=52781 helo=hermes.aosc.io)
+ by balrog.mythic-beasts.com with esmtpsa
+ (TLS1.2:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.92.3)
+ (envelope-from <icenowy@aosc.io>)
+ id 1ijiTp-0004XE-5O; Tue, 24 Dec 2019 11:36:05 +0000
+Received: from localhost (localhost [127.0.0.1]) (Authenticated sender:
+ icenowy@aosc.io)
+ by hermes.aosc.io (Postfix) with ESMTPSA id 198A945CC4;
+ Tue, 24 Dec 2019 11:35:39 +0000 (UTC)
+Date: Tue, 24 Dec 2019 19:35:36 +0800
+In-Reply-To: <CAFBinCCDmCHQW+nBHzsodz0R=GKoqv1EEzB=UY=ypFs4Q6MFmQ@mail.gmail.com>
 References: <20191215211223.1451499-1-martin.blumenstingl@googlemail.com>
  <20191216154803.GA3921@kevin>
-In-Reply-To: <20191216154803.GA3921@kevin>
-From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-Date: Tue, 24 Dec 2019 12:28:41 +0100
-Message-ID: <CAFBinCCDmCHQW+nBHzsodz0R=GKoqv1EEzB=UY=ypFs4Q6MFmQ@mail.gmail.com>
-Subject: Re: [RFC v1 0/1] drm: lima: devfreq and cooling device support
-To: Alyssa Rosenzweig <alyssa.rosenzweig@collabora.com>
+ <CAFBinCCDmCHQW+nBHzsodz0R=GKoqv1EEzB=UY=ypFs4Q6MFmQ@mail.gmail.com>
+MIME-Version: 1.0
+Subject: Re: [Lima] [RFC v1 0/1] drm: lima: devfreq and cooling device support
+To: lima@lists.freedesktop.org,
+ Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
+ Alyssa Rosenzweig <alyssa.rosenzweig@collabora.com>
+From: Icenowy Zheng <icenowy@aosc.io>
+Message-ID: <54FE8BA3-BB70-4411-9FD9-4AE460097A95@aosc.io>
+X-BlackCat-Spam-Score: 14
+X-Spam-Status: No, score=1.4
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191224_032854_009171_A9996C18 
-X-CRM114-Status: UNSURE (   9.68  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20191224_033610_702170_0EC29145 
+X-CRM114-Status: GOOD (  11.78  )
+X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-2.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:541 listed in]
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [2a00:1098:0:82:1000:0:2:1 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (martin.blumenstingl[at]googlemail.com)
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -94,42 +69,40 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: robh@kernel.org, tomeu.vizoso@collabora.com, lima@lists.freedesktop.org,
- airlied@linux.ie, linux-kernel@vger.kernel.org,
- dri-devel@lists.freedesktop.org, steven.price@arm.com,
- linux-rockchip@lists.infradead.org, wens@csie.org, yuq825@gmail.com,
- daniel@ffwll.ch, linux-amlogic@lists.infradead.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: robh@kernel.org, tomeu.vizoso@collabora.com, airlied@linux.ie,
+ linux-kernel@vger.kernel.org, dri-devel@lists.freedesktop.org,
+ steven.price@arm.com, linux-rockchip@lists.infradead.org, wens@csie.org,
+ yuq825@gmail.com, daniel@ffwll.ch, linux-amlogic@lists.infradead.org
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Hi Alyssa,
-
-On Mon, Dec 16, 2019 at 4:48 PM Alyssa Rosenzweig
-<alyssa.rosenzweig@collabora.com> wrote:
->
-> If so much code is being duplicated over, I'm wondering if it makes
-> sense for us to move some of the common devfreq code to core DRM
-> helpers?
-if you have any recommendation where to put it then please let me know
-(I am not familiar with the DRM subsystem at all)
-
-my initial idea was that the devfreq logic needs the same information
-that the scheduler needs (whether we're submitting something to be
-executed, there was a timeout, ...).
-however, looking at drivers/gpu/drm/scheduler/ this seems pretty
-stand-alone so I'm not sure it should go there
-also the Mali-4x0 GPUs have some "PMU" which *may* be used instead of
-polling the statistics internally
-so this is where I realize that with my current knowledge I don't know
-enough about lima, panfrost, DRM or the devfreq subsystem to get a
-good idea where to put the code.
-
-
-Martin
-
-_______________________________________________
-linux-amlogic mailing list
-linux-amlogic@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-amlogic
+Cgrkuo4gMjAxOeW5tDEy5pyIMjTml6UgR01UKzA4OjAwIOS4i+WNiDc6Mjg6NDEsIE1hcnRpbiBC
+bHVtZW5zdGluZ2wgPG1hcnRpbi5ibHVtZW5zdGluZ2xAZ29vZ2xlbWFpbC5jb20+IOWGmeWIsDoK
+PkhpIEFseXNzYSwKPgo+T24gTW9uLCBEZWMgMTYsIDIwMTkgYXQgNDo0OCBQTSBBbHlzc2EgUm9z
+ZW56d2VpZwo+PGFseXNzYS5yb3Nlbnp3ZWlnQGNvbGxhYm9yYS5jb20+IHdyb3RlOgo+Pgo+PiBJ
+ZiBzbyBtdWNoIGNvZGUgaXMgYmVpbmcgZHVwbGljYXRlZCBvdmVyLCBJJ20gd29uZGVyaW5nIGlm
+IGl0IG1ha2VzCj4+IHNlbnNlIGZvciB1cyB0byBtb3ZlIHNvbWUgb2YgdGhlIGNvbW1vbiBkZXZm
+cmVxIGNvZGUgdG8gY29yZSBEUk0KPj4gaGVscGVycz8KPmlmIHlvdSBoYXZlIGFueSByZWNvbW1l
+bmRhdGlvbiB3aGVyZSB0byBwdXQgaXQgdGhlbiBwbGVhc2UgbGV0IG1lIGtub3cKPihJIGFtIG5v
+dCBmYW1pbGlhciB3aXRoIHRoZSBEUk0gc3Vic3lzdGVtIGF0IGFsbCkKPgo+bXkgaW5pdGlhbCBp
+ZGVhIHdhcyB0aGF0IHRoZSBkZXZmcmVxIGxvZ2ljIG5lZWRzIHRoZSBzYW1lIGluZm9ybWF0aW9u
+Cj50aGF0IHRoZSBzY2hlZHVsZXIgbmVlZHMgKHdoZXRoZXIgd2UncmUgc3VibWl0dGluZyBzb21l
+dGhpbmcgdG8gYmUKPmV4ZWN1dGVkLCB0aGVyZSB3YXMgYSB0aW1lb3V0LCAuLi4pLgo+aG93ZXZl
+ciwgbG9va2luZyBhdCBkcml2ZXJzL2dwdS9kcm0vc2NoZWR1bGVyLyB0aGlzIHNlZW1zIHByZXR0
+eQo+c3RhbmQtYWxvbmUgc28gSSdtIG5vdCBzdXJlIGl0IHNob3VsZCBnbyB0aGVyZQo+YWxzbyB0
+aGUgTWFsaS00eDAgR1BVcyBoYXZlIHNvbWUgIlBNVSIgd2hpY2ggKm1heSogYmUgdXNlZCBpbnN0
+ZWFkIG9mCgpJdCdzIG9wdGlvbmFsLiBXZSBjYW5ub3QgcHJvbWlzZSBpdHMgZXhpc3RhbmNlIG9u
+IGEgZ2l2ZW4KaGFyZHdhcmUsIGFuZCBJIGhlYXJkIHRoYXQgYXQgbGVhc3Qgb24gQWxsd2lubmVy
+IEg1IE1hbGkgUE1VCmlzIGJyb2tlbi4KCj5wb2xsaW5nIHRoZSBzdGF0aXN0aWNzIGludGVybmFs
+bHkKPnNvIHRoaXMgaXMgd2hlcmUgSSByZWFsaXplIHRoYXQgd2l0aCBteSBjdXJyZW50IGtub3ds
+ZWRnZSBJIGRvbid0IGtub3cKPmVub3VnaCBhYm91dCBsaW1hLCBwYW5mcm9zdCwgRFJNIG9yIHRo
+ZSBkZXZmcmVxIHN1YnN5c3RlbSB0byBnZXQgYQo+Z29vZCBpZGVhIHdoZXJlIHRvIHB1dCB0aGUg
+Y29kZS4KPgo+Cj5NYXJ0aW4KPl9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
+X19fX19fX19fCj5saW1hIG1haWxpbmcgbGlzdAo+bGltYUBsaXN0cy5mcmVlZGVza3RvcC5vcmcK
+Pmh0dHBzOi8vbGlzdHMuZnJlZWRlc2t0b3Aub3JnL21haWxtYW4vbGlzdGluZm8vbGltYQoKLS0g
+CuS9v+eUqCBLLTkgTWFpbCDlj5HpgIHoh6rmiJHnmoRBbmRyb2lk6K6+5aSH44CCCgpfX19fX19f
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXwpsaW51eC1hbWxvZ2ljIG1h
+aWxpbmcgbGlzdApsaW51eC1hbWxvZ2ljQGxpc3RzLmluZnJhZGVhZC5vcmcKaHR0cDovL2xpc3Rz
+LmluZnJhZGVhZC5vcmcvbWFpbG1hbi9saXN0aW5mby9saW51eC1hbWxvZ2ljCg==
