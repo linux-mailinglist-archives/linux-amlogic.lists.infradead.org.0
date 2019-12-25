@@ -2,92 +2,66 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0DE8012A55F
-	for <lists+linux-amlogic@lfdr.de>; Wed, 25 Dec 2019 02:07:20 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9FBE612A861
+	for <lists+linux-amlogic@lfdr.de>; Wed, 25 Dec 2019 16:09:07 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=9g+biFvzFjPkCZg17M5b8oYJ1RBwCpM2KalI/KdYxaM=; b=jES4KS7MvzpstC
-	0LdTbVeOWmFF13zqClFYWmYH6RDEjFnl0Av0EC0GUkg7wj5ZPwFXPiXsart9GxTkuY44z34rsT7lz
-	f6VkL7i0mXTUyVe7jBXq48T88UaYGc4BAoUBGZix21rUipVg7IQ87sGq27W5sWHbtKNtNj19/1bJ9
-	iOecdvK1nW4MYZQ6+niViJZTZV9PuWCVSO2CzU+PRPYodS8A/ZUIql0xlFAMwC9qfk/vGMR1JGfTL
-	FtFg43oTMJxM1dvTV36ExW4LXhR+qG90eSmBbbailZKwU6kO2NO0QY9snQEKUBcbu14rWgQ61Ej9O
-	qChl4Oeq2WVPm3WIUnEQ==;
+	List-Owner; bh=BTicEZ7ewc8TPFki6M9K+TvBBBdkS3Px3Ir0xrmR8P8=; b=Bx4/NrFZ+VI6HP
+	HbNoHMcnrd26vPUTQTHMohsEdfY6xLaDBJYV7JcxJnOhQN2FWiTyt4BEiw7enDxtmQz7Eq+Pk89ea
+	wTprr5qW8FSKJvhLelQUa8yHaWl/v+MR/gQNOcfqPS3i+Z91RKjDzWsr9VvwEGZHt+9+D2+SisUEu
+	/wCWzlAfED1bC0a9B+3SorQc47FvY8hXUQ0HDCgAERxMkeUVVyiphLbZD4+XQZmJHvn1IY8cuE6Wf
+	TbnVnNDR1Oc6uOjJcgJAb0A/btgkaoMs+BHs2DuiO1M8SR/ypehP2z9cAKzGVTFR51XhOkLmpNkaf
+	UWqk9thQ52uaSm8o85IA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ijv8w-0001dG-NY; Wed, 25 Dec 2019 01:07:18 +0000
-Received: from mail-wm1-x344.google.com ([2a00:1450:4864:20::344])
+	id 1ik8HX-0000j8-2i; Wed, 25 Dec 2019 15:09:03 +0000
+Received: from vps0.lunn.ch ([185.16.172.187])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ijv85-0000de-O3; Wed, 25 Dec 2019 01:06:27 +0000
-Received: by mail-wm1-x344.google.com with SMTP id d139so2807649wmd.0;
- Tue, 24 Dec 2019 17:06:25 -0800 (PST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=googlemail.com; s=20161025;
- h=from:to:cc:subject:date:message-id:in-reply-to:references
- :mime-version:content-transfer-encoding;
- bh=G4iZPYSHcETHrh5Mkc153Wxpky0z21UUEkDTh50Atls=;
- b=msRtbZFynJxyeGYd1lLRmtThZVgLm2dEpIET/tJJqL5w33Yudoh1KnAI1z44ZUCWTp
- xfufU2VgGKTFimD++HDIvcWWQR3OpZB7AgJRoxq3fNf7Ln/ggHPZTHrk+WwEPdIRNeZu
- +xLf1p+b2bOs8UbWJ9s6M8XNAEkfZbJPCdf6frKrEf6HlfBAn0PSKAaZscsdrtItC+dB
- zRermTHOfe0Vk2AfNHPwJKJsbRrXD4ZGEFJaWBHMzc0/ezn21ZBi+2rkJ6lC3xHMaX6a
- zkKUrI7kSAt4tpv8DxJVICRBIwZgUjJes8tlIe7yNyJhHIyxkLf0foj1DTnc8K6siX4R
- Xl6w==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
- :references:mime-version:content-transfer-encoding;
- bh=G4iZPYSHcETHrh5Mkc153Wxpky0z21UUEkDTh50Atls=;
- b=YE2W7Y54EEedT8G2wtPo5Pt8bWOYACEIJQHBiUv5GYI5P1ytt86/T5t1UunyMoAT0I
- 1jbcqj7sWwBrRy6gXkcFl5CUj8/m/YHD2XyKU3xLiHwIBQPTb+ZAoWYnkGxtl/DQCH3c
- yEpSSi2UyTxLdtYJaX/m/fVqjKUPG8k4jL6zRfdJEA1oddqx40jCeKY0mc4Zvw7LBpSP
- SIdwDuG/4Iu5DOTybi8QmXSl3O87oPND55upYguLR5SxZcsRIyAk8jxAeL5lctlJzzwk
- o+YVM6sMXi7VZY2RWT1pmjwt+umUJgeKcHkE+Do1G3Ap6xFwT3+5IOZVMqeUjN3VKqaS
- BiqA==
-X-Gm-Message-State: APjAAAUZAXgi7Xxcti7l2tWTCxweB9soe4kokNQy2xgN8cvTG2oxX1Ac
- 2OOielPO5dqqXqpcAT1I1L22xAzg
-X-Google-Smtp-Source: APXvYqx49sT+9J+WOgr59XRUu/8x5Jzm+pok9R0Glahlhx8JQErqlHoMTLJicMdzR504M8AdRVZ4Dg==
-X-Received: by 2002:a1c:5419:: with SMTP id i25mr6508859wmb.150.1577235984382; 
- Tue, 24 Dec 2019 17:06:24 -0800 (PST)
-Received: from localhost.localdomain
- (p200300F1373A1900428D5CFFFEB99DB8.dip0.t-ipconnect.de.
- [2003:f1:373a:1900:428d:5cff:feb9:9db8])
- by smtp.googlemail.com with ESMTPSA id x26sm4066127wmc.30.2019.12.24.17.06.23
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Tue, 24 Dec 2019 17:06:23 -0800 (PST)
-From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-To: linux-amlogic@lists.infradead.org,
-	khilman@baylibre.com
-Subject: [PATCH 3/3] ARM: dts: meson8b: use the actual frequency for the GPU's
- 364MHz OPP
-Date: Wed, 25 Dec 2019 02:06:07 +0100
-Message-Id: <20191225010607.1504239-4-martin.blumenstingl@googlemail.com>
-X-Mailer: git-send-email 2.24.1
-In-Reply-To: <20191225010607.1504239-1-martin.blumenstingl@googlemail.com>
-References: <20191225010607.1504239-1-martin.blumenstingl@googlemail.com>
+ id 1ik8HT-0000ig-RQ; Wed, 25 Dec 2019 15:09:01 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=lunn.ch;
+ s=20171124; h=In-Reply-To:Content-Type:MIME-Version:References:Message-ID:
+ Subject:Cc:To:From:Date:Sender:Reply-To:Content-Transfer-Encoding:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
+ List-Post:List-Owner:List-Archive;
+ bh=jQM1mPv2ronZJbcInLqrwGfsm7Z5m5AylYfzZgE2JXA=; b=zTEfMuOoUE9MwHB3sP2D4Xd29U
+ B+ejTbVH8L+m+Y7bydqkF8Dm/oDIF0kTrd+TKU5JrmBdJkTJbF1cPtIa5qlI4XdJcYZcJR2eZKCfI
+ NTTb5UzoFmrjvo0NuqfqIaHH1JhkSOviMTwD8hDle1tN/hewSV9OhQeSRTHZtCZwz6aw=;
+Received: from andrew by vps0.lunn.ch with local (Exim 4.93)
+ (envelope-from <andrew@lunn.ch>)
+ id 1ik8HF-0004Zd-42; Wed, 25 Dec 2019 16:08:45 +0100
+Date: Wed, 25 Dec 2019 16:08:45 +0100
+From: Andrew Lunn <andrew@lunn.ch>
+To: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+Subject: Re: [PATCH 1/3] net: stmmac: dwmac-meson8b: Fix the RGMII TX delay
+ on Meson8b/8m2 SoCs
+Message-ID: <20191225150845.GA16671@lunn.ch>
+References: <20191225005655.1502037-1-martin.blumenstingl@googlemail.com>
+ <20191225005655.1502037-2-martin.blumenstingl@googlemail.com>
 MIME-Version: 1.0
+Content-Disposition: inline
+In-Reply-To: <20191225005655.1502037-2-martin.blumenstingl@googlemail.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191224_170625_803728_A9BC6E12 
-X-CRM114-Status: GOOD (  11.56  )
+X-CRM114-CacheID: sfid-20191225_070859_887484_F74CA231 
+X-CRM114-Status: GOOD (  10.37  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:344 listed in]
- [list.dnswl.org]
+ no trust [185.16.172.187 listed in list.dnswl.org]
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (martin.blumenstingl[at]googlemail.com)
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
 X-BeenThere: linux-amlogic@lists.infradead.org
@@ -101,43 +75,80 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
- linux-kernel@vger.kernel.org, linux-arm-kernel@lists.infradead.org
+Cc: linus.luessing@c0d3.blue, balbes-150@yandex.ru, khilman@baylibre.com,
+ linux-kernel@vger.kernel.org, ingrassia@epigenesys.com, netdev@vger.kernel.org,
+ linux-amlogic@lists.infradead.org, davem@davemloft.net,
+ linux-arm-kernel@lists.infradead.org, jbrunet@baylibre.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-The clock setup on Meson8 cannot achieve a Mali frequency of exactly
-182.15MHz. The vendor driver uses "FCLK_DIV7 / 1" for this frequency,
-which translates to 2550MHz / 7 / 1 = 364285714Hz.
-Update the GPU operating point to that specific frequency to not confuse
-myself when comparing the frequency from the .dts with the actual clock
-rate on the system.
+On Wed, Dec 25, 2019 at 01:56:53AM +0100, Martin Blumenstingl wrote:
+> GXBB and newer SoCs use the fixed FCLK_DIV2 (1GHz) clock as input for
+> the m250_sel clock. Meson8b and Meson8m2 use MPLL2 instead, whose rate
+> can be adjusted at runtime.
+> 
+> So far we have been running MPLL2 with ~250MHz (and the internal
+> m250_div with value 1), which worked enough that we could transfer data
+> with an TX delay of 4ns. Unfortunately there is high packet loss with
+> an RGMII PHY when transferring data (receiving data works fine though).
+> Odroid-C1's u-boot is running with a TX delay of only 2ns as well as
+> the internal m250_div set to 2 - no lost (TX) packets can be observed
+> with that setting in u-boot.
+> 
+> Manual testing has shown that the TX packet loss goes away when using
+> the following settings in Linux:
+> - MPLL2 clock set to ~500MHz
+> - m250_div set to 2
+> - TX delay set to 2ns
 
-Fixes: c3ea80b6138cae ("ARM: dts: meson8b: add the Mali-450 MP2 GPU")
-Signed-off-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
----
- arch/arm/boot/dts/meson8b.dtsi | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
+Hi Martin
 
-diff --git a/arch/arm/boot/dts/meson8b.dtsi b/arch/arm/boot/dts/meson8b.dtsi
-index 5b5791924753..e34b039b9357 100644
---- a/arch/arm/boot/dts/meson8b.dtsi
-+++ b/arch/arm/boot/dts/meson8b.dtsi
-@@ -126,8 +126,8 @@ opp-255000000 {
- 			opp-hz = /bits/ 64 <255000000>;
- 			opp-microvolt = <1100000>;
- 		};
--		opp-364300000 {
--			opp-hz = /bits/ 64 <364300000>;
-+		opp-364285714 {
-+			opp-hz = /bits/ 64 <364285714>;
- 			opp-microvolt = <1100000>;
- 		};
- 		opp-425000000 {
--- 
-2.24.1
+The delay will depend on the PHY, the value of phy-mode, and the PCB
+layout.
+
+https://ethernetfmc.com/rgmii-interface-timing-considerations/
+
+RGMII requires a delay of 2ns between the data and the clock
+signal. There are at least three ways this can happen.
+
+1) The MAC adds the delay
+
+2) The PCB adds the delay by making the clock line longer than the
+data line.
+
+3) The PHY adds the delay.
+
+In linux you configure this using the phy-mode in DT.
+
+      # RX and TX delays are added by the MAC when required
+      - rgmii
+
+      # RGMII with internal RX and TX delays provided by the PHY,
+      # the MAC should not add the RX or TX delays in this case
+      - rgmii-id
+
+      # RGMII with internal RX delay provided by the PHY, the MAC
+      # should not add an RX delay in this case
+      - rgmii-rxid
+
+      # RGMII with internal TX delay provided by the PHY, the MAC
+      # should not add an TX delay in this case
+      - rgmii-txid
+
+So ideally, you want the MAC to add no delay at all, and then use the
+correct phy-mode so the PHY adds the correct delay. This gives you the
+most flexibility in terms of PHY and PCB design. This does however
+require that the PHY implements the delay, which not all do.
+
+Looking at patches 2 and 3, the phy-mode is set to rgmii. What you
+might actually need to do is set this to rgmii-txid, or maybe
+rgmii-id, once you have the MAC not inserting any delay.
+
+With MAC/PHY issues, it is a good idea to Cc: the PHY maintainers.
+
+	Andrew
 
 
 _______________________________________________
