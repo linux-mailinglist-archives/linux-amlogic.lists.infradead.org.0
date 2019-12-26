@@ -2,83 +2,86 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E4E9412AE4A
-	for <lists+linux-amlogic@lfdr.de>; Thu, 26 Dec 2019 20:20:17 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4B1A012AE64
+	for <lists+linux-amlogic@lfdr.de>; Thu, 26 Dec 2019 21:11:17 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=2t1WtFfEWb7rVbqL0K7y0eI8Lyo4RS8MrTB0IhV+geQ=; b=Pk4s/UsPnTGVjy
-	rM1+5ia5bXLycmGF+7TNd6S9ryFL3KxGtl5bT/yIuTBGqE08NmwjlVppK0dEuODfQOuptjCvnoAK/
-	SzxMpD1JBNiT6reg3qj2/ANJl/h0CKv1S4vBLDE3D72AxPnPszrGhbWJtdmo0cPamxWx/iEDxEEf7
-	sSFDUQ6XCQvofJhx4/5FvnVWbWtrAWEi3jKqzMFQKlRHMEGOo/SKCsJwB770NbpkiEimAL1uOkJ8G
-	+IZJSvgv7HGHUTJy3ncnCQ8zMoV3glws1D8g40gtOio4/U+i5t1evO2yjtGtmPt0sYH9sTYJyIEL+
-	/HdRZdWGurAVgL6Yg8Dw==;
+	List-Owner; bh=r24h5hRpUFnl2IVFOVLNUSZVC8zKXY9kptaZyVMUda0=; b=OA6y3mXJ3KkzJn
+	+CNKQXoy4RhFTK/CZue0ZYDpxqJmHhM/L4l1Dm8LdwowzROKzJ5GzX/6qtLY5uknrR3HCYZ5O9wAB
+	mF681oYNTfNffohqlNsFx9yzm4HEK/ehiM7plDWYL1RtnGDVXS+tRu7eoDbOW/zk1hnv27bLSXxgr
+	KYCTRKcJIurt1r/1wmvx3sKJrP84U3I2KY8zlzlJzC5KylP2rGlRGNDYqM+MOAHDRiV6Ucn++H1R9
+	WBBvb829hPJVx5JUlY31RWfw+Quq+xWfL2rwdE8v+zWhVuxZGfK9DzV34HzSha4O3JCoaAHHJeLtI
+	z4/96PvNdO+KVbE9P56A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ikYgB-0005HC-BG; Thu, 26 Dec 2019 19:20:15 +0000
-Received: from mail-il1-f193.google.com ([209.85.166.193])
+	id 1ikZTX-00054D-2F; Thu, 26 Dec 2019 20:11:15 +0000
+Received: from mail-ed1-x543.google.com ([2a00:1450:4864:20::543])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ikYfk-0004VR-0U; Thu, 26 Dec 2019 19:19:49 +0000
-Received: by mail-il1-f193.google.com with SMTP id v69so20793629ili.10;
- Thu, 26 Dec 2019 11:19:44 -0800 (PST)
+ id 1ikZTT-00053t-6t
+ for linux-amlogic@lists.infradead.org; Thu, 26 Dec 2019 20:11:12 +0000
+Received: by mail-ed1-x543.google.com with SMTP id cy15so23635450edb.4
+ for <linux-amlogic@lists.infradead.org>; Thu, 26 Dec 2019 12:11:10 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=googlemail.com; s=20161025;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=DKyS0Vzar44g5nZVMq7w89sJBVTVVQr7IhBAjNIROrI=;
+ b=dkoPDMmRO2eMwq7TMq1HtLGXctYNZZjUXuFpwJaYLHjL4DHZBgoqJoj2hhpUurQB86
+ quqctLUkVeEctiVeMOgGlQKlzRsXqBY2H2rp9rluW2Ub29W0vqIMPXGP+zlhb+8UJmBD
+ NSl/EdBjv3zKh1ruJhqdiuFdRG813PmDhGNiz+al4f34WHfimfbMB8AlJCQVI/WhMSfz
+ 7kMLzUho23PWWhN6nGDqRlnyl5bOKDsKbnmG/QVlKaVotqfucxZCUwe+mp+f52OcZpnR
+ ec0YYHCFTvIhPXxhSWEyhNw5FkVMpPcjhLiNnsQBSClPmjXpKatN6p2YCq8M+5eNPBYE
+ 1vLA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=AqWJxAJe8Vgf4p53OHB9TkZmIbkYP+Pma79n+C2GBLc=;
- b=FQ+YgZIjrkfd0QtMKnpunbYsbGyEwDzDyb52f2WVo1ePo2HNPzE1q/znzBD3ilXOe4
- TUr7JRoVE3MevfbAmKWGBTEQTcF8UidF7LfVQww7mXk6WYHHXhWlfZW8OGxHpGlBE+2O
- TfCtswY6p56JaSqlFqIHxEJmfz7NOBPKprA/kR6DexvVjy99gX82kmuwU2xLajMnskqG
- 8RVZZLIaQB2j2DaOg6D+K/g3McQHPEeMJipjY+6kgj0Ph7Pz4vrzIspUHsoxmM771cVD
- kwMQigSmGRzk2YyRVY56FkMrgTPK7m0QGU59PHe18Xumrmc2lFZX7DgFG5CzxtnUfCvd
- O9JA==
-X-Gm-Message-State: APjAAAXyLbbqEoSWuTaeA88FJe7Mhm8qU3BayBnN0DgSF1yO1r09DvST
- jweolLiCUDCXhY9/mKJJxpcSYTY=
-X-Google-Smtp-Source: APXvYqzB6YGqCYlO6/M0ZHv5gof0FiLkRfYe1t/A15ZE+3JvhhyuAj2WMHUSJkh5iVeABFNEK6ImJg==
-X-Received: by 2002:a92:5a56:: with SMTP id o83mr37720479ilb.97.1577387984062; 
- Thu, 26 Dec 2019 11:19:44 -0800 (PST)
-Received: from localhost ([64.188.179.250])
- by smtp.gmail.com with ESMTPSA id m24sm8871530ioc.37.2019.12.26.11.19.43
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Thu, 26 Dec 2019 11:19:43 -0800 (PST)
-Date: Thu, 26 Dec 2019 12:19:42 -0700
-From: Rob Herring <robh@kernel.org>
-To: Qianggui Song <qianggui.song@amlogic.com>
-Subject: Re: [PATCH v2 1/4] dt-bindings: interrupt-controller: New binding
- for Meson-A1 SoCs
-Message-ID: <20191226191942.GA17451@bogus>
-References: <20191216123645.10099-1-qianggui.song@amlogic.com>
- <20191216123645.10099-2-qianggui.song@amlogic.com>
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=DKyS0Vzar44g5nZVMq7w89sJBVTVVQr7IhBAjNIROrI=;
+ b=Bh7EpiBg3KILJRGAncVY69fWMXErtOGbHnI1PqdvVbRFAUSJHiiBQu8K7KdRKuOJkn
+ EHJ4sE7Z8qLid3kK+8HkXo0ha4L2ZA3qvR5xY5O9JUXkwiPcJucmBUC0ahTx6TQm8VM6
+ 7/ifu3oXgOE0sx/PTJd4fEBhQw3q/ZxfCIXEGh4tNsve4EINEqrDLGntyyNJALl0CGU7
+ jl1uA+VEPJYaqqdMUDaySUvAy6DyGu2g8EohuR17oBgC9OsVmC8VSqLCOo+o1HGfP+u8
+ vMFDbZzVEQPwiLfLr6MQ6C+XzutFHDO/ary66Sq3+NLf0sU7BmzBaeDREG9HJP8PTgKl
+ CZww==
+X-Gm-Message-State: APjAAAVqpnl59h+fddj8MaiHAJfD8QmYOvDvOwovjGCc64ZPE9wcKhH9
+ KX2kTma4GxUa6WmrU/ZvxRV+dQlxYcN8dcsdG5I=
+X-Google-Smtp-Source: APXvYqyOHd8m4jOZ18liraS1LmkJgDRRTlRaa1TAnpybzR7ymvltec/WOyoBzbMMK/SVycz37m9EThbBbClEbuEt25k=
+X-Received: by 2002:a50:fb96:: with SMTP id e22mr51700477edq.18.1577391069615; 
+ Thu, 26 Dec 2019 12:11:09 -0800 (PST)
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20191216123645.10099-2-qianggui.song@amlogic.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+References: <20191224173942.18160-1-repk@triplefau.lt>
+ <20191224173942.18160-6-repk@triplefau.lt>
+In-Reply-To: <20191224173942.18160-6-repk@triplefau.lt>
+From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+Date: Thu, 26 Dec 2019 21:10:58 +0100
+Message-ID: <CAFBinCBzt6SRGx+8iT=NHW00ip_gtg2cW7T8z9aqjeGPH8f7OQ@mail.gmail.com>
+Subject: Re: [PATCH v3 5/5] dt-bindings: Add AXG PCIE PHY bindings
+To: Remi Pommarel <repk@triplefau.lt>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191226_111948_054020_E47BC97C 
-X-CRM114-Status: UNSURE (   8.97  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.7 (/)
+X-CRM114-CacheID: sfid-20191226_121111_279513_A3A3BF93 
+X-CRM114-Status: GOOD (  12.58  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.7 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.166.193 listed in list.dnswl.org]
+ no trust [2a00:1450:4864:20:0:0:0:543 listed in]
+ [list.dnswl.org]
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (robherring2[at]gmail.com)
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.166.193 listed in wl.mailspike.net]
+ provider (martin.blumenstingl[at]googlemail.com)
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit (robherring2[at]gmail.com)
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -90,30 +93,61 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: Qianggui Song <qianggui.song@amlogic.com>, devicetree@vger.kernel.org,
- Hanjie Lin <hanjie.lin@amlogic.com>, Jason Cooper <jason@lakedaemon.net>,
- Jianxin Pan <jianxin.pan@amlogic.com>,
- Neil Armstrong <narmstrong@baylibre.com>, Marc Zyngier <maz@kernel.org>,
- Mark Rutland <mark.rutland@arm.com>, linux-kernel@vger.kernel.org,
- Rob Herring <robh+dt@kernel.org>, linux-arm-kernel@lists.infradead.org,
- Kevin Hilman <khilman@baylibre.com>, linux-amlogic@lists.infradead.org,
- Thomas Gleixner <tglx@linutronix.de>, Xingyu Chen <xingyu.chen@amlogic.com>,
+Cc: devicetree@vger.kernel.org, Lorenzo Pieralisi <lorenzo.pieralisi@arm.com>,
+ Neil Armstrong <narmstrong@baylibre.com>, Kevin Hilman <khilman@baylibre.com>,
+ linux-pci@vger.kernel.org, linux-kernel@vger.kernel.org,
+ Yue Wang <yue.wang@amlogic.com>, linux-amlogic@lists.infradead.org,
+ Andrew Murray <andrew.murray@arm.com>, Kishon Vijay Abraham I <kishon@ti.com>,
  Jerome Brunet <jbrunet@baylibre.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On Mon, 16 Dec 2019 20:36:42 +0800, Qianggui Song wrote:
-> Update dt-binding document for GPIO interrupt controller of Meson-A1 SoCs
-> 
-> Signed-off-by: Qianggui Song <qianggui.song@amlogic.com>
+On Tue, Dec 24, 2019 at 6:32 PM Remi Pommarel <repk@triplefau.lt> wrote:
+>
+> Add documentation for PCIE PHYs found in AXG SoCs.
+>
+> Signed-off-by: Remi Pommarel <repk@triplefau.lt>
 > ---
->  .../bindings/interrupt-controller/amlogic,meson-gpio-intc.txt    | 1 +
->  1 file changed, 1 insertion(+)
-> 
+>  .../bindings/phy/amlogic,meson-axg-pcie.yaml  | 51 +++++++++++++++++++
+>  1 file changed, 51 insertions(+)
+>  create mode 100644 Documentation/devicetree/bindings/phy/amlogic,meson-axg-pcie.yaml
+>
+> diff --git a/Documentation/devicetree/bindings/phy/amlogic,meson-axg-pcie.yaml b/Documentation/devicetree/bindings/phy/amlogic,meson-axg-pcie.yaml
+> new file mode 100644
+> index 000000000000..c622a1b38ffc
+> --- /dev/null
+> +++ b/Documentation/devicetree/bindings/phy/amlogic,meson-axg-pcie.yaml
+> @@ -0,0 +1,51 @@
+> +# SPDX-License-Identifier: (GPL-2.0 OR BSD-2-Clause)
+> +# Copyright 2019 BayLibre, SAS
+> +%YAML 1.2
+> +---
+> +$id: "http://devicetree.org/schemas/phy/amlogic,meson-axg-pcie.yaml#"
+> +$schema: "http://devicetree.org/meta-schemas/core.yaml#"
+> +
+> +title: Amlogic AXG PCIE PHY
+> +
+> +maintainers:
+> +  - Remi Pommarel <repk@triplefau.lt>
+> +
+> +properties:
+> +  compatible:
+> +    enum:
+> +      - amlogic,axg-pcie-phy
+> +
+> +  reg:
+> +    maxItems: 1
+> +
+> +  aml,hhi-gpr:
+> +    maxItems: 1
+nit-pick (as I didn't have time to review the whole series yet):
+we have at least two other IP blocks that need this. they use
+"amlogic,hhi-sysctrl" for the property name
 
-Acked-by: Rob Herring <robh@kernel.org>
+
+Martin
 
 _______________________________________________
 linux-amlogic mailing list
