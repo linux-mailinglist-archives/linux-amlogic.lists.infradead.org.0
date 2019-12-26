@@ -2,74 +2,93 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3D4C012AE60
-	for <lists+linux-amlogic@lfdr.de>; Thu, 26 Dec 2019 21:03:38 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 39AFE12AE84
+	for <lists+linux-amlogic@lfdr.de>; Thu, 26 Dec 2019 21:37:20 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=CrnFoYyVk1voc1tckniVCa/T/ycjiKwYUY2EBeustM8=; b=kOQkNqgfnhNng/
-	DG7jie/LUxXN6saVG0Kj1ksS52DARTWGqfkoioggNC5nlWX0PLY2qC7KWYgcmKSImEEGVc7G9xAWA
-	fq8/LNplua236XltkqLIBPzkVvuejqq7nyELal+O242C60kLakF1m4NlLAS/WiZARCOwe4QjYdrPP
-	+UrNZdGwavCoQjc+wcD7IzrN/rYLEJ73t+mmasHCAdVACddEabI8ygR+POTKpD3L0avrMbFjR0d3D
-	BU7KLSie0t+cZQdvrSkLmrbRpPsMteFMlZWM9BfHV0HlgNWj/3UPRnk47cFoFGdZ1Y51sFJaRvyLJ
-	0AYfVaEvBypA6ZZs6KfQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=9YilDAzt2kxL1FdAyOBnACyEkgG8J9zPVDTXX0quJIQ=; b=RWp2bD2eq037lG
+	g1J25NP7b5TSO6woiyQAgJk65XPzY50jZ3onGBRQTMWBsgqx8oMXkGMyFAE4olLu2sXgu124CQKY/
+	ET8vCLWuBmv8H+mivoggR98gNji31iytj5DCf1BdlbHksHM7rtaNdKXwCGOclLqe24/UzlEUFK4wN
+	ZFnPzsh1ffuaDaXMRbvQF3thn82Cudsz91y+SPoEPadHy/NLdGLWfF8b1b7sD8XTJpy0Tg7GvbJ1J
+	qLw2JeiDd/DoHK8/pc1wkTmXTYTWLpK4AuzWM3EtHR8XTJ1HST3M6ySbJqM+xAk8q2xt3Pizg5R/3
+	C1JTqIHwD3d6gYJTbaxg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ikZM6-0002Nc-6B; Thu, 26 Dec 2019 20:03:34 +0000
-Received: from casper.infradead.org ([2001:8b0:10b:1236::1])
+	id 1ikZsi-00059R-JE; Thu, 26 Dec 2019 20:37:16 +0000
+Received: from mail-wm1-x343.google.com ([2a00:1450:4864:20::343])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ikZM4-0002NM-61
- for linux-amlogic@bombadil.infradead.org; Thu, 26 Dec 2019 20:03:32 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=infradead.org; s=casper.20170209; h=In-Reply-To:Content-Type:MIME-Version:
- References:Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:
- Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:
- List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=Gx06v/2ND2urrfD8atr1gVBJVk2Bs2MUKVh+A4nqffY=; b=YmxajTGpDEmYE/ZcPPExlCEZ4
- 4IPGhchBkLpLV+r8GxOdOfwhjN/UCPF/nV0emZgPII5jTE8IK3I3EnFRUSa/4RLN69zq1fCyq93VD
- 8XAHv30KU21+eiL56r9qOwP9Hnjv94W41FXlCGNRKckVhYpyjAI6Tt3cBARRPG1pV2Elg3vQOpKCH
- 8rPeSjirNlbBn9UIDoLTB6gr1yVvN/+MlGvL3/NA8KlOuamsy3vpyZCUY+klOQkaLg9eb+ShT3WPM
- 6lR0r26tkc2R2PA91ZAuqSLmRZOvX020bR84Hbd+dcxNPR7sZiT8n7iDtPvR0mwYrnYQ68L20qhcL
- 5yrBWrTrA==;
-Received: from relay4-d.mail.gandi.net ([217.70.183.196])
- by casper.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ikZMQ-00005Y-UO
- for linux-amlogic@lists.infradead.org; Thu, 26 Dec 2019 20:03:57 +0000
-X-Originating-IP: 88.190.179.123
-Received: from localhost (unknown [88.190.179.123])
- (Authenticated sender: repk@triplefau.lt)
- by relay4-d.mail.gandi.net (Postfix) with ESMTPSA id AE615E0006;
- Thu, 26 Dec 2019 20:02:45 +0000 (UTC)
-Date: Thu, 26 Dec 2019 21:11:46 +0100
-From: Remi Pommarel <repk@triplefau.lt>
-To: Jerome Brunet <jbrunet@baylibre.com>
-Subject: Re: [PATCH v2 1/3] phy: amlogic: Add Amlogic AXG MIPI/PCIE PHY Driver
-Message-ID: <20191226201146.GA1803@voidbox>
-References: <20191223214529.20377-1-repk@triplefau.lt>
- <20191223214529.20377-2-repk@triplefau.lt>
- <1jeewrpgrr.fsf@starbuckisacylon.baylibre.com>
+ id 1ikZsf-00058a-Ke; Thu, 26 Dec 2019 20:37:15 +0000
+Received: by mail-wm1-x343.google.com with SMTP id p9so6648302wmc.2;
+ Thu, 26 Dec 2019 12:37:12 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=googlemail.com; s=20161025;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=llajuKPgaOsGAZ6hxa/EUEXLbYSF0qHLJQBA9/H47cY=;
+ b=oW/XveMrY7fe5BgQnxbWDFAdmRLzL34s6I+JDTYtT8TRs6ext70L0wuYi/+Vtfhd45
+ p99aaZp8WvB3IUsF09jM6FRejA5aZqbmUQPfEqA7hfIs69wsamf2BZWiOhUni2C/SLVb
+ DroTOrzmhzBXznCFPGZ903sH6HHNvidiSuV0NXecfwA70KkKc60JxEGg21o4y7U3iHoo
+ Q7zDTePknya/1fOgs6TMIOf82MU5Auee5qqrrrzIIbavbMBQWbbu/WHTN85vtN9SJqdS
+ hyeRaEbNItnY7nIsgz+Fl1sAAtKzv/lmtZz6u4WQyP2EbSuL3mBCs9H3gQ8KDvucVYf2
+ wpCA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=llajuKPgaOsGAZ6hxa/EUEXLbYSF0qHLJQBA9/H47cY=;
+ b=MkDRppUVOty2GYM9Bl1GzCQVcE9s12+QonqOhVsdutpAHlvJtXLTElnN1dzlNKbNor
+ NXrYVp8Uv8YLwJvb3r0C9oZqSPnX4Fv/b+7CaNB5GkKxe8AwgLMVZVEjkDf9EwClAm5f
+ UfYyelxycrrFQlcMPCCJ6RhZexhhFn1D+kmdsSZB9rpPuULEhJWPoYKjhf3I/lYqPLTD
+ TVt4BGIJA0H4oyGLIBTwEF7TlRuqCSZjQmJ8KJ+qv9RraC+7ebM6jpQ8OssDbjpvOciy
+ 8pPOLRXcGG2qH8hoPRLeQI4yNkpfzTqJOcbU7bbKHdrSiIgp4T8rA76FQVxDSh93aWxx
+ 1GJg==
+X-Gm-Message-State: APjAAAWpIKN+xeyQ8TdxshdwC1ghn5IvvQpFrovzG4iCvUmxeVfiL5sf
+ 42fi4MsbujxLWr57Gaw8U2w=
+X-Google-Smtp-Source: APXvYqykOW8DBg++MEZzLBMV1jVOWJRZFOWwgqriD5aTx1V21CwR+2x7Bg2km6Aa9r9ts2qbHE2J7g==
+X-Received: by 2002:a1c:28d4:: with SMTP id
+ o203mr15485931wmo.123.1577392631651; 
+ Thu, 26 Dec 2019 12:37:11 -0800 (PST)
+Received: from localhost.localdomain
+ (p200300F1373A1900428D5CFFFEB99DB8.dip0.t-ipconnect.de.
+ [2003:f1:373a:1900:428d:5cff:feb9:9db8])
+ by smtp.googlemail.com with ESMTPSA id q3sm32911665wrn.33.2019.12.26.12.37.10
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Thu, 26 Dec 2019 12:37:10 -0800 (PST)
+From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+To: andrew@lunn.ch, f.fainelli@gmail.com, linux-amlogic@lists.infradead.org,
+ jianxin.pan@amlogic.com
+Subject: [RFC v1 0/2] dwmac-meson8b Ethernet RX delay configuration
+Date: Thu, 26 Dec 2019 21:36:53 +0100
+Message-Id: <20191226203655.4046170-1-martin.blumenstingl@googlemail.com>
+X-Mailer: git-send-email 2.24.1
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <1jeewrpgrr.fsf@starbuckisacylon.baylibre.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191226_200355_028738_DC675B6C 
-X-CRM114-Status: GOOD (  40.90  )
-X-Spam-Score: -0.7 (/)
-X-Spam-Report: SpamAssassin version 3.4.2 on casper.infradead.org summary:
- Content analysis details:   (-0.7 points, 5.0 required)
+X-CRM114-CacheID: sfid-20191226_123713_704825_7021FE09 
+X-CRM114-Status: UNSURE (   8.81  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.2 (/)
+X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
- low trust [217.70.183.196 listed in list.dnswl.org]
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [217.70.183.196 listed in wl.mailspike.net]
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:343 listed in]
+ [list.dnswl.org]
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (martin.blumenstingl[at]googlemail.com)
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -81,281 +100,52 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: Lorenzo Pieralisi <lorenzo.pieralisi@arm.com>,
- Neil Armstrong <narmstrong@baylibre.com>,
- Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
- Kevin Hilman <khilman@baylibre.com>, linux-kernel@vger.kernel.org,
- Yue Wang <yue.wang@amlogic.com>, linux-pci@vger.kernel.org,
- Andrew Murray <andrew.murray@arm.com>, linux-amlogic@lists.infradead.org,
- Kishon Vijay Abraham I <kishon@ti.com>
+Cc: Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
+ netdev@vger.kernel.org, davem@davemloft.net,
+ linux-arm-kernel@lists.infradead.org, linux-kernel@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On Thu, Dec 26, 2019 at 10:39:36AM +0100, Jerome Brunet wrote:
-> 
-> On Mon 23 Dec 2019 at 22:45, Remi Pommarel <repk@triplefau.lt> wrote:
-> 
-> > This adds support for the MIPI PHY also needed for PCIE found in the
-> > Amlogic AXG SoC Family.
-> >
-> > MIPI or PCIE selection is done by the #phy-cells, making the mode
-> > static and exclusive.
-> >
-> > For now only PCIE fonctionality is supported.
-> >
-> > This PHY will be used to replace the mipi_enable clock gating logic
-> > which was mistakenly added in the clock subsystem. This also activate
-> > a non documented band gap bit in those registers that allows reliable
-> > PCIE clock signal generation on AXG platforms.
-> >
-> > Signed-off-by: Remi Pommarel <repk@triplefau.lt>
-> > ---
-> >  drivers/phy/amlogic/Kconfig                   |  11 ++
-> >  drivers/phy/amlogic/Makefile                  |   1 +
-> >  drivers/phy/amlogic/phy-meson-axg-mipi-pcie.c | 176 ++++++++++++++++++
-> >  3 files changed, 188 insertions(+)
-> >  create mode 100644 drivers/phy/amlogic/phy-meson-axg-mipi-pcie.c
-> >
-> > diff --git a/drivers/phy/amlogic/Kconfig b/drivers/phy/amlogic/Kconfig
-> > index af774ac2b934..1eeb75d018e3 100644
-> > --- a/drivers/phy/amlogic/Kconfig
-> > +++ b/drivers/phy/amlogic/Kconfig
-> > @@ -59,3 +59,14 @@ config PHY_MESON_G12A_USB3_PCIE
-> >  	  Enable this to support the Meson USB3 + PCIE Combo PHY found
-> >  	  in Meson G12A SoCs.
-> >  	  If unsure, say N.
-> > +
-> > +config PHY_MESON_AXG_MIPI_PCIE
-> > +	tristate "Meson AXG MIPI + PCIE PHY driver"
-> > +	default ARCH_MESON
-> > +	depends on OF && (ARCH_MESON || COMPILE_TEST)
-> > +	select GENERIC_PHY
-> > +	select MFD_SYSCON
-> > +	help
-> > +	  Enable this to support the Meson MIPI + PCIE PHY found
-> > +	  in Meson AXG SoCs.
-> > +	  If unsure, say N.
-> > diff --git a/drivers/phy/amlogic/Makefile b/drivers/phy/amlogic/Makefile
-> > index 11d1c42ac2be..2167330a0ae8 100644
-> > --- a/drivers/phy/amlogic/Makefile
-> > +++ b/drivers/phy/amlogic/Makefile
-> > @@ -4,3 +4,4 @@ obj-$(CONFIG_PHY_MESON_GXL_USB2)	+= phy-meson-gxl-usb2.o
-> >  obj-$(CONFIG_PHY_MESON_G12A_USB2)	+= phy-meson-g12a-usb2.o
-> >  obj-$(CONFIG_PHY_MESON_GXL_USB3)	+= phy-meson-gxl-usb3.o
-> >  obj-$(CONFIG_PHY_MESON_G12A_USB3_PCIE)	+= phy-meson-g12a-usb3-pcie.o
-> > +obj-$(CONFIG_PHY_MESON_AXG_MIPI_PCIE)	+= phy-meson-axg-mipi-pcie.o
-> > diff --git a/drivers/phy/amlogic/phy-meson-axg-mipi-pcie.c b/drivers/phy/amlogic/phy-meson-axg-mipi-pcie.c
-> > new file mode 100644
-> > index 000000000000..006aa8cdfc47
-> > --- /dev/null
-> > +++ b/drivers/phy/amlogic/phy-meson-axg-mipi-pcie.c
-> > @@ -0,0 +1,176 @@
-> > +// SPDX-License-Identifier: GPL-2.0
-> > +/*
-> > + * Amlogic AXG MIPI + PCIE PHY driver
-> > + *
-> > + * Copyright (C) 2019 Remi Pommarel <repk@triplefau.lt>
-> > + */
-> > +#include <linux/module.h>
-> > +#include <linux/phy/phy.h>
-> > +#include <linux/regmap.h>
-> > +#include <linux/mfd/syscon.h>
-> > +#include <linux/platform_device.h>
-> > +#include <dt-bindings/phy/phy.h>
-> > +
-> > +#define HHI_MIPI_CNTL0 0x00
-> > +#define		HHI_MIPI_CNTL0_COMMON_BLOCK	GENMASK(31, 28)
-> > +#define		HHI_MIPI_CNTL0_ENABLE		BIT(29)
-> > +#define		HHI_MIPI_CNTL0_BANDGAP		BIT(26)
-> > +#define		HHI_MIPI_CNTL0_DECODE_TO_RTERM	GENMASK(15, 12)
-> > +#define		HHI_MIPI_CNTL0_OUTPUT_EN	BIT(3)
-> > +
-> > +#define HHI_MIPI_CNTL1 0x01
-> > +#define		HHI_MIPI_CNTL1_CH0_CML_PDR_EN	BIT(12)
-> > +#define		HHI_MIPI_CNTL1_LP_ABILITY	GENMASK(5, 4)
-> > +#define		HHI_MIPI_CNTL1_LP_RESISTER	BIT(3)
-> > +#define		HHI_MIPI_CNTL1_INPUT_SETTING	BIT(2)
-> > +#define		HHI_MIPI_CNTL1_INPUT_SEL	BIT(1)
-> > +#define		HHI_MIPI_CNTL1_PRBS7_EN		BIT(0)
-> > +
-> > +#define HHI_MIPI_CNTL2 0x02
-> > +#define		HHI_MIPI_CNTL2_CH_PU		GENMASK(31, 25)
-> > +#define		HHI_MIPI_CNTL2_CH_CTL		GENMASK(24, 19)
-> > +#define		HHI_MIPI_CNTL2_CH0_DIGDR_EN	BIT(18)
-> > +#define		HHI_MIPI_CNTL2_CH_DIGDR_EN	BIT(17)
-> > +#define		HHI_MIPI_CNTL2_LPULPS_EN	BIT(16)
-> > +#define		HHI_MIPI_CNTL2_CH_EN(n)		BIT(15 - (n))
-> > +#define		HHI_MIPI_CNTL2_CH0_LP_CTL	GENMASK(10, 1)
-> > +
-> > +struct phy_axg_mipi_pcie_priv {
-> > +	struct phy *phy;
-> > +	unsigned int mode;
-> > +	struct regmap *regmap;
-> > +};
-> > +
-> > +static const struct regmap_config phy_axg_mipi_pcie_regmap_conf = {
-> > +	.reg_bits = 8,
-> > +	.val_bits = 32,
-> > +	.reg_stride = 4,
-> > +	.max_register = HHI_MIPI_CNTL2,
-> > +};
-> > +
-> > +static int phy_axg_mipi_pcie_power_on(struct phy *phy)
-> > +{
-> > +	struct phy_axg_mipi_pcie_priv *priv = phy_get_drvdata(phy);
-> > +
-> > +	/* MIPI not supported yet */
-> > +	if (priv->mode != PHY_TYPE_PCIE)
-> > +		return 0;
-> > +
-> > +	regmap_update_bits(priv->regmap, HHI_MIPI_CNTL0,
-> > +			   HHI_MIPI_CNTL0_BANDGAP, HHI_MIPI_CNTL0_BANDGAP);
-> > +
-> > +	regmap_update_bits(priv->regmap, HHI_MIPI_CNTL0,
-> > +			   HHI_MIPI_CNTL0_ENABLE, HHI_MIPI_CNTL0_ENABLE);
-> > +	return 0;
-> > +}
-> > +
-> > +static int phy_axg_mipi_pcie_power_off(struct phy *phy)
-> > +{
-> > +	struct phy_axg_mipi_pcie_priv *priv = phy_get_drvdata(phy);
-> > +
-> > +	/* MIPI not supported yet */
-> > +	if (priv->mode != PHY_TYPE_PCIE)
-> > +		return 0;
-> > +
-> > +	regmap_update_bits(priv->regmap, HHI_MIPI_CNTL0,
-> > +			   HHI_MIPI_CNTL0_BANDGAP, 0);
-> > +	regmap_update_bits(priv->regmap, HHI_MIPI_CNTL0,
-> > +			   HHI_MIPI_CNTL0_ENABLE, 0);
-> > +	return 0;
-> > +}
-> > +
-> > +static int phy_axg_mipi_pcie_init(struct phy *phy)
-> > +{
-> > +	return 0;
-> > +}
-> > +
-> > +static int phy_axg_mipi_pcie_exit(struct phy *phy)
-> > +{
-> > +	return 0;
-> > +}
-> > +
-> > +static const struct phy_ops phy_axg_mipi_pcie_ops = {
-> > +	.init = phy_axg_mipi_pcie_init,
-> > +	.exit = phy_axg_mipi_pcie_exit,
-> > +	.power_on = phy_axg_mipi_pcie_power_on,
-> > +	.power_off = phy_axg_mipi_pcie_power_off,
-> > +	.owner = THIS_MODULE,
-> > +};
-> > +
-> > +static struct phy *phy_axg_mipi_pcie_xlate(struct device *dev,
-> > +					   struct of_phandle_args *args)
-> > +{
-> > +	struct phy_axg_mipi_pcie_priv *priv = dev_get_drvdata(dev);
-> > +	unsigned int mode;
-> > +
-> > +	if (args->args_count != 1) {
-> > +		dev_err(dev, "invalid number of arguments\n");
-> > +		return ERR_PTR(-EINVAL);
-> > +	}
-> > +
-> > +	mode = args->args[0];
-> > +
-> > +	/* MIPI mode is not supported yet */
-> > +	if (mode != PHY_TYPE_PCIE) {
-> > +		dev_err(dev, "invalid phy mode select argument\n");
-> > +		return ERR_PTR(-EINVAL);
-> > +	}
-> > +
-> > +	priv->mode = mode;
-> > +	return priv->phy;
-> > +}
-> > +
-> > +static int phy_axg_mipi_pcie_probe(struct platform_device *pdev)
-> > +{
-> > +	struct phy_provider *pphy;
-> > +	struct device *dev = &pdev->dev;
-> > +	struct phy_axg_mipi_pcie_priv *priv;
-> > +	struct device_node *np = dev->of_node;
-> > +	int ret;
-> > +
-> > +	priv = devm_kmalloc(dev, sizeof(*priv), GFP_KERNEL);
-> > +	if (!priv)
-> > +		return -ENOMEM;
-> > +
-> > +	/* Get the hhi system controller node */
-> > +	priv->regmap = syscon_node_to_regmap(of_get_parent(dev->of_node));
-> > +	if (IS_ERR(priv->regmap)) {
-> > +		dev_err(dev, "failed to get HHI regmap\n");
-> > +		return PTR_ERR(priv->regmap);
-> > +	}
-> 
-> Remi,
-> 
-> Unless we are absolutely sure this will be *AXG ONLY*, I would
-> prefer if you get the registers without the syscon.
-> 
-> Having it introduce some kind of dependency between the 2 which is
-> likely to make this driver SoC specific.
-> 
-> It was clearly wrong for the clock controller to map these regiters, and
-> if there is a possibility that this driver is used on other SoCs, I
-> would prefer if we did not carry that mistake over. I would prefer if we
-> fixed the clock controller so you don't need syscon here.
+The Ethernet TX performance has been historically bad on Meson8b and
+Meson8m2 SoCs because high packet loss was seen. I found out that this
+was related (yet again) to the RGMII TX delay configuration.
+In the process of discussing the big picture (and not just a single
+patch) [0] with Andrew I discovered that the IP block behind the
+dwmac-meson8b driver actually seems to support the configuration of the
+RGMII RX delay (at least on the Meson8b SoC generation).
 
-Jerome thank you for reviewing this,
+The goal of this series is to start the discussion around how to
+implement the RGMII RX delay on this IP block. Additionally it seems
+that the RX delay can also be applied for RMII PHYs?
 
-Sure I will remove access to the registers through syscon system. Just
-to be sure we are on the same page here. What you suggest is keeping the
-two PHYs approach from this patchset (instead of the one PHY in v3),
-even if there is not exactly two PHYs, right ?
+@Jianxin: can you please add the Amlogic internal Ethernet team to this
+discussion? My questions are documented in the patch description of
+patch #2.
 
-Thanks,
+Dependencies: this series is based on my other series [1]
+"net: stmmac: dwmac-meson8b: Fix the RGMII TX delay on Meson8b/8m2 SoCs"
+
+
+@David: please do NOT merge this series yet, it's only meant for
+discussion in it's current state!
+
+
+[0] https://patchwork.kernel.org/patch/11309891/
+[1] https://patchwork.kernel.org/patch/11310669/
+
+
+Martin Blumenstingl (2):
+  net: stmmac: dwmac-meson8b: use FIELD_PREP instead of open-coding it
+  net: stmmac: dwmac-meson8b: add support for the RX delay configuration
+
+ .../ethernet/stmicro/stmmac/dwmac-meson8b.c   | 60 ++++++++++---------
+ 1 file changed, 33 insertions(+), 27 deletions(-)
 
 -- 
-Remi
+2.24.1
 
-> 
-> > +
-> > +	priv->phy = devm_phy_create(dev, np, &phy_axg_mipi_pcie_ops);
-> > +	if (IS_ERR(priv->phy)) {
-> > +		ret = PTR_ERR(priv->phy);
-> > +		if (ret != -EPROBE_DEFER)
-> > +			dev_err(dev, "failed to create PHY\n");
-> > +		return ret;
-> > +	}
-> > +
-> > +	phy_set_drvdata(priv->phy, priv);
-> > +	dev_set_drvdata(dev, priv);
-> > +	pphy = devm_of_phy_provider_register(dev, phy_axg_mipi_pcie_xlate);
-> > +
-> > +	return PTR_ERR_OR_ZERO(pphy);
-> > +}
-> > +
-> > +static const struct of_device_id phy_axg_mipi_pcie_of_match[] = {
-> > +	{
-> > +		.compatible = "amlogic,axg-mipi-pcie-phy",
-> > +	},
-> > +	{ },
-> > +};
-> > +MODULE_DEVICE_TABLE(of, phy_axg_mipi_pcie_of_match);
-> > +
-> > +static struct platform_driver phy_axg_mipi_pcie_driver = {
-> > +	.probe = phy_axg_mipi_pcie_probe,
-> > +	.driver = {
-> > +		.name = "phy-axg-mipi-pcie",
-> > +		.of_match_table = phy_axg_mipi_pcie_of_match,
-> > +	},
-> > +};
-> > +module_platform_driver(phy_axg_mipi_pcie_driver);
-> > +
-> > +MODULE_AUTHOR("Remi Pommarel <repk@triplefau.lt>");
-> > +MODULE_DESCRIPTION("Amlogic AXG MIPI + PCIE PHY driver");
-> > +MODULE_LICENSE("GPL v2");
-> 
 
 _______________________________________________
 linux-amlogic mailing list
