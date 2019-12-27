@@ -2,74 +2,79 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 42F4012B618
-	for <lists+linux-amlogic@lfdr.de>; Fri, 27 Dec 2019 18:23:10 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 85C7C12B62A
+	for <lists+linux-amlogic@lfdr.de>; Fri, 27 Dec 2019 18:37:55 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=JqcZnmtrDR31xCisjrpEizpt9VgBgxie0iUSYD10xPY=; b=Y3I1jai5hIkJSs
-	XofO+9lZ0iumjzVbCf/EPRLqLPZTsRgwNLSn+MMLlQBH6oBN4NHoq7y7B8B0jrUiXziUtRSohd+PB
-	Lbwd4iSIPrz46pNo42rcV+HgH+EVSm9WOf9RKc469k0vJ+kh78WTYCAZBzB6PoocIN1PAYvCV6jrG
-	Vrnrijr4L9Rkqzcfsi97hP9ypzT4B49qeoHR9OqYKrls9tCCpDjnYH7pCnFS090Dc8OFqoIrIVSKn
-	j2MOhkhJJB9ftP5iXQtIfzYRjLZzo6NCQurZQYRp/QWwCxIvYohlNZmsxgIdP0rb5sNpEu3GeWGo+
-	i9v7te4hATTiPqIwJzIA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=yAFV6xbpijREzpyKutEZuUGqw82EjgQPd+aTL6jnpJw=; b=UmwJvEpWAk0VAR
+	WGcpumfI5lveRoNE3wWCn3/VyA3Pwuy6/97hF7dAWVGMvL+DEZENNjvlKvPm50nR4Z/OHeAd1STLE
+	8WJ6wRUvLa/NxTafetw4f9uy+0UdLPqMGRQ3MP1Wdqw9zmv2x9dWYDXv8WaMDixzMXTLrRDP+3XUC
+	SJLqIBMdX4MmDZFRk1RXx3emhEMdSSE1UXCcK39xnmhjFOuivFdaleL50TW+Z40sJYIBD3fCCFGvU
+	vR8edlIOqTrDAYxVCs66ZkkEbWpEx2jHyJR97Wf/QfIR6sQq7eybpyHzdYG9cRfjhbnpNKt/oxXu6
+	X6poPI0fxyRCl6+Mcaxg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iktKN-0000IP-O2; Fri, 27 Dec 2019 17:23:07 +0000
-Received: from mail-ed1-x541.google.com ([2a00:1450:4864:20::541])
+	id 1iktYf-0005hF-91; Fri, 27 Dec 2019 17:37:53 +0000
+Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iktKK-0000Hm-Q1; Fri, 27 Dec 2019 17:23:06 +0000
-Received: by mail-ed1-x541.google.com with SMTP id i16so25853348edr.5;
- Fri, 27 Dec 2019 09:23:04 -0800 (PST)
+ id 1iktYb-0005fr-UN; Fri, 27 Dec 2019 17:37:51 +0000
+Received: by mail-wr1-x442.google.com with SMTP id z3so26685061wru.3;
+ Fri, 27 Dec 2019 09:37:46 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=googlemail.com; s=20161025;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=0UU+ysXx+Shc0uhfL0eYU+6BwpIeAsm7S9P/UHU0eAg=;
- b=iUba+NWNA3cOXpD5+r04DSS11HD3AciHWRXYHS97zSESLqL4y0CXv4NzzuOaX99bzt
- ijCXSOhYV7ucxVIFQWm5EEk/PHpCHm262LIdFhKd3Rj0m8MgP13uJJMMPxutIF12TVyt
- NeWqHxRT6MtNP4fmJIauTMBXbxKxEjttj5+94a23FLWXoIAoodB+HyGqa6S8lOrIe75v
- i60FDLNZzZLYOIW5tvr+PcsslPbLLmKqP+wm0iZRMRi6GIy9xPTVDyI4MDcgS98s5Z5k
- 0s44aKJRenjj9Cfz02DFsvOurf9rWc/4pyIoPOH42pX6++sh94sq7PqyE2MsZ3kWiC4a
- Fk1A==
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=CgL35F0PbHIPU/xEH/yy9QoMVLs1tW/HJnhHgsc5otw=;
+ b=IzRk5AUha85e7ZBCIOmBml/0x7GVSoZe86A4RuekbCtKw9koHk96jYDQzvksMlroIw
+ QPo76Lk1FreaiJs+nJlxY+DGPDuAY+IqoHZrnEab+FZNodNyyzGPZuhhZGqNA0ygRsSn
+ OvxTJQgLvEO58F9eoYgth4dX9kL9tvBf8pkR4nNOy4ygfr+6ypFaOskRNfV+HjgNjTP9
+ SRXFGXA4FjuXIRfJOWUn34EHQSluO7zRj5sm7nGRHcDIecXkNdVEpdLeGYmaKErg5yfQ
+ /IVeaOYZu4c7oWdEMsF8yE3bTmR5fv4KWbFol8SVD2OByfCJyKRmC/iD7pBQB5Vr/sho
+ 9vDg==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=0UU+ysXx+Shc0uhfL0eYU+6BwpIeAsm7S9P/UHU0eAg=;
- b=pCSBsUgINGUI4mc4j8lUQbSKnuS5fN33MGAaRocV6wDvvUI+2Kj5WIADlZXK1Lzb6O
- 5knKKSwbjMqQ/NZdsl9kcYYQQl6GjgXwxZKBpVWt6LOgxKczliAju7AkTxVU0kwZ0ekk
- f7Fp1L7pNgxay5ADE8LvyzbhbOZDSIxPJ6ZpI+Udubdb8az/UJfdDk28FIbL7V5YT3Jw
- 6dEgv5jSurT5emVW7DqDMCgLCTDtTPgrBkrqSrBL8bruVxmhO6vjEPmzMarN8z65JA3Z
- my8bHwkCTKck0ZiSxEncX6lZvodSrV0L4eFxtfc5QLzq7BclLwrnF5rhs2jkatpRV6qf
- S+Yw==
-X-Gm-Message-State: APjAAAWsIa9KdKPdM7qJFr1G4/pkuvIJjfyKtmQUVRQ5yQdFPFewvV+U
- cEVmXU36Sjvwxd+GNDzruTc40/r3SKmZ5n8XxKE=
-X-Google-Smtp-Source: APXvYqygztpCwMZ2tOw2bt5blxVcse049EWJn1V8ypi9uRoEfMAWYxJV7H8W3FniudLtvI6csg6ZP2n5//ATD5ueUVI=
-X-Received: by 2002:a50:bae1:: with SMTP id x88mr39175305ede.10.1577467383228; 
- Fri, 27 Dec 2019 09:23:03 -0800 (PST)
-MIME-Version: 1.0
-References: <20191227094606.143637-1-jian.hu@amlogic.com>
- <20191227094606.143637-6-jian.hu@amlogic.com>
-In-Reply-To: <20191227094606.143637-6-jian.hu@amlogic.com>
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=CgL35F0PbHIPU/xEH/yy9QoMVLs1tW/HJnhHgsc5otw=;
+ b=oCWC7X0cd8umoRZWhlEbyVSVdbgrz1WHoyeqUNWIzuzYV8H6EBLSbfHGFMjnHqChzb
+ 26AW/0+iwVMUPoUM8lXsVQ/JvL4a0DF43pAXJda7V20dZgVrUPiJT4vcRLjSoBZ9yGzm
+ yuD5rUzE7yGiOVz+xOeTVdYCwKPxZ7gLREElAtvTTvMTH/sVgwAEinE7XmyveKTbcYDg
+ 1hxtIy57fUKohG+s1U6SjGK2bakFdsSwptyDQtEgu37QKUffmrauBnswgQBEoyYO1cJT
+ 7P4nLSKGQFW3/aqGI/a0DBswko0laRVhcm7pQC8raVOd0Z8dQlW5g28vMZeuReFs7/7l
+ 695A==
+X-Gm-Message-State: APjAAAUaeyGjMJmemEs9xMciLHic+LNXcsoQYBTad7/vUDNKoCwv/vNA
+ psUF/lnzkjk2VOTl9i8UOzc=
+X-Google-Smtp-Source: APXvYqy2UYkwMWU2dPVz7z8FO3EUeuKP2Q67lEtRTqjhCkPr42la3j1A1wB8F6mXKYw58lhzPxwabg==
+X-Received: by 2002:adf:cf0a:: with SMTP id o10mr41875477wrj.325.1577468265643; 
+ Fri, 27 Dec 2019 09:37:45 -0800 (PST)
+Received: from localhost.localdomain
+ (p200300F1373A1900428D5CFFFEB99DB8.dip0.t-ipconnect.de.
+ [2003:f1:373a:1900:428d:5cff:feb9:9db8])
+ by smtp.googlemail.com with ESMTPSA id f1sm35001776wru.6.2019.12.27.09.37.44
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Fri, 27 Dec 2019 09:37:45 -0800 (PST)
 From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-Date: Fri, 27 Dec 2019 18:22:52 +0100
-Message-ID: <CAFBinCB_0+k6rGxChpB77rPUrb-0mzxt_nQWXbiztCJnJq8XnQ@mail.gmail.com>
-Subject: Re: [PATCH v5 5/5] clk: meson: a1: add support for Amlogic A1
- Peripheral clock driver
-To: Jian Hu <jian.hu@amlogic.com>
+To: yuq825@gmail.com,
+	dri-devel@lists.freedesktop.org
+Subject: [RFC v2 0/1] drm: lima: devfreq and cooling device support
+Date: Fri, 27 Dec 2019 18:37:06 +0100
+Message-Id: <20191227173707.20413-1-martin.blumenstingl@googlemail.com>
+X-Mailer: git-send-email 2.24.1
+MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191227_092304_870806_DAFC6662 
-X-CRM114-Status: GOOD (  17.24  )
+X-CRM114-CacheID: sfid-20191227_093750_007123_F4FE0076 
+X-CRM114-Status: GOOD (  14.78  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:541 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:442 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -93,117 +98,87 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: Rob Herring <robh@kernel.org>, Victor Wan <victor.wan@amlogic.com>,
- Jianxin Pan <jianxin.pan@amlogic.com>,
- Neil Armstrong <narmstrong@baylibre.com>, Stephen Boyd <sboyd@kernel.org>,
- Kevin Hilman <khilman@baylibre.com>,
- Michael Turquette <mturquette@baylibre.com>, linux-kernel@vger.kernel.org,
- Qiufang Dai <qiufang.dai@amlogic.com>, Chandle Zou <chandle.zou@amlogic.com>,
- linux-amlogic@lists.infradead.org, linux-clk@vger.kernel.org,
- linux-arm-kernel@lists.infradead.org, Jerome Brunet <jbrunet@baylibre.com>
+Cc: robh@kernel.org, tomeu.vizoso@collabora.com, airlied@linux.ie,
+ linux-kernel@vger.kernel.org, steven.price@arm.com,
+ linux-rockchip@lists.infradead.org, wens@csie.org,
+ alyssa.rosenzweig@collabora.com, daniel@ffwll.ch,
+ linux-amlogic@lists.infradead.org,
+ Martin Blumenstingl <martin.blumenstingl@googlemail.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
- Hi Jian,
+This is my attempt at adding devfreq (and cooling device) support to
+the lima driver.
 
-my comments and questions below
-please keep in mind that I don't have access to the A1 datasheets, so
-I may ask stupid questions :)
+I am seeking comments in two general areas:
+- regarding the integration into the existing lima code
+- for the actual devfreq code (I had to adapt the panfrost code
+  slightly, because lima uses a bus and a GPU/core clock)
 
-On Fri, Dec 27, 2019 at 10:47 AM Jian Hu <jian.hu@amlogic.com> wrote:
-[...]
-> +/* PLLs clock in gates, its parent is xtal */
-yes. doesn't the code below describe exactly this (what is so special
-about it that we need an extra comment)?
+My own TODO list includes "more" testing on various Amlogic SoCs.
+So far I have tested this on Meson8b and Meson8m2 (which both have a
+GPU OPP table defined). However, I still need to test this on a GXL
+board (which is currently missing the GPU OPP table).
 
-[...]
-> +static const struct clk_parent_data sys_clk_parents[] = {
-> +       { .fw_name = "xtal" },
-> +       { .fw_name = "fclk_div2"},
-> +       { .fw_name = "fclk_div3"},
-> +       { .fw_name = "fclk_div5"},
-the last three values are missing a space before "}"
+Test results from a Meson8m2 board:
+TEST #1: glmark2-es2-drm --off-screen in an infinite loop while cycling
+         through all available frequencies using the userspace governor
 
-[...]
-> +       .hw.init = &(struct clk_init_data){
-> +               .name = "sys_clk",
-> +               .ops = &clk_regmap_mux_ro_ops,
-> +               .parent_hws = (const struct clk_hw *[]) {
-> +                       &a1_sys_a.hw, &a1_sys_b.hw,
-> +               },
-> +               .num_parents = 2,
-> +               /*
-> +                * This clock is used by APB bus which setted in Romcode
-like in the PLL clkc patch:
-- setted -> "is set"
-- Romcode == boot ROM ?
+     From  :   To
+           : 182142857 318750000 425000000 510000000 637500000   time(ms)
+  182142857:         0      1274      1274      1273      1279   5399468
+  318750000:      1274         0      1274      1273      1272   5114700
+  425000000:      1276      1274         0      1272      1271   5122008
+  510000000:      1909      1273      1273         0       636   5274292
+* 637500000:       640      1272      1272      1273         0   5186796
+Total transition : 24834
 
-[...]
-> +static struct clk_regmap a1_rtc_32k_sel = {
-> +       .data = &(struct clk_regmap_mux_data) {
-> +               .offset = RTC_CTRL,
-> +               .mask = 0x3,
-> +               .shift = 0,
-> +               .flags = CLK_MUX_ROUND_CLOSEST,
-CLK_MUX_ROUND_CLOSEST means the common clock framework will also
-accept rates greater than 32kHz.
-is that fine for this case?
-
-[...]
-> +/*
-> + * the second parent is sys_pll_div16, it will complete in the CPU clock,
-I was confused by this but I assume you mean the parent with index 2?
-
-> + * the forth parent is the clock measurement source, it relies on
-> + * the clock measurement register configuration.
-...and parent with index 4 here
-
-[...]
-> +static struct clk_regmap a1_pwm_a = {
-> +       .data = &(struct clk_regmap_gate_data){
-> +               .offset = PWM_CLK_AB_CTRL,
-> +               .bit_idx = 8,
-> +       },
-> +       .hw.init = &(struct clk_init_data) {
-> +               .name = "pwm_a",
-> +               .ops = &clk_regmap_gate_ops,
-> +               .parent_hws = (const struct clk_hw *[]) {
-> +                       &a1_pwm_a_div.hw
-> +               },
-> +               .num_parents = 1,
-> +               /*
-> +                * The CPU working voltage is controlled by pwm_a
-> +                * in BL2 firmware. add the CLK_IS_CRITICAL flag
-> +                * to avoid changing at runtime.
-on G12A and G12B Linux has to manage the CPU voltage regulator
-can you confirm that for the A1 SoC this is really done by BL2? (I'm
-wondering since A1 is newer than G12)
-
-> +/*
-> + * spicc clk
-> + *    div2   |\         |\       _____
-> + *  ---------| |---DIV--| |     |     |    spicc out
-> + *  ---------| |        | |-----|GATE |---------
-> + *     ..... |/         | /     |_____|
-> + *  --------------------|/
-> + *                 24M
-does that "div2" stand for fclk_div2?
-
-[...]
-> +static const struct meson_eeclkc_data a1_periphs_data = {
-> +               .regmap_clks = a1_periphs_regmaps,
-> +               .regmap_clk_num = ARRAY_SIZE(a1_periphs_regmaps),
-> +               .hw_onecell_data = &a1_periphs_hw_onecell_data,
-> +};
-same comment as for the PLL clkc: please drop this and use the
-variables directly inside _probe to get rid of the struct
-meson_eeclkc_data (so I won't be confused about "EE clocks" on A1,
-while according to your description there's no "EE" domain)
+TEST #2: glmark2-es2-drm --off-screen in an infinite loop with the
+         simple_ondemand governor
+     From  :   To
+           : 182142857 318750000 425000000 510000000 637500000   time(ms)
+  182142857:         0         0         0         0       203    318328
+  318750000:        53         0         0         0        21     56044
+  425000000:        27        18         0         0         2     34172
+  510000000:        27         6        14         0         1     41348
+* 637500000:        95        50        33        48         0   2085312
 
 
-Martin
+Changes since RFC v1 at [0]:
+- added lock to protect the statistics as these can be written 
+  concurrently for example when the GP and PP IRQ are firing at the
+  same time. Thanks to Qiang Yu for the suggestion!
+- updated the copyright notice of lima_devfreq.c to indicate that the
+  code is derived from panfrost_devfreq.c. Thanks to  Chen-Yu Tsai  for
+  the suggestion!
+- I did not unify the code with panfrost yet because I don't know where
+  to put the result. any suggestion is welcome though!
+
+
+[0] https://patchwork.freedesktop.org/series/70967/
+
+
+Martin Blumenstingl (1):
+  drm/lima: Add optional devfreq support
+
+ drivers/gpu/drm/lima/Kconfig        |   1 +
+ drivers/gpu/drm/lima/Makefile       |   3 +-
+ drivers/gpu/drm/lima/lima_devfreq.c | 183 ++++++++++++++++++++++++++++
+ drivers/gpu/drm/lima/lima_devfreq.h |  15 +++
+ drivers/gpu/drm/lima/lima_device.c  |   4 +
+ drivers/gpu/drm/lima/lima_device.h  |  17 +++
+ drivers/gpu/drm/lima/lima_drv.c     |  14 ++-
+ drivers/gpu/drm/lima/lima_sched.c   |   7 ++
+ drivers/gpu/drm/lima/lima_sched.h   |   3 +
+ 9 files changed, 244 insertions(+), 3 deletions(-)
+ create mode 100644 drivers/gpu/drm/lima/lima_devfreq.c
+ create mode 100644 drivers/gpu/drm/lima/lima_devfreq.h
+
+-- 
+2.24.1
+
 
 _______________________________________________
 linux-amlogic mailing list
