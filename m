@@ -2,26 +2,26 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B887E12B1F7
-	for <lists+linux-amlogic@lfdr.de>; Fri, 27 Dec 2019 07:39:19 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id CE4CF12B1FB
+	for <lists+linux-amlogic@lfdr.de>; Fri, 27 Dec 2019 07:39:22 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=9Abfq1LZca+7vX/2SlCUXWLJTsBfeH3oC+6AMDZRiW8=; b=gQW0DYk6QexXkW
-	2nv+WdapVcM+yDkI4hhYRc+tGJMuur+8Wn1EpfZ05vobgoeqPwhID25Ae7TfdWNOrx9uYCW4GwcOg
-	LqV9CoySRKEk+WwTNDBkxRrVnftB78CvGocDNGE3pM3pGxBEXO2DLX10cFd1066pBZ4iuI6Fy24pp
-	lhG7dJrRlqPBaQm5Fbfa1/orscuqoH1cRf67TKImQizfy9fHsioF1Ie5TlJCMUKBRAQraXGd40lfD
-	V+Wlgfb+nRlChrEgmO+EfK6+vrWawdCLqYGgUsAjhsq4DHa+l/9v5LJmq3dq6Qbal0lPtPWHaXMrO
-	urtnbWZhjHhecKsbvw/Q==;
+	List-Owner; bh=ZvSKyxsahewh/0kyKsyrOb5f+ujNqziJ5gjdZ1YTCgY=; b=E8qAs5dNDR1Vin
+	hRIkGMHwmxKtqHyuneQ2rrDZcWlfA3AsDmi2XGB0jEEMCHSFRM0LEAi0ovA1uQLJ+zrhtfMjxX2cP
+	ePGjCvSQW6hzWVdPdrkhK6QZ9PjdKbt4r2HwatKA9qZUFAtaLDMczpXtpIIkwZRXueetoax9t12Jb
+	8Dz22erREdTvadoLnChX1etyDiA9qLQ9MsdLZ72f/OZ4/Hrscao17igzGQsngS3pi4CoGwqqaX1VD
+	7vjG5KGADWbRrs/fVutjMobR4tdGUBvS//yi7SbggU3XsCo6q4SNu+yCGgAFCi3vebq2FFguB+xI4
+	1Gr1yHt60ACgAYqlYidg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ikjHK-0001Bb-0C; Fri, 27 Dec 2019 06:39:18 +0000
+	id 1ikjHM-0001FJ-Ui; Fri, 27 Dec 2019 06:39:20 +0000
 Received: from mail-sh.amlogic.com ([58.32.228.43])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ikjFI-0007c3-F2; Fri, 27 Dec 2019 06:37:13 +0000
+ id 1ikjFK-0007c3-A2; Fri, 27 Dec 2019 06:37:15 +0000
 Received: from droid10.amlogic.com (10.18.11.213) by mail-sh.amlogic.com
  (10.18.11.5) with Microsoft SMTP Server id 15.1.1591.10; Fri, 27 Dec 2019
  14:37:18 +0800
@@ -29,17 +29,17 @@ From: Hanjie Lin <hanjie.lin@amlogic.com>
 To: Jerome Brunet <jbrunet@baylibre.com>, Neil Armstrong
  <narmstrong@baylibre.com>, Rob Herring <robh@kernel.org>, Greg Kroah-Hartman
  <gregkh@linuxfoundation.org>, Kevin Hilman <khilman@baylibre.com>
-Subject: [PATCH v3 5/6] arm64: dts: meson: a1: Enable USB2 PHY
-Date: Fri, 27 Dec 2019 14:36:45 +0800
-Message-ID: <1577428606-69855-6-git-send-email-hanjie.lin@amlogic.com>
+Subject: [PATCH v3 6/6] arm64: dts: meson: a1: Enable DWC3 controller
+Date: Fri, 27 Dec 2019 14:36:46 +0800
+Message-ID: <1577428606-69855-7-git-send-email-hanjie.lin@amlogic.com>
 X-Mailer: git-send-email 2.7.4
 In-Reply-To: <1577428606-69855-1-git-send-email-hanjie.lin@amlogic.com>
 References: <1577428606-69855-1-git-send-email-hanjie.lin@amlogic.com>
 MIME-Version: 1.0
 X-Originating-IP: [10.18.11.213]
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191226_223712_519556_42958B58 
-X-CRM114-Status: UNSURE (   6.82  )
+X-CRM114-CacheID: sfid-20191226_223714_369208_0A289596 
+X-CRM114-Status: UNSURE (   7.25  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -73,43 +73,65 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Enable USB2 PHY for Meson A1 SoC.
+Enable DWC3 controller for Meson A1 SoC.
 
 Signed-off-by: Hanjie Lin <hanjie.lin@amlogic.com>
 Signed-off-by: Yue Wang <yue.wang@amlogic.com>
 ---
- arch/arm64/boot/dts/amlogic/meson-a1.dtsi | 11 +++++++++++
- 1 file changed, 11 insertions(+)
+ arch/arm64/boot/dts/amlogic/meson-a1.dtsi | 33 +++++++++++++++++++++++++++++++
+ 1 file changed, 33 insertions(+)
 
 diff --git a/arch/arm64/boot/dts/amlogic/meson-a1.dtsi b/arch/arm64/boot/dts/amlogic/meson-a1.dtsi
-index 6fdc0dd..bd63374a 100644
+index bd63374a..76f787d 100644
 --- a/arch/arm64/boot/dts/amlogic/meson-a1.dtsi
 +++ b/arch/arm64/boot/dts/amlogic/meson-a1.dtsi
-@@ -6,6 +6,7 @@
- #include <dt-bindings/interrupt-controller/irq.h>
+@@ -7,6 +7,8 @@
  #include <dt-bindings/interrupt-controller/arm-gic.h>
  #include <dt-bindings/power/meson-a1-power.h>
-+#include <dt-bindings/reset/amlogic,meson-a1-reset.h>
+ #include <dt-bindings/reset/amlogic,meson-a1-reset.h>
++#include <dt-bindings/clock/a1-pll-clkc.h>
++#include <dt-bindings/clock/a1-clkc.h>
  
  / {
  	compatible = "amlogic,a1";
-@@ -100,6 +101,16 @@
- 				#power-domain-cells = <1>;
- 				status = "okay";
- 			};
-+
-+			usb2_phy1: phy@40000 {
-+				status = "okay";
-+				compatible = "amlogic,a1-usb2-phy";
-+				reg = <0x0 0x40000 0x0 0x2000>;
-+				resets = <&reset RESET_USBPHY>;
-+				reset-names = "phy";
-+				#phy-cells = <0>;
-+				power-domains = <&pwrc PWRC_USB_ID>;
-+			};
+@@ -125,6 +127,37 @@
+ 			#interrupt-cells = <3>;
+ 			#address-cells = <0>;
  		};
++
++		usb: usb@ffe09000 {
++			status = "okay";
++			compatible = "amlogic,meson-a1-usb-ctrl";
++			reg = <0x0 0xffe09000 0x0 0xa0>;
++			#address-cells = <2>;
++			#size-cells = <2>;
++			ranges;
++
++			clocks = <&clkc_periphs CLKID_USB_CTRL>,
++				 <&clkc_periphs CLKID_USB_BUS>,
++				 <&clkc_periphs CLKID_XTAL_USB_PHY>,
++				 <&clkc_periphs CLKID_XTAL_USB_CTRL>;
++			clock-names = "usb_ctrl", "usb_bus", "xtal_usb_phy",
++					"xtal_usb_ctrl";
++			resets = <&reset RESET_USBCTRL>;
++
++			dr_mode = "host";
++
++			phys = <&usb2_phy1>;
++			phy-names = "usb2-phy1";
++
++			dwc3: usb@ff400000 {
++				compatible = "snps,dwc3";
++				reg = <0x0 0xff400000 0x0 0x100000>;
++				interrupts = <GIC_SPI 90 IRQ_TYPE_LEVEL_HIGH>;
++				dr_mode = "host";
++				snps,dis_u2_susphy_quirk;
++				snps,quirk-frame-length-adjustment = <0x20>;
++			};
++		};
+ 	};
  
- 		gic: interrupt-controller@ff901000 {
+ 	timer {
 -- 
 2.7.4
 
