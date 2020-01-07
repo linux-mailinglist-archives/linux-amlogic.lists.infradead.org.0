@@ -2,71 +2,89 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 727AA132436
-	for <lists+linux-amlogic@lfdr.de>; Tue,  7 Jan 2020 11:55:09 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 68273132465
+	for <lists+linux-amlogic@lfdr.de>; Tue,  7 Jan 2020 12:03:32 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
-	MIME-Version:References:In-Reply-To:Date:To:From:Subject:Message-ID:Reply-To:
-	Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=nkgDPhP1D/xswHZDvHozu6wLmahTlrnxvQ19SRMVXio=; b=amKD++PsWnOHViKFA4irktO7v
-	x54rCr/5/2HUsANHRAr6aKSW5p7Dwa/8oiD6DMRuwSzueRFTgN2MCL1Tbf1xq9s4JM2o598T4LP0G
-	yFj9pE0k94jb7WsYLgn6orCsulxvxZDkIMM7dGwZrbga3dNX0J7NzGg1Nj3EIpgG1iE87X3Oj+wSX
-	Feeq//ofJBR14DqkMHGdTmENi3ZS0dkZoTLI787we7eeYMQ3T192OX0PukceHtAGa2XXvHjD2EylX
-	sif0K+/Ll+Tze8209fwkn3EI3ZZRMke23GCfR/vVvGLA8jPKadOu2M0efRRgDecSUEHsiRQZLZbUP
-	1E26PbW/A==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:
+	In-reply-to:Subject:To:From:References:Reply-To:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:List-Owner;
+	bh=Bu/oQErxkcFlN3i2XIwpuocGKi5lfH03CoSb812kzRc=; b=CwlhWhz2aVDQ+b83eeax4DHcNZ
+	QRVexYj9COoNztOE25cC5UoznnJU+l0jum2+8waufHL/oON8OuCvKTzFV7VAzZVhAjNAk9ANUlCPl
+	2xp1JcSF2jM6rNpVk6gU/nAmuY09EOQzcqRvQgZPInFhrGubET5b+cvYLhBqvrg9Utqjy9yoGIgkg
+	b1KBBCypFe5rX6wxw72BFJTMqDepRQVSrmwuu3RxVidln2YkS5ohefTmnKKwRXIECbn5tBqJShyx8
+	+1lbqCqGE6Gabei+nUBOdIr6r9yVrnrfj+NtNZKZR87kg/OYJDYy2d+6dsC7HLqYcTMnJFoZuZy8I
+	WjQiWihQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iomVu-000529-KR; Tue, 07 Jan 2020 10:55:06 +0000
-Received: from mx2.suse.de ([195.135.220.15])
+	id 1iome0-0001VX-5J; Tue, 07 Jan 2020 11:03:28 +0000
+Received: from mail-wr1-x443.google.com ([2a00:1450:4864:20::443])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iomVo-0004uY-RU; Tue, 07 Jan 2020 10:55:02 +0000
-X-Virus-Scanned: by amavisd-new at test-mx.suse.de
-Received: from relay2.suse.de (unknown [195.135.220.254])
- by mx2.suse.de (Postfix) with ESMTP id 3E7A7AD05;
- Tue,  7 Jan 2020 10:54:58 +0000 (UTC)
-Message-ID: <9fde9b416b281648e99b3ce430229e89c5b1a653.camel@suse.de>
-Subject: Re: [PATCH 25/32] pwm: brcmstb: convert to
- devm_platform_ioremap_resource
-From: Nicolas Saenz Julienne <nsaenzjulienne@suse.de>
-To: Yangtao Li <tiny.windzz@gmail.com>, claudiu.beznea@microchip.com, 
- thierry.reding@gmail.com, u.kleine-koenig@pengutronix.de, 
- nicolas.ferre@microchip.com, alexandre.belloni@bootlin.com, 
- ludovic.desroches@microchip.com, rjui@broadcom.com, sbranden@broadcom.com, 
- bcm-kernel-feedback-list@broadcom.com, f.fainelli@gmail.com,
- shc_work@mail.ru,  shawnguo@kernel.org, s.hauer@pengutronix.de,
- kernel@pengutronix.de,  festevam@gmail.com, linux-imx@nxp.com,
- vz@mleia.com, slemieux.tyco@gmail.com,  khilman@baylibre.com,
- matthias.bgg@gmail.com, heiko@sntech.de, palmer@dabbelt.com, 
- paul.walmsley@sifive.com, mripard@kernel.org, wens@csie.org,
- jonathanh@nvidia.com,  linux@prisktech.co.nz,
- linux-arm-kernel@lists.infradead.org,  linux-pwm@vger.kernel.org,
- linux-kernel@vger.kernel.org,  linux-rpi-kernel@lists.infradead.org,
- linux-amlogic@lists.infradead.org,  linux-mediatek@lists.infradead.org,
- linux-rockchip@lists.infradead.org,  linux-riscv@lists.infradead.org,
- linux-tegra@vger.kernel.org
-Date: Tue, 07 Jan 2020 11:54:53 +0100
-In-Reply-To: <20191229080610.7597-25-tiny.windzz@gmail.com>
-References: <20191229080610.7597-1-tiny.windzz@gmail.com>
- <20191229080610.7597-25-tiny.windzz@gmail.com>
-User-Agent: Evolution 3.34.2 
+ id 1iomdq-0001NI-KY
+ for linux-amlogic@lists.infradead.org; Tue, 07 Jan 2020 11:03:20 +0000
+Received: by mail-wr1-x443.google.com with SMTP id c9so53438029wrw.8
+ for <linux-amlogic@lists.infradead.org>; Tue, 07 Jan 2020 03:03:18 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=baylibre-com.20150623.gappssmtp.com; s=20150623;
+ h=references:user-agent:from:to:cc:subject:in-reply-to:date
+ :message-id:mime-version;
+ bh=xyZS91HmTWb7A0olo7U4XRnlJNJkRCAhnyhMR3Zh6ng=;
+ b=XLGV3B0w53+LAAAizJxW1KD6wXybJqgKTbqEDCaylaY0nMPB+bmDM8i7LKh3jThJPY
+ piJdz/2D7EbKmCcVQrRYJwAmUyub+Ty7SyHXAZDRxLlLdVFE9IzL7NHOmwxKTX+BMvhH
+ /tfyxAFTf3vbrWl4PnSzSVVVPtRA1V7NWo0hSIU4nqC2RjJQDAyoojirexKnN2FiADKL
+ 8nJwJKeQUai6h423Z8BeTpA6X2ZjvlBGevlkk1ghfj47tCArhxzyDKnzqN6nlSVHY0Ic
+ 4zbRPZIFcPo+iCNmn80bK6j6/MB4Yfh22ECRG66CeUhKKAvm49EkE3M1NSLW3JdP+GjX
+ n5yw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:references:user-agent:from:to:cc:subject
+ :in-reply-to:date:message-id:mime-version;
+ bh=xyZS91HmTWb7A0olo7U4XRnlJNJkRCAhnyhMR3Zh6ng=;
+ b=UB3Yh/SjZqmS3PM9ZoICkpUmkJW0Vv67vr6WdZ+1Dc3wOsqQPqiggp0O5IrqX0Ebj3
+ uxONAevxSA8YQdP9jlqrX0r6hteBlSoKis+NvyWv0yGyE2tL537DMmgIy8yegoSs1Htr
+ s9ndihZfJRlL+GVSIoxA8iv08YouQ+fulxxpv8F1vGszOFdyFRkVrfx5LrmkZ70xF33w
+ 71sfBgsHWRvvFTpB28lQZR/AiM2uElHOo8OnzafH8WPd4IleU7+c4WsR51RHBX33i6RQ
+ D1eNRAfukwI7mXA4QKTUjGeWhLvk1JwGUEwQsMzX7Cvrpm1iqAev1F0Lwk5ArM8NvpUU
+ VwnA==
+X-Gm-Message-State: APjAAAVEtkJijJdhHIuU2hZCkl1uSn+fMs5UMIoZ2ka26zMRhSNkXBMZ
+ gge+Q0U09zcjZRy4nwrQ8XXIWtrgcfQ=
+X-Google-Smtp-Source: APXvYqxyl/9a9ndyMLQUorspRbu6urqXJ/bewpXlI4wYvwP42WN3gQ4wZ6G2CNwanKvMWN5KgJ7pSg==
+X-Received: by 2002:a5d:53d1:: with SMTP id
+ a17mr104815122wrw.327.1578394997006; 
+ Tue, 07 Jan 2020 03:03:17 -0800 (PST)
+Received: from localhost (laubervilliers-658-1-213-31.w90-63.abo.wanadoo.fr.
+ [90.63.244.31])
+ by smtp.gmail.com with ESMTPSA id x6sm26383184wmi.44.2020.01.07.03.03.16
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Tue, 07 Jan 2020 03:03:16 -0800 (PST)
+References: <20191226191224.3785282-1-martin.blumenstingl@googlemail.com>
+User-agent: mu4e 1.3.3; emacs 26.3
+From: Jerome Brunet <jbrunet@baylibre.com>
+To: Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
+ linux-amlogic@lists.infradead.org, sboyd@kernel.org
+Subject: Re: [PATCH v2 0/2] clk: Meson8/8b/8m2: fix the mali clock flags
+In-reply-to: <20191226191224.3785282-1-martin.blumenstingl@googlemail.com>
+Date: Tue, 07 Jan 2020 12:03:15 +0100
+Message-ID: <1j36crsf4c.fsf@starbuckisacylon.baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200107_025501_035355_7724B3FF 
-X-CRM114-Status: GOOD (  12.51  )
-X-Spam-Score: -2.3 (--)
+X-CRM114-CacheID: sfid-20200107_030318_700706_41116157 
+X-CRM114-Status: GOOD (  18.99  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.3 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [195.135.220.15 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:443 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [195.135.220.15 listed in wl.mailspike.net]
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -78,90 +96,68 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============5586287036653313446=="
+Cc: linux-kernel@vger.kernel.org, mturquette@baylibre.com,
+ linux-clk@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
+ narmstrong@baylibre.com
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
 
---===============5586287036653313446==
-Content-Type: multipart/signed; micalg="pgp-sha256";
-	protocol="application/pgp-signature"; boundary="=-PicWM6Keq9fqFpxdhA9f"
+On Thu 26 Dec 2019 at 20:12, Martin Blumenstingl <martin.blumenstingl@googlemail.com> wrote:
 
+> While playing with devfreq support for the lima driver I experienced
+> sporadic (random) system lockups. It turned out that this was in
+> certain cases when changing the mali clock.
+>
+> The Amlogic vendor GPU platform driver (which is responsible for
+> changing the clock frequency) uses the following pattern when updating
+> the mali clock rate:
+> - at initialization: initialize the two mali_0 and mali_1 clock trees
+>   with a default setting and enable both clocks
+> - when changing the clock frequency:
+> -- set HHI_MALI_CLK_CNTL[31] to temporarily use the mali_1 clock output
+> -- update the mali_0 clock tree (set the mux, divider, etc.)
+> -- clear HHI_MALI_CLK_CNTL[31] to temporarily use the mali_0 clock
+>    output again
+>
+> With the common clock framework we can even do better:
+> by setting CLK_SET_RATE_PARENT for the mali_0 and mali_1 output gates
+> we can force the common clock framework to update the "inactive" clock
+> and then switch to it's output.
+>
+> I only tested this patch for a limited time only (approx. 2 hours).
+> So far I couldn't reproduce the sporadic system lockups with it.
+> However, broader testing would be great so I would like this to be
+> applied for -next.
+>
+> Changes since v1 at [0]:
+> - extend the existing comment in patch #1 to describe how the glitch-
+>   free mux works with the CCF
+> - slightly updated the patch description of patch #1 to clarify that
+>   the "mali_0" or "mali_1" trees must not be changed while running
+> - add patch #2 to update the clk_set_rate() kerneldoc because we agreed
+>   that clk_set_rate() should do a root-to-leaf update (it does already,
+>   it's just not documented)
+>
+>
+> [0] https://patchwork.kernel.org/cover/11293177/
+>
+>
+> Martin Blumenstingl (2):
+>   clk: meson: meson8b: make the CCF use the glitch-free "mali" mux
+>   clk: clarify that clk_set_rate() does updates from top to bottom
+>
 
---=-PicWM6Keq9fqFpxdhA9f
-Content-Type: text/plain; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
+Applied with Stephen's Ack
 
-On Sun, 2019-12-29 at 08:06 +0000, Yangtao Li wrote:
-> Use devm_platform_ioremap_resource() to simplify code.
->=20
-> Signed-off-by: Yangtao Li <tiny.windzz@gmail.com>
-> ---
+>  drivers/clk/meson/meson8b.c | 11 +++++++----
+>  include/linux/clk.h         |  3 +++
+>  2 files changed, 10 insertions(+), 4 deletions(-)
 
-Reviewed-by: Nicolas Saenz Julienne <nsaenzjulienne@suse.de>
-
-Thanks!
-
->  drivers/pwm/pwm-brcmstb.c | 4 +---
->  1 file changed, 1 insertion(+), 3 deletions(-)
->=20
-> diff --git a/drivers/pwm/pwm-brcmstb.c b/drivers/pwm/pwm-brcmstb.c
-> index fea612c45f20..8b66f9d2f589 100644
-> --- a/drivers/pwm/pwm-brcmstb.c
-> +++ b/drivers/pwm/pwm-brcmstb.c
-> @@ -234,7 +234,6 @@ MODULE_DEVICE_TABLE(of, brcmstb_pwm_of_match);
->  static int brcmstb_pwm_probe(struct platform_device *pdev)
->  {
->  	struct brcmstb_pwm *p;
-> -	struct resource *res;
->  	int ret;
-> =20
->  	p =3D devm_kzalloc(&pdev->dev, sizeof(*p), GFP_KERNEL);
-> @@ -262,8 +261,7 @@ static int brcmstb_pwm_probe(struct platform_device *=
-pdev)
->  	p->chip.base =3D -1;
->  	p->chip.npwm =3D 2;
-> =20
-> -	res =3D platform_get_resource(pdev, IORESOURCE_MEM, 0);
-> -	p->base =3D devm_ioremap_resource(&pdev->dev, res);
-> +	p->base =3D devm_platform_ioremap_resource(pdev, 0);
->  	if (IS_ERR(p->base)) {
->  		ret =3D PTR_ERR(p->base);
->  		goto out_clk;
-
-
---=-PicWM6Keq9fqFpxdhA9f
-Content-Type: application/pgp-signature; name="signature.asc"
-Content-Description: This is a digitally signed message part
-Content-Transfer-Encoding: 7bit
-
------BEGIN PGP SIGNATURE-----
-
-iQEzBAABCAAdFiEErOkkGDHCg2EbPcGjlfZmHno8x/4FAl4UY30ACgkQlfZmHno8
-x/7/aAf7BW2itFl3TLtG03hnquQwqo+DGR4GEFXlXS0y7tCwQNw/r7LWRi5SHWqI
-Fq6j3OYwhEhv1zZNfDN+lUmZdX10MHKOrnk6wdu89kgT1ebWaQ2Pwf6TCqZtwWia
-y/2eh5++1G9168GQTuyG3BjaSaVFwwVKe4+gbtIMc6RPU9xWbQSC6LsIq+a66EvW
-3sXdIQJUp0WcQuFcnQhD9OUgVRZedCRpu7rj7Tezr5Ks+lL91fItKsOwdSKyTfWh
-ZLbQ3yaz45FUSkZVP9388WNvi2lUIEn2VaX9QX3PrmhyKlwlyhfioTTj47wDotkU
-KLQMm16Gyns5z+15tvGm5+m8oZ61FA==
-=Sn4O
------END PGP SIGNATURE-----
-
---=-PicWM6Keq9fqFpxdhA9f--
-
-
-
---===============5586287036653313446==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
 
 _______________________________________________
 linux-amlogic mailing list
 linux-amlogic@lists.infradead.org
 http://lists.infradead.org/mailman/listinfo/linux-amlogic
-
---===============5586287036653313446==--
-
-
