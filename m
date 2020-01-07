@@ -2,84 +2,67 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 58BD8132589
-	for <lists+linux-amlogic@lfdr.de>; Tue,  7 Jan 2020 13:01:57 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5E57A1325B8
+	for <lists+linux-amlogic@lfdr.de>; Tue,  7 Jan 2020 13:09:46 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=FYEiViqz8T+js1ZPsKz/EyY5T1RXNNgS9qonPZs2d6k=; b=XiveEhWHFPc9UE
-	e5QRufIuIv2zg74BQrMRHx1mi4ZoTUO21eMcORnaOdtI5ZnZ4s9z0Ll02+0TlikwCEwTCvrsgOyki
-	jv/ofYUYl7tUNR759+/VOz77NC9IieaqM3x5uo8CB0O9TT46TrUGJPhO3eY/7VvJFOGxY9xYMixHO
-	Ieoc4H2gqk0IHBt0OnAwplF72GuZPYjJWaV6z7UIJgsifr0N0J1rPHbWDddxVP+LJfmvESMJe6tk6
-	3PDICE6ENM5F3y9EUJfcZ9yWQ5I7qX+Q2zTRTC8B75nhNWiR1z9X93Ld1ernOISGkjKHr5Q2Eb5xA
-	PQR6YWauFAE5c7kmObgg==;
+	List-Owner; bh=S11eypDdambUsJzpmU5LEVlie8NwMO1FT4gwhtoS0yo=; b=p/d0hKnIUVa205
+	3UoGmslXllHGuW0NHGbU1xrK284k801jze5W4bQlEQQ+aZKb5HnSBiu06oZpgiEo/bPncE/5rpSmL
+	98vGGBbUbDfxF8/V1If3GvJXUbTjXqQP021mUwdlEVbLJe6EV3vQ3JhQVf86d6Pi64OkEA+F9HnND
+	XhAkGRCDySvMdGHocOPaJrFWfOWOsmUhwjVGdmBdBodug888/CgNuPSPMDIK8EWic+umw9lpdQurz
+	VOQTnsHCu8N0pyNZdnGvOl3+ye1mrm2f9yNwg1CMkJDRWUbujheiavmt+rNVwaYvZhsFEE0EDzh20
+	vNNwwyCE92mqJZQ52SWg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ionYZ-0002sS-3U; Tue, 07 Jan 2020 12:01:55 +0000
-Received: from mail-lj1-x242.google.com ([2a00:1450:4864:20::242])
+	id 1iong6-0005HF-Om; Tue, 07 Jan 2020 12:09:42 +0000
+Received: from metis.ext.pengutronix.de ([2001:67c:670:201:290:27ff:fe1d:cc33])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ionYN-0002hS-9D
- for linux-amlogic@lists.infradead.org; Tue, 07 Jan 2020 12:01:44 +0000
-Received: by mail-lj1-x242.google.com with SMTP id a13so54425243ljm.10
- for <linux-amlogic@lists.infradead.org>; Tue, 07 Jan 2020 04:01:41 -0800 (PST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=mLtNFMYZWtPhEKvur4VjuvVAPi0N1wL36Q6jCtiHfeE=;
- b=kzsDCX30f0Ec0JSPVS+j5bCMaV1MEdQdwUvAhfFWwLBYywuqsohIZB/CwqFxo2+Wpd
- xgSPZNnspuxr1JNmr9CTelVTIWd2tj//1wDsUbLSuMFvQWHW+kpfp5MTO0mKFK+Nd6xc
- N+mQPHlQDj8xdAFTBbpJS5dX0nRK5WuOqwauMc8zuJ+Q0Lkik9401WV07qylSSehTbb3
- 53EkNPcDR6UzG8NwsunjUL2rrhSUvGL8fofUa1O0ZNw3nApGoUDzETIl+1ohMWhrsR0W
- 4mXZE5hT/InAifSSYrra61Lm6c2GabDFSl+9stC08onKuQA5NEiaK+iOYtzd80/5Z9r4
- T0dw==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=mLtNFMYZWtPhEKvur4VjuvVAPi0N1wL36Q6jCtiHfeE=;
- b=OacRRq6X8ybzzmSzmH8fKL/IEsnSnNw7Nd9i16gs2DRO3ipUDdFvt7lnwOB44pTl9X
- HPhVrSaAsOQ7onYlRyUCN6rQCqp3dD0OBZUuH9kTE85wIsXXrkfOrZ+6FHB0OQG3OAzJ
- GxjC6mfBuWcx/hx7I00CIvpHkdbt0rFqI8ZtvMZjXb5BcuCMflNwTxmNvsPlVlBfuSwa
- +in+2BUdHE/h7KZF4cDrzVOP3IeombIzrbwHadMZWrvja9iHJcjxY7sLaBpvdFhicuoP
- 3eqFGil7rT9d3W/pBPpuTYxpRx0ZduTtcpTN7qa6wwouJTSpUnLr+aRmInevqxI/r2N3
- frWQ==
-X-Gm-Message-State: APjAAAV9AXy+DAfq8zOa1T/R2zsZuF+CtMVQ9r0l6QlRqJuBsaaul8eK
- uTsxfp3IYpp7iiMtoqH6NkllBqtLktmdClj5M8wjXg==
-X-Google-Smtp-Source: APXvYqxYVYIleP/nRgbENo3Yfgwk8OenCerefUQZlVEJcsgDGSH/BBARur4Ym4DwvHBVMCf6Xow3cwPKUVUV93X9mVk=
-X-Received: by 2002:a2e:85cd:: with SMTP id h13mr61458408ljj.191.1578398500619; 
- Tue, 07 Jan 2020 04:01:40 -0800 (PST)
+ id 1iong1-0005Dy-FE
+ for linux-amlogic@lists.infradead.org; Tue, 07 Jan 2020 12:09:39 +0000
+Received: from ptx.hi.pengutronix.de ([2001:67c:670:100:1d::c0])
+ by metis.ext.pengutronix.de with esmtps
+ (TLS1.2:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.92)
+ (envelope-from <ukl@pengutronix.de>)
+ id 1ionfq-00078D-RH; Tue, 07 Jan 2020 13:09:26 +0100
+Received: from ukl by ptx.hi.pengutronix.de with local (Exim 4.89)
+ (envelope-from <ukl@pengutronix.de>)
+ id 1ionfq-0001sM-8J; Tue, 07 Jan 2020 13:09:26 +0100
+Date: Tue, 7 Jan 2020 13:09:26 +0100
+From: Uwe =?iso-8859-1?Q?Kleine-K=F6nig?= <u.kleine-koenig@pengutronix.de>
+To: Krzysztof Kozlowski <krzk@kernel.org>
+Subject: Re: [PATCH 2/2] pwm: Enable compile testing for some of drivers
+Message-ID: <20200107120926.cgrxk6b4rchf6i42@pengutronix.de>
+References: <20191230172113.17222-1-krzk@kernel.org>
+ <20191230172113.17222-2-krzk@kernel.org>
+ <20200107072645.ko247bwhh3ibdu73@pengutronix.de>
+ <20200107082539.GA31827@pi3>
+ <20200107104234.wq74fska3szrg4ii@pengutronix.de>
+ <20200107110359.GA32423@pi3>
+ <20200107113354.ggq6zarewq5ip354@pengutronix.de>
+ <20200107115429.GA32632@pi3>
 MIME-Version: 1.0
-References: <20191226191425.3797490-1-martin.blumenstingl@googlemail.com>
-In-Reply-To: <20191226191425.3797490-1-martin.blumenstingl@googlemail.com>
-From: Linus Walleij <linus.walleij@linaro.org>
-Date: Tue, 7 Jan 2020 13:01:29 +0100
-Message-ID: <CACRpkdZ3uc30Efwe_2YtNJBK4FTt+dWLbY3pnh1uWSPwGu_-SQ@mail.gmail.com>
-Subject: Re: [PATCH] pinctrl: meson: meson8b: add the GPIOH pinmux settings
- for ETH_RXD{2,3}
-To: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+Content-Disposition: inline
+In-Reply-To: <20200107115429.GA32632@pi3>
+User-Agent: NeoMutt/20170113 (1.7.2)
+X-SA-Exim-Connect-IP: 2001:67c:670:100:1d::c0
+X-SA-Exim-Mail-From: ukl@pengutronix.de
+X-SA-Exim-Scanned: No (on metis.ext.pengutronix.de);
+ SAEximRunCond expanded to false
+X-PTX-Original-Recipient: linux-amlogic@lists.infradead.org
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200107_040143_320991_9FB8EBC3 
-X-CRM114-Status: UNSURE (   7.82  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200107_040937_512055_F57889B0 
+X-CRM114-Status: GOOD (  22.69  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:242 listed in]
- [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -91,37 +74,129 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: "open list:GPIO SUBSYSTEM" <linux-gpio@vger.kernel.org>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- Linux ARM <linux-arm-kernel@lists.infradead.org>,
- "open list:ARM/Amlogic Meson..." <linux-amlogic@lists.infradead.org>
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: linux-pwm@vger.kernel.org, Arnd Bergmann <arnd@arndb.de>,
+ Richard Weinberger <richard@nod.at>, linux-kernel@vger.kernel.org,
+ linux-rockchip@lists.infradead.org, Thierry Reding <thierry.reding@gmail.com>,
+ linux-mediatek@lists.infradead.org, linux-rpi-kernel@lists.infradead.org,
+ kernel@pengutronix.de, linux-amlogic@lists.infradead.org,
+ linux-tegra@vger.kernel.org, bcm-kernel-feedback-list@broadcom.com,
+ linux-riscv@lists.infradead.org, linux-stm32@st-md-mailman.stormreply.com,
+ linux-arm-kernel@lists.infradead.org
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On Thu, Dec 26, 2019 at 8:14 PM Martin Blumenstingl
-<martin.blumenstingl@googlemail.com> wrote:
+Hello Krzysztof,
 
-> GPIOH_5 and GPIOH_6 can have two Ethernet related functions:
-> - GPIOH_5 can be ETH_TXD1 or ETH_RXD3
-> - GPIOH_6 can be ETH_TXD0 or ETH_RXD2
->
-> Add the bits for eth_rxd3_h and eth_rxd2_h so the ETH_RXD function can
-> be disabled when using the ETH_TXD function of GPIOH_{5,6}. No problem
-> was observed so far, but in theory this could lead to two different
-> signals being routed to the same pad (which could break Ethernet).
->
-> These settings were found in the public "Amlogic Ethernet controller
-> user guide":
-> http://openlinux.amlogic.com/@api/deki/files/75/=Amlogic_Ethenet_controller_user_Guide.pdf
->
-> Signed-off-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+On Tue, Jan 07, 2020 at 12:54:29PM +0100, Krzysztof Kozlowski wrote:
+> On Tue, Jan 07, 2020 at 12:33:54PM +0100, Uwe Kleine-K=F6nig wrote:
+> > On Tue, Jan 07, 2020 at 12:03:59PM +0100, Krzysztof Kozlowski wrote:
+> > > On Tue, Jan 07, 2020 at 11:42:34AM +0100, Uwe Kleine-K=F6nig wrote:
+> > > > > I guess other solution would be to add stubs for few clk function=
+s...
+> > > > > =
 
-Patch applied with Neil's review tag.
+> > > > > > Also HAS_IOMEM is a typical requirement, but I tested with an A=
+RCH=3Dum
+> > > > > > config (which does't have HAS_IOMEM) and they all compile fine.
+> > > > > =
 
-Yours,
-Linus Walleij
+> > > > > Because of !HAS_IOMEM, since some time ARCH=3Dum does not support
+> > > > > COMPILE_TEST. Therefore HAS_IOMEM dependency is not needed for co=
+mpile
+> > > > > testing (and for regular build it is selected by ARCH).
+> > > > =
+
+> > > > Hehe, I didn't notice because for testing I just dropped the "depen=
+ds on
+> > > > ..." lines in Kconfig instead of adding "|| COMPILE_TEST" :-) Still=
+ they
+> > > > compile fine on UML.
+> > > > =
+
+> > > > Ah, since bc083a64b6c0 ("init/Kconfig: make COMPILE_TEST depend on
+> > > > !UML") =3D=3D v4.8-rc1~52^2~83 COMPILE_TEST cannot be enabled on UM=
+L, but
+> > > > later 1bcbfbfdeb00 ("um: add dummy ioremap and iounmap functions")
+> > > > =3D=3D v4.13-rc1~8^2~6 UM got a dummy implementation. So maybe we c=
+ould
+> > > > revert bc083a64b6c0 today? (And if not, a comment about why near the
+> > > > "depends on !UML" in init/Kconfig would be great.)
+> > > > =
+
+> > > > Orthogonal to that, I wonder if depending on HAS_IOMEM is right even
+> > > > though the compile testers won't notice it missing. Or should HAS_I=
+OMEM
+> > > > be dropped?
+> > > =
+
+> > > I think yes, it can be dropped, but this would require:
+> > > 1. Fixing any dependencies on HAS_IOMEM, e.g.:
+> > >     WARNING: unmet direct dependencies detected for MFD_SYSCON
+> > >       Depends on [n]: HAS_IOMEM [=3Dn]
+> > >       Selected by [y]:
+> > >       - PHY_DA8XX_USB [=3Dy] && (ARCH_DAVINCI_DA8XX || COMPILE_TEST [=
+=3Dy])
+> > =
+
+> > I don't understand that warning. What did you modify to trigger that?
+> > Probably related to the big "if HAS_IOMEM" in drivers/mfd/Kconfig?!
+> =
+
+> OK, that's actually from my other patch to illustrate the problem:
+> https://lore.kernel.org/linux-arm-kernel/20200103164710.4829-2-krzk@kerne=
+l.org/
+> =
+
+> After reverting of bc083a64b6c0, every driver that selects MFD_SYSCON
+> (or some other parts) has to depend on HAS_IOMEM.
+
+OK, understood, thanks.
+
+> > > 2. Checking if all of stubs are implemented (not only IOMEM but maybe
+> > >    DMA as well). Also 1bcbfbfdeb00 brought only few stubs. Still we
+> > >    need devm_ioremap_resource() and others.
+> > =
+
+> > A problem is that it's unclear (to me at least) what the presence of
+> > HAS_IOMEM actually implies. I thought it's about ioremap + readl +
+> > writel (including their respective variants). Does it really include dma
+> > stuff, too?
+> > =
+
+> > > Quick test shows mentioned "unmet direct dependencies" and:
+> > >     phy-pxa-usb.c:(.text+0x2f5): undefined reference to `devm_ioremap=
+_resource'
+> > >     dma-iommu.c:(.text+0x179): undefined reference to `dma_pgprot'
+> > =
+
+> > dma_pgprot seems to depend on HAS_DMA though, not HAS_IOMEM.
+> > =
+
+> > (Oh, HAS_DMA is defined using "depends on !NO_DMA" + "default y".
+> > NO_DMA has three different definitions. Two of them (in
+> > drivers/crypto/ccree/cc_hw_queue_defs.h and arch/arm/include/asm/dma.h)
+> > unrelated.)
+> =
+
+> Yes, HAS_DMA is the second missing piece for UM.
+
+So something like:
+
+	# Usermode linux doesn't provide HAS_DMA and HAS_IOMEM.  To not have to
+	# clutter most dependencies with these just exclude UML from compile
+	# testing.
+
+as comment for COMPILE_TEST's depend line should be fine, right?
+
+Best regards
+Uwe
+
+-- =
+
+Pengutronix e.K.                           | Uwe Kleine-K=F6nig            |
+Industrial Linux Solutions                 | https://www.pengutronix.de/ |
 
 _______________________________________________
 linux-amlogic mailing list
