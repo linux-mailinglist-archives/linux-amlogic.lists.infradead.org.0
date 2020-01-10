@@ -2,49 +2,42 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2CD021364B8
-	for <lists+linux-amlogic@lfdr.de>; Fri, 10 Jan 2020 02:27:35 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id D71191366D7
+	for <lists+linux-amlogic@lfdr.de>; Fri, 10 Jan 2020 06:43:31 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=xIchdU0LtZJSmBuUtS1ambGPmVbww12UP4e3UU5D9HU=; b=HpeVECZ9cn/Ip/
-	ub8PgL5yW8XZ0GfKLz6HVxnK/Bz8xAyJLm8cltyYR4kyvQwUKdGe0ZuVUZ9Ym/pK4PcF8VDl97PAz
-	0Dmb/hIrOyYiSTe5AjP2fa6uPP9CCRD2KaKiaisFPK05iiF5jrYXq3f8MyTB1Aw1/2wfhLv4VroZD
-	SOJ6xju1hiKUqQVxqg0pXf2REHvo+Uiv124ineZ1kuzBpylbds7q5UolvxrR+qDUUPd1h9ZwdFqsh
-	/wO4chNeQV3chP7W8noXT1jEqCaRPCLsaEmu4GlG/nr6i2lNjPJ3yFSguy30WVpoUmYaoNCvC+KRU
-	vnOzJ0szCqUSxgvE3BpA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=wxi4ZZ8DRf/Z8T023bJpoET/c5wBhOLwlGmEtMUU6n4=; b=ggMS+51ko007Cy
+	P1v6er/cV7hTMKZUEc7SA2BBg0Jg0+bmUq+za1/FI5LLYx95/2HOJBJJjIgFpRb4XavQgYgN7fN4B
+	Yj7PKL63Ltsswex9SPX/f/A98e96NyLqXQL8Vb3PZYXl89VD0A25Pu7HZPpKRacDpl1aU3EDSgeKY
+	zetQtmqP+LDwUkke52NidYw7bIqWG4PYHWcaELUodjDkt7VxLEpH/pGSOgs0iEdwxEh4qFM7wm36w
+	onwIckJFcKDbIdy1sQ5lwXA90hJoden/US8gkk0uFBeAYab1DX5swL585m838s8MHf4Pm0nMGygpm
+	MLItLhRdEl4OUSEYl3vA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ipj5H-0002pm-EK; Fri, 10 Jan 2020 01:27:31 +0000
+	id 1ipn4x-0003Hj-Is; Fri, 10 Jan 2020 05:43:27 +0000
 Received: from mail-sh.amlogic.com ([58.32.228.43])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ipj5D-0002nv-W4; Fri, 10 Jan 2020 01:27:29 +0000
-Received: from [10.18.38.198] (10.18.38.198) by mail-sh.amlogic.com
- (10.18.11.5) with Microsoft SMTP Server (version=TLS1_2,
- cipher=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256) id 15.1.1591.10; Fri, 10 Jan
- 2020 09:27:47 +0800
-Subject: Re: [PATCH v4 1/6] dt-bindings: phy: Add Amlogic A1 USB2 PHY Bindings
-To: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-References: <1578537045-23260-1-git-send-email-hanjie.lin@amlogic.com>
- <1578537045-23260-2-git-send-email-hanjie.lin@amlogic.com>
- <CAFBinCDt97E4236obhm0GV58MtoC2qYAZbqPoJd8tyROGW4cvw@mail.gmail.com>
+ id 1ipn4d-00035U-O5; Fri, 10 Jan 2020 05:43:09 +0000
+Received: from droid10.amlogic.com (10.18.11.213) by mail-sh.amlogic.com
+ (10.18.11.5) with Microsoft SMTP Server id 15.1.1591.10; Fri, 10 Jan 2020
+ 13:43:28 +0800
 From: Hanjie Lin <hanjie.lin@amlogic.com>
-Message-ID: <9fc103f4-a388-a65e-f621-846f03f77b3a@amlogic.com>
-Date: Fri, 10 Jan 2020 09:27:46 +0800
-User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:68.0) Gecko/20100101
- Thunderbird/68.3.1
+To: Jerome Brunet <jbrunet@baylibre.com>, Neil Armstrong
+ <narmstrong@baylibre.com>, Rob Herring <robh@kernel.org>, Greg Kroah-Hartman
+ <gregkh@linuxfoundation.org>, Kevin Hilman <khilman@baylibre.com>
+Subject: [PATCH v5 0/6] arm64: meson: Add support for USB on Amlogic A1
+Date: Fri, 10 Jan 2020 13:42:31 +0800
+Message-ID: <1578634957-54826-1-git-send-email-hanjie.lin@amlogic.com>
+X-Mailer: git-send-email 2.7.4
 MIME-Version: 1.0
-In-Reply-To: <CAFBinCDt97E4236obhm0GV58MtoC2qYAZbqPoJd8tyROGW4cvw@mail.gmail.com>
-Content-Language: en-US
-X-Originating-IP: [10.18.38.198]
-X-ClientProxiedBy: mail-sh.amlogic.com (10.18.11.5) To mail-sh.amlogic.com
- (10.18.11.5)
+X-Originating-IP: [10.18.11.213]
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200109_172728_030672_8597154E 
-X-CRM114-Status: UNSURE (   8.71  )
+X-CRM114-CacheID: sfid-20200109_214307_782050_86311BEC 
+X-CRM114-Status: UNSURE (   9.07  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -64,53 +57,93 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: Rob Herring <robh@kernel.org>, Victor Wan <victor.wan@amlogic.com>,
- Jianxin Pan <jianxin.pan@amlogic.com>,
- Neil Armstrong <narmstrong@baylibre.com>, Stephen Boyd <sboyd@kernel.org>,
- Kevin Hilman <khilman@baylibre.com>,
- Michael Turquette <mturquette@baylibre.com>, linux-usb@vger.kernel.org,
- Yue Wang <yue.wang@amlogic.com>, Qiufang Dai <qiufang.dai@amlogic.com>,
- devicetree@vger.kernel.org, Liang Yang <liang.yang@amlogic.com>,
- Jian Hu <jian.hu@amlogic.com>, Xingyu Chen <xingyu.chen@amlogic.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Carlo Caione <carlo@caione.org>, linux-amlogic@lists.infradead.org,
- linux-arm-kernel@lists.infradead.org, Jerome Brunet <jbrunet@baylibre.com>
+Cc: devicetree@vger.kernel.org, Hanjie Lin <hanjie.lin@amlogic.com>,
+ Victor Wan <victor.wan@amlogic.com>, Jianxin Pan <jianxin.pan@amlogic.com>,
+ Stephen Boyd <sboyd@kernel.org>, Michael Turquette <mturquette@baylibre.com>,
+ linux-usb@vger.kernel.org, Yue Wang <yue.wang@amlogic.com>,
+ Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
+ Liang Yang <liang.yang@amlogic.com>, Qiufang Dai <qiufang.dai@amlogic.com>,
+ Xingyu Chen <xingyu.chen@amlogic.com>, Carlo Caione <carlo@caione.org>,
+ linux-amlogic@lists.infradead.org, linux-arm-kernel@lists.infradead.org,
+ Jian Hu <jian.hu@amlogic.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
+This patchset adds support for USB on Amlogic A1 SoCs.
 
+This patchset is composed with :
+- bindings of the PHY
+- bindings of the USB Control Glue
+- PHY Driver
+- USB Control Glue driver
+- dts of the PHY
+- dts of the USB Controller
 
-On 2020/1/10 1:12, Martin Blumenstingl wrote:
-> On Thu, Jan 9, 2020 at 3:30 AM Hanjie Lin <hanjie.lin@amlogic.com> wrote:
-> [...]
->> +  clocks:
->> +    maxItems: 1
->> +
->> +  clock-names:
->> +    items:
->> +      - const: xtal_usb_phy
-> the "usb_phy" part of "xtal_usb_phy" seems redundant to me:
-> it's the XTAL clock input (this is what I'd expect as clock-name) of
-> the USB PHY (this is already part of the node name).
-> in addition to keeping the reset-names consistent (as Neil suggested)
-> please also use the same clock-names as G12
-> 
+The Amlogic A1 USB Complex is composed of :
+- 1 DWC3 USB controller for USB2 Host functionality
+- 1 USB2 PHY for USB2 Host functionality
 
-Of course.
+The USB Control Glue setups the clocks and the reset about DWC3 USB
+controller, and binds to the USB2 PHY. It also configures the 8bit
+UTMI interfaces for the USB2 PHY, including setting USB2 phy mode.
 
-I will use "xtal" name in next version.
+The USB2 PHY driver initializes the phy analog settings, phy PLL 
+setup and phy tuning.
 
-Thanks,
-Hanjie
+This patchset is based on A1 clock/power domain/reset series at [0].
 
-> 
-> Thank you!
-> Martin
-> 
-> .
-> 
+Changes since v1:[1]
+ - integrate glue and phy drivers into g12a's
+ 
+Changes since v2:[2]
+ - modify amlogic,meson-g12a-usb-ctrl.yaml with dt_binding_check tool
+ - phy/glue driver use of_device_get_match_data to distinguish A1 from G12A
+
+Changes since v3:[3]
+ - fix bindings mistakes of the PHY according Rob's comments
+ - fix bindings mistakes of the USB Control Glue according Rob's comments
+ - phy driver add xtal_usb_phy clock which moved from glue driver
+ - glue driver use otg_mode instead of soc_id to support otg function
+
+Changes since v4:[4]
+ - phy driver revert reset-names changes
+ - phy driver change clock name to "xtal" to consistent with g12a
+ - glue driver add drvdata otg_switch_supported
+
+[0]
+https://patchwork.kernel.org/project/linux-amlogic/list/?series=185477
+https://patchwork.kernel.org/project/linux-amlogic/list/?series=180055
+https://patchwork.kernel.org/project/linux-amlogic/list/?series=189643
+
+[1] : https://lore.kernel.org/linux-amlogic/1574405757-76184-1-git-send-email-hanjie.lin@amlogic.com
+
+[2] : https://lore.kernel.org/linux-amlogic/1576636944-196192-1-git-send-email-hanjie.lin@amlogic.com
+
+[3] : https://lore.kernel.org/linux-amlogic/1577428606-69855-1-git-send-email-hanjie.lin@amlogic.com
+
+[4] : https://lore.kernel.org/linux-amlogic/1578537045-23260-1-git-send-email-hanjie.lin@amlogic.com
+
+Hanjie Lin (6):
+  dt-bindings: phy: Add Amlogic A1 USB2 PHY Bindings
+  dt-bindings: usb: dwc3: Add the Amlogic A1 Family DWC3 Glue Bindings
+  phy: amlogic: Add Amlogic A1 USB2 PHY Driver
+  usb: dwc3: Add Amlogic A1 DWC3 glue
+  arm64: dts: meson: a1: Enable USB2 PHY
+  arm64: dts: meson: a1: Enable DWC3 controller
+
+ .../bindings/phy/amlogic,meson-a1-usb2-phy.yaml    | 62 +++++++++++++++
+ .../bindings/usb/amlogic,meson-g12a-usb-ctrl.yaml  | 11 +++
+ arch/arm64/boot/dts/amlogic/meson-a1.dtsi          | 44 +++++++++++
+ drivers/phy/amlogic/phy-meson-g12a-usb2.c          | 85 ++++++++++++++-------
+ drivers/usb/dwc3/dwc3-meson-g12a.c                 | 89 ++++++++++++++++------
+ 5 files changed, 243 insertions(+), 48 deletions(-)
+ create mode 100644 Documentation/devicetree/bindings/phy/amlogic,meson-a1-usb2-phy.yaml
+
+-- 
+2.7.4
+
 
 _______________________________________________
 linux-amlogic mailing list
