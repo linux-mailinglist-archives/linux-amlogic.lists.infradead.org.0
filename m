@@ -2,68 +2,66 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 94F22138394
-	for <lists+linux-amlogic@lfdr.de>; Sat, 11 Jan 2020 21:51:00 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 34EE9138398
+	for <lists+linux-amlogic@lfdr.de>; Sat, 11 Jan 2020 21:54:52 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
 	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=DYPT6O3vSyqRGg0Tc+KHoJtP9/4GVp7pLLxbLg+oAss=; b=IKIcwnr+eXsAZZ
-	RmxDmLKmoihPq2Ji3UU3yuMuMJcz4/3SixYWuBd8TiWpagn44DSKiEthjb/O8aS00rqvCE0g8vkhG
-	L+xprEQOGnKVuXgmGuxp3pHcInUDsttOY/FYgaDd/0QuqhSMH8zQf9+YeMVCYKYGD+61r0F0/vipj
-	+nbiiN8ym/IwjL5nUUcFc3uYWN5uJFG+9jl1uZYo2+tC+wir6utKKH1rPnVAh6/dpFmIDIp4ZxAUG
-	i/zaVhRIHFUWQT1YKrIux2b7j8QS7EPUAimA/rBZh3Sonm/JS0Pkxt0ECRNWRnFuu1bkeLiMLeSsJ
-	XfaQTL+9l555XXBe4p5A==;
+	List-Owner; bh=uV4p6FCWeNRDNiVjJ4IeA3gjgTfGBLjp8qfrG2qwmGI=; b=joNM3as9pzeZ4U
+	cQSK67Is4mD/XKrBG6Udgf48az5pV8VgDgkzHIZQwCbMdG4zjEb94jz/MLfRjeY9gOeWGzZQWAjZB
+	Rl2LLsem3UqvbvztxhKQp6co6ekmPjtaZ/fOI070MNi54nKOF6DgCclpurZ9UGzfs4f+5t5R0drw7
+	hgOt3V97wXOtY0P16P7jAc/nHr4E9AczHA2pbD6TsmmVsd3OQA9NH3bgR8P1J/tSJoCsB9TnZt1Pr
+	OqR4wbDbsirxXWzogP8Nwp7uspAi1QXUO7fEGdGn8SCsGbrmUTegKYqKbj/dzfXhvNhERAeDvo9g3
+	EsrTfDnmhkskI5xtRWPw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iqNii-0004jM-Mm; Sat, 11 Jan 2020 20:50:56 +0000
-Received: from mail-ed1-x544.google.com ([2a00:1450:4864:20::544])
+	id 1iqNmU-0005Wy-Ew; Sat, 11 Jan 2020 20:54:50 +0000
+Received: from mail-ed1-x542.google.com ([2a00:1450:4864:20::542])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iqNif-0004ih-6v; Sat, 11 Jan 2020 20:50:54 +0000
-Received: by mail-ed1-x544.google.com with SMTP id v28so4998127edw.12;
- Sat, 11 Jan 2020 12:50:48 -0800 (PST)
+ id 1iqNmQ-0005WT-LR; Sat, 11 Jan 2020 20:54:47 +0000
+Received: by mail-ed1-x542.google.com with SMTP id b8so5023170edx.7;
+ Sat, 11 Jan 2020 12:54:46 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=googlemail.com; s=20161025;
  h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=Z1allRQVVIcRb3GsPlExTsGVhorTeSQyvjX+yCE+qh8=;
- b=hJUBjxnQ14Mkg+v0KZ6c/t3nrYWqpGIc4sggWABjJRnGUyE8mJZqSJlWevR+X2pXLM
- LQSpClltwxH4ooVGw4tHTB7JHmbb1UXYc905RnfaGPl+4J7rl3o46naKcJtWdi3V6V56
- /TMMbfEbpBJ01C3LFZPaUGan+dJaiT4c8Pxd94x0Ut8sbRA97vGiBJNbgq7xGxIxQnhp
- Up1nQRDJ9JeBKdnQU4B6yRXhH6N57MPmMCHXeoyAEHpZzEykyCldLD1aQkir+dw1Pn+F
- FBUrNk6ERO1+Vf5Gx12umJkOkHkqBzc16yNhfNr7QJmEIdJfFGeCXpUUCgI4JdMUqm87
- Rpvw==
+ :cc; bh=0OTy5bWu7ituTAMunYtNOtrElBjU8L+HwcC81VLSIUU=;
+ b=dEMbuvbfWaeBtraw9zZnV+PFA3wKM6TgNhF/CzZBEfd1V8JUoS92jT6VjaJCrE9gXo
+ AdA397m17nAsdbmHVzi/A54qDJGQkvCBDk0bzmkxK2xgkE8o1Y0YJ+7UD05EcPSpw5iq
+ pWo0pQUZHHNAF51LhyEka/D/egFoXXB4bkAlTV1UDiuVSMGjJjMxiZGUvC5C3R5jD7tk
+ wVdpcnNhF63CQHqqspIQbn4FMtAkNO7zNIWh6k9IEb/cfocRUIsu0e2abEycx5O+DdB4
+ +kpfzn44pjqdPF4vqydMOPR69Ph2Pf4Rq4DDnJlYgKDIKnUXlhsXpF8lz1u5vH8jwda5
+ 6fAA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:mime-version:references:in-reply-to:from:date
  :message-id:subject:to:cc;
- bh=Z1allRQVVIcRb3GsPlExTsGVhorTeSQyvjX+yCE+qh8=;
- b=BPWewb2wXkQ2hSBrEss/1kyJh3jWP5KLwTvMmi/bPoOHJ13/ESou+5qOCk+5tjGUD2
- ozD+zglYNmzRIu3r8Nu8yTfhPEhA+Q7GL1/E281hpTaW1UljdE1fZqvIYhmxdP7A6FO4
- CP2LViVEEsmfFQDuNqmN+TGjd/4ngbAVXhOHzFZmn3D1fCE7yZn3fYpIORECGR0c87Fz
- NXvNEamkqOEfoNY2jxSdlYOzA6MlZf8TFb1amZkrymSIVKVfaO/U+XE27PhWgk5h/jA3
- ArKzQNvF96Gh95FKCo/D35fvL8ZgCAGXjFtwwTe38UFLuzATgTyva2HMxzFr6g3IROPf
- puCA==
-X-Gm-Message-State: APjAAAWczVbRBIf4rBxgOdH6jySKa4sPRMvPKWotTxMu2sc/VseVltIG
- Q7RuTRRu1JxwY4lg2btITwH0oSqAsdSHs2n5IYQ=
-X-Google-Smtp-Source: APXvYqwtaXUZxukv72KXhDvEgYsMrVJcbOLsej/ezPWjeRTXXD9cuqhLaJNWOoMJYBnJuHEu/7anl+4YWFW8qwXN598=
-X-Received: by 2002:a17:906:27cb:: with SMTP id
- k11mr9466692ejc.301.1578775846889; 
- Sat, 11 Jan 2020 12:50:46 -0800 (PST)
+ bh=0OTy5bWu7ituTAMunYtNOtrElBjU8L+HwcC81VLSIUU=;
+ b=o9VRraCICShEswQhMuypgyAHAPimqbM3jd1g41jzdaupu6Ujx4J3OdHNR/jhn0qmfE
+ TEFYpDH2Q2zs2RJG1sYf1XaYtkGvfMkoK1Rphi4qMeuDAXMHEQShYG34KUfR+sFUxP3j
+ fhlM4W073AQ9P82+eKt//qEGyHM91hgGa63+JJqfYj2vQHV6MzBkGRpCvmltIUkpY3U8
+ AknLzVG7dQFkEJTQLz9i3vzrvei7LBW5oZ7vi7tvnkOqFBEmvu4eXK/kejKj0FlUpYsE
+ GpxsyZEowZkgdroie3sk7PPUWdVKbdb1px1OrLHgMKKlZdlxKveg+hm0F8L4Q0gVwkoQ
+ KfKw==
+X-Gm-Message-State: APjAAAXhvIibKQi3blQ5QaSr4rxGkfZwhsqePVxXeNItjqOuNTFF8OFf
+ AwjhmCuAc81As8xnq7bCspx0K/EqPKKpVBLd0qUz/Or2
+X-Google-Smtp-Source: APXvYqz0LCEetCL0C26+oJCqz1q7IMN4akVRCVVYqX4oiFOSFM3JsgRptl38/YKtB70YcL7gMACFa0zGeMazXQEl06o=
+X-Received: by 2002:aa7:d511:: with SMTP id y17mr9783140edq.41.1578776085155; 
+ Sat, 11 Jan 2020 12:54:45 -0800 (PST)
 MIME-Version: 1.0
 References: <1578634957-54826-1-git-send-email-hanjie.lin@amlogic.com>
- <1578634957-54826-3-git-send-email-hanjie.lin@amlogic.com>
-In-Reply-To: <1578634957-54826-3-git-send-email-hanjie.lin@amlogic.com>
+ <1578634957-54826-2-git-send-email-hanjie.lin@amlogic.com>
+In-Reply-To: <1578634957-54826-2-git-send-email-hanjie.lin@amlogic.com>
 From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-Date: Sat, 11 Jan 2020 21:50:35 +0100
-Message-ID: <CAFBinCCZSBWdKQwmcvponuUu_aiTnDCyRiPqKDgqfNkJQoq06w@mail.gmail.com>
-Subject: Re: [PATCH v5 2/6] dt-bindings: usb: dwc3: Add the Amlogic A1 Family
- DWC3 Glue Bindings
+Date: Sat, 11 Jan 2020 21:54:34 +0100
+Message-ID: <CAFBinCA-w6GnPzFCbmUFNrOY3PeW3=74+ToC9CvXoSAWoe+VLw@mail.gmail.com>
+Subject: Re: [PATCH v5 1/6] dt-bindings: phy: Add Amlogic A1 USB2 PHY Bindings
 To: Hanjie Lin <hanjie.lin@amlogic.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200111_125053_255508_B6B1EEC1 
-X-CRM114-Status: UNSURE (   9.25  )
+X-CRM114-CacheID: sfid-20200111_125446_707731_EE578E5C 
+X-CRM114-Status: UNSURE (   9.84  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -71,7 +69,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:544 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:542 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
@@ -114,27 +112,30 @@ Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 Hi Hanjie,
 
 On Fri, Jan 10, 2020 at 6:43 AM Hanjie Lin <hanjie.lin@amlogic.com> wrote:
-[...]
-> @@ -37,6 +43,11 @@ properties:
 >
->    clocks:
->      minItems: 1
-> +    maxItems: 4
-the driver parses one clock for G12A/G12B/SM1 and three clocks for A1
-if there is a fourth clock: do we need to manage it in the driver?
-(note: dt-bindings always represent the hardware, so if there's a
-fourth clock which the driver doesn't need then it's perfectly valid
-to describe it here. a comment which clock this is helps in the
-code-review process)
+> Add the Amlogic A1 Family USB2 PHY Bindings
+>
+> It supports Host mode only.
+>
+> Signed-off-by: Hanjie Lin <hanjie.lin@amlogic.com>
+> Signed-off-by: Yue Wang <yue.wang@amlogic.com>
+> ---
+>  .../bindings/phy/amlogic,meson-a1-usb2-phy.yaml    | 62 ++++++++++++++++++++++
+>  1 file changed, 62 insertions(+)
+>  create mode 100644 Documentation/devicetree/bindings/phy/amlogic,meson-a1-usb2-phy.yaml
+there are only two differences to the existing
+amlogic,meson-g12a-usb2-phy.yaml binding:
+- different compatible string (the existing binding already has an
+enum, so that would be easy to extend)
+- new, mandatory power-domains property
+(Documentation/devicetree/bindings/sound/allwinner,sun4i-a10-codec.yaml
+has examples how to make properties mandatory based on the compatible
+string)
 
-> +  clock-names:
-> +    minItems: 1
-> +    maxItems: 4
-I let Rob comment on this, personally I prefer naming the clocks explicitly
-also I think clock-names has to be a mandatory property for A1 (see
-Documentation/devicetree/bindings/sound/allwinner,sun4i-a10-codec.yaml
-for an example which makes properties mandatory depending on the
-compatible string)
+have you considered merging this with the existing
+amlogic,meson-g12a-usb2-phy.yaml binding?
+this is not a "must have" in my opinion, I still want to hear your
+opinion on this topic!
 
 
 Martin
