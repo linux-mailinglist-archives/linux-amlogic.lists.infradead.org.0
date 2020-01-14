@@ -2,50 +2,89 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 150D313A024
-	for <lists+linux-amlogic@lfdr.de>; Tue, 14 Jan 2020 04:51:07 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id BEEC313B373
+	for <lists+linux-amlogic@lfdr.de>; Tue, 14 Jan 2020 21:11:04 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=9a3lPDDr1mJ/9lM0iwu9FGViuXipc/nkt+nwsQdQgGE=; b=XhNd6oAfLcFni4
-	uPymHbwQ98hbiU6VT0uyNpN8Po7X5nBab12nrYVhAjelqmPV+DCkx+kYIbcxv7JASFyp+f5raQFGI
-	0GBCiQwDrIEFi6GjiwRnL1v/8HRKPfnTOFQv3KosnVQHBg2rSxTWaz4RwltfVOlwe3LU57QxuF7yq
-	LuauuGOPslgMNOER/p3+PL52s7GNfUS1rTR7zGO7VcMKp0ERGoaZAM8SktdpsmQ2/ixVdUkMhchd4
-	GntA5rCT0OMUxs9QUMbqkSuMMXjWKqhZIuk3Tvn1eWOvge4kBCCLztWEkrnU3SriHs6lUTfEn+xH4
-	SKI4VMZZAjDCF0aHhljg==;
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=8CoVgTOro08P0edKpmzOQ7Z9EHNYb0KvXhoYWl3Mbjg=; b=nj6USlEzEaAm+w
+	ra9zoQ+vSVfRUGUiTL7ZPFgtvFwPZ5cyCMraHvq1510TwwQkgSuZnSyuLoTVoYGiqTrbJPyCs6OqA
+	Ncp/MZch8/biHN1sL9rfCACkccmdhdKA6AvaRgdT+2A/JaJEhY3PzcB4LKaU5Dl193N9lADVti+lf
+	R9oZi+RuHvFFhT3eOWRcrDzRqEBHp9X1RLop1s0PAqZY4WAB7U2ZhDNmb2R6CJ4p301yXDTIiUk5a
+	M0KTWFPj6zjJER/z76tY/WylLru/AtB71KJV2pwlgJ8h8Q6NyyHb9jRgf/Sthg32xOKzEYpsTSS1u
+	ZKG3d4ieQe/qqosYh89w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1irDEO-0003UN-Ek; Tue, 14 Jan 2020 03:51:04 +0000
-Received: from mail-sz.amlogic.com ([211.162.65.117])
+	id 1irSWi-0004u6-Tj; Tue, 14 Jan 2020 20:11:00 +0000
+Received: from mail-ed1-x541.google.com ([2a00:1450:4864:20::541])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1irDEM-0003Ty-2K; Tue, 14 Jan 2020 03:51:03 +0000
-Received: from droid12-sz.software.amlogic (10.28.8.22) by mail-sz.amlogic.com
- (10.28.11.5) with Microsoft SMTP Server id 15.1.1591.10;
- Tue, 14 Jan 2020 11:51:28 +0800
-From: Xingyu Chen <xingyu.chen@amlogic.com>
-To: Wim Van Sebroeck <wim@linux-watchdog.org>, Guenter Roeck
- <linux@roeck-us.net>, Kevin Hilman <khilman@baylibre.com>, Neil Armstrong
- <narmstrong@baylibre.com>
-Subject: [PATCH v6 5/5] arm64: dts: a1: add secure watchdog controller
-Date: Tue, 14 Jan 2020 11:50:58 +0800
-Message-ID: <1578973858-10189-1-git-send-email-xingyu.chen@amlogic.com>
-X-Mailer: git-send-email 2.7.4
+ id 1irSWc-0004sx-HW; Tue, 14 Jan 2020 20:10:58 +0000
+Received: by mail-ed1-x541.google.com with SMTP id f8so13155645edv.2;
+ Tue, 14 Jan 2020 12:10:54 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=googlemail.com; s=20161025;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=9+kTGzipxG+2AUMOBSHrjhkVXKsRlWSVlekuyPDJ2KQ=;
+ b=U5UrGcnGMLeF8EkEKnq4SXQA0bZn1K6H76br30DCk6nDl7shLs9apRuVn7paVhhr+J
+ gMmnCx0Xyy4SbGAld5Dxx7hKCe3zVde+4D7GGrJUNuk6ou71aa4b0Jg6ZSopSLHmCYgh
+ z3ijcao7IeziK6LYdDKe/yJZ59wU1ezjYiR/PZxH3iZ5M9ycOIaoBShnoDIrQDV7pp61
+ rd5dofOqfUPsA5L0octRXnxmNVHNyuVUTKmF7HlpEGu3XMsHHloitIl9d7b1cvbccjHH
+ AEK6BgTvDmyC2dFB+JvqthCztEkGsWsfUUbUsltQkgU7F6PzRxC7X2a/kK64COrwmRvd
+ QEkA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=9+kTGzipxG+2AUMOBSHrjhkVXKsRlWSVlekuyPDJ2KQ=;
+ b=nofCexmzfrvwFO4h2szC+WAJvevgS0+1fGo8Zc+N6BxZeTS7GAwhtLiVfUPAHIlfVI
+ bmfPo4N/AZgBP+1CqVrSLwdEElps4sWRvINP2aJzkCZwc9ib9XrlxXM69OAh8Fru1wmN
+ krd0y001nwrzBYx4uDfrTxFNNs9Dua4Macc8AFa21q5+SIsUXHBMW9zFy8DZFQxTX7wy
+ o5FVMHmyEpSMivQuBmeLc8xJGp4rqHjP6CiB4V2aKpsO+q1/sJWprq6MYoMcIX1uuFi+
+ WgWr50M2shrUEC9mqfg2tP69dZelTyK9z3I12z0dJl13LVvFabr2Iih0Kz1OlQjKS+hX
+ PAPA==
+X-Gm-Message-State: APjAAAX/LoDlUskihaVtYQ+Dl/AwCq17a6wFBzshwyiQCgKngMoX0wTP
+ +MD/GfPu8fQOVC/GkMDLjdytaLTAF08oQT4vgZs=
+X-Google-Smtp-Source: APXvYqzsf7bCKRilpxan541+ugL4dAfOo0X8vA6AEhA9CtpMo2K4raWrA9d3K0IGQqHU1WDe0EVbnk1ga80LFRHazUc=
+X-Received: by 2002:a17:906:f245:: with SMTP id
+ gy5mr23583417ejb.225.1579032653189; 
+ Tue, 14 Jan 2020 12:10:53 -0800 (PST)
 MIME-Version: 1.0
-X-Originating-IP: [10.28.8.22]
+References: <1578634957-54826-1-git-send-email-hanjie.lin@amlogic.com>
+ <1578634957-54826-3-git-send-email-hanjie.lin@amlogic.com>
+ <CAFBinCCZSBWdKQwmcvponuUu_aiTnDCyRiPqKDgqfNkJQoq06w@mail.gmail.com>
+ <52566105-cbee-01d6-9110-f9954eabe22f@amlogic.com>
+In-Reply-To: <52566105-cbee-01d6-9110-f9954eabe22f@amlogic.com>
+From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+Date: Tue, 14 Jan 2020 21:10:41 +0100
+Message-ID: <CAFBinCDtPoKQh64VKmqOe=U0BLPE_Ef+scmK3h1uV9hLhT6Q1g@mail.gmail.com>
+Subject: Re: [PATCH v5 2/6] dt-bindings: usb: dwc3: Add the Amlogic A1 Family
+ DWC3 Glue Bindings
+To: Hanjie Lin <hanjie.lin@amlogic.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200113_195102_110600_A34988B9 
-X-CRM114-Status: UNSURE (   5.97  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20200114_121054_587290_939BB143 
+X-CRM114-Status: GOOD (  17.00  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:541 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (martin.blumenstingl[at]googlemail.com)
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -57,45 +96,97 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: Qianggui Song <qianggui.song@amlogic.com>, devicetree@vger.kernel.org,
- linux-watchdog@vger.kernel.org, Jianxin Pan <jianxin.pan@amlogic.com>,
- Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
- linux-kernel@vger.kernel.org, Rob Herring <robh+dt@kernel.org>,
- Jian Hu <jian.hu@amlogic.com>, linux-arm-kernel@lists.infradead.org,
- linux-amlogic@lists.infradead.org, Xingyu Chen <xingyu.chen@amlogic.com>,
- Jerome Brunet <jbrunet@baylibre.com>
+Cc: Rob Herring <robh@kernel.org>, Victor Wan <victor.wan@amlogic.com>,
+ Jianxin Pan <jianxin.pan@amlogic.com>,
+ Neil Armstrong <narmstrong@baylibre.com>, Stephen Boyd <sboyd@kernel.org>,
+ Kevin Hilman <khilman@baylibre.com>,
+ Michael Turquette <mturquette@baylibre.com>, linux-usb@vger.kernel.org,
+ Yue Wang <yue.wang@amlogic.com>, Qiufang Dai <qiufang.dai@amlogic.com>,
+ devicetree@vger.kernel.org, Liang Yang <liang.yang@amlogic.com>,
+ Jian Hu <jian.hu@amlogic.com>, Xingyu Chen <xingyu.chen@amlogic.com>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ Carlo Caione <carlo@caione.org>, linux-amlogic@lists.infradead.org,
+ linux-arm-kernel@lists.infradead.org, Jerome Brunet <jbrunet@baylibre.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Enable secure watchdog controller for Meson-A1 SoC
+Hi Hanjie,
 
-Signed-off-by: Xingyu Chen <xingyu.chen@amlogic.com>
----
- arch/arm64/boot/dts/amlogic/meson-a1.dtsi | 6 ++++++
- 1 file changed, 6 insertions(+)
+On Mon, Jan 13, 2020 at 2:23 AM Hanjie Lin <hanjie.lin@amlogic.com> wrote:
+>
+>
+>
+> On 2020/1/12 4:50, Martin Blumenstingl wrote:
+> > Hi Hanjie,
+> >
+> > On Fri, Jan 10, 2020 at 6:43 AM Hanjie Lin <hanjie.lin@amlogic.com> wrote:
+> > [...]
+> >> @@ -37,6 +43,11 @@ properties:
+> >>
+> >>    clocks:
+> >>      minItems: 1
+> >> +    maxItems: 4
+> > the driver parses one clock for G12A/G12B/SM1 and three clocks for A1
+> > if there is a fourth clock: do we need to manage it in the driver?
+> > (note: dt-bindings always represent the hardware, so if there's a
+> > fourth clock which the driver doesn't need then it's perfectly valid
+> > to describe it here. a comment which clock this is helps in the
+> > code-review process)
+> >
+>
+> Hi Martin,
+>
+> Sorry for this confusing, I moved xtal_usb_phy clock from glue driver to phy,
+> but I missed this binding modification.
+> So actually A1 do only need these three clocks and no fourth clock exist, clock
+> and clock-names maxItems should be three here for A1.
+I see, thank you for clarifying this!
 
-diff --git a/arch/arm64/boot/dts/amlogic/meson-a1.dtsi b/arch/arm64/boot/dts/amlogic/meson-a1.dtsi
-index 4dec518..d89a44b 100644
---- a/arch/arm64/boot/dts/amlogic/meson-a1.dtsi
-+++ b/arch/arm64/boot/dts/amlogic/meson-a1.dtsi
-@@ -60,6 +60,12 @@
- 
- 	sm: secure-monitor {
- 		compatible = "amlogic,meson-gxbb-sm";
-+
-+		watchdog {
-+			compatible = "amlogic,meson-sec-wdt";
-+			timeout-sec = <60>;
-+			status = "okay";
-+		};
- 	};
- 
- 	soc {
--- 
-2.7.4
+[...]
+> Do you mean something like this:
+>
+> +allOf:
+> +  - if:
+> +      properties:
+> +        compatible:
+> +          enum:
+> +            - amlogic,meson-g12a-usb-ctrl
+> +
+> +    then:
+> +      properties:
+> +        clocks:
+> +         minItems: 1
+> +
+> +  - if:
+> +      properties:
+> +        compatible:
+> +          enum:
+> +            - amlogic,meson-a1-usb-ctrl
+> +
+> +    then:
+> +      properties:
+> +        clocks:
+> +          items:
+> +            minItems: 3
+> +       clock-names:
+> +          items:
+> +            - const: usb_ctrl
+> +            - const: usb_bus
+> +            - const: xtal_usb_ctrl
+> +      required:
+> +        - clock-names
+this looks good to me (but keep in mind that I'm no expert on these
+yaml schemas)
+I wonder if we are allowed to shorten this by having one clocks
+property with minItems: 1 and maxItems: 3 (like you have in the
+original patch) and then only have a
+amlogic,meson-a1-usb-ctrl-specific "clock-names" property (and make
+that mandatory for A1 SoCs)
 
+
+Martin
 
 _______________________________________________
 linux-amlogic mailing list
