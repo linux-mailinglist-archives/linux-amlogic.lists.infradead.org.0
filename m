@@ -2,26 +2,26 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C031F13A011
-	for <lists+linux-amlogic@lfdr.de>; Tue, 14 Jan 2020 04:45:52 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 221ED13A015
+	for <lists+linux-amlogic@lfdr.de>; Tue, 14 Jan 2020 04:46:10 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=/xNC2/OWykG5jxT0lHVaHjGisR5XQKEHcMJcEUzo8vA=; b=iBrr7p8Nwms50W
-	4dGUO68ks4OSeIF/SEfXVXPcqY3ItEsFSiOJhEwVUg0YAHA2ZG+yG7boI8wvA82xMSU13ZHl6fqAZ
-	hGwNgZRzgu+UN1MlKHtST64ueYbeZeBCEdt45/1kLMx8su+PkIShjsAnHqJ+R5lX9xKR674VqXVWD
-	oxTxvq2q/cbTyE2u/LhrWsmixe1bJyWVg0+Giy1kUTMctDljScULGex1rq7jNIJaWqufg9jiyL4hg
-	fJA6BM+XLoeCWbI2lkAHxCAwBek2u7QPBsgbcgz8FhzIcWQEDXCYzJ9AvZrHeuVIt5v2Wx0z6iEv8
-	jBhfud6JgTs1sG4V7PfA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=7n8cUz+NPOmtTZ+VAEZWqZmD2rh2BNG9L7I+R9bSKlw=; b=tUv54u6uWuZP9d
+	3qDOLBf3Au8urFSABhXaEmef53Wxvqymbg7jOJuqmacmCFxufw2Sm8rxe+4lUAsePxGtjtM9v8d11
+	/O47TUDgoCacdfD8SFaH3OsDxtaV9U8cWfrlUQFjUfKSLRNLg7QiF0C81xgkLjflxbuL/TCIxqDop
+	B3NxACXD2PE05thlSdf7jq2ASBHpm+9djzEbOKMmDIn9myG7fPviTDnHsDDSbt6Ia8TSQc7geWVbF
+	w//FwDurxLkC+sKCK4ayBv0TLGnlVWyJdl4x/Cvr/6h4Lrt/ueE/XuMxnllXz9TwEFXdIFmou1pPU
+	c0q6YKNTnCEn7LluE5kA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1irD9J-0000b4-Dg; Tue, 14 Jan 2020 03:45:49 +0000
+	id 1irD9b-0000pn-Oh; Tue, 14 Jan 2020 03:46:07 +0000
 Received: from mail-sz.amlogic.com ([211.162.65.117])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1irD9G-0000ZK-6E; Tue, 14 Jan 2020 03:45:47 +0000
+ id 1irD9I-0000ZK-6w; Tue, 14 Jan 2020 03:45:49 +0000
 Received: from droid12-sz.software.amlogic (10.28.8.22) by mail-sz.amlogic.com
  (10.28.11.5) with Microsoft SMTP Server id 15.1.1591.10;
  Tue, 14 Jan 2020 11:45:58 +0800
@@ -29,15 +29,19 @@ From: Xingyu Chen <xingyu.chen@amlogic.com>
 To: Wim Van Sebroeck <wim@linux-watchdog.org>, Guenter Roeck
  <linux@roeck-us.net>, Kevin Hilman <khilman@baylibre.com>, Neil Armstrong
  <narmstrong@baylibre.com>
-Subject: [PATCH v6 0/5] add meson secure watchdog driver
-Date: Tue, 14 Jan 2020 11:45:22 +0800
-Message-ID: <1578973527-4759-1-git-send-email-xingyu.chen@amlogic.com>
+Subject: [PATCH v6 1/5] firmware: meson_sm: add new SMC ID support for
+ accessing secure watchdog
+Date: Tue, 14 Jan 2020 11:45:23 +0800
+Message-ID: <1578973527-4759-2-git-send-email-xingyu.chen@amlogic.com>
 X-Mailer: git-send-email 2.7.4
+In-Reply-To: <1578973527-4759-1-git-send-email-xingyu.chen@amlogic.com>
+References: <1578973527-4759-1-git-send-email-xingyu.chen@amlogic.com>
 MIME-Version: 1.0
 X-Originating-IP: [10.28.8.22]
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200113_194546_408827_40C95108 
-X-CRM114-Status: GOOD (  11.73  )
+X-CRM114-CacheID: sfid-20200113_194548_252331_BDCB99EE 
+X-CRM114-Status: UNSURE (   8.09  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -56,8 +60,8 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: Qianggui Song <qianggui.song@amlogic.com>, devicetree@vger.kernel.org,
- linux-watchdog@vger.kernel.org, Jianxin Pan <jianxin.pan@amlogic.com>,
+Cc: Qianggui Song <qianggui.song@amlogic.com>, linux-watchdog@vger.kernel.org,
+ Jianxin Pan <jianxin.pan@amlogic.com>,
  Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
  linux-kernel@vger.kernel.org, Rob Herring <robh+dt@kernel.org>,
  Jian Hu <jian.hu@amlogic.com>, linux-arm-kernel@lists.infradead.org,
@@ -68,67 +72,39 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-The watchdog controller on the Meson-A/C series SoCs is moved to secure world,
-We have to call SMC instruction to trap the ATF for watchdog operation. These
-operations are different from previous SoCs, so we introduce a new watchdog
-driver to support this kind of SoCs.
+The new SMC ID is used to access secure registers by meson secure
+watchdog driver.
 
-Changes since v5 at [4]:
-- take the wdt node as child node of secure-monitor
-- update dt-binding description
-- invoke of_platform_default_populate() instantiate wdt device according to Rob's suggestion at [5]
-- find the secure-monitor node through the wdt parent node instead of of_find_compatible_node()
-- add Guenter's Reviewed-by
+Signed-off-by: Xingyu Chen <xingyu.chen@amlogic.com>
+---
+ drivers/firmware/meson/meson_sm.c       | 1 +
+ include/linux/firmware/meson/meson_sm.h | 1 +
+ 2 files changed, 2 insertions(+)
 
-Changes since v4 at [3]:
-- add watchdog node in dts, and introduce a new optional property "timeout-sec"
-- add dt-binding for meson secure watchdog
-- instantiate wdt device through dts node instead of platform_device_register_simple()
-
-Changes since v3 at [2]:
-- add SM_A1_ prefix for WATCHDOG_OPS
-- remove phandle to secure-monitor node
-- remove watchdog node from dts, and register wdt device by platform_device_register_simple()
-- remove dt-binding for meson secure watchdog
-- use the msec as unit of timeout parameter which is passed to fw side
-
-Changes since v2 at [1]:
-- remove useless dependency in Kconfig
-- return zero when getting left time value fails
-
-Changes since v1 at [0]:
-- add a new dependency in Kconfig
-- simplify/add the return operation
-- remove useless ping operation when setting the timeout
-- fix some return values
-- fix the license statement
-
-[0]:https://lore.kernel.org/linux-amlogic/1570874721-36077-1-git-send-email-xingyu.chen@amlogic.com
-[1]:https://lore.kernel.org/linux-amlogic/1571387622-35132-1-git-send-email-xingyu.chen@amlogic.com
-[2]:https://lore.kernel.org/linux-amlogic/1571983984-11771-1-git-send-email-xingyu.chen@amlogic.com
-[3]:https://lore.kernel.org/linux-amlogic/1574685218-31164-1-git-send-email-xingyu.chen@amlogic.com
-[4]:https://lore.kernel.org/linux-amlogic/1576153187-28378-1-git-send-email-xingyu.chen@amlogic.com
-[5]:https://patchwork.kernel.org/patch/11288017
-
-Xingyu Chen (5):
-  firmware: meson_sm: add new SMC ID support for accessing secure
-    watchdog
-  firmware: meson_sm: populate platform device based on the child node
-  dt-bindings: watchdog: add new binding for meson secure watchdog
-  watchdog: add meson secure watchdog driver
-  arm64: dts: a1: add secure watchdog controller
-
- .../bindings/watchdog/amlogic,meson-sec-wdt.yaml   |  40 +++++
- arch/arm64/boot/dts/amlogic/meson-a1.dtsi          |   6 +
- drivers/firmware/meson/meson_sm.c                  |   3 +
- drivers/watchdog/Kconfig                           |  16 ++
- drivers/watchdog/Makefile                          |   1 +
- drivers/watchdog/meson_sec_wdt.c                   | 185 +++++++++++++++++++++
- include/linux/firmware/meson/meson_sm.h            |   1 +
- 7 files changed, 252 insertions(+)
- create mode 100644 Documentation/devicetree/bindings/watchdog/amlogic,meson-sec-wdt.yaml
- create mode 100644 drivers/watchdog/meson_sec_wdt.c
-
+diff --git a/drivers/firmware/meson/meson_sm.c b/drivers/firmware/meson/meson_sm.c
+index 1d5b4d7..8cdd405 100644
+--- a/drivers/firmware/meson/meson_sm.c
++++ b/drivers/firmware/meson/meson_sm.c
+@@ -44,6 +44,7 @@ static const struct meson_sm_chip gxbb_chip = {
+ 		CMD(SM_EFUSE_WRITE,	0x82000031),
+ 		CMD(SM_EFUSE_USER_MAX,	0x82000033),
+ 		CMD(SM_GET_CHIP_ID,	0x82000044),
++		CMD(SM_A1_WATCHDOG_OPS,	0x82000086),
+ 		{ /* sentinel */ },
+ 	},
+ };
+diff --git a/include/linux/firmware/meson/meson_sm.h b/include/linux/firmware/meson/meson_sm.h
+index 6669e2a..9ef1524 100644
+--- a/include/linux/firmware/meson/meson_sm.h
++++ b/include/linux/firmware/meson/meson_sm.h
+@@ -12,6 +12,7 @@ enum {
+ 	SM_EFUSE_WRITE,
+ 	SM_EFUSE_USER_MAX,
+ 	SM_GET_CHIP_ID,
++	SM_A1_WATCHDOG_OPS,
+ };
+ 
+ struct meson_sm_firmware;
 -- 
 2.7.4
 
