@@ -2,62 +2,86 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1F6A313D8AC
-	for <lists+linux-amlogic@lfdr.de>; Thu, 16 Jan 2020 12:11:16 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2F60613DBE1
+	for <lists+linux-amlogic@lfdr.de>; Thu, 16 Jan 2020 14:31:05 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=yPrj17/mIhu7LluNen8VBDPvwv0piYmHgbAN8fqnoS4=; b=Vf77I1OJdOFHbZ
-	LLhttRa30Dk0f/NYwWVLWk4QzPE9OobFWsP124SFKAnBjQvhTHJF5hQcjCUpJn1ps1k0D7Tqjulhv
-	hq8R3Cldy1D57qQVIjgDE085l0+PjeyO53rZJDkAKXZn/iwV/Ya4c1Fl0v50EhsdnnVLGYMtcHA61
-	V9qH4u2DnCgkUp62yGONGY97Xw5r9kkg9aPWzmwsqqWSfrZhar6THJTdACEXiId9ILY08to8dGtXE
-	5SQkCe4Gfand+PzEcvThLSgD0wM89cwoXkT2Rtp/s1lsHQIuR4XwktZvnr6Ut/o8D5KfDbIkLzloU
-	nsXkrhMD4iE6EtzgglYw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=tAKx87bQIxsVLihJt3O60uQ1/fVkQccblKn3zKaDvI4=; b=RpVkKDelN3KzyB
+	aCHCjMbw7UfOA3aa4NAcuHlIz0ga8l6lqjnaPjGA9hoeq6ozTT7Ml8RDqR+clmg7kJXSR2h61aWMC
+	UMK/zF7g0cl5St7nq4fWuK8Hx6kkna44arAeHa0Qv6uRjEqHpxjGltjO/IcZ4SWqf9864C4V/lcZS
+	n7CIuXHkGvuc2kdJuxFz25AmSKOVFxTZWOb2BOj8/zorY38myyucca7x+EhqX9QLq4bEDbs7BxplX
+	zXhB0z+ycjOoDgHQw5sM8vRvklEOq5J35rucQO4fpuPaWBbwTjO56R6x8b3tAkbsMBEVREBNMJ8L0
+	tE2nhuf3hkbvqp166jJg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1is33S-0006jd-Rn; Thu, 16 Jan 2020 11:11:14 +0000
-Received: from relay4-d.mail.gandi.net ([217.70.183.196])
+	id 1is5Ej-00046s-Q8; Thu, 16 Jan 2020 13:31:01 +0000
+Received: from mail-wr1-x443.google.com ([2a00:1450:4864:20::443])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1is33I-0006Qd-2I
- for linux-amlogic@lists.infradead.org; Thu, 16 Jan 2020 11:11:09 +0000
-X-Originating-IP: 88.190.179.123
-Received: from localhost (unknown [88.190.179.123])
- (Authenticated sender: repk@triplefau.lt)
- by relay4-d.mail.gandi.net (Postfix) with ESMTPSA id 6F97CE0004;
- Thu, 16 Jan 2020 11:11:00 +0000 (UTC)
-From: Remi Pommarel <repk@triplefau.lt>
-To: Kishon Vijay Abraham I <kishon@ti.com>, Yue Wang <yue.wang@Amlogic.com>,
- Kevin Hilman <khilman@baylibre.com>,
- Lorenzo Pieralisi <lorenzo.pieralisi@arm.com>,
- Bjorn Helgaas <bhelgaas@google.com>,
- Neil Armstrong <narmstrong@baylibre.com>,
- Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
- Rob Herring <robh+dt@kernel.org>
-Subject: [PATCH v5 7/7] PCI: amlogic: Use AXG PCIE
-Date: Thu, 16 Jan 2020 12:18:50 +0100
-Message-Id: <20200116111850.23690-8-repk@triplefau.lt>
-X-Mailer: git-send-email 2.24.1
-In-Reply-To: <20200116111850.23690-1-repk@triplefau.lt>
-References: <20200116111850.23690-1-repk@triplefau.lt>
+ id 1is5ED-0003di-Mp
+ for linux-amlogic@lists.infradead.org; Thu, 16 Jan 2020 13:30:34 +0000
+Received: by mail-wr1-x443.google.com with SMTP id d16so19159829wre.10
+ for <linux-amlogic@lists.infradead.org>; Thu, 16 Jan 2020 05:30:29 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=baylibre-com.20150623.gappssmtp.com; s=20150623;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=non2lYOqubVmH41Rs5OllDj6ERHM4oHicFYYRo86jVQ=;
+ b=fhP1OVhtjYbljim4QKpMEKBSHHFDH/f76TE1q8leoYTiU5eEYRBbhW+NiTYFhDkshG
+ 93dFwY+QR51g4/NFVpeTzX9WCQnjnD5cw5DozJcYgLVFzc7o+BB9V8p6rE63xeDu6crF
+ e6hu5rEqceVJlwfzZYAoEJNYomA2mg3l+U5Z8hpbwrPw3Ze7oHqf4flOEeMGSeHAUTUU
+ d54Eqvlof/xoHbGL2MCytFZS5e+win5sPJh/0K2Ol2K+VJ5HSbH0bZeQgebW83y1Iwc8
+ PiOfiU54cr0fydmKb/4cvXkW9qRPJlUa8GmBEVaWrQgNTl5LMMZRNP8Dou/9Irbuac47
+ bJ7A==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=non2lYOqubVmH41Rs5OllDj6ERHM4oHicFYYRo86jVQ=;
+ b=Tus7KNQ0cUQbMn3VgV5neP0I2LkEgVy/qJTClfsXK7aEgeFeQ6XbAo8MfzZwK8YMIb
+ R5EXEn/+Ik4YZ45LJlAzoPx0aidH4O95N6YydR4i4R7aCAsSVLwAmzX2oHGxJ4yxNCME
+ 5e4VBtndVEijXxdiHa3x3F3mtaMUMnxjd9fHawvEp/h6707dLXSlraZWzWdH+EtltJZ5
+ 02C4nrc1RXoh7xEOaOdkTz71iK4gp0H/Kbga1U1n6drHROJp96DzChXag5VsN88FgaTE
+ ljp/3Fr2sl15rbEove3XeBU5TD6fcX02pKvqy8cd80uVb1U6gVK7F58+N61U50dT4LrN
+ Fc4w==
+X-Gm-Message-State: APjAAAUVtt7hEVqhDwf2A9/Az+naxFI4WzASDSL119IieK1nYfn2kkfq
+ 6EgQaWKRat/eu+WrEu5PVHyFOanuFFQxlg==
+X-Google-Smtp-Source: APXvYqwrwviZpV7f31Yp4Fa6uN+1UzOYZKulJOfiEk+RMjamTn1dcvKVeFZNgGllR8sR6QPdie8XcA==
+X-Received: by 2002:adf:e683:: with SMTP id r3mr3366782wrm.38.1579181427459;
+ Thu, 16 Jan 2020 05:30:27 -0800 (PST)
+Received: from bender.baylibre.local
+ (laubervilliers-658-1-213-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
+ by smtp.gmail.com with ESMTPSA id e16sm29256898wrs.73.2020.01.16.05.30.26
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Thu, 16 Jan 2020 05:30:26 -0800 (PST)
+From: Neil Armstrong <narmstrong@baylibre.com>
+To: mchehab@kernel.org,
+	hans.verkuil@cisco.com
+Subject: [PATCH v4 0/4] media: meson: vdec: Add compliant H264 support
+Date: Thu, 16 Jan 2020 14:30:21 +0100
+Message-Id: <20200116133025.1903-1-narmstrong@baylibre.com>
+X-Mailer: git-send-email 2.22.0
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200116_031104_392122_8BF733F1 
-X-CRM114-Status: GOOD (  13.26  )
-X-Spam-Score: -0.7 (/)
+X-CRM114-CacheID: sfid-20200116_053029_868474_5638F822 
+X-CRM114-Status: UNSURE (   7.99  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.7 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
- low trust [217.70.183.196 listed in list.dnswl.org]
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [217.70.183.196 listed in wl.mailspike.net]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:443 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -69,257 +93,198 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: linux-amlogic@lists.infradead.org, devicetree@vger.kernel.org,
- Remi Pommarel <repk@triplefau.lt>, linux-kernel@vger.kernel.org,
- Jerome Brunet <jbrunet@baylibre.com>
+Cc: linux-amlogic@lists.infradead.org, linux-media@vger.kernel.org,
+ linux-kernel@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
+ Neil Armstrong <narmstrong@baylibre.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Now that PCIE PHY has been introduced for AXG, the whole has_shared_phy
-logic can be mutualized between AXG and G12A platforms.
+Hello,
 
-This new PHY makes use of the optional shared MIPI/PCIE analog PHY
-found on AXG platforms, which need to be used in order to have reliable
-PCIE communications.
+This patch series aims to bring H.264 support as well as compliance update
+to the amlogic stateful video decoder driver.
 
-Signed-off-by: Remi Pommarel <repk@triplefau.lt>
----
- drivers/pci/controller/dwc/pci-meson.c | 116 +++++--------------------
- 1 file changed, 22 insertions(+), 94 deletions(-)
+The issue in the V1 patchset at [1] is solved by patch #1 following comments
+and requirements from hans. It moves the full draining & stopped state tracking
+and handling from vicodec to core v4l2-mem2mem.
 
-diff --git a/drivers/pci/controller/dwc/pci-meson.c b/drivers/pci/controller/dwc/pci-meson.c
-index 3772b02a5c55..3715dceca1bf 100644
---- a/drivers/pci/controller/dwc/pci-meson.c
-+++ b/drivers/pci/controller/dwc/pci-meson.c
-@@ -66,7 +66,6 @@
- #define PORT_CLK_RATE			100000000UL
- #define MAX_PAYLOAD_SIZE		256
- #define MAX_READ_REQ_SIZE		256
--#define MESON_PCIE_PHY_POWERUP		0x1c
- #define PCIE_RESET_DELAY		500
- #define PCIE_SHARED_RESET		1
- #define PCIE_NORMAL_RESET		0
-@@ -81,26 +80,19 @@ enum pcie_data_rate {
- struct meson_pcie_mem_res {
- 	void __iomem *elbi_base;
- 	void __iomem *cfg_base;
--	void __iomem *phy_base;
- };
- 
- struct meson_pcie_clk_res {
- 	struct clk *clk;
--	struct clk *mipi_gate;
- 	struct clk *port_clk;
- 	struct clk *general_clk;
- };
- 
- struct meson_pcie_rc_reset {
--	struct reset_control *phy;
- 	struct reset_control *port;
- 	struct reset_control *apb;
- };
- 
--struct meson_pcie_param {
--	bool has_shared_phy;
--};
--
- struct meson_pcie {
- 	struct dw_pcie pci;
- 	struct meson_pcie_mem_res mem_res;
-@@ -108,7 +100,6 @@ struct meson_pcie {
- 	struct meson_pcie_rc_reset mrst;
- 	struct gpio_desc *reset_gpio;
- 	struct phy *phy;
--	const struct meson_pcie_param *param;
- };
- 
- static struct reset_control *meson_pcie_get_reset(struct meson_pcie *mp,
-@@ -130,13 +121,6 @@ static int meson_pcie_get_resets(struct meson_pcie *mp)
- {
- 	struct meson_pcie_rc_reset *mrst = &mp->mrst;
- 
--	if (!mp->param->has_shared_phy) {
--		mrst->phy = meson_pcie_get_reset(mp, "phy", PCIE_SHARED_RESET);
--		if (IS_ERR(mrst->phy))
--			return PTR_ERR(mrst->phy);
--		reset_control_deassert(mrst->phy);
--	}
--
- 	mrst->port = meson_pcie_get_reset(mp, "port", PCIE_NORMAL_RESET);
- 	if (IS_ERR(mrst->port))
- 		return PTR_ERR(mrst->port);
-@@ -162,22 +146,6 @@ static void __iomem *meson_pcie_get_mem(struct platform_device *pdev,
- 	return devm_ioremap_resource(dev, res);
- }
- 
--static void __iomem *meson_pcie_get_mem_shared(struct platform_device *pdev,
--					       struct meson_pcie *mp,
--					       const char *id)
--{
--	struct device *dev = mp->pci.dev;
--	struct resource *res;
--
--	res = platform_get_resource_byname(pdev, IORESOURCE_MEM, id);
--	if (!res) {
--		dev_err(dev, "No REG resource %s\n", id);
--		return ERR_PTR(-ENXIO);
--	}
--
--	return devm_ioremap(dev, res->start, resource_size(res));
--}
--
- static int meson_pcie_get_mems(struct platform_device *pdev,
- 			       struct meson_pcie *mp)
- {
-@@ -189,14 +157,6 @@ static int meson_pcie_get_mems(struct platform_device *pdev,
- 	if (IS_ERR(mp->mem_res.cfg_base))
- 		return PTR_ERR(mp->mem_res.cfg_base);
- 
--	/* Meson AXG SoC has two PCI controllers use same phy register */
--	if (!mp->param->has_shared_phy) {
--		mp->mem_res.phy_base =
--			meson_pcie_get_mem_shared(pdev, mp, "phy");
--		if (IS_ERR(mp->mem_res.phy_base))
--			return PTR_ERR(mp->mem_res.phy_base);
--	}
--
- 	return 0;
- }
- 
-@@ -204,37 +164,33 @@ static int meson_pcie_power_on(struct meson_pcie *mp)
- {
- 	int ret = 0;
- 
--	if (mp->param->has_shared_phy) {
--		ret = phy_init(mp->phy);
--		if (ret)
--			return ret;
-+	ret = phy_init(mp->phy);
-+	if (ret)
-+		return ret;
- 
--		ret = phy_power_on(mp->phy);
--		if (ret) {
--			phy_exit(mp->phy);
--			return ret;
--		}
--	} else
--		writel(MESON_PCIE_PHY_POWERUP, mp->mem_res.phy_base);
-+	ret = phy_power_on(mp->phy);
-+	if (ret) {
-+		phy_exit(mp->phy);
-+		return ret;
-+	}
- 
- 	return 0;
- }
- 
-+static void meson_pcie_power_off(struct meson_pcie *mp)
-+{
-+	phy_power_off(mp->phy);
-+	phy_exit(mp->phy);
-+}
-+
- static int meson_pcie_reset(struct meson_pcie *mp)
- {
- 	struct meson_pcie_rc_reset *mrst = &mp->mrst;
- 	int ret = 0;
- 
--	if (mp->param->has_shared_phy) {
--		ret = phy_reset(mp->phy);
--		if (ret)
--			return ret;
--	} else {
--		reset_control_assert(mrst->phy);
--		udelay(PCIE_RESET_DELAY);
--		reset_control_deassert(mrst->phy);
--		udelay(PCIE_RESET_DELAY);
--	}
-+	ret = phy_reset(mp->phy);
-+	if (ret)
-+		return ret;
- 
- 	reset_control_assert(mrst->port);
- 	reset_control_assert(mrst->apb);
-@@ -286,12 +242,6 @@ static int meson_pcie_probe_clocks(struct meson_pcie *mp)
- 	if (IS_ERR(res->port_clk))
- 		return PTR_ERR(res->port_clk);
- 
--	if (!mp->param->has_shared_phy) {
--		res->mipi_gate = meson_pcie_probe_clock(dev, "mipi", 0);
--		if (IS_ERR(res->mipi_gate))
--			return PTR_ERR(res->mipi_gate);
--	}
--
- 	res->general_clk = meson_pcie_probe_clock(dev, "general", 0);
- 	if (IS_ERR(res->general_clk))
- 		return PTR_ERR(res->general_clk);
-@@ -562,7 +512,6 @@ static const struct dw_pcie_ops dw_pcie_ops = {
- 
- static int meson_pcie_probe(struct platform_device *pdev)
- {
--	const struct meson_pcie_param *match_data;
- 	struct device *dev = &pdev->dev;
- 	struct dw_pcie *pci;
- 	struct meson_pcie *mp;
-@@ -576,17 +525,10 @@ static int meson_pcie_probe(struct platform_device *pdev)
- 	pci->dev = dev;
- 	pci->ops = &dw_pcie_ops;
- 
--	match_data = of_device_get_match_data(dev);
--	if (!match_data) {
--		dev_err(dev, "failed to get match data\n");
--		return -ENODEV;
--	}
--	mp->param = match_data;
--
--	if (mp->param->has_shared_phy) {
--		mp->phy = devm_phy_get(dev, "pcie");
--		if (IS_ERR(mp->phy))
--			return PTR_ERR(mp->phy);
-+	mp->phy = devm_phy_get(dev, "pcie");
-+	if (IS_ERR(mp->phy)) {
-+		dev_err(dev, "get phy failed, %ld\n", PTR_ERR(mp->phy));
-+		return PTR_ERR(mp->phy);
- 	}
- 
- 	mp->reset_gpio = devm_gpiod_get(dev, "reset", GPIOD_OUT_LOW);
-@@ -636,30 +578,16 @@ static int meson_pcie_probe(struct platform_device *pdev)
- 	return 0;
- 
- err_phy:
--	if (mp->param->has_shared_phy) {
--		phy_power_off(mp->phy);
--		phy_exit(mp->phy);
--	}
--
-+	meson_pcie_power_off(mp);
- 	return ret;
- }
- 
--static struct meson_pcie_param meson_pcie_axg_param = {
--	.has_shared_phy = false,
--};
--
--static struct meson_pcie_param meson_pcie_g12a_param = {
--	.has_shared_phy = true,
--};
--
- static const struct of_device_id meson_pcie_of_match[] = {
- 	{
- 		.compatible = "amlogic,axg-pcie",
--		.data = &meson_pcie_axg_param,
- 	},
- 	{
- 		.compatible = "amlogic,g12a-pcie",
--		.data = &meson_pcie_g12a_param,
- 	},
- 	{},
- };
+The vicodec changes still passes the v4l2-utils "media-test" tests, log at [5]:
+[...]
+vicodec media controller compliance tests
+
+Thu Jan 16 13:00:56 UTC 2020
+v4l2-compliance SHA: 7ead0e1856b89f2e19369af452bb03fd0cd16793, 64 bits
+[...]
+Summary:
+
+Total for vicodec device /dev/media3: 7, Succeeded: 7, Failed: 0, Warnings: 0
+Total for vicodec device /dev/video13: 51, Succeeded: 51, Failed: 0, Warnings: 0
+Total for vicodec device /dev/video14: 51, Succeeded: 51, Failed: 0, Warnings: 0
+Total for vicodec device /dev/video14: 51, Succeeded: 51, Failed: 0, Warnings: 0
+Total for vicodec device /dev/video14: 51, Succeeded: 51, Failed: 0, Warnings: 0
+Total for vicodec device /dev/video14: 51, Succeeded: 51, Failed: 0, Warnings: 0
+Total for vicodec device /dev/video14: 51, Succeeded: 51, Failed: 0, Warnings: 0
+Total for vicodec device /dev/video14: 51, Succeeded: 51, Failed: 0, Warnings: 0
+
+Final Summary: 364, Succeeded: 364, Failed: 0, Warnings: 0
+Thu Jan 16 13:02:59 UTC 2020
+
+With this, it also passes vdec v4l2-compliance with H264 streaming on Amlogic G12A
+and Amlogic SM1 SoCs successfully.
+
+The compliance log is:
+# v4l2-compliance --stream-from-hdr test-25fps.h264.hdr -s
+v4l2-compliance SHA: 7ead0e1856b89f2e19369af452bb03fd0cd16793, 64 bits
+
+Compliance test for meson-vdec device /dev/video0:
+
+Driver Info:
+	Driver name      : meson-vdec
+	Card type        : Amlogic Video Decoder
+	Bus info         : platform:meson-vdec
+	Driver version   : 5.5.0
+	Capabilities     : 0x84204000
+		Video Memory-to-Memory Multiplanar
+		Streaming
+		Extended Pix Format
+		Device Capabilities
+	Device Caps      : 0x04204000
+		Video Memory-to-Memory Multiplanar
+		Streaming
+		Extended Pix Format
+	Detected Stateful Decoder
+
+Required ioctls:
+	test VIDIOC_QUERYCAP: OK
+
+Allow for multiple opens:
+	test second /dev/video19 open: OK
+	test VIDIOC_QUERYCAP: OK
+	test VIDIOC_G/S_PRIORITY: OK
+	test for unlimited opens: OK
+
+Debug ioctls:
+	test VIDIOC_DBG_G/S_REGISTER: OK (Not Supported)
+	test VIDIOC_LOG_STATUS: OK (Not Supported)
+
+Input ioctls:
+	test VIDIOC_G/S_TUNER/ENUM_FREQ_BANDS: OK (Not Supported)
+	test VIDIOC_G/S_FREQUENCY: OK (Not Supported)
+	test VIDIOC_S_HW_FREQ_SEEK: OK (Not Supported)
+	test VIDIOC_ENUMAUDIO: OK (Not Supported)
+	test VIDIOC_G/S/ENUMINPUT: OK (Not Supported)
+	test VIDIOC_G/S_AUDIO: OK (Not Supported)
+	Inputs: 0 Audio Inputs: 0 Tuners: 0
+
+Output ioctls:
+	test VIDIOC_G/S_MODULATOR: OK (Not Supported)
+	test VIDIOC_G/S_FREQUENCY: OK (Not Supported)
+	test VIDIOC_ENUMAUDOUT: OK (Not Supported)
+	test VIDIOC_G/S/ENUMOUTPUT: OK (Not Supported)
+	test VIDIOC_G/S_AUDOUT: OK (Not Supported)
+	Outputs: 0 Audio Outputs: 0 Modulators: 0
+
+Input/Output configuration ioctls:
+	test VIDIOC_ENUM/G/S/QUERY_STD: OK (Not Supported)
+	test VIDIOC_ENUM/G/S/QUERY_DV_TIMINGS: OK (Not Supported)
+	test VIDIOC_DV_TIMINGS_CAP: OK (Not Supported)
+	test VIDIOC_G/S_EDID: OK (Not Supported)
+
+Control ioctls:
+	test VIDIOC_QUERY_EXT_CTRL/QUERYMENU: OK
+	test VIDIOC_QUERYCTRL: OK
+	test VIDIOC_G/S_CTRL: OK
+	test VIDIOC_G/S/TRY_EXT_CTRLS: OK
+	test VIDIOC_(UN)SUBSCRIBE_EVENT/DQEVENT: OK
+	test VIDIOC_G/S_JPEGCOMP: OK (Not Supported)
+	Standard Controls: 2 Private Controls: 0
+
+Format ioctls:
+	test VIDIOC_ENUM_FMT/FRAMESIZES/FRAMEINTERVALS: OK
+	test VIDIOC_G/S_PARM: OK (Not Supported)
+	test VIDIOC_G_FBUF: OK (Not Supported)
+	test VIDIOC_G_FMT: OK
+	test VIDIOC_TRY_FMT: OK
+	test VIDIOC_S_FMT: OK
+	test VIDIOC_G_SLICED_VBI_CAP: OK (Not Supported)
+	test Cropping: OK (Not Supported)
+	test Composing: OK (Not Supported)
+	test Scaling: OK (Not Supported)
+
+Codec ioctls:
+	test VIDIOC_(TRY_)ENCODER_CMD: OK (Not Supported)
+	test VIDIOC_G_ENC_INDEX: OK (Not Supported)
+	test VIDIOC_(TRY_)DECODER_CMD: OK
+
+Buffer ioctls:
+	test VIDIOC_REQBUFS/CREATE_BUFS/QUERYBUF: OK
+	test VIDIOC_EXPBUF: OK
+	test Requests: OK (Not Supported)
+
+Test input 0:
+
+Streaming ioctls:
+	test read/write: OK (Not Supported)
+	test blocking wait: OK
+	Video Capture Multiplanar: Captured 60 buffers    
+	test MMAP (select): OK
+	Video Capture Multiplanar: Captured 60 buffers    
+	test MMAP (epoll): OK
+	test USERPTR (select): OK (Not Supported)
+	test DMABUF: Cannot test, specify --expbuf-device
+
+Total for meson-vdec device /dev/video0: 49, Succeeded: 49, Failed: 0, Warnings: 0
+
+
+Changes since v3 at [3]:
+- Fixed vicodec compliance
+- Fixed vdec compliance with v4l2 state management
+- fixed doc errors for v4l2-mem2mem.h
+
+Changes since v2 at [2]:
+- Move full draining & stopped state tracking into core v4l2-mem2mem
+- Adapt vicodec to use the core v4l2-mem2mem draining & stopped state tracking
+
+Changes since v1 at [1]:
+- fixed output_size is never used reported by hans
+- rebased on G12A and SM1 patches
+- added handling of qbuf after STREAMON and STOP before enought buffer queued
+
+[1] https://lore.kernel.org/linux-media/20191007145909.29979-1-mjourdan@baylibre.com
+[2] https://lore.kernel.org/linux-media/20191126093733.32404-1-narmstrong@baylibre.com
+[3] https://lore.kernel.org/linux-media/20191209122028.13714-1-narmstrong@baylibre.com
+[4] https://people.freedesktop.org/~narmstrong/vicodec-compliance-7ead0e1856b89f2e19369af452bb03fd0cd16793-20200116.log
+
+Maxime Jourdan (2):
+  media: meson: vdec: bring up to compliance
+  media: meson: vdec: add H.264 decoding support
+
+Neil Armstrong (2):
+  media: v4l2-mem2mem: handle draining, stopped and next-buf-is-last
+    states
+  media: vicodec: use v4l2-mem2mem draining, stopped and
+    next-buf-is-last states handling
+
+ drivers/media/platform/vicodec/vicodec-core.c | 162 ++----
+ drivers/media/v4l2-core/v4l2-mem2mem.c        | 172 ++++++-
+ drivers/staging/media/meson/vdec/Makefile     |   2 +-
+ drivers/staging/media/meson/vdec/codec_h264.c | 482 ++++++++++++++++++
+ drivers/staging/media/meson/vdec/codec_h264.h |  14 +
+ drivers/staging/media/meson/vdec/esparser.c   |  58 +--
+ drivers/staging/media/meson/vdec/vdec.c       |  89 ++--
+ drivers/staging/media/meson/vdec/vdec.h       |  14 +-
+ .../staging/media/meson/vdec/vdec_helpers.c   |  85 ++-
+ .../staging/media/meson/vdec/vdec_helpers.h   |   6 +-
+ .../staging/media/meson/vdec/vdec_platform.c  |  71 +++
+ include/media/v4l2-mem2mem.h                  |  95 ++++
+ 12 files changed, 1021 insertions(+), 229 deletions(-)
+ create mode 100644 drivers/staging/media/meson/vdec/codec_h264.c
+ create mode 100644 drivers/staging/media/meson/vdec/codec_h264.h
+
 -- 
-2.24.1
+2.22.0
 
 
 _______________________________________________
