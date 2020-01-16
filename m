@@ -2,86 +2,88 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9A16613FAD4
-	for <lists+linux-amlogic@lfdr.de>; Thu, 16 Jan 2020 21:48:29 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id A0508140034
+	for <lists+linux-amlogic@lfdr.de>; Fri, 17 Jan 2020 00:50:36 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=7ie7CnIIaLEcMbC30j6s+FT7L/+aV4Uj81/Y+AmXYKo=; b=fNqFeLMuu1mkcn
-	PKMKpAyMlJ88fKM+RxzZ8JhJq0JuNTebgjJm9eeGNib2ghpUkoLQT2iifIPvo14dm4ojzDrI6Mpvm
-	vzn8loQT9OLGEAP98CQD3MJ5fQ56D8a1+1ie5uQ/qP1bKy8hSftSp8O2brmu9y9ItgsoXCrJhSpXM
-	lWtBdm9qqH00lRK9wMNCxZkJc7bOfuknB6sZcmAR/OlmGPYvikr5PeQIeU7zYHIp8yzWmjKeb7Ps7
-	iMVUQMh7qBT8SpZz/6jQ/2DCTCviEzB9WzJcAW0oInU5aHDS16Y9siztuVtnxH7Csx7ja+svVZTr1
-	WOGl5dl8V42YZWrXoV8g==;
+	List-Owner; bh=1tHJ6SnRy9A0mxcWNHuzp7fEc3mrBNbJ6Rvy6VtEc5A=; b=lb89NQKhXmWIq6
+	i5T4HZNcEdjhQWqQCxbRIkhuW8A+wKPXl+iFI/cdvYxSyLE8SHqLWQNO8CnADiM2R/aPyV1IwcYNF
+	7m1Lij+Xna1JfJn93MpPlFoLlOa7cBozZgYgaHlX5NQJsV1SnbeszqVnyWTKJPxmyPTofHvutwZxZ
+	BjMbvq6SKHiVP7a8DMY5uIn8IZXJM7+zAIjWLG3IFcgGiV88+ofN2tOq5kUfqwaLnvDMk6o3F6OoP
+	Vj1MnHJDVLEnfa0Rkfz6fFh/Q0dZELywQwKhg6PJi5PqFNSPxnXvNtIRYgipLledE/eGlUiVLsv/c
+	2AMyFPmT1PIUwI9j0+NA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1isC43-00058a-3Q; Thu, 16 Jan 2020 20:48:27 +0000
-Received: from mail-ot1-f68.google.com ([209.85.210.68])
+	id 1isEuH-0004nb-Cn; Thu, 16 Jan 2020 23:50:33 +0000
+Received: from mail-lj1-x242.google.com ([2a00:1450:4864:20::242])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1isC3w-00056M-EH; Thu, 16 Jan 2020 20:48:24 +0000
-Received: by mail-ot1-f68.google.com with SMTP id r9so20660568otp.13;
- Thu, 16 Jan 2020 12:48:20 -0800 (PST)
+ id 1isEuE-0004mP-2B
+ for linux-amlogic@lists.infradead.org; Thu, 16 Jan 2020 23:50:32 +0000
+Received: by mail-lj1-x242.google.com with SMTP id j1so24510708lja.2
+ for <linux-amlogic@lists.infradead.org>; Thu, 16 Jan 2020 15:50:29 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=lixom-net.20150623.gappssmtp.com; s=20150623;
+ h=date:from:to:cc:subject:message-id:references:mime-version
+ :content-disposition:in-reply-to:user-agent;
+ bh=dvzepc7K8px28OiUWR54vWmKoJmOCY0jRRsL0K691xs=;
+ b=NO65U4KUg+ApWFvDEyU2TkPyEgh/A+8RBC/MtJ5mh/hiz/dPERHbkSKJ8hL/qoTjEm
+ PSx5ZboNDA37TGTUDlnfgU1zDBZv6BbBg1GKsQ9rq0hxb8Yh1imUbF6Yz/LX0AGlltjU
+ dkHw71kAgpfMreX6Fqd9TXxOFCq1wh2djE5QVpgan5ym6jBrLmdrn5duJ/McS23vuP2W
+ dMou4jKeWtvATCBrPeONpm56EXyL/PxwIdVAXB16ISSZT6pd0NNoCwn5QJmGpPVMGroN
+ nAiELUKmUjwuFlvJChwCWoXJ3ha9TcVbcaU18a6JorcmUoEVJdqDuVqoh+e+/IX/X6zt
+ /FoQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:date:from:to:cc:subject:message-id:references
  :mime-version:content-disposition:in-reply-to:user-agent;
- bh=BKpDxkPQvhaYwq0BM0j0+4RX+8L/FqW/tD6hcJ/WZ8Y=;
- b=EvKO92ttRNE5WGDDoRBPKlk1u1wqKfEEsKLqAQ9n4iiUR9B3717+YxfDcJZnsPTsQv
- BpRxUBA+kkPmiTgg4U8NgPH3Wja8p7W6iJUYu+PzZyMdkWRGtUxq75RyOSYk4fVY8LZ2
- 2+V0jUhwfaj53wj/LSyokolo2IyDmAlTEWCL+V6AAeaAxL/DG5MvQb4K6yAXvY85kq7h
- iDpGQCfPOsHIf2sXH41CZQO7MtrzweINH9YIB5w1FVFt+mqp2OY8GVipzppZskX8bmid
- Gqn+YskYWXWjuni6y1YICoEvHZu/KQbhn80P91qbhWbxgZ74vww+oqu7piwmsekO3rGZ
- 6ZPQ==
-X-Gm-Message-State: APjAAAVUrf0bfuDXq+UK6195EoKAStlzGuMtGPOhxt0yfDWZjKGvNq6F
- K6crfQ7hhZZ04qsl1fJj6g==
-X-Google-Smtp-Source: APXvYqwElUK+YujhdGIIl9hNxkKGMyK9dGJUHl9hNmGbi/q+K5ZFvapHlfm9AC50/8wXvJNavkLnjQ==
-X-Received: by 2002:a9d:6e03:: with SMTP id e3mr3614892otr.46.1579207699487;
- Thu, 16 Jan 2020 12:48:19 -0800 (PST)
-Received: from rob-hp-laptop (24-155-109-49.dyn.grandenetworks.net.
- [24.155.109.49])
- by smtp.gmail.com with ESMTPSA id a17sm8039507otp.66.2020.01.16.12.48.18
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Thu, 16 Jan 2020 12:48:18 -0800 (PST)
-Received: (nullmailer pid 14099 invoked by uid 1000);
- Thu, 16 Jan 2020 20:48:17 -0000
-Date: Thu, 16 Jan 2020 14:48:17 -0600
-From: Rob Herring <robh@kernel.org>
-To: Jian Hu <jian.hu@amlogic.com>
-Subject: Re: [PATCH v6 1/5] dt-bindings: clock: meson: add A1 PLL clock
- controller bindings
-Message-ID: <20200116204817.GA9529@bogus>
-References: <20200116080440.118679-1-jian.hu@amlogic.com>
- <20200116080440.118679-2-jian.hu@amlogic.com>
+ bh=dvzepc7K8px28OiUWR54vWmKoJmOCY0jRRsL0K691xs=;
+ b=nmEmpVbIX3JqALDRHRZfzGFcuUR7ZeoXNLyR4otyq0BRqe7PJyJJjbCZDE19CtuUQg
+ lofC3Z8A6oeha0cmZ4j1YDsKKLzSEuJN3pOvF6PBWlApI5oYlSzpygZ07HPfh/h8dMeI
+ /H0o6XmQssAgDI33Sto7CLiQywnQ+/MpfJ15eKieZUQKhS9198Rd0gJa9aKgD1kmL/cI
+ 06tWdiT7+XAMq2SAnO2i8tej4JR4FyLS4ACVaVgWkqXksI1KCjOFosz5F1LOuVQBDUlM
+ bL2H76T9PeDGQoNf5KKrfrDt56vNLAtPlDXhE+RJC/6zQwgP832sjfYJJGcIPjmX219w
+ w5EQ==
+X-Gm-Message-State: APjAAAUUEGzQ9vqy2Veodvm4/3VgQAZ4Toqy5UWrtwnxw0VO2w82/0LO
+ aMIAiJn+FHrfot7MlBGonUaq3Q==
+X-Google-Smtp-Source: APXvYqwcly4QWy35BIk3rzRP8EQq3fbvuZTQK86R2RMoNH+mB7rBo1ZXIZWjKO9DrXeVOm+4AkRR5g==
+X-Received: by 2002:a2e:98c6:: with SMTP id s6mr3709037ljj.14.1579218627864;
+ Thu, 16 Jan 2020 15:50:27 -0800 (PST)
+Received: from localhost (h85-30-9-151.cust.a3fiber.se. [85.30.9.151])
+ by smtp.gmail.com with ESMTPSA id r15sm11438831ljh.11.2020.01.16.15.50.26
+ (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
+ Thu, 16 Jan 2020 15:50:26 -0800 (PST)
+Date: Thu, 16 Jan 2020 15:47:23 -0800
+From: Olof Johansson <olof@lixom.net>
+To: Kevin Hilman <khilman@baylibre.com>
+Subject: Re: [GIT PULL] arm64: dts: Amlogic updates for v5.5
+Message-ID: <20200116234723.3kmdg43joouuwr7c@localhost>
+References: <7hwo9udi7m.fsf@baylibre.com>
+ <CAOi56cWPvOhnWqtLJXQimRLpMrt_09oNz4HTmqr6-uZ0Bz+A9A@mail.gmail.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <20200116080440.118679-2-jian.hu@amlogic.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+In-Reply-To: <CAOi56cWPvOhnWqtLJXQimRLpMrt_09oNz4HTmqr6-uZ0Bz+A9A@mail.gmail.com>
+User-Agent: NeoMutt/20170113 (1.7.2)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200116_124820_477706_AD394E72 
-X-CRM114-Status: GOOD (  15.78  )
-X-Spam-Score: 0.8 (/)
+X-CRM114-CacheID: sfid-20200116_155030_923330_9D969FDC 
+X-CRM114-Status: UNSURE (   9.26  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.8 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.210.68 listed in list.dnswl.org]
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [209.85.210.68 listed in wl.mailspike.net]
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit (robherring2[at]gmail.com)
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
+ no trust [2a00:1450:4864:20:0:0:0:242 listed in]
+ [list.dnswl.org]
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (robherring2[at]gmail.com)
- 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -93,129 +95,29 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, Victor Wan <victor.wan@amlogic.com>,
- Jianxin Pan <jianxin.pan@amlogic.com>,
- Neil Armstrong <narmstrong@baylibre.com>,
- Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
- Kevin Hilman <khilman@baylibre.com>,
- Michael Turquette <mturquette@baylibre.com>, linux-kernel@vger.kernel.org,
- Stephen Boyd <sboyd@kernel.org>, Qiufang Dai <qiufang.dai@amlogic.com>,
- Chandle Zou <chandle.zou@amlogic.com>, linux-amlogic@lists.infradead.org,
- linux-clk@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
- Jerome Brunet <jbrunet@baylibre.com>
+Cc: linux-amlogic <linux-amlogic@lists.infradead.org>,
+ SoC Team <soc@kernel.org>,
+ linux-arm-kernel <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On Thu, Jan 16, 2020 at 04:04:36PM +0800, Jian Hu wrote:
-> Add the documentation to support Amlogic A1 PLL clock driver,
-> and add A1 PLL clock controller bindings.
+On Mon, Jan 13, 2020 at 04:00:29PM -0800, Kevin Hilman wrote:
+> On Mon, Jan 13, 2020 at 3:55 PM Kevin Hilman <khilman@baylibre.com> wrote:
+> >
+> > Hi Arnd, Olof,
+> >
+> > Here's a round of 32-bit DT updates for Amlogic SoCs for v5.5.
 > 
-> Signed-off-by: Jian Hu <jian.hu@amlogic.com>
-> ---
->  .../bindings/clock/amlogic,a1-pll-clkc.yaml   | 54 +++++++++++++++++++
->  include/dt-bindings/clock/a1-pll-clkc.h       | 16 ++++++
->  2 files changed, 70 insertions(+)
->  create mode 100644 Documentation/devicetree/bindings/clock/amlogic,a1-pll-clkc.yaml
->  create mode 100644 include/dt-bindings/clock/a1-pll-clkc.h
-> 
-> diff --git a/Documentation/devicetree/bindings/clock/amlogic,a1-pll-clkc.yaml b/Documentation/devicetree/bindings/clock/amlogic,a1-pll-clkc.yaml
-> new file mode 100644
-> index 000000000000..071240b65e70
-> --- /dev/null
-> +++ b/Documentation/devicetree/bindings/clock/amlogic,a1-pll-clkc.yaml
-> @@ -0,0 +1,54 @@
-> +# SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)
-> +%YAML 1.2
-> +---
-> +$id: "http://devicetree.org/schemas/amlogic,a1-pll-clkc.yaml#"
-> +$schema: "http://devicetree.org/meta-schemas/core.yaml#"
-> +
-> +title: Amlogic Meson A/C serials PLL Clock Control Unit Device Tree Bindings
-> +
-> +maintainers:
-> +  - Neil Armstrong <narmstrong@baylibre.com>
-> +  - Jerome Brunet <jbrunet@baylibre.com>
-> +  - Jian Hu <jian.hu@jian.hu.com>
-> +
-> +properties:
-> +  compatible:
-> +    const: amlogic,a1-pll-clkc
-> +
-> +  "#clock-cells":
-> +    const: 1
-> +
-> +  reg:
-> +    maxItems: 1
-> +
-> +  clocks:
-> +    maxItems: 2
+> Ugh, this should be v5.6, and the subject is wrong too.  But the rest
+> of the pull request below, including the tag, is correct.  Let me know
+> if you prefer a re-spin.
 
-Not necessary, so drop. Implied by the length of 'items'.
+Heh, no worries. Merged.
 
-> +    items:
-> +     - description: input xtal_fixpll
-> +     - description: input xtal_hifipll
-> +
-> +  clock-names:
-> +    maxItems: 2
 
-Same here.
-
-> +    items:
-> +      - const: xtal_fixpll
-> +      - const: xtal_hifipll
-> +
-> +required:
-> +  - compatible
-> +  - "#clock-cells"
-> +  - reg
-> +  - clocks
-> +  - clock-names
-> +
-> +additionalProperties: false
-> +
-> +examples:
-> +  - |
-> +    clkc_pll: pll-clock-controller@7c80 {
-> +                compatible = "amlogic,a1-pll-clkc";
-> +                reg = <0 0x7c80 0 0x18c>;
-> +                #clock-cells = <1>;
-> +                clocks = <&clkc_periphs CLKID_XTAL_FIXPLL>,
-> +                         <&clkc_periphs CLKID_XTAL_HIFIPLL>;
-
-The example will fail to build because these aren't defined.
-
-Run 'make dt_binding_check'.
-
-> +                clock-names = "xtal_fixpll", "xtal_hifipll";
-> +    };
-> diff --git a/include/dt-bindings/clock/a1-pll-clkc.h b/include/dt-bindings/clock/a1-pll-clkc.h
-> new file mode 100644
-> index 000000000000..58eae237e503
-> --- /dev/null
-> +++ b/include/dt-bindings/clock/a1-pll-clkc.h
-> @@ -0,0 +1,16 @@
-> +/* SPDX-License-Identifier: (GPL-2.0+ OR MIT) */
-> +/*
-> + * Copyright (c) 2019 Amlogic, Inc. All rights reserved.
-> + */
-> +
-> +#ifndef __A1_PLL_CLKC_H
-> +#define __A1_PLL_CLKC_H
-> +
-> +#define CLKID_FIXED_PLL				1
-> +#define CLKID_FCLK_DIV2				6
-> +#define CLKID_FCLK_DIV3				7
-> +#define CLKID_FCLK_DIV5				8
-> +#define CLKID_FCLK_DIV7				9
-> +#define CLKID_HIFI_PLL				10
-> +
-> +#endif /* __A1_PLL_CLKC_H */
-> -- 
-> 2.24.0
-> 
+-Olof
 
 _______________________________________________
 linux-amlogic mailing list
