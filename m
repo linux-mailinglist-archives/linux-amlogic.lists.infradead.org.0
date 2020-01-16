@@ -2,46 +2,46 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E971213E81B
-	for <lists+linux-amlogic@lfdr.de>; Thu, 16 Jan 2020 18:30:34 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id DD02F13E832
+	for <lists+linux-amlogic@lfdr.de>; Thu, 16 Jan 2020 18:31:04 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=RNSNJi4hOwgGfjnFAk5aTUA64P6TZ/FPKIaKzIRTSI4=; b=ZC7s1O9Vn1Escc
-	CJtmBHdQEN3aWGOs9xqzKvkJ5yLSzI5fwakhPkRAQFsvFtBmcDHXU0Tpm/iDBiSloqSzYtSE6vmt9
-	pZ6/Z9tqzwso8fKO6o0F3/uS0Bc6GGvtm1jbjmjp3xFPqJnC68+AEcfahCJUTpEx3RtvEJOd181fw
-	pPVkjoGdPxBmhq/2tTkp0x08+zjsCg929qdy1gxKhdLKL/oKcvvkAaWLAmtgD6pgSBb509US6cvnV
-	UscuTFmnKUwSQBzJ5bXFI/ZC/IdpIr9zxzsn7rZtSwDVHCedCTFiGCiU9P5jEMPhOySdwioukE80a
-	z04dJjoDHlC8m8ik8e7w==;
+	List-Owner; bh=s0Tkd5h+1bELzIJ925juodLIRPm8erhMnzNp++PDoeE=; b=p3YHt9DKH/UO48
+	Lbn/wvwF6EGCH0XUfqFMs3J+4AnXrBiW483+V8rLLsUKYwzgMb0BCKu2uXCmAExPwmrQRsYc3cpzq
+	2y4qf/jqyomqd67rsCsWTtNPmsRH11FE06LkfzM4/advNghMb5vaEnLFO+aHHS/HiV0KqgsSgtvPa
+	DrfndcGZS9ATkghJGgwTq5Gk4xhkHmMdQ6/n8TGFB6KoU7fZS2oh4OewvKvEfHtPMqztbf6P+COIn
+	94Ps4JXJpZV01aZigpb5m55vZ6zCPGCmTCCxFV5bmBBQTSuzmSCPNxt/cVmlwZ4Ysb9m8fLVpqAQi
+	xLy5b1q3Sfv3cV9yW8ag==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1is8yV-0000Iz-J6; Thu, 16 Jan 2020 17:30:31 +0000
+	id 1is8z1-0000gy-4G; Thu, 16 Jan 2020 17:31:03 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1is8dL-0001XB-8O; Thu, 16 Jan 2020 17:08:44 +0000
+ id 1is8dM-0001Y0-D9; Thu, 16 Jan 2020 17:08:49 +0000
 Received: from sasha-vm.mshome.net (c-73-47-72-35.hsd1.nh.comcast.net
  [73.47.72.35])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id EA08224679;
- Thu, 16 Jan 2020 17:08:36 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id 3BFC8206D9;
+ Thu, 16 Jan 2020 17:08:38 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1579194517;
- bh=ReAQEzj5hLQFBno/uujqCnk9F+WLv6Flh5nmz/OvuiY=;
+ s=default; t=1579194519;
+ bh=sT3KDcw/wc551YaCyJ5Nu5sFuDODu+pXhos+pJR1tjM=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=19eyt+c3z0BfOVdybRP1mx7eCZShGwJWReUFi8MosZuzt6oyjpnFCfy545V6H4UMK
- zPL3LsfPgqUIb1BHrC/WchTqc/W3KnwDPm0e6mv6xIZvstV0cVvrPUJTlq7IRUNjDu
- uLY4+BwKFFDN0WIIQQ9l2o6cqqn4KBKNCeFtseTc=
+ b=ZmBvMS89LGHR3ObDdlk9DC193sFJugueb6Fp3LID1KNDmocRLv+UK1PIyzVwMAVp1
+ Ec3ncba9aQVenPVUr7oxdLQv7l/wfn/FzHt2JriYo0MS1T+TshWlrh+Hw/qXvOEZzY
+ Hmu722oOwdj5sNBf2j/dYrIAU5j+sKSrZc3hpRU0=
 From: Sasha Levin <sashal@kernel.org>
 To: linux-kernel@vger.kernel.org,
 	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 4.19 410/671] ASoC: meson: axg-tdmin: right_j is not
+Subject: [PATCH AUTOSEL 4.19 411/671] ASoC: meson: axg-tdmout: right_j is not
  supported
-Date: Thu, 16 Jan 2020 12:00:48 -0500
-Message-Id: <20200116170509.12787-147-sashal@kernel.org>
+Date: Thu, 16 Jan 2020 12:00:49 -0500
+Message-Id: <20200116170509.12787-148-sashal@kernel.org>
 X-Mailer: git-send-email 2.20.1
 In-Reply-To: <20200116170509.12787-1-sashal@kernel.org>
 References: <20200116170509.12787-1-sashal@kernel.org>
@@ -49,8 +49,8 @@ MIME-Version: 1.0
 X-stable: review
 X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200116_090839_460966_60040DD9 
-X-CRM114-Status: UNSURE (   8.61  )
+X-CRM114-CacheID: sfid-20200116_090840_574162_615DC4EC 
+X-CRM114-Status: UNSURE (   8.60  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -90,30 +90,30 @@ Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
 From: Jerome Brunet <jbrunet@baylibre.com>
 
-[ Upstream commit 47c317b786b6c1efc2cb3cdb894fd323422fe5ea ]
+[ Upstream commit 7e0d7d0fbd06af0507611f85dba8daf24832abd9 ]
 
-Right justified format is actually not supported by the amlogic tdm input
-decoder.
+Right justified format is actually not supported by the amlogic tdm output
+encoder.
 
-Fixes: 13a22e6a98f8 ("ASoC: meson: add tdm input driver")
+Fixes: c41c2a355b86 ("ASoC: meson: add tdm output driver")
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
 Signed-off-by: Mark Brown <broonie@kernel.org>
 Signed-off-by: Sasha Levin <sashal@kernel.org>
 ---
- sound/soc/meson/axg-tdmin.c | 1 -
+ sound/soc/meson/axg-tdmout.c | 1 -
  1 file changed, 1 deletion(-)
 
-diff --git a/sound/soc/meson/axg-tdmin.c b/sound/soc/meson/axg-tdmin.c
-index bbac44c81688..37207bbebb2a 100644
---- a/sound/soc/meson/axg-tdmin.c
-+++ b/sound/soc/meson/axg-tdmin.c
-@@ -119,7 +119,6 @@ static int axg_tdmin_prepare(struct regmap *map, struct axg_tdm_stream *ts)
+diff --git a/sound/soc/meson/axg-tdmout.c b/sound/soc/meson/axg-tdmout.c
+index f73368ee1088..d11acb3cc696 100644
+--- a/sound/soc/meson/axg-tdmout.c
++++ b/sound/soc/meson/axg-tdmout.c
+@@ -136,7 +136,6 @@ static int axg_tdmout_prepare(struct regmap *map, struct axg_tdm_stream *ts)
  		break;
  
  	case SND_SOC_DAIFMT_LEFT_J:
 -	case SND_SOC_DAIFMT_RIGHT_J:
  	case SND_SOC_DAIFMT_DSP_B:
- 		val = TDMIN_CTRL_IN_BIT_SKEW(2);
+ 		val |= TDMOUT_CTRL0_INIT_BITNUM(2);
  		break;
 -- 
 2.20.1
