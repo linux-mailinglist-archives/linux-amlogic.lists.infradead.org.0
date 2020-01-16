@@ -2,46 +2,46 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 04D9113E0DF
-	for <lists+linux-amlogic@lfdr.de>; Thu, 16 Jan 2020 17:46:22 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id B75BC13E0DA
+	for <lists+linux-amlogic@lfdr.de>; Thu, 16 Jan 2020 17:46:19 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=DXieoADJvJde6qpdDo8N1igwQ+qUdBBgFloL4H7Gn0k=; b=IQVAFvvHor/o1X
-	mwt5SKKk/UvbddhShTVpkO8gl9RVmOnAWzXqTURLbx/r6FFK8+UggUSXk6YDjzZ44W2pg3qjSvjRq
-	dR+sOCHCSyYjl8lpnVuBop4O6zj3jmt7zBjJzl4XAzNv0M+WpjnGc+XLKNq9KTe6SBBDc1QXOmahB
-	A4KUbFbnNVeny3vgHdDBu9Arj+IBNidsY52kCbQXvIqBWj5jDlxEMa6T1ZFVzXXpj+TQKKGHGZHsD
-	wS8U3h5HQxd6QFYeRjTfsKeFE8yxlqLdijCtTCfHVHSWqqwFhFf0uK1sbXpvo0df3JIRpi8TOivBs
-	mJXWv6XLhN3ubB7vHu1Q==;
+	List-Owner; bh=2IrlAaucUAE+y3PIkN/4gFxLF7rzZ4Ckz6Mt4X3Ln6Y=; b=CFyIpRmIaeUHHf
+	fnSd6ldd9haj3Eiycfz21T1uth+6i38t1WJZBqC31g0+O2OBj62sDjP4+5xAyunbMRi4Ek/qsH7sr
+	OJC36Iy38IcQWZWFXFZwKEEVncKdzth3RQ5eh9fAdZKqE4KH79+tDIoWo1pJxXX5V6v5LSGuqWB86
+	39CRNpzyYHVasPUK5iZfvlCczEJQwo2sglWZd1szzu8W+Utm2Tm18qq6QAeGl0fnFExWwQ93CRbGK
+	97E/Hci6s3KjaPgDYTC+TGA+dzKhTmPYa4mUcnVJCd/0bQSBF6ZndojHGoULwckivfVp37IsbS1EL
+	BwWZ15xPJdnNd27UuDMQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1is8Hk-00017d-8k; Thu, 16 Jan 2020 16:46:20 +0000
+	id 1is8Hi-00016N-0a; Thu, 16 Jan 2020 16:46:18 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1is8Gz-0000VY-IZ; Thu, 16 Jan 2020 16:45:40 +0000
+ id 1is8H4-0000ah-6U; Thu, 16 Jan 2020 16:45:41 +0000
 Received: from sasha-vm.mshome.net (c-73-47-72-35.hsd1.nh.comcast.net
  [73.47.72.35])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id BCA8921D7D;
- Thu, 16 Jan 2020 16:45:29 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id 13D202081E;
+ Thu, 16 Jan 2020 16:45:33 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1579193133;
- bh=iVaJF59sRje1+OIG8QjypzCfAKhVib/wLh/CAWkDX6E=;
+ s=default; t=1579193137;
+ bh=0DFAupzXdgEWbk2BQFDxOnnQLwkqnZ8OV7Swv5YwVrs=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=ZP6c9Z8KoTPlV5LvfDR+jehHip1oa2BKhSoZc5nzhmJY08JpToLxKfi56sTl27+Qg
- 2HlR3U+1jHSnqq/fihAhzRjRy4oCCyRJzBZO7dYG2D566gBV+wXPaTeCn+BJmPh28/
- vIscQEZga3Odcbs6d2A0Ett4lVMVbPejPlARj7SM=
+ b=kzdkPVqpAyIamSpSXzB5sEMsQQsiW1gfscqX/nWtX5zFmb75Ju+QpDT8X4QWL4THa
+ ayRhSrY/WmfeqyheUVEDPrDRh+GJbSC+o7TqvuVoxzhysJTVo0TjRzxd76Hj4+KniW
+ 4KNEzkeUZkNY5l7uMi4V5e+oGWv0OIiBLtJjjHdM=
 From: Sasha Levin <sashal@kernel.org>
 To: linux-kernel@vger.kernel.org,
 	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 5.4 031/205] arm64: dts: meson-gxl-s905x-khadas-vim:
- fix gpio-keys-polled node
-Date: Thu, 16 Jan 2020 11:40:06 -0500
-Message-Id: <20200116164300.6705-31-sashal@kernel.org>
+Subject: [PATCH AUTOSEL 5.4 032/205] clk: meson: axg-audio: fix regmap last
+ register
+Date: Thu, 16 Jan 2020 11:40:07 -0500
+Message-Id: <20200116164300.6705-32-sashal@kernel.org>
 X-Mailer: git-send-email 2.20.1
 In-Reply-To: <20200116164300.6705-1-sashal@kernel.org>
 References: <20200116164300.6705-1-sashal@kernel.org>
@@ -49,9 +49,8 @@ MIME-Version: 1.0
 X-stable: review
 X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200116_084533_662719_254DD111 
-X-CRM114-Status: UNSURE (   9.36  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200116_084538_392044_39F5712C 
+X-CRM114-Status: GOOD (  10.98  )
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-5.2 points)
@@ -80,51 +79,42 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: Sasha Levin <sashal@kernel.org>, devicetree@vger.kernel.org,
- Kevin Hilman <khilman@baylibre.com>,
- Christian Hewitt <christianshewitt@gmail.com>,
- linux-amlogic@lists.infradead.org, linux-arm-kernel@lists.infradead.org
+Cc: Sasha Levin <sashal@kernel.org>, Neil Armstrong <narmstrong@baylibre.com>,
+ linux-amlogic@lists.infradead.org, linux-clk@vger.kernel.org,
+ linux-arm-kernel@lists.infradead.org, Jerome Brunet <jbrunet@baylibre.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-From: Christian Hewitt <christianshewitt@gmail.com>
+From: Jerome Brunet <jbrunet@baylibre.com>
 
-[ Upstream commit d5f6fa904ecbadbb8e9fa6302b0fc165bec0559a ]
+[ Upstream commit 255cab9d27d78703f7450d720859ee146d0ee6e1 ]
 
-Fix DTC warnings:
+Since the addition of the g12a, the last register is
+AUDIO_CLK_SPDIFOUT_B_CTRL.
 
-arch/arm/dts/meson-gxl-s905x-khadas-vim.dtb: Warning (avoid_unnecessary_addr_size):
-   /gpio-keys-polled: unnecessary #address-cells/#size-cells
-      without "ranges" or child "reg" property
-
-Fixes: e15d2774b8c0 ("ARM64: dts: meson-gxl: add support for the Khadas VIM board")
-Signed-off-by: Christian Hewitt <christianshewitt@gmail.com>
-Reviewed-by: Kevin Hilman <khilman@baylibre.com>
-Signed-off-by: Kevin Hilman <khilman@baylibre.com>
+Fixes: 075001385c66 ("clk: meson: axg-audio: add g12a support")
+Acked-by: Neil Armstrong <narmstrong@baylibre.com>
+Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
 Signed-off-by: Sasha Levin <sashal@kernel.org>
 ---
- arch/arm64/boot/dts/amlogic/meson-gxl-s905x-khadas-vim.dts | 4 +---
- 1 file changed, 1 insertion(+), 3 deletions(-)
+ drivers/clk/meson/axg-audio.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/arch/arm64/boot/dts/amlogic/meson-gxl-s905x-khadas-vim.dts b/arch/arm64/boot/dts/amlogic/meson-gxl-s905x-khadas-vim.dts
-index 8d6f316a5c7b..440bc23c7342 100644
---- a/arch/arm64/boot/dts/amlogic/meson-gxl-s905x-khadas-vim.dts
-+++ b/arch/arm64/boot/dts/amlogic/meson-gxl-s905x-khadas-vim.dts
-@@ -33,11 +33,9 @@
+diff --git a/drivers/clk/meson/axg-audio.c b/drivers/clk/meson/axg-audio.c
+index 18b23cdf679c..aa2522624fd3 100644
+--- a/drivers/clk/meson/axg-audio.c
++++ b/drivers/clk/meson/axg-audio.c
+@@ -1001,7 +1001,7 @@ static const struct regmap_config axg_audio_regmap_cfg = {
+ 	.reg_bits	= 32,
+ 	.val_bits	= 32,
+ 	.reg_stride	= 4,
+-	.max_register	= AUDIO_CLK_PDMIN_CTRL1,
++	.max_register	= AUDIO_CLK_SPDIFOUT_B_CTRL,
+ };
  
- 	gpio-keys-polled {
- 		compatible = "gpio-keys-polled";
--		#address-cells = <1>;
--		#size-cells = <0>;
- 		poll-interval = <100>;
- 
--		button@0 {
-+		power-button {
- 			label = "power";
- 			linux,code = <KEY_POWER>;
- 			gpios = <&gpio_ao GPIOAO_2 GPIO_ACTIVE_LOW>;
+ struct audioclk_data {
 -- 
 2.20.1
 
