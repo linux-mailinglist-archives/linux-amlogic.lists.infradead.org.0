@@ -2,86 +2,57 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (unknown [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B587D1419FD
-	for <lists+linux-amlogic@lfdr.de>; Sat, 18 Jan 2020 23:06:13 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 78626141B48
+	for <lists+linux-amlogic@lfdr.de>; Sun, 19 Jan 2020 03:54:54 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=3fvC/YIyBKEOJ7hAFpweILceHZ7M8XQT2JKp0rJzbQk=; b=p/yfZf2fapDZoU
-	13LTrsTTECtMhQdaJfcLam21OihZyoS8WmoNvyHFwzeZaJFKCMqQ/FzXKRZT3u/xqXkxqwbVjzZLY
-	ogombv+jdXqIbXNhJVjrAz3SHkcWa5NU+b76PxNEL1PHbbDqcORBSDkJZPsU8/85tY0CgbfT7N1ba
-	A1BE7RVJo7q3A2HBZyD50prz6IeXXmRjAJ3U7RKt3qC8SRayoEabdAURSHxm1oglSicHLWr9aLEQ/
-	1e/toDV0S1ebWSujWel09CY0fX5vXPgWNjV6z3DaVDanN2DoKNuZJXVp8npzSgMmOvBYFWu4zAOsQ
-	2+vfwSNBjub2Gz06rEsA==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
+	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=4xoyVfsZDsEmrkxqLPmqrBdyDvSZHigPRyjVUztzOvM=; b=VEDiXkEG8wsEMO
+	iHe5lej4w8OF1PzlsiJZmdIubNrrA5nrobXsSoZ1tyWbk1GxMTXupeykc9jbFnHyfZS1Cm3lGRR0y
+	UsOEgl9yIPyy+a3UttBAUvEytd++oHeLaj99SY0Va79D6kUPPFCN1lHVvxeIVbrehGUia2gttKnhy
+	gCzwMylYYlNvO2LdyqLFVRSNJpDcqSuMa4Ti/nFmj49qvhkFkdztImXvD72y3vW50E05oq4rx+ozc
+	zoUoWpDPnv8yD2iYi7wH3VmN46xv8gh5WMzWzM9JMdceEF4/hUzKetnHuR7pA7KdqxCnEq9Qwoqh3
+	j6FYz91xI28jz7VkedTA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iswE8-0006B0-Dh; Sat, 18 Jan 2020 22:05:56 +0000
-Received: from mail-ed1-x543.google.com ([2a00:1450:4864:20::543])
+	id 1it0jU-0002Jk-2F; Sun, 19 Jan 2020 02:54:36 +0000
+Received: from mail-sh.amlogic.com ([58.32.228.43])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iswE5-0006AZ-QL; Sat, 18 Jan 2020 22:05:55 +0000
-Received: by mail-ed1-x543.google.com with SMTP id t17so25890318eds.6;
- Sat, 18 Jan 2020 14:05:53 -0800 (PST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=googlemail.com; s=20161025;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=IZo36abDKqjdvzc5GwhroDqR39xgOE1dZtSOdvhsHaY=;
- b=rrWBZd43dKN2kOfO+ejr5Z7+dyqYVVj50e+wGMqTbZBEstOVS6YXQyRUpr0Y+7R5h9
- FjlQICJh7caGHGRWzQpSCOqXZUnhH6y2uHCnal9eJNho/+TEdrP9BNWZWERYWrrlJVq2
- BEDYyjW6IgnNOM1Qov5RBgUBP6gAByvEzSGyUMV9Yg3aXnxU4WKsfMdB3ZeiHsuNCTfU
- ikTwlAJcNycKOPvnbJ7sIKy3vHNuReSSHgSASLXzfJRbNPt/zeDkqDkWEgO35WzvZsYL
- vTzVHHy44Ism6FVpp8/k7o81pySIKU2xH2qxB+KrRC8I8j8+cO8bROIyf7qokKdW9ViY
- vDHA==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=IZo36abDKqjdvzc5GwhroDqR39xgOE1dZtSOdvhsHaY=;
- b=hKsvESV8v7wOeAL5BW8X8MykfaWKvXbpGgaVsVHIhaqIV/EUvH2MBZIjoPfqPW1y+u
- UmkEJU421oT17XmwrXZQl3AAImwLBA7RKf5lOeASV2xTT3LzYoqmPvwISGrEUOmKCCy2
- rb4LEaMpH4M3SrgSWdZMEZ8UDH2bwgwKvGpAR5bW4iyTnv6neLMpDdYgRCA59uSoQpaX
- qiekSgZEuL2ybHVWT+2g3BYkroMD12Y+OjSIeuau4sbC5YZxUe8QcZL0soaMNe9gLa4i
- ScAjEgeNWumRKstl8O615qYFaY0uuU5gKSZOdMTiEGFKi+Z4vKYnKnbMjqBYmaSM+pKn
- hgXQ==
-X-Gm-Message-State: APjAAAX1IG/IR1knozFF2pEHqfIgY4SPN630mbPnEde4TctqaWxnice8
- nBm8KoCOTB44pz3mASQ/ife18zTgV4ngetk8+Kc=
-X-Google-Smtp-Source: APXvYqyNH1kS9f9T6kQko9VTwsuHR9OgAGx0Ogkz4TN5x/HgDfDbqpYogNZD1zO4DAwEf3ZVTRNcAK5Ra6gnLeWPTDs=
-X-Received: by 2002:a17:906:90c3:: with SMTP id
- v3mr14156897ejw.30.1579385151960; 
- Sat, 18 Jan 2020 14:05:51 -0800 (PST)
-MIME-Version: 1.0
+ id 1it0jP-0002Ha-Ua; Sun, 19 Jan 2020 02:54:34 +0000
+Received: from [10.18.38.198] (10.18.38.198) by mail-sh.amlogic.com
+ (10.18.11.5) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256) id 15.1.1591.10; Sun, 19 Jan
+ 2020 10:54:47 +0800
+Subject: Re: [PATCH v6 2/6] dt-bindings: usb: dwc3: Add the Amlogic A1 Family
+ DWC3 Glue Bindings
+To: Rob Herring <robh@kernel.org>
 References: <1579220504-110067-1-git-send-email-hanjie.lin@amlogic.com>
- <1579220504-110067-6-git-send-email-hanjie.lin@amlogic.com>
-In-Reply-To: <1579220504-110067-6-git-send-email-hanjie.lin@amlogic.com>
-From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-Date: Sat, 18 Jan 2020 23:05:41 +0100
-Message-ID: <CAFBinCD9iwBHYArqU55kg_uG3xc=JnL=F1P0KW1+6BP2xHoN0g@mail.gmail.com>
-Subject: Re: [PATCH v6 5/6] arm64: dts: meson: a1: Enable USB2 PHY
-To: Hanjie Lin <hanjie.lin@amlogic.com>
+ <1579220504-110067-3-git-send-email-hanjie.lin@amlogic.com>
+ <20200117163219.GA25603@bogus>
+From: Hanjie Lin <hanjie.lin@amlogic.com>
+Message-ID: <12c5287e-61af-0712-ae5b-019b8495055b@amlogic.com>
+Date: Sun, 19 Jan 2020 10:54:46 +0800
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:68.0) Gecko/20100101
+ Thunderbird/68.3.1
+MIME-Version: 1.0
+In-Reply-To: <20200117163219.GA25603@bogus>
+Content-Language: en-US
+X-Originating-IP: [10.18.38.198]
+X-ClientProxiedBy: mail-sh.amlogic.com (10.18.11.5) To mail-sh.amlogic.com
+ (10.18.11.5)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200118_140553_879099_66856862 
-X-CRM114-Status: GOOD (  11.99  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200118_185431_989008_95260B3F 
+X-CRM114-Status: GOOD (  10.66  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:543 listed in]
- [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (martin.blumenstingl[at]googlemail.com)
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -93,60 +64,64 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: Rob Herring <robh@kernel.org>, Victor Wan <victor.wan@amlogic.com>,
+Cc: devicetree@vger.kernel.org, Victor Wan <victor.wan@amlogic.com>,
  Jianxin Pan <jianxin.pan@amlogic.com>,
  Felipe Balbi <felipe.balbi@linux.intel.com>,
  Neil Armstrong <narmstrong@baylibre.com>, Stephen Boyd <sboyd@kernel.org>,
- Kevin Hilman <khilman@baylibre.com>,
- Michael Turquette <mturquette@baylibre.com>, linux-usb@vger.kernel.org,
- Yue Wang <yue.wang@amlogic.com>, Qiufang Dai <qiufang.dai@amlogic.com>,
- devicetree@vger.kernel.org, Liang Yang <liang.yang@amlogic.com>,
- Jian Hu <jian.hu@amlogic.com>, Xingyu Chen <xingyu.chen@amlogic.com>,
  Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Carlo Caione <carlo@caione.org>, linux-amlogic@lists.infradead.org,
- linux-arm-kernel@lists.infradead.org, Jerome Brunet <jbrunet@baylibre.com>
+ Michael Turquette <mturquette@baylibre.com>, linux-usb@vger.kernel.org,
+ Yue Wang <yue.wang@amlogic.com>,
+ Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
+ Jian Hu <jian.hu@amlogic.com>, Liang Yang <liang.yang@amlogic.com>,
+ Qiufang Dai <qiufang.dai@amlogic.com>, Xingyu Chen <xingyu.chen@amlogic.com>,
+ Kevin Hilman <khilman@baylibre.com>, Carlo Caione <carlo@caione.org>,
+ linux-amlogic@lists.infradead.org, linux-arm-kernel@lists.infradead.org,
+ Jerome Brunet <jbrunet@baylibre.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Hi Hanjie,
-
-On Fri, Jan 17, 2020 at 1:22 AM Hanjie Lin <hanjie.lin@amlogic.com> wrote:
->
-> Enable USB2 PHY for Meson A1 SoC.
->
-> Signed-off-by: Yue Wang <yue.wang@amlogic.com>
-> Signed-off-by: Hanjie Lin <hanjie.lin@amlogic.com>
-> ---
->  arch/arm64/boot/dts/amlogic/meson-a1.dtsi | 13 +++++++++++++
->  1 file changed, 13 insertions(+)
-personally I would squash this with patch 6/6 because it's only useful
-together with patch 6/6
-on the other hand: it's not worth sending a v7 just for this
-
-> @@ -100,6 +101,18 @@
->                                 #power-domain-cells = <1>;
->                                 status = "okay";
->                         };
-> +
-> +                       usb2_phy1: phy@40000 {
-> +                               status = "okay";
-we typically use one of the following patterns:
-- status = "disabled" in SoC.dts
-- status = "okay" in board.dts whenever the peripheral should be used
-(example: I2C, USB, ...)
-OR
-- no status property if the peripheral is mandatory on all boards (for
-example: clock controller, ...)
-
-so for consistency with other Amlogic .dts I would either drop the
-status property or set it to disabled (and enable it in
-meson-a1-ad401.dts)
-same applies to patch 6/6
 
 
-Martin
+On 2020/1/18 0:32, Rob Herring wrote:
+> On Fri, 17 Jan 2020 08:21:40 +0800, Hanjie Lin wrote:
+>> The Amlogic A1 SoC Family embeds 1 USB Controllers:
+>>  - a DWC3 IP configured as Host for USB2 and USB3
+>>
+>> A glue connects the controllers to the USB2 PHY of A1 SoC.
+>>
+>> Signed-off-by: Yue Wang <yue.wang@amlogic.com>
+>> Signed-off-by: Hanjie Lin <hanjie.lin@amlogic.com>
+>> ---
+>>  .../bindings/usb/amlogic,meson-g12a-usb-ctrl.yaml  | 38 ++++++++++++++++++++--
+>>  1 file changed, 35 insertions(+), 3 deletions(-)
+>>
+> 
+> My bot found errors running 'make dt_binding_check' on your patch:
+> 
+> Documentation/devicetree/bindings/usb/amlogic,meson-g12a-usb-ctrl.yaml:  while parsing a block mapping
+>   in "<unicode string>", line 107, column 7
+> did not find expected key
+>   in "<unicode string>", line 111, column 8
+> Documentation/devicetree/bindings/Makefile:12: recipe for target 'Documentation/devicetree/bindings/usb/amlogic,meson-g12a-usb-ctrl.example.dts' failed
+> make[1]: *** [Documentation/devicetree/bindings/usb/amlogic,meson-g12a-usb-ctrl.example.dts] Error 1
+> Makefile:1263: recipe for target 'dt_binding_check' failed
+> make: *** [dt_binding_check] Error 2
+> 
+> See https://patchwork.ozlabs.org/patch/1224563
+> Please check and re-submit.
+> 
+> .
+> 
+
+Hi Rob,
+
+Sorry, I missed a blank and didn't notice it.
+I will fix it in next version, and also pay more attentions to these problems later.
+
+Thanks,
+Hanjie 
 
 _______________________________________________
 linux-amlogic mailing list
