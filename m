@@ -2,45 +2,41 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 942CB1421CB
-	for <lists+linux-amlogic@lfdr.de>; Mon, 20 Jan 2020 04:00:19 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id D09BC14222F
+	for <lists+linux-amlogic@lfdr.de>; Mon, 20 Jan 2020 04:50:15 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=rYiMep2fVHpi4xlwx9IfW0TCEF8MxrmQ8K8HVvbwutw=; b=RPWkrtjnq/5L3M
-	T2f/uAL9wXPFB1N6IUJTOBmCHa2GIg00ZASkB03U9RsBZy2HMIUf1Thg5Akhap7ar5ixYRw1vQ0vB
-	5onTG87/djbfnfZLr+tvbCdVnQi2OvhJXuj2fj6in6f3Wo7ckTWRnAtpnrxr/cfjQ1aK23ySYRAe9
-	PX/krm9gJJg/QtG7fSuDz23vqpjTxp+JasI4lhFKWVZooTZAvAMInK4q76kILN7+4nlFIjUak6Uhh
-	xynUKY47351GZujNT9Zkq4Efgw5LsFqofkcexBxswzzxWRVmyZwdtZwpnnT94q/vMSFr+9p6BQLZa
-	JgTgj02P+oM4+/glZBwA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=HhJVzYyL2SBqJzy/jo2m9DOy0xYCUnYjcfJ/JfNH3P0=; b=a3ZQqhZhgK9A2q
+	hG5VVqwqXy6WOEe5/pD7nrE29Vx6djqu2hTEGGyZJ86kkVqzZfWmJc61Qj0ojxrrnC3rbNYonR0TF
+	d2cMbrNzhpcd86kso3ROGc4yXt7J/HSTkmZBoGS6XPdRgrRT4RpsSZjqQT8Yn/8GpnUFJRFz2lOBA
+	I17/0r1WMyyjWRXhikjwSlcdmqqr66NHS0UzbhhSyvwVcyix2tVQpZwUeF38mIJIxYdgV5YA7OA1h
+	ac2XGqBx5imKM7meBTJUTPaSsz93xHqmtOgOLqLf5KmLtnQek8N0i2XBwWXpE0HhMUj028iuCctHs
+	epua4KA2+99GUqoyuR9Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1itNIX-0007Qs-SU; Mon, 20 Jan 2020 03:00:17 +0000
-Received: from mail-sh.amlogic.com ([58.32.228.43])
+	id 1itO4p-0005NZ-6H; Mon, 20 Jan 2020 03:50:11 +0000
+Received: from mail-sz.amlogic.com ([211.162.65.117])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1itNH1-0004iD-Oc; Mon, 20 Jan 2020 02:58:45 +0000
-Received: from droid10.amlogic.com (10.18.11.213) by mail-sh.amlogic.com
- (10.18.11.5) with Microsoft SMTP Server id 15.1.1591.10; Mon, 20 Jan 2020
- 10:58:57 +0800
-From: Hanjie Lin <hanjie.lin@amlogic.com>
+ id 1itO4Q-0005Cd-F5; Mon, 20 Jan 2020 03:49:49 +0000
+Received: from droid15-sz.amlogic.com (10.28.8.25) by mail-sz.amlogic.com
+ (10.28.11.5) with Microsoft SMTP Server id 15.1.1591.10; Mon, 20 Jan 2020
+ 11:50:11 +0800
+From: Jian Hu <jian.hu@amlogic.com>
 To: Jerome Brunet <jbrunet@baylibre.com>, Neil Armstrong
- <narmstrong@baylibre.com>, Rob Herring <robh@kernel.org>, Greg Kroah-Hartman
- <gregkh@linuxfoundation.org>, Kevin Hilman <khilman@baylibre.com>
-Subject: [PATCH v7 5/5] arm64: dts: meson: a1: Enable USB2 PHY and DWC3
- controller
-Date: Mon, 20 Jan 2020 10:58:06 +0800
-Message-ID: <1579489086-157767-6-git-send-email-hanjie.lin@amlogic.com>
-X-Mailer: git-send-email 2.7.4
-In-Reply-To: <1579489086-157767-1-git-send-email-hanjie.lin@amlogic.com>
-References: <1579489086-157767-1-git-send-email-hanjie.lin@amlogic.com>
+ <narmstrong@baylibre.com>
+Subject: [PATCH v7 0/5] add Amlogic A1 clock controller driver
+Date: Mon, 20 Jan 2020 11:49:32 +0800
+Message-ID: <20200120034937.128600-1-jian.hu@amlogic.com>
+X-Mailer: git-send-email 2.24.0
 MIME-Version: 1.0
-X-Originating-IP: [10.18.11.213]
+X-Originating-IP: [10.28.8.25]
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200119_185843_818647_75613F3A 
-X-CRM114-Status: UNSURE (   8.10  )
+X-CRM114-CacheID: sfid-20200119_194946_507855_E0313876 
+X-CRM114-Status: UNSURE (   9.83  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
@@ -60,98 +56,108 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, Hanjie Lin <hanjie.lin@amlogic.com>,
- Victor Wan <victor.wan@amlogic.com>, Jianxin Pan <jianxin.pan@amlogic.com>,
- Stephen Boyd <sboyd@kernel.org>, Michael Turquette <mturquette@baylibre.com>,
- linux-usb@vger.kernel.org, Yue Wang <yue.wang@amlogic.com>,
+Cc: Rob Herring <robh@kernel.org>, Victor Wan <victor.wan@amlogic.com>,
+ Jianxin Pan <jianxin.pan@amlogic.com>, devicetree@vger.kernel.org,
  Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
- Liang Yang <liang.yang@amlogic.com>, Qiufang Dai <qiufang.dai@amlogic.com>,
- Xingyu Chen <xingyu.chen@amlogic.com>, Carlo Caione <carlo@caione.org>,
- linux-amlogic@lists.infradead.org, linux-arm-kernel@lists.infradead.org,
- Jian Hu <jian.hu@amlogic.com>
+ Kevin Hilman <khilman@baylibre.com>,
+ Michael Turquette <mturquette@baylibre.com>, linux-kernel@vger.kernel.org,
+ Stephen Boyd <sboyd@kernel.org>, Jian Hu <jian.hu@amlogic.com>,
+ linux-arm-kernel@lists.infradead.org, Qiufang Dai <qiufang.dai@amlogic.com>,
+ linux-amlogic@lists.infradead.org, linux-clk@vger.kernel.org,
+ Chandle Zou <chandle.zou@amlogic.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Enable USB2 PHY and DWC3 controller for Meson A1 SoC.
+add support for Amlogic A1 clock driver, the clock includes 
+three parts: peripheral clocks, pll clocks, CPU clocks.
+sys pll and CPU clocks will be sent in next patch.
 
-Signed-off-by: Yue Wang <yue.wang@amlogic.com>
-Signed-off-by: Hanjie Lin <hanjie.lin@amlogic.com>
----
- arch/arm64/boot/dts/amlogic/meson-a1.dtsi | 43 +++++++++++++++++++++++++++++++
- 1 file changed, 43 insertions(+)
+Changes since v6 at [7]:
+-fix 'dt_binding_check' compiling error
+-add acked-by
 
-diff --git a/arch/arm64/boot/dts/amlogic/meson-a1.dtsi b/arch/arm64/boot/dts/amlogic/meson-a1.dtsi
-index 6fdc0dd..3b7ca50 100644
---- a/arch/arm64/boot/dts/amlogic/meson-a1.dtsi
-+++ b/arch/arm64/boot/dts/amlogic/meson-a1.dtsi
-@@ -6,6 +6,9 @@
- #include <dt-bindings/interrupt-controller/irq.h>
- #include <dt-bindings/interrupt-controller/arm-gic.h>
- #include <dt-bindings/power/meson-a1-power.h>
-+#include <dt-bindings/reset/amlogic,meson-a1-reset.h>
-+#include <dt-bindings/clock/a1-pll-clkc.h>
-+#include <dt-bindings/clock/a1-clkc.h>
- 
- / {
- 	compatible = "amlogic,a1";
-@@ -100,6 +103,17 @@
- 				#power-domain-cells = <1>;
- 				status = "okay";
- 			};
-+
-+			usb2_phy1: phy@40000 {
-+				compatible = "amlogic,a1-usb2-phy";
-+				clocks = <&clkc_periphs CLKID_XTAL_USB_PHY>;
-+				clock-names = "xtal";
-+				reg = <0x0 0x40000 0x0 0x2000>;
-+				resets = <&reset RESET_USBPHY>;
-+				reset-names = "phy";
-+				#phy-cells = <0>;
-+				power-domains = <&pwrc PWRC_USB_ID>;
-+			};
- 		};
- 
- 		gic: interrupt-controller@ff901000 {
-@@ -114,6 +128,35 @@
- 			#interrupt-cells = <3>;
- 			#address-cells = <0>;
- 		};
-+
-+		usb: usb@ffe09000 {
-+			status = "disabled";
-+			compatible = "amlogic,meson-a1-usb-ctrl";
-+			reg = <0x0 0xffe09000 0x0 0xa0>;
-+			#address-cells = <2>;
-+			#size-cells = <2>;
-+			ranges;
-+
-+			clocks = <&clkc_periphs CLKID_USB_CTRL>,
-+				 <&clkc_periphs CLKID_USB_BUS>,
-+				 <&clkc_periphs CLKID_XTAL_USB_CTRL>;
-+			clock-names = "usb_ctrl", "usb_bus", "xtal_usb_ctrl";
-+			resets = <&reset RESET_USBCTRL>;
-+
-+			dr_mode = "host";
-+
-+			phys = <&usb2_phy1>;
-+			phy-names = "usb2-phy1";
-+
-+			dwc3: usb@ff400000 {
-+				compatible = "snps,dwc3";
-+				reg = <0x0 0xff400000 0x0 0x100000>;
-+				interrupts = <GIC_SPI 90 IRQ_TYPE_LEVEL_HIGH>;
-+				dr_mode = "host";
-+				snps,dis_u2_susphy_quirk;
-+				snps,quirk-frame-length-adjustment = <0x20>;
-+			};
-+		};
- 	};
- 
- 	timer {
+Changes since v5 at [6]:
+-fix yaml file
+-add rst/current_en/l_detect parm detection
+-remove 'meson_eeclkc_data' in a1.c and a1-pll.c
+
+Changes since v4 at [5]:
+- change yaml GPL
+- drop meson-eeclk.c patch, add probe function in each driver
+- add CLK_IS_CRITICAL for sys_clk clock, drop the flag for sys_a and sys_b
+- add new parm for pll, add protection for rst parm
+- drop flag for a1_fixed_pll
+- remove the same comment for fclk_div, add "refer to"
+- add critical flag for a1_sys_clk
+- remove rtc table
+- rename a1_dspa_en_dspa and a1_dspb_en_dspb
+- remove useless comment
+
+Changes since v3 at [3]:
+-fix reparenting orphan failed, it depends on jerome's patch [4]
+-fix changelist in v3 about reparenting orphan
+-remove the dts patch 
+
+Changes since v2 at [2]:
+-add probe function for A1
+-seperate the clock driver into two patch
+-change some clock flags and ops
+-add support for a1 PLL ops
+-add A1 clock node
+-fix reparenting orphan clock failed, registering xtal_fixpll
+ and xtal_hifipll after the provider registration, it is not
+ a best way.
+
+Changes since v1 at [1]:
+-place A1 config alphabetically
+-add actual reason for RO ops, CLK_IS_CRITICAL, CLK_IGNORE_UNUSED
+-separate the driver into two driver: peripheral and pll driver
+-delete CLK_IGNORE_UNUSED flag for pwm b/c/d/e/f clock, dsp clock
+-delete the change in Kconfig.platforms, address to Kevin alone
+-remove the useless comments
+-modify the meson pll driver to support A1 PLLs
+
+[1] https://lkml.kernel.org/r/1569411888-98116-1-git-send-email-jian.hu@amlogic.com
+[2] https://lkml.kernel.org/r/1571382865-41978-1-git-send-email-jian.hu@amlogic.com
+[3] https://lkml.kernel.org/r/20191129144605.182774-1-jian.hu@amlogic.com
+[4] https://lkml.kernel.org/r/20191203080805.104628-1-jbrunet@baylibre.com
+[5] https://lkml.kernel.org/r/20191206074052.15557-1-jian.hu@amlogic.com
+[6] https://lkml.kernel.org/r/20191227094606.143637-1-jian.hu@amlogic.com
+[7] https://lkml.kernel.org/r/20200116080440.118679-1-jian.hu@amlogic.com
+
+Jian Hu (5):
+  dt-bindings: clock: meson: add A1 PLL clock controller bindings
+  clk: meson: add support for A1 PLL clock ops
+  clk: meson: a1: add support for Amlogic A1 PLL clock driver
+  dt-bindings: clock: meson: add A1 peripheral clock controller bindings
+  clk: meson: a1: add support for Amlogic A1 Peripheral clock driver
+
+ .../bindings/clock/amlogic,a1-clkc.yaml       |   65 +
+ .../bindings/clock/amlogic,a1-pll-clkc.yaml   |   52 +
+ drivers/clk/meson/Kconfig                     |   18 +
+ drivers/clk/meson/Makefile                    |    2 +
+ drivers/clk/meson/a1-pll.c                    |  360 +++
+ drivers/clk/meson/a1-pll.h                    |   56 +
+ drivers/clk/meson/a1.c                        | 2249 +++++++++++++++++
+ drivers/clk/meson/a1.h                        |  120 +
+ drivers/clk/meson/clk-pll.c                   |   47 +-
+ drivers/clk/meson/clk-pll.h                   |    2 +
+ include/dt-bindings/clock/a1-clkc.h           |   98 +
+ include/dt-bindings/clock/a1-pll-clkc.h       |   16 +
+ 12 files changed, 3078 insertions(+), 7 deletions(-)
+ create mode 100644 Documentation/devicetree/bindings/clock/amlogic,a1-clkc.yaml
+ create mode 100644 Documentation/devicetree/bindings/clock/amlogic,a1-pll-clkc.yaml
+ create mode 100644 drivers/clk/meson/a1-pll.c
+ create mode 100644 drivers/clk/meson/a1-pll.h
+ create mode 100644 drivers/clk/meson/a1.c
+ create mode 100644 drivers/clk/meson/a1.h
+ create mode 100644 include/dt-bindings/clock/a1-clkc.h
+ create mode 100644 include/dt-bindings/clock/a1-pll-clkc.h
+
 -- 
-2.7.4
+2.24.0
 
 
 _______________________________________________
