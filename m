@@ -2,26 +2,26 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 796791421C3
-	for <lists+linux-amlogic@lfdr.de>; Mon, 20 Jan 2020 03:59:14 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 712681421C6
+	for <lists+linux-amlogic@lfdr.de>; Mon, 20 Jan 2020 03:59:42 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=m3aR2Z6PE4Phd6n3GTI96rer0y6ibnGCPysAOcclUe0=; b=WUYSgWJX89pGgz
-	1gecUCX8NQgkbboOYzZ9jFOE0GG8DakOiOP/i2zFIwdupZ+j1sgxbDIltKV03VKbi8RCK3M9/qRMH
-	mfoFjoYAkIzgaU2K+URjYwHd+TuelwnDeGjfR9+EcGN+ApWPqSOvPgZLXG+KHcYTs7OLxRh2nZwIH
-	adbWztD7yBTCzvt2owyBrDO8OqyHpxVxeujDi7SMG+azx2hq0g79xnADx59GdKj6P9DH2Ar3Heqa/
-	8I4nBNMlX63cF6HiT9AVhg0XBwwl8JTACxSDQ/w8Bo9mgFGM6mnPDPvRlbWtr2P4Hk16hja7/3j9h
-	S5UCZgQS7ADvdtyrx0Kg==;
+	List-Owner; bh=Rn/TOhMW6T9x5BchrDAB1aPce8Y+PPJQFgGQlq/Qcyw=; b=AyBYvoRWCWk7Kl
+	DoaVd5501cISEX1wsQ+BhsdHOIvSb+Dg/gPbn9hDFpjfqLFS4dOu9jdpiLtytW2vpNBttUYR0MLUY
+	Dr3buc38tDnXD+duqtg+z4hsmFB2Kjp3T58bY458PrwnhBid1Nu30oiozWBWT2YpDPuigVkMp0jLl
+	dTVYsRnKnn1D/avfvW2OE5IX9YMiJ2M+kswXOKyN3gW3z3eP+XnNuqfTDF9j341J7xQyDHwNgo0vn
+	BNClHOLKqh9VzjZ/tAi8go2WJJ6Zmok4PdtwndFdx4c9Er9ViOrVh06dfhu+J2Qe7yXsZTN01mcEO
+	Hi1ICnly6XLY/7GwU7fQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1itNHU-0005C5-DQ; Mon, 20 Jan 2020 02:59:12 +0000
+	id 1itNHw-0005h0-Nv; Mon, 20 Jan 2020 02:59:40 +0000
 Received: from mail-sh.amlogic.com ([58.32.228.43])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1itNGt-0004iD-JU; Mon, 20 Jan 2020 02:58:36 +0000
+ id 1itNGv-0004iD-AE; Mon, 20 Jan 2020 02:58:38 +0000
 Received: from droid10.amlogic.com (10.18.11.213) by mail-sh.amlogic.com
  (10.18.11.5) with Microsoft SMTP Server id 15.1.1591.10; Mon, 20 Jan 2020
  10:58:56 +0800
@@ -29,17 +29,18 @@ From: Hanjie Lin <hanjie.lin@amlogic.com>
 To: Jerome Brunet <jbrunet@baylibre.com>, Neil Armstrong
  <narmstrong@baylibre.com>, Rob Herring <robh@kernel.org>, Greg Kroah-Hartman
  <gregkh@linuxfoundation.org>, Kevin Hilman <khilman@baylibre.com>
-Subject: [PATCH v7 1/5] dt-bindings: phy: Add Amlogic A1 USB2 PHY Bindings
-Date: Mon, 20 Jan 2020 10:58:02 +0800
-Message-ID: <1579489086-157767-2-git-send-email-hanjie.lin@amlogic.com>
+Subject: [PATCH v7 2/5] dt-bindings: usb: dwc3: Add the Amlogic A1 Family DWC3
+ Glue Bindings
+Date: Mon, 20 Jan 2020 10:58:03 +0800
+Message-ID: <1579489086-157767-3-git-send-email-hanjie.lin@amlogic.com>
 X-Mailer: git-send-email 2.7.4
 In-Reply-To: <1579489086-157767-1-git-send-email-hanjie.lin@amlogic.com>
 References: <1579489086-157767-1-git-send-email-hanjie.lin@amlogic.com>
 MIME-Version: 1.0
 X-Originating-IP: [10.18.11.213]
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200119_185835_636764_2FDCA982 
-X-CRM114-Status: UNSURE (   6.65  )
+X-CRM114-CacheID: sfid-20200119_185837_379493_2D7A609D 
+X-CRM114-Status: UNSURE (   6.25  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
@@ -73,32 +74,39 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Add the Amlogic A1 Family USB2 PHY Bindings
+The Amlogic A1 SoC Family embeds 1 USB Controllers:
+ - a DWC3 IP configured as Host for USB2 and USB3
 
-It supports Host mode only.
+A glue connects the controllers to the USB2 PHY of A1 SoC.
 
 Signed-off-by: Yue Wang <yue.wang@amlogic.com>
 Signed-off-by: Hanjie Lin <hanjie.lin@amlogic.com>
-Reviewed-by: Rob Herring <robh@kernel.org>
 ---
- .../bindings/phy/amlogic,meson-g12a-usb2-phy.yaml         | 15 +++++++++++++++
- 1 file changed, 15 insertions(+)
+ .../bindings/usb/amlogic,meson-g12a-usb-ctrl.yaml  | 23 ++++++++++++++++++++++
+ 1 file changed, 23 insertions(+)
 
-diff --git a/Documentation/devicetree/bindings/phy/amlogic,meson-g12a-usb2-phy.yaml b/Documentation/devicetree/bindings/phy/amlogic,meson-g12a-usb2-phy.yaml
-index 57d8603..3b7e763 100644
---- a/Documentation/devicetree/bindings/phy/amlogic,meson-g12a-usb2-phy.yaml
-+++ b/Documentation/devicetree/bindings/phy/amlogic,meson-g12a-usb2-phy.yaml
-@@ -14,6 +14,7 @@ properties:
+diff --git a/Documentation/devicetree/bindings/usb/amlogic,meson-g12a-usb-ctrl.yaml b/Documentation/devicetree/bindings/usb/amlogic,meson-g12a-usb-ctrl.yaml
+index 4efb77b..904b5d7 100644
+--- a/Documentation/devicetree/bindings/usb/amlogic,meson-g12a-usb-ctrl.yaml
++++ b/Documentation/devicetree/bindings/usb/amlogic,meson-g12a-usb-ctrl.yaml
+@@ -22,10 +22,14 @@ description: |
+   The DWC3 Glue controls the PHY routing and power, an interrupt line is
+   connected to the Glue to serve as OTG ID change detection.
+ 
++  The Amlogic A1 embeds a DWC3 USB IP Core configured for USB2 in
++  host-only mode.
++
+ properties:
    compatible:
      enum:
-       - amlogic,meson-g12a-usb2-phy
-+      - amlogic,meson-a1-usb2-phy
+       - amlogic,meson-g12a-usb-ctrl
++      - amlogic,meson-a1-usb-ctrl
  
-   reg:
-     maxItems: 1
-@@ -49,6 +50,20 @@ required:
-   - reset-names
-   - "#phy-cells"
+   ranges: true
+ 
+@@ -84,6 +88,25 @@ required:
+   - phys
+   - dr_mode
  
 +allOf:
 +  - if:
@@ -109,14 +117,19 @@ index 57d8603..3b7e763 100644
 +
 +    then:
 +      properties:
-+        power-domains:
-+          maxItems: 1
++        clocks:
++          minItems: 3
++        clock-names:
++          items:
++            - const: usb_ctrl
++            - const: usb_bus
++            - const: xtal_usb_ctrl
 +      required:
-+        - power-domains
++        - clock-names
 +
  examples:
    - |
-     phy@36000 {
+     usb: usb@ffe09000 {
 -- 
 2.7.4
 
