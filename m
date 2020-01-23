@@ -2,68 +2,67 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id DC14B1464DE
-	for <lists+linux-amlogic@lfdr.de>; Thu, 23 Jan 2020 10:51:23 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id E9FB51464E2
+	for <lists+linux-amlogic@lfdr.de>; Thu, 23 Jan 2020 10:51:26 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
 	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=8CSJVL0QlJEZeE6FwDPg7zFk6YFRVqOU6jejENBBBc0=; b=oBTdpqkvybmzEX
-	yrXHzWA/cXuMQRkBlBr3OX2Wvw4c6wmB0w0Mehnyp7DkLb3d61X3pj8hmuHb9o3a4p0NDippWG1ww
-	6EHPazZIgd+01Vd9jY4wVV99tBqBWBl2D8knFWWkRwY+a7XTfiGXdWvEovaufpQVyTAn+1yhUrY51
-	IEpQZmctDrEMCLFE4slSLLC7pBPrZjGQ0vDK7jzMjwU4QJskCa03x9U2qiQplrF34TIwEUqZKXXjZ
-	Rm2cJ+irK7hvQBOW0+Qe5koq8Sip76h990sG1zBJjQGmbxZh18/eSwLykV/qI6Zhlq/Ket7WLJzL2
-	ua8J5YK1NoN8S6wpFi/Q==;
+	List-Owner; bh=c30aw27FybeeGgjLccYB0rCXUvfad34B7Cw2LZMt4HQ=; b=ka7UG6gDAYWgTt
+	oGrY7+PJFoquN4B9ty5PsRwfwsj3XgcmL8NBloAs5i4qDU53dZAVrd+jV7fDz/GN4xLzH1wNujkWI
+	BNjEwaBrKjqCmEH68ZMD4KnCw9d9izyATJ3WaNjMITyRAAfPi1Jzslx1yhH5Tx54tYP90hUSYT65b
+	ZEgS76DGfD71LsWmFYuYcPG4wTIfCVac6i5OWBx97qs7b4kVDxL3ugJ71QlVK35E+OWRETjLsmXJe
+	QqJAjbuo9J5x0a3g1+f79Te44fQk/+zHj0+GDGyztrOPzcbEtWQ/SBjRfvlgLPlsiWbXIRgW06Us7
+	fGmNH7Kp9iPk8wvaK43w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iuZ8z-0001HB-RY; Thu, 23 Jan 2020 09:51:21 +0000
-Received: from mail-wr1-x441.google.com ([2a00:1450:4864:20::441])
+	id 1iuZ93-0001Kk-7K; Thu, 23 Jan 2020 09:51:25 +0000
+Received: from mail-wm1-x344.google.com ([2a00:1450:4864:20::344])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iuZ8w-0001FW-5J
- for linux-amlogic@lists.infradead.org; Thu, 23 Jan 2020 09:51:19 +0000
-Received: by mail-wr1-x441.google.com with SMTP id z3so2343025wru.3
- for <linux-amlogic@lists.infradead.org>; Thu, 23 Jan 2020 01:51:17 -0800 (PST)
+ id 1iuZ8y-0001Gd-Kf
+ for linux-amlogic@lists.infradead.org; Thu, 23 Jan 2020 09:51:21 +0000
+Received: by mail-wm1-x344.google.com with SMTP id q9so1829785wmj.5
+ for <linux-amlogic@lists.infradead.org>; Thu, 23 Jan 2020 01:51:20 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=subject:to:cc:references:from:autocrypt:organization:message-id
  :date:user-agent:mime-version:in-reply-to:content-language
  :content-transfer-encoding;
- bh=IL15pRU9pFPgz6S6Tf7uhh3iwf+4kU+o6fQpOFHsq5Q=;
- b=Zs7/UVvf2IkrzBlosC4cjUUZhiO3Fdjkl90Zs9Gt4vVXIY0+sCmE14mQK4brxCJ1vr
- lUfMrobrtE59nuM8Dac3pEa+G894wORGOO15xB7DhWQ3T9FZvVrifRCRJsLPUW9CgbgU
- IhlwUfpLq3rEZragtyyTXDTCZzgA92NWCCOWNpMd2cy8HB+dd9hBoi/DEOg8Jyb+dsd3
- 9LNBzoY2env+HpPLBfpNg8Cjrddck1/fzrfXo8JSEBvbY2kMArMDmmw9LbLvXsFhqJew
- eKJzcn5e59jh4srLzU6KtUUkap3RncAlKDaq1e0ODiQ7lgk+86eo79n83bHID+vZt7rs
- Tgfg==
+ bh=vuHPx4RQpIEDvTuAWja6GM20to6z44c+h9jxSZDVyhI=;
+ b=kulLRlzbPgVEzx1FbNwhw+VbMaiJaCZAhmwLgv2cC85kmG7Fkv+SQq2DNjShAzHBV/
+ 7hwNZM87UdlVmmDH4pzrtpm01or8NiHIq4bnHUm3vtPqHmXxoD4NMApQlKUO6YCqi+gi
+ w5TGeYRq4W0MpTTc2kVUYY3qkhzD1hAKtDaOxBptPo1+Xqhyi034lmgPY9txqRb27yX8
+ 6P+t4/hezuffeCnOEzJJHzWTDb4+ZmS31fdHEt7yWluwsk4FF7WfZLcA2WjJw+i6cmea
+ 73Z9JTFGT39Zed/gK/Laz/44/NF3xa6yF4tKC9jbss6ps0/VkngdulzTz9n15dj29J3e
+ ehiA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:subject:to:cc:references:from:autocrypt
  :organization:message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=IL15pRU9pFPgz6S6Tf7uhh3iwf+4kU+o6fQpOFHsq5Q=;
- b=G8cJ2I1Bs4FFl+C/nXIqM17ysUxCtOYfUXUNLSzOxWLAefVHMbvRadXLZvkiqORmIU
- 1aSadaJ98um2hvf5pH3y87vY4+fmN4Lo4kqtI7wkx3DZAAw8L5QqNYPiqHzwaFDAcf+Z
- hf/bBM2k3x+C00kxhZtvimhI6w1+QsXUxZlM7FgBIm0LldkYtdtbDArwnbQjhn/w4kza
- YVk1NmETnx6pQgNlpnHes/n6AStutP3wUwqRB0tx5diR4Nk4e/oDFrewiofYDxdLn9pA
- KN+uoqzKAXpbHVnhm6OaKZRt1abHHDHpmmDPAso7zFXH+9eLDa9sSH5PU9VXqb9znCQr
- hhQQ==
-X-Gm-Message-State: APjAAAUFZeVE76sKBQjYK9OcFsrgYg5JBot9AiuikThLIN3FVIKjaFT7
- v+ZTb5FNiuG+fJhWX1LbPCxpOQ==
-X-Google-Smtp-Source: APXvYqws0wuB0YrfK5tNuJ8KF0E7NpTeEXybHdH9RubT/0dKVHKDma2ewhI8Jx7Fh8LQ3yrvM7/IRw==
-X-Received: by 2002:a05:6000:1187:: with SMTP id
- g7mr16701836wrx.109.1579773076516; 
- Thu, 23 Jan 2020 01:51:16 -0800 (PST)
+ bh=vuHPx4RQpIEDvTuAWja6GM20to6z44c+h9jxSZDVyhI=;
+ b=sqcEFzOoYQssa30PciAjALtlFk//OR7xTT7OfodDPsHdnQxndev5a2uxUaYru5yohr
+ REIZA1lVZx+LC28UdA1eWh14hjMdNyZQDk2wfAJCAjjgVhjrYpeB/MFqz2U/koFafrct
+ 2EcpsVgu4phPzL19G24H4rNovX2f8BQkC4TUrxFGkY/a29bban33WWlJBqO7RuenRtaO
+ /u/Ubqm9SV1/Q/ajkqyhhn8wEZFJbC7+1Rmr6DyRmumeB7L9qyA2O7LXWOX49mqANJyi
+ EtheUWbUihVehiXbQsTxT53rkJLzAkxpJwRAvHNBKdN/ZCV0xZPV+zPhB7zRYo/OmCOh
+ Xsug==
+X-Gm-Message-State: APjAAAWTmoqhzPqw6BFameZrJnuXxR0XOJTWmMNNRAo88baKZ3IEZZgJ
+ av+Gpc3Hb1QqGkS6+7RjpZogbg==
+X-Google-Smtp-Source: APXvYqxlDu5M4fz5+GeSWyFelyuWeDdxPQ2Leanlp2hz1bQf28XLLmUnvOCo7or4Qoy+MI1KwCUYdw==
+X-Received: by 2002:a7b:cc14:: with SMTP id f20mr3227210wmh.58.1579773079283; 
+ Thu, 23 Jan 2020 01:51:19 -0800 (PST)
 Received: from [10.1.2.12] (laubervilliers-658-1-213-31.w90-63.abo.wanadoo.fr.
  [90.63.244.31])
- by smtp.gmail.com with ESMTPSA id b68sm2039078wme.6.2020.01.23.01.51.15
+ by smtp.gmail.com with ESMTPSA id q19sm1927834wmc.12.2020.01.23.01.51.18
  (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Thu, 23 Jan 2020 01:51:15 -0800 (PST)
-Subject: Re: [PATCH 1/3] dt-bindings: clk: meson: add the gxl internal dac gate
+ Thu, 23 Jan 2020 01:51:18 -0800 (PST)
+Subject: Re: [PATCH 2/3] clk: meson: gxbb: add the gxl internal dac gate
 To: Jerome Brunet <jbrunet@baylibre.com>, linux-clk@vger.kernel.org
 References: <20200122100451.2443153-1-jbrunet@baylibre.com>
- <20200122100451.2443153-2-jbrunet@baylibre.com>
+ <20200122100451.2443153-3-jbrunet@baylibre.com>
 From: Neil Armstrong <narmstrong@baylibre.com>
 Autocrypt: addr=narmstrong@baylibre.com; prefer-encrypt=mutual; keydata=
  xsBNBE1ZBs8BCAD78xVLsXPwV/2qQx2FaO/7mhWL0Qodw8UcQJnkrWmgTFRobtTWxuRx8WWP
@@ -115,23 +114,23 @@ Autocrypt: addr=narmstrong@baylibre.com; prefer-encrypt=mutual; keydata=
  zR8QplXA5kogS4kLe/7/JmlDMO8Zgm9vKLHSUeesLOrjdZ59EcjldNNBszRZQgEhwaarfz46
  BSwxi7g3Mu7u5kUByanqHyA=
 Organization: Baylibre
-Message-ID: <8231eb08-06c9-7acd-317d-61ecf2a55ca2@baylibre.com>
-Date: Thu, 23 Jan 2020 10:51:15 +0100
+Message-ID: <a413d560-3487-08ef-bfda-f8c459af6c04@baylibre.com>
+Date: Thu, 23 Jan 2020 10:51:18 +0100
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101
  Thunderbird/68.2.2
 MIME-Version: 1.0
-In-Reply-To: <20200122100451.2443153-2-jbrunet@baylibre.com>
+In-Reply-To: <20200122100451.2443153-3-jbrunet@baylibre.com>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200123_015118_626036_7A8CB6FC 
-X-CRM114-Status: GOOD (  12.48  )
+X-CRM114-CacheID: sfid-20200123_015120_684788_08D02119 
+X-CRM114-Status: GOOD (  14.32  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:441 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:344 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -157,24 +156,55 @@ Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
 On 22/01/2020 11:04, Jerome Brunet wrote:
-> Add the gxl ACODEC clock id to the gxbb clock controller bindings
+> Add the ACODEC clock gate to the gxl clk controller driver
 > 
 > Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
 > ---
->  include/dt-bindings/clock/gxbb-clkc.h | 1 +
->  1 file changed, 1 insertion(+)
+>  drivers/clk/meson/gxbb.c | 3 +++
+>  drivers/clk/meson/gxbb.h | 2 +-
+>  2 files changed, 4 insertions(+), 1 deletion(-)
 > 
-> diff --git a/include/dt-bindings/clock/gxbb-clkc.h b/include/dt-bindings/clock/gxbb-clkc.h
-> index db0763e96173..4073eb7a9da1 100644
-> --- a/include/dt-bindings/clock/gxbb-clkc.h
-> +++ b/include/dt-bindings/clock/gxbb-clkc.h
-> @@ -146,5 +146,6 @@
->  #define CLKID_CTS_VDAC		201
->  #define CLKID_HDMI_TX		202
->  #define CLKID_HDMI		205
-> +#define CLKID_ACODEC		206
+> diff --git a/drivers/clk/meson/gxbb.c b/drivers/clk/meson/gxbb.c
+> index 1f9c056e684c..47916c4f1700 100644
+> --- a/drivers/clk/meson/gxbb.c
+> +++ b/drivers/clk/meson/gxbb.c
+> @@ -2613,6 +2613,7 @@ static MESON_GATE(gxbb_assist_misc, HHI_GCLK_MPEG0, 23);
+>  static MESON_GATE(gxbb_emmc_a, HHI_GCLK_MPEG0, 24);
+>  static MESON_GATE(gxbb_emmc_b, HHI_GCLK_MPEG0, 25);
+>  static MESON_GATE(gxbb_emmc_c, HHI_GCLK_MPEG0, 26);
+> +static MESON_GATE(gxl_acodec, HHI_GCLK_MPEG0, 28);
+>  static MESON_GATE(gxbb_spi, HHI_GCLK_MPEG0, 30);
 >  
->  #endif /* __GXBB_CLKC_H */
+>  static MESON_GATE(gxbb_i2s_spdif, HHI_GCLK_MPEG1, 2);
+> @@ -3100,6 +3101,7 @@ static struct clk_hw_onecell_data gxl_hw_onecell_data = {
+>  		[CLKID_HDMI_SEL]	    = &gxbb_hdmi_sel.hw,
+>  		[CLKID_HDMI_DIV]	    = &gxbb_hdmi_div.hw,
+>  		[CLKID_HDMI]		    = &gxbb_hdmi.hw,
+> +		[CLKID_ACODEC]		    = &gxl_acodec.hw,
+>  		[NR_CLKS]		    = NULL,
+>  	},
+>  	.num = NR_CLKS,
+> @@ -3491,6 +3493,7 @@ static struct clk_regmap *const gxl_clk_regmaps[] = {
+>  	&gxl_hdmi_pll_od,
+>  	&gxl_hdmi_pll_od2,
+>  	&gxl_hdmi_pll_dco,
+> +	&gxl_acodec,
+>  };
+>  
+>  static const struct meson_eeclkc_data gxbb_clkc_data = {
+> diff --git a/drivers/clk/meson/gxbb.h b/drivers/clk/meson/gxbb.h
+> index b53584fe66cf..1ee8cb7e2f5a 100644
+> --- a/drivers/clk/meson/gxbb.h
+> +++ b/drivers/clk/meson/gxbb.h
+> @@ -188,7 +188,7 @@
+>  #define CLKID_HDMI_SEL		  203
+>  #define CLKID_HDMI_DIV		  204
+>  
+> -#define NR_CLKS			  206
+> +#define NR_CLKS			  207
+>  
+>  /* include the CLKIDs that have been made part of the DT binding */
+>  #include <dt-bindings/clock/gxbb-clkc.h>
 > 
 
 Acked-by: Neil Armstrong <narmstrong@baylibre.com>
