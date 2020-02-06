@@ -2,72 +2,73 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C7F0E154BE4
-	for <lists+linux-amlogic@lfdr.de>; Thu,  6 Feb 2020 20:19:07 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9E66E154BD4
+	for <lists+linux-amlogic@lfdr.de>; Thu,  6 Feb 2020 20:18:51 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=anqRLQ7cf/cbPnsnV8GV1HXHd0KdDG9jgeTwUzCsT1M=; b=bWrleHpi3JONG6
-	n7TrUFTqQyJl1/MDQKeO457a5jkGyx9fxJuu5jNJpFpepkGSwxVXLjHiXs6mgjU6g1LkC9aPYz02X
-	Ce1uqHAwQGy2LvVgELGm3Ose+rFNFqATksN40ioEKfrkPYV//cqwPQfPMvC8zqBhQKY8uNg55Ys75
-	2C9Q3YRcwuq5IWy2BCWFnUu2jacgtmzsWZZi39cXqbeT1jloH6L4IHDcf0CeDhgsLPip5a674ARjk
-	Ol54IxxIwDFnvsU6HEQ0Tw5n3FIrY9rblBot2qWPjyklbMzLyazXkCpxCIi/FYBzIj4tWHC90QJPn
-	iXpDZUOE7PfAy5RE19rw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=BRpvblRnTo+woEioPwM66a/xuIKhPh/m0QuufjTldYw=; b=Qz376AfWyQ7Tuh
+	HwzoRbFvM+s5419PDhJy4IxLv9a75kkS/qgWwJ2noVE1aGRNVVbzJ+QhNZLJmcQazMHymprGBXwQz
+	cTVrmMwGPSd1uEDlP8cRVeAnY+aKRoO/0ZEGgNS4gI7pyPScV26umyYVWBD5ZMhMzz6MTDesyRCyH
+	3qlo0b+pMOl5G20TE7axbsgVnn4yryNOjcJMMNhxYqWYzfgdCVelp8ijE8oryMxZYoT4ndYIjPxj0
+	ME/1tubiMTBueO1tOWYd/UR7qi02mBh9q9S0uGdDWwM8ZVcwDUPP7clqxMANA0XG32LB+7sbVUI85
+	cEhOEzxUFLwDq7SEUIuA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1izmfk-0008Fs-LT; Thu, 06 Feb 2020 19:18:44 +0000
-Received: from mail-wr1-x441.google.com ([2a00:1450:4864:20::441])
+	id 1izmfj-0008FJ-OE; Thu, 06 Feb 2020 19:18:43 +0000
+Received: from mail-wr1-x443.google.com ([2a00:1450:4864:20::443])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1izmff-0008Da-Gx
+ id 1izmfg-0008De-CL
  for linux-amlogic@lists.infradead.org; Thu, 06 Feb 2020 19:18:41 +0000
-Received: by mail-wr1-x441.google.com with SMTP id w12so8598008wrt.2
- for <linux-amlogic@lists.infradead.org>; Thu, 06 Feb 2020 11:18:38 -0800 (PST)
+Received: by mail-wr1-x443.google.com with SMTP id a6so8534235wrx.12
+ for <linux-amlogic@lists.infradead.org>; Thu, 06 Feb 2020 11:18:40 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=7C4Ha7zAXoHJLeQuNXMkRQPbmeP4ogREDDVwBdo96PU=;
- b=DxnTXJPqXXPnizJLFNrqa8GwJ8gMWT/axeWYGzcs3ljXjPgGTyKNnBVVA21YieyHxn
- k6v/3pUpzARJ8UF8hbtsbjgwA5koasldIhE9esnWmv9fb8wrU30l7FpIa2j9RZLV21nM
- NQjz6sWEVlRvKoNM9icc+5FvS9SOzdX5tWCRYpAigUOBi1QUUh+f8YhLwrw+zvOyEecl
- ppc45FZOr/DBqaSDGmVBYBlRWqs1Q0h8ACoyqG1Oglt2yIRBAB92tqdBciC2LQEBu6hm
- DF49GWWLO91Z3pIJDuBYpqgB/w8lx5C5sV0p+/R7MhYxbVu2s7Vs+bUszVITV2jVje+G
- Cf0g==
+ h=from:to:cc:subject:date:message-id:in-reply-to:references
+ :mime-version:content-transfer-encoding;
+ bh=6mFlT0Omv41nAtEpTgYWO4Xf2iU3uM7fX834ml+D12E=;
+ b=rci9PqEx4hby5MvW1khg7iEKwuy1bfbD4iaH4uETQBur1Za15XCzVjeFY1VfdBhtw4
+ Sgm+lIqBzDWUcXws81WyInQc4DgofK0ajNixco/KiwkevvAVCOdtY5ZeQ6xfN/Ef6rVb
+ GayBIdYOso2YrWls5jJXiF/U+8TKQSpE/sJZNy5HxzOqmim+LVfpuTuYr/kwh/7kYfdW
+ Y3awX+mVUGcHmrjyQdCGHxtp6dtxRCX/efFt9Twi9ODg1shreYkTyHnQOaQ/ER9EN8Ut
+ ptxJLeh9r0Gvc7WMEkLdB6fdxT1wUa0xnxOwgm+0Q4KtNxTa3y6OHyult0N4gOrTG7WX
+ OpKQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=7C4Ha7zAXoHJLeQuNXMkRQPbmeP4ogREDDVwBdo96PU=;
- b=EJhaQKgokb+P6foRElVc0yEn1voN7CxHt+The/SA1g2FBS6sAsabEHMcv+jIL6UeoZ
- la8T46i/cv4/ZXPAwT8KS43prxN9Ygpllq7SM04TbC124McIx/mlTT4jOfTZt89CQHgx
- T1BqKKPTeaDU5T6lNVevD7Ei/JJgvB9FWKvhbQ72+a2VAs46CEaN0jB8I1q2VG2OTd6S
- B5ruZ8IiLa5rcjEk6oBNUVnMWEugsQS0tFUw2+Qh4zTwFghk3YOnVR1+YFBCTjaDHwdp
- GivgIyOwlqiEDYjx8QM76FP8l8zu2uZSiwLGV6dvtdQ2A/tjTl2cuv9aarzCaEFzwhPn
- dzBQ==
-X-Gm-Message-State: APjAAAWwTc7RFNzD4ernGB8uUYvLD9ViXaqYRebFRJF1Rgenbx9QDFT9
- FqFMODg6Ii2pSwhQ1uL+7whpiw==
-X-Google-Smtp-Source: APXvYqyUIKBo5GX0ik0zx1IEIcuY8em6EMApdnkWu4ZdvEAKTEYUUM/sB0yoLyYs2WmHo5wQQH3+Fg==
-X-Received: by 2002:a05:6000:4:: with SMTP id h4mr5608872wrx.403.1581016717398; 
- Thu, 06 Feb 2020 11:18:37 -0800 (PST)
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
+ :references:mime-version:content-transfer-encoding;
+ bh=6mFlT0Omv41nAtEpTgYWO4Xf2iU3uM7fX834ml+D12E=;
+ b=L3gZX2rh/sdXljZUbpeiWSkpZ+f/yIb7X9wEouIcRoDSaMjMkxBVN/2IDFOmIaHnen
+ cMVNY0Wjpeavvbn2cuQbHckbPw6ZzrqmLZ+8s/meJxTS7BMY7S1LOfHmjQ67zHSsgzIP
+ sqynShKuiVCeuSiPjf98TvKuhT2l+mFh/1OWTc0F7qGvL3gI2NkxNzacwVVHREt8MOI7
+ DOZiDUm+NuhJdDydbw2zcO9hlyc8UK/prD1OP104hVy24aENWv44aLK1FpqaaUttddzY
+ grpqcY3+Dx2ifM54GP4xMFjUSn5a9xcG93Qm/RV31YGFdebLp/F2/u1RnkepxzjwF1iU
+ ASrQ==
+X-Gm-Message-State: APjAAAUwjH5PRBuA2PtHSfnT1xt3ArzBL4ItMUYRLS4r+M77suB5txrM
+ tO/az/k18TY0sZtni67GptwiDw==
+X-Google-Smtp-Source: APXvYqyowlhqCLlPiC8LwlQGO8ZeahyUMuyPS6kHuCVL6/61Z4rWlDzBpMhGfN5LPnPhHBF2WM35Pw==
+X-Received: by 2002:adf:bc87:: with SMTP id g7mr5375779wrh.121.1581016718863; 
+ Thu, 06 Feb 2020 11:18:38 -0800 (PST)
 Received: from bender.baylibre.local ([2a01:e35:2ec0:82b0:7d33:17f7:8097:ecc7])
- by smtp.gmail.com with ESMTPSA id m3sm272662wrs.53.2020.02.06.11.18.36
+ by smtp.gmail.com with ESMTPSA id m3sm272662wrs.53.2020.02.06.11.18.37
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Thu, 06 Feb 2020 11:18:36 -0800 (PST)
+ Thu, 06 Feb 2020 11:18:38 -0800 (PST)
 From: Neil Armstrong <narmstrong@baylibre.com>
 To: a.hajda@samsung.com, Laurent.pinchart@ideasonboard.com, jonas@kwiboo.se,
  jernej.skrabec@siol.net, boris.brezillon@collabora.com
-Subject: [PATCH v4 00/11] drm/bridge: dw-hdmi: implement bus-format
- negotiation and YUV420 support
-Date: Thu,  6 Feb 2020 20:18:23 +0100
-Message-Id: <20200206191834.6125-1-narmstrong@baylibre.com>
+Subject: [PATCH v4 01/11] drm/bridge: dw-hdmi: set mtmdsclock for deep color
+Date: Thu,  6 Feb 2020 20:18:24 +0100
+Message-Id: <20200206191834.6125-2-narmstrong@baylibre.com>
 X-Mailer: git-send-email 2.22.0
+In-Reply-To: <20200206191834.6125-1-narmstrong@baylibre.com>
+References: <20200206191834.6125-1-narmstrong@baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200206_111839_625921_8E51890E 
-X-CRM114-Status: UNSURE (   9.59  )
+X-CRM114-CacheID: sfid-20200206_111840_416928_4F4687BC 
+X-CRM114-Status: UNSURE (   8.48  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
@@ -75,7 +76,7 @@ X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:441 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:443 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -100,66 +101,48 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-This patchset is based on Boris's v10 "drm: Add support for bus-format negotiation" at [1]
-patchset to implement full bus-format negotiation for DW-HDMI, including YUV420 support and
-10/12/16bit YUV444, YUV422 and RGB. The Color Space Converter support is already implemented.
+From: Jonas Karlman <jonas@kwiboo.se>
 
-And the counterpart implementation in the Amlogic Meson VPU dw-hdmi glue :
-- basic bus-format negotiation to select YUV444 bus-format as DW-HDMI input
-- YUV420 support when HDMI2.0 YUV420 modeset
+Configure the correct mtmdsclock for deep colors to prepare support
+for 10, 12 & 16bit output.
 
-This is a follow-up from the previous attempts :
-- "drm/meson: Add support for HDMI2.0 YUV420 4k60" at [2]
-- "drm/meson: Add support for HDMI2.0 4k60" at [3]
+Signed-off-by: Jonas Karlman <jonas@kwiboo.se>
+Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
+---
+ drivers/gpu/drm/bridge/synopsys/dw-hdmi.c | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
 
-Changes sincd v3 at [6]:
-- Added "Plug atomic state hooks to the default implementation" on drm/bridge: dw-hdmi
-- Also added these atomic state hooks in meson-dw-hdmi in patch 7
-- Rebased on latest drm-misc-next including patches 1-7 of [1]
-
-Changes since RFC v2 at [5]:
-- Added fixes from Jonas, who tested and integrated it for Rockchip SoCs
-- Added support for 10/12/16bit tmds clock calculation
-- Added support for max_bcp connector property
-- Adapted to Boris's v4 patchset
-- Fixed typos reported by boris
-
-Changes since RFC v1 at [4]:
-- Rewrote negociation using the v2 patchset, including full DW-HDMI fmt negociation
-
-[1] https://patchwork.freedesktop.org/patch/msgid/20200128135514.108171-1-boris.brezillon@collabora.com
-[2] https://patchwork.freedesktop.org/patch/msgid/20190520133753.23871-1-narmstrong@baylibre.com
-[3] https://patchwork.freedesktop.org/patch/msgid/1549022873-40549-1-git-send-email-narmstrong@baylibre.com
-[4] https://patchwork.freedesktop.org/patch/msgid/20190820084109.24616-1-narmstrong@baylibre.com
-[5] https://patchwork.freedesktop.org/patch/msgid/20190827081425.15011-1-narmstrong@baylibre.com
-[6] https://patchwork.freedesktop.org/patch/msgid/20191218154637.17509-1-narmstrong@baylibre.com
-
-Jonas Karlman (2):
-  drm/bridge: dw-hdmi: set mtmdsclock for deep color
-  drm/bridge: dw-hdmi: add max bpc connector property
-
-Neil Armstrong (9):
-  drm/bridge: dw-hdmi: Plug atomic state hooks to the default
-    implementation
-  drm/bridge: synopsys: dw-hdmi: add bus format negociation
-  drm/bridge: synopsys: dw-hdmi: allow ycbcr420 modes for >= 0x200a
-  drm/meson: venc: make drm_display_mode const
-  drm/meson: meson_dw_hdmi: add bridge and switch to drm_bridge_funcs
-  drm/meson: dw-hdmi: stop enforcing input_bus_format
-  drm/meson: venc: add support for YUV420 setup
-  drm/meson: vclk: add support for YUV420 setup
-  drm/meson: Add YUV420 output support
-
- drivers/gpu/drm/bridge/synopsys/dw-hdmi.c | 302 +++++++++++++++++++++-
- drivers/gpu/drm/meson/meson_dw_hdmi.c     | 200 +++++++++++---
- drivers/gpu/drm/meson/meson_vclk.c        |  93 +++++--
- drivers/gpu/drm/meson/meson_vclk.h        |   7 +-
- drivers/gpu/drm/meson/meson_venc.c        |  10 +-
- drivers/gpu/drm/meson/meson_venc.h        |   4 +-
- drivers/gpu/drm/meson/meson_venc_cvbs.c   |   6 +-
- include/drm/bridge/dw_hdmi.h              |   1 +
- 8 files changed, 548 insertions(+), 75 deletions(-)
-
+diff --git a/drivers/gpu/drm/bridge/synopsys/dw-hdmi.c b/drivers/gpu/drm/bridge/synopsys/dw-hdmi.c
+index 67fca439bbfb..9e0927d22db6 100644
+--- a/drivers/gpu/drm/bridge/synopsys/dw-hdmi.c
++++ b/drivers/gpu/drm/bridge/synopsys/dw-hdmi.c
+@@ -1818,9 +1818,26 @@ static void hdmi_av_composer(struct dw_hdmi *hdmi,
+ 
+ 	dev_dbg(hdmi->dev, "final pixclk = %d\n", vmode->mpixelclock);
+ 
++	if (!hdmi_bus_fmt_is_yuv422(hdmi->hdmi_data.enc_out_bus_format)) {
++		switch (hdmi_bus_fmt_color_depth(
++				hdmi->hdmi_data.enc_out_bus_format)) {
++		case 16:
++			vmode->mtmdsclock = (u64)vmode->mpixelclock * 2;
++			break;
++		case 12:
++			vmode->mtmdsclock = (u64)vmode->mpixelclock * 3 / 2;
++			break;
++		case 10:
++			vmode->mtmdsclock = (u64)vmode->mpixelclock * 5 / 4;
++			break;
++		}
++	}
++
+ 	if (hdmi_bus_fmt_is_yuv420(hdmi->hdmi_data.enc_out_bus_format))
+ 		vmode->mtmdsclock /= 2;
+ 
++	dev_dbg(hdmi->dev, "final tmdsclk = %d\n", vmode->mtmdsclock);
++
+ 	/* Set up HDMI_FC_INVIDCONF */
+ 	inv_val = (hdmi->hdmi_data.hdcp_enable ||
+ 		   (dw_hdmi_support_scdc(hdmi) &&
 -- 
 2.22.0
 
