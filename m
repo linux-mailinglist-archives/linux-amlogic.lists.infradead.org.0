@@ -2,86 +2,56 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 8210215F723
-	for <lists+linux-amlogic@lfdr.de>; Fri, 14 Feb 2020 20:51:03 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 63BA915F83E
+	for <lists+linux-amlogic@lfdr.de>; Fri, 14 Feb 2020 21:56:29 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:References
-	:In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:
+	In-Reply-To:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=AF495WMIow/Vl24IcKfU59m3JjHkGMyi0aza6aHVYNU=; b=TKJ9jblOzYAW+v
-	VDq2hUx30pAqFOXTQYKFKv1A5GDnwd8IiDO31d0l6OGV7XfgeRuXUw2LXirkBFsx0l8bN/wCk6Cw/
-	0jK9Hfdb79spO0S0n8kTO3dgIvoXn5H1UWrF3t7DR3VuZeOjDQhAe5xAiXTbVnZkMK96nhcgk87tz
-	xX+bj5HhhomTiZ6sWkoVYU/KawTNCA4BllfvPZv3EYroCmxRrtSkhTDlIU/zK8JiVd2DIEVSjKV0S
-	yMQzZ8XLI1STE2f5/1QyXqWlQuxMCPZrtocGdNInh90nXCiytg2l1y72s981Yj0lVxeBoiZtoEKfC
-	Ms6BsG50BOERGJTPjiLA==;
+	References:List-Owner; bh=uRNBwivRzAfSqBcbCfc5553jGrl8nnhMEuzV4W7fRzA=; b=UYq
+	O1sE8BG7ytCIvhLHIOnpHBuzjF+hOyEe+IVAC1FPUnKvQvHXWkrwuZSPULj03avCRsJtPu6Hrbj/I
+	teQdsAdxQDYo7gDriBybVPUM+2b2fjo3LZnk/f5Ms9lP/bw1+pA31l+j4YOPDfg3iAc0QAheHyIF/
+	fwLzfY/SpP0KUXK9Xs3pY1K8b0OaCk6af8+INpoNc39CkRCc3Mo3rF2NwRHUXkW/WrFC0CgJtmy9V
+	1CaCKxfWmGf/X77PZdb56NOlE8XLvCMeu0z/PWtHpGgiGCWZ8Ouvbh8YNob50uefi2vRzmGw0yt6c
+	V0zxF2yZM+CzLHOFAzHTB72esiQbQ1A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j2gzM-0001nq-FV; Fri, 14 Feb 2020 19:51:00 +0000
-Received: from mail-wr1-x441.google.com ([2a00:1450:4864:20::441])
- by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j2gzI-0001mp-IG
- for linux-amlogic@lists.infradead.org; Fri, 14 Feb 2020 19:50:58 +0000
-Received: by mail-wr1-x441.google.com with SMTP id t3so12281794wru.7
- for <linux-amlogic@lists.infradead.org>; Fri, 14 Feb 2020 11:50:55 -0800 (PST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=from:to:cc:subject:in-reply-to:references:date:message-id
- :mime-version; bh=RC5diiaR31GO1rhNQqP799z+UvDMaz6Wswnev5LOZWQ=;
- b=nxT8uiE/z52YUercio9Z5U9t7IR3335+MJiJlP80FZE6VyMExWaZrdmMWfDGExAHJH
- UyKPXipXu0iaHR4UEWlfizHzMWSOaQxyrEdJJR783jkcXSGK9VsyV01m2xMT0Mw8wlbO
- AaGiC16TBHGyAKgukrHgBCtrmcFsmgrF8VJJq46pfS7/biBsMnKlXrp9aIxSIXpEtxtR
- PLM75PKRSTkJnEZE5X9BssKTdQqAQ9xFVsjDPMDtFdM5VT2ICVDPbK3G/1E4QLJcjL04
- PtD8CJCvmor2gmivTA7eV+66UuAsYVEzIRikVpVo0FnB49W3iDElogQ0zRQxZRC0XeSm
- dj0w==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:in-reply-to:references:date
- :message-id:mime-version;
- bh=RC5diiaR31GO1rhNQqP799z+UvDMaz6Wswnev5LOZWQ=;
- b=iEQ8BEIISy9p4Eti7qI85JgUVKsyBB3SsROK8xVeKCcfLu2cQtqLJPguUaZ8QqhSZ+
- dUAy9RSXW+CATGNNKsE15WaRQQX/vbWLHB5EEoFHQFSOgohvh0oku8SM+MuplISqj+PR
- rr6YbfLJdBg+Ku6iDsvyDSVHu4ZnV/1p+FYQnjxe/JNdUnH26mK6Wx+AdgwGaWe+q2GO
- iexdQuj63e/mx2s+NUInrMLHgXWJyhnnzU2PGhwwqx+QM6gFFoziPosGoacfpJmdTaPR
- Ryi94jlXbViCbNA78+04rJBVn9v2BpM4WP/sVwQV8UQm1Q2gW56DyZpaZK39nwnehNLG
- HwRA==
-X-Gm-Message-State: APjAAAW2N8ngVCWG9Jb+hxDXMGTX+fPP2Styqi5dO2KH7SKD4KtRshgr
- YwThphyLJp5788HT25sD9Px9Wg==
-X-Google-Smtp-Source: APXvYqxJ0lDeRgZFQoYhh/V5X69ykQbrkOdOXgABmMtigig5INOR94v2BGam/S6IxkftSmbnVRCbIg==
-X-Received: by 2002:a5d:540f:: with SMTP id g15mr5387293wrv.86.1581709854692; 
- Fri, 14 Feb 2020 11:50:54 -0800 (PST)
-Received: from localhost (c-71-197-186-152.hsd1.wa.comcast.net.
- [71.197.186.152])
- by smtp.gmail.com with ESMTPSA id 21sm8793510wmo.8.2020.02.14.11.50.53
- (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
- Fri, 14 Feb 2020 11:50:54 -0800 (PST)
-From: Kevin Hilman <khilman@baylibre.com>
-To: Jian Hu <jian.hu@amlogic.com>, Jerome Brunet <jbrunet@baylibre.com>,
- Neil Armstrong <narmstrong@baylibre.com>
-Subject: Re: [PATCH v4] arm64: dts: meson-a1: add I2C nodes
-In-Reply-To: <20200109031756.176547-1-jian.hu@amlogic.com>
-References: <20200109031756.176547-1-jian.hu@amlogic.com>
-Date: Fri, 14 Feb 2020 11:50:51 -0800
-Message-ID: <7htv3t9cdg.fsf@baylibre.com>
-MIME-Version: 1.0
+	id 1j2i0f-00029t-GT; Fri, 14 Feb 2020 20:56:25 +0000
+Received: from foss.arm.com ([217.140.110.172])
+ by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
+ id 1j2i0c-00028v-JK
+ for linux-amlogic@lists.infradead.org; Fri, 14 Feb 2020 20:56:24 +0000
+Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
+ by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id 6467E30E;
+ Fri, 14 Feb 2020 12:56:18 -0800 (PST)
+Received: from localhost (unknown [10.37.6.21])
+ by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id D73A53F68F;
+ Fri, 14 Feb 2020 12:56:17 -0800 (PST)
+Date: Fri, 14 Feb 2020 20:56:16 +0000
+From: Mark Brown <broonie@kernel.org>
+To: Jerome Brunet <jbrunet@baylibre.com>
+Subject: Applied "ASoC: meson: codec-glue: fix pcm format cast warning" to the
+ asoc tree
+In-Reply-To: <20200214131350.337968-6-jbrunet@baylibre.com>
+Message-Id: <applied-20200214131350.337968-6-jbrunet@baylibre.com>
+X-Patchwork-Hint: ignore
+X-Bad-Reply: In-Reply-To but no 'Re:' in Subject.
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200214_115056_606345_F69807ED 
-X-CRM114-Status: UNSURE (   7.33  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20200214_125622_681625_B4A25CC2 
+X-CRM114-Status: GOOD (  13.93  )
+X-Spam-Score: -2.0 (--)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-2.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:441 listed in]
- [list.dnswl.org]
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [217.140.110.172 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -93,37 +63,76 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, Rob
- Herring <robh@kernel.org>, Jianxin Pan <jianxin.pan@amlogic.com>,
- Wolfram Sang <wsa@the-dreams.de>,
- Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
- Michael Turquette <mturquette@baylibre.com>, linux-kernel@vger.kernel.org,
- devicetree@vger.kernel.org, Jian Hu <jian.hu@amlogic.com>,
- linux-i2c@vger.kernel.org, linux-amlogic@lists.infradead.org,
- linux-arm-kernel@lists.infradead.org
+Cc: devicetree@vger.kernel.org, alsa-devel@alsa-project.org,
+ kbuild test robot <lkp@intel.com>, Kevin Hilman <khilman@baylibre.com>,
+ Liam Girdwood <lgirdwood@gmail.com>, linux-kernel@vger.kernel.org,
+ Mark Brown <broonie@kernel.org>, linux-amlogic@lists.infradead.org
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Jian Hu <jian.hu@amlogic.com> writes:
+The patch
 
-> There are four I2C controllers in A1 series,
-> Share the same comptible with AXG. Compared to AXG,
-> Drive strength feature is newly added in A1.
->
-> Signed-off-by: Jian Hu <jian.hu@amlogic.com>
->
-> ---
-> This patch depends on A1 clock patchset at [0][3]
+   ASoC: meson: codec-glue: fix pcm format cast warning
 
-Just FYI, due the dependency, I'm waiting on the clock series to merge
-before queuing this.  When the clock series is ready, please repost this
-since it no longer applies to current mainline.
+has been applied to the asoc tree at
+
+   https://git.kernel.org/pub/scm/linux/kernel/git/broonie/sound.git 
+
+All being well this means that it will be integrated into the linux-next
+tree (usually sometime in the next 24 hours) and sent to Linus during
+the next merge window (or sooner if it is a bug fix), however if
+problems are discovered then the patch may be dropped or reverted.  
+
+You may get further e-mails resulting from automated or manual testing
+and review of the tree, please engage with people reporting problems and
+send followup patches addressing any issues that are reported if needed.
+
+If any updates are required or you are submitting further changes they
+should be sent as incremental updates against current git, existing
+patches will not be replaced.
+
+Please add any relevant lists and maintainers to the CCs when replying
+to this mail.
 
 Thanks,
+Mark
 
-Kevin
+From 3cd23f021e2e5f3350125abcb39f12430df87d06 Mon Sep 17 00:00:00 2001
+From: Jerome Brunet <jbrunet@baylibre.com>
+Date: Fri, 14 Feb 2020 14:13:50 +0100
+Subject: [PATCH] ASoC: meson: codec-glue: fix pcm format cast warning
+
+Clarify the cast of snd_pcm_format_t and fix the sparse warning:
+restricted snd_pcm_format_t degrades to integer
+
+Fixes: 9c29fd9bdf92 ("ASoC: meson: g12a: extract codec-to-codec utils")
+Reported-by: kbuild test robot <lkp@intel.com>
+Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
+Link: https://lore.kernel.org/r/20200214131350.337968-6-jbrunet@baylibre.com
+Signed-off-by: Mark Brown <broonie@kernel.org>
+---
+ sound/soc/meson/meson-codec-glue.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/sound/soc/meson/meson-codec-glue.c b/sound/soc/meson/meson-codec-glue.c
+index 97bbc967e176..524a33472337 100644
+--- a/sound/soc/meson/meson-codec-glue.c
++++ b/sound/soc/meson/meson-codec-glue.c
+@@ -74,7 +74,7 @@ int meson_codec_glue_input_hw_params(struct snd_pcm_substream *substream,
+ 	data->params.rates = snd_pcm_rate_to_rate_bit(params_rate(params));
+ 	data->params.rate_min = params_rate(params);
+ 	data->params.rate_max = params_rate(params);
+-	data->params.formats = 1 << params_format(params);
++	data->params.formats = 1ULL << (__force int) params_format(params);
+ 	data->params.channels_min = params_channels(params);
+ 	data->params.channels_max = params_channels(params);
+ 	data->params.sig_bits = dai->driver->playback.sig_bits;
+-- 
+2.20.1
+
 
 _______________________________________________
 linux-amlogic mailing list
