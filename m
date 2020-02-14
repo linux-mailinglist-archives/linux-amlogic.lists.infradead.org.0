@@ -2,45 +2,44 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9E6BE15F83F
-	for <lists+linux-amlogic@lfdr.de>; Fri, 14 Feb 2020 21:56:29 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9C4FE15F844
+	for <lists+linux-amlogic@lfdr.de>; Fri, 14 Feb 2020 21:56:33 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
 	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:
 	In-Reply-To:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	References:List-Owner; bh=vvXtQA0IuEgh8cYiMgljQqXliyFCq0t5xZifVrc6/Uk=; b=bMD
-	h8UklOwkJNiBYIi7MomKgqL1+abTe6iV34onzduVEzofQ4IFQxgNlUhMwxuyakKAO7vXr4g3VMB68
-	cuiG2pNO68BZcJYDqCJyPBzOK4jjKzzYNIu+HZzqJSwjZAdeshea/HwU9p/n1PUPEFVo0U8YimfTe
-	hEX0zK8PPrUa1ZyG6ojUi7U0Jr1bEQo7Sd5zLuwInMkyPxFIfFllgIFdk2+dfhyfulU0TV+iQ7xX8
-	wgPPlnr2SyEyDB0xK61VOEFhlpbEgZdoQ8GgX05tw4A+nYPfAbxxPSMJcaTC0L92/DsnfZmBzXuHa
-	37zi3HXy6pi9bc3UEFlk+ZkAWrMcjqQ==;
+	References:List-Owner; bh=6e0vmrxvYSvvOw5/tVrN0jMNkEHADvNY3cVFTHBiBxA=; b=hP3
+	tecAEZUG6wG0U0TFdQRwayaUUOFZHXWut7sOjwN5tqUL26XCQTIAFuZKkIsohUgvrsWRi9MXnYoQq
+	TzxVDR4V+PEm/q+bLNDcRulQWnBiA+GlZW2DXt6WBgjfPIiPN/TJV5eix6YrQ2tU2kENIKgt1OsJx
+	sGQDoztfjYnFSdGsjocBD/XyE/aRZnOYzot9/4AG66rGkDFV2T+yI1vxvh/Nv56urmcEfn4iom61M
+	GbAQ2QFT80DDNbp3VDqWRGYU6FB4EI/657Vx2Y09m2JLP4Skr2xt80rSnKIQNBPBYHXRCs//sf5y0
+	YuMXjZCUp1DgXs+g/Cm1h1d61Xio4ew==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j2i0i-0002Bi-9s; Fri, 14 Feb 2020 20:56:28 +0000
+	id 1j2i0m-0002Es-6d; Fri, 14 Feb 2020 20:56:32 +0000
 Received: from foss.arm.com ([217.140.110.172])
  by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j2i0d-00029Y-J4
- for linux-amlogic@lists.infradead.org; Fri, 14 Feb 2020 20:56:25 +0000
+ id 1j2i0i-0002D1-RK
+ for linux-amlogic@lists.infradead.org; Fri, 14 Feb 2020 20:56:30 +0000
 Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
- by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id 176A0101E;
- Fri, 14 Feb 2020 12:56:23 -0800 (PST)
+ by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id 8681930E;
+ Fri, 14 Feb 2020 12:56:27 -0800 (PST)
 Received: from localhost (unknown [10.37.6.21])
- by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id 8DF8D3F68F;
- Fri, 14 Feb 2020 12:56:22 -0800 (PST)
-Date: Fri, 14 Feb 2020 20:56:21 +0000
+ by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id 0A7363F68F;
+ Fri, 14 Feb 2020 12:56:26 -0800 (PST)
+Date: Fri, 14 Feb 2020 20:56:25 +0000
 From: Mark Brown <broonie@kernel.org>
 To: Jerome Brunet <jbrunet@baylibre.com>
-Subject: Applied "ASoC: meson: aiu: fix acodec dai input name init" to the
- asoc tree
-In-Reply-To: <20200214131350.337968-5-jbrunet@baylibre.com>
-Message-Id: <applied-20200214131350.337968-5-jbrunet@baylibre.com>
+Subject: Applied "ASoC: meson: aiu: fix irq registration" to the asoc tree
+In-Reply-To: <20200214131350.337968-4-jbrunet@baylibre.com>
+Message-Id: <applied-20200214131350.337968-4-jbrunet@baylibre.com>
 X-Patchwork-Hint: ignore
 X-Bad-Reply: In-Reply-To but no 'Re:' in Subject.
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200214_125623_667338_405B415B 
-X-CRM114-Status: GOOD (  12.12  )
+X-CRM114-CacheID: sfid-20200214_125628_937276_794F59A7 
+X-CRM114-Status: GOOD (  15.89  )
 X-Spam-Score: -2.0 (--)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-2.0 points)
@@ -64,9 +63,9 @@ List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
 Cc: devicetree@vger.kernel.org, alsa-devel@alsa-project.org,
- Kevin Hilman <khilman@baylibre.com>, Liam Girdwood <lgirdwood@gmail.com>,
- linux-kernel@vger.kernel.org, Mark Brown <broonie@kernel.org>,
- linux-amlogic@lists.infradead.org
+ kbuild test robot <lkp@intel.com>, Kevin Hilman <khilman@baylibre.com>,
+ Liam Girdwood <lgirdwood@gmail.com>, linux-kernel@vger.kernel.org,
+ Mark Brown <broonie@kernel.org>, linux-amlogic@lists.infradead.org
 MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
@@ -75,7 +74,7 @@ Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
 The patch
 
-   ASoC: meson: aiu: fix acodec dai input name init
+   ASoC: meson: aiu: fix irq registration
 
 has been applied to the asoc tree at
 
@@ -100,34 +99,64 @@ to this mail.
 Thanks,
 Mark
 
-From 74a56f2a4a9ec72ef1daceeb2dda8b41370c1419 Mon Sep 17 00:00:00 2001
+From 6e700f0672199f773ad645c2b7e886c1d2e2046e Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
-Date: Fri, 14 Feb 2020 14:13:49 +0100
-Subject: [PATCH] ASoC: meson: aiu: fix acodec dai input name init
+Date: Fri, 14 Feb 2020 14:13:48 +0100
+Subject: [PATCH] ASoC: meson: aiu: fix irq registration
 
-Remove the double initialization of the dai input name as reported by
-sparse.
+The aiu stored the irq in an unsigned integer which may have discarded an
+error returned by platform_get_irq_byname(). This is incorrect and should
+have been a signed integer.
 
-Fixes: 65816025d461 ("ASoC: meson: aiu: add internal dac codec control support")
+Also drop the irq error traces from the probe function as this is already
+done by platform_get_irq_byname().
+
+Fixes: 6ae9ca9ce986 ("ASoC: meson: aiu: add i2s and spdif support")
+Reported-by: kbuild test robot <lkp@intel.com>
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
-Link: https://lore.kernel.org/r/20200214131350.337968-5-jbrunet@baylibre.com
+Link: https://lore.kernel.org/r/20200214131350.337968-4-jbrunet@baylibre.com
 Signed-off-by: Mark Brown <broonie@kernel.org>
 ---
- sound/soc/meson/aiu-acodec-ctrl.c | 1 -
- 1 file changed, 1 deletion(-)
+ sound/soc/meson/aiu.c | 8 ++------
+ sound/soc/meson/aiu.h | 2 +-
+ 2 files changed, 3 insertions(+), 7 deletions(-)
 
-diff --git a/sound/soc/meson/aiu-acodec-ctrl.c b/sound/soc/meson/aiu-acodec-ctrl.c
-index 12d8a4d351a1..b8e88b1a4fc8 100644
---- a/sound/soc/meson/aiu-acodec-ctrl.c
-+++ b/sound/soc/meson/aiu-acodec-ctrl.c
-@@ -128,7 +128,6 @@ static const struct snd_soc_dai_ops aiu_acodec_ctrl_output_ops = {
+diff --git a/sound/soc/meson/aiu.c b/sound/soc/meson/aiu.c
+index de678a9d5cab..34b40b8b8299 100644
+--- a/sound/soc/meson/aiu.c
++++ b/sound/soc/meson/aiu.c
+@@ -314,16 +314,12 @@ static int aiu_probe(struct platform_device *pdev)
+ 	}
  
- #define AIU_ACODEC_INPUT(xname) {				\
- 	.name = "ACODEC CTRL " xname,				\
--	.name = xname,						\
- 	.playback = AIU_ACODEC_STREAM(xname, "Playback", 8),	\
- 	.ops = &aiu_acodec_ctrl_input_ops,			\
- 	.probe = meson_codec_glue_input_dai_probe,		\
+ 	aiu->i2s.irq = platform_get_irq_byname(pdev, "i2s");
+-	if (aiu->i2s.irq < 0) {
+-		dev_err(dev, "Can't get i2s irq\n");
++	if (aiu->i2s.irq < 0)
+ 		return aiu->i2s.irq;
+-	}
+ 
+ 	aiu->spdif.irq = platform_get_irq_byname(pdev, "spdif");
+-	if (aiu->spdif.irq < 0) {
+-		dev_err(dev, "Can't get spdif irq\n");
++	if (aiu->spdif.irq < 0)
+ 		return aiu->spdif.irq;
+-	}
+ 
+ 	ret = aiu_clk_get(dev);
+ 	if (ret)
+diff --git a/sound/soc/meson/aiu.h b/sound/soc/meson/aiu.h
+index a65a576e3400..097c26de7b7c 100644
+--- a/sound/soc/meson/aiu.h
++++ b/sound/soc/meson/aiu.h
+@@ -26,7 +26,7 @@ enum aiu_clk_ids {
+ struct aiu_interface {
+ 	struct clk_bulk_data *clks;
+ 	unsigned int clk_num;
+-	unsigned int irq;
++	int irq;
+ };
+ 
+ struct aiu {
 -- 
 2.20.1
 
