@@ -2,7 +2,7 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 63BA915F83E
+	by mail.lfdr.de (Postfix) with ESMTPS id 9E6BE15F83F
 	for <lists+linux-amlogic@lfdr.de>; Fri, 14 Feb 2020 21:56:29 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
@@ -10,37 +10,37 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:
 	In-Reply-To:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	References:List-Owner; bh=uRNBwivRzAfSqBcbCfc5553jGrl8nnhMEuzV4W7fRzA=; b=UYq
-	O1sE8BG7ytCIvhLHIOnpHBuzjF+hOyEe+IVAC1FPUnKvQvHXWkrwuZSPULj03avCRsJtPu6Hrbj/I
-	teQdsAdxQDYo7gDriBybVPUM+2b2fjo3LZnk/f5Ms9lP/bw1+pA31l+j4YOPDfg3iAc0QAheHyIF/
-	fwLzfY/SpP0KUXK9Xs3pY1K8b0OaCk6af8+INpoNc39CkRCc3Mo3rF2NwRHUXkW/WrFC0CgJtmy9V
-	1CaCKxfWmGf/X77PZdb56NOlE8XLvCMeu0z/PWtHpGgiGCWZ8Ouvbh8YNob50uefi2vRzmGw0yt6c
-	V0zxF2yZM+CzLHOFAzHTB72esiQbQ1A==;
+	References:List-Owner; bh=vvXtQA0IuEgh8cYiMgljQqXliyFCq0t5xZifVrc6/Uk=; b=bMD
+	h8UklOwkJNiBYIi7MomKgqL1+abTe6iV34onzduVEzofQ4IFQxgNlUhMwxuyakKAO7vXr4g3VMB68
+	cuiG2pNO68BZcJYDqCJyPBzOK4jjKzzYNIu+HZzqJSwjZAdeshea/HwU9p/n1PUPEFVo0U8YimfTe
+	hEX0zK8PPrUa1ZyG6ojUi7U0Jr1bEQo7Sd5zLuwInMkyPxFIfFllgIFdk2+dfhyfulU0TV+iQ7xX8
+	wgPPlnr2SyEyDB0xK61VOEFhlpbEgZdoQ8GgX05tw4A+nYPfAbxxPSMJcaTC0L92/DsnfZmBzXuHa
+	37zi3HXy6pi9bc3UEFlk+ZkAWrMcjqQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j2i0f-00029t-GT; Fri, 14 Feb 2020 20:56:25 +0000
+	id 1j2i0i-0002Bi-9s; Fri, 14 Feb 2020 20:56:28 +0000
 Received: from foss.arm.com ([217.140.110.172])
  by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j2i0c-00028v-JK
- for linux-amlogic@lists.infradead.org; Fri, 14 Feb 2020 20:56:24 +0000
+ id 1j2i0d-00029Y-J4
+ for linux-amlogic@lists.infradead.org; Fri, 14 Feb 2020 20:56:25 +0000
 Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
- by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id 6467E30E;
- Fri, 14 Feb 2020 12:56:18 -0800 (PST)
+ by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id 176A0101E;
+ Fri, 14 Feb 2020 12:56:23 -0800 (PST)
 Received: from localhost (unknown [10.37.6.21])
- by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id D73A53F68F;
- Fri, 14 Feb 2020 12:56:17 -0800 (PST)
-Date: Fri, 14 Feb 2020 20:56:16 +0000
+ by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id 8DF8D3F68F;
+ Fri, 14 Feb 2020 12:56:22 -0800 (PST)
+Date: Fri, 14 Feb 2020 20:56:21 +0000
 From: Mark Brown <broonie@kernel.org>
 To: Jerome Brunet <jbrunet@baylibre.com>
-Subject: Applied "ASoC: meson: codec-glue: fix pcm format cast warning" to the
+Subject: Applied "ASoC: meson: aiu: fix acodec dai input name init" to the
  asoc tree
-In-Reply-To: <20200214131350.337968-6-jbrunet@baylibre.com>
-Message-Id: <applied-20200214131350.337968-6-jbrunet@baylibre.com>
+In-Reply-To: <20200214131350.337968-5-jbrunet@baylibre.com>
+Message-Id: <applied-20200214131350.337968-5-jbrunet@baylibre.com>
 X-Patchwork-Hint: ignore
 X-Bad-Reply: In-Reply-To but no 'Re:' in Subject.
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200214_125622_681625_B4A25CC2 
-X-CRM114-Status: GOOD (  13.93  )
+X-CRM114-CacheID: sfid-20200214_125623_667338_405B415B 
+X-CRM114-Status: GOOD (  12.12  )
 X-Spam-Score: -2.0 (--)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-2.0 points)
@@ -64,9 +64,9 @@ List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
 Cc: devicetree@vger.kernel.org, alsa-devel@alsa-project.org,
- kbuild test robot <lkp@intel.com>, Kevin Hilman <khilman@baylibre.com>,
- Liam Girdwood <lgirdwood@gmail.com>, linux-kernel@vger.kernel.org,
- Mark Brown <broonie@kernel.org>, linux-amlogic@lists.infradead.org
+ Kevin Hilman <khilman@baylibre.com>, Liam Girdwood <lgirdwood@gmail.com>,
+ linux-kernel@vger.kernel.org, Mark Brown <broonie@kernel.org>,
+ linux-amlogic@lists.infradead.org
 MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
@@ -75,7 +75,7 @@ Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
 The patch
 
-   ASoC: meson: codec-glue: fix pcm format cast warning
+   ASoC: meson: aiu: fix acodec dai input name init
 
 has been applied to the asoc tree at
 
@@ -100,36 +100,34 @@ to this mail.
 Thanks,
 Mark
 
-From 3cd23f021e2e5f3350125abcb39f12430df87d06 Mon Sep 17 00:00:00 2001
+From 74a56f2a4a9ec72ef1daceeb2dda8b41370c1419 Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
-Date: Fri, 14 Feb 2020 14:13:50 +0100
-Subject: [PATCH] ASoC: meson: codec-glue: fix pcm format cast warning
+Date: Fri, 14 Feb 2020 14:13:49 +0100
+Subject: [PATCH] ASoC: meson: aiu: fix acodec dai input name init
 
-Clarify the cast of snd_pcm_format_t and fix the sparse warning:
-restricted snd_pcm_format_t degrades to integer
+Remove the double initialization of the dai input name as reported by
+sparse.
 
-Fixes: 9c29fd9bdf92 ("ASoC: meson: g12a: extract codec-to-codec utils")
-Reported-by: kbuild test robot <lkp@intel.com>
+Fixes: 65816025d461 ("ASoC: meson: aiu: add internal dac codec control support")
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
-Link: https://lore.kernel.org/r/20200214131350.337968-6-jbrunet@baylibre.com
+Link: https://lore.kernel.org/r/20200214131350.337968-5-jbrunet@baylibre.com
 Signed-off-by: Mark Brown <broonie@kernel.org>
 ---
- sound/soc/meson/meson-codec-glue.c | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+ sound/soc/meson/aiu-acodec-ctrl.c | 1 -
+ 1 file changed, 1 deletion(-)
 
-diff --git a/sound/soc/meson/meson-codec-glue.c b/sound/soc/meson/meson-codec-glue.c
-index 97bbc967e176..524a33472337 100644
---- a/sound/soc/meson/meson-codec-glue.c
-+++ b/sound/soc/meson/meson-codec-glue.c
-@@ -74,7 +74,7 @@ int meson_codec_glue_input_hw_params(struct snd_pcm_substream *substream,
- 	data->params.rates = snd_pcm_rate_to_rate_bit(params_rate(params));
- 	data->params.rate_min = params_rate(params);
- 	data->params.rate_max = params_rate(params);
--	data->params.formats = 1 << params_format(params);
-+	data->params.formats = 1ULL << (__force int) params_format(params);
- 	data->params.channels_min = params_channels(params);
- 	data->params.channels_max = params_channels(params);
- 	data->params.sig_bits = dai->driver->playback.sig_bits;
+diff --git a/sound/soc/meson/aiu-acodec-ctrl.c b/sound/soc/meson/aiu-acodec-ctrl.c
+index 12d8a4d351a1..b8e88b1a4fc8 100644
+--- a/sound/soc/meson/aiu-acodec-ctrl.c
++++ b/sound/soc/meson/aiu-acodec-ctrl.c
+@@ -128,7 +128,6 @@ static const struct snd_soc_dai_ops aiu_acodec_ctrl_output_ops = {
+ 
+ #define AIU_ACODEC_INPUT(xname) {				\
+ 	.name = "ACODEC CTRL " xname,				\
+-	.name = xname,						\
+ 	.playback = AIU_ACODEC_STREAM(xname, "Playback", 8),	\
+ 	.ops = &aiu_acodec_ctrl_input_ops,			\
+ 	.probe = meson_codec_glue_input_dai_probe,		\
 -- 
 2.20.1
 
