@@ -2,82 +2,82 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1532515D813
-	for <lists+linux-amlogic@lfdr.de>; Fri, 14 Feb 2020 14:14:14 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id C06A815D815
+	for <lists+linux-amlogic@lfdr.de>; Fri, 14 Feb 2020 14:14:18 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=/U+i9oLMw5MhPXqXkw2tchBVrzgmZTjCAGnh743L3mo=; b=AdJf6qQAVEIIbw
-	xjmqEQS4Hqyl3Qh7oIFOgYLaJDzp0P4MTtdqIvQFbCMj9WqABZNtx8syyZyZhAP30CBhpkEuqsDAd
-	giwW/yPSYKHBu4ThLaTFqXuBtdyWmq0NAvAWYqlnAXS97qxOvkoY8PQJbJ8B4lccZUvDsfSSAG1Le
-	01nsb4ofHGD+tGHgMZnaKFf+GykgsDjjaYoGbcZQjbo6KTAGRSFYZaSFkMJlGVvadOeFzrNl/E+b3
-	xgKnv+CucdiqVVHZDbvnL95jFlQCUcvz3bfdqsuIxRKUJgRzyOkFMDdC4uMEazktnWhxVtQ0p8cYT
-	JgOTrzaohAony97wGrrQ==;
+	List-Owner; bh=/3bouPj3ivk2bubGWt3tp6nbo+Tc61iEinTFv5U1haM=; b=TOt9pw1pez7ZKL
+	wYnhyaLhMACvmdArPDgFyIEyK3/nsJyKJuc7SBUOBVXvTK1Kt75uL9E9L18c56VPEOZtmIEwezWH6
+	/tCU8/SEo6pRxQkB0QaF+7wQeOpTe7IL0fS/RIoBVLWDM6QYGkyE59KI4LSDNImuB4+4AAmXvarvp
+	caLItASNUO/Fej6jPDUVuSlL/o7klz/UpqxlqJJK4zMMNXYkvajLKK8SWeF461IlqtT3sFWEsM6Ai
+	DN1t+CFpmhvKZzF0TQagwYXoI370p3u0II+jrQ8+npniQpDDnkwF6p954t4pJmyGlgkOTc7O0Ay7J
+	S4OkaNhyM0TWyC4b62uQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j2anM-0006SP-K4; Fri, 14 Feb 2020 13:14:12 +0000
-Received: from mail-wr1-x444.google.com ([2a00:1450:4864:20::444])
+	id 1j2anQ-0006WK-It; Fri, 14 Feb 2020 13:14:16 +0000
+Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j2anD-0006MB-RH
+ id 1j2anD-0006MD-9g
  for linux-amlogic@lists.infradead.org; Fri, 14 Feb 2020 13:14:08 +0000
-Received: by mail-wr1-x444.google.com with SMTP id w15so10857500wru.4
- for <linux-amlogic@lists.infradead.org>; Fri, 14 Feb 2020 05:13:57 -0800 (PST)
+Received: by mail-wr1-x442.google.com with SMTP id y17so10857109wrh.5
+ for <linux-amlogic@lists.infradead.org>; Fri, 14 Feb 2020 05:13:58 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=LkbErKWwYUT9sSZs7koUeGzSJ1kXs9rP2h4RESbdYMw=;
- b=uw+QY/sOU9TAjN6r5atc110IldveajcARtxPgbi7LquQXROET3VNg85+5bORKKLAKu
- 5iGeKS24GIg3DNW3mSBhNmFwp2lEXa3Ro1vcVCMA2PFm4rP5KA0FDVcYsvICJrqMLVuR
- qUEdziIr7zy+V0A8rG7fLISfNXSn2WN6Or3yqBG+J36Ae1TJRjvr3EKhFESoAzjPPQTF
- OOmBR5QHU+6JXuZCXY8HzwNF3ZbmckjyDtwzWJzupWcUR4B43xNf/4oLDlmVIJjtuWhf
- xU5qfmZhkdjntRW0owJNeh3EzO49LmeGKZYe26oBCgzGNL0ix1c+lQaJQXcH24lm0Gh4
- CDnQ==
+ bh=vuwuzpsX5RzClpZoSCXE8jPlP14S0+i5Nh9kd/OQAlU=;
+ b=TSTqqQMFRXUb+avCLPyEtyy/SXMFgBkz3pOzmJbAzGCp49zkBAxH+R1F/rhbnNxTFD
+ Lk+85ejQ9VGaB7p/I4fQH7B7SdZAVt7MLVbNYuC7JYW+x61DQrc2AWz8LSevDK05D5eM
+ HcrXJxXWzTXuLSNhEvuWHScbTYgK6y1xzaKe5Lcg9UBtw6PwP9hs115Own9COoQ83NFd
+ Ywc8T0gKKEGTgQ/6RHwKCvpXT0LlDeHmBbnWaLQQ+hrEcvsTBE7pSSdiTIZhk4an+wBg
+ 3pSd5O99tNdGusYKMLiX2H6bckHhb5Oj10pHRP/mJwt2i895/6nWHO18IV24BQyvxVdJ
+ /THg==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=LkbErKWwYUT9sSZs7koUeGzSJ1kXs9rP2h4RESbdYMw=;
- b=lHHhRbzpttvv5uU+LPig0qVuqQPJq/TDiMMTFO2o5If2kayNA4tLuDE5bYZ0vfrBtb
- ZTq1aLYCSWYpHB5mHztAUrlDpc12rkej6AvYeK/7uIrk9DMiQP6IiYEqa83KstI9mYwE
- 7q26Nuxbw9qtkIOiSx+LKvEpL7UmaloIy6ls8VrAeqR0B9DMU07EhUFZldzkVkyiBwHO
- jM53f+4PMslNr4HmsT3SwkezDPpBKQNC+0c0nC6IPs03c+NdphaA0hmWpm91hDUO0wgD
- +McLUjrTaEHkt28mMFxD9QYECXqmc+NClLxtagmmJG57ukwXSHguZGnt+bCLHM1yywKt
- ipkw==
-X-Gm-Message-State: APjAAAWcNaX78yn40mdpYtQ7vVIUhfrZ6ysVkvxql+xaS4hAVrh+JJgK
- Z0EJmMTYMtIbPvl5S9p+T2K9yw==
-X-Google-Smtp-Source: APXvYqz68c0STkV8Q5Vc0fGN6lA992cZEJnJxpcnS0jlWkaeahzpyfKtfRZVr6TPtS9gcP80p4i0YQ==
-X-Received: by 2002:a5d:4052:: with SMTP id w18mr4018666wrp.112.1581686036643; 
- Fri, 14 Feb 2020 05:13:56 -0800 (PST)
+ bh=vuwuzpsX5RzClpZoSCXE8jPlP14S0+i5Nh9kd/OQAlU=;
+ b=uEIkA+fiWxlzAjagv6IhjCc0LGCNEgBBVXtwzUkmo2HZQLGX+GPHPD1laERhJGUd9V
+ EFBLcKxAgsHCJzk27/O3Dl/9dxkIhci5wEXCJqRYuymxK0seJVmZmeJxITq1u/8tQuq/
+ 72T9TI0kr3SjmZcWuy1zqAZkRuw39wuxKUP65+D5AQ1d6qWQPckE4AgcHv1vNup4JMOL
+ p7Hpfd4SREFw+Zrf/55o+6uh+9iMeZLdRe8sITjWzL//ZNTE6VS8ByH2iEXShNWe8w9l
+ 1CQ/NQImaV9MfSpwqkMUapJd+niTMDmcRiqN4U1Z1PbY/lcmn12Trs9NI36jcz9NFx/k
+ hSrQ==
+X-Gm-Message-State: APjAAAWk7J8QRKiyrPoJNLieWaAy+Pj/RGMaDM5Sksl75KijGasMeiH0
+ ova60jYsadzqt9Fnpxe+2CABHQ==
+X-Google-Smtp-Source: APXvYqxMHOnNCwLIWDmiOvwhVwAWtwAZf5cc+Xtor4Tr9qkozMweqEkbj+d370UvqeuQ9mcLgqpjyA==
+X-Received: by 2002:a5d:5088:: with SMTP id a8mr3985658wrt.162.1581686037685; 
+ Fri, 14 Feb 2020 05:13:57 -0800 (PST)
 Received: from starbuck.baylibre.local
  (laubervilliers-658-1-213-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
- by smtp.googlemail.com with ESMTPSA id w7sm6760792wmi.9.2020.02.14.05.13.55
+ by smtp.googlemail.com with ESMTPSA id w7sm6760792wmi.9.2020.02.14.05.13.56
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Fri, 14 Feb 2020 05:13:56 -0800 (PST)
+ Fri, 14 Feb 2020 05:13:57 -0800 (PST)
 From: Jerome Brunet <jbrunet@baylibre.com>
 To: Mark Brown <broonie@kernel.org>,
 	Liam Girdwood <lgirdwood@gmail.com>
-Subject: [PATCH 2/5] ASoC: meson: aiu: fix clk bulk size allocation
-Date: Fri, 14 Feb 2020 14:13:47 +0100
-Message-Id: <20200214131350.337968-3-jbrunet@baylibre.com>
+Subject: [PATCH 3/5] ASoC: meson: aiu: fix irq registration
+Date: Fri, 14 Feb 2020 14:13:48 +0100
+Message-Id: <20200214131350.337968-4-jbrunet@baylibre.com>
 X-Mailer: git-send-email 2.24.1
 In-Reply-To: <20200214131350.337968-1-jbrunet@baylibre.com>
 References: <20200214131350.337968-1-jbrunet@baylibre.com>
 MIME-Version: 1.0
 X-Patchwork-Bot: notify
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200214_051405_091111_51AEA805 
-X-CRM114-Status: GOOD (  10.68  )
+X-CRM114-CacheID: sfid-20200214_051405_089685_3BE6B5E6 
+X-CRM114-Status: GOOD (  11.14  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:444 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:442 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -104,28 +104,57 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Fix the size of allocated memory for the clock bulk data
+The aiu stored the irq in an unsigned integer which may have discarded an
+error returned by platform_get_irq_byname(). This is incorrect and should
+have been a signed integer.
+
+Also drop the irq error traces from the probe function as this is already
+done by platform_get_irq_byname().
 
 Fixes: 6ae9ca9ce986 ("ASoC: meson: aiu: add i2s and spdif support")
 Reported-by: kbuild test robot <lkp@intel.com>
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
 ---
- sound/soc/meson/aiu.c | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+ sound/soc/meson/aiu.c | 8 ++------
+ sound/soc/meson/aiu.h | 2 +-
+ 2 files changed, 3 insertions(+), 7 deletions(-)
 
 diff --git a/sound/soc/meson/aiu.c b/sound/soc/meson/aiu.c
-index 5c4845a23a34..de678a9d5cab 100644
+index de678a9d5cab..34b40b8b8299 100644
 --- a/sound/soc/meson/aiu.c
 +++ b/sound/soc/meson/aiu.c
-@@ -203,7 +203,7 @@ static int aiu_clk_bulk_get(struct device *dev,
+@@ -314,16 +314,12 @@ static int aiu_probe(struct platform_device *pdev)
+ 	}
+ 
+ 	aiu->i2s.irq = platform_get_irq_byname(pdev, "i2s");
+-	if (aiu->i2s.irq < 0) {
+-		dev_err(dev, "Can't get i2s irq\n");
++	if (aiu->i2s.irq < 0)
+ 		return aiu->i2s.irq;
+-	}
+ 
+ 	aiu->spdif.irq = platform_get_irq_byname(pdev, "spdif");
+-	if (aiu->spdif.irq < 0) {
+-		dev_err(dev, "Can't get spdif irq\n");
++	if (aiu->spdif.irq < 0)
+ 		return aiu->spdif.irq;
+-	}
+ 
+ 	ret = aiu_clk_get(dev);
+ 	if (ret)
+diff --git a/sound/soc/meson/aiu.h b/sound/soc/meson/aiu.h
+index a65a576e3400..097c26de7b7c 100644
+--- a/sound/soc/meson/aiu.h
++++ b/sound/soc/meson/aiu.h
+@@ -26,7 +26,7 @@ enum aiu_clk_ids {
+ struct aiu_interface {
  	struct clk_bulk_data *clks;
- 	int i, ret;
+ 	unsigned int clk_num;
+-	unsigned int irq;
++	int irq;
+ };
  
--	clks = devm_kcalloc(dev, num, sizeof(clks), GFP_KERNEL);
-+	clks = devm_kcalloc(dev, num, sizeof(*clks), GFP_KERNEL);
- 	if (!clks)
- 		return -ENOMEM;
- 
+ struct aiu {
 -- 
 2.24.1
 
