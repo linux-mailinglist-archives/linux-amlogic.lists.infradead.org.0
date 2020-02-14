@@ -2,44 +2,45 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9C4FE15F844
-	for <lists+linux-amlogic@lfdr.de>; Fri, 14 Feb 2020 21:56:33 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id C5E9115F845
+	for <lists+linux-amlogic@lfdr.de>; Fri, 14 Feb 2020 21:56:37 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
 	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:
 	In-Reply-To:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	References:List-Owner; bh=6e0vmrxvYSvvOw5/tVrN0jMNkEHADvNY3cVFTHBiBxA=; b=hP3
-	tecAEZUG6wG0U0TFdQRwayaUUOFZHXWut7sOjwN5tqUL26XCQTIAFuZKkIsohUgvrsWRi9MXnYoQq
-	TzxVDR4V+PEm/q+bLNDcRulQWnBiA+GlZW2DXt6WBgjfPIiPN/TJV5eix6YrQ2tU2kENIKgt1OsJx
-	sGQDoztfjYnFSdGsjocBD/XyE/aRZnOYzot9/4AG66rGkDFV2T+yI1vxvh/Nv56urmcEfn4iom61M
-	GbAQ2QFT80DDNbp3VDqWRGYU6FB4EI/657Vx2Y09m2JLP4Skr2xt80rSnKIQNBPBYHXRCs//sf5y0
-	YuMXjZCUp1DgXs+g/Cm1h1d61Xio4ew==;
+	References:List-Owner; bh=9kaqIw4Vn+gk7bemHIUtnqhCq9J595A1++qKBa0uOLo=; b=EuR
+	FVqZEO1FGZzr9jeBqftmDH0H7Y7fVXfzX1z+4g4ZWae/EeXULfOUsebk5KWnPvETeBdjdN7v00ro2
+	QqElXIrGD0gmLRceTmmrAUxhqYaZov0IC7J8IewsALMUYBtsLieWfVxyb3D13jOp2333gqsp4ffq6
+	BbbfBB4bo6cgsU2rbFBW+kNLD/vknTX3OvQiRzCHGjSEi0INE3emzR8swm9TKZh5OhQpI0e8qCL77
+	bjUfc1RIlHn90u9MWQtzx27nwux8YiqWSO0qTEy9dhSFskXpEhsz1b8t/qypGI7rjgMNnMleTerBN
+	c2Gu32LsfhFFN4hmQsgwj9mEnYmkq4g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j2i0m-0002Es-6d; Fri, 14 Feb 2020 20:56:32 +0000
+	id 1j2i0q-0002Ib-Dv; Fri, 14 Feb 2020 20:56:36 +0000
 Received: from foss.arm.com ([217.140.110.172])
  by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j2i0i-0002D1-RK
- for linux-amlogic@lists.infradead.org; Fri, 14 Feb 2020 20:56:30 +0000
+ id 1j2i0m-0002Fo-Dq
+ for linux-amlogic@lists.infradead.org; Fri, 14 Feb 2020 20:56:34 +0000
 Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
- by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id 8681930E;
- Fri, 14 Feb 2020 12:56:27 -0800 (PST)
+ by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id 01D1230E;
+ Fri, 14 Feb 2020 12:56:32 -0800 (PST)
 Received: from localhost (unknown [10.37.6.21])
- by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id 0A7363F68F;
- Fri, 14 Feb 2020 12:56:26 -0800 (PST)
-Date: Fri, 14 Feb 2020 20:56:25 +0000
+ by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id 784BF3F68F;
+ Fri, 14 Feb 2020 12:56:31 -0800 (PST)
+Date: Fri, 14 Feb 2020 20:56:30 +0000
 From: Mark Brown <broonie@kernel.org>
 To: Jerome Brunet <jbrunet@baylibre.com>
-Subject: Applied "ASoC: meson: aiu: fix irq registration" to the asoc tree
-In-Reply-To: <20200214131350.337968-4-jbrunet@baylibre.com>
-Message-Id: <applied-20200214131350.337968-4-jbrunet@baylibre.com>
+Subject: Applied "ASoC: meson: aiu: fix clk bulk size allocation" to the asoc
+ tree
+In-Reply-To: <20200214131350.337968-3-jbrunet@baylibre.com>
+Message-Id: <applied-20200214131350.337968-3-jbrunet@baylibre.com>
 X-Patchwork-Hint: ignore
 X-Bad-Reply: In-Reply-To but no 'Re:' in Subject.
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200214_125628_937276_794F59A7 
-X-CRM114-Status: GOOD (  15.89  )
+X-CRM114-CacheID: sfid-20200214_125632_513531_D350EEBD 
+X-CRM114-Status: GOOD (  15.29  )
 X-Spam-Score: -2.0 (--)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-2.0 points)
@@ -74,7 +75,7 @@ Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
 The patch
 
-   ASoC: meson: aiu: fix irq registration
+   ASoC: meson: aiu: fix clk bulk size allocation
 
 has been applied to the asoc tree at
 
@@ -99,64 +100,35 @@ to this mail.
 Thanks,
 Mark
 
-From 6e700f0672199f773ad645c2b7e886c1d2e2046e Mon Sep 17 00:00:00 2001
+From 269f00171273e47eebc915cc6ee8ceececa37a3a Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
-Date: Fri, 14 Feb 2020 14:13:48 +0100
-Subject: [PATCH] ASoC: meson: aiu: fix irq registration
+Date: Fri, 14 Feb 2020 14:13:47 +0100
+Subject: [PATCH] ASoC: meson: aiu: fix clk bulk size allocation
 
-The aiu stored the irq in an unsigned integer which may have discarded an
-error returned by platform_get_irq_byname(). This is incorrect and should
-have been a signed integer.
-
-Also drop the irq error traces from the probe function as this is already
-done by platform_get_irq_byname().
+Fix the size of allocated memory for the clock bulk data
 
 Fixes: 6ae9ca9ce986 ("ASoC: meson: aiu: add i2s and spdif support")
 Reported-by: kbuild test robot <lkp@intel.com>
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
-Link: https://lore.kernel.org/r/20200214131350.337968-4-jbrunet@baylibre.com
+Link: https://lore.kernel.org/r/20200214131350.337968-3-jbrunet@baylibre.com
 Signed-off-by: Mark Brown <broonie@kernel.org>
 ---
- sound/soc/meson/aiu.c | 8 ++------
- sound/soc/meson/aiu.h | 2 +-
- 2 files changed, 3 insertions(+), 7 deletions(-)
+ sound/soc/meson/aiu.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/sound/soc/meson/aiu.c b/sound/soc/meson/aiu.c
-index de678a9d5cab..34b40b8b8299 100644
+index 5c4845a23a34..de678a9d5cab 100644
 --- a/sound/soc/meson/aiu.c
 +++ b/sound/soc/meson/aiu.c
-@@ -314,16 +314,12 @@ static int aiu_probe(struct platform_device *pdev)
- 	}
- 
- 	aiu->i2s.irq = platform_get_irq_byname(pdev, "i2s");
--	if (aiu->i2s.irq < 0) {
--		dev_err(dev, "Can't get i2s irq\n");
-+	if (aiu->i2s.irq < 0)
- 		return aiu->i2s.irq;
--	}
- 
- 	aiu->spdif.irq = platform_get_irq_byname(pdev, "spdif");
--	if (aiu->spdif.irq < 0) {
--		dev_err(dev, "Can't get spdif irq\n");
-+	if (aiu->spdif.irq < 0)
- 		return aiu->spdif.irq;
--	}
- 
- 	ret = aiu_clk_get(dev);
- 	if (ret)
-diff --git a/sound/soc/meson/aiu.h b/sound/soc/meson/aiu.h
-index a65a576e3400..097c26de7b7c 100644
---- a/sound/soc/meson/aiu.h
-+++ b/sound/soc/meson/aiu.h
-@@ -26,7 +26,7 @@ enum aiu_clk_ids {
- struct aiu_interface {
+@@ -203,7 +203,7 @@ static int aiu_clk_bulk_get(struct device *dev,
  	struct clk_bulk_data *clks;
- 	unsigned int clk_num;
--	unsigned int irq;
-+	int irq;
- };
+ 	int i, ret;
  
- struct aiu {
+-	clks = devm_kcalloc(dev, num, sizeof(clks), GFP_KERNEL);
++	clks = devm_kcalloc(dev, num, sizeof(*clks), GFP_KERNEL);
+ 	if (!clks)
+ 		return -ENOMEM;
+ 
 -- 
 2.20.1
 
