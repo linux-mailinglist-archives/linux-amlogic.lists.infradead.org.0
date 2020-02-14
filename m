@@ -2,46 +2,46 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 073C515E124
-	for <lists+linux-amlogic@lfdr.de>; Fri, 14 Feb 2020 17:17:45 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id D00FF15E1AC
+	for <lists+linux-amlogic@lfdr.de>; Fri, 14 Feb 2020 17:20:18 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=/1628tCfLyzPyADBTzHAWOWHahyoMhj+Xe43O7vaVC8=; b=aqLzwLdFNV+178
-	sPZHtVBhIFNkYb7Rh+GGeb3L/hBRKo5hNZ/BDg4qQMdrvKUF6dU4eirUN1f4jROJHT0UyCss4yFpV
-	I4KOSLecV2IU/SjcrjlHp34mFfJL+LfzDQQ9EFYw8bcOZTfYFjvn1d0ht5iVPjFgF7+ZA1P+gsoR0
-	rSvCjiM3CSIVpn6IlVSu4h5pXhSNf5qRR/w1hyC7eZK9XZO6RPASVB+i9g4rkgx+mU2fyOfOfIY7U
-	AL7Iw1D1/LUro1o5xiIhcdH5yBwhTBuNbA5Wd1uXJ6CARmQfu+yWm6GYf/FZbRhMsNYj26uplDLvD
-	KXpQTR2gDxi7/usVyZzA==;
+	List-Owner; bh=2pBubbl2idytyH53VjhabtesJYa/AjI1C4wtD8AMpGE=; b=azJCSSg2dFgiRo
+	LkJgekE221evWNDUYe9CnilZ2AqTwirO65vxpnN58GjXW2K0+rhBUAEICugUnoWL1w3L2EZru7T9M
+	ThCj/9fUqFXkw6oTXBFv8W2VwAgLcp7ism3eLRiYoyFeE3AsUZi1b1prKWrt0g5wiMJpfqvUZYLuH
+	prw5nKnNyeaQEzShb0VpXrEbeke3E/VhG9XQciSUiUXhBe/on+vaqQ07L9zu+8HhHvIY54R+JKGTh
+	BOQs7ST7dLfYPRh16MKwpNq3e2QSLgtClTo37bDybu/ielBKrv2zjzAh5kS8SbqMSKtxjzex0OnVF
+	R3yBHDuS482qfVJ8Ubvg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j2dex-00018P-21; Fri, 14 Feb 2020 16:17:43 +0000
+	id 1j2dhQ-00047b-K2; Fri, 14 Feb 2020 16:20:16 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j2dPy-0000NE-W7; Fri, 14 Feb 2020 16:02:17 +0000
+ id 1j2dQX-00015C-64; Fri, 14 Feb 2020 16:02:52 +0000
 Received: from sasha-vm.mshome.net (c-73-47-72-35.hsd1.nh.comcast.net
  [73.47.72.35])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id D57682467C;
- Fri, 14 Feb 2020 16:02:12 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id B980C2082F;
+ Fri, 14 Feb 2020 16:02:47 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1581696134;
- bh=dxyccyigJhbpHPCQ2eWhVt7tV6C/oCPf9Cj4BDUW/vo=;
+ s=default; t=1581696168;
+ bh=LNZd425aiv0ZyvHJC6f+H2IvIXnySvmj0POmQMGzmiw=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=DFGGGBoTXpWw60PwXzvqDw0aJFdu5iYiR3JyVCvGp2zxyMi+UDzlQarQgyO/4+MJ9
- +eHPi4Mnx3uNUwaNoQAtfXdxTNTbwTQc0/HUoH96OeUNZb7A5e96TiPDBlGKTYmZjE
- gi7IA5n4NjMVVkcNKzkknWhIGeKhJTQqYHTxe8qM=
+ b=MoodqutW6eXjNbsQaLHNyAxXySEy1Qlkcpud5eKmCtrt4eQRa4ZxEQPiT80q4cgxB
+ y7x2GTh3TW+i0i6P1fn3NXS/itG2KdLeyCGI+hVnoC5ngV+pcPz0luJ/dN/W4zK5nk
+ V2RZETq8c3UoxGnVJ+N1h8ozf8XX2HRFB88+jLOQ=
 From: Sasha Levin <sashal@kernel.org>
 To: linux-kernel@vger.kernel.org,
 	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 5.4 017/459] clk: meson: pll: Fix by 0 division in
- __pll_params_to_rate()
-Date: Fri, 14 Feb 2020 10:54:27 -0500
-Message-Id: <20200214160149.11681-17-sashal@kernel.org>
+Subject: [PATCH AUTOSEL 5.4 043/459] clk: meson: meson8b: make the CCF use the
+ glitch-free mali mux
+Date: Fri, 14 Feb 2020 10:54:53 -0500
+Message-Id: <20200214160149.11681-43-sashal@kernel.org>
 X-Mailer: git-send-email 2.20.1
 In-Reply-To: <20200214160149.11681-1-sashal@kernel.org>
 References: <20200214160149.11681-1-sashal@kernel.org>
@@ -49,8 +49,8 @@ MIME-Version: 1.0
 X-stable: review
 X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200214_080215_113461_F0CC98E7 
-X-CRM114-Status: GOOD (  10.11  )
+X-CRM114-CacheID: sfid-20200214_080250_459583_529E0FFA 
+X-CRM114-Status: GOOD (  13.15  )
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-5.2 points)
@@ -81,83 +81,70 @@ List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
 Cc: Sasha Levin <sashal@kernel.org>,
  Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
- Remi Pommarel <repk@triplefau.lt>, linux-amlogic@lists.infradead.org,
- linux-clk@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
- Jerome Brunet <jbrunet@baylibre.com>
+ linux-amlogic@lists.infradead.org, linux-clk@vger.kernel.org,
+ linux-arm-kernel@lists.infradead.org, Jerome Brunet <jbrunet@baylibre.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-From: Remi Pommarel <repk@triplefau.lt>
+From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
 
-[ Upstream commit d8488a41800d9f5c80bc0d17b9cc2c91b4841464 ]
+[ Upstream commit 8daeaea99caabe24a0929fac17977ebfb882fa86 ]
 
-Some meson pll registers can be initialized with 0 as N value, introducing
-the following division by 0 when computing rate :
+The "mali_0" or "mali_1" clock trees should not be updated while the
+clock is running. Enforce this by setting CLK_SET_RATE_GATE on the
+"mali_0" and "mali_1" gates. This makes the CCF switch to the "mali_1"
+tree when "mali_0" is currently active and vice versa, which is exactly
+what the vendor driver does when updating the frequency of the mali
+clock.
 
-  UBSAN: Undefined behaviour in drivers/clk/meson/clk-pll.c:75:9
-  division by zero
-  CPU: 0 PID: 1 Comm: swapper/0 Not tainted 5.4.0-rc3-608075-g86c9af8630e1-dirty #400
-  Call trace:
-   dump_backtrace+0x0/0x1c0
-   show_stack+0x14/0x20
-   dump_stack+0xc4/0x100
-   ubsan_epilogue+0x14/0x68
-   __ubsan_handle_divrem_overflow+0x98/0xb8
-   __pll_params_to_rate+0xdc/0x140
-   meson_clk_pll_recalc_rate+0x278/0x3a0
-   __clk_register+0x7c8/0xbb0
-   devm_clk_hw_register+0x54/0xc0
-   meson_eeclkc_probe+0xf4/0x1a0
-   platform_drv_probe+0x54/0xd8
-   really_probe+0x16c/0x438
-   driver_probe_device+0xb0/0xf0
-   device_driver_attach+0x94/0xa0
-   __driver_attach+0x70/0x108
-   bus_for_each_dev+0xd8/0x128
-   driver_attach+0x30/0x40
-   bus_add_driver+0x1b0/0x2d8
-   driver_register+0xbc/0x1d0
-   __platform_driver_register+0x78/0x88
-   axg_driver_init+0x18/0x20
-   do_one_initcall+0xc8/0x24c
-   kernel_init_freeable+0x2b0/0x344
-   kernel_init+0x10/0x128
-   ret_from_fork+0x10/0x18
+This fixes a potential hang when changing the GPU frequency at runtime.
 
-This checks if N is null before doing the division.
-
-Fixes: 7a29a869434e ("clk: meson: Add support for Meson clock controller")
-Reviewed-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-Signed-off-by: Remi Pommarel <repk@triplefau.lt>
-[jbrunet@baylibre.com: update the comment in above the fix]
+Fixes: 74e1f2521f16ff ("clk: meson: meson8b: add the GPU clock tree")
+Signed-off-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
 Signed-off-by: Sasha Levin <sashal@kernel.org>
 ---
- drivers/clk/meson/clk-pll.c | 9 +++++++++
- 1 file changed, 9 insertions(+)
+ drivers/clk/meson/meson8b.c | 11 +++++++----
+ 1 file changed, 7 insertions(+), 4 deletions(-)
 
-diff --git a/drivers/clk/meson/clk-pll.c b/drivers/clk/meson/clk-pll.c
-index ddb1e56347395..3a5853ca98c6c 100644
---- a/drivers/clk/meson/clk-pll.c
-+++ b/drivers/clk/meson/clk-pll.c
-@@ -77,6 +77,15 @@ static unsigned long meson_clk_pll_recalc_rate(struct clk_hw *hw,
- 	unsigned int m, n, frac;
+diff --git a/drivers/clk/meson/meson8b.c b/drivers/clk/meson/meson8b.c
+index 67e6691e080c1..8856ce476ccfa 100644
+--- a/drivers/clk/meson/meson8b.c
++++ b/drivers/clk/meson/meson8b.c
+@@ -1764,8 +1764,11 @@ static struct clk_regmap meson8b_hdmi_sys = {
  
- 	n = meson_parm_read(clk->map, &pll->n);
-+
-+	/*
-+	 * On some HW, N is set to zero on init. This value is invalid as
-+	 * it would result in a division by zero. The rate can't be
-+	 * calculated in this case
-+	 */
-+	if (n == 0)
-+		return 0;
-+
- 	m = meson_parm_read(clk->map, &pll->m);
+ /*
+  * The MALI IP is clocked by two identical clocks (mali_0 and mali_1)
+- * muxed by a glitch-free switch on Meson8b and Meson8m2. Meson8 only
+- * has mali_0 and no glitch-free mux.
++ * muxed by a glitch-free switch on Meson8b and Meson8m2. The CCF can
++ * actually manage this glitch-free mux because it does top-to-bottom
++ * updates the each clock tree and switches to the "inactive" one when
++ * CLK_SET_RATE_GATE is set.
++ * Meson8 only has mali_0 and no glitch-free mux.
+  */
+ static const struct clk_hw *meson8b_mali_0_1_parent_hws[] = {
+ 	&meson8b_xtal.hw,
+@@ -1830,7 +1833,7 @@ static struct clk_regmap meson8b_mali_0 = {
+ 			&meson8b_mali_0_div.hw
+ 		},
+ 		.num_parents = 1,
+-		.flags = CLK_SET_RATE_PARENT,
++		.flags = CLK_SET_RATE_GATE | CLK_SET_RATE_PARENT,
+ 	},
+ };
  
- 	frac = MESON_PARM_APPLICABLE(&pll->frac) ?
+@@ -1885,7 +1888,7 @@ static struct clk_regmap meson8b_mali_1 = {
+ 			&meson8b_mali_1_div.hw
+ 		},
+ 		.num_parents = 1,
+-		.flags = CLK_SET_RATE_PARENT,
++		.flags = CLK_SET_RATE_GATE | CLK_SET_RATE_PARENT,
+ 	},
+ };
+ 
 -- 
 2.20.1
 
