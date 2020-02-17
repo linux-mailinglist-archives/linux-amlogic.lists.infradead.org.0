@@ -2,66 +2,56 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7D9E7161C98
-	for <lists+linux-amlogic@lfdr.de>; Mon, 17 Feb 2020 22:08:02 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 12419161D18
+	for <lists+linux-amlogic@lfdr.de>; Mon, 17 Feb 2020 23:04:20 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:Cc:
-	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
-	MIME-Version:References:In-Reply-To:Message-ID:Subject:To:From:Date:Reply-To:
-	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=hJ/rVwXqXygw2R3x6Z9mCFYwLaiU2jrOGE3P3gCeDUw=; b=NWpSkJ0EFSOY7avlY6izv23dg
-	moYnZFSlTfGMDysEi2wQfTW2ytzAVU8MoQHW+swoW04sPxhDDH/u06GcKQPf2nedlRR8RpAu0FQqA
-	U8e82SxbGbEoxyq/pmOQXAO+rUlg4rZY0ZAgHj3JGtQh/08eIBcpej8YNZAZA5kiWvapIyJTIoHVV
-	B3sL5hLGTGeIcZQhC9JMEWweBRt0U5YBvki8WZ/Ry8YfeoVbAfpcNZ5jbkAj+dzBTQVuWilaT8zDK
-	mUXaCYaDNwNbzjspgfej9UTAWbo2a5FKzcinxpdIScNHVyzpYf6CAMzi+x1tP/ewsFs6SB4O6+/n3
-	Ad1lbRQJw==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:
+	In-Reply-To:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	References:List-Owner; bh=RT5/MnAq7ryMTrltfNOhfAEUafX5i49uLYDAZab5gak=; b=HHV
+	+f4mE25PtwhEj9ZEnx0/fryqjqq4+Qq1FG3UyO5GmDaQ4BvgNirD1e7lwsfW9fCFppLqs9u2L22+q
+	HWaUkjX8pCwbp6io85kO+4D8P45tVu1KNHZAcw5rElJmBOhkvaunRw854yDaJaCRru4LdC99fsIKP
+	FOjz5iczIYmCwaZOstEYdnyoKhX8zH/qEUzcjiLOwathkPuvLjawh1PxHR8Q+1LOI284Q0zwO2oDD
+	uORnT7ADrSkuOEBkTsYQuZZP+H0a3u7aBbhZ26L0dF/meeUBEl9sgizPYnVzqYdevL157Dx0a2E0b
+	QDMoQjG5zkUFAA78m4IYVXCyAASNvyQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j3ncU-00015y-02; Mon, 17 Feb 2020 21:07:58 +0000
-Received: from bilbo.ozlabs.org ([203.11.71.1] helo=ozlabs.org)
- by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j3ncQ-00014h-7v; Mon, 17 Feb 2020 21:07:55 +0000
-Received: from authenticated.ozlabs.org (localhost [127.0.0.1])
- (using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
- key-exchange ECDHE (P-256) server-signature RSA-PSS (4096 bits) server-digest
- SHA256) (No client certificate requested)
- by mail.ozlabs.org (Postfix) with ESMTPSA id 48LxQX2r8Sz9sPK;
- Tue, 18 Feb 2020 08:07:48 +1100 (AEDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=canb.auug.org.au;
- s=201702; t=1581973670;
- bh=nxdEeK3aKrGZjzXa1VSBkCfAzQbvnzVXLQPM5aG4gSs=;
- h=Date:From:To:Cc:Subject:In-Reply-To:References:From;
- b=SjGC7LXOH47DzIYa/wTx9kck7ihEqEtd35QbvysyleLDJEjQ5TjidZYlw4EvotXPT
- CNdW/Ie+nISOjpVQNkI/tAX84t1nI3NLRA87JI2qdzjhr/wqKoazjF/aZDzBdoFHJ/
- VKiMfeoHd21dajc8qvIXzamrO96hG4HVMc0cB+y1K2ZNaauNI5b4V8fczSfEFssmom
- bcxJ8tjrXKbUDNK3b4mJe6iMy1s4xLX80MhbQkSmuBoirvX2wJ5CXGnIT7SwXB6bhW
- Fk+hqPBEet1lc8QjqYiICsTwtN/z5HT49IFmL0HxvrL1iF1yUiIqKGhg72zcBccGxi
- ehRzhNhxUdaFw==
-Date: Tue, 18 Feb 2020 08:07:43 +1100
-From: Stephen Rothwell <sfr@canb.auug.org.au>
-To: Jianxin Pan <jianxin.pan@amlogic.com>
-Subject: Re: [PATCH] soc: amlogic: fix compile failure with
- MESON_SECURE_PM_DOMAINS & !MESON_SM
-Message-ID: <20200218080743.07e58c6e@canb.auug.org.au>
-In-Reply-To: <1581955933-69832-1-git-send-email-jianxin.pan@amlogic.com>
-References: <1581955933-69832-1-git-send-email-jianxin.pan@amlogic.com>
-MIME-Version: 1.0
+	id 1j3oUy-0005se-Lo; Mon, 17 Feb 2020 22:04:16 +0000
+Received: from foss.arm.com ([217.140.110.172])
+ by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
+ id 1j3oUe-0005Se-DR
+ for linux-amlogic@lists.infradead.org; Mon, 17 Feb 2020 22:03:58 +0000
+Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
+ by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id 734A0106F;
+ Mon, 17 Feb 2020 14:03:55 -0800 (PST)
+Received: from localhost (unknown [10.37.6.21])
+ by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id EAD543F703;
+ Mon, 17 Feb 2020 14:03:54 -0800 (PST)
+Date: Mon, 17 Feb 2020 22:03:53 +0000
+From: Mark Brown <broonie@kernel.org>
+To: Jerome Brunet <jbrunet@baylibre.com>
+Subject: Applied "ASoC: meson: aiu: simplify component addition" to the asoc
+ tree
+In-Reply-To: <20200217092019.433402-1-jbrunet@baylibre.com>
+Message-Id: <applied-20200217092019.433402-1-jbrunet@baylibre.com>
+X-Patchwork-Hint: ignore
+X-Bad-Reply: In-Reply-To but no 'Re:' in Subject.
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200217_130754_480789_0B913356 
-X-CRM114-Status: GOOD (  10.59  )
-X-Spam-Score: -0.1 (/)
+X-CRM114-CacheID: sfid-20200217_140356_572474_AB6B3A63 
+X-CRM114-Status: GOOD (  16.01  )
+X-Spam-Score: -2.0 (--)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-0.1 points)
+ Content analysis details:   (-2.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [217.140.110.172 listed in list.dnswl.org]
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -73,84 +63,159 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, Hanjie Lin <hanjie.lin@amlogic.com>,
- Victor Wan <victor.wan@amlogic.com>, Neil Armstrong <narmstrong@baylibre.com>,
- Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
- Kevin Hilman <khilman@baylibre.com>, linux-pm@vger.kernel.org,
- linux-kernel@vger.kernel.org, Rob Herring <robh+dt@kernel.org>,
- Jian Hu <jian.hu@amlogic.com>, Xingyu Chen <xingyu.chen@amlogic.com>,
- linux-amlogic@lists.infradead.org, linux-arm-kernel@lists.infradead.org,
- Jerome Brunet <jbrunet@baylibre.com>
-Content-Type: multipart/mixed; boundary="===============5644738882542031721=="
+Cc: devicetree@vger.kernel.org, alsa-devel@alsa-project.org,
+ Kevin Hilman <khilman@baylibre.com>, Liam Girdwood <lgirdwood@gmail.com>,
+ linux-kernel@vger.kernel.org, Mark Brown <broonie@kernel.org>,
+ linux-amlogic@lists.infradead.org
+MIME-Version: 1.0
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
---===============5644738882542031721==
-Content-Type: multipart/signed; boundary="Sig_/PmPWq+6iWpnXtLvAov9NhcT";
- protocol="application/pgp-signature"; micalg=pgp-sha256
+The patch
 
---Sig_/PmPWq+6iWpnXtLvAov9NhcT
-Content-Type: text/plain; charset=US-ASCII
-Content-Transfer-Encoding: quoted-printable
+   ASoC: meson: aiu: simplify component addition
 
-Hi Jianxin,
+has been applied to the asoc tree at
 
-On Tue, 18 Feb 2020 00:12:13 +0800 Jianxin Pan <jianxin.pan@amlogic.com> wr=
-ote:
->
-> When MESON_SECURE_PM_DOMAINS & !MESON_SM, there will be compile failure:
-> .../meson-secure-pwrc.o: In function `meson_secure_pwrc_on':
-> .../meson-secure-pwrc.c:76: undefined reference to `meson_sm_call'
->=20
-> Fix this by adding depends on MESON_SM for MESON_SECURE_PM_DOMAINS.
->=20
-> Fixes: b3dde5013e13 ("soc: amlogic: Add support for Secure power domains =
-controller")
->=20
-> Reported-by: kbuild test robot <lkp@intel.com>
-> Reported-by: patchwork-bot+linux-amlogic<patchwork-bot+linux-amlogic@kern=
-el.org>
-> Reported-by: Stephen Rothwell<sfr@canb.auug.org.au>
-> Signed-off-by: Jianxin Pan <jianxin.pan@amlogic.com>
-> ---
->  drivers/soc/amlogic/Kconfig | 2 +-
->  1 file changed, 1 insertion(+), 1 deletion(-)
+   https://git.kernel.org/pub/scm/linux/kernel/git/broonie/sound.git 
 
-I will apply that patch to linux-next today.
+All being well this means that it will be integrated into the linux-next
+tree (usually sometime in the next 24 hours) and sent to Linus during
+the next merge window (or sooner if it is a bug fix), however if
+problems are discovered then the patch may be dropped or reverted.  
 
---=20
-Cheers,
-Stephen Rothwell
+You may get further e-mails resulting from automated or manual testing
+and review of the tree, please engage with people reporting problems and
+send followup patches addressing any issues that are reported if needed.
 
---Sig_/PmPWq+6iWpnXtLvAov9NhcT
-Content-Type: application/pgp-signature
-Content-Description: OpenPGP digital signature
+If any updates are required or you are submitting further changes they
+should be sent as incremental updates against current git, existing
+patches will not be replaced.
 
------BEGIN PGP SIGNATURE-----
+Please add any relevant lists and maintainers to the CCs when replying
+to this mail.
 
-iQEzBAEBCAAdFiEENIC96giZ81tWdLgKAVBC80lX0GwFAl5LAJ8ACgkQAVBC80lX
-0Gzg7Af/boLJ+i4JAZ3psBMn+NTk5UrWqeD9jIY6ZyGmw/9xma882M/tR21D0KEI
-S+5mkEFT7PKNvhjUlHhshMB/nYmrPpW/EhlHou1cuNmIGDx9zotA9PJyVGAQ8LW6
-J7ajzSnF/aB77dQY4r99qm+FxFZARbrqMC41P+1raM/cz2LjoK+dVW62P9qh7tce
-OajY/Qs83loC/fMzdibvV4RAXHAqMThSsEKF5GOswo/d+ySN9LFn0ekSExOklBzE
-K/QiBlqMU1leEM2nSgbOXdLjQzsJ87ZOLb9J0PUbP15VKgJ9IX+mTyaYwZblEsDY
-k4roNmnelsEhMiyNoFhrdO0rqFWV1Q==
-=2huF
------END PGP SIGNATURE-----
+Thanks,
+Mark
 
---Sig_/PmPWq+6iWpnXtLvAov9NhcT--
+From 0247142233239dc235f8239aab5c7991250d4e66 Mon Sep 17 00:00:00 2001
+From: Jerome Brunet <jbrunet@baylibre.com>
+Date: Mon, 17 Feb 2020 10:20:19 +0100
+Subject: [PATCH] ASoC: meson: aiu: simplify component addition
 
+Now that the component name is unique within ASoC, there is no need to
+hack the debugfs prefix to add more than one ASoC component to a linux
+device. Remove the unnecessary function and use
+snd_soc_register_component() directly.
 
---===============5644738882542031721==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
+Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
+Link: https://lore.kernel.org/r/20200217092019.433402-1-jbrunet@baylibre.com
+Signed-off-by: Mark Brown <broonie@kernel.org>
+---
+ sound/soc/meson/aiu-acodec-ctrl.c |  7 +++----
+ sound/soc/meson/aiu-codec-ctrl.c  |  7 +++----
+ sound/soc/meson/aiu.c             | 20 --------------------
+ sound/soc/meson/aiu.h             |  8 --------
+ 4 files changed, 6 insertions(+), 36 deletions(-)
+
+diff --git a/sound/soc/meson/aiu-acodec-ctrl.c b/sound/soc/meson/aiu-acodec-ctrl.c
+index b8e88b1a4fc8..7078197e0cc5 100644
+--- a/sound/soc/meson/aiu-acodec-ctrl.c
++++ b/sound/soc/meson/aiu-acodec-ctrl.c
+@@ -197,8 +197,7 @@ static const struct snd_soc_component_driver aiu_acodec_ctrl_component = {
+ 
+ int aiu_acodec_ctrl_register_component(struct device *dev)
+ {
+-	return aiu_add_component(dev, &aiu_acodec_ctrl_component,
+-				 aiu_acodec_ctrl_dai_drv,
+-				 ARRAY_SIZE(aiu_acodec_ctrl_dai_drv),
+-				 "acodec");
++	return snd_soc_register_component(dev, &aiu_acodec_ctrl_component,
++					  aiu_acodec_ctrl_dai_drv,
++					  ARRAY_SIZE(aiu_acodec_ctrl_dai_drv));
+ }
+diff --git a/sound/soc/meson/aiu-codec-ctrl.c b/sound/soc/meson/aiu-codec-ctrl.c
+index 8646a953e3b3..4b773d3e8b07 100644
+--- a/sound/soc/meson/aiu-codec-ctrl.c
++++ b/sound/soc/meson/aiu-codec-ctrl.c
+@@ -144,9 +144,8 @@ static const struct snd_soc_component_driver aiu_hdmi_ctrl_component = {
+ 
+ int aiu_hdmi_ctrl_register_component(struct device *dev)
+ {
+-	return aiu_add_component(dev, &aiu_hdmi_ctrl_component,
+-				 aiu_hdmi_ctrl_dai_drv,
+-				 ARRAY_SIZE(aiu_hdmi_ctrl_dai_drv),
+-				 "hdmi");
++	return snd_soc_register_component(dev, &aiu_hdmi_ctrl_component,
++					  aiu_hdmi_ctrl_dai_drv,
++					  ARRAY_SIZE(aiu_hdmi_ctrl_dai_drv));
+ }
+ 
+diff --git a/sound/soc/meson/aiu.c b/sound/soc/meson/aiu.c
+index 34b40b8b8299..d3e2d40e9562 100644
+--- a/sound/soc/meson/aiu.c
++++ b/sound/soc/meson/aiu.c
+@@ -71,26 +71,6 @@ int aiu_of_xlate_dai_name(struct snd_soc_component *component,
+ 	return 0;
+ }
+ 
+-int aiu_add_component(struct device *dev,
+-		      const struct snd_soc_component_driver *component_driver,
+-		      struct snd_soc_dai_driver *dai_drv,
+-		      int num_dai,
+-		      const char *debugfs_prefix)
+-{
+-	struct snd_soc_component *component;
+-
+-	component = devm_kzalloc(dev, sizeof(*component), GFP_KERNEL);
+-	if (!component)
+-		return -ENOMEM;
+-
+-#ifdef CONFIG_DEBUG_FS
+-	component->debugfs_prefix = debugfs_prefix;
+-#endif
+-
+-	return snd_soc_add_component(dev, component, component_driver,
+-				     dai_drv, num_dai);
+-}
+-
+ static int aiu_cpu_of_xlate_dai_name(struct snd_soc_component *component,
+ 				     struct of_phandle_args *args,
+ 				     const char **dai_name)
+diff --git a/sound/soc/meson/aiu.h b/sound/soc/meson/aiu.h
+index 097c26de7b7c..06a968c55728 100644
+--- a/sound/soc/meson/aiu.h
++++ b/sound/soc/meson/aiu.h
+@@ -11,9 +11,7 @@ struct clk;
+ struct clk_bulk_data;
+ struct device;
+ struct of_phandle_args;
+-struct snd_soc_component_driver;
+ struct snd_soc_dai;
+-struct snd_soc_dai_driver;
+ struct snd_soc_dai_ops;
+ 
+ enum aiu_clk_ids {
+@@ -45,12 +43,6 @@ int aiu_of_xlate_dai_name(struct snd_soc_component *component,
+ 			  const char **dai_name,
+ 			  unsigned int component_id);
+ 
+-int aiu_add_component(struct device *dev,
+-		      const struct snd_soc_component_driver *component_driver,
+-		      struct snd_soc_dai_driver *dai_drv,
+-		      int num_dai,
+-		      const char *debugfs_prefix);
+-
+ int aiu_hdmi_ctrl_register_component(struct device *dev);
+ int aiu_acodec_ctrl_register_component(struct device *dev);
+ 
+-- 
+2.20.1
+
 
 _______________________________________________
 linux-amlogic mailing list
 linux-amlogic@lists.infradead.org
 http://lists.infradead.org/mailman/listinfo/linux-amlogic
-
---===============5644738882542031721==--
-
