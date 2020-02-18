@@ -2,54 +2,90 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 378C9161EC0
-	for <lists+linux-amlogic@lfdr.de>; Tue, 18 Feb 2020 02:55:58 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id BE3D41622FE
+	for <lists+linux-amlogic@lfdr.de>; Tue, 18 Feb 2020 10:06:00 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=rYiMep2fVHpi4xlwx9IfW0TCEF8MxrmQ8K8HVvbwutw=; b=RNcaUXzou5SKO3
-	7/2ENOnazEs7MxmrAkRRWQuXJV0iLBvrZTRLpsAHrj8i05NwTG6N+NQ+wOhC3CctVs5u8Jtm2s6d1
-	/Ujco1SX1tYELB4g8e4iqNw8NvBwFp78SAS4/XdaKsjMKlVAdbIoHbtv4LN68qHoxYfleaQOFh9Cd
-	SjcA1arH/NPIDbrH55uAIdI1xZJ6bTs7MvZlLRd8cM52Hm0QTo5ZGL3OyieolxPM+VpqT1gFV5Fby
-	oOkJs+Q3PiWy1Ygt1CbBoqr6/tSBI9ND6MK80LFY75Kp+2eBwecTWeuw9/Z1RvPtCX0s8iSvLNFxK
-	SNa42mRcpM4Jl17uAviA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:
+	In-reply-to:Subject:To:From:References:Reply-To:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:List-Owner;
+	bh=UvoW1EZmMCruP1m4xf1QknjzPlCLFV1CL9RsQt8sfLs=; b=oHZoJSmQJaUkU3pdcdkVbdxg01
+	JRzlm6DDFYGSjcwkL8QqXro7UzEgDZZ9j/Mjg9wAewmSKBIabz+vppni0i5azXFOKnzm4IAdOtrHo
+	szFiTKuNhETFMrVz3vEdtrWAeERmSKku7zFYw6y89dt12fEk1F9UuaYbdzu1e1VlaNYoS/46VTHw8
+	wsD72NMQGJpNjzR12L3+MPpMmFQgHwmS935u++b1fikDTjFZ1w8e1JHqOf81L0dxV8XsspZ03E02K
+	si1ERFC87oAUQZqY67eL/BKPisNo8mISHrI/QvoaVMsSBhs2ObVA2VeKHRnaqoPe+HpOo6rZ8c5gG
+	t778UjqA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j3s7A-00057X-8n; Tue, 18 Feb 2020 01:55:56 +0000
-Received: from mail-sh.amlogic.com ([58.32.228.43])
+	id 1j3ypE-0002GH-2K; Tue, 18 Feb 2020 09:05:52 +0000
+Received: from mail-wr1-x441.google.com ([2a00:1450:4864:20::441])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j3s6J-0002x1-K0; Tue, 18 Feb 2020 01:55:05 +0000
-Received: from droid10.amlogic.com (10.18.11.213) by mail-sh.amlogic.com
- (10.18.11.5) with Microsoft SMTP Server id 15.1.1591.10; Tue, 18 Feb 2020
- 09:55:09 +0800
-From: Hanjie Lin <hanjie.lin@amlogic.com>
-To: Kishon Vijay Abraham I <kishon@ti.com>, Jerome Brunet
- <jbrunet@baylibre.com>, Neil Armstrong <narmstrong@baylibre.com>, Rob Herring
- <robh@kernel.org>, Greg Kroah-Hartman <gregkh@linuxfoundation.org>, Kevin
- Hilman <khilman@baylibre.com>
-Subject: [PATCH v9 3/3] arm64: dts: meson: a1: Enable USB2 PHY and DWC3
- controller
-Date: Tue, 18 Feb 2020 09:54:19 +0800
-Message-ID: <1581990859-135234-4-git-send-email-hanjie.lin@amlogic.com>
-X-Mailer: git-send-email 2.7.4
-In-Reply-To: <1581990859-135234-1-git-send-email-hanjie.lin@amlogic.com>
-References: <1581990859-135234-1-git-send-email-hanjie.lin@amlogic.com>
+ id 1j3yp9-0002FQ-Q8
+ for linux-amlogic@lists.infradead.org; Tue, 18 Feb 2020 09:05:50 +0000
+Received: by mail-wr1-x441.google.com with SMTP id w15so22914571wru.4
+ for <linux-amlogic@lists.infradead.org>; Tue, 18 Feb 2020 01:05:46 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=baylibre-com.20150623.gappssmtp.com; s=20150623;
+ h=references:user-agent:from:to:cc:subject:in-reply-to:date
+ :message-id:mime-version;
+ bh=ZQOUNLnI2259PEgDQeFnGl4MBwAdHmsWL1wSexCinM4=;
+ b=uXc+7s1riFQCb+A5ws5EF3BokKj3HF5Ic7fu+a6RWMuGmjkBH2YIJ5d/XCq/0hbPe8
+ ZdV/SnkczBOx9DNcZDRkEG62+CVv+Ul71XEunTqjDbZba1X8yaPVIXjo8ZcC2X6TZwzV
+ zJdM5EVbamvY8CL1TmWChxN3kC2d7sJcmT57hcBw7iuT3weuEUHczpA/dEa7J8NHyLSj
+ 3FfbhHrvX8TMlqVUm32ZicYOl4h6wkXdN6dPRY1WZRglffWh8F9fo3uwGhstowwATguW
+ GlhpbGhH7eQOnT6OVc3ya1iec+VOHF2fM96YAJpoNJzX6sCVFkDt+WAG1J5VIhjCy3l/
+ 6FBQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:references:user-agent:from:to:cc:subject
+ :in-reply-to:date:message-id:mime-version;
+ bh=ZQOUNLnI2259PEgDQeFnGl4MBwAdHmsWL1wSexCinM4=;
+ b=HZkqUtOJH3/6peMuWCNo8a3hRZWuFYZjYiTX+F95rysc/qaKCOpSXeoDX4gD3oItOe
+ tbo92DO6IhRLsCDnSxSiqnDI87nzBds03RkRDayK5YfNCyzu4h+9P0+xZo2UNsVy8hoy
+ HtKuWj+BMKvJlKKnI+Ik7DCpiPeLNQ0oHhbtHCDRBvFb03p6teLW5TczJ6WcqYBujqkt
+ RViXoBXPViq6Jh0ebwUhPp5iJIt4QleDEt4sXk6pOI3AcqXNUCq/58t7BH/tIEJoln+3
+ 2r8gW31K/UXiuhAwNxrxlJZ03mvo8KnJcCynBdi/DV/hwV8rdv867b32udduf8xhWSFm
+ NQ2g==
+X-Gm-Message-State: APjAAAVxE62vB0iSLEVOtcPPEQxH6kwfsh3XhQSVIx21eGMLw6w0GuHg
+ 57QXgJtIlzVuIg0D2tHmIwtnWg==
+X-Google-Smtp-Source: APXvYqw7gVv24LXO4yo+TKhY0kNEn11cDs1o6RHPmwxTKhpnXMxlZFCrF93NRIGzbtr+nGTfG9euuQ==
+X-Received: by 2002:a5d:5647:: with SMTP id j7mr27755061wrw.265.1582016745546; 
+ Tue, 18 Feb 2020 01:05:45 -0800 (PST)
+Received: from localhost (cag06-3-82-243-161-21.fbx.proxad.net.
+ [82.243.161.21])
+ by smtp.gmail.com with ESMTPSA id w7sm2722224wmi.9.2020.02.18.01.05.44
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Tue, 18 Feb 2020 01:05:44 -0800 (PST)
+References: <20200120034937.128600-1-jian.hu@amlogic.com>
+ <20200120034937.128600-3-jian.hu@amlogic.com>
+ <1jftfq7ir8.fsf@starbuckisacylon.baylibre.com>
+ <ce7d406e-b5bd-44c8-84fb-5edd3b3ffbce@amlogic.com>
+User-agent: mu4e 1.3.3; emacs 26.3
+From: Jerome Brunet <jbrunet@baylibre.com>
+To: Jian Hu <jian.hu@amlogic.com>, Neil Armstrong <narmstrong@baylibre.com>
+Subject: Re: [PATCH v7 2/5] clk: meson: add support for A1 PLL clock ops
+In-reply-to: <ce7d406e-b5bd-44c8-84fb-5edd3b3ffbce@amlogic.com>
+Date: Tue, 18 Feb 2020 10:05:43 +0100
+Message-ID: <1jd0ac5kpk.fsf@starbuckisacylon.baylibre.com>
 MIME-Version: 1.0
-X-Originating-IP: [10.18.11.213]
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200217_175503_697304_A9E8C5DD 
-X-CRM114-Status: UNSURE (   8.80  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200218_010547_913544_08B378D8 
+X-CRM114-Status: GOOD (  20.11  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:441 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -61,98 +97,202 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, Hanjie Lin <hanjie.lin@amlogic.com>,
- Victor Wan <victor.wan@amlogic.com>, Jianxin Pan <jianxin.pan@amlogic.com>,
- Stephen Boyd <sboyd@kernel.org>, Michael Turquette <mturquette@baylibre.com>,
- linux-usb@vger.kernel.org, Yue Wang <yue.wang@amlogic.com>,
+Cc: Rob Herring <robh@kernel.org>, Victor Wan <victor.wan@amlogic.com>,
+ Jianxin Pan <jianxin.pan@amlogic.com>, devicetree@vger.kernel.org,
  Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
- Liang Yang <liang.yang@amlogic.com>, Qiufang Dai <qiufang.dai@amlogic.com>,
- Xingyu Chen <xingyu.chen@amlogic.com>, Carlo Caione <carlo@caione.org>,
- linux-amlogic@lists.infradead.org, linux-arm-kernel@lists.infradead.org,
- Jian Hu <jian.hu@amlogic.com>
+ Kevin Hilman <khilman@baylibre.com>,
+ Michael Turquette <mturquette@baylibre.com>, linux-kernel@vger.kernel.org,
+ Stephen Boyd <sboyd@kernel.org>, Qiufang Dai <qiufang.dai@amlogic.com>,
+ Chandle Zou <chandle.zou@amlogic.com>, linux-amlogic@lists.infradead.org,
+ linux-clk@vger.kernel.org, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Enable USB2 PHY and DWC3 controller for Meson A1 SoC.
 
-Signed-off-by: Yue Wang <yue.wang@amlogic.com>
-Signed-off-by: Hanjie Lin <hanjie.lin@amlogic.com>
----
- arch/arm64/boot/dts/amlogic/meson-a1.dtsi | 43 +++++++++++++++++++++++++++++++
- 1 file changed, 43 insertions(+)
+On Mon 10 Feb 2020 at 07:11, Jian Hu <jian.hu@amlogic.com> wrote:
 
-diff --git a/arch/arm64/boot/dts/amlogic/meson-a1.dtsi b/arch/arm64/boot/dts/amlogic/meson-a1.dtsi
-index 6fdc0dd..3b7ca50 100644
---- a/arch/arm64/boot/dts/amlogic/meson-a1.dtsi
-+++ b/arch/arm64/boot/dts/amlogic/meson-a1.dtsi
-@@ -6,6 +6,9 @@
- #include <dt-bindings/interrupt-controller/irq.h>
- #include <dt-bindings/interrupt-controller/arm-gic.h>
- #include <dt-bindings/power/meson-a1-power.h>
-+#include <dt-bindings/reset/amlogic,meson-a1-reset.h>
-+#include <dt-bindings/clock/a1-pll-clkc.h>
-+#include <dt-bindings/clock/a1-clkc.h>
- 
- / {
- 	compatible = "amlogic,a1";
-@@ -100,6 +103,17 @@
- 				#power-domain-cells = <1>;
- 				status = "okay";
- 			};
-+
-+			usb2_phy1: phy@40000 {
-+				compatible = "amlogic,a1-usb2-phy";
-+				clocks = <&clkc_periphs CLKID_XTAL_USB_PHY>;
-+				clock-names = "xtal";
-+				reg = <0x0 0x40000 0x0 0x2000>;
-+				resets = <&reset RESET_USBPHY>;
-+				reset-names = "phy";
-+				#phy-cells = <0>;
-+				power-domains = <&pwrc PWRC_USB_ID>;
-+			};
- 		};
- 
- 		gic: interrupt-controller@ff901000 {
-@@ -114,6 +128,35 @@
- 			#interrupt-cells = <3>;
- 			#address-cells = <0>;
- 		};
-+
-+		usb: usb@ffe09000 {
-+			status = "disabled";
-+			compatible = "amlogic,meson-a1-usb-ctrl";
-+			reg = <0x0 0xffe09000 0x0 0xa0>;
-+			#address-cells = <2>;
-+			#size-cells = <2>;
-+			ranges;
-+
-+			clocks = <&clkc_periphs CLKID_USB_CTRL>,
-+				 <&clkc_periphs CLKID_USB_BUS>,
-+				 <&clkc_periphs CLKID_XTAL_USB_CTRL>;
-+			clock-names = "usb_ctrl", "usb_bus", "xtal_usb_ctrl";
-+			resets = <&reset RESET_USBCTRL>;
-+
-+			dr_mode = "host";
-+
-+			phys = <&usb2_phy1>;
-+			phy-names = "usb2-phy1";
-+
-+			dwc3: usb@ff400000 {
-+				compatible = "snps,dwc3";
-+				reg = <0x0 0xff400000 0x0 0x100000>;
-+				interrupts = <GIC_SPI 90 IRQ_TYPE_LEVEL_HIGH>;
-+				dr_mode = "host";
-+				snps,dis_u2_susphy_quirk;
-+				snps,quirk-frame-length-adjustment = <0x20>;
-+			};
-+		};
- 	};
- 
- 	timer {
--- 
-2.7.4
+> Hi Jerome
+>
+> Thanks for your suggestions.
+>
+> On 2020/2/4 18:24, Jerome Brunet wrote:
+>>
+>> On Mon 20 Jan 2020 at 04:49, Jian Hu <jian.hu@amlogic.com> wrote:
+>>
+>>> Compared with the previous SoCs, self-adaption current module
+>>> is newly added for A1, and there is no reset parm except the
+>>> fixed pll. In A1 PLL, the PLL enable sequence is different, using
+>>> the new power-on sequence to enable the PLL.
+>>
+>> Things are getting clearer thanks to Martin's suggestions and I can
+>> understand what your driver is doing now
+>>
+>> However, I still have a problem with the fact that 2 different pll types
+>> are getting intertwined in this driver. Parameters mandatory to one is
+>> made optional to the other. Nothing clearly shows which needs what and
+>> the combinatorial are quickly growing.
+>>
+>> Apparently the only real difference is in enable/disable, So I would
+>> prefer if the a1 had dedicated function for these ops.
+>>
+>> I suppose you'll have to submit clk_hw_enable() and clk_hw_disable()
+>> to the framework to call the appropriate ops dependind on the SoC.
+>>
+> I am confused here.
+> What does clk_hw_is_enabled/clk_hw_enable/clk_hw_disable use here?
+
+I'm asking you to make different callback for .enable() and .disable().
+The .set_rate() callback of this driver needs to turn off and on the
+clock, so it needs to call the appropriate one.
+
+To do so, you should go through a clk_hw_xxxxx() function.
+
+>
+> clk_hw_is_enabled is intend to check a parm's existence? But
+> clk_hw_is_enabled which is existed in CCF to check a PLL is locked or
+> not. Maybe I understand wrong about your suggestions.
+>
+> Could you list a example for clk_hw_enable and clk_hw_disable function
+> implementation?
+
+drivers/clk/clk.c:523 : clk_hw_is_enabled()
+
+clk_hw_enable() and clk_hw_disable() so you'll need to implement these
+one and submit them.
+
+>>>
+>>> Signed-off-by: Jian Hu <jian.hu@amlogic.com>
+>>> Acked-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+>>> ---
+>>>   drivers/clk/meson/clk-pll.c | 47 +++++++++++++++++++++++++++++++------
+>>>   drivers/clk/meson/clk-pll.h |  2 ++
+>>>   2 files changed, 42 insertions(+), 7 deletions(-)
+>>>
+>>> diff --git a/drivers/clk/meson/clk-pll.c b/drivers/clk/meson/clk-pll.c
+>>> index ddb1e5634739..10926291440f 100644
+>>> --- a/drivers/clk/meson/clk-pll.c
+>>> +++ b/drivers/clk/meson/clk-pll.c
+>>> @@ -283,10 +283,14 @@ static void meson_clk_pll_init(struct clk_hw *hw)
+>>>   	struct meson_clk_pll_data *pll = meson_clk_pll_data(clk);
+>>>     	if (pll->init_count) {
+>>> -		meson_parm_write(clk->map, &pll->rst, 1);
+>>> +		if (MESON_PARM_APPLICABLE(&pll->rst))
+>>> +			meson_parm_write(clk->map, &pll->rst, 1);
+>>> +
+>>
+>> replace by
+>>          enabled = clk_hw_is_enabled(hw)
+>>          if (enabled)
+>>             clk_hw_disable(hw)
+>>
+> clk_hw_is_enabled here is used to check 'pll->rst'?
+>>>   		regmap_multi_reg_write(clk->map, pll->init_regs,
+>>>   				       pll->init_count);
+>>> -		meson_parm_write(clk->map, &pll->rst, 0);
+>>> +
+>>> +		if (MESON_PARM_APPLICABLE(&pll->rst))
+>>> +			meson_parm_write(clk->map, &pll->rst, 0);
+>>
+>>         /* restore if necessary */
+>>         if (enabled)
+>>            clk_hw_enable(hw)
+>>
+>>>   	}
+>>>   }
+>>>   @@ -295,8 +299,11 @@ static int meson_clk_pll_is_enabled(struct clk_hw
+>>> *hw)
+>>>   	struct clk_regmap *clk = to_clk_regmap(hw);
+>>>   	struct meson_clk_pll_data *pll = meson_clk_pll_data(clk);
+>>>   -	if (meson_parm_read(clk->map, &pll->rst) ||
+>>> -	    !meson_parm_read(clk->map, &pll->en) ||
+>>> +	if (MESON_PARM_APPLICABLE(&pll->rst) &&
+>>> +	    meson_parm_read(clk->map, &pll->rst))
+>>> +		return 0;
+>>> +
+>>> +	if (!meson_parm_read(clk->map, &pll->en) ||
+>>>   	    !meson_parm_read(clk->map, &pll->l))
+>>>   		return 0;
+>>
+>> I suppose the pll can't be locked if it was in reset, so we could drop
+>> the check on `rst` entirely to simplify the function
+>>
+> OK, I will drop 'rst' check.
+>>>   @@ -323,13 +330,34 @@ static int meson_clk_pll_enable(struct clk_hw
+>>> *hw)
+>>>   		return 0;
+>>>     	/* Make sure the pll is in reset */
+>>> -	meson_parm_write(clk->map, &pll->rst, 1);
+>>> +	if (MESON_PARM_APPLICABLE(&pll->rst))
+>>> +		meson_parm_write(clk->map, &pll->rst, 1);
+>>>     	/* Enable the pll */
+>>>   	meson_parm_write(clk->map, &pll->en, 1);
+>>>     	/* Take the pll out reset */
+>>> -	meson_parm_write(clk->map, &pll->rst, 0);
+>>> +	if (MESON_PARM_APPLICABLE(&pll->rst))
+>>> +		meson_parm_write(clk->map, &pll->rst, 0);
+>>> +
+>>> +	/*
+>>> +	 * Compared with the previous SoCs, self-adaption current module
+>>> +	 * is newly added for A1, keep the new power-on sequence to enable the
+>>> +	 * PLL. The sequence is:
+>>> +	 * 1. enable the pll, delay for 10us
+>>> +	 * 2. enable the pll self-adaption current module, delay for 40us
+>>> +	 * 3. enable the lock detect module
+>>> +	 */
+>>> +	if (MESON_PARM_APPLICABLE(&pll->current_en)) {
+>>> +		udelay(10);
+>>> +		meson_parm_write(clk->map, &pll->current_en, 1);
+>>> +		udelay(40);
+>>> +	};
+>>> +
+>>> +	if (MESON_PARM_APPLICABLE(&pll->l_detect)) {
+>>> +		meson_parm_write(clk->map, &pll->l_detect, 1);
+>>> +		meson_parm_write(clk->map, &pll->l_detect, 0);
+>>> +	}
+>>>     	if (meson_clk_pll_wait_lock(hw))
+>>>   		return -EIO;
+>>> @@ -343,10 +371,15 @@ static void meson_clk_pll_disable(struct clk_hw *hw)
+>>>   	struct meson_clk_pll_data *pll = meson_clk_pll_data(clk);
+>>>     	/* Put the pll is in reset */
+>>> -	meson_parm_write(clk->map, &pll->rst, 1);
+>>> +	if (MESON_PARM_APPLICABLE(&pll->rst))
+>>> +		meson_parm_write(clk->map, &pll->rst, 1);
+>>>     	/* Disable the pll */
+>>>   	meson_parm_write(clk->map, &pll->en, 0);
+>>> +
+>>> +	/* Disable PLL internal self-adaption current module */
+>>> +	if (MESON_PARM_APPLICABLE(&pll->current_en))
+>>> +		meson_parm_write(clk->map, &pll->current_en, 0);
+>>>   }
+>>
+>> With the above clarified, it should be easy to properly split the
+>> functions between the legacy type and the a1 type.
+>>
+>> You'll need to update meson_clk_pll_set_rate() to call
+>>   - clk_hw_is_enabled()
+>>   - clk_hw_enable() and clk_hw_disable() (again, you'll need to add
+>>   those in the framework first)
+>>
+>>>     static int meson_clk_pll_set_rate(struct clk_hw *hw, unsigned long
+>>> rate,
+>>> diff --git a/drivers/clk/meson/clk-pll.h b/drivers/clk/meson/clk-pll.h
+>>> index 367efd0f6410..a2228c0fdce5 100644
+>>> --- a/drivers/clk/meson/clk-pll.h
+>>> +++ b/drivers/clk/meson/clk-pll.h
+>>> @@ -36,6 +36,8 @@ struct meson_clk_pll_data {
+>>>   	struct parm frac;
+>>>   	struct parm l;
+>>>   	struct parm rst;
+>>> +	struct parm current_en;
+>>> +	struct parm l_detect;
+>>>   	const struct reg_sequence *init_regs;
+>>>   	unsigned int init_count;
+>>>   	const struct pll_params_table *table;
+>>
+>> .
+>>
 
 
 _______________________________________________
