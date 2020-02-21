@@ -2,81 +2,85 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1217016818F
-	for <lists+linux-amlogic@lfdr.de>; Fri, 21 Feb 2020 16:28:23 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id A770C1681D2
+	for <lists+linux-amlogic@lfdr.de>; Fri, 21 Feb 2020 16:36:21 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=OKkL11PkIlBH91se/3/FB5OUB0Op8tXIjW9autLB73Q=; b=A3P0NbwOcg6bzN
-	7n9/xhkvWDgzhBZXFm5ycuAFXeERLJOhQPO/QKEHgKMzGArKris+P9/VZQI5I0asH+M2ziJ8uSMZh
-	5c3b7f5lJrGLWyF6mGmWrIx7nbcMdvwVjaHbLxbEQXYoEEGd3NzHcFNfrHAaUBJ+JeNbyVbwfeNox
-	dclL0skzmuyAGgS2wl2LmRfGWEl2Gs94Gf/71U7ZZdmXSFHmeWS8wvm6N2abCtiNUxuUk9zCa5Z3c
-	4G59OJyaoKVlFg8IWiCn8q4h+Ptf4IvIc74hluio6vQLcPiy0NjFMUmQ5uiCPn8n7iQVKD22uaVSM
-	WpkmIWpNnIyaSjIVfSaQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=XInrRWeV0gX8YP+YLBKzJHL6zV4QOSQXz+YY4cFfqXU=; b=XgKU56cj95HnU6
+	NZMNYE4k+TAgV8Db9/xsGggSXd8J8OiDVYLhOnqLcHj8yq2Dhnl1JfNa4tp2hCx+VukuxROB5fO/M
+	iIoJKEHyY3DxtmzShnmNBiDrV/ovcZAfyTQsPRqCSQnSHb7eB8qwkOX1YxnyHa26GgH121YosiV+r
+	FG3G1cmmhymg4T88nanOZK0jw5JbuaQA971G8CYyzyNc7TBGffg3unwMplZUO4c7/k4lsRS/KKoei
+	HgU9nbnzpRDV9kVaMpIEybFIwPbOPVmV7EFftQP26807BxFAdHMxH4PcaSkfYsG7Wnf9kHfNhkRbB
+	cyFSQZYu37ARDF5c77/w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j5AE0-0001gc-UO; Fri, 21 Feb 2020 15:28:20 +0000
-Received: from mail-lj1-x243.google.com ([2a00:1450:4864:20::243])
+	id 1j5ALj-00068k-Gd; Fri, 21 Feb 2020 15:36:19 +0000
+Received: from mail-wm1-x343.google.com ([2a00:1450:4864:20::343])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j5ADx-0001fg-Ua
- for linux-amlogic@lists.infradead.org; Fri, 21 Feb 2020 15:28:19 +0000
-Received: by mail-lj1-x243.google.com with SMTP id x14so2552133ljd.13
- for <linux-amlogic@lists.infradead.org>; Fri, 21 Feb 2020 07:28:17 -0800 (PST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=UN+CWiVcnl1t3iZVzq1TQm7oj61jG5zfG5blHJVYlAI=;
- b=ipsLkFmM7mX3UmnaWZVKbi5pG0qQJn3b0UAAel0eQqHf0WXtgcQwKNwvfRoIsD37O1
- 3zMEFbpBJiuC5/Og5GSvuWtysk8901K+gI8JMIy1Tw8rcVmYv4CKFhoSyJlVGk4WRR2d
- zB2Kuo8EQP39F1O7bolUPpLaYWQM7x8ifZq1Q65owiKRk2GrnNvBlwgg+CstAhKLA+lG
- dCjpfhI6GJh+8bYAspFB24GBKGVogPDsclfK8UdTplP18IMIjuO93ydyKj/xMIcVINxl
- f9a/ri6ZvEpVz5XIpJn41uPWE91lWaMjyQD+A93dNBtzTKx+ho+LlJ7OlvfSbxRvRq4/
- BZbw==
+ id 1j5ALf-000685-Mg
+ for linux-amlogic@lists.infradead.org; Fri, 21 Feb 2020 15:36:17 +0000
+Received: by mail-wm1-x343.google.com with SMTP id t14so2367205wmi.5
+ for <linux-amlogic@lists.infradead.org>; Fri, 21 Feb 2020 07:36:15 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=baylibre-com.20150623.gappssmtp.com; s=20150623;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=UNHEwFigMTNc7YIRkUZl+5v4Xtz4VgLarV7EC/Mxw3I=;
+ b=lzzPLOpa00IdY058idG1naAWzavEyCoj9ZAwXmLXwzaop7ZYtD6FCA7/Tf+u9wizE2
+ +QxpIzWLnPu+dVn5KZNt1nAGYXhZ4ztaqy8mL/My88k0srIG6rRqr0alTBwdFVXMNmuH
+ vEwKcvHsq8xwJTW5yyOZ+9QZ58aW+16RkHwKPgNUTU+oMh3S9hjGqkcB+mV1w6Cv3BZT
+ 8vT8pg8d6Y2vduJCtbT3ZWNlw5adXT1EyCNVG9oXVLxSmlsgFSnrfR5KWSK92AtNmzEn
+ qIo4lSIdYXBLXURdlh6n41O0Q8QD8BPrtCNl/3BW0RmY9seoAerFYelvoS3oFAfpFOa+
+ Rk0A==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=UN+CWiVcnl1t3iZVzq1TQm7oj61jG5zfG5blHJVYlAI=;
- b=Wocqkxhy3XX6sj3xhuIpSxvgoGQ5uhFppLGPqDQGAW8tm3uOmvpt+1Q4TKAz/Mt24l
- /glxV4/7OWSgJ1dOwxmfWdBzGyZfRiZ+6pLJg8Hr4PPMQCYVutoaOx1anihrlM1ndOYN
- 04NrX3qDhQSDA3wBMqI8DSHbf+CoDiovh3uC1MCNgIvJlfn2PRs3ExSFMH+jLdXPXLrN
- eQROr1CBqBzA8WgCfmfLCj/YbZuxBBCcLTyF0PIoMoMN/GF1/PH4aHatSRcjIOsYYar/
- aeDCeBMDLkO1FvhpdCzfEnjYyOeC8CHTzHUQJE0L20/lqcm9tneNTAA22BrcaNlDzZld
- WP6g==
-X-Gm-Message-State: APjAAAVd6Gxhuw5lBebUNvXYvB9xubtSxnAUn55t1NJCZcwLvWe9wbGj
- tWLNrnx5sahI8tKW9WEPvBvfamKLchZi5kzhaXnmVQ==
-X-Google-Smtp-Source: APXvYqzmRFe5+aD/XXxN155ljO/M/dRWkcx3FCLqbfPxZB8aGlo1hrJcZ2FMwgK4758C1WxaFEeTRiAAgqNT/nNrtts=
-X-Received: by 2002:a2e:9013:: with SMTP id h19mr23121445ljg.223.1582298895959; 
- Fri, 21 Feb 2020 07:28:15 -0800 (PST)
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=UNHEwFigMTNc7YIRkUZl+5v4Xtz4VgLarV7EC/Mxw3I=;
+ b=fVhi5G4nntMUQd4kHsvA+yl5jefcluULVwB/v+fsvoos/SDvvQOlFyC5aAVnNuItjq
+ kI24gm8p+Y5FzVQe7bhOPiNDS/HrGzPuwVYIVHUq4aKkOlq6sjeALZawxHsQvlzn/Xma
+ JJTEymZbgyqM3+qX1GaA9ZTS33KWzFe4G86wKS0iFut4GuFI/+oZZdBUVosvzb6r373/
+ syJff26I2HAED93sZam7Z59gziWEtBRAHYeLH9RUvDHLaQAkku2r9/MxwiQr/sr2apPl
+ aY231bFQsOBp7uJPkUCsZfqFhTwFIQun5i/EtQXF3mLfukglUV+P/29ZZGzdUgbyHuo/
+ vnMA==
+X-Gm-Message-State: APjAAAXF835MOq+CdF79xxrq+TQXC43u0UQP7rAHPNSjQZ2Wj3FK7+tS
+ 08hxJ53dcQKyuUENra/fm+AEcQ==
+X-Google-Smtp-Source: APXvYqyCqkZR3zDNG4VAxXvdw9Zekulra1RORCfv3lpKLj9dzld+yh6yJQE1+skfazo6TA4dUBZmJQ==
+X-Received: by 2002:a7b:c183:: with SMTP id y3mr4286552wmi.45.1582299374128;
+ Fri, 21 Feb 2020 07:36:14 -0800 (PST)
+Received: from localhost.localdomain (cag06-3-82-243-161-21.fbx.proxad.net.
+ [82.243.161.21])
+ by smtp.googlemail.com with ESMTPSA id z25sm4198782wmf.14.2020.02.21.07.36.12
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Fri, 21 Feb 2020 07:36:13 -0800 (PST)
+From: Jerome Brunet <jbrunet@baylibre.com>
+To: Mark Brown <broonie@kernel.org>,
+	Liam Girdwood <lgirdwood@gmail.com>
+Subject: [PATCH v2 0/3] ASoC: meson: g12a: add internal audio DAC support
+Date: Fri, 21 Feb 2020 16:36:04 +0100
+Message-Id: <20200221153607.1585499-1-jbrunet@baylibre.com>
+X-Mailer: git-send-email 2.24.1
 MIME-Version: 1.0
-References: <1582204512-7582-1-git-send-email-nbelin@baylibre.com>
-In-Reply-To: <1582204512-7582-1-git-send-email-nbelin@baylibre.com>
-From: Linus Walleij <linus.walleij@linaro.org>
-Date: Fri, 21 Feb 2020 16:28:05 +0100
-Message-ID: <CACRpkdajEO3HvqG+4SNj1UoUpAZJoq9RHT+bqvHDbvP6UUjA+Q@mail.gmail.com>
-Subject: Re: [PATCH RESEND] pinctrl: meson-gxl: fix GPIOX sdio pins
-To: Nicolas Belin <nbelin@baylibre.com>
+X-Patchwork-Bot: notify
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200221_072817_988351_1242F2B9 
-X-CRM114-Status: UNSURE (   6.67  )
+X-CRM114-CacheID: sfid-20200221_073615_744226_F15EAF9F 
+X-CRM114-Status: UNSURE (   7.86  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:243 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:343 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
 X-BeenThere: linux-amlogic@lists.infradead.org
@@ -90,29 +94,47 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: Kevin Hilman <khilman@baylibre.com>,
- "open list:ARM/Amlogic Meson..." <linux-amlogic@lists.infradead.org>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- "open list:GPIO SUBSYSTEM" <linux-gpio@vger.kernel.org>
+Cc: devicetree@vger.kernel.org, alsa-devel@alsa-project.org,
+ Kevin Hilman <khilman@baylibre.com>, linux-kernel@vger.kernel.org,
+ linux-amlogic@lists.infradead.org, Jerome Brunet <jbrunet@baylibre.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On Thu, Feb 20, 2020 at 2:15 PM Nicolas Belin <nbelin@baylibre.com> wrote:
+Like the gxl, the Amlogic g12a and sm1 SoC families have a t9015 internal
+audio DAC. On these more recent SoCs, any of the 3 TDM outputs can be
+routed to the internal DAC. This routing is done by a small glue device
+called 'toacodec'. This patchset adds support for it.
 
-> In the gxl driver, the sdio cmd and clk pins are inverted. It has not caused
-> any issue so far because devices using these pins always take both pins
-> so the resulting configuration is OK.
->
-> Fixes: 0f15f500ff2c ("pinctrl: meson: Add GXL pinctrl definitions")
-> Reviewed-by: Jerome Brunet <jbrunet@baylibre.com>
-> Signed-off-by: Nicolas Belin <nbelin@baylibre.com>
+This was tested on the amlogic reference design g12a-u200.
 
-Patch applied!
+Changes since v1 [0]:
+ * Fixup patch 2 which was left in an intermediate state
+   after rebasing, missing part of the changes.
+   Thanks to Sergey Bolshakov for reporting it.
 
-Yours,
-Linus Walleij
+[0]: https://lore.kernel.org/r/20200221122242.1500093-1-jbrunet@baylibre.com
+
+Jerome Brunet (3):
+  ASoC: meson: g12a: add toacodec dt-binding documentation
+  ASoC: meson: g12a: add internal DAC glue driver
+  ASoC: meson: axg-card: add toacodec support
+
+ .../bindings/sound/amlogic,g12a-toacodec.yaml |  51 ++++
+ .../dt-bindings/sound/meson-g12a-toacodec.h   |  10 +
+ sound/soc/meson/Kconfig                       |   9 +
+ sound/soc/meson/Makefile                      |   2 +
+ sound/soc/meson/axg-card.c                    |   3 +-
+ sound/soc/meson/g12a-toacodec.c               | 252 ++++++++++++++++++
+ 6 files changed, 326 insertions(+), 1 deletion(-)
+ create mode 100644 Documentation/devicetree/bindings/sound/amlogic,g12a-toacodec.yaml
+ create mode 100644 include/dt-bindings/sound/meson-g12a-toacodec.h
+ create mode 100644 sound/soc/meson/g12a-toacodec.c
+
+-- 
+2.24.1
+
 
 _______________________________________________
 linux-amlogic mailing list
