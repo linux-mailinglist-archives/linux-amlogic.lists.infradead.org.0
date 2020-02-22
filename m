@@ -2,62 +2,87 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 11D22169096
-	for <lists+linux-amlogic@lfdr.de>; Sat, 22 Feb 2020 18:03:01 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 56FB916918A
+	for <lists+linux-amlogic@lfdr.de>; Sat, 22 Feb 2020 20:33:12 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=/6HEuELZlvmVjY/9GutWn0Yz+om41+NXNo+Jw1YL/jE=; b=IyZIJEeRigZqd5
-	3URe11Cwm/rMFAOE+l4lW9Q2JXj4OAS3rw4PqE3xvl3EYE1uEuNOsu4tWGK3/xeYVANo3jH5Aesrt
-	PlhJh0JFitMrhU1rVJIu2bh8p9tnFTJMRPpi+MR9ytKYCn8ywDydXPscD9FcfgZe774Ar3vF8d33C
-	VJCpG5W7wa72jRvc+XkR33W9Q9bJJZ+9T8d3XhiZZF4M+AA8uuik4BfDRqiOIra7kqwc3glLjWPNG
-	1rMVUXeZVskkA7oboHB652jGc9D4bSDw0NP2IdV+HiloplYg5sxIWAWGoLhogYpwCGyuE5AIg4lTx
-	XA1yeNWmH4Ql6F3bdTpw==;
+	List-Owner; bh=wmeMXEQ4HQIkD4Bj4nXEDNv2j+VIRvfH1NDChfBWJfE=; b=pLkaPof8CIwZMM
+	lpLWjXCl87r+kSF1LEzDGpXgls6VAaZKof8EU48Wy2Gr2mEYHwaqMNwKurjagSukJmRUQpwvpucx0
+	5afBr59RO5qqQgS3QlI82PluPWvV//IqZohPKs0nKIHxK3ibzppUXQcz64nUbpEgAxJblE0ecWbqf
+	MidX+PDQ93UiJXpvoGDrd4kSSe6VxjE8XBQ4q30EJm2JWdsgGdnL1DvAeVNvNxisiM+GZcBAwlo7j
+	eV5uBBBVsGtt/LtAXQeak6SoPRclReUb7pvDtuGGQoO2WNB+AvXqfOMEW2dGXlJFtHzW5qowSoWUN
+	v9jtO9EcX47bctfj9fzg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j5YB3-0005dX-Tc; Sat, 22 Feb 2020 17:02:53 +0000
-Received: from mga04.intel.com ([192.55.52.120])
+	id 1j5aWR-000327-AX; Sat, 22 Feb 2020 19:33:07 +0000
+Received: from mail-ed1-x544.google.com ([2a00:1450:4864:20::544])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j5YAq-0005Vg-F6; Sat, 22 Feb 2020 17:02:41 +0000
-X-Amp-Result: UNKNOWN
-X-Amp-Original-Verdict: FILE UNKNOWN
-X-Amp-File-Uploaded: False
-Received: from fmsmga007.fm.intel.com ([10.253.24.52])
- by fmsmga104.fm.intel.com with ESMTP/TLS/DHE-RSA-AES256-GCM-SHA384;
- 22 Feb 2020 09:02:37 -0800
-X-ExtLoop1: 1
-X-IronPort-AV: E=Sophos;i="5.70,472,1574150400"; d="scan'208";a="229476526"
-Received: from lkp-server01.sh.intel.com (HELO lkp-server01) ([10.239.97.150])
- by fmsmga007.fm.intel.com with ESMTP; 22 Feb 2020 09:02:35 -0800
-Received: from kbuild by lkp-server01 with local (Exim 4.89)
- (envelope-from <lkp@intel.com>)
- id 1j5YAk-0004NG-Ra; Sun, 23 Feb 2020 01:02:34 +0800
-Date: Sun, 23 Feb 2020 01:01:54 +0800
-From: kbuild test robot <lkp@intel.com>
-To: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-Subject: [PATCH] ASoC: meson: aiu: fix semicolon.cocci warnings
-Message-ID: <20200222170154.GA119396@e50d7db646c3>
-References: <202002230135.WpIL6nAs%lkp@intel.com>
+ id 1j5aWH-0002va-L8; Sat, 22 Feb 2020 19:32:58 +0000
+Received: by mail-ed1-x544.google.com with SMTP id p3so6797107edx.7;
+ Sat, 22 Feb 2020 11:32:56 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=googlemail.com; s=20161025;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=abOo/01onxmCrl2+HYFGD4dtsZsCLfGBQC3tyHMZjis=;
+ b=VVA+Y0w2cTzdFoO/atz+136TaD3pxtmudXz5C974oxFGSuVuye4uBLm4qLRipvyvov
+ qIN4c/bWLfPMqXqWgV301z5bAYGmkahHY2wN/vwxRWeHdML97rpGAipSHtswTjK7F9Ux
+ N9V9n3PCg97usS9WmJMO5+zMabE2ZMcu/vMjC14pWNNE//T2NNt1WX/pP2QA0sx6Ylun
+ SY5sMJ2s1d3hXWFGYNoqRr6ih6wcvO8ubyo3eExk9clA8G9jriHTdaFppv1TApjRMINX
+ gUlsX9eExM3ic02lxpue7imTI97AKYJAQhYUYYyEHiJCoox7GC3foF0L4X+fAn4r5PZJ
+ Lfmg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=abOo/01onxmCrl2+HYFGD4dtsZsCLfGBQC3tyHMZjis=;
+ b=AaED02dduSvEkqsJ76XAs6YcVTAo14t05I13xX0C7sJEaW+AQs5cAS04g8YIwrDJW6
+ NH8Cs5jrsx0ugqHKUDvx5Ypu1TQXLyiwHLwHNyhGPSeWvPKdKPFWRMpMEigAnh8rm3tg
+ oq6IpvxuqObz8+0Dc21H6J2ngiVvnz3VvlgnwXzagPKvQd9GveoiQjK/c4TWA/Tki71D
+ pIdE7aOCV6Mt2Vmj9AT/bSDzfZ9Vdc+1wYSjL/SSOgM5VGRfUM6QkdTQ/Ia1UzGpv2VS
+ oJg1yGAu3LTnDvnnUKBM9ERypatwmoFaU2PKN0RdM3NHGFNiAy7R7XN8OpgBIteq5J80
+ t5fQ==
+X-Gm-Message-State: APjAAAUwqGwtcv8JD5eH7sfEhNJaJJkZbM5zjDDZ8bunzX7Hb6ldyG+N
+ 6wiW7aWAUJZSG3u/14emRZeza7DM4FxyXxCX3Xw=
+X-Google-Smtp-Source: APXvYqwSDLn063dC13fCS2x5o5KSt+86sLTD3VApIdIahY8Td3TAnjcZDxUtKhOk4AFeH5hrqEFUhOchgc+A2h2gJIQ=
+X-Received: by 2002:a05:6402:3c6:: with SMTP id
+ t6mr37429429edw.110.1582399975292; 
+ Sat, 22 Feb 2020 11:32:55 -0800 (PST)
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <202002230135.WpIL6nAs%lkp@intel.com>
-X-Patchwork-Hint: ignore
-User-Agent: Mutt/1.10.1 (2018-07-13)
+References: <202002230135.WpIL6nAs%lkp@intel.com>
+ <20200222170154.GA119396@e50d7db646c3>
+In-Reply-To: <20200222170154.GA119396@e50d7db646c3>
+From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+Date: Sat, 22 Feb 2020 20:32:44 +0100
+Message-ID: <CAFBinCAveBrxYDH-SQpbYjF8rdzR5vDPOvXdzWyZyUG5A_-X3A@mail.gmail.com>
+Subject: Re: [PATCH] ASoC: meson: aiu: fix semicolon.cocci warnings
+To: kbuild test robot <lkp@intel.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200222_090240_517922_E413C856 
-X-CRM114-Status: GOOD (  10.15  )
-X-Spam-Score: -2.3 (--)
+X-CRM114-CacheID: sfid-20200222_113257_718103_5C4F7DDE 
+X-CRM114-Status: UNSURE (   6.17  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-2.3 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [192.55.52.120 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:544 listed in]
+ [list.dnswl.org]
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider [martin.blumenstingl[at]googlemail.com]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -79,38 +104,24 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-From: kbuild test robot <lkp@intel.com>
+On Sat, Feb 22, 2020 at 6:02 PM kbuild test robot <lkp@intel.com> wrote:
+>
+> From: kbuild test robot <lkp@intel.com>
+>
+> sound/soc/meson/aiu-encoder-i2s.c:129:2-3: Unneeded semicolon
+>
+>
+>  Remove unneeded semicolon.
+>
+> Generated by: scripts/coccinelle/misc/semicolon.cocci
+>
+> Fixes: 3e25c44598aa ("ASoC: meson: aiu: add support for the Meson8 and Meson8b SoC families")
+> CC: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+> Signed-off-by: kbuild test robot <lkp@intel.com>
+Reviewed-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
 
-sound/soc/meson/aiu-encoder-i2s.c:129:2-3: Unneeded semicolon
-
-
- Remove unneeded semicolon.
-
-Generated by: scripts/coccinelle/misc/semicolon.cocci
-
-Fixes: 3e25c44598aa ("ASoC: meson: aiu: add support for the Meson8 and Meson8b SoC families")
-CC: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-Signed-off-by: kbuild test robot <lkp@intel.com>
----
-
-tree:   https://git.kernel.org/pub/scm/linux/kernel/git/broonie/sound.git for-5.7
-head:   b38c4a8a0291c31a660cd77761202ebb18332fb7
-commit: 3e25c44598aa44134207ad7b3c5ad6b586135777 [134/139] ASoC: meson: aiu: add support for the Meson8 and Meson8b SoC families
-
- aiu-encoder-i2s.c |    2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
---- a/sound/soc/meson/aiu-encoder-i2s.c
-+++ b/sound/soc/meson/aiu-encoder-i2s.c
-@@ -126,7 +126,7 @@ static int aiu_encoder_i2s_set_legacy_di
- 	default:
- 		dev_err(component->dev, "Unsupported i2s divider: %u\n", bs);
- 		return -EINVAL;
--	};
-+	}
- 
- 	snd_soc_component_update_bits(component, AIU_CLK_CTRL,
- 				      AIU_CLK_CTRL_I2S_DIV,
+and also (as reply to my original patch yesterday):
+Reported-by: Jerome Brunet <jbrunet@baylibre.com>
 
 _______________________________________________
 linux-amlogic mailing list
