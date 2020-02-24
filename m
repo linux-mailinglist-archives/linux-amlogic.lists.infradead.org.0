@@ -2,83 +2,83 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7D68816A8EC
-	for <lists+linux-amlogic@lfdr.de>; Mon, 24 Feb 2020 15:58:35 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5ECD116A8F4
+	for <lists+linux-amlogic@lfdr.de>; Mon, 24 Feb 2020 15:58:45 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=kepxY3h0GzByNBJtz4ZjMujx/em0MebreJ/phupXOmU=; b=mDrrEzRpvcxXZ6
-	izX1JWxzwL/EajCDCJYJNux/p2v++10kwAzBnovDozq3TOpImlvh3K0DCQLhWfi6tineSTHplTvwZ
-	TT2/zsQo0yCUiydBRBjvf9POusHB6t2eVt0WxdLTB4Z8hfj4hZYAuXTgvOZ/JT27tqW2urAG2Y7lJ
-	dvyyBOZixDgDDYXWRyW8VFrJqvxiozUsZw33PKrx8Eigih225XyEVF4MjCZYEuOWO+HyGEwQyuOH0
-	hgIJg/501wyrbiGEPHeUIumchpCjQO4gl/f9sJzcTxV92Sb6upmyyzK77jcWjICIbYTl8QGD94el5
-	9M3gcCTkui43Dqm7/g1w==;
+	List-Owner; bh=ljkljmdWO7grCyQeEp6CTp4nuuk7hocLnXcpLPIsATs=; b=WfQhWt19AeHFnV
+	7/LNLBW2MtBrQ9R1NDgCt/g24+EHqJ2P3dF6lJtFXMy+g82rbez/RvIHUOe8qw0foTpEm6+4ucRz3
+	tY7f03ONE5uHmPFW9A+Nz8ajwjFn3yfpOQZ0Wz4ohGMKOmvQRaC/6clrvMYY0iCg2V5tm4/bREIr4
+	bT+MzZhY3ABXPSYWo0I+gtrsJ4SMvSaTEXsC2Wvb8W9tk7j6vQsaAIN7+kGVFon3QYieE0wnp4lGm
+	/oJnYKPeKAegkTxn8ccrpI7z2f8jPKc99GVZlEEfeq51NHSkQGs6BSaLTkJRRcf3tYMvuitsCZ08M
+	vRST7T0ivJiCXT0GqqHw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j6FBp-0003vj-Th; Mon, 24 Feb 2020 14:58:33 +0000
-Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
+	id 1j6FBw-00041j-NH; Mon, 24 Feb 2020 14:58:40 +0000
+Received: from mail-wr1-x441.google.com ([2a00:1450:4864:20::441])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j6FBi-0003sC-Pe
- for linux-amlogic@lists.infradead.org; Mon, 24 Feb 2020 14:58:30 +0000
-Received: by mail-wr1-x442.google.com with SMTP id y17so1932765wrn.6
- for <linux-amlogic@lists.infradead.org>; Mon, 24 Feb 2020 06:58:26 -0800 (PST)
+ id 1j6FBk-0003si-QR
+ for linux-amlogic@lists.infradead.org; Mon, 24 Feb 2020 14:58:33 +0000
+Received: by mail-wr1-x441.google.com with SMTP id e8so10742466wrm.5
+ for <linux-amlogic@lists.infradead.org>; Mon, 24 Feb 2020 06:58:28 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=eR8sRZ0eNtaE7U9M/Ye9eF8UlxBXj3WB9fmrHU+msXI=;
- b=lcWN9cUqpNnTBKxLL1DcDeE96TbfbhNrt4m4Zx+HhxEUh4/4IfxF+6fPGTklNwHtBV
- jNbp8eSsTC1LMdNWtEMJF6cwYJ0LM8mGwpEyzrNbUxd/RKJPZaWX1tNhbIvtJqZU6AHK
- im1JpjWuiJRALN2PkArUCotAgTMzlxnXW/1C4IrXSz6IRS4m3BmJ62w8DChEng86uLVO
- KmoB9kUfLuVae0i7qIM7uOfcV+h2J5yye52aLZZJ9Mrhl0hqq0szE3IUNRhhuOd3MWFy
- RBdNpRUZIhVY5ImD4FlGsQniP5+y8xIpyPGLN9iAoTm6DvQzkuJwKWfwBf3Fxnx9baYK
- gAuQ==
+ bh=QbPDnJvMb3x4DYL4TCdJnWqdiB62oTXrzN6fiKtZb+M=;
+ b=HFA4ICVw6V3LfO9qsOscd8/53GDOJ3feJ6Ji0HTsOjTTuAfuXMA0hsAdQkCSU+bL1q
+ qhfqsEkCP2czU4Xjmkmw+EEm6CZaDVFNLQIiAg+kUooHrcLk+Opg29JGVI7CWnl4biTJ
+ Juwq/Os17E9C9puNGBVtGWkN4iKkMLauBzjpW6A0K6hfC2sAB+hy9SgW9Sexlmlgs/7B
+ W+JJ1c3ikKSjCl0izRj2FzutJE98f+IzxhtqGCxOzFm7enLHKcK2BweferHjmXshlRAR
+ qay7/kngc50egqFvqA6+AOFo/Qe+IPVz8uXpFDz5wYPax0ITcqQ0eQQzank8PArcR/Fk
+ 2+lg==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=eR8sRZ0eNtaE7U9M/Ye9eF8UlxBXj3WB9fmrHU+msXI=;
- b=toyZMZzLGYvyKFfCD7OXASf+B8FmAapf4g4RvjF4v4AbqWKuo8nwXxlo1BbC8gWPt+
- iCsIqyC06obdwwODdOkGox4HVcgK8Buu3y/2tuHvSv3RWUm4wFU82obAkrLAcIIZB5sT
- 0VzBeJQKJXaSxt8rnMyl+bFwGZgjg/Im9PjkDm/wNG2A8bTlowghTN4vCP/KQ9pQ/V8i
- vag5EHY3N+hcSQjbxoOhKDY4XJKJSSo7lngO7X7Q5k2bJnSl9etPEYN/cLKRBSpF9B9p
- UGVG1UJNnpLb9iHmiF44TW+PKxsQnjM7BQ4jmCnBTresqXgNn4ZFDiBV8iaUmV4Lsn5u
- Bfig==
-X-Gm-Message-State: APjAAAWnCkBJFl1uyGKjcuT7L/QAN9Xha9NfNhTmM0Jb9iu0mGAl8M0+
- yLrY8ncwSOOpkP9Z9WOlIaI14g==
-X-Google-Smtp-Source: APXvYqyY/zCmUw3P89UUJMhoBFx2AFHF7hUSFeRrBu9pIR4glCF3WbIF9YxgUdR8YOokcfi9ViiMYg==
-X-Received: by 2002:a05:6000:110b:: with SMTP id
- z11mr14887981wrw.252.1582556305282; 
- Mon, 24 Feb 2020 06:58:25 -0800 (PST)
+ bh=QbPDnJvMb3x4DYL4TCdJnWqdiB62oTXrzN6fiKtZb+M=;
+ b=Dn7LcMi/duVDN+v+9WtOwWZrFW6aRTvqF888kVPE0cezRgg2srIvGiozMUC65SWGD/
+ vCwmA2FOUwZN0c0mdt0Z160+9kvJ+T3UNUQM4/PA8ENdW6l0lcJk9ZnzC+VNnx//7Y+S
+ 1TqguPHZzHPmgKIQ6qcXySzHHCHVAkqhmNMNejs7HdLZXIg7DFJTnSV3eiw7OMBO5+9L
+ 90W9aqCgMyoiDIzd+LZBwffaxwb2dfb5KuPCML5V3DnhGol8oPy9eUFSxkvvhg40iNwi
+ lg54bCOCH4qiXIKv8WNFgDOUctvnKcd5EHhRi6mJ7H78q5IPZ7BAscUd1DmpF4+aHuu4
+ 6Bxw==
+X-Gm-Message-State: APjAAAV//XYI570J2UivCVRAjLXhF/kY2Otuqz1haZWf2N8RG4W7hqpv
+ 3+zEuBPsuu7uy+1I1bzTfI5t8w==
+X-Google-Smtp-Source: APXvYqwPxiP3e2VegzNZkK0egE5/QUcECBQ7ji696G0f6DJy+KFTKe13E3vEe4wS2WyJefgjBE6iMQ==
+X-Received: by 2002:a05:6000:118d:: with SMTP id
+ g13mr64415099wrx.141.1582556307308; 
+ Mon, 24 Feb 2020 06:58:27 -0800 (PST)
 Received: from starbuck.baylibre.local
  (laubervilliers-658-1-213-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
- by smtp.googlemail.com with ESMTPSA id j12sm8035127wrt.35.2020.02.24.06.58.24
+ by smtp.googlemail.com with ESMTPSA id j12sm8035127wrt.35.2020.02.24.06.58.25
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Mon, 24 Feb 2020 06:58:24 -0800 (PST)
+ Mon, 24 Feb 2020 06:58:25 -0800 (PST)
 From: Jerome Brunet <jbrunet@baylibre.com>
 To: Mark Brown <broonie@kernel.org>,
 	Liam Girdwood <lgirdwood@gmail.com>
-Subject: [PATCH 1/9] ASoC: meson: gx-card: fix sound-dai dt schema
-Date: Mon, 24 Feb 2020 15:58:13 +0100
-Message-Id: <20200224145821.262873-2-jbrunet@baylibre.com>
+Subject: [PATCH 2/9] ASoC: meson: convert axg tdm interface to schema
+Date: Mon, 24 Feb 2020 15:58:14 +0100
+Message-Id: <20200224145821.262873-3-jbrunet@baylibre.com>
 X-Mailer: git-send-email 2.24.1
 In-Reply-To: <20200224145821.262873-1-jbrunet@baylibre.com>
 References: <20200224145821.262873-1-jbrunet@baylibre.com>
 MIME-Version: 1.0
 X-Patchwork-Bot: notify
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200224_065826_829266_CC241876 
-X-CRM114-Status: GOOD (  10.55  )
+X-CRM114-CacheID: sfid-20200224_065828_853291_4D1E89FD 
+X-CRM114-Status: GOOD (  10.35  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:442 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:441 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -104,55 +104,108 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-There is a fair amount of warnings when running 'make dtbs_check' with
-amlogic,gx-sound-card.yaml.
+Convert the DT binding documentation for the Amlogic tdm interface to
+schema.
 
-Ex:
-arch/arm64/boot/dts/amlogic/meson-gxm-q200.dt.yaml: sound: dai-link-0:sound-dai:0:1: missing phandle tag in 0
-arch/arm64/boot/dts/amlogic/meson-gxm-q200.dt.yaml: sound: dai-link-0:sound-dai:0:2: missing phandle tag in 0
-arch/arm64/boot/dts/amlogic/meson-gxm-q200.dt.yaml: sound: dai-link-0:sound-dai:0: [66, 0, 0] is too long
-
-The reason is that the sound-dai phandle provided has cells, and in such
-case the schema should use 'phandle-array' instead of 'phandle', even if
-the property expects a single phandle.
-
-Fixes: fd00366b8e41 ("ASoC: meson: gx: add sound card dt-binding documentation")
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
 ---
- Hi Mark,
+ .../bindings/sound/amlogic,axg-tdm-iface.txt  | 22 -------
+ .../bindings/sound/amlogic,axg-tdm-iface.yaml | 57 +++++++++++++++++++
+ 2 files changed, 57 insertions(+), 22 deletions(-)
+ delete mode 100644 Documentation/devicetree/bindings/sound/amlogic,axg-tdm-iface.txt
+ create mode 100644 Documentation/devicetree/bindings/sound/amlogic,axg-tdm-iface.yaml
 
- The statement above is based on this LKML discussion I found:
- https://lkml.org/lkml/2019/9/30/382
-
- To be honest, I don't really get why the consumer should know whether
- the phandle will have cells or not. AFAIK, the consumer does not care
- about this ...
-
- .../devicetree/bindings/sound/amlogic,gx-sound-card.yaml      | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
-
-diff --git a/Documentation/devicetree/bindings/sound/amlogic,gx-sound-card.yaml b/Documentation/devicetree/bindings/sound/amlogic,gx-sound-card.yaml
-index fb374c659be1..a48222e8cd08 100644
---- a/Documentation/devicetree/bindings/sound/amlogic,gx-sound-card.yaml
-+++ b/Documentation/devicetree/bindings/sound/amlogic,gx-sound-card.yaml
-@@ -57,7 +57,7 @@ patternProperties:
-           rate
- 
-       sound-dai:
--        $ref: /schemas/types.yaml#/definitions/phandle
-+        $ref: /schemas/types.yaml#/definitions/phandle-array
-         description: phandle of the CPU DAI
- 
-     patternProperties:
-@@ -71,7 +71,7 @@ patternProperties:
- 
-         properties:
-           sound-dai:
--            $ref: /schemas/types.yaml#/definitions/phandle
-+            $ref: /schemas/types.yaml#/definitions/phandle-array
-             description: phandle of the codec DAI
- 
-         required:
+diff --git a/Documentation/devicetree/bindings/sound/amlogic,axg-tdm-iface.txt b/Documentation/devicetree/bindings/sound/amlogic,axg-tdm-iface.txt
+deleted file mode 100644
+index cabfb26a5f22..000000000000
+--- a/Documentation/devicetree/bindings/sound/amlogic,axg-tdm-iface.txt
++++ /dev/null
+@@ -1,22 +0,0 @@
+-* Amlogic Audio TDM Interfaces
+-
+-Required properties:
+-- compatible: 'amlogic,axg-tdm-iface'
+-- clocks: list of clock phandle, one for each entry clock-names.
+-- clock-names: should contain the following:
+-  * "sclk" : bit clock.
+-  * "lrclk": sample clock
+-  * "mclk" : master clock
+-	     -> optional if the interface is in clock slave mode.
+-- #sound-dai-cells: must be 0.
+-
+-Example of TDM_A on the A113 SoC:
+-
+-tdmif_a: audio-controller@0 {
+-	compatible = "amlogic,axg-tdm-iface";
+-	#sound-dai-cells = <0>;
+-	clocks = <&clkc_audio AUD_CLKID_MST_A_MCLK>,
+-		 <&clkc_audio AUD_CLKID_MST_A_SCLK>,
+-		 <&clkc_audio AUD_CLKID_MST_A_LRCLK>;
+-	clock-names = "mclk", "sclk", "lrclk";
+-};
+diff --git a/Documentation/devicetree/bindings/sound/amlogic,axg-tdm-iface.yaml b/Documentation/devicetree/bindings/sound/amlogic,axg-tdm-iface.yaml
+new file mode 100644
+index 000000000000..5f04f9cf30a0
+--- /dev/null
++++ b/Documentation/devicetree/bindings/sound/amlogic,axg-tdm-iface.yaml
+@@ -0,0 +1,57 @@
++# SPDX-License-Identifier: GPL-2.0
++%YAML 1.2
++---
++$id: http://devicetree.org/schemas/sound/amlogic,axg-tdm-iface.yaml#
++$schema: http://devicetree.org/meta-schemas/core.yaml#
++
++title: Amlogic Audio TDM Interfaces
++
++maintainers:
++  - Jerome Brunet <jbrunet@baylibre.com>
++
++properties:
++  $nodename:
++    pattern: "^audio-controller-.*"
++
++  "#sound-dai-cells":
++    const: 0
++
++  compatible:
++    items:
++      - const: 'amlogic,axg-tdm-iface'
++
++  clocks:
++    minItems: 2
++    maxItems: 3
++    items:
++      - description: Bit clock
++      - description: Sample clock
++      - description: Master clock #optional
++
++  clock-names:
++    minItems: 2
++    maxItems: 3
++    items:
++      - const: sclk
++      - const: lrclk
++      - const: mclk
++
++required:
++  - "#sound-dai-cells"
++  - compatible
++  - clocks
++  - clock-names
++
++examples:
++  - |
++    #include <dt-bindings/clock/axg-audio-clkc.h>
++
++    tdmif_a: audio-controller-0 {
++        compatible = "amlogic,axg-tdm-iface";
++        #sound-dai-cells = <0>;
++        clocks = <&clkc_audio AUD_CLKID_MST_A_SCLK>,
++                 <&clkc_audio AUD_CLKID_MST_A_LRCLK>,
++                 <&clkc_audio AUD_CLKID_MST_A_MCLK>;
++        clock-names = "sclk", "lrclk", "mclk";
++    };
++
 -- 
 2.24.1
 
