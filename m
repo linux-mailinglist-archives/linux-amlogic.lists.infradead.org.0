@@ -2,82 +2,82 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7C2FB16A972
-	for <lists+linux-amlogic@lfdr.de>; Mon, 24 Feb 2020 16:08:25 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6843A16A974
+	for <lists+linux-amlogic@lfdr.de>; Mon, 24 Feb 2020 16:08:33 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=+VFnYywb0Qjep8wWyVzlU/WXm+3X8YHtgm1kiOskwA4=; b=SnvC8GtkfcnpDB
-	6LY51QoFy35DglxVytVPkLyPodMt6bEj2/Zig1RfDpev1J05wD4MlMCXgtiXK82kJiwCRTEJh3FEp
-	OTQZ3+5N5+tFePBH94+UFRGDOGe40sQOXfdaqhpKRdLp0iC8B2u81U1enDCX1mDIvJ7Wbhi4uxHeE
-	1E5A8Rr/a42bQDGWLgD/M1X0DnCkwsQiEb37IVTVgxH4xg2PuUF9+EuZjoumoV/RgU8rmfK9b8UQ3
-	PMZoIrjVKSbqmm8UshgI099MpCa+spp1aAlP+ZbPLWjCwfSFIXRUrSl2do+mPZixjr/5c0aiM+loD
-	JqIU9l5keEsA7inRWpGQ==;
+	List-Owner; bh=U9Fj+8N2qrl5f+dUJWnzF5Ef9/GrQ6dzNjnNaQeGFNo=; b=Gu2OrWIOpU3Xlq
+	oLDWLHYS7i2GEDeQI12tY3rs+0AGHefYMqAqZxs6LkDB8R2/nY4nmEMUlAP8fSo+41LRZw6juDJ66
+	P8Dgwt6wNVya1hYvONEFrBhR9FlSl7HTB9tOYJl2jPcRNLimdJhrOKxlHHeZVCi7GLgbumn1kEDZf
+	CnN4kCsziyWTIWZqaWA+g3Yfr31cQD5hEVqbbj8xCbGluAfxy8Ek1EDGIYK+lHCwsl39TAjOUv3vO
+	7KGbjDmd5+IObtT834FEMZXvabL6HFepeurVJE6RCFIcNFcEEZ2fMvobqU2i95ZXS6+3BWqaPkceN
+	GEgWisxz/81yJl9O0Npw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j6FLM-0007uL-2s; Mon, 24 Feb 2020 15:08:24 +0000
-Received: from mail-wm1-x342.google.com ([2a00:1450:4864:20::342])
+	id 1j6FLR-0007zR-JZ; Mon, 24 Feb 2020 15:08:29 +0000
+Received: from mail-wm1-x341.google.com ([2a00:1450:4864:20::341])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j6FLI-0007sZ-EX
- for linux-amlogic@lists.infradead.org; Mon, 24 Feb 2020 15:08:21 +0000
-Received: by mail-wm1-x342.google.com with SMTP id q9so9307848wmj.5
- for <linux-amlogic@lists.infradead.org>; Mon, 24 Feb 2020 07:08:20 -0800 (PST)
+ id 1j6FLJ-0007ss-Mw
+ for linux-amlogic@lists.infradead.org; Mon, 24 Feb 2020 15:08:23 +0000
+Received: by mail-wm1-x341.google.com with SMTP id c84so9782995wme.4
+ for <linux-amlogic@lists.infradead.org>; Mon, 24 Feb 2020 07:08:21 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=pWfBy6ev6bbSxjpQcvH0AV343qtHu4C4U0cUi6UfZnU=;
- b=wBY/3vVubkI7wxLcoajaYhVvS0G5LexVcmABjQthWDix3gsSnXfBj57nUUKNiAdOZI
- ApytnEuNGJdnemV7SgbbXHVI29sskaIY5Sp71/cGYPVtRutWuzjnZHEI41duu8JmINSD
- BsefERmeChNIxs17rlV5BrsRcKPqRoeQXB4NASw88ZC0tlTGK3eD0wdDIBdYGUO5pXtn
- /KlIZQQ63kYj/ATt0gQMlltG/BwYGJ3h57mK12AJcbkomZw/gIShztQVjxWdJuH+wDYG
- A2yxvRv+BK5kvKdGXe2IZVUGtAnOuLFRzRA+aJ3VNAQhFR57pvJ6suNb0Xyaz3fpre4Q
- alvQ==
+ bh=Rm7gksVRI42mlVOGy1QSc0Bs/gLhlfgLmvHJ12ilWYc=;
+ b=solSGzyOpCALZIol/9eX3klRZa/VQdMYTbQBEm3R2+CXxwHY7ORsZxepUjufVAgr/n
+ lPvxwjjkKTf1a4uhuX6XOlCowMpj+tBU3a9kRsfw1+OTt7lyjTotIdKpTipAAeUF+Jf1
+ +uuEW2OmCf5iPIKK6pSpCoQvppKws6WbMv/ybweGlPY1YVepgJXpbnHqgEu5f6zI8R2d
+ 5dtOspEoU1EnQr+M+vo+MkRJ1bPVECvimj2eUJUTLBX/X/m7w3tNYeZ96lKRkAp2Sj80
+ Iqjo/kDU3E/1TpsPAkOZLia1fdsIFzo4rjl4kQRbUA4cSyzwF3Xk0p8cfGApk/9PftSk
+ 1WZw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=pWfBy6ev6bbSxjpQcvH0AV343qtHu4C4U0cUi6UfZnU=;
- b=l2zeEx30CH6PPFAt6BNEaFKLAz3H3bo33aKY+hPawI2C/GoBdn2t6NCkuRjESn5Nhw
- 1oui6NHtEhEC2Ieg8tvnrix2SAnVwWLxVzZPO62uenqe4vawhKMDzXIa+NhOpqO4T+Li
- M4fx7/zsUxi9G2QYdfza3+MPdE4+DPZ/KAhpwL6k0XkxAwCL8Us98stIYQNMpMHmimEy
- rgKqihFYPHXnrflUoeaquz5bi3kBHUkX21WGCGJbwWm3F/UdGml7/X/eshJvRflp112C
- jHus18wjXohgTy9Yyoy8q/rg5oDHlMZaErAE0clM74/sU37rBG+Cjp/0Z1lP4WH3to5i
- 3/MQ==
-X-Gm-Message-State: APjAAAXXreCQpzUp2pG+UnAGm8sWrbxrjUZgyCDWUqzajqXLdGaW1svA
- jrypHpvxknx9yBTHgn2wzFnb5Q==
-X-Google-Smtp-Source: APXvYqzDcFZ2YpuRUbGwu9xnZqepU2+kvnw7xrdYxp4hFRnTqNy7SXx1rJu4+siAQs7rix6lsB+m4w==
-X-Received: by 2002:a05:600c:3d1:: with SMTP id
- z17mr23480791wmd.90.1582556899192; 
- Mon, 24 Feb 2020 07:08:19 -0800 (PST)
+ bh=Rm7gksVRI42mlVOGy1QSc0Bs/gLhlfgLmvHJ12ilWYc=;
+ b=PxdQy3On7gEQqccTg+zRxs6kLBT20ifnIvDRDV5g0EHXzHRprhFgrURoVQ0am1+XEJ
+ yb8oXEAL/YoBBMDFqwHG2qyBCvDp/8+6zTeOp68FNddhCnzHwNZMqMM1YGNNRi0EXRU6
+ kOW0yJQClgS9tpPYMYmQSTLLUVAtwnUCRGpW9UwbCcHI2Opr9Q9kwZjaO+pjfR+F7oRN
+ Ho4Bz/to9HomQYtH1mX5WBBRBlXZNP3nD7Ej/M2NPSZJ2PDoO3eQgxflH+Me7n811XP1
+ PxRXPhHFy6mR3gJmbzawZwGqCZF6Uo9HFVfGKLeIpT8WH9GjaH1WbZImh5cKGQoqmDlU
+ Olpw==
+X-Gm-Message-State: APjAAAWgNR3qdifMBwShRLa5bZHwdwHVnCD3+u1h/9kTmkX42+f/ykTI
+ bF/1gLwBuiORRz8fth4EDL1FEg==
+X-Google-Smtp-Source: APXvYqxC477Fxo92CZIa3vtqqWrP1cxhxUqPpogpwG0PJda6xORaSel0ea0bHewHcS6+aS7i8BSsEw==
+X-Received: by 2002:a1c:6189:: with SMTP id
+ v131mr23600114wmb.185.1582556900435; 
+ Mon, 24 Feb 2020 07:08:20 -0800 (PST)
 Received: from starbuck.baylibre.local
  (laubervilliers-658-1-213-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
- by smtp.googlemail.com with ESMTPSA id c15sm19074794wrt.1.2020.02.24.07.08.18
+ by smtp.googlemail.com with ESMTPSA id c15sm19074794wrt.1.2020.02.24.07.08.19
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Mon, 24 Feb 2020 07:08:18 -0800 (PST)
+ Mon, 24 Feb 2020 07:08:19 -0800 (PST)
 From: Jerome Brunet <jbrunet@baylibre.com>
 To: Kevin Hilman <khilman@baylibre.com>
-Subject: [PATCH 2/3] arm64: dts: meson: s400: fix sound card codec nodes
-Date: Mon, 24 Feb 2020 16:08:11 +0100
-Message-Id: <20200224150812.263980-3-jbrunet@baylibre.com>
+Subject: [PATCH 3/3] arm64: dts: meson: sei510: fix sound card codec node
+Date: Mon, 24 Feb 2020 16:08:12 +0100
+Message-Id: <20200224150812.263980-4-jbrunet@baylibre.com>
 X-Mailer: git-send-email 2.24.1
 In-Reply-To: <20200224150812.263980-1-jbrunet@baylibre.com>
 References: <20200224150812.263980-1-jbrunet@baylibre.com>
 MIME-Version: 1.0
 X-Patchwork-Bot: notify
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200224_070820_485471_9039D45A 
-X-CRM114-Status: GOOD (  10.97  )
+X-CRM114-CacheID: sfid-20200224_070821_745178_EE55E22F 
+X-CRM114-Status: GOOD (  11.64  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:342 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:341 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -102,42 +102,32 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Some codec nodes of the s400 sound card are numbered with the pattern
+A codec node of the sei510 sound card is numbered with the pattern
 codec@XX. This pattern should be used only if there is a reg property in
 the node which is not case here. Change this to something acceptable.
 
 This change is only to better comply with the DT spec. No functional
 changes expected.
 
-Fixes: 6f59dc1afbb2 ("arm64: dts: meson-axg: s400: add sound card")
+Fixes: 64c10554bf9c ("arm64: dts: meson: sei510: add sound card")
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
 ---
- arch/arm64/boot/dts/amlogic/meson-axg-s400.dts | 6 +++---
- 1 file changed, 3 insertions(+), 3 deletions(-)
+ arch/arm64/boot/dts/amlogic/meson-g12a-sei510.dts | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/arch/arm64/boot/dts/amlogic/meson-axg-s400.dts b/arch/arm64/boot/dts/amlogic/meson-axg-s400.dts
-index 4cd2d5951822..cb1360ae1211 100644
---- a/arch/arm64/boot/dts/amlogic/meson-axg-s400.dts
-+++ b/arch/arm64/boot/dts/amlogic/meson-axg-s400.dts
-@@ -313,15 +313,15 @@ dai-link-6 {
- 			dai-tdm-slot-rx-mask-1 = <1 1>;
+diff --git a/arch/arm64/boot/dts/amlogic/meson-g12a-sei510.dts b/arch/arm64/boot/dts/amlogic/meson-g12a-sei510.dts
+index 2ac9e3a43b96..168f460e11fa 100644
+--- a/arch/arm64/boot/dts/amlogic/meson-g12a-sei510.dts
++++ b/arch/arm64/boot/dts/amlogic/meson-g12a-sei510.dts
+@@ -269,7 +269,7 @@ dai-link-7 {
+ 			dai-tdm-slot-tx-mask-3 = <1 1>;
  			mclk-fs = <256>;
  
 -			codec@0 {
-+			codec-0 {
- 				sound-dai = <&lineout>;
++			codec {
+ 				sound-dai = <&tohdmitx TOHDMITX_I2S_IN_B>;
  			};
- 
--			codec@1 {
-+			codec-1 {
- 				sound-dai = <&speaker_amp1>;
- 			};
- 
--			codec@2 {
-+			codec-2 {
- 				sound-dai = <&linein>;
- 			};
- 
+ 		};
 -- 
 2.24.1
 
