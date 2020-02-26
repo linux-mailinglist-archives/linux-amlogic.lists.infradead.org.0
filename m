@@ -2,89 +2,57 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2704416F239
-	for <lists+linux-amlogic@lfdr.de>; Tue, 25 Feb 2020 22:52:45 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6FF3116FE69
+	for <lists+linux-amlogic@lfdr.de>; Wed, 26 Feb 2020 12:57:27 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=qN1w5OQYJKjJWVpmcQMV2INu2ZpnbaR2LhQ/I+1kKPo=; b=E4A3HLh8RhDrLo
-	DkHs77oNGkqDH4AisHZ9AthsMwYGVTumMwc9ErFCMz/85QTEHNTYTsp2OkWXEMgBGTSjEljJiwFo0
-	Atb7/YehsK9gshquN6tkMOMaw/qA4iQdXoo34QNl60TlixLEBzbcBf/UPjNTjagK1o9U7/On/xAXD
-	DPXv6KAyhvFaXi0ByZ8mzzUn850VnK85JPWkLqMzIfsmf/ZCyHNeX2gOtkti5EI4G2x665jV5iGXt
-	BldHEr7itwYYhG5QhcXWVYdlq0KPc1VtlqG2fZ/dBqKCUWtGxXedNUeTXIyrpf8XPakDZxjSXKE7y
-	YrzD5IRUxupyRaXS7L3g==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	MIME-Version:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:To:From:Date:Message-Id:Reply-To:Subject:
+	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=ZOmLBiVeEvDINLXsaz+zj7ljywP5ti4WSCe8gQ7cbD0=; b=Ux1
+	dSFPr/ekp6fV8xx5750FcmpSzPeQVyKITnapbms8jwr172iI839qk93xjaDiIu+toNiDN6hWU5pmE
+	GmnjCD3RzBWwdxyjDbuPox++91KFUqaNGTnpJNCDoNrNphA4r7xIV6owfutwexj76mYBE/tsWSI5+
+	QvOS5vAVD3W67IM8H9jOkAiMxXXh19JymdOwjTmbsO4vrT8SXhlkmF5OeZIAOZJ1ZCQ7LnOknz3QX
+	mmji46eVofn0P4UneNwbNJBC8dNCiz+/cOi8UvidPGub4OMBDAgm+WBSt9zFEU0cl0TQh2DX8hKjW
+	aejf40QEDOobckp0XdsEWs9OIOqnJ7g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j6i8B-0001u4-13; Tue, 25 Feb 2020 21:52:43 +0000
-Received: from mail-lj1-x244.google.com ([2a00:1450:4864:20::244])
+	id 1j6vJb-0002ZF-Uh; Wed, 26 Feb 2020 11:57:23 +0000
+Received: from mga12.intel.com ([192.55.52.136])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j6i87-0001th-UX
- for linux-amlogic@lists.infradead.org; Tue, 25 Feb 2020 21:52:41 +0000
-Received: by mail-lj1-x244.google.com with SMTP id x7so618948ljc.1
- for <linux-amlogic@lists.infradead.org>; Tue, 25 Feb 2020 13:52:39 -0800 (PST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc:content-transfer-encoding;
- bh=A2ys7Ib2/Xnmb6RfJjBVglHxRB3L0ppD5nek4nNUG54=;
- b=dggYPJl/S1l5xcOIfxIS/BtjTf2Yhm1QVvH0GMrusu3UZdTJ+2IVNtl7if5lr+GING
- XpTndQesM1wBpqwKNuobZBIXrCPwzFtaklN3vLh2Qnd0+FWtpS3ZfwdtKmGftCZkxItM
- pt0dP1pU0t9V2smNwYJsoeHg/Qbpco6HesYKBw8Pilr2pVi84p88M5YAUcqk8Zh5lIHD
- CSe5MrLa4qFV3znicGDhh7dez3zSSB2e+gT6zhNI5c95nKfh15KuMLKm2jZQougUJ8qj
- kiKUiHXiaPkAZpyYO/fu8wpfUCAfkkn3icXFTgbLvWoWqO41x1j9KZ28pWh6LPjraRTR
- t6KA==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc:content-transfer-encoding;
- bh=A2ys7Ib2/Xnmb6RfJjBVglHxRB3L0ppD5nek4nNUG54=;
- b=EZ3SljCrV0O/37p1kh3iVTrNAZiUPdyYG7DC6ZtexRl7bn/KdxzmhcSPG6UtS9rIUG
- REmWvQLCfozrl2w16q4hUTYTgxQYnCCbhIcroxPW01lgXuQKGwauro2q4+OiPIVIyNLH
- hlmC5njRJwO2VuNT7iu3sGXQHpKvKbxEMdfKMK40Cu6fVBLtBrlsDZ24b+JbVaUnuT2G
- 1DQHMejFOwzUEIkqN6KzNR9BGS4DawDhB0JTEyNlvNipKcBgTZ4rrfh8/p2S24YvgYBl
- uUc1NjwCpRLkwNaDipl/Bl4SRictPue085r6OPhRifXMfH1RC4xUaDIwj4yvqL28GBGR
- IN8Q==
-X-Gm-Message-State: APjAAAU/uP6S4OjEF80i5qs82Tkc+G3Ze5HcIJOzahqabI2yb2gCnnMZ
- t/g+ofUt8663P9kTaxEP8pmscMrxRnc+oSN8dpmedg==
-X-Google-Smtp-Source: APXvYqxOOzmfnyf+WeuQucvX5m9qM2Leiiv6kMjRVdA/nrsazbB0Q+l2xDGTGCvseEFr/CMgRzfQtQJ4YToGbq+Lxpk=
-X-Received: by 2002:a2e:7d0c:: with SMTP id y12mr663831ljc.39.1582667557689;
- Tue, 25 Feb 2020 13:52:37 -0800 (PST)
-MIME-Version: 1.0
-References: <20200219203544.31013-1-ville.syrjala@linux.intel.com>
- <CGME20200219203620eucas1p24b4990a91e758dbcf3e9b943669b0c8f@eucas1p2.samsung.com>
- <20200219203544.31013-5-ville.syrjala@linux.intel.com>
- <0f278771-79ce-fe23-e72c-3935dbe82d24@samsung.com>
- <20200225112114.GA13686@intel.com>
- <3ca785f2-9032-aaf9-0965-8657d31116ba@samsung.com>
- <20200225154506.GF13686@intel.com> <20200225192720.GG13686@intel.com>
-In-Reply-To: <20200225192720.GG13686@intel.com>
-From: Linus Walleij <linus.walleij@linaro.org>
-Date: Tue, 25 Feb 2020 22:52:25 +0100
-Message-ID: <CACRpkdZk9QEy+Kzkmy4BXiHB+aq9hprf=dmA_-R23yqH3NCt1g@mail.gmail.com>
-Subject: Re: [PATCH 04/12] drm: Nuke mode->vrefresh
-To: =?UTF-8?B?VmlsbGUgU3lyasOkbMOk?= <ville.syrjala@linux.intel.com>
+ id 1j6vJY-0002Ya-7x
+ for linux-amlogic@lists.infradead.org; Wed, 26 Feb 2020 11:57:21 +0000
+X-Amp-Result: SKIPPED(no attachment in message)
+X-Amp-File-Uploaded: False
+Received: from fmsmga001.fm.intel.com ([10.253.24.23])
+ by fmsmga106.fm.intel.com with ESMTP/TLS/DHE-RSA-AES256-GCM-SHA384;
+ 26 Feb 2020 03:57:19 -0800
+Message-Id: <86d0ec$ae4ffc@fmsmga001.fm.intel.com>
+X-ExtLoop1: 1
+X-IronPort-AV: E=Sophos;i="5.70,488,1574150400"; d="scan'208";a="350371308"
+Received: from stinkbox.fi.intel.com (HELO stinkbox) ([10.237.72.174])
+ by fmsmga001.fm.intel.com with SMTP; 26 Feb 2020 03:57:09 -0800
+Received: by stinkbox (sSMTP sendmail emulation);
+ Wed, 26 Feb 2020 13:57:08 +0200
+Date: Wed, 26 Feb 2020 13:57:08 +0200
+From: Ville =?iso-8859-1?Q?Syrj=E4l=E4?= <ville.syrjala@linux.intel.com>
+To: Linus Walleij <linus.walleij@linaro.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200225_135240_046101_5427C82A 
-X-CRM114-Status: GOOD (  15.31  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200226_035720_294027_E60B31C4 
+X-CRM114-Status: GOOD (  16.51  )
+X-Spam-Score: -0.5 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-0.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:244 listed in]
- [list.dnswl.org]
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [192.55.52.136 listed in list.dnswl.org]
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ 0.0 PP_MIME_FAKE_ASCII_TEXT BODY: MIME text/plain claims to be ASCII
+ but isn't 1.8 MISSING_SUBJECT        Missing Subject: header
+ 0.0 MSGID_FROM_MTA_HEADER  Message-Id was added by a relay
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -100,10 +68,10 @@ Cc: Josh Wu <josh.wu@atmel.com>,
  Bhuvanchandra DV <bhuvanchandra.dv@toradex.com>,
  Neil Armstrong <narmstrong@baylibre.com>, Eric Anholt <eric@anholt.net>,
  nouveau@lists.freedesktop.org,
- =?UTF-8?Q?Guido_G=C3=BCnther?= <agx@sigxcpu.org>,
+ Guido =?iso-8859-1?Q?G=FCnther?= <agx@sigxcpu.org>,
  Paul Kocialkowski <contact@paulk.fr>,
  "open list:DRM PANEL DRIVERS" <dri-devel@lists.freedesktop.org>,
- =?UTF-8?Q?Gustaf_Lindstr=C3=B6m?= <gl@axentia.se>,
+ Gustaf =?iso-8859-1?Q?Lindstr=F6m?= <gl@axentia.se>,
  Andrzej Hajda <a.hajda@samsung.com>, Thierry Reding <thierry.reding@gmail.com>,
  Laurent Pinchart <Laurent.pinchart@ideasonboard.com>,
  Philipp Zabel <philipp.zabel@gmail.com>, Sam Ravnborg <sam@ravnborg.org>,
@@ -117,7 +85,7 @@ Cc: Josh Wu <josh.wu@atmel.com>,
  Ben Skeggs <bskeggs@redhat.com>, "H. Nikolaus Schaller" <hns@goldelico.com>,
  Robert Chiras <robert.chiras@nxp.com>, Heiko Schocher <hs@denx.de>,
  Icenowy Zheng <icenowy@aosc.io>, Jonas Karlman <jonas@kwiboo.se>,
- intel-gfx <intel-gfx@lists.freedesktop.org>, Randy Li <ayaka@soulik.info>,
+ intel-gfx <intel-gfx@lists.freedesktop.org>,
  Maxime Ripard <mripard@kernel.org>, Alexandre Courbot <acourbot@nvidia.com>,
  Fabio Estevam <festevam@gmail.com>,
  "open list:ARM/Amlogic Meson..." <linux-amlogic@lists.infradead.org>,
@@ -131,72 +99,71 @@ Cc: Josh Wu <josh.wu@atmel.com>,
  Heiko Stuebner <heiko.stuebner@theobroma-systems.com>,
  Eugen Hristev <eugen.hristev@microchip.com>,
  Giulio Benetti <giulio.benetti@micronovasrl.com>
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============0284142894238786204=="
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-T24gVHVlLCBGZWIgMjUsIDIwMjAgYXQgODoyNyBQTSBWaWxsZSBTeXJqw6Rsw6QKPHZpbGxlLnN5
-cmphbGFAbGludXguaW50ZWwuY29tPiB3cm90ZToKCj4gT0ssIHNvIEkgd2VudCBhaGVhZCBhIHdy
-b3RlIGEgYml0IG9mIGNvY2NpIFsxXSB0byBmaW5kIHRoZSBiYWQgYXBwbGVzLgoKVGhhdCdzIGlt
-cHJlc3NpdmUgOkQKCj4gVW5mb3J0dW5hdGVseSBpdCBmb3VuZCBhIGxvdCBvZiBzdHJhbmdlIHN0
-dWZmOgoKSSB3aWxsIGFuc3dlciBmb3IgdGhlIHdlaXJkbmVzcyBJIGNhdXNlZC4KCkkgaGF2ZSBs
-b25nIHN1c3BlY3RlZCB0aGF0IGEgd2hvbGUgYnVuY2ggb2YgdGhlICJzaW1wbGUiIGRpc3BsYXlz
-CmFyZSBub3Qgc2ltcGxlIGJ1dCBjb250YWlucyBhIGRpc3BsYXkgY29udHJvbGxlciBhbmQgbWVt
-b3J5LgpUaGF0IG1lYW5zIHRoYXQgdGhlIHNwZWVkIG92ZXIgdGhlIGxpbmsgdG8gdGhlIGRpc3Bs
-YXkgYW5kCmFjdHVhbCByZWZyZXNoIHJhdGUgb24gdGhlIGFjdHVhbCBkaXNwbGF5IGlzIGFzeW1t
-ZXRyaWMgYmVjYXVzZQp3ZWxsIHdlIGFyZSBqdXN0IHVwZGF0aW5nIGEgUkFNLCB0aGUgcmVzb2x1
-dGlvbiBqdXN0IGxpbWl0cyBob3cKbXVjaCBkYXRhIHdlIGFyZSBzZW5kaW5nLCB0aGUgY2xvY2sg
-bGltaXRzIHRoZSBzcGVlZCBvbiB0aGUKYnVzIG92ZXIgdG8gdGhlIFJBTSBvbiB0aGUgb3RoZXIg
-c2lkZS4KCkluIG1vc3QgY2FzZXMgSSB0aGluZyB0aGUgY2xvY2sgaXMgdGhlIHdheSB0byBnby4K
-Cj4gcGFuZWwtc29ueS1hY3g0MjRha3AuYzo1MS9zb255X2FjeDQyNGFrcF92aWRfbW9kZTogNjAg
-dnMuIDcyNyAoLmNsb2NrPTMzMDAwMCAuaHRvdGFsPTQ4MCArIDE1ICsgMCArIDE1IC52dG90YWw9
-ODY0ICsgMTQgKyAxICsgMTEpCgpJIHN1c3BlY3QgY2xvY2sgc2hvdWxkIGJlIGFkanVzdGVkIGFm
-dGVyIHZmcmVzaCA9IDYwIGhlcmUgaW5zdGVhZCBvZiB0aGUKb3RoZXIgd2F5IGFyb3VuZC4gSSBj
-b3VsZG4ndCBxdWl0ZSB0ZXN0IHRoZSB2aWRlbyBtb2RlLCBidXQgdGhlIHZlbmRvcgpkcml2ZXIg
-KG5vIGRvY3VtZW50YXRpb24gLi4uLikgZG9lcyBzdGF0ZSAzMzAgTUh6IHdoaWNoIHNlZW1zIGEK
-Yml0IGhpZ2guCgpKdXN0IGRyb3AgdnJlZnJlc2ggZm9yIG5vdy4KCj4gcGFuZWwtc29ueS1hY3g0
-MjRha3AuYzo3MS9zb255X2FjeDQyNGFrcF9jbWRfbW9kZTogNjAgdnMuIDcxMSAoLmNsb2NrPTQy
-MDE2MCAuaHRvdGFsPTQ4MCArIDE1NCArIDE2ICsgMzIgLnZ0b3RhbD04NjQgKyAxICsgMSArIDEp
-CgpZb3UgY2FuIG92ZXJyaWRlIHRoaXMgaWdub3JpbmcgdGhlIHZyZWZyZXNoLCB0aGlzIGlzIGEg
-Y29tbWFuZC1tb2RlCm9ubHksIGFuZCBpbiBjb21tYW5kIG1vZGUgdGhlIHJlZnJlc2ggZG9lc24n
-dCBjb21lIGludG8gcGxheSwgb3IgaXMKdmVyeSBoaWdoIGFuZCBsaW1pdGVkIGJ5IGEgYnVuY2gg
-b2Ygb3RoZXIgb3ZlcmhlYWQgdGhhbiBqdXN0IHRoZQpyZXNvbHV0aW9uLiBUaGUgY29tbWFuZCBt
-b2RlIEhTIGNsb2NrIGlzIEA0MjArIE1IeiBpbmRlZWQuClRlc3RzIHNob3dlZCBhcm91bmQgMTE2
-IEh6IGZvciB0aGlzIHBhcnRpY3VsYXIgZGlzcGxheSBpbiBwcmFjdGljZQp3aXRoIGNvbnRpbnVv
-dXMgdXBkYXRlcy4KCj4gcGFuZWwtaWxpdGVrLWlsaTkzMjIuYzo1NDMvc3JnYl8zMjB4MjQwX21v
-ZGU6IDYwIHZzLiAxMDE2OCAoLmNsb2NrPTI0NTM1MDAgLmh0b3RhbD0zMjAgKyAzNTkgKyAxICsg
-MjQxIC52dG90YWw9MjYyKQo+IHBhbmVsLWlsaXRlay1pbGk5MzIyLmM6NTg3L3l1dl82NDB4MzIw
-X21vZGU6IDYwIHZzLiA3NzY4ICguY2xvY2s9MjQ1NDAwMCAuaHRvdGFsPTY0MCArIDI1MiArIDEg
-KyAyOCAudnRvdGFsPTMyMCArIDQgKyAxICsgMTgpCj4gcGFuZWwtaWxpdGVrLWlsaTkzMjIuYzo2
-MTYvaXR1X3JfYnRfNjU2XzY0MF9tb2RlOiA2MCB2cy4gNTM1OCAoLmNsb2NrPTI0NTQwMDAgLmh0
-b3RhbD02NDAgKyAzICsgMSArIDI3MiAudnRvdGFsPTUwMCkKPiBwYW5lbC1pbGl0ZWstaWxpOTMy
-Mi5jOjU1Ny9zcmdiXzM2MHgyNDBfbW9kZTogNjAgdnMuIDE2MTc4ICguY2xvY2s9MjcwMDAwMCAu
-aHRvdGFsPTM2MCArIDM1ICsgMSArIDI0MSAudnRvdGFsPTI2MikKPiBwYW5lbC1pbGl0ZWstaWxp
-OTMyMi5jOjYwMS95dXZfNzIweDM2MF9tb2RlOiA2MCB2cy4gNzA3MSAoLmNsb2NrPTI3MDAwMDAg
-Lmh0b3RhbD03MjAgKyAyNTIgKyAxICsgMjQgLnZ0b3RhbD0zNjAgKyA0ICsgMSArIDE4KQo+IHBh
-bmVsLWlsaXRlay1pbGk5MzIyLmM6NjMxL2l0dV9yX2J0XzY1Nl83MjBfbW9kZTogNjAgdnMuIDU0
-MjIgKC5jbG9jaz0yNzAwMDAwIC5odG90YWw9NzIwICsgMyArIDEgKyAyNzIgLnZ0b3RhbD01MDAp
-Cj4gcGFuZWwtaWxpdGVrLWlsaTkzMjIuYzo1NzIvcHJnYl8zMjB4MjQwX21vZGU6IDYwIHZzLiA1
-OTcyNSAoLmNsb2NrPTY0MDAwMDAgLmh0b3RhbD0zMjAgKyAzOCArIDEgKyA1MCAudnRvdGFsPTI2
-MikKClRoaXMgaXMgdGhlIGRhdGFzaGVldCBpZiB5b3Ugd2FudCB0byB0YWtlIGEgbG9vazoKaHR0
-cHM6Ly9kZmx1bmQuc2UvfnRyaWFkL2tyYWQvZGxpbmstZGlyLTY4NS9JTEk5MzIyRFNfVjEuMTIu
-cGRmCgpUaGUgb25lIHBsYXRmb3JtIHVzaW5nIHRoaXMgaXMgdXNpbmcgdGhlCjggYml0IElUVS1S
-IEJULjY1NiA2NDBZIDMyMENiQ3IgbW9kZSB3aGljaAooSSB0aGluaykgaXMgc2ltaWxhciB0byBE
-U0kgY29tbWFuZCBtb2RlIGFnYWluOiB0aGVyZSBpcyBhIHN0cmVhbQpvZiBkYXRhIGluIGEgYnVy
-c3QgYW5kIHlvdSBkZWNpZGUgaG93IG9mdGVuIHlvdSB3YW50IHRvIHNlbmQgaXQKYmVjYXVzZSB0
-aGUgcGFuZWwgYWx3YXlzIGhhcyBiYWNraW5nIG1lbW9yeSBhbmQgdGhlCnNwZWVkIG91dCB0byB0
-aGUgcGh5c2ljYWwgZGlzcGxheSBpcyBzb21ldGhpbmcgY29tcGxldGVseQpkaWZmZXJlbnQuCgpZ
-b3UgY2FuIHNhZmVseSBkZWxldGUgdnJlZnJlc2ggZnJvbSBhbGwgb2YgdGhlc2Ugc2l0ZXMuCgo+
-IHBhbmVsLWFybS12ZXJzYXRpbGUuYzoxNjEvdmVyc2F0aWxlX3BhbmVsc1tdOiA2MCB2cy4gNjEg
-KC5jbG9jaz0yNTAwMCAuaHRvdGFsPTY0MCArIDI0ICsgOTYgKyAyNCAudnRvdGFsPTQ4MCArIDEx
-ICsgMiArIDMyKQo+IHBhbmVsLWFybS12ZXJzYXRpbGUuYzoyMDgvdmVyc2F0aWxlX3BhbmVsc1td
-OiAxMTYgdnMuIDU5ICguY2xvY2s9NTQwMCAuaHRvdGFsPTI0MCArIDEwICsgMTAgKyAyMCAudnRv
-dGFsPTMyMCArIDIgKyAyICsgMikKPiBwYW5lbC1hcm0tdmVyc2F0aWxlLmM6MTg0L3ZlcnNhdGls
-ZV9wYW5lbHNbXTogMzkwIHZzLiAxNTIzICguY2xvY2s9NjI1MDAgLmh0b3RhbD0xNzYgKyAyICsg
-MyArIDMgLnZ0b3RhbD0yMjAgKyAwICsgMiArIDEpCgpUaGUgb25seSBkcml2ZXIgIGRyaXZlcnMv
-Z3B1L2RybS9wbDExMS9wbDExMV9kaXNwbGF5LmMKVXNlcyBtb2RlLT5jbG9jayBzbyBqdXN0IGRy
-b3AgdnJlZnJlc2guCgpZb3VycywKTGludXMgV2FsbGVpagoKX19fX19fX19fX19fX19fX19fX19f
-X19fX19fX19fX19fX19fX19fX19fX19fX18KbGludXgtYW1sb2dpYyBtYWlsaW5nIGxpc3QKbGlu
-dXgtYW1sb2dpY0BsaXN0cy5pbmZyYWRlYWQub3JnCmh0dHA6Ly9saXN0cy5pbmZyYWRlYWQub3Jn
-L21haWxtYW4vbGlzdGluZm8vbGludXgtYW1sb2dpYwo=
+--===============0284142894238786204==
+Content-Type: text/plain
+
+Subject: Re: [PATCH 04/12] drm: Nuke mode->vrefresh
+Message-ID: <20200226115708.GH13686@intel.com>
+References: <20200219203544.31013-1-ville.syrjala@linux.intel.com>
+ <CGME20200219203620eucas1p24b4990a91e758dbcf3e9b943669b0c8f@eucas1p2.samsung.com>
+ <20200219203544.31013-5-ville.syrjala@linux.intel.com>
+ <0f278771-79ce-fe23-e72c-3935dbe82d24@samsung.com>
+ <20200225112114.GA13686@intel.com>
+ <3ca785f2-9032-aaf9-0965-8657d31116ba@samsung.com>
+ <20200225154506.GF13686@intel.com>
+ <20200225192720.GG13686@intel.com>
+ <CACRpkdZk9QEy+Kzkmy4BXiHB+aq9hprf=dmA_-R23yqH3NCt1g@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Disposition: inline
+Content-Transfer-Encoding: 8bit
+In-Reply-To: <CACRpkdZk9QEy+Kzkmy4BXiHB+aq9hprf=dmA_-R23yqH3NCt1g@mail.gmail.com>
+X-Patchwork-Hint: comment
+User-Agent: Mutt/1.10.1 (2018-07-13)
+
+On Tue, Feb 25, 2020 at 10:52:25PM +0100, Linus Walleij wrote:
+> On Tue, Feb 25, 2020 at 8:27 PM Ville Syrjälä
+> <ville.syrjala@linux.intel.com> wrote:
+> 
+> > OK, so I went ahead a wrote a bit of cocci [1] to find the bad apples.
+> 
+> That's impressive :D
+> 
+> > Unfortunately it found a lot of strange stuff:
+> 
+> I will answer for the weirdness I caused.
+> 
+> I have long suspected that a whole bunch of the "simple" displays
+> are not simple but contains a display controller and memory.
+> That means that the speed over the link to the display and
+> actual refresh rate on the actual display is asymmetric because
+> well we are just updating a RAM, the resolution just limits how
+> much data we are sending, the clock limits the speed on the
+> bus over to the RAM on the other side.
+
+IMO even in command mode mode->clock should probably be the actual
+dotclock used by the display. If there's another clock for the bus
+speed/etc. it should be stored somewhere else.
+
+-- 
+Ville Syrjälä
+Intel
+
+
+--===============0284142894238786204==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+_______________________________________________
+linux-amlogic mailing list
+linux-amlogic@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-amlogic
+
+--===============0284142894238786204==--
