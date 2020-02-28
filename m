@@ -2,55 +2,88 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id EA609172EC8
-	for <lists+linux-amlogic@lfdr.de>; Fri, 28 Feb 2020 03:20:39 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id CFFA8173099
+	for <lists+linux-amlogic@lfdr.de>; Fri, 28 Feb 2020 06:48:16 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=KlOKYyKQ1TdlhbcDT8KS9A2qVsaQfR9JA9YGi9FsFYY=; b=KdXjq8jugQv8sx
-	hP/0M4u4srTvJ9fAPAo9X1VDE6PaVQo84d0q9YBTVVfyLH1jT8tG4eVhVERu8t248ush343lqNd5m
-	r1wsWTNOuZMNwsDfhxY100SZ8P+tVo4OhnmeMsVG/FRRTbdLU5tJyYZwYpkiWib8LL8+bg2sIEifo
-	kDNFEhdDlVX2Tl3DbHzv8isJhqmeL4/gdYjQfMmNNnxGApjQYUp1bI1+lCbQvgR5a2kMnGr71P5vp
-	twsdm7LUrxtHrvggQQUEmx2ocOrRnTvDEsnOmrhdF6qqQFdapvM3nVj50/WUH7fe02GZp6DVoA09D
-	yLXc3IqVp0lwOWrU4tbA==;
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
+	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=YJD+bMdIMpX4UwMvkSYRG/gZ7WVxYf95tBODSgMtQ+s=; b=bLo
+	F/z0Usc5OUbsK8rXQT0GWwTMMZ6P62Uetrue9qFWUL3qmYrRJluMh+66sKnPyzlvS4tPzqmPXf25F
+	R8VlO0EOp5LglN7pAXjzp8ZpjEQ6RkmItDv/XNShftewh7rATmB5i/6ekYFe0pJQbszb2ufAaSHVB
+	KqlnoInqK9wC0SPM3dNfky1Gjv8+AhuGugNnhOgt1UEfGNW5uM6yKCwak+fp4yYWRN/b2ub8tys68
+	0flQukShyFCaM7VJ/I92spE4E1ZY31QA1eav9CQqHe7GB3sClh3bVHFMf5HrDUIsBzQvYihUkcExe
+	XPDKwKqgVtrTniDB4II6bnwTl38VE9A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j7VGU-0002RK-PF; Fri, 28 Feb 2020 02:20:34 +0000
-Received: from mail-sh.amlogic.com ([58.32.228.43])
+	id 1j7YVQ-0000XS-7q; Fri, 28 Feb 2020 05:48:12 +0000
+Received: from mail-lj1-x243.google.com ([2a00:1450:4864:20::243])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j7VGH-0002If-ET; Fri, 28 Feb 2020 02:20:22 +0000
-Received: from [10.18.91.106] (10.18.91.106) by mail-sh.amlogic.com
- (10.18.11.5) with Microsoft SMTP Server (version=TLS1_2,
- cipher=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256) id 15.1.1591.10; Fri, 28 Feb
- 2020 10:20:47 +0800
-Subject: Re: [PATCH] dt-bindings: power: Fix dt_binding_check error
-To: Rob Herring <robh@kernel.org>
-References: <1582269169-17557-1-git-send-email-jianxin.pan@amlogic.com>
- <20200226172702.GA6632@bogus>
-From: Jianxin Pan <jianxin.pan@amlogic.com>
-Message-ID: <4f1d2562-31e1-0dfc-2c23-f208249848d6@amlogic.com>
-Date: Fri, 28 Feb 2020 10:20:47 +0800
-User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:60.0) Gecko/20100101
- Thunderbird/60.9.1
-MIME-Version: 1.0
-In-Reply-To: <20200226172702.GA6632@bogus>
-Content-Language: en-US
-X-Originating-IP: [10.18.91.106]
-X-ClientProxiedBy: mail-sh.amlogic.com (10.18.11.5) To mail-sh.amlogic.com
- (10.18.11.5)
+ id 1j7YVE-0000OX-0c; Fri, 28 Feb 2020 05:48:01 +0000
+Received: by mail-lj1-x243.google.com with SMTP id o15so1957372ljg.6;
+ Thu, 27 Feb 2020 21:47:56 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=from:to:cc:subject:date:message-id;
+ bh=e3rRbEToSCqTcYjLDTcdw4LcAsL1QAmXUv8JS5cebgQ=;
+ b=XoIne1Nb5kFUDj41LjD7kbLI5h5o3wzu5VM5IngJI7deJOu6WjFlxaYnNQ1UQ6NFhu
+ BG7RLL6hzImb4cHu34XCXFPKdZ70ow+w4lJC9jkdte2AU2B1q4IBd1HD/d3z9UzOPr7f
+ sXRsrJhUZ1bJNHLIHDXh3SzOmormK+EbIoPDZdQ9+wnFUKgASpsyXkz0GJz7++pF4wx/
+ GWFbdZbGiHiZkeNw3dmghR5KxMmcat6H+IOtpj+N46ndfmHQubOI28sQ5lG7jofBLJpO
+ NXf7cCfBJbmHvF8CHzVsijz1SMReF2LsksShAumP69hR/eqMsYo/UKrU9g1SimzgE8yR
+ gP2Q==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:from:to:cc:subject:date:message-id;
+ bh=e3rRbEToSCqTcYjLDTcdw4LcAsL1QAmXUv8JS5cebgQ=;
+ b=PEeju/5IPcf+y8raXMlzWqlGTlQibkH66R1coT+Bgea1/UJHhFcI0/pVwFfq+apsV5
+ Vhs8zqpIN4WFww4jUQY5egbqxrc+/mjuXp7TlvezfoHnv9qY2msQgK+V4Dn2v0Sq/tk5
+ vD3dIc/Z9B7V4ZqMx16c4aKv3oFkz+MvvlE2IcjS3hOg0fsDWZEmFLsqZUqGwsF2kBBv
+ 97HPunT3yafEViTEkOo+rUs6SIyuEkhFYowevJiej/W3zy1Cjrvtw357/Kwq7UaL0NDY
+ I+sjNsRPZAmuAPKUkyf9bzVf422oF6vkJqkojfR1g+B+pqvZPqyv9WFoRhLMSa8joucy
+ Lxmw==
+X-Gm-Message-State: ANhLgQ0YfeE7aPonfjqCTBi62uUIEdAfxSQj9AertkHP1Z4pgHT3ccGv
+ Wl66RmJlxi5GDzieHN8CxNM=
+X-Google-Smtp-Source: ADFU+vsMBvBqWogz63CGu3gbsY1yy+UiOZUyqdEFXylOvp7Y3ANY7Klm69JBRpTiocOvvbgNU4uikA==
+X-Received: by 2002:a2e:8797:: with SMTP id n23mr1659910lji.176.1582868875231; 
+ Thu, 27 Feb 2020 21:47:55 -0800 (PST)
+Received: from localhost.localdomain ([87.200.95.144])
+ by smtp.gmail.com with ESMTPSA id d24sm4760642lja.82.2020.02.27.21.47.51
+ (version=TLS1_2 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+ Thu, 27 Feb 2020 21:47:54 -0800 (PST)
+From: Christian Hewitt <christianshewitt@gmail.com>
+To: Rob Herring <robh+dt@kernel.org>, Mark Rutland <mark.rutland@arm.com>,
+ Kevin Hilman <khilman@baylibre.com>, devicetree@vger.kernel.org,
+ linux-arm-kernel@lists.infradead.org, linux-amlogic@lists.infradead.org,
+ linux-kernel@vger.kernel.org
+Subject: [PATCH] arm64: dts: meson: khadas-vim3: move model to
+ g12b-khadas-vim3 dtsi
+Date: Fri, 28 Feb 2020 09:47:04 +0400
+Message-Id: <1582868824-73870-1-git-send-email-christianshewitt@gmail.com>
+X-Mailer: git-send-email 2.7.4
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200227_182021_486879_336FB95B 
-X-CRM114-Status: GOOD (  11.49  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20200227_214800_084845_A0B51113 
+X-CRM114-Status: GOOD (  11.48  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:243 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider [christianshewitt[at]gmail.com]
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -62,61 +95,52 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, Victor Wan <victor.wan@amlogic.com>,
- linux-pm@vger.kernel.org,
- Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
- Kevin Hilman <khilman@baylibre.com>, Neil Armstrong <narmstrong@baylibre.com>,
- linux-kernel@vger.kernel.org, linux-amlogic@lists.infradead.org,
- linux-arm-kernel@lists.infradead.org, Jerome Brunet <jbrunet@baylibre.com>
+Cc: Christian Hewitt <christianshewitt@gmail.com>
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
+The common meson-khadas-vim3.dtsi is now shared with VIM3L so move the
+VIM3 model namne to meson-g12b-khadas-vim3.dtsi.
 
-Hi Rob,
+meson-sm1-khadas-vim3l.dts contains the VIM3L model name.
 
-Thanks for the ACK.
-I have resent it to Kevin for linux-amlogic and Stephen for linux-next.
+Signed-off-by: Christian Hewitt <christianshewitt@gmail.com>
+---
+ arch/arm64/boot/dts/amlogic/meson-g12b-khadas-vim3.dtsi | 2 ++
+ arch/arm64/boot/dts/amlogic/meson-khadas-vim3.dtsi      | 2 --
+ 2 files changed, 2 insertions(+), 2 deletions(-)
 
-On 2020/2/27 1:27, Rob Herring wrote:
-> On Fri, Feb 21, 2020 at 03:12:48PM +0800, Jianxin Pan wrote:
->> Missing ';' in the end of secure-monitor example node.
->>
->> Fixes: f50b4108ede1 ("dt-bindings: power: add Amlogic secure power domains bindings")
->> Reported-by: Rob Herring<robh+dt@kernel.org>
-> 
-> space                     ^
-I fixed it in the resend version.
-> 
->> Signed-off-by: Jianxin Pan <jianxin.pan@amlogic.com>
->> ---
->>  Documentation/devicetree/bindings/power/amlogic,meson-sec-pwrc.yaml | 2 +-
->>  1 file changed, 1 insertion(+), 1 deletion(-)
-> 
-> This error isn't in my tree, so make sure it's applied where the 
-> referenced commit is.
-> 
-> Acked-by: Rob Herring <robh@kernel.org>
-> 
->>
->> diff --git a/Documentation/devicetree/bindings/power/amlogic,meson-sec-pwrc.yaml b/Documentation/devicetree/bindings/power/amlogic,meson-sec-pwrc.yaml
->> index af32209..bc4e037 100644
->> --- a/Documentation/devicetree/bindings/power/amlogic,meson-sec-pwrc.yaml
->> +++ b/Documentation/devicetree/bindings/power/amlogic,meson-sec-pwrc.yaml
->> @@ -36,5 +36,5 @@ examples:
->>              compatible = "amlogic,meson-a1-pwrc";
->>              #power-domain-cells = <1>;
->>          };
->> -    }
->> +    };
->>  
->> -- 
->> 2.7.4
->>
-> 
-> .
-> 
+diff --git a/arch/arm64/boot/dts/amlogic/meson-g12b-khadas-vim3.dtsi b/arch/arm64/boot/dts/amlogic/meson-g12b-khadas-vim3.dtsi
+index 5548634..2b2d72c 100644
+--- a/arch/arm64/boot/dts/amlogic/meson-g12b-khadas-vim3.dtsi
++++ b/arch/arm64/boot/dts/amlogic/meson-g12b-khadas-vim3.dtsi
+@@ -8,6 +8,8 @@
+ #include <dt-bindings/sound/meson-g12a-tohdmitx.h>
+ 
+ / {
++	model = "Khadas VIM3";
++
+ 	vddcpu_a: regulator-vddcpu-a {
+ 		/*
+ 		 * MP8756GD Regulator.
+diff --git a/arch/arm64/boot/dts/amlogic/meson-khadas-vim3.dtsi b/arch/arm64/boot/dts/amlogic/meson-khadas-vim3.dtsi
+index 90815fa..0ef60c7 100644
+--- a/arch/arm64/boot/dts/amlogic/meson-khadas-vim3.dtsi
++++ b/arch/arm64/boot/dts/amlogic/meson-khadas-vim3.dtsi
+@@ -9,8 +9,6 @@
+ #include <dt-bindings/gpio/meson-g12a-gpio.h>
+ 
+ / {
+-	model = "Khadas VIM3";
+-
+ 	aliases {
+ 		serial0 = &uart_AO;
+ 		ethernet0 = &ethmac;
+-- 
+2.7.4
 
 
 _______________________________________________
