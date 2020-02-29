@@ -2,7 +2,7 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 803231748A4
+	by mail.lfdr.de (Postfix) with ESMTPS id 3F14D1748A3
 	for <lists+linux-amlogic@lfdr.de>; Sat, 29 Feb 2020 19:21:59 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
@@ -10,47 +10,47 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	List-Archive:List-Unsubscribe:List-Id:To:In-Reply-To:References:Date:
 	Message-Id:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Pe3u4rP33Cmm8hWt9DfmNKANYaLp+nYmOO4CioUI8Dk=; b=LfwLCirQhNZD08
-	+u6/vW7X+R/pxml15EZWq/FmmOH8aV1DpexphC6hVY4J0zP6N3gc/5d8s1byZVv8rZ+8x6l3yV6we
-	quPhSJLA+1M/kO+1S15Sd+3AU6qIf0Vk+cMSvRFDElpLNNGrDt/6K1LwcoBJSKf1eyi1d95U82Uc8
-	CKcrhBU4m6HNxoybDP1HNxYkOWqxKsumPqTi23gFZTfn0p1ip1YLJL9z9MyF4ZYbCRAkAGgl+3Ssk
-	YyHhmFV234vacU9bStnD52XGBwAEaVqeoxkfgq5HiQo0qrtv/1JMb2UNQI8rCYSjGOpN93/RIrvVJ
-	qiyJdRprmcpUM0fZ758A==;
+	List-Owner; bh=gYyCLc8G264CNc0b8FYEz1CiC2e8AXPJ0XHQvFcMCLY=; b=eo1IZuT9Zi2jjW
+	qG7viOfwlww/0gjCTE+wMIRphSQ6PU52zdTuj1XCUlZwGdecpq0TTwO2qeSIFrCN2d34zSTXYLLWm
+	iHLEKs4PINFf0kCefpsacANmjiYnJbmb+gvGfuh5beRzgNOh65OQndYFT8rJJwxtZQ7OxpGGBe52O
+	7vXbg5b6Eld0Lqq/2AKtTuFxsDQdk2zye1eF0UtOYijyBm6zhsQEoXdUgPfzs+4q40tj2xvX3g4XW
+	N8YVS69HyxVhXhzK97pa35Vq+j5HUACh2aiP+rlT5UizIBSZh/48vD+TUBLefdd9Y7mJpDI6LHwDt
+	5mJh3mEevGHUR4za5voQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j86kL-0007st-6u; Sat, 29 Feb 2020 18:21:53 +0000
+	id 1j86kP-0007vJ-3g; Sat, 29 Feb 2020 18:21:57 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j86kH-0007r2-Pu
- for linux-amlogic@lists.infradead.org; Sat, 29 Feb 2020 18:21:51 +0000
+ id 1j86kI-0007r4-3V
+ for linux-amlogic@lists.infradead.org; Sat, 29 Feb 2020 18:21:52 +0000
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
  s=default; t=1583000509;
- bh=x4EnsgK5bHSIx3f8U055Hrjf6fMpNgctwAIhDY3Jp4M=;
+ bh=6K1xKAd1BbQf0sCF7d49dSq/B3CixGK7aE8tTGB1zLg=;
  h=Subject:From:Date:References:In-Reply-To:To:Cc:Cc:From;
- b=OoD4YOCB76eDxAYdyR7heMxyfWTqv5iIYnj32nRgtA+9mB4trTm8MB42d0uLJFmBd
- Pg4Q3Fim4nE7bepqry0ULoQMgYX3yL3AHq9e6Qy9s6phfi4ufd1Pzh72Y8+BqPivh6
- Px+aE/mi0UYHL5QXB5LI9zSUqS2RYeHXcr8VyPz8=
+ b=DlKM5a+01ehVOK1G3MlowHZujJOu3OJ85bbWggh2WujvHAdHdiySpJG5cj21YqnMo
+ rFw2pchyU8AyWm/WdtrCuWSQ5p5KP+J9rpWF+TRVY69wEofBUQUH7ljkjpA5jdcWCJ
+ +tUlGXy8eKMQD1bJaCLajtg5/xASrW7NcV6FUUBE=
 MIME-Version: 1.0
-Subject: Re: [PATCH] arm64: dts: meson: fix gxm-khadas-vim2 wifi
+Subject: Re: [PATCH] arm64: dts: meson-gxbb-odroid-c2: add rc-odroid ir keymap
 From: patchwork-bot+linux-amlogic@kernel.org
-Message-Id: <158300050907.2726.13932854961282071709.git-patchwork-notify@kernel.org>
+Message-Id: <158300050945.2726.14875556307760847678.git-patchwork-notify@kernel.org>
 Date: Sat, 29 Feb 2020 18:21:49 +0000
-References: <1582212790-11402-1-git-send-email-christianshewitt@gmail.com>
-In-Reply-To: <1582212790-11402-1-git-send-email-christianshewitt@gmail.com>
+References: <1582213085-11656-1-git-send-email-christianshewitt@gmail.com>
+In-Reply-To: <1582213085-11656-1-git-send-email-christianshewitt@gmail.com>
 To: Christian Hewitt <christianshewitt@gmail.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200229_102149_859197_F2C6D67F 
-X-CRM114-Status: UNSURE (   4.08  )
+X-CRM114-CacheID: sfid-20200229_102150_158956_0261FACF 
+X-CRM114-Status: UNSURE (   5.21  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-5.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
  -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
  high trust [198.145.29.99 listed in list.dnswl.org]
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
@@ -80,23 +80,18 @@ Hello:
 
 This patch was applied to khilman/linux-amlogic.git (refs/heads/for-next).
 
-On Thu, 20 Feb 2020 19:33:10 +0400 you wrote:
-> Fixes: adc52bf7ef16 ("arm64: dts: meson: fix mmc v2 chips max frequencies")
+On Thu, 20 Feb 2020 19:38:05 +0400 you wrote:
+> Add the rc-odroid keymap to the Odroid C2 device-tree.
 > 
-> before
-> 
-> [6.418252] brcmfmac: F1 signature read @0x18000000=0x17224356
-> [6.435663] brcmfmac: brcmf_fw_alloc_request: using brcm/brcmfmac4356-sdio for chip BCM4356/2
-> [6.551259] brcmfmac: brcmf_sdiod_ramrw: membytes transfer failed
-> [6.551275] brcmfmac: brcmf_sdio_verifymemory: error -84 on reading 2048 membytes at 0x00184000
-> [6.551352] brcmfmac: brcmf_sdio_download_firmware: dongle image file download failed
-> 
-> [...]
+> Signed-off-by: Christian Hewitt <christianshewitt@gmail.com>
+> ---
+>  arch/arm64/boot/dts/amlogic/meson-gxbb-odroidc2.dts | 1 +
+>  1 file changed, 1 insertion(+)
 
 
 Here is a summary with links:
-  - arm64: dts: meson: fix gxm-khadas-vim2 wifi
-    https://git.kernel.org/khilman/linux-amlogic/c/11566b93881ab41fb0a6dc39272e0084133854b5
+  - arm64: dts: meson-gxbb-odroid-c2: add rc-odroid ir keymap
+    https://git.kernel.org/khilman/linux-amlogic/c/67c4dd59fe9f8c0d3f86e170cd20f1ec55660feb
 
 You are awesome, thank you!
 
