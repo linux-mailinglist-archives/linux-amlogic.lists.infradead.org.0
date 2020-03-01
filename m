@@ -2,63 +2,71 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 14FB91748A6
-	for <lists+linux-amlogic@lfdr.de>; Sat, 29 Feb 2020 19:22:04 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id ED425174A95
+	for <lists+linux-amlogic@lfdr.de>; Sun,  1 Mar 2020 01:48:41 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:In-Reply-To:References:Date:
-	Message-Id:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=UhIU8OnGqhApOrVAcS+dnaz5oA/FbXoz27tFZplWE+E=; b=Szo590+kqY9GMm
-	pUdGo13QbdqynUQ6z4Ui0rDoF1YWlS2gywQorveM4ExcTQkSA9wSua8R5s/uDP4Uq1nOzwq25aVOT
-	eAQ2frjR/vCzW1P1BZYFIuf8HusNaVUr7iiavsfmaEXOt80zj69dbdMAmJvNjIUczZ2zuy0LQG7iR
-	O3AUA8Zlwwd8rmkRAvjxFi8XHJmQwUz7dc9Ky2mJp1kmN6xu8sz+axkR+0hBhnFr2o1P2LHkpHhxV
-	CBXOEAXm5Tn8IsfFCQ6oGKe0Uv9stJG07BJHv5e1fyOc6Y2/vBKwjACARU96aY5pf0E3w+URp1i/0
-	GdofHG9yErSi7XYc82WQ==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:Cc:
+	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
+	MIME-Version:References:In-Reply-To:Message-ID:Subject:To:From:Date:Reply-To:
+	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=zLec7Mvw+aFn214P20+qnlC9dC3frK6ypSc2okcrB8E=; b=WvVahHpEy14J8Q2Oj4DpQ3fEJ
+	NwqWj3Fdnp1RsIp1UWQGyRWeijLaVyE/Ni6YwgvtkgpaVuSUwE8+7RyUMB07H6nvCCl8yeSHvPG5m
+	0vqWBoo6uxBRL1fOqCuQHWlM7PsZLEY3njN9kr9Yx0sNSmQNUuRQoUMbgRHdS/7+KcUKxF8vI7/Qi
+	7iVgdVQlDTnwAP22+B55NISUKpqK6N7PMqTZ3t4FNCGRHLi86eRlf2whcvPJdKjOUnglk49Xrs8Db
+	Yww1rIebmZAfzjqAFr7DzEVCQM6LffeYMR/z6hyihyEB/OtA3T763TkV2hDHN4iFdHD1X1J9IWad8
+	EoHx45j2A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j86kT-0007z3-Fj; Sat, 29 Feb 2020 18:22:01 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1j8CmX-00047v-VB; Sun, 01 Mar 2020 00:48:33 +0000
+Received: from bilbo.ozlabs.org ([2401:3900:2:1::2] helo=ozlabs.org)
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j86kH-0007r3-QE
- for linux-amlogic@lists.infradead.org; Sat, 29 Feb 2020 18:21:52 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1583000509;
- bh=9ea4JyyC9s2nGzpUmUzNEDrofPvh2+xs2J0kqKj8/9o=;
- h=Subject:From:Date:References:In-Reply-To:To:Cc:Cc:From;
- b=DmlgGudd/EMkx7bdQifw3lUrlJGdDR2d/6MWQWY+1DxphXSYPHmVDNn/JOJGDaBHk
- YN/h7QDzPLbVDYATKYnUAsfmt8HGe+jd0Lz/aqVhf80rQ/XYf9c24U8ShOkHTwK9MJ
- Crm5maWOUJlJ9aaQL52Rv9XJvJxr6hDsKMmlDkvw=
+ id 1j8CmU-000475-BY; Sun, 01 Mar 2020 00:48:32 +0000
+Received: from authenticated.ozlabs.org (localhost [127.0.0.1])
+ (using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+ key-exchange ECDHE (P-256) server-signature RSA-PSS (4096 bits) server-digest
+ SHA256) (No client certificate requested)
+ by mail.ozlabs.org (Postfix) with ESMTPSA id 48VPlW5nYLz9sPk;
+ Sun,  1 Mar 2020 11:48:23 +1100 (AEDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=canb.auug.org.au;
+ s=201702; t=1583023705;
+ bh=4nRI6rwZRJmJBCSa2D7NMwK+7ECxFcV3Jplu7f2M8vI=;
+ h=Date:From:To:Cc:Subject:In-Reply-To:References:From;
+ b=bQndGde94p9FyOTmTOsKt5AnSDdUQoxCwxy7l9+8ZpBXs+oyYGsT/USUpwwCYFUeB
+ OAs2OK8w6ainF6Hb1E0AJ3CtUFbC/Gb0BjAl8V8sCSxedVthQ/5mF0cXHyhWH3URuy
+ 548JnLhcYrDjKtEwM62cZV7xhRlwqKtlLRSnogfOpYniYaEqqhZXM/iY1dM+4u/X/N
+ 6kc5DIlzx4Xg9x6Gdes2FktrED8OwRU/yMDa6+PP8t50g89z4T4PxnCkpVeVv3S4db
+ oEtYHaxZc1SvKAmmMUypMuz3UqBveSsmjCegll5CS64Xsw+gfj6rEWt1n7xZ+786FC
+ OU6eoFzkoU47Q==
+Date: Sun, 1 Mar 2020 11:47:50 +1100
+From: Stephen Rothwell <sfr@canb.auug.org.au>
+To: Kevin Hilman <khilman@baylibre.com>
+Subject: Re: [PATCH] soc: amlogic: fix compile failure with
+ MESON_SECURE_PM_DOMAINS & !MESON_SM
+Message-ID: <20200301114750.7d270124@canb.auug.org.au>
+In-Reply-To: <7hzhd19vuj.fsf@baylibre.com>
+References: <1581955933-69832-1-git-send-email-jianxin.pan@amlogic.com>
+ <20200218080743.07e58c6e@canb.auug.org.au>
+ <20200218092229.0448d266@canb.auug.org.au>
+ <20200224101654.530f1837@canb.auug.org.au>
+ <7hzhd19vuj.fsf@baylibre.com>
 MIME-Version: 1.0
-Subject: Re: [PATCH] arm64: dts: meson-gxl-s905x-p212: add bluetooth nodes
-From: patchwork-bot+linux-amlogic@kernel.org
-Message-Id: <158300050925.2726.396392500060112919.git-patchwork-notify@kernel.org>
-Date: Sat, 29 Feb 2020 18:21:49 +0000
-References: <1582216366-12964-1-git-send-email-christianshewitt@gmail.com>
-In-Reply-To: <1582216366-12964-1-git-send-email-christianshewitt@gmail.com>
-To: Christian Hewitt <christianshewitt@gmail.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200229_102149_869600_EC84C60B 
-X-CRM114-Status: UNSURE (   5.31  )
+X-CRM114-CacheID: sfid-20200229_164830_597967_F46325E4 
+X-CRM114-Status: UNSURE (   6.37  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -5.2 (-----)
+X-Spam-Score: -0.1 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+ Content analysis details:   (-0.1 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -70,37 +78,70 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: linux-amlogic@lists.infradead.org, khilman@kernel.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: devicetree@vger.kernel.org, Hanjie Lin <hanjie.lin@amlogic.com>,
+ Victor Wan <victor.wan@amlogic.com>, Jianxin Pan <jianxin.pan@amlogic.com>,
+ Neil Armstrong <narmstrong@baylibre.com>,
+ Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
+ linux-pm@vger.kernel.org, linux-kernel@vger.kernel.org,
+ Rob Herring <robh+dt@kernel.org>, Jian Hu <jian.hu@amlogic.com>,
+ Xingyu Chen <xingyu.chen@amlogic.com>, Carlo Caione <carlo@caione.org>,
+ linux-amlogic@lists.infradead.org, linux-arm-kernel@lists.infradead.org,
+ Jerome Brunet <jbrunet@baylibre.com>
+Content-Type: multipart/mixed; boundary="===============1925698249855568875=="
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Hello:
+--===============1925698249855568875==
+Content-Type: multipart/signed; boundary="Sig_/Kf1.E4dLddnNTqvZx6GlV0A";
+ protocol="application/pgp-signature"; micalg=pgp-sha256
 
-This patch was applied to khilman/linux-amlogic.git (refs/heads/for-next).
+--Sig_/Kf1.E4dLddnNTqvZx6GlV0A
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: quoted-printable
 
-On Thu, 20 Feb 2020 20:32:46 +0400 you wrote:
-> This removes the uart_A alias (no longer required) and adds the bluetooth
-> node to the P212 device tree.
-> 
-> Signed-off-by: Christian Hewitt <christianshewitt@gmail.com>
-> ---
->  arch/arm64/boot/dts/amlogic/meson-gxl-s905x-p212.dtsi | 9 ++++++++-
->  1 file changed, 8 insertions(+), 1 deletion(-)
+Hi Kevin,
+
+On Sat, 29 Feb 2020 17:55:32 +0100 Kevin Hilman <khilman@baylibre.com> wrot=
+e:
+>
+> I've fixed up the trailer whitespace an queued this up now, so should
+> show up in linux next shortly.
+
+Thanks.
+
+--=20
+Cheers,
+Stephen Rothwell
+
+--Sig_/Kf1.E4dLddnNTqvZx6GlV0A
+Content-Type: application/pgp-signature
+Content-Description: OpenPGP digital signature
+
+-----BEGIN PGP SIGNATURE-----
+
+iQEzBAEBCAAdFiEENIC96giZ81tWdLgKAVBC80lX0GwFAl5bBjYACgkQAVBC80lX
+0Gw+KAgAhjy4Z4V15rVXk29DVizB7BmoTp0AHlbwyBOXdg1fqDDAgpSapQv/aaTF
+t/kpWrI8HPqJIV33mTw9Y4ihIwM3w3hurf1Z3fal9lem4IITW6hlcuXG8jm1I0Zh
+rMlvimE+P9nv7UYTDqgQx0+v7nw3Y0kxJTkkoRbtPMOBeX/mq3oEMqHmvyTRzjjf
++uqsMBh50kotDakasWPX47i7cULdhXg3BUd/lPYg7n1wJ179GLOl0F83CLmbeCtK
+D5PxpxIZmQEvgFModR81zi8NPz46WCa1WeSQ0edqS2AYBe8p6FWYyEeBCmU2b2ER
+xjSTCdXBgNDI8gD67V0Tx7Qs1++sjA==
+=V59f
+-----END PGP SIGNATURE-----
+
+--Sig_/Kf1.E4dLddnNTqvZx6GlV0A--
 
 
-Here is a summary with links:
-  - arm64: dts: meson-gxl-s905x-p212: add bluetooth nodes
-    https://git.kernel.org/khilman/linux-amlogic/c/026c20e7b05f6a6a91720feb7492c0d9b90a9b8c
-
-You are awesome, thank you!
-
--- 
-Deet-doot-dot, I am a bot.
-https://korg.wiki.kernel.org/userdoc/pwbot
+--===============1925698249855568875==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
 
 _______________________________________________
 linux-amlogic mailing list
 linux-amlogic@lists.infradead.org
 http://lists.infradead.org/mailman/listinfo/linux-amlogic
+
+--===============1925698249855568875==--
+
