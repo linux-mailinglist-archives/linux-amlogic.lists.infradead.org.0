@@ -2,69 +2,71 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 378CB175EBF
-	for <lists+linux-amlogic@lfdr.de>; Mon,  2 Mar 2020 16:54:30 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 38D18175EC5
+	for <lists+linux-amlogic@lfdr.de>; Mon,  2 Mar 2020 16:55:46 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
 	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=zk5imByRaXwtZkSrV+gJB+rOtliqThWwkRgMLbjsKnc=; b=qcGJB/kt5iiicH
-	jt/CZhS1bCE48oinlJUGCASxctpjQqRL7jra7csAm3tGh67l0zia8lfZ0yFXn8EhO3H1UsaGtxl+V
-	i+l4IruxcPjKWQH5yGvNLQ5NEFMWxx0HIbiFFqy6EY1s4T76N68pof8VXbTM8ybV39B3g71YEaRAA
-	Tu2WqO0dGO5/KIZGfy/j/43HgaHzi089OuiMPo1oKjVi9I7yqhkLcFEFjtUiMePZZVMhIzaC9F7SX
-	6LacTxn4QcFE+ATkyOM/krV6P1SswS+2P6OxsHfpDiySriRRVkgQjGstTJC7LItw7Y4EJs3w9guCm
-	xEh68zHoCtCM+BjAfbiA==;
+	List-Owner; bh=3Y5Vi9dYouC75duivLHEJJ4SPRyhztcZi5jn4b2lrdU=; b=S7fks7GRMV3EE7
+	8NYF1Sthrii8rQRyjuMuUpOg7Q9EFLIxK6G5eql62UB/VSsqKdcCoNAY8REKcva2c8V+H++0ggoM0
+	JgNatAyqIasal/vgyy/dtL5voYidoZg3rkxnO5cyUMlsGJmTq0BJa5eXfp0IZMa9au1ir3Oxwayow
+	K6JNpR270WNKW4lB63D9YFVk9EfRZis5daxAneymY9YNcV6Ug3whdRxt7qXzcD3GmF2/tfXQaKv04
+	EfAT0mjKm4w7mPFG/7nqZwWk5ouCWr8IXDjn9IN+3DLZXokjmua54hR1n6WWs0xfw9odNeAOP9E7O
+	7A5+ygPLzBINXseIWQ4A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j8nOh-0001fM-Uy; Mon, 02 Mar 2020 15:54:23 +0000
-Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
+	id 1j8nPz-0003H6-0Z; Mon, 02 Mar 2020 15:55:43 +0000
+Received: from mail-wm1-x343.google.com ([2a00:1450:4864:20::343])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j8nOe-0001er-7P
- for linux-amlogic@lists.infradead.org; Mon, 02 Mar 2020 15:54:22 +0000
-Received: by mail-wr1-x442.google.com with SMTP id q8so319361wrm.4
- for <linux-amlogic@lists.infradead.org>; Mon, 02 Mar 2020 07:54:19 -0800 (PST)
+ id 1j8nPw-0003Gj-HI
+ for linux-amlogic@lists.infradead.org; Mon, 02 Mar 2020 15:55:41 +0000
+Received: by mail-wm1-x343.google.com with SMTP id m3so11152394wmi.0
+ for <linux-amlogic@lists.infradead.org>; Mon, 02 Mar 2020 07:55:40 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=subject:to:cc:references:from:autocrypt:organization:message-id
  :date:user-agent:mime-version:in-reply-to:content-language
  :content-transfer-encoding;
- bh=STQ7onEfJVpP/O8wQ/Viql6T2jtxsZUJhm2G28t0RdA=;
- b=WAdmnsDl2mt7Fd58A4q1CGZexA5ZC6C6l/Tq93voHWBnx+SDkzKpzek2bffad/uCNZ
- TWlKhbyhzZbCZkMZ+DAqAOw0EktKPWlMgtOhU/NW32yXRmd9YixfU6E4w3gHRFC6ZKBu
- npeAxqpPm8lqx00cqNzVZAVyKgG3tkFZfc5hmfRavGQXn5VD1SLI0qB/3BLw7MuzQtAl
- v7qjrM96+Pkyn6E9idckXdRkS4wD3/vIM4qHdqdydlf7fWJlEwzwbvd4Hbv08gUcDL9n
- zyzG8TqyfbbWa/sXHfmzQ2M/2GGGveMSWhR6g0hyK2WtBYu/vHhVIgHH9J/Wjeptsazh
- XmIw==
+ bh=oJNCFnFx75P4PmGSwBJn8FFP/mBUf8whYY9xEyY9kl4=;
+ b=IP8CqWll/Znb5Z4OyMw1XQLoWy9UTYCxFID1QGp417UWkkYSjz8F0WB409mkwq7XH9
+ PkQ6l2vDZMHOkjGyoMdy+LAVp+dZyXYSu5eq+0nlAxiqWXl/geWsVB+O+7xzhv88n74M
+ jE2jExW548WZ1fMRJfWwVBBY0OooEvuAixNGLv2ALvid2XxiuSJ4idZw5GRXqy1vsnUQ
+ cscvJyzse8PMRTJoCklIFD4pAOrxF2Etq5k+wZfDBimEfO3hdeysDIDnoiMXKscXqiNp
+ Z3VGWg0luw5/Fd+mNnGjhXXdv4des+Simsby4oPcnzQp3aa/3f2PAghfnd2TKtXBKjuI
+ U1gQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:subject:to:cc:references:from:autocrypt
  :organization:message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=STQ7onEfJVpP/O8wQ/Viql6T2jtxsZUJhm2G28t0RdA=;
- b=Z/TdK4WUgjh1UZSqRIbuyQG02XO0q8gjb6UQmcs1MKBkj8AsRJXEU6j1BdPmJ1+JD2
- CnC1zzr3zMABCNMFFb1hprrmru02OUUH7sjdmZeUtBf4F8jt33wXSKMtEK09uxI11jDq
- fI/dR2GE4HPafOYlnDfUlQOmGfKS3F6Yme3/fjysS31ywZAY1ucWK4graTKIFte+mKzg
- l4PN9xy3x/RPfRVxEcv24YwR4/c4DywCOs8Oa3v8dtXbvTOF7dVC3P1ZzcnFwEVB4zoR
- 4Lmeyfv5qg3d8TJEpd2RwSe1E5oxulk894hewOXflCBjpYUOL0ugUWuR0ftGIEaSt5k0
- +S7w==
-X-Gm-Message-State: ANhLgQ2A3Qhwjo9eOI5VZx+HJClFz+G/SMemj6EP+5dy6tTQ/ioLuwzh
- H7WSYNQW/tJm2E6WqCDDc4NXzQ==
-X-Google-Smtp-Source: ADFU+vvxOsRhYTLfzIYQaASM6Jsr2eGlov5swoqObhLH6gxAuIaeZrjL9yfqc0ZUiF0YjRXpKiel5Q==
-X-Received: by 2002:a5d:6881:: with SMTP id h1mr259533wru.236.1583164458464;
- Mon, 02 Mar 2020 07:54:18 -0800 (PST)
+ bh=oJNCFnFx75P4PmGSwBJn8FFP/mBUf8whYY9xEyY9kl4=;
+ b=jj70jBEcCBY+IJ1NZ2sVzTqOVW2I6o+HjM/7rR0U+wnjyXdWUUzo9ghhPcuV1IzDx+
+ lB7ofxNN9bwsiD0m/DU1mArpdyLytq21JFcimInRLZBETgdY6VMXPthCHPFRGsQOhBXv
+ caMUWKTpf1w+q2V4ssqAurm27RWPJsv5Or8PqbAbwfPz3pbG1EAxp8B+nbSBBES+GoYZ
+ q7/VYE/kRGKVPJovjYOODEkkcxTX8G9SfQRtug4Za8EX3/gqsY8+RPxfwr/8MIKH7IFl
+ H7Ueor2a4JZdd+9rX8q5ypiK5VPowpuxkPj2ysOUkReaIyy4seyWafYTG4DSdFzYOqAM
+ vlBw==
+X-Gm-Message-State: ANhLgQ2Z8ICNXxslfrA/G97TL3hrb1ievgU4KYw/qIzHICg+WHwcu3Jr
+ +xL4LOErwhWb5zG9Kr6qVvxOzA==
+X-Google-Smtp-Source: ADFU+vtfL1A+tLoqufxEudSmCG7N8M+9lw4QmtwvS2TSlV0UP83Rz3UrCVjL2ufzUIU5hEpeAJkSWA==
+X-Received: by 2002:a7b:ca58:: with SMTP id m24mr86848wml.129.1583164538850;
+ Mon, 02 Mar 2020 07:55:38 -0800 (PST)
 Received: from [10.1.3.173]
  (laubervilliers-658-1-213-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
- by smtp.gmail.com with ESMTPSA id e11sm27800285wrm.80.2020.03.02.07.54.17
+ by smtp.gmail.com with ESMTPSA id n3sm1106457wrv.91.2020.03.02.07.55.38
  (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Mon, 02 Mar 2020 07:54:17 -0800 (PST)
-Subject: Re: [PATCH v4 01/11] drm/bridge: dw-hdmi: set mtmdsclock for deep
- color
+ Mon, 02 Mar 2020 07:55:38 -0800 (PST)
+Subject: Re: [PATCH v4 02/11] drm/bridge: dw-hdmi: add max bpc connector
+ property
 To: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
 References: <20200206191834.6125-1-narmstrong@baylibre.com>
- <20200206191834.6125-2-narmstrong@baylibre.com>
- <20200302090527.GB11960@pendragon.ideasonboard.com>
+ <20200206191834.6125-3-narmstrong@baylibre.com>
+ <11463907.O9o76ZdvQC@jernej-laptop>
+ <09d315b8-22f3-a25a-1aea-9c5d50c634d6@baylibre.com>
+ <20200302091818.GC11960@pendragon.ideasonboard.com>
 From: Neil Armstrong <narmstrong@baylibre.com>
 Autocrypt: addr=narmstrong@baylibre.com; prefer-encrypt=mutual; keydata=
  xsBNBE1ZBs8BCAD78xVLsXPwV/2qQx2FaO/7mhWL0Qodw8UcQJnkrWmgTFRobtTWxuRx8WWP
@@ -116,23 +118,23 @@ Autocrypt: addr=narmstrong@baylibre.com; prefer-encrypt=mutual; keydata=
  zR8QplXA5kogS4kLe/7/JmlDMO8Zgm9vKLHSUeesLOrjdZ59EcjldNNBszRZQgEhwaarfz46
  BSwxi7g3Mu7u5kUByanqHyA=
 Organization: Baylibre
-Message-ID: <a5b6d1f2-8f1c-ae3f-529d-baf7f4cecbe9@baylibre.com>
-Date: Mon, 2 Mar 2020 16:54:17 +0100
+Message-ID: <6eede520-cbd8-51e5-6b56-afd727d50ab0@baylibre.com>
+Date: Mon, 2 Mar 2020 16:55:37 +0100
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101
  Thunderbird/68.4.1
 MIME-Version: 1.0
-In-Reply-To: <20200302090527.GB11960@pendragon.ideasonboard.com>
+In-Reply-To: <20200302091818.GC11960@pendragon.ideasonboard.com>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200302_075420_411452_70D11877 
-X-CRM114-Status: GOOD (  21.02  )
+X-CRM114-CacheID: sfid-20200302_075540_575984_D2BC5FA6 
+X-CRM114-Status: GOOD (  20.34  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:442 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:343 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -150,97 +152,65 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: jernej.skrabec@siol.net, jonas@kwiboo.se, linux-kernel@vger.kernel.org,
- dri-devel@lists.freedesktop.org, a.hajda@samsung.com,
- boris.brezillon@collabora.com, linux-amlogic@lists.infradead.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: =?UTF-8?Q?Jernej_=c5=a0krabec?= <jernej.skrabec@siol.net>, jonas@kwiboo.se,
+ linux-kernel@vger.kernel.org, dri-devel@lists.freedesktop.org,
+ a.hajda@samsung.com, boris.brezillon@collabora.com,
+ Daniel Vetter <daniel@ffwll.ch>, linux-amlogic@lists.infradead.org
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Hi,
-
-On 02/03/2020 10:05, Laurent Pinchart wrote:
-> Hi Neil and Jonas,
-> 
-> Thank you for the patch.
-> 
-> On Thu, Feb 06, 2020 at 08:18:24PM +0100, Neil Armstrong wrote:
->> From: Jonas Karlman <jonas@kwiboo.se>
->>
->> Configure the correct mtmdsclock for deep colors to prepare support
->> for 10, 12 & 16bit output.
->>
->> Signed-off-by: Jonas Karlman <jonas@kwiboo.se>
->> Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
->> ---
->>  drivers/gpu/drm/bridge/synopsys/dw-hdmi.c | 17 +++++++++++++++++
->>  1 file changed, 17 insertions(+)
->>
->> diff --git a/drivers/gpu/drm/bridge/synopsys/dw-hdmi.c b/drivers/gpu/drm/bridge/synopsys/dw-hdmi.c
->> index 67fca439bbfb..9e0927d22db6 100644
->> --- a/drivers/gpu/drm/bridge/synopsys/dw-hdmi.c
->> +++ b/drivers/gpu/drm/bridge/synopsys/dw-hdmi.c
->> @@ -1818,9 +1818,26 @@ static void hdmi_av_composer(struct dw_hdmi *hdmi,
->>  
->>  	dev_dbg(hdmi->dev, "final pixclk = %d\n", vmode->mpixelclock);
-> 
-> Nitpicking a bit, I would change
-> 
-> -	vmode->mtmdsclock = vmode->mpixelclock = mode->clock * 1000;
-> +	vmode->mpixelclock = mode->clock * 1000;
-> 
-> above, and here add
-> 
-> 	vmode->mtmdsclock = vmode->mpixelclock;
-> 
-> to keep all mtmdsclock calculation in a single place.
-> 
->> +	if (!hdmi_bus_fmt_is_yuv422(hdmi->hdmi_data.enc_out_bus_format)) {
->> +		switch (hdmi_bus_fmt_color_depth(
->> +				hdmi->hdmi_data.enc_out_bus_format)) {
->> +		case 16:
->> +			vmode->mtmdsclock = (u64)vmode->mpixelclock * 2;
-> 
-> Both mpixelclock and mtmdsclock are unsigned int. Is the cast to u64
-> needed ?
-> 
-> On a separate but related note, what does the 'm' in tmdsclock stand for
-> ? It seems to originate from the 'm' prefix for mpixelclock, which has
-> been there from the start. Unless there's a good reason for the prefix,
-> renaming mtmdsclock to tmds_clock (and handling the other fields in the
-> hdmi_vmode structure similarly) would increase clarity I think.
-> 
->> +			break;
->> +		case 12:
->> +			vmode->mtmdsclock = (u64)vmode->mpixelclock * 3 / 2;
->> +			break;
->> +		case 10:
->> +			vmode->mtmdsclock = (u64)vmode->mpixelclock * 5 / 4;
->> +			break;
->> +		}
->> +	}
->> +
->>  	if (hdmi_bus_fmt_is_yuv420(hdmi->hdmi_data.enc_out_bus_format))
->>  		vmode->mtmdsclock /= 2;
->>  
->> +	dev_dbg(hdmi->dev, "final tmdsclk = %d\n", vmode->mtmdsclock);
-> 
-> s/tmdsclk/tmdsclock/ to match the field name ?
-> 
->> +
->>  	/* Set up HDMI_FC_INVIDCONF */
->>  	inv_val = (hdmi->hdmi_data.hdcp_enable ||
->>  		   (dw_hdmi_support_scdc(hdmi) &&
-> 
-
-I fixed the calculus and the cast, but I'll rename the mtmdsclock in a following patch.
-
-is it ok for you ?
-
-Neil
-
-_______________________________________________
-linux-amlogic mailing list
-linux-amlogic@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-amlogic
+T24gMDIvMDMvMjAyMCAxMDoxOCwgTGF1cmVudCBQaW5jaGFydCB3cm90ZToKPiBIaSBOZWlsIGFu
+ZCBKb25hcywKPiAKPiAoQ0MnaW5nIERhbmllbCBmb3IgYSBmcmFtZXdvcmsgcXVlc3Rpb24pCj4g
+Cj4gVGhhbmsgeW91IGZvciB0aGUgcGF0Y2guCj4gCj4gT24gRnJpLCBGZWIgMjEsIDIwMjAgYXQg
+MDk6NTA6MThBTSArMDEwMCwgTmVpbCBBcm1zdHJvbmcgd3JvdGU6Cj4+IE9uIDE3LzAyLzIwMjAg
+MDc6MzgsIEplcm5laiDFoGtyYWJlYyB3cm90ZToKPj4+IERuZSDEjWV0cnRlaywgMDYuIGZlYnJ1
+YXIgMjAyMCBvYiAyMDoxODoyNSBDRVQgamUgTmVpbCBBcm1zdHJvbmcgbmFwaXNhbChhKToKPj4+
+PiBGcm9tOiBKb25hcyBLYXJsbWFuIDxqb25hc0Brd2lib28uc2U+Cj4+Pj4KPj4+PiBBZGQgdGhl
+IG1heF9icGMgcHJvcGVydHkgdG8gdGhlIGR3LWhkbWkgY29ubmVjdG9yIHRvIHByZXBhcmUgc3Vw
+cG9ydAo+Pj4+IGZvciAxMCwgMTIgJiAxNmJpdCBvdXRwdXQgc3VwcG9ydC4KPj4+Pgo+Pj4+IFNp
+Z25lZC1vZmYtYnk6IEpvbmFzIEthcmxtYW4gPGpvbmFzQGt3aWJvby5zZT4KPj4+PiBTaWduZWQt
+b2ZmLWJ5OiBOZWlsIEFybXN0cm9uZyA8bmFybXN0cm9uZ0BiYXlsaWJyZS5jb20+Cj4+Pj4gLS0t
+Cj4+Pj4gIGRyaXZlcnMvZ3B1L2RybS9icmlkZ2Uvc3lub3BzeXMvZHctaGRtaS5jIHwgNCArKysr
+Cj4+Pj4gIDEgZmlsZSBjaGFuZ2VkLCA0IGluc2VydGlvbnMoKykKPj4+Pgo+Pj4+IGRpZmYgLS1n
+aXQgYS9kcml2ZXJzL2dwdS9kcm0vYnJpZGdlL3N5bm9wc3lzL2R3LWhkbWkuYwo+Pj4+IGIvZHJp
+dmVycy9ncHUvZHJtL2JyaWRnZS9zeW5vcHN5cy9kdy1oZG1pLmMgaW5kZXgKPj4+PiA5ZTA5Mjdk
+MjJkYjYuLjA1MTAwMWY3N2RkNCAxMDA2NDQKPj4+PiAtLS0gYS9kcml2ZXJzL2dwdS9kcm0vYnJp
+ZGdlL3N5bm9wc3lzL2R3LWhkbWkuYwo+Pj4+ICsrKyBiL2RyaXZlcnMvZ3B1L2RybS9icmlkZ2Uv
+c3lub3BzeXMvZHctaGRtaS5jCj4+Pj4gQEAgLTI0MDYsNiArMjQwNiwxMCBAQCBzdGF0aWMgaW50
+IGR3X2hkbWlfYnJpZGdlX2F0dGFjaChzdHJ1Y3QgZHJtX2JyaWRnZQo+Pj4+ICpicmlkZ2UpIERS
+TV9NT0RFX0NPTk5FQ1RPUl9IRE1JQSwKPj4+PiAgCQkJCSAgICBoZG1pLT5kZGMpOwo+Pj4+Cj4+
+Pj4gKwlkcm1fYXRvbWljX2hlbHBlcl9jb25uZWN0b3JfcmVzZXQoY29ubmVjdG9yKTsKPj4+Cj4+
+PiBXaHkgaXMgdGhpcyByZXNldCBuZWVkZWQ/Cj4+Cj4+IEkgYXNzdW1lIGl0J3MgdG8gYWxsb2Nh
+dGUgYSBuZXcgY29ubmVjdG9yIHN0YXRlIHRvIGF0dGFjaCBhIHRoZSBicGMgcHJvcGVyeS4KPj4K
+Pj4gQnV0IGluZGVlZCwgdGhpcyBoZWxwZXIgaXMgbmV2ZXIgdXNlZCBoZXJlLCBidXQgb25seSBh
+cyBjYWxsYmFjayB0byB0aGUgZHJtX2Nvbm5lY3Rvcl9mdW5jcy0+cmVzZXQuCj4+Cj4+IEJ1dCwg
+YW1kZ3B1IGNhbGxzIDoKPj4gCS8qCj4+IAkgKiBTb21lIG9mIHRoZSBwcm9wZXJ0aWVzIGJlbG93
+IHJlcXVpcmUgYWNjZXNzIHRvIHN0YXRlLCBsaWtlIGJwYy4KPj4gCSAqIEFsbG9jYXRlIHNvbWUg
+ZGVmYXVsdCBpbml0aWFsIGNvbm5lY3RvciBzdGF0ZSB3aXRoIG91ciByZXNldCBoZWxwZXIuCj4+
+IAkgKi8KPj4gCWlmIChhY29ubmVjdG9yLT5iYXNlLmZ1bmNzLT5yZXNldCkKPj4gCQlhY29ubmVj
+dG9yLT5iYXNlLmZ1bmNzLT5yZXNldCgmYWNvbm5lY3Rvci0+YmFzZSk7Cj4+Cj4+IHdoaWNoIGlz
+IHRoZSBzYW1lLgo+IAo+IEEgY29tbWVudCB3b3VsZCBiZSB1c2VmdWw6Cj4gCj4gCS8qCj4gCSAq
+IGRybV9jb25uZWN0b3JfYXR0YWNoX21heF9icGNfcHJvcGVydHkoKSByZXF1aXJlcyB0aGUKPiAJ
+ICogY29ubmVjdG9yIHRvIGhhdmUgYSBzdGF0ZS4KPiAJICovCj4gCWRybV9hdG9taWNfaGVscGVy
+X2Nvbm5lY3Rvcl9yZXNldChjb25uZWN0b3IpOwo+IAo+IAlkcm1fY29ubmVjdG9yX2F0dGFjaF9t
+YXhfYnBjX3Byb3BlcnR5KGNvbm5lY3RvciwgOCwgMTYpOwo+IAoKRG9uZQoKPiBJIGRvbid0IGxp
+a2UgdGhpcyBtdWNoIHRob3VnaCwgaXQgZmVlbHMgbGlrZSB0aGUgaW5pdGlhbCByZXNldCBwZXJm
+b3JtZWQKPiBieSBkcm1fbW9kZV9jb25maWdfcmVzZXQoKSBzaG91bGQgc2V0IGRlZmF1bHQgdmFs
+dWVzIGZvciBhbGwgc3RhdGUKPiBtZW1iZXJzIHRoYXQgYXJlIHJlbGF0ZWQgdG8gcHJvcGVydGll
+cy4gRGFuaWVsLCB3aGF0J3MgdGhlIHJhdGlvbmFsZQo+IGJlaGluZCB0aGUgY3VycmVudCBpbXBs
+ZW1lbnRhdGlvbiA/Cj4gCj4gVGhpcyBpcyBhIERSTSBjb3JlIGlzc3VlIHRoYXQgc2hvdWxkbid0
+IGJsb2NrIHRoaXMgcGF0Y2ggdGhvdWdoLCBzbwoKSSdsbCBpbnZlc3RpZ2F0ZSB3aHksIGJ1dCBJ
+IGhhdmVuJ3QgZm91bmQgb3V0IGhvdyB0aGUgaW50ZWwgZHJpdmVyIGdvdCB0aGUKY29ubmVjdG9y
+IHN0YXRlIGluaXRpYWxpemVkIHNpbmNlIHRoZXkgZG9uJ3QgdXNlIHRoZSBhdG9taWMgaGVscGVy
+cy4uLi4KCj4gCj4gUmV2aWV3ZWQtYnk6IExhdXJlbnQgUGluY2hhcnQgPGxhdXJlbnQucGluY2hh
+cnRAaWRlYXNvbmJvYXJkLmNvbT4KPiAKPj4+PiArCj4+Pj4gKwlkcm1fY29ubmVjdG9yX2F0dGFj
+aF9tYXhfYnBjX3Byb3BlcnR5KGNvbm5lY3RvciwgOCwgMTYpOwo+Pj4+ICsKPj4+PiAgCWlmICho
+ZG1pLT52ZXJzaW9uID49IDB4MjAwYSAmJiBoZG1pLT5wbGF0X2RhdGEtPnVzZV9kcm1faW5mb2Zy
+YW1lKQo+Pj4+ICAJCWRybV9vYmplY3RfYXR0YWNoX3Byb3BlcnR5KCZjb25uZWN0b3ItPmJhc2Us
+Cj4+Pj4gIAkJCWNvbm5lY3Rvci0+ZGV2LQo+Pj4+IG1vZGVfY29uZmlnLmhkcl9vdXRwdXRfbWV0
+YWRhdGFfcHJvcGVydHksIDApOwo+IAoKCl9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
+X19fX19fX19fX19fX19fCmxpbnV4LWFtbG9naWMgbWFpbGluZyBsaXN0CmxpbnV4LWFtbG9naWNA
+bGlzdHMuaW5mcmFkZWFkLm9yZwpodHRwOi8vbGlzdHMuaW5mcmFkZWFkLm9yZy9tYWlsbWFuL2xp
+c3RpbmZvL2xpbnV4LWFtbG9naWMK
