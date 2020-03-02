@@ -2,73 +2,73 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D8B1B176871
-	for <lists+linux-amlogic@lfdr.de>; Tue,  3 Mar 2020 00:48:51 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 21C2C176875
+	for <lists+linux-amlogic@lfdr.de>; Tue,  3 Mar 2020 00:49:10 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=yieSfa+MpyCkGicvC+UQTc6L7c/nT97VrP5ZcUtyfc0=; b=g1U00Lv2W3HHjQ
-	yM6Xv+uLVGQdvDHUJoUTdV6fvSQiKhKs9YwDaRXBsfgd8wGh7c/9uxUFYi6+UqUnWW1Au57HXr+QU
-	VuZWBWQUab2ImHhGk5ORKk22E6aoumfmEa4R/mohluhFf5sJyuybHG0lVA7M24opjLf76TM9AYf5i
-	LiYR1PL7LYFqsunkEdMpNLylgE508IJYNZcFleO1Y7WSPRXjjyC4yXRK6xEOdoKPuA4E8wQT6kZxe
-	z/mYbTX5MOh0bue3NtW+Kp8ltP1DQ86v8PuGI6xDxv/QIrvc0YX7uR0Nfr+jrUNXW8q37hHmeaYQN
-	s4DTgOfYA1vvSWhuko4w==;
+	List-Owner; bh=ZzF3fDa48pwtTHDOOunrtPdx6Vfvp2phrOWDTVkFnak=; b=UWswU8SrDsYi+Q
+	GiMV0OoCYbj6o9L8aDt41qxZzJvAyrSH5fUA2PcdC8obCsbTmdxI9SOi/GRZ0ema2T31/a4cCAwtM
+	DZTrpSGLrD7xZ3gm4OpZLvbYSG9DU0BR84RUwIBvR/GCbTXcgjWEnblw0miMdfsnZjLfkZMwY4byi
+	5Q+CVsM1INSRYCiOIkSDfRbfXbLdAW1dDncRlCZmlsH0hraySvYN7iLF1QIRfDa44ZZcFc8Kaj4Vs
+	ILguiKvPpZcW6cSH3X/RQdzPk0kMMo+m7RQZ77XtGDOlrwI1VIugglZjj7UoDcm8S/Ql039K03DTp
+	Ge4VNl9cXqlbKHfRP8RA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j8uno-0007Pn-0Q; Mon, 02 Mar 2020 23:48:48 +0000
-Received: from mail-oi1-f196.google.com ([209.85.167.196])
+	id 1j8uo7-0007i6-Lw; Mon, 02 Mar 2020 23:49:07 +0000
+Received: from mail-ot1-f66.google.com ([209.85.210.66])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j8una-0007Fy-Ai; Mon, 02 Mar 2020 23:48:35 +0000
-Received: by mail-oi1-f196.google.com with SMTP id d62so1090284oia.11;
- Mon, 02 Mar 2020 15:48:34 -0800 (PST)
+ id 1j8unr-0007Us-5h; Mon, 02 Mar 2020 23:48:52 +0000
+Received: by mail-ot1-f66.google.com with SMTP id v22so1146842otq.11;
+ Mon, 02 Mar 2020 15:48:51 -0800 (PST)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:date:from:to:cc:subject:message-id:references
  :mime-version:content-disposition:in-reply-to:user-agent;
- bh=IRKRL6bsVR25jdnkySlY9nrjsKRKvfWFUdg3jJgqhvM=;
- b=B1wWZd9C33pCYT7J9R5R0kHhI6v5RHWeXeftr/TJKI+ttYA0bLgMAAdYwPHNAonx0x
- SX/c8no8S6rFE1NMEwDvInBWi9KmJzryurijeY4h7o+R14b8+iAHELqB+6FZVGWJizkM
- WafxS3O2+aMFZot9eo8bmuK4sreq+zPOZQRM3ctQTqbYC/sahZ0GD/3PpM9ntD/QKFya
- 9J6KbvnRbnO/GCyxXAz/IIMhkt5/eNLzd9GNJCh+DW5ftRbN+OQCu4sgpEh+RDqy/L6L
- CppEG/4HB1JRON2OyoLeNCf7fuoAElxvyVdcPbVY4ekgnnE4QU05jD3LiB0zxxbtkaSS
- I+jA==
-X-Gm-Message-State: ANhLgQ0lw8Chyx+5KpzbF0EPVjzIj7ObmurBv1dzRH69MOL0R/FYxndb
- NoJJzaWW/O4qraNwV7JRLg==
-X-Google-Smtp-Source: ADFU+vt2I73Ny42c4sY9uLWCMSp6hK6ClCvDil8321kkwWDH86USwR7muQDsWqWnRb7qcFSntFukew==
-X-Received: by 2002:aca:1011:: with SMTP id 17mr678618oiq.72.1583192913409;
- Mon, 02 Mar 2020 15:48:33 -0800 (PST)
+ bh=byoAHElTnalS7sh70czz1zpbq5DcI2Go9YowGpXx29w=;
+ b=GbRzqEOH8YIsCOc6kpqUJtHjRaqnNtgTpRRb0dwyy2p64nbep4B07gsuJ1pjCt+cJK
+ WWyEyxgFmi3A2xKsbFZ5CVTHRySIahMp7wzDd3QULvk/HGZ2jEkuwVoRxSPjs8iuD8mA
+ gF+/d7nv6DNEGsYpc5l+ODbEXWkAE+k7Mxz0kBGVjDIzYqHsnz75GlnhInb/IVixPRJy
+ mrsQ/Zew3tNE4Uw0x+/YdVDzSti7exl5b6WovLp7W8GVuGLcozQZmAYj5vAkpvNZaPgt
+ u4svhX2cOxjtVES+yZ4kiDOXEDB42Z2Ey05O85J/HMCeScul9uwhNxrPC96SxUqP2+pg
+ 71Cg==
+X-Gm-Message-State: ANhLgQ3Vx47UNrCTAK/344e3ylHC9jMI1ZXbR/LzOrPK/1rioVZ/OHRy
+ Ie7CVNErETLkF9nzyfUgpA==
+X-Google-Smtp-Source: ADFU+vunmxxGjVzwfLQGBVehqtYrFNHSS1vUq/QZk7+dEkP+TRwtQ/33euUrPd47iWoLdqcHigvWww==
+X-Received: by 2002:a9d:5d07:: with SMTP id b7mr1331515oti.209.1583192930303; 
+ Mon, 02 Mar 2020 15:48:50 -0800 (PST)
 Received: from rob-hp-laptop (24-155-109-49.dyn.grandenetworks.net.
  [24.155.109.49])
- by smtp.gmail.com with ESMTPSA id z19sm4129288otp.81.2020.03.02.15.48.32
+ by smtp.gmail.com with ESMTPSA id w9sm641711oti.64.2020.03.02.15.48.49
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Mon, 02 Mar 2020 15:48:32 -0800 (PST)
-Received: (nullmailer pid 31830 invoked by uid 1000);
- Mon, 02 Mar 2020 23:48:32 -0000
-Date: Mon, 2 Mar 2020 17:48:32 -0600
+ Mon, 02 Mar 2020 15:48:49 -0800 (PST)
+Received: (nullmailer pid 32323 invoked by uid 1000);
+ Mon, 02 Mar 2020 23:48:49 -0000
+Date: Mon, 2 Mar 2020 17:48:49 -0600
 From: Rob Herring <robh@kernel.org>
 To: Christian Hewitt <christianshewitt@gmail.com>
-Subject: Re: [PATCH v6 1/3] dt-bindings: add vendor prefix for SmartLabs LLC
-Message-ID: <20200302234831.GA31775@bogus>
+Subject: Re: [PATCH v6 2/3] dt-bindings: arm: amlogic: add support for the
+ SmartLabs SML-5442TW
+Message-ID: <20200302234849.GA32272@bogus>
 References: <1583036241-88937-1-git-send-email-christianshewitt@gmail.com>
- <1583036241-88937-2-git-send-email-christianshewitt@gmail.com>
+ <1583036241-88937-3-git-send-email-christianshewitt@gmail.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <1583036241-88937-2-git-send-email-christianshewitt@gmail.com>
+In-Reply-To: <1583036241-88937-3-git-send-email-christianshewitt@gmail.com>
 User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200302_154834_371266_2F586181 
-X-CRM114-Status: UNSURE (   8.04  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -1.0 (-)
+X-CRM114-CacheID: sfid-20200302_154851_220164_AC29BF25 
+X-CRM114-Status: GOOD (  10.91  )
+X-Spam-Score: 0.5 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-1.0 points)
+ Content analysis details:   (0.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.167.196 listed in list.dnswl.org]
+ no trust [209.85.210.66 listed in list.dnswl.org]
  0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
  in digit [robherring2[at]gmail.com]
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
@@ -77,8 +77,9 @@ X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
  mail domains are different
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -1.5 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.167.196 listed in wl.mailspike.net]
+ 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+ [209.85.210.66 listed in wl.mailspike.net]
+ 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
  0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
  EnvelopeFrom freemail headers are different
 X-BeenThere: linux-amlogic@lists.infradead.org
@@ -104,16 +105,28 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On Sun,  1 Mar 2020 08:17:19 +0400, Christian Hewitt wrote:
-> SmartLabs LLC are a professional integrator of Interactive TV solutions
-> and IPTV/VOD devices [1].
+On Sun,  1 Mar 2020 08:17:20 +0400, Christian Hewitt wrote:
+> The SML-5442TW is an STB for O2 Czech IPTV/VOD and DVB-T/T2 based on the
+> Amlogic P231 reference design using the S905D chipset. Specs:
 > 
-> [1] https://www.smartlabs.tv/en/about/
+> 2GB DDR3 RAM
+> 8GB eMMC storage
+> 10/100 Base-T Ethernet
+> 802.11 a/b/g/n/ac + BT 4.1 HS sdio wireless module (QCA9377)
+> 2x single colour and 1x dual colour LEDs on the front panel
+> 1x reset button on the front panel
+> HDMI 2.0 (4k@60p) video
+> Composite video + 2-channel audio output on 3.5mm jack
+> S/PDIF audio output
+> Single DVB-T/T2 tuner (AVL6762/MxL608)
+> 2x USB 2.0 ports
+> 1x micro SD card slot
+> UART pins (internal)
 > 
 > Signed-off-by: Christian Hewitt <christianshewitt@gmail.com>
 > ---
->  Documentation/devicetree/bindings/vendor-prefixes.yaml | 2 ++
->  1 file changed, 2 insertions(+)
+>  Documentation/devicetree/bindings/arm/amlogic.yaml | 1 +
+>  1 file changed, 1 insertion(+)
 > 
 
 Acked-by: Rob Herring <robh@kernel.org>
