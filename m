@@ -2,74 +2,75 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 129AA177929
-	for <lists+linux-amlogic@lfdr.de>; Tue,  3 Mar 2020 15:38:03 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 0FFE8177935
+	for <lists+linux-amlogic@lfdr.de>; Tue,  3 Mar 2020 15:38:38 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=dLAdk/g61zcVbhzD1Y0+F/eVw01ioxck7phblWBi3OI=; b=nm4STcr6RJZL8a
-	gG1Mw3Pzsqpcl6I+BaK+mMn6yLYpcDxFgKRVZl9HbnsZ3/tJdps1vFXgi2YfGHnW6R1cqZR/6rYn1
-	zRPyvqDGusptNGXt/FTnEZsKTlEZRfHi82mQnwfDd/jTK1TLWHxHMO4pJCF4YRL89ni+mOLFGKhA9
-	cDvYztD3XlvacY+ipbh/yH2dJAdturUM0t9SHZQEnuZ7f5i0BC1pft24/3s9KofotAJkQKQKNfD8Z
-	bNtxL0ttQ5nEyJe3oPnJb7wQ0Z+T7PoOJQLBN2gr8i7MklUnbkaRi4i2H4XN5MP2nnaseKYXqvEMK
-	wjdnboyHa/fmlft64oIA==;
+	List-Owner; bh=aEY+X8VD/sZexGapJ8lIWWWGstTqZFnt8AHpetNmrGI=; b=bv6ByTEz2fI+7W
+	XzEh6bCqGOcWhmcyPyGBwTasA8BvCVS+vA7OnDKbhVMUo4pSeliCrtfokqjKxTacX2o22W1Hs3Euo
+	jfK5/ZXdZ6RsnqpvyNLng7sY/7h08QO/jJJldSa91hb38gLT59vtLlAbwA2H7c+fCVbWEqxl7BSQa
+	I15HchvHZD4WpjJI3oAsFFc/l41CYI1BezGrjpuT2MIwCo3v2siCacivjGQV9ZTITtDEhMUNi6Vc0
+	awRUCgLdVIR+nh46y9N4R4FYue/oGWnOPHeiYTOIDIBfYZWJgBcMzVmDfgskrEDcs/P89qOYq5+Jg
+	XFlF7WsVirERwUfSNyQg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j98gI-0006Qq-6W; Tue, 03 Mar 2020 14:37:58 +0000
-Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
+	id 1j98gu-00070t-3u; Tue, 03 Mar 2020 14:38:36 +0000
+Received: from mail-wr1-x441.google.com ([2a00:1450:4864:20::441])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j98fw-0006BJ-92
- for linux-amlogic@lists.infradead.org; Tue, 03 Mar 2020 14:37:39 +0000
-Received: by mail-wr1-x442.google.com with SMTP id j7so4558022wrp.13
- for <linux-amlogic@lists.infradead.org>; Tue, 03 Mar 2020 06:37:36 -0800 (PST)
+ id 1j98fx-0006CA-70
+ for linux-amlogic@lists.infradead.org; Tue, 03 Mar 2020 14:37:40 +0000
+Received: by mail-wr1-x441.google.com with SMTP id x7so4678279wrr.0
+ for <linux-amlogic@lists.infradead.org>; Tue, 03 Mar 2020 06:37:37 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=K5hjg1G3VFJLeuZ62RXxBnJp53DPSao1yCpZ+ZBtBN8=;
- b=iNrm0CI9XnahfkY1GKdbv7m82hqORspH2rHCweh+wIBudNC2ZqFrcVAnaaXt7uDpCy
- eOWYuWZdiQ8nxSKtcUSXqN5o/NCkO70fo22VX8gYL63tV53T+rWuSE9e6mLiaevS0Ff4
- 6M2FGsxXj3GoRVu27Q/2kIYiT4RKTrcngLYpiHQvNDqhyEWatZMzY35QMk8rOBe7Wc4Z
- an2h2ylpm7D3382SDTEw7p7Ia3K2fERXdyabba14Lsi+KMozLek0GLJ2GArlVQm9HUYI
- BeI+g3eiumyugaCfnPNyWzZ/uvi0ouNBGZPILG3gzL59aIjyao9pf6rXzpkOGg4NGTMo
- YqYA==
+ bh=jIQVieVu7UoENPR4ohx8RO9hyM5Q2LpZgT/s7fhmTzY=;
+ b=BrG61wk4/LRRSyrFsuQZ2h3PGNH57U6RMOxCT1ivsgHVIHQWGtD0qd1sEtOgJhNktE
+ sDrudfZiczmO6+LIcx+LQH2iEUadTyz2FeG9Nf/wQTYdSXPJxe9+mcTGRsMflfCrdeqa
+ Rh7ApqPerAUd6vv2l3k6MztLeJUPUzypS1AgKRhCsI9fgNHk2CAp3bLkNqZCiB59MX4a
+ u2xK8TLmk7fyjxzmlYDP+DRfAGgLK0oWk08VPezSPFgELqoXCZzMPq72rtPj3Cr+h8ax
+ by0vnBk18YXfajEalDXapkkB18X4tMLwUc1AGl+bBK4B1EssmkUGShkLckdFDEKjUps0
+ vB7Q==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=K5hjg1G3VFJLeuZ62RXxBnJp53DPSao1yCpZ+ZBtBN8=;
- b=VRVeREenTWNPiEo/FS89t6GS1h2qZUj/2W4TP4vOdzvrNvR2u4Cg2QDKpC9fd/Q1Po
- 3IpypVgfxghx6jIlRytscsFLhuz6lg1WmsNVdYLkOB2GCY28zgEX49LurmoUUdfbFf6Z
- AMhE4XJdSX6giRURtdfURbgu+eUUbu6H/uhKiD/Ngb2rBg4KoxjnprXtGr2HS+Wlqd7l
- wWiYJRYgTekg0dRt6VrOt2IfiNxUCOOaD+ddg1sgCeHBWoPQJTDv5Ht/lpydauEK6Akv
- qDzGp1mrTPfRqNBLcRcnjkIdfrKoQn5UIMjkoiZWCgNtAVTDDCd3ls48t9R5rJVfcDDB
- 5Ssg==
-X-Gm-Message-State: ANhLgQ0KDuOm/aCAuxsIB76s0Q+RqjOtoueFhcWZiyCDbcwn/KiSobIA
- jQSzFEWs5YtpReuu3i162r6V3Q==
-X-Google-Smtp-Source: ADFU+vubH5FvBdZxArVu9XQq+51wNWYXHqzexBNcTn8d0oRpiHzqnZXe/qfgWED/LdX7eNM+kJIlAQ==
-X-Received: by 2002:a5d:67c7:: with SMTP id n7mr5635176wrw.319.1583246254899; 
- Tue, 03 Mar 2020 06:37:34 -0800 (PST)
+ bh=jIQVieVu7UoENPR4ohx8RO9hyM5Q2LpZgT/s7fhmTzY=;
+ b=IIgw6ApHQRiCxcM+XvugluSHainH4SCHgZin04nymCjO82yEq1WwMfUsL5LHuz0l8J
+ xcjee2lVo+jJ5BfnOzDDmK6pLISjyDfWAHhQocinrgOtIFbOB7D0Y1DK0JkPZAXcT805
+ ICHSKRHI0Enn6kt8gxICw1kwr6LSE8HeaDhO5Q/T4HANgfdye78EvZwMYbaqf26ZfuLJ
+ 7D9YMM00zyb3HLSlEMqXx5bQS4juDkUgRDp7Xu7YymLXsH47WkIQbv0ZdHtW7kD0g647
+ SAl0vbeg7V0wXaY59X5KyWJZNzsWElcTIBTv5Eypbx6lA5Jsjgn4+fx/0C4Dnk0jt4/5
+ AxWg==
+X-Gm-Message-State: ANhLgQ23jfyv0LDg9nPEqFV4g+Hh6rUUJmdyHz4QQw/39oxrfCTrTd9t
+ Quv68iwnjaSuOnj7OuJPfjtQyg==
+X-Google-Smtp-Source: ADFU+vuETlevAscf8ZZ+3OxRv6dak3GsmklnTJPNS+JenCaV53y+eTysJj5mSNtHwty6WvRYuJFZHQ==
+X-Received: by 2002:adf:df82:: with SMTP id z2mr5571677wrl.46.1583246255956;
+ Tue, 03 Mar 2020 06:37:35 -0800 (PST)
 Received: from bender.baylibre.local
  (laubervilliers-658-1-213-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
- by smtp.gmail.com with ESMTPSA id l4sm4652779wmf.38.2020.03.03.06.37.34
+ by smtp.gmail.com with ESMTPSA id l4sm4652779wmf.38.2020.03.03.06.37.35
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Tue, 03 Mar 2020 06:37:34 -0800 (PST)
+ Tue, 03 Mar 2020 06:37:35 -0800 (PST)
 From: Neil Armstrong <narmstrong@baylibre.com>
 To: mchehab@kernel.org,
 	hans.verkuil@cisco.com
-Subject: [PATCH v6 1/5] media: meson: vdec: align stride on 32 bytes
-Date: Tue,  3 Mar 2020 15:37:28 +0100
-Message-Id: <20200303143732.762-2-narmstrong@baylibre.com>
+Subject: [PATCH v6 2/5] media: meson: vdec: add helpers for lossless
+ framebuffer compression buffers
+Date: Tue,  3 Mar 2020 15:37:29 +0100
+Message-Id: <20200303143732.762-3-narmstrong@baylibre.com>
 X-Mailer: git-send-email 2.22.0
 In-Reply-To: <20200303143732.762-1-narmstrong@baylibre.com>
 References: <20200303143732.762-1-narmstrong@baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200303_063736_321548_6DB5F950 
-X-CRM114-Status: UNSURE (   9.66  )
+X-CRM114-CacheID: sfid-20200303_063737_283044_997B710D 
+X-CRM114-Status: UNSURE (   8.71  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
@@ -77,7 +78,7 @@ X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:442 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:441 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -95,84 +96,82 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: Neil Armstrong <narmstrong@baylibre.com>,
- Kevin Hilman <khilman@baylibre.com>, linux-kernel@vger.kernel.org,
- linux-amlogic@lists.infradead.org, linux-arm-kernel@lists.infradead.org,
- linux-media@vger.kernel.org
+Cc: Maxime Jourdan <mjourdan@baylibre.com>,
+ Neil Armstrong <narmstrong@baylibre.com>, Kevin Hilman <khilman@baylibre.com>,
+ linux-kernel@vger.kernel.org, linux-amlogic@lists.infradead.org,
+ linux-arm-kernel@lists.infradead.org, linux-media@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-The HEVC/VP9 aligns the plane stride on 32, so align the planes stride
-for all codecs to 32 to satisfy HEVC/VP9 decoding using the "HEVC" HW.
+From: Maxime Jourdan <mjourdan@baylibre.com>
 
-This fixes VP9 decoding of streams with following (not limited) widths:
-- 264
- -288
-- 350
-- 352
-- 472
-- 480
-- 528
-- 600
-- 720
-- 800
-- 848
-- 1440
+Add helpers to support the lossless framebuffer compression format that
+will be used in HEVC & VP9 decoders when decoding 10bit content for
+downsampling to 8bit NV12 and later proper compressed buffer support.
 
+Signed-off-by: Maxime Jourdan <mjourdan@baylibre.com>
 Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
 Tested-by: Kevin Hilman <khilman@baylibre.com>
 ---
- drivers/staging/media/meson/vdec/vdec.c         | 10 +++++-----
- drivers/staging/media/meson/vdec/vdec_helpers.c |  4 ++--
- 2 files changed, 7 insertions(+), 7 deletions(-)
+ .../staging/media/meson/vdec/vdec_helpers.c   | 27 +++++++++++++++++++
+ .../staging/media/meson/vdec/vdec_helpers.h   |  4 +++
+ 2 files changed, 31 insertions(+)
 
-diff --git a/drivers/staging/media/meson/vdec/vdec.c b/drivers/staging/media/meson/vdec/vdec.c
-index 92f0258868b1..bfca4c82aa56 100644
---- a/drivers/staging/media/meson/vdec/vdec.c
-+++ b/drivers/staging/media/meson/vdec/vdec.c
-@@ -528,20 +528,20 @@ vdec_try_fmt_common(struct amvdec_session *sess, u32 size,
- 		memset(pfmt[1].reserved, 0, sizeof(pfmt[1].reserved));
- 		if (pixmp->pixelformat == V4L2_PIX_FMT_NV12M) {
- 			pfmt[0].sizeimage = output_size;
--			pfmt[0].bytesperline = ALIGN(pixmp->width, 64);
-+			pfmt[0].bytesperline = ALIGN(pixmp->width, 32);
- 
- 			pfmt[1].sizeimage = output_size / 2;
--			pfmt[1].bytesperline = ALIGN(pixmp->width, 64);
-+			pfmt[1].bytesperline = ALIGN(pixmp->width, 32);
- 			pixmp->num_planes = 2;
- 		} else if (pixmp->pixelformat == V4L2_PIX_FMT_YUV420M) {
- 			pfmt[0].sizeimage = output_size;
--			pfmt[0].bytesperline = ALIGN(pixmp->width, 64);
-+			pfmt[0].bytesperline = ALIGN(pixmp->width, 32);
- 
- 			pfmt[1].sizeimage = output_size / 4;
--			pfmt[1].bytesperline = ALIGN(pixmp->width, 64) / 2;
-+			pfmt[1].bytesperline = ALIGN(pixmp->width, 32) / 2;
- 
- 			pfmt[2].sizeimage = output_size / 2;
--			pfmt[2].bytesperline = ALIGN(pixmp->width, 64) / 2;
-+			pfmt[2].bytesperline = ALIGN(pixmp->width, 32) / 2;
- 			pixmp->num_planes = 3;
- 		}
- 	}
 diff --git a/drivers/staging/media/meson/vdec/vdec_helpers.c b/drivers/staging/media/meson/vdec/vdec_helpers.c
-index a4970ec1bf2e..3f7929c54dc6 100644
+index 3f7929c54dc6..caec0fb60338 100644
 --- a/drivers/staging/media/meson/vdec/vdec_helpers.c
 +++ b/drivers/staging/media/meson/vdec/vdec_helpers.c
-@@ -154,8 +154,8 @@ int amvdec_set_canvases(struct amvdec_session *sess,
+@@ -50,6 +50,33 @@ void amvdec_write_parser(struct amvdec_core *core, u32 reg, u32 val)
+ }
+ EXPORT_SYMBOL_GPL(amvdec_write_parser);
+ 
++/* 4 KiB per 64x32 block */
++u32 amvdec_am21c_body_size(u32 width, u32 height)
++{
++	u32 width_64 = ALIGN(width, 64) / 64;
++	u32 height_32 = ALIGN(height, 32) / 32;
++
++	return SZ_4K * width_64 * height_32;
++}
++EXPORT_SYMBOL_GPL(amvdec_am21c_body_size);
++
++/* 32 bytes per 128x64 block */
++u32 amvdec_am21c_head_size(u32 width, u32 height)
++{
++	u32 width_128 = ALIGN(width, 128) / 128;
++	u32 height_64 = ALIGN(height, 64) / 64;
++
++	return 32 * width_128 * height_64;
++}
++EXPORT_SYMBOL_GPL(amvdec_am21c_head_size);
++
++u32 amvdec_am21c_size(u32 width, u32 height)
++{
++	return ALIGN(amvdec_am21c_body_size(width, height) +
++		     amvdec_am21c_head_size(width, height), SZ_64K);
++}
++EXPORT_SYMBOL_GPL(amvdec_am21c_size);
++
+ static int canvas_alloc(struct amvdec_session *sess, u8 *canvas_id)
  {
- 	struct v4l2_m2m_buffer *buf;
- 	u32 pixfmt = sess->pixfmt_cap;
--	u32 width = ALIGN(sess->width, 64);
--	u32 height = ALIGN(sess->height, 64);
-+	u32 width = ALIGN(sess->width, 32);
-+	u32 height = ALIGN(sess->height, 32);
- 	u32 reg_cur = reg_base[0];
- 	u32 reg_num_cur = 0;
- 	u32 reg_base_cur = 0;
+ 	int ret;
+diff --git a/drivers/staging/media/meson/vdec/vdec_helpers.h b/drivers/staging/media/meson/vdec/vdec_helpers.h
+index 165e6293ffba..cfaed52ab526 100644
+--- a/drivers/staging/media/meson/vdec/vdec_helpers.h
++++ b/drivers/staging/media/meson/vdec/vdec_helpers.h
+@@ -27,6 +27,10 @@ void amvdec_clear_dos_bits(struct amvdec_core *core, u32 reg, u32 val);
+ u32 amvdec_read_parser(struct amvdec_core *core, u32 reg);
+ void amvdec_write_parser(struct amvdec_core *core, u32 reg, u32 val);
+ 
++u32 amvdec_am21c_body_size(u32 width, u32 height);
++u32 amvdec_am21c_head_size(u32 width, u32 height);
++u32 amvdec_am21c_size(u32 width, u32 height);
++
+ /**
+  * amvdec_dst_buf_done_idx() - Signal that a buffer is done decoding
+  *
 -- 
 2.22.0
 
