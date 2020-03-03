@@ -2,72 +2,71 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A93D5177942
-	for <lists+linux-amlogic@lfdr.de>; Tue,  3 Mar 2020 15:40:07 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id ECD7C177944
+	for <lists+linux-amlogic@lfdr.de>; Tue,  3 Mar 2020 15:41:37 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:List-Subscribe:List-Help:List-Post:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:From:References:To:Subject:Reply-To:Cc:Content-ID:
-	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
-	:Resent-Message-ID:List-Owner;
-	bh=OMWnLpO9hUxcblbGzf+lV7NQWQpwuebE2canRVZ1+qg=; b=X8Zjc1I74KMoseg1ilV+nIUd69
-	EpG/EHA7l0Mp06h/4JSbaP5Xbtn/HoYqRT/LI2fTo/2sWjTiPiQCBIcchSJ0jg1AmYtKr3sbVargb
-	rx0fjwUsSUFt7sAzSGOyjd41KgLx5FXoa+3sXS2e6rDn/vgjiImHy0MzOSiFxX52VOjexQGGinbuv
-	zB3miniAw6o3Qk4B82LtjTgyXOkTM8YlTvkGVE7Tao6Cknkai36GhX8+xblZH/3FjLtPku07zfw05
-	e8RRa4/iu1XbFKuGBpoRlq8kvEqWt+yH08IvMDJlBL8Y7Cb0EMKUZXkQnbFToZzYZUpIeT1rcTG0P
-	8NrwucbQ==;
+	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=/7dTyJlseMnQRuGAFQyBpByAaiLdzPwNuj0UFPFjAVE=; b=pVp9HR51PuOfUb
+	gf5ioF5df7NERn96M1jx6WDh8ZjzxYd24J4Nyl+HzNzPx67WDBFcPaJcKpAb/aH1xd2JuwZY+XNvD
+	Y+TtleqVDdr3D5acMe116BxnoTDJLJE7Dl0kNb4AF8fVn1qpVmmTr5zZfiJ/JHEgqa31xERvD4OQl
+	nqPlLU7ISrdqcootPMNXQysj/icUw4xWjaVhm95zegytfPvvG35/+wqNRCifoP5eJQANOIU2jFykR
+	psNQXr2s/vvPtrmXBybuSpsEkHXcmMAzD8xyoCZPJmN2F9M35noF8jEvfqcpvakVMd1ubtw9AqNay
+	dz0dd+LG83p+2yGVxKwA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j98iJ-0008Ar-LC; Tue, 03 Mar 2020 14:40:03 +0000
-Received: from mail-wr1-x443.google.com ([2a00:1450:4864:20::443])
+	id 1j98jl-0001Pk-Le; Tue, 03 Mar 2020 14:41:33 +0000
+Received: from mail-wm1-x343.google.com ([2a00:1450:4864:20::343])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j98iF-00089e-FV
- for linux-amlogic@lists.infradead.org; Tue, 03 Mar 2020 14:40:01 +0000
-Received: by mail-wr1-x443.google.com with SMTP id q8so4662321wrm.4
- for <linux-amlogic@lists.infradead.org>; Tue, 03 Mar 2020 06:39:59 -0800 (PST)
+ id 1j98ji-0001PA-Jg
+ for linux-amlogic@lists.infradead.org; Tue, 03 Mar 2020 14:41:31 +0000
+Received: by mail-wm1-x343.google.com with SMTP id g83so3111006wme.1
+ for <linux-amlogic@lists.infradead.org>; Tue, 03 Mar 2020 06:41:30 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=subject:to:references:from:autocrypt:organization:message-id:date
- :user-agent:mime-version:in-reply-to:content-language
+ h=subject:to:cc:references:from:autocrypt:organization:message-id
+ :date:user-agent:mime-version:in-reply-to:content-language
  :content-transfer-encoding;
- bh=zk5za+61RSxflkNdYa9I8GQAUcmgHjNBAyo6vqaH8B8=;
- b=bivt2IP6TN5/8UtW4BAX7a6vrwLGm5DwRyjkTcZtpwNjOSV78Nd4DhDrTa7mn75Mbx
- r/+NkdRKxeUUAkAtj+J8PgW8BgwGq5yzJ3ug/NghJjrGAj0skoc21kBQZGoXLltgeiR3
- R59V/43H2FQGlrk227vuYLT0R8ey3MxVln1HVze4zisQKQ1ir+tyI2I8vkY6i2stEY2X
- f+bkESExadLVniTmO5CUyKHcx85xY5aeHtsQsnlHMiUQmzn7VM+vi7xdeOhK1Bnyx+OR
- wkIjr58ZAZwrU34ePKC8LAKjjH2gDmrofRvfACu+t5vuK95az3Ve/I/1XiPgNf2CimHu
- pzZw==
+ bh=X0eUAg/tFogdV3TKpIfLLY5g6oZSBbXOuTgRWqTEJLc=;
+ b=hzXaNFOZDr53qXHU9t+U4XZx/Qola1cdX9WIQmpCM6fhUval0nS1tQpBHVBanM2boV
+ XlyMNAmSH73jxiMfg1HCnBYasKaWj/IaMODqARdmWQeAIvf9Xn5+qL5yzioVROUELSbM
+ /83a+kiWAq1IPp5F8xZyxbH0t4nm/NacveVWbXU0env6257fFApSsJiQgFYrTvk9GrgM
+ DnH79hLSyFaOVczftwLm5ynXE1WsRQWxVN5OXlGo2kNvYikY2b61zKJqBfMFy8RjMflB
+ 7Jay3NHZViu395Oyj5DE25CWBhGMkzXyei28FAfjsLWb+OJwy8ozL6tVQ7GMGNASS5pf
+ tlYA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:subject:to:references:from:autocrypt
+ h=x-gm-message-state:subject:to:cc:references:from:autocrypt
  :organization:message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=zk5za+61RSxflkNdYa9I8GQAUcmgHjNBAyo6vqaH8B8=;
- b=QCuubwZyMQGSA9lOiWKlPb4J/Uelo3YUaEfWSiwF1rro9S9m9xNVh3OLup53VtbQ+D
- ZYSjyp4hxSHUVp/SnpMg59/CPZ36oa1KqlqhPb7JCaZoWOL7AW67zGqEihpyILl4NZIc
- ZeF8yCxKv21+m1AwgFhn4xfWeehqQoAx6RRA5Qpj2eAd23BG/lozgfkssTmLwnB5hiXq
- gWuykFztKijGKGtpDb6KYHuc++8VW07p6rgl+jAJ12JTE0/uLI5hXLXxjiW/wcXlmGO4
- YhBqMtxitPIx+26SxfHizoKFDKClrO1yrtfid1aiDepG1N4EW+KbUC8clKXRmN3q52G4
- OJyw==
-X-Gm-Message-State: ANhLgQ10MRZsXtjCAsouyL8b4877dV9WYxMtFYqkCtNxI18/DYzLhTGA
- LIQsO4qnAHfLDnIMy35PBlzoUg==
-X-Google-Smtp-Source: ADFU+vuryMlPi3WM/bqWph2/BYtP0gM1GlUsfdmEg1UPt9Wd+CCZ8Zn0dMF1hDDYb/sHE5NmscyJ9A==
-X-Received: by 2002:adf:e8c7:: with SMTP id k7mr5560505wrn.140.1583246398142; 
- Tue, 03 Mar 2020 06:39:58 -0800 (PST)
+ bh=X0eUAg/tFogdV3TKpIfLLY5g6oZSBbXOuTgRWqTEJLc=;
+ b=pzEqJ3q907oVcc6X4Dss54K1gDCFXmSAnIOWe2YTvvNQuReBzdgwKA5zAiyFJuqXxw
+ FO5OOML4YuYooUbRHl75GYOd4QnGwqRg2zV6WA9k1wyr0roEWX7csdQH86+64XEVR6fx
+ xtY10uoxc6MxbGmFY0TkKiOz/hZkZ/jEZ+RAmeDHRx3IxOuyvnSmLKtnU2bqR8N6qQaU
+ 7bW/aGxMVwBPjT+ExB4dFAu727FXl5L7tPy+L8OtOgn/CprKuNPUncOkKdc9L/ZWYLzc
+ 2b0Y1zxmUjW4JsT2dK5jAI025X4Bi545OB2wKwDZobq2ERyfbGyxVV6Oj4CgPFy0NQYj
+ DhXQ==
+X-Gm-Message-State: ANhLgQ3KosIBgQLXyB9ucr2CXYiox2p37noRIgKUuHtvqJRBh3StycLp
+ n+zfXIBshHY/HYSQLsS+rlmAyw==
+X-Google-Smtp-Source: ADFU+vsXBZr3ZoNM+sGqZantm2QOpVhwLbyz/rfSqfPNjFRNKQG7nLzW9BSB+Lw8gTIiUCrAw5egsQ==
+X-Received: by 2002:a1c:a4c4:: with SMTP id n187mr4829104wme.10.1583246489247; 
+ Tue, 03 Mar 2020 06:41:29 -0800 (PST)
 Received: from [10.1.3.173]
  (laubervilliers-658-1-213-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
- by smtp.gmail.com with ESMTPSA id j66sm4443642wmb.21.2020.03.03.06.39.56
+ by smtp.gmail.com with ESMTPSA id u20sm3996934wmj.14.2020.03.03.06.41.28
  (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Tue, 03 Mar 2020 06:39:56 -0800 (PST)
-Subject: Re: [PATCH] arm64: dts: meson: khadas-vim3: move model to
- g12b-khadas-vim3 dtsi
+ Tue, 03 Mar 2020 06:41:28 -0800 (PST)
+Subject: Re: [PATCH] arm64: dts: meson: add thermal zones to
+ gxl-s905x-khadas-vim
 To: Christian Hewitt <christianshewitt@gmail.com>,
  Rob Herring <robh+dt@kernel.org>, Mark Rutland <mark.rutland@arm.com>,
  Kevin Hilman <khilman@baylibre.com>, devicetree@vger.kernel.org,
  linux-arm-kernel@lists.infradead.org, linux-amlogic@lists.infradead.org,
  linux-kernel@vger.kernel.org
-References: <1582868824-73870-1-git-send-email-christianshewitt@gmail.com>
+References: <1582870346-74145-1-git-send-email-christianshewitt@gmail.com>
 From: Neil Armstrong <narmstrong@baylibre.com>
 Autocrypt: addr=narmstrong@baylibre.com; prefer-encrypt=mutual; keydata=
  xsBNBE1ZBs8BCAD78xVLsXPwV/2qQx2FaO/7mhWL0Qodw8UcQJnkrWmgTFRobtTWxuRx8WWP
@@ -119,23 +118,23 @@ Autocrypt: addr=narmstrong@baylibre.com; prefer-encrypt=mutual; keydata=
  zR8QplXA5kogS4kLe/7/JmlDMO8Zgm9vKLHSUeesLOrjdZ59EcjldNNBszRZQgEhwaarfz46
  BSwxi7g3Mu7u5kUByanqHyA=
 Organization: Baylibre
-Message-ID: <1ac1ed5b-c034-e816-9211-83e07fe6f6e9@baylibre.com>
-Date: Tue, 3 Mar 2020 15:39:56 +0100
+Message-ID: <ae6a3b30-e9d9-5fca-69be-180ed68f87a3@baylibre.com>
+Date: Tue, 3 Mar 2020 15:41:28 +0100
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101
  Thunderbird/68.4.1
 MIME-Version: 1.0
-In-Reply-To: <1582868824-73870-1-git-send-email-christianshewitt@gmail.com>
+In-Reply-To: <1582870346-74145-1-git-send-email-christianshewitt@gmail.com>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200303_063959_536370_18A02FE0 
-X-CRM114-Status: GOOD (  15.53  )
+X-CRM114-CacheID: sfid-20200303_064130_656169_55087CB1 
+X-CRM114-Status: GOOD (  16.75  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:443 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:343 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -153,54 +152,105 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
+Cc: Nick Xie <nick@khadas.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On 28/02/2020 06:47, Christian Hewitt wrote:
-> The common meson-khadas-vim3.dtsi is now shared with VIM3L so move the
-> VIM3 model namne to meson-g12b-khadas-vim3.dtsi.
----------------/\ name
+Hi,
+
+On 28/02/2020 07:12, Christian Hewitt wrote:
+> Add thermal zones to the VIM1 board, copying the zone config from the
+> existing VIM2 board.
 > 
-> meson-sm1-khadas-vim3l.dts contains the VIM3L model name.
-> 
+> Suggested-by: Nick Xie <nick@khadas.com>
 > Signed-off-by: Christian Hewitt <christianshewitt@gmail.com>
 > ---
->  arch/arm64/boot/dts/amlogic/meson-g12b-khadas-vim3.dtsi | 2 ++
->  arch/arm64/boot/dts/amlogic/meson-khadas-vim3.dtsi      | 2 --
->  2 files changed, 2 insertions(+), 2 deletions(-)
+>  .../dts/amlogic/meson-gxl-s905x-khadas-vim.dts     | 50 ++++++++++++++++++++++
+>  1 file changed, 50 insertions(+)
 > 
-> diff --git a/arch/arm64/boot/dts/amlogic/meson-g12b-khadas-vim3.dtsi b/arch/arm64/boot/dts/amlogic/meson-g12b-khadas-vim3.dtsi
-> index 5548634..2b2d72c 100644
-> --- a/arch/arm64/boot/dts/amlogic/meson-g12b-khadas-vim3.dtsi
-> +++ b/arch/arm64/boot/dts/amlogic/meson-g12b-khadas-vim3.dtsi
-> @@ -8,6 +8,8 @@
->  #include <dt-bindings/sound/meson-g12a-tohdmitx.h>
+> diff --git a/arch/arm64/boot/dts/amlogic/meson-gxl-s905x-khadas-vim.dts b/arch/arm64/boot/dts/amlogic/meson-gxl-s905x-khadas-vim.dts
+> index 440bc23..2c198c4 100644
+> --- a/arch/arm64/boot/dts/amlogic/meson-gxl-s905x-khadas-vim.dts
+> +++ b/arch/arm64/boot/dts/amlogic/meson-gxl-s905x-khadas-vim.dts
+> @@ -6,6 +6,7 @@
+>  /dts-v1/;
 >  
->  / {
-> +	model = "Khadas VIM3";
+>  #include <dt-bindings/input/input.h>
+> +#include <dt-bindings/thermal/thermal.h>
+>  
+>  #include "meson-gxl-s905x-p212.dtsi"
+>  
+> @@ -63,6 +64,39 @@
+>  			};
+>  		};
+>  	};
 > +
->  	vddcpu_a: regulator-vddcpu-a {
->  		/*
->  		 * MP8756GD Regulator.
-> diff --git a/arch/arm64/boot/dts/amlogic/meson-khadas-vim3.dtsi b/arch/arm64/boot/dts/amlogic/meson-khadas-vim3.dtsi
-> index 90815fa..0ef60c7 100644
-> --- a/arch/arm64/boot/dts/amlogic/meson-khadas-vim3.dtsi
-> +++ b/arch/arm64/boot/dts/amlogic/meson-khadas-vim3.dtsi
-> @@ -9,8 +9,6 @@
->  #include <dt-bindings/gpio/meson-g12a-gpio.h>
+> +	thermal-zones {
+> +		cpu-thermal {
+> +			polling-delay-passive = <250>; /* milliseconds */
+> +			polling-delay = <1000>; /* milliseconds */
+> +
+> +			thermal-sensors = <&scpi_sensors 0>;
+> +
+> +			trips {
+> +				cpu_alert0: cpu-alert0 {
+> +					temperature = <70000>; /* millicelsius */
+> +					hysteresis = <2000>; /* millicelsius */
+> +					type = "active";
+> +				};
+> +
+> +				cpu_alert1: cpu-alert1 {
+> +					temperature = <80000>; /* millicelsius */
+> +					hysteresis = <2000>; /* millicelsius */
+> +					type = "passive";
+> +				};
+> +			};
+> +
+> +			cooling-maps {
+> +				map0 {
+> +					trip = <&cpu_alert1>;
+> +					cooling-device = <&cpu0 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+> +							 <&cpu1 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+> +							 <&cpu2 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+> +							 <&cpu3 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>;
+> +				};
+> +			};
+> +		};
+> +	};
+>  };
 >  
->  / {
-> -	model = "Khadas VIM3";
-> -
->  	aliases {
->  		serial0 = &uart_AO;
->  		ethernet0 = &ethmac;
+>  &cec_AO {
+> @@ -72,6 +106,22 @@
+>  	hdmi-phandle = <&hdmi_tx>;
+>  };
+>  
+> +&cpu0 {
+> +	#cooling-cells = <2>;
+> +};
+> +
+> +&cpu1 {
+> +	#cooling-cells = <2>;
+> +};
+> +
+> +&cpu2 {
+> +	#cooling-cells = <2>;
+> +};
+> +
+> +&cpu3 {
+> +	#cooling-cells = <2>;
+> +};
+> +
+>  &hdmi_tx {
+>  	status = "okay";
+>  	pinctrl-0 = <&hdmi_hpd_pins>, <&hdmi_i2c_pins>;
 > 
 
-With typo fixes:
-Reviewed-by: Neil Armstrong <narmstrong@baylibre.com>
+Following the g12a/g12b/sm1 work, this should go into the meson-gx.dtsi instead, with some bits in meson-gxm.dtsi
+to handle the second spu cluster.
+
+Neil
 
 _______________________________________________
 linux-amlogic mailing list
