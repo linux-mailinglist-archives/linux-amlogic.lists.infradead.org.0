@@ -2,137 +2,81 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id AF137178DF5
-	for <lists+linux-amlogic@lfdr.de>; Wed,  4 Mar 2020 11:03:41 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9DE9E178E8D
+	for <lists+linux-amlogic@lfdr.de>; Wed,  4 Mar 2020 11:41:08 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=NpCoQfBsuDTRDC6CiofDXV1gMibypKdWD3eNvsYzvOg=; b=s3O/NKbx78aNKd
-	m8XKrdi2N+mWtv4fwT7KcEWtMSNaayks5Z7XRpVbtJ29M6eY9gW+g/6/b4Z9hcAw7ivUBB/0L5xm3
-	Mb+5ZWHMg0z0WW3cPWsleHpMc/psN2FkU7UY7KV2tjPXflKUr7mUXr2AzLbbjDSDkYPQIdU+e/d1D
-	l8aL2tkF5DFuJxMn9BKlBkiLi8D5xAO7eQhKqKt2ay0itBYpEE04gshF+s8nMv6NeQESyYwEj8XIa
-	Thl82N4eVLX9hg75XY40nV1yxygloSZqkGpVbZLIubhTw3Ksb5NgUs0bvektU0U+1BVD4W7zR4CFo
-	V8r60RYxIwUVXr6/Yt0g==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=7nY+tMufvTXX1B4YMdj6ymuyUyLmn8LqBd87QJVKZPk=; b=oQqK5jf/my9urw
+	GeAWWz0qzOI2jaiLac5a8kJhNiQuc3RnHSflkJN4PoCfWF2K2u96dFttF8joSx2O7UBPWDnKjXv5I
+	8adV5PhdBHadZl6vOkG4sKg6FIed0xpxFEQi/TxXORKdTXY3MOUHjvwIiJVMRr186pUILrxn/1FTw
+	8qKpzJF/crbgKlmB8mq6vEZMSIUgB2uRxuZkTfOOMwc9KMy0sQs96E5KOwn4ALb4SAqYOAF6Q/yFw
+	T5d0W76I1A3m1hqZ5vFxdn8DBFbur1oMVRG69UdHkDJPrB3LgCcLtcdCOQlXEdssGqf6voVumI9xu
+	7WF7POT4SKn18+L/UhEg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j9QsK-0001Tx-Jy; Wed, 04 Mar 2020 10:03:36 +0000
-Received: from mail-wm1-x343.google.com ([2a00:1450:4864:20::343])
+	id 1j9RSb-00071L-Jv; Wed, 04 Mar 2020 10:41:05 +0000
+Received: from mail-wm1-x32d.google.com ([2a00:1450:4864:20::32d])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j9QsG-0001T3-Qj
- for linux-amlogic@lists.infradead.org; Wed, 04 Mar 2020 10:03:34 +0000
-Received: by mail-wm1-x343.google.com with SMTP id a5so1299166wmb.0
- for <linux-amlogic@lists.infradead.org>; Wed, 04 Mar 2020 02:03:32 -0800 (PST)
+ id 1j9RSW-0006zM-3P
+ for linux-amlogic@lists.infradead.org; Wed, 04 Mar 2020 10:41:02 +0000
+Received: by mail-wm1-x32d.google.com with SMTP id g134so1443292wme.3
+ for <linux-amlogic@lists.infradead.org>; Wed, 04 Mar 2020 02:40:59 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=subject:to:cc:references:from:autocrypt:organization:message-id
- :date:user-agent:mime-version:in-reply-to:content-language
+ h=from:to:cc:subject:date:message-id:mime-version
  :content-transfer-encoding;
- bh=XASc5pfORXYFJOcvcFfrv1FY9S9TSUUxH/SjHngwi20=;
- b=y5E+wMg9L2TXJSTzTauBIGPuZKTRjLOW89CWTVd5TK/MdLKO1lHbVMHs6D0N1JfLYo
- XSlqEVThd+Oym+CJC9CNsMrONxCbKVHTdzbOf6NollHtwFziyfVkARSJT1TVPtLBEZYj
- 2y1fFZ6fHGYaM1Aze1ZWoOsFWtoeXzgFp6P3vdjrpVwpBBVqaSRWA1/Bp9Z5y5i3uMNS
- 4Iy/S7g+gA0cnNyw3mumfydMzhG5Akptgk+qojURfxVlDzhcTkVmNUb53bgoGuo/JW93
- VOstFek6CziW4EhbI7lWkXCwHOSpei7gNkzahg3McaYezF5+54qG/Zb1NdHhbC3BzMSB
- Q91g==
+ bh=1JlFcWjm9Vm8w4kQfDp+PBY42FFj0ptnXlZTlbhd8U0=;
+ b=K5bocECZ2MoMvdHotvU2FkMzlFRYvnrBwECmMz9wDY0nD1EEclrdprSb786JDFuH3T
+ PHbNvBHm2cSf80mp+GyBiuDp+s65ctAK4z7YYLe5VC2WofzM7Bm5AKGQyL7KhLUKwSnD
+ R8+eIZ+1Cmau90gQI6k4aoHpxddowX8DWoTrCQ7hDP5AM0cMPoDM8NGpxQ0dJxkc7U84
+ hdh6XDpqooNhSf1rcFkWoG6qgTtS8Jzi+/3uTHI8+fz5xVEejSEL9qjl8kDqJFnFocuD
+ m/MQt3AEU+o16otTyEzsu3oIUu1DDRBUCEYiLLvhepRbs+Ku+apCI3NLY7t9v2V6pnBb
+ g+TQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:subject:to:cc:references:from:autocrypt
- :organization:message-id:date:user-agent:mime-version:in-reply-to
- :content-language:content-transfer-encoding;
- bh=XASc5pfORXYFJOcvcFfrv1FY9S9TSUUxH/SjHngwi20=;
- b=JqwEUQ+0L8Jx/lyu+v/VxSvB2Mk2VqO/raObXfisQu70jZo7zBYliOPkYkV4UR8sSW
- 43xXPut8RMBYO6msbWPZCGZRmbh9bAd2MZx9lW4wOB9i0WoX20hv9Q1kOTwzZ0mHch4z
- PNsrVcJeNFsDeE8MrLYLFkKDlzhluorbwrjrTuNBm880GcqiJu0kfEmCM8NOz79FqUSG
- 1PGezc0GZYoxKOpIrLkJ+5/GdOMSH8OB9IigAdwyRg2wUOwsyCshHTpDDFLbW1aWkqBh
- FiaD6v5JCwAlv10JK4DjCwPh+EOsm9iRsm6trPiJALSGPVi/gkDHLxoSRtw5L1L3hKYJ
- zIIA==
-X-Gm-Message-State: ANhLgQ0B+oLRGFf6RfzxFx/IA3qKxDQSrXrrjnc5AuTaLhKoiFT3/6/e
- kZ9Hidg5k78pbfDh8u8Xr9FBmflyXHvH5Q==
-X-Google-Smtp-Source: ADFU+vt3IWN1C2XyOAznoVBbOmgqr+bjcXZ4zI1Ah8fzQf1sD3h+oSNMBTFSdVeHo2UQk9O3L3rDww==
-X-Received: by 2002:a1c:7714:: with SMTP id t20mr2817677wmi.174.1583316211253; 
- Wed, 04 Mar 2020 02:03:31 -0800 (PST)
-Received: from [10.1.3.173]
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=1JlFcWjm9Vm8w4kQfDp+PBY42FFj0ptnXlZTlbhd8U0=;
+ b=nMQfrzuZitEXiO8p57BTZzY9SJswzsqCA9i9DEXm23+iNGshVmIB6CzTGCa4PugG0Y
+ NDRQxdCqIz533CQtE6fuY8LGVyhiyBj/kyXtBtkZE+A72knsBmKdftDJ+lXWs/IuLujX
+ q4bfClR271oCsP/BinQbYk5SijjJRPn4tqDDWm6S/1neds6q/EbkefMgKJAd00dFGRIF
+ PzGQM0mGIxU1u8h0YurwRSKToGYVTt7enSlqe/rg835XOunaMi5DXHKWaHfkDYX868hw
+ 5uDNMKO+NjBL3QDtbbVFoPHbinkjk/Gi4lSWneICriSJnjtzMDLLBj0SxuhtY7SDUA8r
+ VWLw==
+X-Gm-Message-State: ANhLgQ2x53FOUYg5RiNlgqg7mLBOY3Yyqrh/6ThThO7E8M4ngytby2yB
+ fB9hPlSqrFXWbpZUB3JZIsWBLw==
+X-Google-Smtp-Source: ADFU+vsyB6OlySe3niT1au0qv1Y8sKilTlKJUImHjCFR50hCR/0l9PUEKsvn/ohlmYaTi1umVyOHOQ==
+X-Received: by 2002:a1c:4d3:: with SMTP id 202mr3111868wme.172.1583318458189; 
+ Wed, 04 Mar 2020 02:40:58 -0800 (PST)
+Received: from bender.baylibre.local
  (laubervilliers-658-1-213-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
- by smtp.gmail.com with ESMTPSA id s22sm3221091wmc.16.2020.03.04.02.03.30
- (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Wed, 04 Mar 2020 02:03:30 -0800 (PST)
-Subject: Re: [PATCH] pinctrl: meson: add tsin pinctrl for meson gxbb/gxl/gxm
-To: Linus Walleij <linus.walleij@linaro.org>,
- Christian Hewitt <christianshewitt@gmail.com>,
- Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-References: <1583124056-94785-1-git-send-email-christianshewitt@gmail.com>
- <CACRpkdZ4+-26Q01nx9iFJLUSCfM0Cuh6U8=gdtP=63xMd+2jqA@mail.gmail.com>
+ by smtp.gmail.com with ESMTPSA id c14sm24006398wro.36.2020.03.04.02.40.57
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Wed, 04 Mar 2020 02:40:57 -0800 (PST)
 From: Neil Armstrong <narmstrong@baylibre.com>
-Autocrypt: addr=narmstrong@baylibre.com; prefer-encrypt=mutual; keydata=
- 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
- BSwxi7g3Mu7u5kUByanqHyA=
-Organization: Baylibre
-Message-ID: <999512c9-e50b-af51-7875-7fe9fca665de@baylibre.com>
-Date: Wed, 4 Mar 2020 11:03:29 +0100
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101
- Thunderbird/68.4.1
+To: p.zabel@pengutronix.de, heiko@sntech.de, a.hajda@samsung.com,
+ Laurent.pinchart@ideasonboard.com, jonas@kwiboo.se,
+ jernej.skrabec@siol.net, boris.brezillon@collabora.com
+Subject: [PATCH v5 00/11] drm/bridge: dw-hdmi: implement bus-format
+ negotiation and YUV420 support
+Date: Wed,  4 Mar 2020 11:40:41 +0100
+Message-Id: <20200304104052.17196-1-narmstrong@baylibre.com>
+X-Mailer: git-send-email 2.22.0
 MIME-Version: 1.0
-In-Reply-To: <CACRpkdZ4+-26Q01nx9iFJLUSCfM0Cuh6U8=gdtP=63xMd+2jqA@mail.gmail.com>
-Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200304_020332_870045_AD58C7CB 
-X-CRM114-Status: GOOD (  10.58  )
+X-CRM114-CacheID: sfid-20200304_024100_163364_7A66AF7E 
+X-CRM114-Status: GOOD (  11.98  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:343 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:32d listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -150,45 +94,96 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: Kevin Hilman <khilman@baylibre.com>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- "open list:GPIO SUBSYSTEM" <linux-gpio@vger.kernel.org>,
- Igor Vavro <afl2001@gmail.com>,
- "open list:ARM/Amlogic Meson..." <linux-amlogic@lists.infradead.org>,
- Linux ARM <linux-arm-kernel@lists.infradead.org>
+Cc: linux-amlogic@lists.infradead.org, linux-kernel@vger.kernel.org,
+ dri-devel@lists.freedesktop.org, Neil Armstrong <narmstrong@baylibre.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Hi,
+Hi Philippe, Heiko, Maxime, Laurent,
 
-On 03/03/2020 13:40, Linus Walleij wrote:
-> On Mon, Mar 2, 2020 at 5:41 AM Christian Hewitt
-> <christianshewitt@gmail.com> wrote:
-> 
->> From: Igor Vavro <afl2001@gmail.com>
->>
->> Add the tsin pinctrl definitions needed for integrated DVB hardware
->> support on Meson GXBB/GXL/GXM boards.
->>
->> Signed-off-by: Igor Vavro <afl2001@gmail.com>
->> [updated commit message]
->> Signed-off-by: Christian Hewitt <christianshewitt@gmail.com>
-> 
-> Can I get Martin and/or Neil to review this?
+A bad negociation was detected on platforms not implementing a bridge on the
+encoder side, which has been fixed in this version.
 
-Otto replied on linux-amlogic only, reporting an issue with the path, also
-modifying the uart_c pin registers bits.
+Could you check it doesn't break your platforms using dw-hdmi ? Especially
+patches 1-5.
 
-So it needs a resend.
-
+Thanks,
 Neil
 
-> 
-> Yours,
-> Linus Walleij
-> 
+This patchset is based on Boris's merged "drm: Add support for bus-format negotiation"
+patchset to implement full bus-format negotiation for DW-HDMI, including YUV420 support and
+10/12/16bit YUV444, YUV422 and RGB. The Color Space Converter support is already implemented.
+
+And the counterpart implementation in the Amlogic Meson VPU dw-hdmi glue :
+- basic bus-format negotiation to select YUV444 bus-format as DW-HDMI input
+- YUV420 support when HDMI2.0 YUV420 modeset
+
+This is a follow-up from the previous attempts :
+- "drm/meson: Add support for HDMI2.0 YUV420 4k60" at [2]
+- "drm/meson: Add support for HDMI2.0 4k60" at [3]
+
+Changes since v4 at [7]:
+- Cleaned up patch 1
+- Added comment on patch 2
+- Added commit message on patch 3
+- Fixed invalid negociation when encoder is not yet a bridge (seen on allwinner & rockchip platforms) on patch 4
+- Fixed invalid defines, handled MEDIA_BUS_FMT_FIXED and cleaned negociation debug on patch 4
+- Added tags on patch 5, 6
+- Removed meson_venc_hdmi_encoder_get_out_bus_fmts on patch 7
+- Add off-list r-b from Jernej
+
+Changes since v3 at [6]:
+- Added "Plug atomic state hooks to the default implementation" on drm/bridge: dw-hdmi
+- Also added these atomic state hooks in meson-dw-hdmi in patch 7
+- Rebased on latest drm-misc-next including patches 1-7 of [1]
+
+Changes since RFC v2 at [5]:
+- Added fixes from Jonas, who tested and integrated it for Rockchip SoCs
+- Added support for 10/12/16bit tmds clock calculation
+- Added support for max_bcp connector property
+- Adapted to Boris's v4 patchset
+- Fixed typos reported by boris
+
+Changes since RFC v1 at [4]:
+- Rewrote negociation using the v2 patchset, including full DW-HDMI fmt negociation
+
+[2] https://patchwork.freedesktop.org/patch/msgid/20190520133753.23871-1-narmstrong@baylibre.com
+[3] https://patchwork.freedesktop.org/patch/msgid/1549022873-40549-1-git-send-email-narmstrong@baylibre.com
+[4] https://patchwork.freedesktop.org/patch/msgid/20190820084109.24616-1-narmstrong@baylibre.com
+[5] https://patchwork.freedesktop.org/patch/msgid/20190827081425.15011-1-narmstrong@baylibre.com
+[6] https://patchwork.freedesktop.org/patch/msgid/20191218154637.17509-1-narmstrong@baylibre.com
+[7] https://patchwork.freedesktop.org/patch/msgid/20200206191834.6125-1-narmstrong@baylibre.com
+
+Jonas Karlman (2):
+  drm/bridge: dw-hdmi: set mtmdsclock for deep color
+  drm/bridge: dw-hdmi: add max bpc connector property
+
+Neil Armstrong (9):
+  drm/bridge: dw-hdmi: Plug atomic state hooks to the default
+    implementation
+  drm/bridge: synopsys: dw-hdmi: add bus format negociation
+  drm/bridge: synopsys: dw-hdmi: allow ycbcr420 modes for >= 0x200a
+  drm/meson: venc: make drm_display_mode const
+  drm/meson: meson_dw_hdmi: add bridge and switch to drm_bridge_funcs
+  drm/meson: dw-hdmi: stop enforcing input_bus_format
+  drm/meson: venc: add support for YUV420 setup
+  drm/meson: vclk: add support for YUV420 setup
+  drm/meson: Add YUV420 output support
+
+ drivers/gpu/drm/bridge/synopsys/dw-hdmi.c | 319 +++++++++++++++++++++-
+ drivers/gpu/drm/meson/meson_dw_hdmi.c     | 180 +++++++++---
+ drivers/gpu/drm/meson/meson_vclk.c        |  93 +++++--
+ drivers/gpu/drm/meson/meson_vclk.h        |   7 +-
+ drivers/gpu/drm/meson/meson_venc.c        |  10 +-
+ drivers/gpu/drm/meson/meson_venc.h        |   4 +-
+ drivers/gpu/drm/meson/meson_venc_cvbs.c   |   6 +-
+ include/drm/bridge/dw_hdmi.h              |   1 +
+ 8 files changed, 544 insertions(+), 76 deletions(-)
+
+-- 
+2.22.0
 
 
 _______________________________________________
