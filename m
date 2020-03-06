@@ -2,56 +2,70 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id F41A217C63B
-	for <lists+linux-amlogic@lfdr.de>; Fri,  6 Mar 2020 20:22:41 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id E3C5E17C7A9
+	for <lists+linux-amlogic@lfdr.de>; Fri,  6 Mar 2020 22:13:44 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=NdacmVTuG5P2mvj5BX2K01XTzpgxhBu2DFhXdk5lhjg=; b=WIs1vbCS9uQo8K
-	UEkJO4WO8oyLpAUkf5zRmtV/7/ijXiMkpGh8Lm4l6i1L+GLVGAUMBi0zm7y272WLINNpf/1IuHIvv
-	tRbA57OMtYDmNcmr94QVgnOX6MIhvlJmm+XbhxfMb7WlDca1nR1c9jJH6ATaniECUmqmGzOgZBfsN
-	Xe7Ghwm41Os3hni3+J73pj+PoO/3i/f6OZOG3coRYPa5+jfxiGNYiR0PUV+h4jdru9iZJXlNQCnnV
-	+ZLWB827a+8iVkcE38FADqjXMLIjxeK9OKJimtCbyXlo1T7cXmV9lLhbr/TxCqskA12/IPe2MV1TD
-	ajw76TjCz4a0wS84RL4w==;
+	List-Archive:List-Unsubscribe:List-Id:Message-ID:Date:To:From:Subject:
+	References:In-Reply-To:MIME-Version:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=kQ49woUV3igDYTtFEXKY7rnWHEgbsRf0MXjWKxCwO1w=; b=A/AUwbgc5pTMUJ
+	DSmcydf/Rf549Qrf+3CPNrbS6pXKMTl269zkYDMpddK4p/2unNmLeznLDvh/vHcXbEPhy4riXaWyd
+	ISg+LAdWUMX4dS1sK9+WhASAh2E85HDtewDnt4/I7OhYBS+FxPyTQMqGEU0mvlJ0fu1ue0fIi1yEv
+	fz/DYPj+yYLyGqscMPkVk13MQTdZDZ8X4zLQo7aqIJ4QMIz0YiL8mLcP2vLloAndwvDqEHDsdXaMs
+	YtbUyZqytpFBnM75DjgRCrl7ySKP+vzhwnHO3Inz8NuADI2iH1oDfxH3c/Blp5VlfOlFEcTdJ/3hh
+	fDzOKaqrIA1LLR7JlJuw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jAIYQ-0006Be-3n; Fri, 06 Mar 2020 19:22:38 +0000
-Received: from relay3-d.mail.gandi.net ([217.70.183.195])
+	id 1jAKHr-0005Lz-4g; Fri, 06 Mar 2020 21:13:39 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jAIYM-0006Av-L3; Fri, 06 Mar 2020 19:22:36 +0000
-X-Originating-IP: 109.190.253.14
-Received: from localhost (unknown [109.190.253.14])
- (Authenticated sender: repk@triplefau.lt)
- by relay3-d.mail.gandi.net (Postfix) with ESMTPSA id D557360006;
- Fri,  6 Mar 2020 19:22:16 +0000 (UTC)
-From: Remi Pommarel <repk@triplefau.lt>
-To: Giuseppe Cavallaro <peppe.cavallaro@st.com>,
- Alexandre Torgue <alexandre.torgue@st.com>,
- Jose Abreu <joabreu@synopsys.com>
-Subject: [PATCH] net: stmmac: dwmac1000: Disable ACS if enhanced descs are not
- used
-Date: Fri,  6 Mar 2020 20:30:36 +0100
-Message-Id: <20200306193036.18414-1-repk@triplefau.lt>
-X-Mailer: git-send-email 2.25.0
+ id 1jAKHo-0005Lg-2Q
+ for linux-amlogic@lists.infradead.org; Fri, 06 Mar 2020 21:13:37 +0000
+Received: from kernel.org (unknown [104.132.0.74])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id A4E88206E6;
+ Fri,  6 Mar 2020 21:13:35 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1583529215;
+ bh=nAOwzMK7Rru/ZHSGuIHjl7DylWINIp/B+M/RfrJNnm0=;
+ h=In-Reply-To:References:Subject:From:Cc:To:Date:From;
+ b=Hh5N9JyeKTS6yWhSqxXXeYVyRIcYvJtkyU/C/xodZ2KQERtD2rCc7UAXr3sV+9+q7
+ wVI6bknyhchAGHrsvAuu9i6um7sAUkFB3YpkymgGsMfo//vyn0Q2I+4yvxFfgTjq1F
+ ZyUFvRsGL6L6kEc3lySLTWmo2wwe2H3mOWGMZ0v4=
 MIME-Version: 1.0
+In-Reply-To: <1jy2sfnnee.fsf@starbuckisacylon.baylibre.com>
+References: <1jy2sfnnee.fsf@starbuckisacylon.baylibre.com>
+Subject: Re: [GIT PULL] Amlogic clock updates for v5.7
+From: Stephen Boyd <sboyd@kernel.org>
+To: Jerome Brunet <jbrunet@baylibre.com>,
+ Neil Armstrong <narmstrong@baylibre.com>
+Date: Fri, 06 Mar 2020 13:13:34 -0800
+Message-ID: <158352921495.174340.8705011338899519608@swboyd.mtv.corp.google.com>
+User-Agent: alot/0.9
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200306_112234_823610_75526E56 
-X-CRM114-Status: GOOD (  10.35  )
-X-Spam-Score: -0.7 (/)
+X-CRM114-CacheID: sfid-20200306_131336_134592_80070909 
+X-CRM114-Status: UNSURE (   7.83  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-0.7 points)
+ Content analysis details:   (-5.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
- low trust [217.70.183.195 listed in list.dnswl.org]
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [217.70.183.195 listed in wl.mailspike.net]
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -63,52 +77,36 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: netdev@vger.kernel.org, linux-kernel@vger.kernel.org,
- Remi Pommarel <repk@triplefau.lt>, linux-amlogic@lists.infradead.org,
- "David S. Miller" <davem@davemloft.net>, linux-arm-kernel@lists.infradead.org
+Cc: Kevin Hilman <khilman@baylibre.com>, linux-clk@vger.kernel.org,
+ linux-amlogic@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-ACS (auto PAD/FCS stripping) removes FCS off 802.3 packets (LLC) so that
-there is no need to manually strip it for such packets. The enhanced DMA
-descriptors allow to flag LLC packets so that the receiving callback can
-use that to strip FCS manually or not. On the other hand, normal
-descriptors do not support that.
+Quoting Jerome Brunet (2020-03-05 01:47:53)
+> Hi Stephen
+> 
+> Here are the amlogic clock updates for this cycle. 
+> 
+> Cheers
+> Jerome
+> 
+> The following changes since commit bb6d3fb354c5ee8d6bde2d576eb7220ea09862b9:
+> 
+>   Linux 5.6-rc1 (2020-02-09 16:08:48 -0800)
+> 
+> are available in the Git repository at:
+> 
+>   git://github.com/BayLibre/clk-meson.git tags/clk-meson-v5.7-1
+> 
+> for you to fetch changes up to 71202c412478d6553281726a6772d0d5510c42fb:
+> 
+>   clk: meson: meson8b: set audio output clock hierarchy (2020-02-21 11:44:41 +0100)
+> 
+> ----------------------------------------------------------------
 
-Thus in order to not truncate LLC packet ACS should be disabled when
-using normal DMA descriptors.
-
-Signed-off-by: Remi Pommarel <repk@triplefau.lt>
----
- drivers/net/ethernet/stmicro/stmmac/dwmac1000_core.c | 3 ++-
- 1 file changed, 2 insertions(+), 1 deletion(-)
-
-diff --git a/drivers/net/ethernet/stmicro/stmmac/dwmac1000_core.c b/drivers/net/ethernet/stmicro/stmmac/dwmac1000_core.c
-index d0356fbd1e43..b468acf03b00 100644
---- a/drivers/net/ethernet/stmicro/stmmac/dwmac1000_core.c
-+++ b/drivers/net/ethernet/stmicro/stmmac/dwmac1000_core.c
-@@ -25,6 +25,7 @@ static void dwmac1000_core_init(struct mac_device_info *hw,
- 				struct net_device *dev)
- {
- 	void __iomem *ioaddr = hw->pcsr;
-+	struct stmmac_priv *priv = netdev_priv(dev);
- 	u32 value = readl(ioaddr + GMAC_CONTROL);
- 	int mtu = dev->mtu;
- 
-@@ -35,7 +36,7 @@ static void dwmac1000_core_init(struct mac_device_info *hw,
- 	 * Broadcom tags can look like invalid LLC/SNAP packets and cause the
- 	 * hardware to truncate packets on reception.
- 	 */
--	if (netdev_uses_dsa(dev))
-+	if (netdev_uses_dsa(dev) || !priv->plat->enh_desc)
- 		value &= ~GMAC_CONTROL_ACS;
- 
- 	if (mtu > 1500)
--- 
-2.25.0
-
+Thanks. Pulled into clk-next
 
 _______________________________________________
 linux-amlogic mailing list
