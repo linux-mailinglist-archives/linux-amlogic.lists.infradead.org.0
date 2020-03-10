@@ -2,45 +2,45 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 034E117ED5E
-	for <lists+linux-amlogic@lfdr.de>; Tue, 10 Mar 2020 01:41:42 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id A79DD17ED5D
+	for <lists+linux-amlogic@lfdr.de>; Tue, 10 Mar 2020 01:41:39 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:In-Reply-To:References:Date:
 	Message-Id:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=sdTUv53AXx3J3MAVwoQyoiFwTTOjO5AP7gLNeCi672A=; b=BAgr+aKwmN9Bnr
-	nZxOu/37PQZl+AAhMveFxgIR2jD/rdIBevfx+5NJocGmDCdVl8/Jcj+ILm7GZtXeNdRy/s9s2YZDa
-	T89T8JQ7Ar9tQXhb6eUZL9W8RNGr9z4EXe9eCfU0/4/vXu+OSM+j9AQvW4Mrg4mWWVB7gq95Xyp64
-	yDetIa09IZHRYB/CY8KL3nvUJFC1Dob9iiNWi7BwbgoCHBRjd6L6c5uwWQEhVRSWzugXWaAYTemP8
-	K7dCq9CRpJsYky3jZLYMVDJGDCH5OmnwNXfr2nxSbhkelweQayrjZH86R96GTqKCWGvRVvt34hOD5
-	zdMuEllzjyQsNQ6FjnsQ==;
+	List-Owner; bh=Mj4KK5exObKM+JrNHv89ooH915guxr5ctXfOL7Tq2lw=; b=mVhCY+Wk1f3PRj
+	ZxN1Z42hgMLCMRo0YHlbtLnUqDjE5XgugXEPVXBAUnF8aEvrkXs31zXekjHxfmkzTXVJkg2ZldZon
+	+dPzOQLJWxByqHJNdQ24UKPs0gAq6jE8JHb5vRHGY3SoVgofKBfVxjKQU+cEQQdrw5OtNpn01M3dQ
+	UDGsxlq7XNSDuex8Ar8gbUc577binO4Z6MY8t6aK+mDOApCCzHqzT83XVlxAMyNmFd0KOSweiqUnI
+	NjfHS5FO4810kI6oFFoD5ic3ckI6BSaQahMqR6I95/WTTvoNpsBwnSPAanpPSf9DAS+7RJ0edc8Ky
+	4LEjfYtuPzYMIr6Gyvyw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jBSxj-0005GA-5Y; Tue, 10 Mar 2020 00:41:35 +0000
+	id 1jBSxi-0005Fg-Ep; Tue, 10 Mar 2020 00:41:34 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jBSxf-0005Ec-7j
+ id 1jBSxf-0005Eq-7i
  for linux-amlogic@lists.infradead.org; Tue, 10 Mar 2020 00:41:32 +0000
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1583800888;
- bh=rm3lAajHPv9+wNcJDjueQym09wrxuyM/RVyhaWSx0bw=;
+ s=default; t=1583800889;
+ bh=g2UHlmekT5PjoisKWFyQoTbMh/4310qawpnph6dlphs=;
  h=Subject:From:Date:References:In-Reply-To:To:Cc:Cc:From;
- b=QZjwB45ulKOtCXTNTkFziHb3TCixp2lVtA/tgHS2Elyf1j2HDrm0ZhDVHSb20zi5c
- Q7XxUf68I+cXepJCfVz6aEqoluBvNYZBCqe5NBiI1IBRrZmBuDBHRfSmFcrARD2JhD
- T51RmVQPixNiRdFjLsM2h3J0g3IJqC6QyeaRzlQ8=
+ b=KssrSe55egqoHbic8a9mVpDjfS7bVXEBEXme5YWgLZyKsatYiqSrfWSPSBR71T26k
+ n0RzXfRFauY781yg6w90rpVF4h7RUpzQSgMBYmgcZRwfyain+D2u3AaDOG2UFAJt53
+ yeMnRdtYRCXNpldA/JAvcHReAtL1BP5Vhl5O2+J8=
 MIME-Version: 1.0
-Subject: Re: [PATCH] arm64: dts: meson-g12b: fix N2/VIM3 audio card model names
+Subject: Re: [PATCH v2] dt-bindings: power: Fix dt_binding_check error
 From: patchwork-bot+linux-amlogic@kernel.org
-Message-Id: <158380088881.28846.15862825585539997467.git-patchwork-notify@kernel.org>
+Message-Id: <158380088899.28846.16980509823249057799.git-patchwork-notify@kernel.org>
 Date: Tue, 10 Mar 2020 00:41:28 +0000
-References: <1583135051-95529-1-git-send-email-christianshewitt@gmail.com>
-In-Reply-To: <1583135051-95529-1-git-send-email-christianshewitt@gmail.com>
-To: Christian Hewitt <christianshewitt@gmail.com>
+References: <1583164448-83438-1-git-send-email-jianxin.pan@amlogic.com>
+In-Reply-To: <1583164448-83438-1-git-send-email-jianxin.pan@amlogic.com>
+To: Jianxin Pan <jianxin.pan@amlogic.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200309_174131_302514_28BF89CE 
-X-CRM114-Status: UNSURE (   5.27  )
+X-CRM114-CacheID: sfid-20200309_174131_302310_40202F60 
+X-CRM114-Status: UNSURE (   5.75  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
@@ -80,21 +80,20 @@ Hello:
 
 This patch was applied to khilman/linux-amlogic.git (refs/heads/for-next).
 
-On Mon,  2 Mar 2020 11:44:11 +0400 you wrote:
-> This is largely cosmetic, but Odroid N2 and Khadas VIM3 are G12B devices so
-> correct the card model names to reflect this.
+On Mon, 2 Mar 2020 23:54:08 +0800 you wrote:
+> Missing ';' in the end of secure-monitor example node.
 > 
-> Fixes: aa7d5873bf6e ("arm64: dts: meson-g12b-odroid-n2: add sound card")
-> Fixes: c6d29c66e582 ("arm64: dts: meson-g12b-khadas-vim3: add initial device-tree")
-> 
-> Signed-off-by: Christian Hewitt <christianshewitt@gmail.com>
-> 
-> [...]
+> Fixes: 165b5fb294e8 ("dt-bindings: power: add Amlogic secure power domains bindings")
+> Reported-by: Rob Herring <robh+dt@kernel.org>
+> Signed-off-by: Jianxin Pan <jianxin.pan@amlogic.com>
+> ---
+>  Documentation/devicetree/bindings/power/amlogic,meson-sec-pwrc.yaml | 2 +-
+>  1 file changed, 1 insertion(+), 1 deletion(-)
 
 
 Here is a summary with links:
-  - arm64: dts: meson-g12b: fix N2/VIM3 audio card model names
-    https://git.kernel.org/khilman/linux-amlogic/c/57b57ebc3f338a7c5cfc41d6577ff72aa3677e38
+  - [v2] dt-bindings: power: Fix dt_binding_check error
+    https://git.kernel.org/khilman/linux-amlogic/c/d85eed038ef4919933b7f4f9d3b4f49ede4092aa
 
 You are awesome, thank you!
 
