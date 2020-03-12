@@ -2,76 +2,73 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B633118319D
-	for <lists+linux-amlogic@lfdr.de>; Thu, 12 Mar 2020 14:34:03 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2C01A1831A1
+	for <lists+linux-amlogic@lfdr.de>; Thu, 12 Mar 2020 14:34:40 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=nUr5E9/rb8ua+SfIjkUD/ngI25REzYp7RDhf2IyhX9o=; b=kIwNIZqLJlAq92
-	MTlEyqfPPppE5ryoncloJ+Y+Ystu7kWwl1uTaMzzt6k92z898vtjx3SBszuoPg1ixcvvDL05caDVI
-	m4BNsTlTY9SKnXoiqbdDCpFkWf2CzEGRb8Y8y+9yMM4szxx5TIb+LXVTHYf0etJtl1Mn6cYJGJ6jq
-	o9O9Lk08pM1DU2ndv+kRQ0s1N7RxHOsVS7B7uzqh293UMVfT+2rlwm6qnuaYExtqFzdYHGUHE8PbL
-	AY/r8I9/M3cxhRk08nwLLfccer/J92ZKrUUWkCWp82VYexQJCqYueq4EnsyvcqNasjtzpeRON3F3b
-	8T5Layc01K2wNDbxab6g==;
+	List-Owner; bh=DmGsOlaXEMd/ESihY3dXi7dNr+JC4buDqa6l9n5Npls=; b=PWl9fA/ec6XYUG
+	GwyqZTc0e8T/rFQbjp/Aydqw6i9F4hlJzzSQbwFQbdQ+4MZ/gRY8H5vndA3Af5pjknuuUi6morITw
+	kBgapBYrt7/p/W3+0rUopnuZsPNyfiXjy+guvgJBYmqPHVel+I6NKJ+8jtaJk6cIbumbWCd4eDpw1
+	3254CBovvBqcCe44rfs5k3h2SAEmXQGpDsYhiGf7gW/i/aBiW/2my43bQ3nJ5aPVwisOzOMmAeBj2
+	4og7vDCSBODTaeEGnbmfMW4Ru0faHwdekDlNetbGUp3XwOj92FsXoeEKFDA/AM890EPe4BJxJmbdY
+	msE1VLN2jWR0wcwe2ckw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jCNyL-0005tl-Rg; Thu, 12 Mar 2020 13:34:01 +0000
+	id 1jCNyw-0006SJ-PW; Thu, 12 Mar 2020 13:34:38 +0000
 Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jCNw8-0003YD-8Q
- for linux-amlogic@lists.infradead.org; Thu, 12 Mar 2020 13:31:47 +0000
-Received: by mail-wr1-x442.google.com with SMTP id f3so494155wrw.7
- for <linux-amlogic@lists.infradead.org>; Thu, 12 Mar 2020 06:31:44 -0700 (PDT)
+ id 1jCNw9-0003Zv-Me
+ for linux-amlogic@lists.infradead.org; Thu, 12 Mar 2020 13:31:49 +0000
+Received: by mail-wr1-x442.google.com with SMTP id a25so7509007wrd.0
+ for <linux-amlogic@lists.infradead.org>; Thu, 12 Mar 2020 06:31:45 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=GLQxofLrrQufYfCzcz5A2fXA3LA5FXwNOEDuv3qZeb4=;
- b=L58sEGr8l+astd+Uyrn2GV7dFQ2zh9/AkvdoHOz5Dvh56QoyE33GsFMwfgPGxtgeVy
- rUyclAX12ZUzQamElKe3/1hQpBGyLKkSTotT4kN91veEu3xyTpu7bz/Ivb7ciVxgyXor
- AvjCWflJHeenQ0mdJNTTNrYGZGMIJGxo8nFsWkQFRJ9A4UD+/1ZZril2UyFUFCI5OZfJ
- 8Aw8K23ii6LD2AS+X53x8DNvGfoEgBVjS9c0aR443i2O2+4CNzdxF/MgElCgG6H8BZ/2
- fW1/+HadDzP8Jebsefl3mJSxf0SQpVcTwkB1kqu0oOfN2U5ZqnAKhoBgaROGpwrIOgHM
- 34BA==
+ bh=ysgTmW9ZLhpEDIjfoCrSPsioEcbHMMnVx5neQlx80G8=;
+ b=v6+dB29Xyenrhk4NaFR7iQNJZSWzKs/Zq9VWJ4o/maiRmzn1FJJiRssz44fuqooP6z
+ 191ZSbVzN+ZfzSIMcwPPQ5izObfW1BF7Qk1QO8Gdpqyu7uiVRpID+pfhATIeu61fRmGX
+ kJmfYt3XZagBYOUJGUxz0aiM80wIeM1ZYD9BbZT9fLoxsvQznfd9IKVaBUsszl/CQjnA
+ WuRnGkJyY5H8Uz9p/gWzt0TDCrpVcEwZO7IbCEpc97w+PuG4jmHk8im0QEqo9Ear0Ipo
+ 2LQYb9VSrQqme4gk+K3GF1vbgfQsT9Y5pb7YOCsSw/Bb09uhhP4njCzkH0K6vC5R/JMv
+ 9ilQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=GLQxofLrrQufYfCzcz5A2fXA3LA5FXwNOEDuv3qZeb4=;
- b=KjuRJBmEZedwjLb3rwa7DP9Y7dytJthMEmFnnt1aQYj8K3N1Vcen2h/rfzDf6RwULT
- Wn6IuZ0ME3BfR7EiB+ZShPiGjwOQJV5Oqj1ZQWpKaPX6oYuQp/LkG2d4fv/iapuWdJ5g
- o3dJFueJlv35DZt6Hz4cKdbdxljvj+yIwsRK0MBOKk1/cmdgkNE1acoBRfLr9ArxCLgs
- 9isMw1J6YQmggrdawQmCwrKO9mm8SHd3990c+v90avHuY70Uho39kTSXBqZiioL4N3Ze
- eUoWnRyAqBuHwxMQE1IuKG/u/rKqR6P0tCBTihjoOVAQVkbCtLK0qhQLdrLGT/OzBw32
- m/sQ==
-X-Gm-Message-State: ANhLgQ18LoVWWiwlB6FBFhmhW8KIqWyS6/Net8Y4VM0tkbc2OV1HlK8U
- xDzGtz4buhyz0Qdae3M4o+y0OAd7rY52Nw==
-X-Google-Smtp-Source: ADFU+vuvZ8Xr2ZYxfBXSZYjeBVUgJ6OKzbEwTh8X/QVkj+5XIR8vD4XV0pHiP+EDUSxcI//XSme66g==
-X-Received: by 2002:adf:8182:: with SMTP id 2mr10608373wra.37.1584019902623;
- Thu, 12 Mar 2020 06:31:42 -0700 (PDT)
+ bh=ysgTmW9ZLhpEDIjfoCrSPsioEcbHMMnVx5neQlx80G8=;
+ b=WHljE5NFwjyas8x+EoWDYF96KrgIninrkYbRuWBwzEiu5VsJ13MK/yj+P93iQ/SFqH
+ RKjE+9QuJoerAW0TKN/YV8CIn1uJjGUJ90Uyd7gWM0pCYiJQhGiHrghIvnTwwCjuMdr1
+ TSUkppPApvpVLtluH0pQl76G5Iv/Zq7tDONhBY6Vuc3x5IRHWeK+Pm/enEI34SndBsWO
+ kHwe+/KIAiJHhXlydK6lz20lGe26lLB1wKruvqdrMiii4xTky4gNglY0crDf9XIdx1CM
+ 4fdS150dhmDP9A67hQ/A/BG0Ar6NYPwCJNYyiGDMmQNB+6HW290F7Q5D3nkok/uBJxkd
+ /rAw==
+X-Gm-Message-State: ANhLgQ2JdqMAyiHV3W0XJEo1HEECDb+ZDmEbj5GMgH1MCI9MpIpIs7Lr
+ s1fnelUqZ5pn2gd6M4OmF6XMhQ==
+X-Google-Smtp-Source: ADFU+vurnjaYzt7zIZenRaisc19C05PAgySImkcj7ODdYzNCIV8i6gly0uLMljAD0nLyCFdeF3tr6Q==
+X-Received: by 2002:adf:94c2:: with SMTP id 60mr11120426wrr.396.1584019903410; 
+ Thu, 12 Mar 2020 06:31:43 -0700 (PDT)
 Received: from bender.baylibre.local
  (laubervilliers-658-1-213-31.w90-63.abo.wanadoo.fr. [90.63.244.31])
- by smtp.gmail.com with ESMTPSA id m21sm12242885wmi.27.2020.03.12.06.31.41
+ by smtp.gmail.com with ESMTPSA id m21sm12242885wmi.27.2020.03.12.06.31.42
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Thu, 12 Mar 2020 06:31:41 -0700 (PDT)
+ Thu, 12 Mar 2020 06:31:42 -0700 (PDT)
 From: Neil Armstrong <narmstrong@baylibre.com>
-To: broonie@kernel.org,
-	devicetree@vger.kernel.org
-Subject: [PATCH 8/9] dt-bindings: spi: amlogic,
- meson-gx-spicc: add Amlogic G12A compatible
-Date: Thu, 12 Mar 2020 14:31:30 +0100
-Message-Id: <20200312133131.26430-9-narmstrong@baylibre.com>
+To: broonie@kernel.org
+Subject: [PATCH 9/9] spi: meson-spicc: add support for Amlogic G12A
+Date: Thu, 12 Mar 2020 14:31:31 +0100
+Message-Id: <20200312133131.26430-10-narmstrong@baylibre.com>
 X-Mailer: git-send-email 2.22.0
 In-Reply-To: <20200312133131.26430-1-narmstrong@baylibre.com>
 References: <20200312133131.26430-1-narmstrong@baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200312_063144_318778_3A097F6F 
-X-CRM114-Status: UNSURE (   7.35  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200312_063145_856699_13AEA45F 
+X-CRM114-Status: GOOD (  14.38  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -104,54 +101,171 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-The Amlogic G12A SPICC controllers uses a secondary clock used to feed the
-baud rate generator and the delay control logic.
+Add support for the SPICC controllers on the Amlogic G12A SoCs family.
+
+The G12A SPICC controllers inherit from the AXG enhanced registers but
+takes an external pclk for the baud rate generator and can achieve up to
+166MHz SCLK.
 
 Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
 ---
- .../bindings/spi/amlogic,meson-gx-spicc.yaml  | 22 +++++++++++++++++++
- 1 file changed, 22 insertions(+)
+ drivers/spi/spi-meson-spicc.c | 54 +++++++++++++++++++++++++++++------
+ 1 file changed, 46 insertions(+), 8 deletions(-)
 
-diff --git a/Documentation/devicetree/bindings/spi/amlogic,meson-gx-spicc.yaml b/Documentation/devicetree/bindings/spi/amlogic,meson-gx-spicc.yaml
-index 49b617c98ae7..9147df29022a 100644
---- a/Documentation/devicetree/bindings/spi/amlogic,meson-gx-spicc.yaml
-+++ b/Documentation/devicetree/bindings/spi/amlogic,meson-gx-spicc.yaml
-@@ -22,6 +22,7 @@ properties:
-     enum:
-       - amlogic,meson-gx-spicc # SPICC controller on Amlogic GX and compatible SoCs
-       - amlogic,meson-axg-spicc # SPICC controller on Amlogic AXG and compatible SoCs
-+      - amlogic,meson-g12a-spicc # SPICC controller on Amlogic G12A and compatible SoCs
+diff --git a/drivers/spi/spi-meson-spicc.c b/drivers/spi/spi-meson-spicc.c
+index 351ccd8dd2c2..77f7d0e0e46a 100644
+--- a/drivers/spi/spi-meson-spicc.c
++++ b/drivers/spi/spi-meson-spicc.c
+@@ -147,6 +147,7 @@ struct meson_spicc_data {
+ 	unsigned int			fifo_size;
+ 	bool				has_oen;
+ 	bool				has_enhance_clk_div;
++	bool				has_pclk;
+ };
  
-   interrupts:
-     maxItems: 1
-@@ -40,6 +41,27 @@ properties:
-     items:
-       - const: core
+ struct meson_spicc_device {
+@@ -154,6 +155,7 @@ struct meson_spicc_device {
+ 	struct platform_device		*pdev;
+ 	void __iomem			*base;
+ 	struct clk			*core;
++	struct clk			*pclk;
+ 	struct clk			*clk;
+ 	struct spi_message		*message;
+ 	struct spi_transfer		*xfer;
+@@ -514,6 +516,10 @@ static void meson_spicc_cleanup(struct spi_device *spi)
+  * Clk path for AXG series:
+  *    src -> pow2 fixed div -> pow2 div -> mux -> out
+  *    src -> enh fixed div -> enh div -> mux -> out
++ *
++ * Clk path for G12A series:
++ *    pclk -> pow2 fixed div -> pow2 div -> mux -> out
++ *    pclk -> enh fixed div -> enh div -> mux -> out
+  */
  
-+if:
-+  properties:
-+    compatible:
-+      contains:
-+        enum:
-+          - amlogic,meson-g12a-spicc
+ static int meson_spicc_clk_init(struct meson_spicc_device *spicc)
+@@ -542,7 +548,10 @@ static int meson_spicc_clk_init(struct meson_spicc_device *spicc)
+ 	init.name = name;
+ 	init.ops = &clk_fixed_factor_ops;
+ 	init.flags = 0;
+-	parent_data[0].hw = __clk_get_hw(spicc->core);
++	if (spicc->data->has_pclk)
++		parent_data[0].hw = __clk_get_hw(spicc->pclk);
++	else
++		parent_data[0].hw = __clk_get_hw(spicc->core);
+ 	init.num_parents = 1;
+ 
+ 	pow2_fixed_div->mult = 1,
+@@ -589,7 +598,10 @@ static int meson_spicc_clk_init(struct meson_spicc_device *spicc)
+ 	init.name = name;
+ 	init.ops = &clk_fixed_factor_ops;
+ 	init.flags = 0;
+-	parent_data[0].hw = __clk_get_hw(spicc->core);
++	if (spicc->data->has_pclk)
++		parent_data[0].hw = __clk_get_hw(spicc->pclk);
++	else
++		parent_data[0].hw = __clk_get_hw(spicc->core);
+ 	init.num_parents = 1;
+ 
+ 	enh_fixed_div->mult = 1,
+@@ -648,7 +660,7 @@ static int meson_spicc_probe(struct platform_device *pdev)
+ {
+ 	struct spi_master *master;
+ 	struct meson_spicc_device *spicc;
+-	int ret, irq, rate;
++	int ret, irq;
+ 
+ 	master = spi_alloc_master(&pdev->dev, sizeof(*spicc));
+ 	if (!master) {
+@@ -697,12 +709,26 @@ static int meson_spicc_probe(struct platform_device *pdev)
+ 		goto out_master;
+ 	}
+ 
++	if (spicc->data->has_pclk) {
++		spicc->pclk = devm_clk_get(&pdev->dev, "pclk");
++		if (IS_ERR(spicc->pclk)) {
++			dev_err(&pdev->dev, "pclk clock request failed\n");
++			ret = PTR_ERR(spicc->pclk);
++			goto out_master;
++		}
++	}
 +
-+then:
-+  properties:
-+    clocks:
-+      contains:
-+        items:
-+          - description: controller register bus clock
-+          - description: baud rate generator and delay control clock
+ 	ret = clk_prepare_enable(spicc->core);
+ 	if (ret) {
+ 		dev_err(&pdev->dev, "core clock enable failed\n");
+ 		goto out_master;
+ 	}
+-	rate = clk_get_rate(spicc->core);
 +
-+    clock-names:
-+      minItems: 2
-+      items:
-+        - const: core
-+        - const: pclk
++	ret = clk_prepare_enable(spicc->pclk);
++	if (ret) {
++		dev_err(&pdev->dev, "pclk clock enable failed\n");
++		goto out_master;
++	}
+ 
+ 	device_reset_optional(&pdev->dev);
+ 
+@@ -715,6 +741,7 @@ static int meson_spicc_probe(struct platform_device *pdev)
+ 				     SPI_BPW_MASK(8);
+ 	master->flags = (SPI_MASTER_MUST_RX | SPI_MASTER_MUST_TX);
+ 	master->min_speed_hz = spicc->data->min_speed_hz;
++	master->max_speed_hz = spicc->data->max_speed_hz;
+ 	master->setup = meson_spicc_setup;
+ 	master->cleanup = meson_spicc_cleanup;
+ 	master->prepare_message = meson_spicc_prepare_message;
+@@ -722,10 +749,6 @@ static int meson_spicc_probe(struct platform_device *pdev)
+ 	master->transfer_one = meson_spicc_transfer_one;
+ 	master->use_gpio_descriptors = true;
+ 
+-	/* Setup max rate according to the Meson datasheet */
+-	master->max_speed_hz = min_t(unsigned int, rate >> 1,
+-				     spicc->data->max_speed_hz);
+-
+ 	meson_spicc_oen_enable(spicc);
+ 
+ 	ret = meson_spicc_clk_init(spicc);
+@@ -744,6 +767,7 @@ static int meson_spicc_probe(struct platform_device *pdev)
+ 
+ out_clk:
+ 	clk_disable_unprepare(spicc->core);
++	clk_disable_unprepare(spicc->pclk);
+ 
+ out_master:
+ 	spi_master_put(master);
+@@ -759,6 +783,7 @@ static int meson_spicc_remove(struct platform_device *pdev)
+ 	writel(0, spicc->base + SPICC_CONREG);
+ 
+ 	clk_disable_unprepare(spicc->core);
++	clk_disable_unprepare(spicc->pclk);
+ 
+ 	return 0;
+ }
+@@ -777,6 +802,15 @@ static const struct meson_spicc_data meson_spicc_axg_data = {
+ 	.has_enhance_clk_div	= true,
+ };
+ 
++static const struct meson_spicc_data meson_spicc_g12a_data = {
++	.max_speed_hz		= 166666666,
++	.min_speed_hz		= 50000,
++	.fifo_size		= 15,
++	.has_oen		= true,
++	.has_enhance_clk_div	= true,
++	.has_pclk		= true,
++};
 +
- required:
-   - compatible
-   - reg
+ static const struct of_device_id meson_spicc_of_match[] = {
+ 	{
+ 		.compatible	= "amlogic,meson-gx-spicc",
+@@ -786,6 +820,10 @@ static const struct of_device_id meson_spicc_of_match[] = {
+ 		.compatible = "amlogic,meson-axg-spicc",
+ 		.data		= &meson_spicc_axg_data,
+ 	},
++	{
++		.compatible = "amlogic,meson-g12a-spicc",
++		.data		= &meson_spicc_g12a_data,
++	},
+ 	{ /* sentinel */ }
+ };
+ MODULE_DEVICE_TABLE(of, meson_spicc_of_match);
 -- 
 2.22.0
 
