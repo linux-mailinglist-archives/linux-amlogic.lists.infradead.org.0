@@ -2,46 +2,45 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D30C91870CB
-	for <lists+linux-amlogic@lfdr.de>; Mon, 16 Mar 2020 18:01:43 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id B5ABE1870CA
+	for <lists+linux-amlogic@lfdr.de>; Mon, 16 Mar 2020 18:01:42 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:In-Reply-To:References:Date:
 	Message-Id:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=MXVa0osrZDqXpxTl9LB+/yNY8xD42VS+a0HYgLZUAKA=; b=OkEExXylLHWeyx
-	TtwgwLvDeHI7ntp1H8GNgOu9unAEYoU83a8GJ/qped0RcWJAUwhrSQEMPKVibLl1wm6Ihu6xjrvIs
-	GJAjxxXHP/8NJZwBd1xa9jbB6oZcirCj1//7gZGKrBmdnRARdH0uf0nDx61GOw4Vy8rPHhkR710Op
-	UlROLh0NOCqYdAuZ3M6sgf3i7ODfyD5nwn1W0YVEXJvUkeYRykkQUHOPPKn2MmnZe7/IkhF9DlDA+
-	Eguaf1ckKWd9xTYfjJMtRwYEwii9w9nR9JInNVN2WQsqx5kF0hrBKAMQ1j/7Ua6JrnSeam5au7ztn
-	tMGj9wWcwMm4AFoDsoWA==;
+	List-Owner; bh=/VO+xB2Y/DYXGipRSnVHcVkPphjkkjyBRzGRD1jkpow=; b=opEIKn28epk0Pe
+	lOGI+wffzrtAtuNzVGRTJHzSfxPCJePzWbWYtS7IRJwgpDa8CTJKIH8G2PivItzHFsHYpCRbF1rii
+	zMlkP70NoyryBVka40NRBfFB13BGJS0zsCkDOnqO2rd4dsZMNICtah5jAQosP3tmgnEFWXtJAMhxF
+	Z6AEN0mIHPRk+D6vygAdDzLQFgcWHiNafhWGljJdZtCztXoRLfsozqzgKOeeDsdmIQGA/YN/WEUJ7
+	00yJi877nCjRY/sbOaECRsBeA0R364UN2s7MTJLiwLfioI82NlBzSZjXqcwBb5g0Oz2pBhRF/1rZq
+	reUSjcFUWksPRFtXr9oA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jDt7U-0004n2-VB; Mon, 16 Mar 2020 17:01:41 +0000
+	id 1jDt7Q-0004iN-62; Mon, 16 Mar 2020 17:01:36 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jDt7F-0004a6-JX
- for linux-amlogic@lists.infradead.org; Mon, 16 Mar 2020 17:01:27 +0000
+ id 1jDt7F-0004a2-Df
+ for linux-amlogic@lists.infradead.org; Mon, 16 Mar 2020 17:01:26 +0000
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
  s=default; t=1584378084;
- bh=W636S5ytzofOr0zyBejdrlSPTimzyIq0iq8UJg+tpzQ=;
+ bh=JCiTstb0VZnCAxPCqyNtYtlZ2s+ICQalYyW7IpJ7Als=;
  h=Subject:From:Date:References:In-Reply-To:To:Cc:Cc:From;
- b=DyLv5bMRmoDP8huicC0WZxqXKu4o+D8fP8sWH1RWQ2hTG+ZK3C7AJHzYEjtTQU/WM
- 3SJNJGM1E8O7JormIiNeK8rIZvs80DwlwmJBYnpCyf+4paKBMumvZrFpD9YiXgfxjV
- nWuW5YI8JXyN+xbnHpFrNDl1ODTzJqzT5dkEiP08=
+ b=L/s6c5+se3hy4QwR05gIQX7TBJwxFMVWsMvoseKMVZAuPRu9l+slKeP0L7nw5zVID
+ k/jgvtyNcqtGz+rpdSQjgfOh/7PE7P5KQZpVmWf05sUHrML6zxxwoddYoGl+6/lKYt
+ Hc4B47x6zowACpIslw7YLfY5cWhRBA9mFHtoFApQ=
 MIME-Version: 1.0
-Subject: Re: [PATCH v2] arm64: dts: meson: khadas-vim3: move model to
- g12b-khadas-vim3 dtsi
+Subject: Re: [PATCH] arm64: dts: meson: add thermal zones to meson gx devices
 From: patchwork-bot+linux-amlogic@kernel.org
-Message-Id: <158437808492.6061.821741637475233261.git-patchwork-notify@kernel.org>
+Message-Id: <158437808472.6061.1206265096028871062.git-patchwork-notify@kernel.org>
 Date: Mon, 16 Mar 2020 17:01:24 +0000
-References: <1583378508-14312-1-git-send-email-christianshewitt@gmail.com>
-In-Reply-To: <1583378508-14312-1-git-send-email-christianshewitt@gmail.com>
+References: <1584328854-28575-1-git-send-email-christianshewitt@gmail.com>
+In-Reply-To: <1584328854-28575-1-git-send-email-christianshewitt@gmail.com>
 To: Christian Hewitt <christianshewitt@gmail.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200316_100125_674337_7F9A10CA 
-X-CRM114-Status: UNSURE (   5.80  )
+X-CRM114-CacheID: sfid-20200316_100125_500488_E8D4CC3A 
+X-CRM114-Status: UNSURE (   5.49  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
@@ -81,21 +80,20 @@ Hello:
 
 This patch was applied to khilman/linux-amlogic.git (refs/heads/for-next).
 
-On Thu,  5 Mar 2020 07:21:48 +0400 you wrote:
-> The common meson-khadas-vim3.dtsi is now shared with VIM3L so move the
-> VIM3 model name to meson-g12b-khadas-vim3.dtsi.
+On Mon, 16 Mar 2020 07:20:54 +0400 you wrote:
+> Adapt and update current VIM2 thermal zones support so that zones are
+> available on all meson GXBB/GXL/GXM devices - similar to changes made
+> for G12A/G12B/SM1 devices.
 > 
-> meson-sm1-khadas-vim3l.dts contains the VIM3L model name.
-> 
-> changes in v2
-> - fix typo in commit message
+> Suggested-by: Nick Xie <nick@khadas.com>
+> Signed-off-by: Christian Hewitt <christianshewitt@gmail.com>
 > 
 > [...]
 
 
 Here is a summary with links:
-  - [v2] arm64: dts: meson: khadas-vim3: move model to g12b-khadas-vim3 dtsi
-    https://git.kernel.org/khilman/linux-amlogic/c/1f6857502902e4f582eed96dd0cc8a26e077a8de
+  - arm64: dts: meson: add thermal zones to meson gx devices
+    https://git.kernel.org/khilman/linux-amlogic/c/cd13d5f115f91065319c7604132d14db7048391e
 
 You are awesome, thank you!
 
