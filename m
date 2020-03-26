@@ -2,78 +2,79 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C8538194403
-	for <lists+linux-amlogic@lfdr.de>; Thu, 26 Mar 2020 17:09:13 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id C8D29194406
+	for <lists+linux-amlogic@lfdr.de>; Thu, 26 Mar 2020 17:09:26 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=ON+Oye4Vek+ItQg9mPINIaTWGYpN4xoDg+Y+hcYTMFg=; b=LHRjsSIkLQsmsn
-	v1OUv1i3EOpWkr5uvvh+G/pQzSYuYseVPrmtvTly1hPG3l2F52JEN1okohli5Od0zm8uRK0AqNLH/
-	dfjPpdv4Vbo5HZkRQkmGFRxWKN8aeX+yYSO9UPJBunVULhQrwm2XEBzGoE42/Gk6uIgiH+Gj+IlBq
-	s6Kc8+hOzf8f0Vbt9aLcOcuU3c9MwB29sXTCCsFhabdgXomo0vqFdCg3/vogbVwVBoUNh9Kf7fF4P
-	ZJMJyIM1X6Ev8g/oUMtP4GIt9m4FKlGORVCIpu1BIfIPgWmMjVwmafz1rtRY1zl8Y0p3ahrMZm7RT
-	rRgQ35LuFHg/uBrFPNWg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=duXOMeXlfcLRgP9nUfxKQgkc2W1Aq7agbzQVwgMjnJk=; b=tx5N02ZZkGYyXk
+	J9M0/8xUwyuDiZy0N+2ycTQJPq0AA0sjBtV3QSMBkkuJOEgtg2uxSscuoGsf18cKOGrNZy2y/2xgF
+	Xei6z77kjcFLbDrvwwsgnr+5zO5Z57+ADHfDvy7j66vlbH4WEv2TydNjNHn+dSkQTW4Tj3uOhXOkM
+	qjHjfchHEMXyXt3yCGT/K4lJ9T6sOYMBSqwKqWzBjLQiV+SX9eh8vB/2G3di1PFex3LoLHtenWVpe
+	uYJrOUd6zqWnR4EDmbbYD0bFSWI2D/jgyNDZiSC3VrbOJgwinRlWJ0thNRe5b6KHK+9zKExdUBosf
+	T492h7JBSXbXr2E+WXfg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jHV46-0005uU-L6; Thu, 26 Mar 2020 16:09:06 +0000
-Received: from mail-wr1-x42e.google.com ([2a00:1450:4864:20::42e])
+	id 1jHV4L-0006QX-GX; Thu, 26 Mar 2020 16:09:21 +0000
+Received: from mail-wm1-x344.google.com ([2a00:1450:4864:20::344])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jHV43-0005sc-9n
- for linux-amlogic@lists.infradead.org; Thu, 26 Mar 2020 16:09:05 +0000
-Received: by mail-wr1-x42e.google.com with SMTP id s1so8491729wrv.5
- for <linux-amlogic@lists.infradead.org>; Thu, 26 Mar 2020 09:09:02 -0700 (PDT)
+ id 1jHV44-0005sm-7w
+ for linux-amlogic@lists.infradead.org; Thu, 26 Mar 2020 16:09:06 +0000
+Received: by mail-wm1-x344.google.com with SMTP id a81so7647246wmf.5
+ for <linux-amlogic@lists.infradead.org>; Thu, 26 Mar 2020 09:09:04 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=6pZtO6xc9Ub+dNzgEsbskEWr5UgKhTn4yKFMf+FrJ2k=;
- b=VWHRwE6eWFq4R42rHxzTR+6QgRdLxFu5T6V+gEVyCN08IQCK5J5Or7jp5+GBq2F+Li
- WoA+QAQe5okTYE6YSop/mrIL0z5DYifVJUnloXtD09xuqG0rw7+XazvhW80+peKcpIYI
- NdH4+I/xuzblyIdYHxEaJMYbo65J7qSTQ6oLWLK/6R8cx2VDdrfUAY3QGi75GqO0567G
- 9ggonFzo2SX5dOOX2hN9TYKyAQYvmly7I9AEcuQFwn/O4Uo/vMkPUdg5ANwuZbH5h4Uv
- ci4AUM0hbokqDc7rVkbMOVwt5i6YBdd84x4OH7VatDPh9HtnBefjSII3SyxybCeTOUWM
- DXJA==
+ h=from:to:cc:subject:date:message-id:in-reply-to:references
+ :mime-version:content-transfer-encoding;
+ bh=VC7vCEcb96NN2X+1RtHiNHbQQNd8PYk2Ufc78Q16YW0=;
+ b=cZR32ujlzrt8nUTq/gEyjjkJGk+dPyP8jr5UHD4ls3MRy4lbAmaRqbCN7tlou/2no1
+ JETsTqOyEGxkwRCFNOADjJEfIVz3k9pwZTXPaPd4F+50Dabej/sUfPhxhLdQLR0Oe46O
+ UFnrlYKd86NJJ+1xYrWV6VoLRA07JelX49Gb1bTyngekW71boQFi49dkbNm/Cwu0C6gF
+ G8MRp0rUvLMQYmklI0DSIQMQcuErKgZ1NzRxmSJtaAJesQ2ZX9WnkiGN8vO2I0hAirlh
+ Geb+3fvYOOp90SslSoRL63PkOVDdx8bxdApTh5m+fihST6gFtkOprJQgZoXywZqXLeQp
+ tBAg==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=6pZtO6xc9Ub+dNzgEsbskEWr5UgKhTn4yKFMf+FrJ2k=;
- b=P2kYImJ8C8Ay9Y2GJv4j0SV3eNQzMUKGreYzFC2cNjRKYbv6dU12r6HnIDtYvqrrJc
- nZCMofxAfwD9A/ckYlkwMvLTx0qKaLFOUUUmWIZvD2Se2l85+FRSvE7zj5ZX34O87xT0
- KsEiCaNGUB9Wlvjw2XrK3a25WyqcvdQiHtpGMTevNJsxOnj+yzb54/H2xVU8puw3mjWc
- 6fF8m8dPy55Ubkw4kHZIdFTc8glKUEHR1024zqM0dcKcrDceVHqcrU5BpNtrPVdxUocq
- SIK0y9iHweSPIwBj/LullkqneojOHgzRnl4ymFEFXB3oVbVZEAXUSbck2EUPHfr7f09t
- 8wag==
-X-Gm-Message-State: ANhLgQ0Il5QKdaE11iJqPRQGBE0lraeJC7f1hD9hjBsFo+HfQeZNutKl
- QkjNWDpErAXo1uo1Ps5rHF7hcw==
-X-Google-Smtp-Source: ADFU+vs9oSnFf7w8PXHfbPY+V9oo/HHkchpoIhj6Hkk+PDZgRu+V8yGfgjqVDQ1h0mUrOtzm5gK0Tg==
-X-Received: by 2002:adf:a3db:: with SMTP id m27mr10361849wrb.350.1585238941470; 
- Thu, 26 Mar 2020 09:09:01 -0700 (PDT)
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
+ :references:mime-version:content-transfer-encoding;
+ bh=VC7vCEcb96NN2X+1RtHiNHbQQNd8PYk2Ufc78Q16YW0=;
+ b=VidBa3xhV+9RFLV/xtEUYtlr1TnkpbVOjDuuX8QVpADTVmoaLavUZm+ROFhMYIDbn1
+ NIlGS68aUub24sc90cMuc7TYwdHYunMjTHKNFPj+Vm7negYxLQet9Kb6a20vTLDlixEe
+ oeKe9wTJtsM19cXzR7vrcCb47GbsjfZjZEAwS6ouUFLZIl/ZRaWwSijOCCHTF5IWiC9h
+ 2rBhpZiekFBGWs4M/K5TMXxcoNl35MwRY3FtUXEogDQmsa0g9lbgfPLR4/ZfQy5cL2au
+ ZjUPGYM9bZSxCPGrKDRLEZKcz110C22MUTqU8Dl1FE+l81UqI2BkTFtol245EekooGK9
+ d/Xw==
+X-Gm-Message-State: ANhLgQ3C4dIAEKQBIhdkieR1rfGdBfAeEXkagM79L1NLReLclonSpCqS
+ O5x881iVgQFT6abLz7eUlPyuVw==
+X-Google-Smtp-Source: ADFU+vvs4kfivC/L5cN2+Rsomorx8j0QPCI1Qh8T4ckH7E9bvg+e8mxFZQeR285mqAeF3KF8/kF9GA==
+X-Received: by 2002:a1c:23d5:: with SMTP id j204mr672257wmj.59.1585238942853; 
+ Thu, 26 Mar 2020 09:09:02 -0700 (PDT)
 Received: from bender.baylibre.local ([2a01:e35:2ec0:82b0:5c5f:613e:f775:b6a2])
- by smtp.gmail.com with ESMTPSA id z188sm4093511wme.46.2020.03.26.09.09.00
+ by smtp.gmail.com with ESMTPSA id z188sm4093511wme.46.2020.03.26.09.09.01
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Thu, 26 Mar 2020 09:09:00 -0700 (PDT)
+ Thu, 26 Mar 2020 09:09:02 -0700 (PDT)
 From: Neil Armstrong <narmstrong@baylibre.com>
 To: khilman@baylibre.com
-Subject: [PATCH 0/2] arm64: dts: meson-g12: usb DT fixes
-Date: Thu, 26 Mar 2020 17:08:55 +0100
-Message-Id: <20200326160857.11929-1-narmstrong@baylibre.com>
+Subject: [PATCH 1/2] arm64: dts: meson-g12b-ugoos-am6: fix usb vbus-supply
+Date: Thu, 26 Mar 2020 17:08:56 +0100
+Message-Id: <20200326160857.11929-2-narmstrong@baylibre.com>
 X-Mailer: git-send-email 2.22.0
+In-Reply-To: <20200326160857.11929-1-narmstrong@baylibre.com>
+References: <20200326160857.11929-1-narmstrong@baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200326_090903_400351_1582DADA 
-X-CRM114-Status: UNSURE (   6.60  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200326_090904_294727_3FC225BA 
+X-CRM114-Status: GOOD (  10.55  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:42e listed in]
+ no trust [2a00:1450:4864:20:0:0:0:344 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -98,16 +99,28 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Misc USB DT fixes for G12A.
+The USB supply used the wrong property, fixing:
+meson-g12b-ugoos-am6.dt.yaml: usb@ffe09000: 'vbus-regulator' does not match any of the regexes: '^usb@[0-9a-f]+$', 'pinctrl-[0-9]+'
 
-Neil Armstrong (2):
-  arm64: dts: meson-g12b-ugoos-am6: fix usb vbus-supply
-  arm64: dts: meson-g12-common: fix dwc2 clock names
-
- arch/arm64/boot/dts/amlogic/meson-g12-common.dtsi    | 2 +-
+Fixes: 2cd2310fca4c ("arm64: dts: meson-g12b-ugoos-am6: add initial device-tree")
+Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
+---
  arch/arm64/boot/dts/amlogic/meson-g12b-ugoos-am6.dts | 2 +-
- 2 files changed, 2 insertions(+), 2 deletions(-)
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
+diff --git a/arch/arm64/boot/dts/amlogic/meson-g12b-ugoos-am6.dts b/arch/arm64/boot/dts/amlogic/meson-g12b-ugoos-am6.dts
+index 325e448eb09c..06c5430eb92d 100644
+--- a/arch/arm64/boot/dts/amlogic/meson-g12b-ugoos-am6.dts
++++ b/arch/arm64/boot/dts/amlogic/meson-g12b-ugoos-am6.dts
+@@ -545,7 +545,7 @@
+ &usb {
+ 	status = "okay";
+ 	dr_mode = "host";
+-	vbus-regulator = <&usb_pwr_en>;
++	vbus-supply = <&usb_pwr_en>;
+ };
+ 
+ &usb2_phy0 {
 -- 
 2.22.0
 
