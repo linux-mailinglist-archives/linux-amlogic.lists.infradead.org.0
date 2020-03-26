@@ -2,78 +2,83 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id EE9AA19400D
-	for <lists+linux-amlogic@lfdr.de>; Thu, 26 Mar 2020 14:46:03 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id E4DDC19400F
+	for <lists+linux-amlogic@lfdr.de>; Thu, 26 Mar 2020 14:46:06 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=KC0vZOSdMJgjajUQfpGwVa/AnFVbH2igPaiOWfqBaVU=; b=tKNlX61oWqp0I9
-	PsfvwvzXI2uDuBwAr3dTdEWmuPxea575HFiZONpVMss/7oe4LVKGAjNZFPg5ckYjqXUQ9BVhPUMAm
-	IHqvqBrdSzfz+RL7SPhE5gpwhT9v292mE058ETHvZ/JB+Bjvum/TdLk5lXFmKybsFd8MJyYRovPqU
-	WMq16T5sAy/xIBsjhKq8jNFNqJHwGS9K98tPyHzKPNXX/oWo2BCweP4S3e5SrkzhQGTfAOL+a+vo4
-	RdhVAHI5ft376mtFbuwNyyzgrU6ANIJ3ngo+94APdDvoh29jbG86i6KGCG2w/aG45U1HB7BrQtoNw
-	th7wWxeU6+58V/+rihxg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=3cKAGD+IcKKjY2lx+j07UQDhxZvMAZcvxWWGWGDfUaQ=; b=MKO8g+apo84N/n
+	0Wj2HaVlNsh1ghmkcGGNgB2B4jjBVkpyDNxMdPQ72p8aMjsyvqB88VJrS/Q3opMy6KvIPyVYDN7ca
+	q23kY/KesERYl3m02dXgyQFPSyvZ8mmb9Fv+KwKj3QuUqYe0QxH0idBg+oFJ7eRUNJh3JS7cSZPsc
+	pgcYhEuSzLYD/+wMVoqkR0OalELkMNyvXZ4k2/R0MkelSEz1vB9jUXnIRjOtXuf2GM6UlRObKfleq
+	xuatQgDOvXsW2lB/dZvZkDVM3rogjEB+X7VZEY9Lr0WnvyioUve9w00CMK/tcKH5DssY8ZDHQSCOE
+	uvNgTaoFXmDnpppRBQtw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jHSpc-0006FS-Fe; Thu, 26 Mar 2020 13:46:00 +0000
-Received: from mail-wr1-x443.google.com ([2a00:1450:4864:20::443])
+	id 1jHSpa-0006D5-GX; Thu, 26 Mar 2020 13:45:58 +0000
+Received: from mail-wr1-x441.google.com ([2a00:1450:4864:20::441])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jHSoq-0005ZZ-FU
+ id 1jHSoq-0005Zp-WD
  for linux-amlogic@lists.infradead.org; Thu, 26 Mar 2020 13:45:14 +0000
-Received: by mail-wr1-x443.google.com with SMTP id a25so7911143wrd.0
- for <linux-amlogic@lists.infradead.org>; Thu, 26 Mar 2020 06:45:11 -0700 (PDT)
+Received: by mail-wr1-x441.google.com with SMTP id w10so7890207wrm.4
+ for <linux-amlogic@lists.infradead.org>; Thu, 26 Mar 2020 06:45:12 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=MRpXPRnvMHphy1rE/lS9Q+pcM8R6cY/UAWlotJHG3f8=;
- b=O6pHgO2UFROBlOyqKsOduNAxXJHE7whRi12MWJkDR/vx8irlnJ0SY0ok5h/aWe00EJ
- rQTJKYaERdS060GGm0vAYGSrGzrpTgC8N790w/PF5VD3H+uG8iJdrn+EkKi0sEfwwO63
- HabTQD5+ETQBG4k+KW8B9Wugyq/pi64hloxe30oX4PBEEBuAgGHo9vOEHbuc/Lc0VOx/
- QIt5Jr8KM+CwlnmL5ApZKwMTlzRIJYobhaupkXHNJHc1DmD9CUv5YD7OCTP3/sdxcJDh
- 2PvOh9l59vFe4m5KRFwnfQz7FmEG2ayWeqZqB13lyWXVOsJTNZhvyV9LZmZ60IlJBz3i
- zFyA==
+ h=from:to:cc:subject:date:message-id:in-reply-to:references
+ :mime-version:content-transfer-encoding;
+ bh=aUt5da61uLANGwJFYYiA7zZjRTcSYMRB6icGf3vbU0k=;
+ b=mFk1SjUOpWFCWV3w8NUixREHmK4vDmUPsSbxrhNEvoMQoUozHNBVhh/84MOqcYKSh4
+ 7nnQSLIvwIGGnrge7xHSEy+jXUSNnfwpa6LhrX9eAMWzJjJiiFyCERkVmpWT/0X+IHJp
+ hBP+BoSqsf+Q37GSlozIUGbJ+fEah8GfsiwgnpMN6JJ+K+5njBrV+P684va9X1vP3Jac
+ OFWwYXyUQr/zClqzm2tBNy7zpw31A8oiD6cQiuvCPFaasRz4jET2QoPmVugn6+FCyGJp
+ eVvBiQ7KakQsVkpFf5EDlE8/uLsoU/Jas0eIgTClWTl70sS13Y3YmZxoa1yS4wXFNUaw
+ I3bA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=MRpXPRnvMHphy1rE/lS9Q+pcM8R6cY/UAWlotJHG3f8=;
- b=bqlUmHClSIGaErOwCMSIh1ZtGWZHu98bUfGIWwhSLyg857ZKCYde7rAq0j3cDxo1th
- xhT/2BNjODaYbfRT4t5r2eWbx8L38s+gFfqtfuC12D+u7c4qe5OHn7O2geIjC3Qlh1n5
- 8EF8O0Fi8q9gH7TEFvHXddmy+QiC0AfwAyFjPF+Cxl1PgIlmxd0HPFp921ncCVypbFZ/
- jwTn82aWRHpvCThBzu7DdLuVaD2vWscTNBKwZKj8tXSBkRUMhTTBN1HLXimEyh5fGVW2
- zQO8fB0B5LU1MTZ0a/15K1UWqSBdsNqsQVYTKlwXsBocEsqbOaqu/Kale8h9s73eVVVB
- ZYEA==
-X-Gm-Message-State: ANhLgQ2rkh+K+VpCLXXxkXzToExvE3XVa+28TOosTL8mXHFGcWHkKdXB
- eHBDg4YQQYgb30SQSOpLZKZDVg==
-X-Google-Smtp-Source: ADFU+vvXGkEfouXX7y1+sdqh+EsGCX1Rk8sMRmpR+O8yOAt2hdBafRMo+nYkAAFLziTJ7sTB8kpp2g==
-X-Received: by 2002:a5d:56ca:: with SMTP id m10mr9840366wrw.313.1585230310112; 
- Thu, 26 Mar 2020 06:45:10 -0700 (PDT)
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
+ :references:mime-version:content-transfer-encoding;
+ bh=aUt5da61uLANGwJFYYiA7zZjRTcSYMRB6icGf3vbU0k=;
+ b=HpOKWqJhMvNTlOEHDIcQxYhGUO2PMxWPv1nnnrVX+a89qBPS5cldutBgyxqHg7dphA
+ ao1d34v6U4RScqDmYhT3HNNjFVHAlQIti/hRWhcqsMqRMGX4r4iHxcltTzMvKbp5J264
+ HOIulTF9Du/JNdcdhpq0P4Mh35UA4fnmhWX2aB9gMNbylnEIuWLROgAfqNZMqu1gxxY7
+ KCx9pZvlycNowM/nKA+hRWqCeEz3EvGveTT0g2hrrfkJx4J0Y/GdxmQRg3cw2ggZln0f
+ OfjR2qD8AQFMuV4Pnpd8JEveILrqFDupBWuZhTa2jDsKie55zvxWt4dxPJyHK0ixx43f
+ IjcQ==
+X-Gm-Message-State: ANhLgQ0L543pb6tVSCbW3aBrDQlRk0eVDH/7ovBMZC8HzaIkimX7vdti
+ Vo4ejRs7ASGz3T7zlMxoFAyZiw==
+X-Google-Smtp-Source: ADFU+vt66+XPqsyLeO+POW2yrcqbRJYseC7D+4t4IRvUw/9oFw1qz5OYThNV1WSSuwK+mezl4JqO8Q==
+X-Received: by 2002:a5d:4d07:: with SMTP id z7mr9105092wrt.89.1585230311563;
+ Thu, 26 Mar 2020 06:45:11 -0700 (PDT)
 Received: from bender.baylibre.local ([2a01:e35:2ec0:82b0:5c5f:613e:f775:b6a2])
- by smtp.gmail.com with ESMTPSA id h29sm4079617wrc.64.2020.03.26.06.45.08
+ by smtp.gmail.com with ESMTPSA id h29sm4079617wrc.64.2020.03.26.06.45.10
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Thu, 26 Mar 2020 06:45:09 -0700 (PDT)
+ Thu, 26 Mar 2020 06:45:11 -0700 (PDT)
 From: Neil Armstrong <narmstrong@baylibre.com>
 To: kishon@ti.com, balbi@kernel.org, khilman@baylibre.com,
- martin.blumenstingl@googlemail.com
-Subject: [PATCH v2 00/14] usb: dwc3: meson: add OTG support for GXL/GXM
-Date: Thu, 26 Mar 2020 14:44:52 +0100
-Message-Id: <20200326134507.4808-1-narmstrong@baylibre.com>
+ martin.blumenstingl@googlemail.com, devicetree@vger.kernel.org
+Subject: [PATCH v2 01/14] dt-bindings: usb: amlogic,
+ meson-g12a-usb-ctrl: add the Amlogic GXL and GXM Families USB Glue
+ Bindings
+Date: Thu, 26 Mar 2020 14:44:53 +0100
+Message-Id: <20200326134507.4808-2-narmstrong@baylibre.com>
 X-Mailer: git-send-email 2.22.0
+In-Reply-To: <20200326134507.4808-1-narmstrong@baylibre.com>
+References: <20200326134507.4808-1-narmstrong@baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200326_064512_517852_92611096 
-X-CRM114-Status: GOOD (  15.80  )
+X-CRM114-CacheID: sfid-20200326_064513_052918_89C59BCC 
+X-CRM114-Status: UNSURE (   8.92  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:443 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:441 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -99,97 +104,132 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-The USB support was initialy done with a set of PHYs and dwc3-of-simple
-because the architecture of the USB complex was not understood correctly
-at the time (and proper documentation was missing...).
+The Amlogic GXL and GXM is slightly different from the Amlogic G12A Glue.
 
-But with the G12A family, the USB complex was correctly understood and
-implemented correctly.
-But seems the G12A architecture was derived for the GXL USB architecture,
-with minor differences and looks we can share most of the USB DWC3 glue
-driver.
+The GXL SoCs only embeds 2 USB2 PHYs and no USB3 PHYs, and the GXM SoCs
+embeds 3 USB2 PHYs.
 
-This patchset refactors and adds callbacks to handle the architecture
-difference while keeping the main code shared.
+Reviewed-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
+---
+ .../usb/amlogic,meson-g12a-usb-ctrl.yaml      | 73 ++++++++++++++++++-
+ 1 file changed, 69 insertions(+), 4 deletions(-)
 
-The main difference is that on GXL/GXM the USB2 PHY control registers
-are mixed with the PHY registers (we already handle correctly), and
-the GLUE registers are allmost (99%) the same as G12A.
-
-But, the GXL/GXM HW is buggy, here are the quirks :
-- for the DWC2 controller to reset correctly, the GLUE mux must be switched
-  to peripheral when the DWC2 controller probes. For now it's handled by simply
-  switching to device when probing the subnodes, but it may be not enough
-- when manually switching from Host to Device when the USB port is not
-  populated (should not happen with proper Micro-USB/USB-C OTG switch), it
-  makes the DWC3 to crash. The only way to avoid that is to use the Host
-  Disconnect bit to disconnect the DWC3 controller from the port, but we can't
-  recover the Host functionnality unless resetting the DWC3 controller.
-  This bit is set when only manual switch is done, and a warning is printed
-  on manual switching.
-
-The patches 1-9 should be applied first, then either waiting the next release
-or if the usb maintainer can provide us a stable tag, we can use it to merge
-the DT and bindings.
-
-Changes since v1 at [1]:
-- Fixed DT bindings to take in account usb2-phy2 on GXM
-- Added comment in patch2
-- Fixed patch 5 and moved fix out
-- Collected tags
-- Lower DT patch changes, switch p20x-q20x port B as OTG by default
-
-[1] http://lkml.kernel.org/r/20200324102030.31000-1-narmstrong@baylibre.com
-
-Martin Blumenstingl (4):
-  arm64: dts: amlogic: use the new USB control driver for GXL and GXM
-  phy: amlogic: meson-gxl-usb3: remove code for non-existing PHY
-  usb: dwc3: of-simple: remove Amlogic GXL and AXG compatibles
-  dt-bindings: usb: dwc3: remove old DWC3 wrapper
-
-Neil Armstrong (10):
-  dt-bindings: usb: amlogic,meson-g12a-usb-ctrl: add the Amlogic GXL and
-    GXM Families USB Glue Bindings
-  usb: dwc3: meson-g12a: specify phy names in soc data
-  usb: dwc3: meson-g12a: handle the phy and glue registers separately
-  usb: dwc3: meson-g12a: get the reset as shared
-  usb: dwc3: meson-g12a: check return of dwc3_meson_g12a_usb_init
-  usb: dwc3: meson-g12a: refactor usb2 phy init
-  usb: dwc3: meson-g12a: refactor usb init
-  usb: dwc3: meson-g12a: support the GXL/GXM DWC3 host phy disconnect
-  usb: dwc3: meson-g12a: add support for GXL and GXM SoCs
-  doc: dt: bindings: usb: dwc3: remove amlogic compatible entries
-
- .../bindings/phy/meson-gxl-usb3-phy.txt       |  31 --
- .../devicetree/bindings/usb/amlogic,dwc3.txt  |  42 --
- .../usb/amlogic,meson-g12a-usb-ctrl.yaml      |  73 ++-
- .../devicetree/bindings/usb/dwc3.txt          |   2 -
- .../dts/amlogic/meson-gx-libretech-pc.dtsi    |   3 +-
- .../boot/dts/amlogic/meson-gx-p23x-q20x.dtsi  |   3 +-
- .../amlogic/meson-gxl-s805x-libretech-ac.dts  |   3 +-
- .../boot/dts/amlogic/meson-gxl-s805x-p241.dts |   3 +-
- .../amlogic/meson-gxl-s905d-phicomm-n1.dts    |   4 +
- .../boot/dts/amlogic/meson-gxl-s905w-p281.dts |   4 +
- .../dts/amlogic/meson-gxl-s905w-tx3-mini.dts  |   4 +
- .../amlogic/meson-gxl-s905x-khadas-vim.dts    |   4 +
- .../amlogic/meson-gxl-s905x-libretech-cc.dts  |   3 +-
- .../amlogic/meson-gxl-s905x-nexbox-a95x.dts   |   3 +-
- .../dts/amlogic/meson-gxl-s905x-p212.dtsi     |   3 +-
- arch/arm64/boot/dts/amlogic/meson-gxl.dtsi    |  45 +-
- .../dts/amlogic/meson-gxm-khadas-vim2.dts     |   3 +-
- .../boot/dts/amlogic/meson-gxm-nexbox-a1.dts  |   3 +-
- .../boot/dts/amlogic/meson-gxm-vega-s96.dts   |   4 +
- arch/arm64/boot/dts/amlogic/meson-gxm.dtsi    |   7 +-
- drivers/phy/amlogic/Kconfig                   |  12 -
- drivers/phy/amlogic/Makefile                  |   1 -
- drivers/phy/amlogic/phy-meson-gxl-usb3.c      | 283 ------------
- drivers/usb/dwc3/dwc3-meson-g12a.c            | 415 ++++++++++++++----
- drivers/usb/dwc3/dwc3-of-simple.c             |  30 +-
- 25 files changed, 477 insertions(+), 511 deletions(-)
- delete mode 100644 Documentation/devicetree/bindings/phy/meson-gxl-usb3-phy.txt
- delete mode 100644 Documentation/devicetree/bindings/usb/amlogic,dwc3.txt
- delete mode 100644 drivers/phy/amlogic/phy-meson-gxl-usb3.c
-
+diff --git a/Documentation/devicetree/bindings/usb/amlogic,meson-g12a-usb-ctrl.yaml b/Documentation/devicetree/bindings/usb/amlogic,meson-g12a-usb-ctrl.yaml
+index b0e5e0fe9386..b0af50a7c124 100644
+--- a/Documentation/devicetree/bindings/usb/amlogic,meson-g12a-usb-ctrl.yaml
++++ b/Documentation/devicetree/bindings/usb/amlogic,meson-g12a-usb-ctrl.yaml
+@@ -25,9 +25,13 @@ description: |
+   The Amlogic A1 embeds a DWC3 USB IP Core configured for USB2 in
+   host-only mode.
+ 
++  The Amlogic GXL & GXM SoCs doesn't embed an USB3 PHY.
++
+ properties:
+   compatible:
+     enum:
++      - amlogic,meson-gxl-usb-ctrl
++      - amlogic,meson-gxm-usb-ctrl
+       - amlogic,meson-g12a-usb-ctrl
+       - amlogic,meson-a1-usb-ctrl
+ 
+@@ -41,6 +45,11 @@ properties:
+ 
+   clocks:
+     minItems: 1
++    maxItems: 3
++
++  clock-names:
++    minItems: 1
++    maxItems: 3
+ 
+   resets:
+     minItems: 1
+@@ -52,10 +61,8 @@ properties:
+     maxItems: 1
+ 
+   phy-names:
+-    items:
+-      - const: usb2-phy0 # USB2 PHY0 if USBHOST_A port is used
+-      - const: usb2-phy1 # USB2 PHY1 if USBOTG_B port is used
+-      - const: usb3-phy0 # USB3 PHY if USB3_0 is used
++    minItems: 1
++    maxItems: 3
+ 
+   phys:
+     minItems: 1
+@@ -89,6 +96,61 @@ required:
+   - dr_mode
+ 
+ allOf:
++  - if:
++      properties:
++        compatible:
++          enum:
++            - amlogic,meson-g12a-usb-ctrl
++
++    then:
++      properties:
++        phy-names:
++          items:
++            - const: usb2-phy0 # USB2 PHY0 if USBHOST_A port is used
++            - const: usb2-phy1 # USB2 PHY1 if USBOTG_B port is used
++            - const: usb3-phy0 # USB3 PHY if USB3_0 is used
++  - if:
++      properties:
++        compatible:
++          enum:
++            - amlogic,meson-gxl-usb-ctrl
++
++    then:
++      properties:
++        clocks:
++          minItems: 2
++        clock-names:
++          items:
++            - const: usb_ctrl
++            - const: ddr
++        phy-names:
++          items:
++            - const: usb2-phy0 # USB2 PHY0 if USBHOST_A port is used
++            - const: usb2-phy1 # USB2 PHY1 if USBOTG_B port is used
++      required:
++        - clock-names
++  - if:
++      properties:
++        compatible:
++          enum:
++            - amlogic,meson-gxm-usb-ctrl
++
++    then:
++      properties:
++        clocks:
++          minItems: 2
++        clock-names:
++          items:
++            - const: usb_ctrl
++            - const: ddr
++        phy-names:
++          items:
++            - const: usb2-phy0 # USB2 PHY0 if USBHOST_A port is used
++            - const: usb2-phy1 # USB2 PHY1 if USBOTG_B port is used
++            - const: usb2-phy2 # USB2 PHY2 if USBOTG_C port is used
++
++      required:
++        - clock-names
+   - if:
+       properties:
+         compatible:
+@@ -97,6 +159,9 @@ allOf:
+ 
+     then:
+       properties:
++        phy-names:
++          items:
++            - const: usb2-phy1 # USB2 PHY1 if USBOTG_B port is used
+         clocks:
+           minItems: 3
+         clock-names:
 -- 
 2.22.0
 
