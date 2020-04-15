@@ -2,74 +2,80 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 12BF21AA1DD
-	for <lists+linux-amlogic@lfdr.de>; Wed, 15 Apr 2020 14:58:19 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id AD5E11AB0B5
+	for <lists+linux-amlogic@lfdr.de>; Wed, 15 Apr 2020 20:31:31 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
 	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=rLJleN9yAYf+q3VXSoGOhVqAD4F/wZeW+xTTd7dZtTs=; b=DxStR/JbMbAujK
-	U32vafgIZlYR7g7atraORIJSqJOUU28Fr9uhXHG+IsBZfansF+0JxTDy3rw7EdujkyjtBJznbrU0n
-	kFkUyRrBV621r8RfP6q29xR43A4sWZuzviPmXnNeRTHwupKiaFYf7qQcHbb87Z446ntStsei5Wxci
-	PXyWzihxNOSZXhUZsdJolVk62z0HIMRsnKpOlmnInu/XH6NgQZGmBRNloW1Cp4IfYigQx3K+u/a1c
-	tt2tyH5G613Yswip7eOo8t/apGuzUSQKAsb0aNSfoSO5aZ6oikZ+mTgdOMuCMFOwWZWfSoIEcw/tH
-	PJRwhLNxEla3u3/zRWwA==;
+	List-Owner; bh=uFQBNIiNh3l3YFUnsOKxipoq8i6DEVWKA7bRHIMFJ+Y=; b=mlA45MpMrcwRJr
+	8zwxFOdDRZR+LqQTja75sRhw7DQmzIaOo23l/wD1Le8qotPEItt1XyRYeMpw0ugUIZ7SWWvUY1dmT
+	zg3oicrBleoNJzKgIjYGi7Yw1LWUxfLTeCiDg0KOXCUcCUC3X1EAYUu2TIFdkpjUBxJVk+tZnQJ2v
+	Y0N7Jw2Q18jzuGC17B+oALwiocVXcX2cZOLi+0sXKeMDbSqpLxwL5vFSVZ4oBRNWrsyhmHoL9nscL
+	plzUyptctjrgQglkiOdf0wOTvK3F8qTX7Wk5sVBeVp/rp47bUPaGGTYMw1Zsp0+ss7P2fduJ3UCTq
+	gFVd2qvId5k0hLjTDOzg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jOhcN-0004H9-0B; Wed, 15 Apr 2020 12:58:15 +0000
-Received: from mail-ua1-x941.google.com ([2607:f8b0:4864:20::941])
+	id 1jOmoi-0004PU-DJ; Wed, 15 Apr 2020 18:31:20 +0000
+Received: from mail-ed1-x543.google.com ([2a00:1450:4864:20::543])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jOhc5-00042B-GS
- for linux-amlogic@lists.infradead.org; Wed, 15 Apr 2020 12:57:59 +0000
-Received: by mail-ua1-x941.google.com with SMTP id v24so1276626uak.0
- for <linux-amlogic@lists.infradead.org>; Wed, 15 Apr 2020 05:57:56 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
+ id 1jOmof-0004LD-Vp; Wed, 15 Apr 2020 18:31:19 +0000
+Received: by mail-ed1-x543.google.com with SMTP id i7so6298915edq.3;
+ Wed, 15 Apr 2020 11:31:17 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=googlemail.com; s=20161025;
  h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=r5sKn1JJVgm/fgQdr3rP8MdzsVK7nHhD8/ZfpnREROo=;
- b=G5O0ZNtI/lhvh2YbkeigqevONdPcJNyW36RJu6DaCTNULDY22D+wXKMjJdQd7KvBlv
- oTfthgAY1md6uAa3CEIDnutbFslq3+BYX7QggVz2V1zExH2exyxZetM5k1rTefLCgxtV
- iEpyKNYDo1nRA4Kq2/WKGKWa+NsM6AH3OujDgWXJRfQ0THNzaeyfZm9/dmFGqES1rja2
- m3zdbshttS6S6hL/oRkv/+nmnvpjca3VwFla3S0Tdd9HW7J9kmiObkbehxG3ekM93FcZ
- TUuwjMSuHc2pY+a8zt7Vfd5qR/ryC85oOzXRlBbFLTsUE6VyIrnCLTKqW55P49wf09wY
- 8Iag==
+ :cc; bh=SnqHof2dPOXKoAKXV6iF52K+2gAJh/5rV8baIqoPo+o=;
+ b=FlQhQpkChTKQQKHE/kjZW2JHPP/s2wqj9SshjyqQZHZ1Z085P88gpkVzD7mYH4Ej7H
+ /8kITqU0Ici++jfH5rEOOhqHL0jd2qukqDVFVcGnLbYwh/apTw4YNDCH+2M+gmUzrjar
+ hoOwAfFifXLoTbP6k1cH7slupuNak1QwX8L8/7m09MQvu3p7JA+AeUIKvRniPPE9ubhi
+ Pel0J86HNvqJyD6otKJnogaD9EIB9rzqn4z0qryuqX5unULzwv7/rr5r7rW++KNYstiw
+ oWMcguoovE7j4w3t5WO84J6Y3TYN8lQK7tvYJLJAvcFFqrrqRofNt2LxQS7v/bmmp6xn
+ WWmw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:mime-version:references:in-reply-to:from:date
  :message-id:subject:to:cc;
- bh=r5sKn1JJVgm/fgQdr3rP8MdzsVK7nHhD8/ZfpnREROo=;
- b=JF/LWFORVq8iJt/kEI638iMy+NamKKRpInbkfPipmhgRKuMiyaXmeNzHWljSOcAvsm
- Y4Uyd3V3oty/ckd/qepAVoAERhancBbcP+Lz6f+PFMbeqZKKM1n8CnP4NAm7ew0PohcY
- KSg/PpHrjCr/AMRBQPf/BpJdR6O3DfuTC0fILheBObieyC7ozzQ0Mc4v1ZvCPuO3ZTdL
- HckIElXpOVOcqp40YDoricqd/VFP2jEuXcbft+XtXD3bMTLj7wbaVRHhT5NRmgyj7Qsb
- bPYCGr9lfQUcCPTHJ5Xwcw4RiLygKtQP9P/6weUJ+kzauBkN/ujVcVEkThQDNzOPBd51
- qTaA==
-X-Gm-Message-State: AGi0Pua/DYR6MGRH3iDgWt+yngiJNjCs1sRwUf91snKo8LXqtWG/RSg0
- LJDKuXvt1UfztsTHlvkgTwqt9PHkZWnRAcHuzOjTig==
-X-Google-Smtp-Source: APiQypJI7c0NMJgUbFRtW4uPDq40cfg0SP5CzG4iio6GHzdHCd5X+k9Oy9LawY1QGN7bl3rJK38vw1RGEuY06aeP87Q=
-X-Received: by 2002:ab0:6449:: with SMTP id j9mr4172749uap.19.1586955475320;
- Wed, 15 Apr 2020 05:57:55 -0700 (PDT)
+ bh=SnqHof2dPOXKoAKXV6iF52K+2gAJh/5rV8baIqoPo+o=;
+ b=VuvAsLw9yCPUPuTzGdS0hUIoOE7c3wOXLOZje2DMIYiq6TuiYUUenUro/+SaUbuAKl
+ TeFolZm1UiruJXXKPoilyTxnwTVBAGAz2nLRW7uJOya8PY79PSlwQ2LtXGPvFg7teTrw
+ K1s5E8UhKEwsgHeerFUeH4jY+dLkgU8TtdzGEiKKS2z36NV/J04tHvCl00AodqBC5y9T
+ N9LaG+/PGOnE6PX5vjZA29MgKpa4Yva3sFufW14e5DQ/mfuS1wzjjMoauMsw7M29J/23
+ UTH+v7McaTFP5/VBNq0RsoBB1WKn3WbStt40KBWFknmXuloHJb4yn8zahYOdwhVN6tNT
+ S02w==
+X-Gm-Message-State: AGi0PuZ14jZtlCeAtqIJw+QVUABRFwyLH40DDvSkYe0Ef+W2JwCJPOHu
+ TL+/InBioV4pwUaNTnL6kWrs7BBTvMsCjmDZ/iU=
+X-Google-Smtp-Source: APiQypIRaOcf7VxFnJh078+KvE/8zI4/yu3CzjaNn7Hoogp4F4FsEu0TUbJADLqHifTfYx7wJfx/Q6y04OU6mhoRBdE=
+X-Received: by 2002:a50:c004:: with SMTP id r4mr24970839edb.110.1586975476369; 
+ Wed, 15 Apr 2020 11:31:16 -0700 (PDT)
 MIME-Version: 1.0
-References: <20200410213043.1091851-1-martin.blumenstingl@googlemail.com>
-In-Reply-To: <20200410213043.1091851-1-martin.blumenstingl@googlemail.com>
-From: Ulf Hansson <ulf.hansson@linaro.org>
-Date: Wed, 15 Apr 2020 14:57:19 +0200
-Message-ID: <CAPDyKFpsTTUaTLy--DvOr0oAB71cTBdH1pfTV63LtcKOKOsnDw@mail.gmail.com>
-Subject: Re: [PATCH 1/1] mmc: meson-mx-sdio: Set MMC_CAP_WAIT_WHILE_BUSY
-To: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+References: <20200414201457.229131-1-martin.blumenstingl@googlemail.com>
+ <20200414201457.229131-3-martin.blumenstingl@googlemail.com>
+ <907211b1-c8d5-39cd-5d2b-dd41efbdc7a7@baylibre.com>
+In-Reply-To: <907211b1-c8d5-39cd-5d2b-dd41efbdc7a7@baylibre.com>
+From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+Date: Wed, 15 Apr 2020 20:31:05 +0200
+Message-ID: <CAFBinCCjHtSNigkeG_M4sVs27SemTMu0hUEQEHk53odAybm6sA@mail.gmail.com>
+Subject: Re: [PATCH RFC v1 2/4] dt-bindings: power: meson-ee-pwrc: add support
+ for the Meson GX SoCs
+To: Neil Armstrong <narmstrong@baylibre.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200415_055758_070172_B1693FF1 
-X-CRM114-Status: GOOD (  22.85  )
+X-CRM114-CacheID: sfid-20200415_113118_048474_5CE28B10 
+X-CRM114-Status: UNSURE (   9.85  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:941 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:543 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider [martin.blumenstingl[at]googlemail.com]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
@@ -89,112 +95,33 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: "open list:ARM/Amlogic Meson..." <linux-amlogic@lists.infradead.org>,
- "linux-mmc@vger.kernel.org" <linux-mmc@vger.kernel.org>,
- Linux Kernel Mailing List <linux-kernel@vger.kernel.org>,
- Linux ARM <linux-arm-kernel@lists.infradead.org>
+Cc: devicetree@vger.kernel.org, khilman@baylibre.com,
+ linux-kernel@vger.kernel.org, robh+dt@kernel.org,
+ linux-amlogic@lists.infradead.org, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On Fri, 10 Apr 2020 at 23:30, Martin Blumenstingl
-<martin.blumenstingl@googlemail.com> wrote:
+Hi Neil,
+
+On Wed, Apr 15, 2020 at 10:51 AM Neil Armstrong <narmstrong@baylibre.com> wrote:
+[...]
+> > +            - const: dvin
+before I resend, can you please double-check this reset line?
+it's the only difference compared to G12A so I thought it would make
+sense to check if this is really related to the VPU when we're
+switching from one binding to the other anyways (as now is the time to
+sort out pending issues - in case there is an issue here)
+
+> > +#define PWRC_GXBB_VPU_ID             0
+> > +#define PWRC_GXBB_ETH_ID             1
 >
-> The Meson SDIO controller uses the DAT0 lane for hardware busy
-> detection. Set MMC_CAP_WAIT_WHILE_BUSY accordingly. This fixes
-> the following error observed with Linux 5.7 (pre-rc-1):
->   mmc1: Card stuck being busy! __mmc_poll_for_busy
->   blk_update_request: I/O error, dev mmcblk1, sector 17111080 op
->    0x3:(DISCARD) flags 0x0 phys_seg 1 prio class 0
->
-> Signed-off-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-> ---
-> I'm sending this as RFC because I'm not sure if this is a proper fix.
-> It "fixes" the issue for me but I want the MMC maintainers to double-
-> check this.
+> Should be PWRC_GXBB_ETHERNET_MEM_ID like meson8 bindings.
+I can do that, thank you for looking into this!
 
-Thanks for sending this! I assume it's a regression and caused by one
-of my patches that went in for 5.7. Probably this one:
-0d84c3e6a5b2 mmc: core: Convert to mmc_poll_for_busy() for erase/trim/discard
 
-Now, even if enabling MMC_CAP_WAIT_WHILE_BUSY seems like the correct
-thing to do, I suggest we really try understand why it works, so we
-don't overlook some other issue that needs to be fixed.
-
-Would you be willing to try a few debug patches, according to the below?
-
-First, can you double check so the original polling with CMD13 is
-still okay, by trying the below minor change. The intent is to force
-polling with CMD13 for the erase/discard operation.
-
-diff --git a/drivers/mmc/core/mmc_ops.c b/drivers/mmc/core/mmc_ops.c
-index baa6314f69b4..bbf1dff0ae2a 100644
---- a/drivers/mmc/core/mmc_ops.c
-+++ b/drivers/mmc/core/mmc_ops.c
-@@ -452,7 +452,7 @@ static int mmc_busy_status(struct mmc_card *card,
-bool retry_crc_err,
-        u32 status = 0;
-        int err;
-
--       if (host->ops->card_busy) {
-+       if (host->ops->card_busy && busy_cmd != MMC_BUSY_ERASE) {
-                *busy = host->ops->card_busy(host);
-                return 0;
-        }
--- 
-
-Second, if the above works, it looks like the polling with
-->card_busy() isn't really working for meson-mx-sdio.c, together with
-erase/discard. To narrow down that problem, I suggest to try with a
-longer erase/discard timeout in a retry fashion, while using
-->card_busy(). Along the lines of the below:
-
-diff --git a/drivers/mmc/core/core.c b/drivers/mmc/core/core.c
-index 4c5de6d37ac7..240e52fcdf2d 100644
---- a/drivers/mmc/core/core.c
-+++ b/drivers/mmc/core/core.c
-@@ -1746,6 +1746,11 @@ static int mmc_do_erase(struct mmc_card *card,
-unsigned int from,
-
-        /* Let's poll to find out when the erase operation completes. */
-        err = mmc_poll_for_busy(card, busy_timeout, MMC_BUSY_ERASE);
-+       if (err) {
-+               pr_err("%s: Erase poll failed err=%d timeout_ms=%u - retry!\n",
-+                       mmc_hostname(host), err, busy_timeout);
-+               err = mmc_poll_for_busy(card, 30000, MMC_BUSY_ERASE);
-+       }
-
- out:
-        mmc_retune_release(card->host);
--- 
-
-Let's see what this gives us...
-
-Kind regards
-Uffe
-
->
->
->  drivers/mmc/host/meson-mx-sdio.c | 2 +-
->  1 file changed, 1 insertion(+), 1 deletion(-)
->
-> diff --git a/drivers/mmc/host/meson-mx-sdio.c b/drivers/mmc/host/meson-mx-sdio.c
-> index 8b038e7b2cd3..fe02130237a8 100644
-> --- a/drivers/mmc/host/meson-mx-sdio.c
-> +++ b/drivers/mmc/host/meson-mx-sdio.c
-> @@ -570,7 +570,7 @@ static int meson_mx_mmc_add_host(struct meson_mx_mmc_host *host)
->         mmc->f_max = clk_round_rate(host->cfg_div_clk,
->                                     clk_get_rate(host->parent_clk));
->
-> -       mmc->caps |= MMC_CAP_ERASE | MMC_CAP_CMD23;
-> +       mmc->caps |= MMC_CAP_ERASE | MMC_CAP_CMD23 | MMC_CAP_WAIT_WHILE_BUSY;
->         mmc->ops = &meson_mx_mmc_ops;
->
->         ret = mmc_of_parse(mmc);
-> --
-> 2.26.0
->
+Martin
 
 _______________________________________________
 linux-amlogic mailing list
