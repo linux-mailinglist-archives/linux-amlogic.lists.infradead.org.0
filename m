@@ -2,46 +2,46 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E184E1ACCCB
-	for <lists+linux-amlogic@lfdr.de>; Thu, 16 Apr 2020 18:08:43 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B59991ACCCC
+	for <lists+linux-amlogic@lfdr.de>; Thu, 16 Apr 2020 18:08:46 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:In-Reply-To:References:Date:
 	Message-Id:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=apPJZ7Q4RvE2k3IiEyfjL4mZA+ZmCT2KQHW16ZGWk1Y=; b=swMw9jMMd544No
-	BKMY99MlBGtHhgxB3HDbOBf0rjOw9Turq7xVM3X5qqUZ8KK9xiPx2pg1NEBG2UCiI2W7eQt1JBVRF
-	PkXdWFcjAHyR2zL9xgShWp/aSjJ5gMfZXSJMOJBJmr914yCxehJkkrv1SJasAuN9f/+1WRn0Q6dzS
-	vaM3d7iBmSeKcQWUt1ZEX97fPDLLCthFn63/ioKbf0oa9rvwWMuyyLnPFbCA6vkOUmD7F2qkK1aLZ
-	geT5kJUSpOILUuSUDTX25FJSpGq2UTdvbhKqdwiO039jsJ8IaMTEGR69ncGfqKMjPSl6NIEbzKHCr
-	kp5v9mIsgUF5RxGijy9g==;
+	List-Owner; bh=4fWdy9g2gfRSTWmUhPs1Doo3CHztip6dmVsJA/2WFic=; b=S+VTvvYX0zs7JI
+	2xew51WTrAb4MXdjG02zz2k0yeDvvq70I4BoMpjF0uuvhIYI3zFYpQJzILbsh53ZMZkJCt1ESe6AK
+	0XymkxAgGG5KsyRwUYSQKCzRZgL7ZdlCvTWXc3ECSNXI5LeN55qXqEO/LOqsoUbVsT+VPuMMjWG3j
+	obTSkuubpoq3jdvzm4Bp0Li7S980YTObot/20LFgRNiu8LdxAPXuyU4l30eBH0Lmi2paZh/QNARkA
+	g2WqfuVQVEPgTJe2YdBFATrvv1/Z3QIb73sQ+RzLg3HRq6QcgiJl+jLQ1zNy7RgVfRN8THkFWR6n6
+	AzvXLB/zwxYuvUylmHgg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jP74B-0000Hr-CS; Thu, 16 Apr 2020 16:08:39 +0000
+	id 1jP74F-0000N4-JF; Thu, 16 Apr 2020 16:08:43 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jP73b-00080p-At
+ id 1jP73b-00080m-As
  for linux-amlogic@lists.infradead.org; Thu, 16 Apr 2020 16:08:07 +0000
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
  s=default; t=1587053282;
- bh=oaJIqHMZqvc1engVyg6G6VTOCVD2R0ywue3b3yU4V7g=;
+ bh=rigBaHmT1eqdPDWAD3BnFqzh24KSHzwhJQei6DYsP1c=;
  h=Subject:From:Date:References:In-Reply-To:To:Cc:Cc:From;
- b=bk9442uy7ADepsCcJfpbcAhC6tGtEGO8PFEvyofoFo8MctcG2T5UplgwR05sxbS5r
- OZyK9GZmT+3mmq2apqyfyaQUQnbX5mVkLVKlvS+EvDouSoqW43jH4PwMAjV+NSR6Mg
- Pg3QcZxdw5UuKJ/3fYHlaD2flyEw+W9FpL4i4P/Q=
+ b=2Nmh4V/+aYYUad5fdOOwrg69hOB3lczbwsKcyPbH1EJYfn4CFuFRbrF0cS23nLdvj
+ HXicX/kopn4U6rOTf4JrMc5xJt1nc7gKBXPOXXlgDpnarenio9mWXJSxpeFIflaFFW
+ JSUp48vHN/pimOJ3qk3fTVNvFg+mhdksI9zW8/gk=
 MIME-Version: 1.0
-Subject: Re: [PATCH] dt-bindings: display: meson-vpu: fix indentation of
- reg-names' "items"
+Subject: Re: [PATCH] usb: dwc3: meson-g12a: Don't use ret uninitialized in
+ dwc3_meson_g12a_otg_init
 From: patchwork-bot+linux-amlogic@kernel.org
-Message-Id: <158705328229.8629.13597607288536223329.git-patchwork-notify@kernel.org>
+Message-Id: <158705328211.8629.9063413018389670651.git-patchwork-notify@kernel.org>
 Date: Thu, 16 Apr 2020 16:08:02 +0000
-References: <20200328004157.1259385-1-martin.blumenstingl@googlemail.com>
-In-Reply-To: <20200328004157.1259385-1-martin.blumenstingl@googlemail.com>
-To: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+References: <20200210225816.36598-1-natechancellor@gmail.com>
+In-Reply-To: <20200210225816.36598-1-natechancellor@gmail.com>
+To: Nathan Chancellor <natechancellor@gmail.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200416_090803_409377_45E15136 
-X-CRM114-Status: UNSURE (   5.68  )
+X-CRM114-CacheID: sfid-20200416_090803_397541_A71D6F72 
+X-CRM114-Status: UNSURE (   5.43  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
@@ -81,20 +81,35 @@ Hello:
 
 This patch was applied to khilman/linux-amlogic.git (refs/heads/for-next).
 
-On Sat, 28 Mar 2020 01:41:57 +0100 you wrote:
-> Use two spaces for indentation instead of one to be consistent with the
-> rest of the file. No functional changes.
+On Mon, 10 Feb 2020 15:58:17 -0700 you wrote:
+> Clang warns:
 > 
-> Fixes: 6b9ebf1e0e678b ("dt-bindings: display: amlogic, meson-vpu: convert to yaml")
-> Signed-off-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-> ---
->  .../devicetree/bindings/display/amlogic,meson-vpu.yaml      | 6 +++---
->  1 file changed, 3 insertions(+), 3 deletions(-)
+> ../drivers/usb/dwc3/dwc3-meson-g12a.c:421:6: warning: variable 'ret' is
+> used uninitialized whenever 'if' condition is false
+> [-Wsometimes-uninitialized]
+>         if (priv->otg_mode == USB_DR_MODE_OTG) {
+>             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+> ../drivers/usb/dwc3/dwc3-meson-g12a.c:455:9: note: uninitialized use
+> occurs here
+>         return ret;
+>                ^~~
+> ../drivers/usb/dwc3/dwc3-meson-g12a.c:421:2: note: remove the 'if' if
+> its condition is always true
+>         if (priv->otg_mode == USB_DR_MODE_OTG) {
+>         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+> ../drivers/usb/dwc3/dwc3-meson-g12a.c:415:9: note: initialize the
+> variable 'ret' to silence this warning
+>         int ret, irq;
+>                ^
+>                 = 0
+> 1 warning generated.
+> 
+> [...]
 
 
 Here is a summary with links:
-  - dt-bindings: display: meson-vpu: fix indentation of reg-names' "items"
-    https://git.kernel.org/khilman/linux-amlogic/c/33b0cb370f97ebc5a722c2cf50821e8322267261
+  - usb: dwc3: meson-g12a: Don't use ret uninitialized in dwc3_meson_g12a_otg_init
+    https://git.kernel.org/khilman/linux-amlogic/c/238d760216541d345ee930e76c781f5cd1d22fba
 
 You are awesome, thank you!
 
