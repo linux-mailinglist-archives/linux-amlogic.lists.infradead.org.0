@@ -2,83 +2,82 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D73BD1AC9BB
-	for <lists+linux-amlogic@lfdr.de>; Thu, 16 Apr 2020 17:27:10 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 009A61AC9CF
+	for <lists+linux-amlogic@lfdr.de>; Thu, 16 Apr 2020 17:27:46 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=iS7vXmLZ80D2GRDLurjRBwneLZRsoifx+QRkjwrxVUU=; b=hzLF39SAHDcxcw
-	ZT3RvsmYX+jXV6hx84QZX8ik7C9keq4r/SwGjLayiglFaVCyr/IBI5QLLnHC4N87//rs6uIa+Ai7g
-	x8n7dZPtGpiamzKQsGV3l70ibnPbZjFCCTgA0VWvzpsiKfu3A0+aBJvA9Mf8kkhw9vgqYK2Hlx3Hs
-	sXQIIoYncZUQwrVzBtTyjDKvKCAMMIcnfb0Rt275AdEHWoLArhWKar4EKz9iPVyMxpSHyso4uKmsC
-	HbPlOtWRRB60Elhp5MNuIj9VVCZUVNkYJiNferqnl6ryfOpRW8qToUYWvkLbCit+bSyCV1GUjnz05
-	uaSW3vfpstBo5ElHpYjw==;
+	List-Owner; bh=6hz5DXon2M/NfN6j6s7X8ESDT85rgd2sjsXAQvIVfsY=; b=AdY21mMH4asgNq
+	TiuXYLkpERe0MxTFQ7Tbp60Mu33rGi4x25p+WwyzvQ3cjqsBa3d5vngWU+yKA/6XIe2+xfj7C4oeV
+	0VX8L6uFpxo+t4DsQ3AQblXKK+ZvrfSlXvgjHpaafB428S2fOniBPCbJj4QkvcAjSE19jNaGnVF65
+	KxckbA4RHPqDUumXoTGvoZU2LsfXsu4ahRs6fsC2DhEnzkBX3mdv2ZMbkY1RZDuSJcTSuk9a9/ZoO
+	iwv5FYqgzpEBT8yA3lOpp+M/3DluDYfEzjZA34vopEFbhThLCltV7m0IpdhN7UUu+QoJ6toGqNQXJ
+	u1cP5vqD3dmT7iki99Zw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jP6Q1-0000L1-3k; Thu, 16 Apr 2020 15:27:09 +0000
-Received: from mail-wr1-x441.google.com ([2a00:1450:4864:20::441])
+	id 1jP6Qa-0000tJ-3D; Thu, 16 Apr 2020 15:27:44 +0000
+Received: from mail-wr1-x444.google.com ([2a00:1450:4864:20::444])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jP6OF-0006z6-S9
- for linux-amlogic@lists.infradead.org; Thu, 16 Apr 2020 15:25:24 +0000
-Received: by mail-wr1-x441.google.com with SMTP id d27so5374883wra.1
- for <linux-amlogic@lists.infradead.org>; Thu, 16 Apr 2020 08:25:19 -0700 (PDT)
+ id 1jP6OI-00070f-DU
+ for linux-amlogic@lists.infradead.org; Thu, 16 Apr 2020 15:25:25 +0000
+Received: by mail-wr1-x444.google.com with SMTP id d17so5272317wrg.11
+ for <linux-amlogic@lists.infradead.org>; Thu, 16 Apr 2020 08:25:22 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=x74ZNY2Ii0Wq7WqU8UNzlM4qIe5Anz5MtvDWgXAqJ8U=;
- b=Q9sFCx/QxugMEbo/HrWaN7/l9wYvrDBzi+BaORQLde30NDU+pchUv6x2xo4yNFqJcW
- C7a7bKJTD9UtwfKR/BnAmmVHoYgycsF/kf1jx7CZXLkJJdvmLuZwyV4JBs3AXkqFod0M
- xv6XoDI8LhXY2WeJ6sQ+JyFUoxrljmxSmAK74DPbUQ0DNDoRYoxPB78f+pOGzlALSGKa
- psP4tH29K6BIye15yiigPWJW5F9yOpvQC36gvol17c1syMD22b8bMVf3nd0ZnIXa+KhO
- VSUkeR03lEnZd5cj7EsuDZjzUFWToJYoGX7UjSOD+EOpIijnNMkc1r3zIYrPXd3oKar8
- /9kw==
+ bh=oEh+32nEVm+L3h2nqrkEI2RZhWGyawtUviLim3KeczU=;
+ b=khWHx9oTBXuB1jvkx97Q7Ge3/eNg08KayjK9LifGmWHefyOs7Sar790b9XmaDvc0/w
+ 2/LUWAfRz1Ldbt51o+u5U9gqAT6VWQYogG8wd+u0DfUzRzfWx4l7Sy/eBJ2Qwp7m2hBz
+ SY/fHyKGKj/BBPQ7Dpp3bXD9VmvE+hxO6eKTuGr9bt4wmulAK6Hen19GujLVgVOKMEuv
+ nzYVdHUTkD2vc6+VGUdlcQGC2sI5IjfZFiMhw2T8kZP4rGB5i9FXFufcXIw9p5Pm0Hd+
+ Nx9goUzds5pn7AToyiRxOEyFwPlLVRXSsS2N454QXl/9Kv5XRHGibSR1dXoLe+NcJNc6
+ yUfw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=x74ZNY2Ii0Wq7WqU8UNzlM4qIe5Anz5MtvDWgXAqJ8U=;
- b=BpKgjMd2dHfVcJDawkZgDB16WaxDpTwMrYe8UF27Yn/3Pi/bcw4vLO1kqBMLSoyMOu
- tdgTG3uOl2eCr3GFAgRJmNQl9rxCikkguVUxqN0DfLmNbVaKl5SrrYTiQh6JSyZg2A7v
- 3a5cpm2lUApiNdLWIIJ+EgkWCPC+91ieYfqIUjklHlskdxRFy2ewjLQejj8mMQ/EI1gi
- TKFBHxrepcKdvvrqhm0Hacz5uiVpKVnEUsLKgobUz3TxuixXXMdZzvKFHVs68slvDj6u
- eIIgop40n9Pa0VvpBkZFBN7P4c7WqKY9+av0Nxz09/YocjIwu65FJ9n7ALOgO+iq5jg2
- YAcA==
-X-Gm-Message-State: AGi0PuYXybrJInatEG0p8EoKKTpbZEY0wju3hm/JAscm1A+KO3XetCxR
- nRsfKF+txKSQ0FPN2dBsUPMjiw==
-X-Google-Smtp-Source: APiQypJD88ybgaDtDKq1U3lq0cPR53Jd+LyWH4BTyYS5P/piMZdjIcsHLVxv0kGThgLlWqtQbsiCcQ==
-X-Received: by 2002:adf:f2c5:: with SMTP id d5mr35893659wrp.409.1587050718352; 
- Thu, 16 Apr 2020 08:25:18 -0700 (PDT)
+ bh=oEh+32nEVm+L3h2nqrkEI2RZhWGyawtUviLim3KeczU=;
+ b=WSCPjapFdHJj67KhF8xVIP60EG+5SPEoqxYsEf3BJKxHTNkW6K4Xjl9LXiCAtk2UQs
+ 1OEOonWGd6C/JV8Ml70gTnyCrJFX59bRydkzzLkt2NoreUuOCHMNd3951rWqdhdPUNHO
+ Z6ds6ekiMQA1+CbRT/dnfIgZE8Dy6YhkV1P+X0aIIZoJxyFxGHvQvIozMW/sPuWDeSEZ
+ 28ZT1XOGht9Sv74WwAXnAhEeMtni0HLjbHF7GJBGx1070QJmmgN693d/c7IOLRsWcsDF
+ uekMqPMirPd2T260K3qKNie0yo3RFzbIQ2PgvoBqM9zPTOYbeShWma4y5yPEhsIEh27t
+ EFVQ==
+X-Gm-Message-State: AGi0PuYGkQVws2rgiwK0jNThK0a0tGROspx0NyCbMDw6W5QI4cZ5dt5I
+ EBoLnawviDcxiqPSUThdr7nm/j3phyJSjQ==
+X-Google-Smtp-Source: APiQypI7osjvHZzGJMQeIwOy4gibMUTIGvmyObz0ROfmiYS5Bg1uOzdAvHxwUv2g/n16I6yxGVwXHw==
+X-Received: by 2002:a5d:5151:: with SMTP id u17mr34134663wrt.240.1587050720509; 
+ Thu, 16 Apr 2020 08:25:20 -0700 (PDT)
 Received: from localhost.localdomain ([2a01:e35:2ec0:82b0:39cc:a07:8b48:cc56])
  by smtp.gmail.com with ESMTPSA id
- i17sm18019489wru.39.2020.04.16.08.25.16
+ i17sm18019489wru.39.2020.04.16.08.25.18
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Thu, 16 Apr 2020 08:25:17 -0700 (PDT)
+ Thu, 16 Apr 2020 08:25:19 -0700 (PDT)
 From: Neil Armstrong <narmstrong@baylibre.com>
 To: daniel@ffwll.ch,
 	dri-devel@lists.freedesktop.org
-Subject: [PATCH v5 7/8] drm/fourcc: amlogic: Add modifier definitions for the
- Scatter layout
-Date: Thu, 16 Apr 2020 17:24:59 +0200
-Message-Id: <20200416152500.29429-8-narmstrong@baylibre.com>
+Subject: [PATCH v5 8/8] drm/meson: overlay: setup overlay for Amlogic FBC
+ Scatter Memory layout
+Date: Thu, 16 Apr 2020 17:25:00 +0200
+Message-Id: <20200416152500.29429-9-narmstrong@baylibre.com>
 X-Mailer: git-send-email 2.22.0
 In-Reply-To: <20200416152500.29429-1-narmstrong@baylibre.com>
 References: <20200416152500.29429-1-narmstrong@baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200416_082519_988340_46B12EA8 
-X-CRM114-Status: UNSURE (   9.66  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200416_082522_486208_58C5CC80 
+X-CRM114-Status: GOOD (  13.75  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:441 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:444 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -104,59 +103,102 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Amlogic uses a proprietary lossless image compression protocol and format
-for their hardware video codec accelerators, either video decoders or
-video input encoders.
-
-This introduces the Scatter Memory layout, means the header contains IOMMU
-references to the compressed frames content to optimize memory access
-and layout.
-
-In this mode, only the header memory address is needed, thus the content
-memory organization is tied to the current producer execution and cannot
-be saved/dumped neither transferrable between Amlogic SoCs supporting this
-modifier.
+Setup the Amlogic FBC decoder for the VD1 video overlay plane to use
+read the FBC header as Scatter Memory layout reference.
 
 Tested-by: Kevin Hilman <khilman@baylibre.com>
 Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
 ---
- include/uapi/drm/drm_fourcc.h | 16 +++++++++++++++-
- 1 file changed, 15 insertions(+), 1 deletion(-)
+ drivers/gpu/drm/meson/meson_overlay.c | 53 ++++++++++++++++++---------
+ 1 file changed, 35 insertions(+), 18 deletions(-)
 
-diff --git a/include/uapi/drm/drm_fourcc.h b/include/uapi/drm/drm_fourcc.h
-index 664dd238574a..ac2d4753eb6d 100644
---- a/include/uapi/drm/drm_fourcc.h
-+++ b/include/uapi/drm/drm_fourcc.h
-@@ -843,6 +843,19 @@ extern "C" {
-  */
- #define DRM_FORMAT_MOD_AMLOGIC_FBC_LAYOUT_BASIC		(1ULL << 0)
+diff --git a/drivers/gpu/drm/meson/meson_overlay.c b/drivers/gpu/drm/meson/meson_overlay.c
+index bbf86e9fc0ca..29b85509dbf8 100644
+--- a/drivers/gpu/drm/meson/meson_overlay.c
++++ b/drivers/gpu/drm/meson/meson_overlay.c
+@@ -487,6 +487,10 @@ static void meson_overlay_atomic_update(struct drm_plane *plane,
+ 					  AFBC_HOLD_LINE_NUM(8) |
+ 					  AFBC_BURST_LEN(2);
  
-+/*
-+ * Amlogic FBC Scatter Memory layout
-+ *
-+ * Indicates the header contains IOMMU references to the compressed
-+ * frames content to optimize memory access and layout.
-+ *
-+ * In this mode, only the header memory address is needed, thus the
-+ * content memory organization is tied to the current producer
-+ * execution and cannot be saved/dumped neither transferrable between
-+ * Amlogic SoCs supporting this modifier.
-+ */
-+#define DRM_FORMAT_MOD_AMLOGIC_FBC_LAYOUT_SCATTER	(2ULL << 0)
++		if ((fb->modifier & DRM_FORMAT_MOD_AMLOGIC_FBC_LAYOUT_MASK) ==
++				DRM_FORMAT_MOD_AMLOGIC_FBC_LAYOUT_SCATTER)
++			priv->viu.vd1_afbc_mode |= AFBC_SCATTER_MODE;
 +
- /* Amlogic FBC Layout Options */
- #define DRM_FORMAT_MOD_AMLOGIC_FBC_OPTIONS_MASK		(0xf << 8)
+ 		if (fb->modifier & DRM_FORMAT_MOD_AMLOGIC_FBC_MEM_SAVING)
+ 			priv->viu.vd1_afbc_mode |= AFBC_BLK_MEM_MODE;
  
-@@ -854,7 +867,8 @@ extern "C" {
-  * memory.
-  *
-  * This mode reduces body layout to 3072 bytes per 64x32 superblock with
-- * the basic layout.
-+ * the basic layout and 3200 bytes per 64x32 superblock combined with
-+ * the scatter layout.
-  */
- #define DRM_FORMAT_MOD_AMLOGIC_FBC_MEM_SAVING	(1ULL << 8)
+@@ -675,23 +679,32 @@ static void meson_overlay_atomic_update(struct drm_plane *plane,
+ 	}
  
+ 	if (priv->viu.vd1_afbc) {
+-		/* Default mode is 4k per superblock */
+-		unsigned long block_size = 4096;
+-		unsigned long body_size;
+-
+-		/* 8bit mem saving mode is 3072bytes per superblock */
+-		if (priv->viu.vd1_afbc_mode & AFBC_BLK_MEM_MODE)
+-			block_size = 3072;
+-
+-		body_size = (ALIGN(priv->viu.vd1_stride0, 64) / 64) *
+-			    (ALIGN(priv->viu.vd1_height0, 32) / 32) *
+-			    block_size;
+-
+-		priv->viu.vd1_afbc_body_addr = priv->viu.vd1_addr0 >> 4;
+-
+-		/* Header is after body content */
+-		priv->viu.vd1_afbc_head_addr = (priv->viu.vd1_addr0 +
+-						body_size) >> 4;
++		if (priv->viu.vd1_afbc_mode & AFBC_SCATTER_MODE) {
++			/*
++			 * In Scatter mode, the header contains the physical
++			 * body content layout, thus the body content
++			 * size isn't needed.
++			 */
++			priv->viu.vd1_afbc_head_addr = priv->viu.vd1_addr0 >> 4;
++			priv->viu.vd1_afbc_body_addr = 0;
++		} else {
++			/* Default mode is 4k per superblock */
++			unsigned long block_size = 4096;
++			unsigned long body_size;
++
++			/* 8bit mem saving mode is 3072bytes per superblock */
++			if (priv->viu.vd1_afbc_mode & AFBC_BLK_MEM_MODE)
++				block_size = 3072;
++
++			body_size = (ALIGN(priv->viu.vd1_stride0, 64) / 64) *
++				    (ALIGN(priv->viu.vd1_height0, 32) / 32) *
++				    block_size;
++
++			priv->viu.vd1_afbc_body_addr = priv->viu.vd1_addr0 >> 4;
++			/* Header is after body content */
++			priv->viu.vd1_afbc_head_addr = (priv->viu.vd1_addr0 +
++							body_size) >> 4;
++		}
+ 	}
+ 
+ 	priv->viu.vd1_enabled = true;
+@@ -754,7 +767,8 @@ static bool meson_overlay_format_mod_supported(struct drm_plane *plane,
+ 			return false;
+ 		}
+ 
+-		if (layout != DRM_FORMAT_MOD_AMLOGIC_FBC_LAYOUT_BASIC) {
++		if (layout != DRM_FORMAT_MOD_AMLOGIC_FBC_LAYOUT_BASIC &&
++		    layout != DRM_FORMAT_MOD_AMLOGIC_FBC_LAYOUT_SCATTER) {
+ 			DRM_DEBUG_KMS("%llx invalid layout %x\n",
+ 				      modifier, layout);
+ 			return false;
+@@ -800,8 +814,11 @@ static const uint32_t supported_drm_formats[] = {
+ };
+ 
+ static const uint64_t format_modifiers[] = {
++	DRM_FORMAT_MOD_AMLOGIC_FBC(DRM_FORMAT_MOD_AMLOGIC_FBC_LAYOUT_SCATTER |
++				   DRM_FORMAT_MOD_AMLOGIC_FBC_MEM_SAVING),
+ 	DRM_FORMAT_MOD_AMLOGIC_FBC(DRM_FORMAT_MOD_AMLOGIC_FBC_LAYOUT_BASIC |
+ 				   DRM_FORMAT_MOD_AMLOGIC_FBC_MEM_SAVING),
++	DRM_FORMAT_MOD_AMLOGIC_FBC(DRM_FORMAT_MOD_AMLOGIC_FBC_LAYOUT_SCATTER),
+ 	DRM_FORMAT_MOD_AMLOGIC_FBC(DRM_FORMAT_MOD_AMLOGIC_FBC_LAYOUT_BASIC),
+ 	DRM_FORMAT_MOD_LINEAR,
+ 	DRM_FORMAT_MOD_INVALID,
 -- 
 2.22.0
 
