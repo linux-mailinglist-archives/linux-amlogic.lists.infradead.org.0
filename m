@@ -2,45 +2,45 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D10E81ACCBA
-	for <lists+linux-amlogic@lfdr.de>; Thu, 16 Apr 2020 18:08:18 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E7DCD1ACCB8
+	for <lists+linux-amlogic@lfdr.de>; Thu, 16 Apr 2020 18:08:13 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:In-Reply-To:References:Date:
 	Message-Id:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=QYqLZX68n5q1E2kjQSFcPgVFG1+5Dz4yhmtfmhhtnDU=; b=JEqCDdF0xq2M7y
-	f63U5m9t/Oak1wQFOLPHcahDOwl8OWtFp0y+bGblpArGl+cbYgxTfm6+7w/NmgeKDdS2XlQA4LAfU
-	36Y8/30chOMl19Jd1Xx3w6aE0EE3O2WruUDUqfCdfHbik33hGd4fVE5+yy/LKYML06MZhO/o31gSR
-	2kiT7XUI2PGXZ8ZGN7fg37/WgjapgcHqxGm1KhyW43gP3MPGOZjVJqQTl0GuFOClBass9H2zNXBa7
-	YQPhgPYJEuvp8KzCkQCkZ0wMuybiZY4pvIumNSr6lXcalqUSY32biaer6AQ/lQkM6AYWdZCGPy39L
-	huXFvmSHMguPr173q1SA==;
+	List-Owner; bh=ovPf/QdAglR3t7FbzTigalVUjsHr1fLWv+9KY+9zB8M=; b=D2fTgj9p3Oa8cI
+	s2CZCMNhk7MUYSTLxCg3AstVSznVNJeHX/BflbfKKC+gvariMjF85pWsuGv0i+YjzKiFJxLlkGlWj
+	+V4lrqrUiwBlFFjpK4un+HTGMDM4wKEk+jdkfO8nP7Q7++tdarrm3fIQ8nHk+g0osckZiTJauMJYe
+	r4Be8Gi6zXZpOy3Qg5wJ4090hRNPS8UTRVjXXvctn4jNh+P6+d4gAm5o7bjkcIvEcCkYQ2+uJgWgF
+	g9Ftvc1pZtyotWJ6Utsm0CmJ3SlaPTjakbHNH/sKrHQ5+T4KpS04mGisXL+hIEu4BmhFB/eHDTrUW
+	ncjNA3TrHYb5NaDowtlA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jP73m-0008Cn-HY; Thu, 16 Apr 2020 16:08:14 +0000
+	id 1jP73i-000880-3c; Thu, 16 Apr 2020 16:08:10 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jP73Z-0007yW-2v
+ id 1jP73X-0007xi-My
  for linux-amlogic@lists.infradead.org; Thu, 16 Apr 2020 16:08:02 +0000
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
  s=default; t=1587053279;
- bh=WdZxC1x61/XQWDMIUVKiEI2B8WiWGOlEw5lx80sZoVQ=;
+ bh=JBl/9WWP8yRJ9t1/CEqUw9tkPPegSOSQuerKtl7EsLc=;
  h=Subject:From:Date:References:In-Reply-To:To:Cc:Cc:From;
- b=w0FNOOX6d/yEkgdtp4Jso0KbF191yfSaQDXjpicDDEt0zYkZ6ZU/BIC4MReMhL6ox
- N3jiEMyf4syrUkmk3W3KmU+BO/QRZu1LDbCq6ggHbYmOIyopjD+rEES6XaxCx6q0SU
- wlQI3hJXGXrTmYhvMGv1O81tpkQQKXuhFpCvajLo=
+ b=tBLds0nBhktrl/cscoigKvr6mljenXB8a6Tlju/XExOZQNxfCTJCdUAOj7I0zg2cH
+ n1vs/LtCDKh4NodBuNuzdXn6dEM/XR3/ogk4kkpOia+bpT3gvhNMRyngG6POshmHD5
+ KLCxUJgrCIACbwA9z2V/iVyCBvgEJwhVzzOqHChY=
 MIME-Version: 1.0
-Subject: Re: [PATCH v7 0/5] media: meson: vdec: Add VP9 decoding support
+Subject: Re: [PATCH] ASoC: meson: aiu: simplify component addition
 From: patchwork-bot+linux-amlogic@kernel.org
-Message-Id: <158705327976.8629.1355942258079376564.git-patchwork-notify@kernel.org>
+Message-Id: <158705327941.8629.15381170941039113613.git-patchwork-notify@kernel.org>
 Date: Thu, 16 Apr 2020 16:07:59 +0000
-References: <20200304094625.2257-1-narmstrong@baylibre.com>
-In-Reply-To: <20200304094625.2257-1-narmstrong@baylibre.com>
-To: Neil Armstrong <narmstrong@baylibre.com>
+References: <20200217092019.433402-1-jbrunet@baylibre.com>
+In-Reply-To: <20200217092019.433402-1-jbrunet@baylibre.com>
+To: Jerome Brunet <jbrunet@baylibre.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200416_090801_170722_51E1F6F2 
-X-CRM114-Status: UNSURE (   5.59  )
+X-CRM114-CacheID: sfid-20200416_090759_763757_0422E4E0 
+X-CRM114-Status: UNSURE (   5.14  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
@@ -78,32 +78,22 @@ Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
 Hello:
 
-This series was applied to khilman/linux-amlogic.git (refs/heads/for-next).
+This patch was applied to khilman/linux-amlogic.git (refs/heads/for-next).
 
-On Wed,  4 Mar 2020 10:46:20 +0100 you wrote:
-> Hello,
+On Mon, 17 Feb 2020 10:20:19 +0100 you wrote:
+> Now that the component name is unique within ASoC, there is no need to
+> hack the debugfs prefix to add more than one ASoC component to a linux
+> device. Remove the unnecessary function and use
+> snd_soc_register_component() directly.
 > 
-> This patchset aims to bring VP9 decoding support to Amlogic GXL, G12A & SM1
-> platforms for the amlogic stateful video decoder driver.
-> 
-> With this, it passes v4l2-compliance with streaming on Amlogic G12A and
-> Amlogic SM1 SoCs successfully using the stream at [1] with a fixed
-> pyv4l2compliance script for VP9 at [2].
+> Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
 > 
 > [...]
 
 
 Here is a summary with links:
-  - [v7,1/5] media: meson: vdec: align stride on 32 bytes
-    https://git.kernel.org/khilman/linux-amlogic/c/7624c9cd5b26417648d3b5fe50f5bdef4d057199
-  - [v7,2/5] media: meson: vdec: add helpers for lossless framebuffer compression buffers
-    https://git.kernel.org/khilman/linux-amlogic/c/09b455d1daf570457d076c5c0e9fa52103a67aed
-  - [v7,3/5] media: meson: vdec: add common HEVC decoder support
-    https://git.kernel.org/khilman/linux-amlogic/c/823a7300340e36ee2c1941e672f33c9419928d1c
-  - [v7,4/5] media: meson: vdec: add VP9 input support
-    https://git.kernel.org/khilman/linux-amlogic/c/e9a3eb4819caf9d1408d61af059a21c535294824
-  - [v7,5/5] media: meson: vdec: add VP9 decoder support
-    https://git.kernel.org/khilman/linux-amlogic/c/00c43088aa680989407b6afbda295f67b3f123f1
+  - ASoC: meson: aiu: simplify component addition
+    https://git.kernel.org/khilman/linux-amlogic/c/0247142233239dc235f8239aab5c7991250d4e66
 
 You are awesome, thank you!
 
