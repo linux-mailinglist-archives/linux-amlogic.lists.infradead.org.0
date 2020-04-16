@@ -2,45 +2,46 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E7DCD1ACCB8
-	for <lists+linux-amlogic@lfdr.de>; Thu, 16 Apr 2020 18:08:13 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E80261ACCBB
+	for <lists+linux-amlogic@lfdr.de>; Thu, 16 Apr 2020 18:08:18 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:In-Reply-To:References:Date:
 	Message-Id:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ovPf/QdAglR3t7FbzTigalVUjsHr1fLWv+9KY+9zB8M=; b=D2fTgj9p3Oa8cI
-	s2CZCMNhk7MUYSTLxCg3AstVSznVNJeHX/BflbfKKC+gvariMjF85pWsuGv0i+YjzKiFJxLlkGlWj
-	+V4lrqrUiwBlFFjpK4un+HTGMDM4wKEk+jdkfO8nP7Q7++tdarrm3fIQ8nHk+g0osckZiTJauMJYe
-	r4Be8Gi6zXZpOy3Qg5wJ4090hRNPS8UTRVjXXvctn4jNh+P6+d4gAm5o7bjkcIvEcCkYQ2+uJgWgF
-	g9Ftvc1pZtyotWJ6Utsm0CmJ3SlaPTjakbHNH/sKrHQ5+T4KpS04mGisXL+hIEu4BmhFB/eHDTrUW
-	ncjNA3TrHYb5NaDowtlA==;
+	List-Owner; bh=U2ydZb5xv6BtAjazvJdvPagnWizPTpUga+OgGTTjQ5c=; b=sFkvKj6ccvrRAn
+	OgMPRoAAehlZlANveLpT1fUCvhYU9YgrC72hH4aJ5wOrKpCE5a8Cok28j6fOKLIobkc/ML0HiPClK
+	lVM5NeUEValgD5uhFz2iuq6tYhvwLWQlevyeSxe0orESrCscJWlDoSDrxhQqmyrXgsKweRvhmHZCH
+	pJIQJp4QcCyaK2aZAVYJvKjADDWiaoOt1f7LHzIvWKwL4uR+ab4pA3C+/QavV8EUARSm/gZ+b62DM
+	8TlFCtWgwwMRaSQWyHdFEe6WHTGCQCK89jFVmZnATLg0vaRIlIy6wHqY6qeEmB3Q12r9iN6G5siAa
+	wiWX8tZiG9xZRiQZ6/2Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jP73i-000880-3c; Thu, 16 Apr 2020 16:08:10 +0000
+	id 1jP73p-0008FM-8E; Thu, 16 Apr 2020 16:08:17 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jP73X-0007xi-My
+ id 1jP73Z-0007yd-7V
  for linux-amlogic@lists.infradead.org; Thu, 16 Apr 2020 16:08:02 +0000
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
  s=default; t=1587053279;
- bh=JBl/9WWP8yRJ9t1/CEqUw9tkPPegSOSQuerKtl7EsLc=;
+ bh=nKInQqIFxrRdK9se0ygtVxQ3ISoEC9gNdEjEl1Pcta4=;
  h=Subject:From:Date:References:In-Reply-To:To:Cc:Cc:From;
- b=tBLds0nBhktrl/cscoigKvr6mljenXB8a6Tlju/XExOZQNxfCTJCdUAOj7I0zg2cH
- n1vs/LtCDKh4NodBuNuzdXn6dEM/XR3/ogk4kkpOia+bpT3gvhNMRyngG6POshmHD5
- KLCxUJgrCIACbwA9z2V/iVyCBvgEJwhVzzOqHChY=
+ b=w/tdcIsFwDqeqRpnpnrmGjGHpgi0Y+lb8r4ui1SBmmS4TQbNKSOtlaVCg5WyKvvA3
+ c8oCsVCRmXqPxAGQxu2H3DU+FOygeL0O/dRQ0OtrPuRFA0/xQVEURG0uJdvSIbbReo
+ ifYSSWJltRhtj4N0FdF5kPY98BU94XPgLOmvb9NQ=
 MIME-Version: 1.0
-Subject: Re: [PATCH] ASoC: meson: aiu: simplify component addition
+Subject: Re: [PATCH v5 00/11] drm/bridge: dw-hdmi: implement bus-format
+ negotiation and YUV420 support
 From: patchwork-bot+linux-amlogic@kernel.org
-Message-Id: <158705327941.8629.15381170941039113613.git-patchwork-notify@kernel.org>
+Message-Id: <158705327993.8629.15638535254430771487.git-patchwork-notify@kernel.org>
 Date: Thu, 16 Apr 2020 16:07:59 +0000
-References: <20200217092019.433402-1-jbrunet@baylibre.com>
-In-Reply-To: <20200217092019.433402-1-jbrunet@baylibre.com>
-To: Jerome Brunet <jbrunet@baylibre.com>
+References: <20200304104052.17196-1-narmstrong@baylibre.com>
+In-Reply-To: <20200304104052.17196-1-narmstrong@baylibre.com>
+To: Neil Armstrong <narmstrong@baylibre.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200416_090759_763757_0422E4E0 
-X-CRM114-Status: UNSURE (   5.14  )
+X-CRM114-CacheID: sfid-20200416_090801_301177_559CD707 
+X-CRM114-Status: UNSURE (   6.73  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
@@ -78,22 +79,43 @@ Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
 Hello:
 
-This patch was applied to khilman/linux-amlogic.git (refs/heads/for-next).
+This series was applied to khilman/linux-amlogic.git (refs/heads/for-next).
 
-On Mon, 17 Feb 2020 10:20:19 +0100 you wrote:
-> Now that the component name is unique within ASoC, there is no need to
-> hack the debugfs prefix to add more than one ASoC component to a linux
-> device. Remove the unnecessary function and use
-> snd_soc_register_component() directly.
+On Wed,  4 Mar 2020 11:40:41 +0100 you wrote:
+> Hi Philippe, Heiko, Maxime, Laurent,
 > 
-> Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
+> A bad negociation was detected on platforms not implementing a bridge on the
+> encoder side, which has been fixed in this version.
+> 
+> Could you check it doesn't break your platforms using dw-hdmi ? Especially
+> patches 1-5.
 > 
 > [...]
 
 
 Here is a summary with links:
-  - ASoC: meson: aiu: simplify component addition
-    https://git.kernel.org/khilman/linux-amlogic/c/0247142233239dc235f8239aab5c7991250d4e66
+  - [v5,01/11] drm/bridge: dw-hdmi: set mtmdsclock for deep color
+    https://git.kernel.org/khilman/linux-amlogic/c/c6cae702340069d9f48925bd2201359602a72e83
+  - [v5,02/11] drm/bridge: dw-hdmi: add max bpc connector property
+    https://git.kernel.org/khilman/linux-amlogic/c/b8e810e868f73a698af9bde1ac51a332c0f61fc4
+  - [v5,03/11] drm/bridge: dw-hdmi: Plug atomic state hooks to the default implementation
+    https://git.kernel.org/khilman/linux-amlogic/c/a5cf9e2e52b638ae62049bf06d2283f5d757ac7d
+  - [v5,04/11] drm/bridge: synopsys: dw-hdmi: add bus format negociation
+    https://git.kernel.org/khilman/linux-amlogic/c/6c3c719936dafeb5df3a625cd57a674bf1d6ef31
+  - [v5,05/11] drm/bridge: synopsys: dw-hdmi: allow ycbcr420 modes for >= 0x200a
+    https://git.kernel.org/khilman/linux-amlogic/c/f14d3f6c39f39acf0eec90f4dcf1105f7be1fc1b
+  - [v5,06/11] drm/meson: venc: make drm_display_mode const
+    https://git.kernel.org/khilman/linux-amlogic/c/0fad640bbfed33e7e2a8db056e3782b396c42185
+  - [v5,07/11] drm/meson: meson_dw_hdmi: add bridge and switch to drm_bridge_funcs
+    https://git.kernel.org/khilman/linux-amlogic/c/f43aa58432de8fba8975826eedbd51425b791688
+  - [v5,08/11] drm/meson: dw-hdmi: stop enforcing input_bus_format
+    https://git.kernel.org/khilman/linux-amlogic/c/1fd34184aab0fe04c5d50af01a37fe1bb8bd6595
+  - [v5,09/11] drm/meson: venc: add support for YUV420 setup
+    https://git.kernel.org/khilman/linux-amlogic/c/64db601a9561778b41add87270daf512c9bf0433
+  - [v5,10/11] drm/meson: vclk: add support for YUV420 setup
+    https://git.kernel.org/khilman/linux-amlogic/c/e5fab2ec9ca4f7db47aaf1d7f39e43a13b03a4b7
+  - [v5,11/11] drm/meson: Add YUV420 output support
+    https://git.kernel.org/khilman/linux-amlogic/c/8496a2172d7cd25d1baa734b756cbee4574d4652
 
 You are awesome, thank you!
 
