@@ -2,45 +2,46 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D5E4E1ACCB7
-	for <lists+linux-amlogic@lfdr.de>; Thu, 16 Apr 2020 18:08:11 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1DA801ACCB9
+	for <lists+linux-amlogic@lfdr.de>; Thu, 16 Apr 2020 18:08:14 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:In-Reply-To:References:Date:
 	Message-Id:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=wGr/ma0WkO10LRJmtQGgTp6SW2hDk8MIoXCYA3d1Kxg=; b=nw8IzW3c/N+uT3
-	XiRT1tG+cC0y6vS0fQTN3B8UGVoSfWcKQdOzirAZwmrw+/tetYd9TqaQcfNUN+BXwzQx01/xiMzCZ
-	htcfNVhbGyq+BqLq+9CI/P3X1XsS2pT3j2EvBmB9YHRL68yaXQ7rRdS8X3m8yC6SWug6VyNJs+CBw
-	Ur/QRqEWiRPUPSKTvBOOHbtzfYN6c9Q042sVrNCd2n3Fyh4i7hOHam+DGs6a7ZDCvnUczM4SV1j41
-	UEH3X1LJpf26taQyyC373gknBVPcwTkHQh0ujoK3h96NLkedkABr2hgGVxUqE/aK9VxlTcB+/984E
-	sdTL5/nCnzB1k9SV8uhQ==;
+	List-Owner; bh=E1E3bp52Myvj+7fT3xGLcHvTaAEhmoYXeANSGM98VsA=; b=GYgarS+9gCItk6
+	9UvczIoxEBs/1UcfnXVCnmw/YugTUzIVlFNJtdycoOx342f8klkaJld6uF0VYGxRxrTJL7UEZFeFc
+	gf318R1Wg3E7JQ7Uh4eZiv4PEKzTnAGFuVZg/22/IajgzQLAxKdOLIA61yAv2lCIPPxCuVu/svG+r
+	6ij2NNki4/BiPexVF/GbmYac2LV+P656/yijI2JCFdZTRFEmyyVz5Dr4QS5D9EONxxNlXXZ9lSU+q
+	DjE6ZiVWETQpreBCiwMnCRB8imCy4IXPhgicslNgfSB1QyOfQXoVSgtSQpO1rllBFjZJJ2jJPlTD0
+	tpY04PI4jGd4U1pl8OLA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jP73g-000851-HW; Thu, 16 Apr 2020 16:08:08 +0000
+	id 1jP73k-0008A6-6w; Thu, 16 Apr 2020 16:08:12 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jP73X-0007wt-Iw
+ id 1jP73X-0007w3-Jh
  for linux-amlogic@lists.infradead.org; Thu, 16 Apr 2020 16:08:02 +0000
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
  s=default; t=1587053279;
- bh=26saxJBCh7jWjx2b0sFwywCLhAPLYPIswfHmt0TSNK0=;
+ bh=emXYU/Z4zKtum/4JNVB3OwLtpPe+lQENB60d9Sg0lzE=;
  h=Subject:From:Date:References:In-Reply-To:To:Cc:Cc:From;
- b=lYOr0DqXcUPicUQnxKeVbV9CQOmxT0+uQtOI7A725D6OjYKGlp3M5kuE9/ML+zLTs
- cGxR9FlKvGV2xRxDTvwYDDhiM/2DcEb/gCEbXjCPWn/UcNGlW/Ij1N4uT4w/5YS7Su
- sz8g08va5qsc8YAWBRf3MDCRYdzirSP3AuePEWig=
+ b=p9GgQSJmoPK7P8syDEEunXqoLPfkojTb/zb2H1JkAOEbAJvVa6dww9QEjuXRqHPaq
+ iRwU9woIrVpc6kgLytMAQ1gaHgCoR+UHERs7cxhY/xljE5Xu+GEn/M2WDJ8bqxLWhM
+ JybwGZe/3Rhs8yJ5ox4bFQrBbB/eqVALpu0Nr7dI=
 MIME-Version: 1.0
-Subject: Re: [PATCH v2] pinctrl: meson: add tsin pinctrl for meson gxbb/gxl/gxm
+Subject: Re: [PATCH v2] dt-bindings: usb: dwc2: fix bindings for amlogic,
+ meson-gxbb-usb
 From: patchwork-bot+linux-amlogic@kernel.org
-Message-Id: <158705327923.8629.12866723834756541229.git-patchwork-notify@kernel.org>
+Message-Id: <158705327905.8629.15771039126068407146.git-patchwork-notify@kernel.org>
 Date: Thu, 16 Apr 2020 16:07:59 +0000
-References: <1583377666-13378-1-git-send-email-christianshewitt@gmail.com>
-In-Reply-To: <1583377666-13378-1-git-send-email-christianshewitt@gmail.com>
-To: chewitt <christianshewitt@gmail.com>
+References: <20200331083729.24906-1-narmstrong@baylibre.com>
+In-Reply-To: <20200331083729.24906-1-narmstrong@baylibre.com>
+To: Neil Armstrong <narmstrong@baylibre.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200416_090759_652950_8B5755CE 
-X-CRM114-Status: UNSURE (   4.92  )
+X-CRM114-CacheID: sfid-20200416_090759_677193_06805B0B 
+X-CRM114-Status: UNSURE (   4.60  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
@@ -80,21 +81,20 @@ Hello:
 
 This patch was applied to khilman/linux-amlogic.git (refs/heads/for-next).
 
-On Thu,  5 Mar 2020 07:07:46 +0400 you wrote:
-> From: Igor Vavro <afl2001@gmail.com>
+On Tue, 31 Mar 2020 10:37:29 +0200 you wrote:
+> The amlogic,meson-gxbb-usb compatible needs snps,dwc2 aswell like other
+> Amlogic SoC.
 > 
-> Add the tsin pinctrl definitions needed for integrated DVB hardware
-> support on Meson GXBB/GXL/GXM boards.
-> 
-> changes in v2
-> - fix ordering and numbering of uart_c ping flagged by Otto in [1]
+> Fixes: f3ca745d8a0e ("dt-bindings: usb: Convert DWC2 bindings to json-schema")
+> Reviewed-by: Benjamin Gaignard <benjamin.gaignard@st.com>
+> Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
 > 
 > [...]
 
 
 Here is a summary with links:
-  - [v2] pinctrl: meson: add tsin pinctrl for meson gxbb/gxl/gxm
-    https://git.kernel.org/khilman/linux-amlogic/c/eaee5d9f203141496a7ad2158b715dda67c074c8
+  - [v2] dt-bindings: usb: dwc2: fix bindings for amlogic, meson-gxbb-usb
+    https://git.kernel.org/khilman/linux-amlogic/c/28d5ee04d9f970ccf670b49dc4851a337ed90495
 
 You are awesome, thank you!
 
