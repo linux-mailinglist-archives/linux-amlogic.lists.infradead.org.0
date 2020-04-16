@@ -2,45 +2,46 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B29C11ACCBD
-	for <lists+linux-amlogic@lfdr.de>; Thu, 16 Apr 2020 18:08:23 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E58271ACCC0
+	for <lists+linux-amlogic@lfdr.de>; Thu, 16 Apr 2020 18:08:26 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:In-Reply-To:References:Date:
 	Message-Id:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=zd3pYC3euY24HR+7KUXKgbGGimG042Fh3xA6a/AYnrA=; b=DoUM66XmbM7AsO
-	jkqwPr1zVsXuVfJpGX5MHNfcIet8E6xDmJy2j75gvFZ2fVAfPEax9SoJPS1P/L5lu+KgxUpIVhdQT
-	DlWoXZ/LiybTRBrFMr/FcLZIzF1LvzEz3LDtiQ5cAq2UtwaxIosKlAQRgA9EmY67YEXxSvKx8qCLL
-	iIeNQLuFsa3/BSuDWgvci9fPQO7N2gAoupNXbdyH/RfC/1uCzvH4zZeB2qxWbf2Zqq0RUkkk/6mqJ
-	AqmGSVMXpchdrwSO4/g1AOwvWVq5LtjHjAtxrAmidC3aEDchM6tI8Dg7yFDdkvC9lJLx3GKdFKksF
-	n87LXnXG0hFZswmXss0w==;
+	List-Owner; bh=+kJrFTi8AoczyjElT3EgP10cQfgsTz9dUVUPW+6FGyU=; b=fEBJYBU0ZyUE+h
+	FsFTpG0TxfjEO7VdY1GtwIpzRYdPgLgzzds2c/ufwQH4iW5yZ68QeyLHPyPtdxyloKyw9Lgs5lwCH
+	oD4dxHkH9Rea6uDSUScid0q/i9RVwLt2lBvy5BI4S/KJsH6Ppyv2wGrIjVJcEPeqGRCZ1nVu09+VN
+	eDvfUDzfy03m4CYXh81TlPZMlAwtO8yT1H090CtTatqQYrfEet/rvXuVYP3dGaRHVqwkkh/kn4GX8
+	trITnyuhEgcmo96uWPgzJ670pYHjSUV0I7UPjBHJX320kl090Vnk9H4XxawsATj4iEGHTuivvgLsy
+	bmILgmt3ZL0a507uWTWg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jP73r-0008J2-0L; Thu, 16 Apr 2020 16:08:19 +0000
+	id 1jP73w-0008Qj-R5; Thu, 16 Apr 2020 16:08:24 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jP73Z-0007ye-85
- for linux-amlogic@lists.infradead.org; Thu, 16 Apr 2020 16:08:03 +0000
+ id 1jP73a-000800-Iv
+ for linux-amlogic@lists.infradead.org; Thu, 16 Apr 2020 16:08:04 +0000
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
  s=default; t=1587053280;
- bh=np5iLIiiOLfD6BVimFeHT7oAR8q+pKTHUEa8Qtiw2BM=;
+ bh=WPW5N87csv6pI6yIW06dGZ/DAwJzoP3oo2KNnay3nKY=;
  h=Subject:From:Date:References:In-Reply-To:To:Cc:Cc:From;
- b=vINT4FvKZPKNHeMCp/+854jutDtpb3P1w3LWxjtogtkwknKji2/pUCfz1AniKE4KG
- XYCQPoUYSXDYMvvv+HNefIfSkJY7Jgu7ZQivdlLj7SVoE0QXenj4aNF6JeQM+f9YY+
- 3g0dt+Jdi5S3qGI44znX7Tezr5Byb4eGFY4wO9yY=
+ b=puTqEKhoqNX/MisnmBv/DXM+OCIzoS44/SS+Vc3uRNi5A8tooUy+13wQWxQjYERxW
+ gdP7lADtDRQlbhZnfMIYECJRzlQbBNmIrAoNFZ6uQYbH/CIQPLv7O8iZacFCEt2Y7x
+ g6ye7hyYtJBZDbLw9ND+qDcPjw5ko3Hhxy6TcvIA=
 MIME-Version: 1.0
-Subject: Re: [PATCH v2 0/3] ASoC: meson: g12a: add internal audio DAC support
+Subject: Re: [PATCH] mtd: rawnand: Replace zero-length array with
+ flexible-array member
 From: patchwork-bot+linux-amlogic@kernel.org
-Message-Id: <158705328010.8629.9679666083825589842.git-patchwork-notify@kernel.org>
+Message-Id: <158705328088.8629.11835381038570156425.git-patchwork-notify@kernel.org>
 Date: Thu, 16 Apr 2020 16:08:00 +0000
-References: <20200221153607.1585499-1-jbrunet@baylibre.com>
-In-Reply-To: <20200221153607.1585499-1-jbrunet@baylibre.com>
-To: Jerome Brunet <jbrunet@baylibre.com>
+References: <20200226222722.GA18020@embeddedor>
+In-Reply-To: <20200226222722.GA18020@embeddedor>
+To: Gustavo A. R. Silva <gustavo@embeddedor.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200416_090801_308254_3435E3B0 
-X-CRM114-Status: UNSURE (   5.73  )
+X-CRM114-CacheID: sfid-20200416_090802_649903_F14F7422 
+X-CRM114-Status: UNSURE (   4.78  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
@@ -78,26 +79,25 @@ Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
 Hello:
 
-This series was applied to khilman/linux-amlogic.git (refs/heads/for-next).
+This patch was applied to khilman/linux-amlogic.git (refs/heads/for-next).
 
-On Fri, 21 Feb 2020 16:36:04 +0100 you wrote:
-> Like the gxl, the Amlogic g12a and sm1 SoC families have a t9015 internal
-> audio DAC. On these more recent SoCs, any of the 3 TDM outputs can be
-> routed to the internal DAC. This routing is done by a small glue device
-> called 'toacodec'. This patchset adds support for it.
+On Wed, 26 Feb 2020 16:27:22 -0600 you wrote:
+> The current codebase makes use of the zero-length array language
+> extension to the C90 standard, but the preferred mechanism to declare
+> variable-length types such as these ones is a flexible array member[1][2],
+> introduced in C99:
 > 
-> This was tested on the amlogic reference design g12a-u200.
+> struct foo {
+>         int stuff;
+>         struct boo array[];
+> };
 > 
 > [...]
 
 
 Here is a summary with links:
-  - [v2,1/3] ASoC: meson: g12a: add toacodec dt-binding documentation
-    https://git.kernel.org/khilman/linux-amlogic/c/bd56e593da19de22284951c33ce5c419258171bf
-  - [v2,2/3] ASoC: meson: g12a: add internal DAC glue driver
-    https://git.kernel.org/khilman/linux-amlogic/c/af2618a2eee8531e134c42194143c2f4faef94ba
-  - [v2,3/3] ASoC: meson: axg-card: add toacodec support
-    https://git.kernel.org/khilman/linux-amlogic/c/b38c4a8a0291c31a660cd77761202ebb18332fb7
+  - mtd: rawnand: Replace zero-length array with flexible-array member
+    https://git.kernel.org/khilman/linux-amlogic/c/49f1c33076ca56871ffddc4800b04524204ea889
 
 You are awesome, thank you!
 
