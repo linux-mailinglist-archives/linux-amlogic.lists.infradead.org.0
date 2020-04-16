@@ -2,46 +2,45 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7387C1ACCB4
-	for <lists+linux-amlogic@lfdr.de>; Thu, 16 Apr 2020 18:08:07 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 19C311ACCB5
+	for <lists+linux-amlogic@lfdr.de>; Thu, 16 Apr 2020 18:08:10 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:In-Reply-To:References:Date:
 	Message-Id:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=+E69svoGDDgLoGZOCYub7Ron21G9MFlP+HeColTERPs=; b=qwZtLweyt4Rzk8
-	RCChf3Gp5DM/iM82rghFCnMsiEn//RaPgN531V1vcB6t+B/lRREpjEHEG8k75gJSaCNpe7iLKzLdF
-	kjOboexZLqsxd9deWKdJB1tMvtg4i7IrwKgJ5Cp6FRjwtvC6R5Px97d7lNc64chSh+LbvJxeSLkQX
-	5L+oLzJoMAomsjBR/o5N8O0zS2v4EFcmeZI4GXLKsHrvEmzVG79vsDdaZSxEA0e/TlSdCl7IujtAN
-	0VJMxnqo3pA2CkHhmoKtA/JFNTKOPoZFwsNJaN1yslDhfPCJYC+Tbqz94OprSyGbvNR1mHj8Oy8Gp
-	r1DogeaLGg/fBgkKon2g==;
+	List-Owner; bh=7HeXVftTe/FB+aoyjjNdskRkoiVMDAkPrjBTHBTTg40=; b=otM0q4XACaFeWa
+	untK9O9azX6G/gDT1Q7zrhc0aZpiE2lTl/LQGuZgIItYaj+YQjWc799ZCZxSEYkCFWp9aR95kIppX
+	2ylX0tMYU513qTnG5+cXHOY5TsKX/1xVBEqJt1MaX69mpQz33QtF8saTOfprD6ZwbyX/W6u7/PNWi
+	y5G9w6ykgPIwrQiYFXPNJybHWldCFcFelEUA9c9v+Tm9BGJXp58Alkd8CMGTlCu3WNqxC7udFgcG7
+	tFJx7gMSs7cYpsP/KFI/PrGjvEYMSO+/VftvivUkfAvzjA/tNkDr42uhRGHqYXhtiPllbByEnA6sE
+	gHmj5fzpwBnogmpkYcvw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jP73d-00082x-Ha; Thu, 16 Apr 2020 16:08:05 +0000
+	id 1jP73b-00080I-VJ; Thu, 16 Apr 2020 16:08:03 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jP73X-0007vJ-Dj
+ id 1jP73X-0007uL-Bk
  for linux-amlogic@lists.infradead.org; Thu, 16 Apr 2020 16:08:00 +0000
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
  s=default; t=1587053278;
- bh=3KYcY7QwTtN44fIjOrYHYufW/GkFx0KGAJ8bvoga8GU=;
+ bh=WcTSUeng90I73uoIsuE3XYbqxCOQAQZkhDYnzwdrfO8=;
  h=Subject:From:Date:References:In-Reply-To:To:Cc:Cc:From;
- b=qt3QeY38Ljr3kEgHQ2yN7KwwLrANlAti8ZNc1NqLPO3zJDpbNfvRefo1Aw08bvUmG
- 0jeqP2JPLFNl0jwHjxZwx6ZWnPujSUmgF9r2okzjZuKGSE0Z/xPLrlP9BJf/kC96LT
- v5i3/dX2UoOFhJ5NFYdimMYQ/++hzCRK67fgC0rQ=
+ b=NXa0AJuo5Y8lN9vLHpnnt3MnZBrZfQpMYHlsMo/9SyiCJMtKnETx27ESVB/SRlu69
+ uk6QiAPq0mkhOB7ebvZCm7jwQ8tEzAh9leNWsG/vXMvaBbz2XnDNKJgTyWwijRQk+o
+ ay90IEGi+vr9Zc57om2dj5ypy7Ms0h9TpjZNwSjU=
 MIME-Version: 1.0
-Subject: Re: [PATCH 0/9] spi: meson-spicc: add support for AXG and G12A
- variants
+Subject: Re: [PATCH 0/9] ASoC: meson: gx: add audio output support
 From: patchwork-bot+linux-amlogic@kernel.org
-Message-Id: <158705327887.8629.9155753031339814791.git-patchwork-notify@kernel.org>
+Message-Id: <158705327869.8629.1708403114868511667.git-patchwork-notify@kernel.org>
 Date: Thu, 16 Apr 2020 16:07:58 +0000
-References: <20200312133131.26430-1-narmstrong@baylibre.com>
-In-Reply-To: <20200312133131.26430-1-narmstrong@baylibre.com>
-To: Neil Armstrong <narmstrong@baylibre.com>
+References: <20200213155159.3235792-1-jbrunet@baylibre.com>
+In-Reply-To: <20200213155159.3235792-1-jbrunet@baylibre.com>
+To: Jerome Brunet <jbrunet@baylibre.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200416_090759_481607_95CE19BC 
-X-CRM114-Status: UNSURE (   6.80  )
+X-CRM114-CacheID: sfid-20200416_090759_423510_0B38F7A1 
+X-CRM114-Status: UNSURE (   5.24  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
@@ -81,36 +80,39 @@ Hello:
 
 This series was applied to khilman/linux-amlogic.git (refs/heads/for-next).
 
-On Thu, 12 Mar 2020 14:31:22 +0100 you wrote:
-> The SPICC controller in Amlogic AXG & G12A is capable of driving the
-> CLK/MOSI/SS signal lines through the idle state which avoid the signals
-> floating in unexpected state, is capable of using linear clock divider
-> to reach a much fine tuned range of clocks, while the old controller only
-> uses a power of two clock divider, result at a more coarse clock range and
-> finally is capable of running at 80M clock.
+On Thu, 13 Feb 2020 16:51:50 +0100 you wrote:
+> This patchset adds support for the i2s and spdif audio outputs of the
+> amlogic GX SoC family, such the S905, S905X/D, S912 and S805X. These SoCs
+> are used by a fair amount of boards actively maintained upstream.
+> 
+> This was tested on:
+>  * amlogic s912 q200
+>  * libretech s805x-ac (frite)
+>  * libretech s905x-cc (potato)
+>  * libretech s905d-pc (tartiflette)
 > 
 > [...]
 
 
 Here is a summary with links:
-  - [1/9] spi: meson-spicc: remove unused variables
-    https://git.kernel.org/khilman/linux-amlogic/c/b9dfb20eed5c7dab37d6267a985dbe16df9e4293
-  - [2/9] spi: meson-spicc: enhance output enable feature
-    https://git.kernel.org/khilman/linux-amlogic/c/a6cda1f905b4a5442eecce94bda1e136f7e1e539
-  - [3/9] spi: meson-spicc: add a linear clock divider support
-    https://git.kernel.org/khilman/linux-amlogic/c/3e0cf4d3fc2985beee011e9a1bbb8374fc02c0a0
-  - [4/9] spi: meson-spicc: support max 80MHz clock
-    https://git.kernel.org/khilman/linux-amlogic/c/3196816ff64bb3a21fbda89e7355b6b87c3f50a0
-  - [5/9] spi: meson-spicc: add min sclk for each compatible
-    https://git.kernel.org/khilman/linux-amlogic/c/8791068dab979819e01f41736953b9b2e462867b
-  - [6/9] spi: meson-spicc: setup IO line delay
-    https://git.kernel.org/khilman/linux-amlogic/c/f27bff479ea3de9ca325d4f8e8c8b49a87d6b0c5
-  - [7/9] spi: meson-spicc: adapt burst handling for G12A support
-    https://git.kernel.org/khilman/linux-amlogic/c/0eb707ac7dd7a4329d93d47feada6c9bb5ea8ee9
-  - [8/9] dt-bindings: spi: amlogic, meson-gx-spicc: add Amlogic G12A compatible
-    https://git.kernel.org/khilman/linux-amlogic/c/9ea7db818d9dcbbde581925b82bbe259e1926e20
-  - [9/9] spi: meson-spicc: add support for Amlogic G12A
-    https://git.kernel.org/khilman/linux-amlogic/c/4e3d322058a5e5afda100005a94ec7f0bf509d43
+  - [1/9] ASoC: core: allow a dt node to provide several components
+    https://git.kernel.org/khilman/linux-amlogic/c/1dfa5a5ab34560fd9647083f623d19705be2e706
+  - [2/9] ASoC: meson: g12a: extract codec-to-codec utils
+    https://git.kernel.org/khilman/linux-amlogic/c/9c29fd9bdf92900dc0cc5c2d8f58951a7bdc0f41
+  - [3/9] ASoC: meson: aiu: add audio output dt-bindings
+    https://git.kernel.org/khilman/linux-amlogic/c/06b72824386795bf6f0a6ac0f0cfef6b7f0165c1
+  - [4/9] ASoC: meson: aiu: add i2s and spdif support
+    https://git.kernel.org/khilman/linux-amlogic/c/6ae9ca9ce986bffe71fd0fbf9595de8500891b52
+  - [5/9] ASoC: meson: aiu: add hdmi codec control support
+    https://git.kernel.org/khilman/linux-amlogic/c/b82b734c0e9a75e1b956214ac523a8eb590f51f3
+  - [6/9] ASoC: meson: aiu: add internal dac codec control support
+    https://git.kernel.org/khilman/linux-amlogic/c/65816025d46169973d308d83fbcf5c3981ed5621
+  - [7/9] ASoC: meson: axg: extract sound card utils
+    https://git.kernel.org/khilman/linux-amlogic/c/aa9c3b7273a58b5d9b2c1161b76b5fc8ea8c159b
+  - [8/9] ASoC: meson: gx: add sound card dt-binding documentation
+    https://git.kernel.org/khilman/linux-amlogic/c/fd00366b8e4125d29e32d49053a702ddf77430f6
+  - [9/9] ASoC: meson: gx: add sound card support
+    https://git.kernel.org/khilman/linux-amlogic/c/e37a0c313a0f8ba0b8de9c30db98fbc77bd8d446
 
 You are awesome, thank you!
 
