@@ -2,46 +2,45 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6B0AE1ACCBC
-	for <lists+linux-amlogic@lfdr.de>; Thu, 16 Apr 2020 18:08:22 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D651A1ACCC1
+	for <lists+linux-amlogic@lfdr.de>; Thu, 16 Apr 2020 18:08:29 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:In-Reply-To:References:Date:
 	Message-Id:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=lWAPluEeeHTb/X82hK0sFL4g6xfEaYx1W5+AKn9Za4M=; b=Ka8RRItYnUOzze
-	JafAeV0uYHGkLp3KiVXBWfXD8jwgsRX/ONHOO/VXC8mI5Jh0Xiyw8Iy73MalcW7t/vUOfu9n4O3O/
-	Ib+Td2A9h8lTLQw46IIDf+aeCWl7TbS1XrEfElzyshz2OAbSGz+FgQpCCcCDU+LoBkA3DfLzn0nhi
-	7Ivy1Jne9CGEhRz272H/Ipp1tGMVApHQDiCnkeIrdsEY/CHEr0bUK1RVuA4+Jsijm+ceQVIExMPJQ
-	fjamVdQfwiCT70ZgsD/G9ISVZPzmvM7kN4499yr01Y8bOMvovFTCRNlHepg47KBUtR+ZINz9lzQMH
-	rStZgWKyqouXemKFI8WA==;
+	List-Owner; bh=AROd604DHYEH5DqDIHP0ZDpvNq6JuRXTr8V7MFall8Y=; b=qlbT3jTWZiAdZp
+	b5h+BO5vPsquRW2X/dzsFYldJwq8bSshrOcv/SOFS7d6QUdXVM0oJzW9XgZhVtixKE0Roy+IIjwlM
+	bqHjvk6LDHEJZSQfwVjFkpPokS9N1fNMJi4bGZoIqrRb5lBygfL6YVepzs3iAhG6lJ+W8rt/3Bwal
+	iGT0K1ou1PzQC/InsfifWmnp8mHjJIWDk+Ot3GsW/PWf4ww4TJefNf/XeyBtJdc1SNyojC0aOgav4
+	nJWRqcVLiD3/anOxnYd0kWTF48BghPu7SSki8R/aHx9kBP1+9Ir1Lrjtvv8Q3gdHRxaIeyU+0YkqV
+	S5QwKB0XUZB8vj0Ya07Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jP73t-0008LG-1x; Thu, 16 Apr 2020 16:08:21 +0000
+	id 1jP740-0008VR-Bi; Thu, 16 Apr 2020 16:08:28 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jP73Z-0007yu-DL
+ id 1jP73Z-0007yt-CK
  for linux-amlogic@lists.infradead.org; Thu, 16 Apr 2020 16:08:04 +0000
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
  s=default; t=1587053280;
- bh=2SXOyo9SVHhRzaEf26WVKLi04QxU7HtSBeE7Ov97dEc=;
+ bh=C0XR3RpEizu27S5anUKwdguSd5OQhjVwT579HNoXr/0=;
  h=Subject:From:Date:References:In-Reply-To:To:Cc:Cc:From;
- b=fSIE1IlcpKADxurtBo6hywHoeTl/ukdttk6MiLur+A/lA8ITE+ZeBV+9gC6MmgAit
- E6xzZEUNdTtTwySsn5g2GmWHkqX9UF/W+gUGu6zaN1kb/6gyRlEPfBd+x0FtGUPqRb
- aNpcETjn848PFyWpFzxAjjePf3MKKcVjUeuGmgbI=
+ b=0VdlDYBnKMeoffCdekeoXCVXdhkfSXU2rx1DuxhC2zv9+KneqQyLuW91xPKEqep6Q
+ xxTnm3XUtnOVhVv2Vt24JqVQvqNCU8Jhpr6igw/fPAgc9Ph/pyc/s20QWaBcM1bHka
+ hO6YjnCtDWHSu97lH0CmvHzk3oObp/xHCVQ0IDMY=
 MIME-Version: 1.0
-Subject: Re: [PATCH 0/2] clk: meson: g12a: add support for the SPICC SCLK
- Source clocks
+Subject: Re: [PATCH 0/5] ASoC: meson: aiu: fixups
 From: patchwork-bot+linux-amlogic@kernel.org
-Message-Id: <158705328050.8629.12185201513902994939.git-patchwork-notify@kernel.org>
+Message-Id: <158705328033.8629.7886905729639193237.git-patchwork-notify@kernel.org>
 Date: Thu, 16 Apr 2020 16:08:00 +0000
-References: <20200219084928.28707-1-narmstrong@baylibre.com>
-In-Reply-To: <20200219084928.28707-1-narmstrong@baylibre.com>
-To: Neil Armstrong <narmstrong@baylibre.com>
+References: <20200214131350.337968-1-jbrunet@baylibre.com>
+In-Reply-To: <20200214131350.337968-1-jbrunet@baylibre.com>
+To: Jerome Brunet <jbrunet@baylibre.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200416_090801_473273_E4066499 
-X-CRM114-Status: UNSURE (   6.30  )
+X-CRM114-CacheID: sfid-20200416_090801_478380_88193E44 
+X-CRM114-Status: UNSURE (   3.60  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
@@ -81,25 +80,33 @@ Hello:
 
 This series was applied to khilman/linux-amlogic.git (refs/heads/for-next).
 
-On Wed, 19 Feb 2020 09:49:26 +0100 you wrote:
-> Like on the AXG SoCs, the SPICC controllers can make use of an external clock
-> source instead of it's internal divider over xtal to provide a better SCLK
-> clock frequency.
+On Fri, 14 Feb 2020 14:13:45 +0100 you wrote:
+> This patchset fixes some mistakes which slipped through my initial
+> submission.
 > 
-> This serie adds the new clock IDs and the associated clocks in the g12a driver.
+> Most of these issues have been reported by coccinelle and sparse.
 > 
-> Neil Armstrong (2):
->   dt-bindings: clk: g12a-clkc: add SPICC SCLK Source clock IDs
->   clk: meson: g12a: add support for the SPICC SCLK Source clocks
+> Jerome Brunet (5):
+>   ASoC: meson: aiu: remove unused encoder structure
+>   ASoC: meson: aiu: fix clk bulk size allocation
+>   ASoC: meson: aiu: fix irq registration
+>   ASoC: meson: aiu: fix acodec dai input name init
+>   ASoC: meson: codec-glue: fix pcm format cast warning
 > 
 > [...]
 
 
 Here is a summary with links:
-  - [1/2] dt-bindings: clk: g12a-clkc: add SPICC SCLK Source clock IDs
-    https://git.kernel.org/khilman/linux-amlogic/c/51a0c29b229ebc33f25398532797639d8c5aafe7
-  - [2/2] clk: meson: g12a: add support for the SPICC SCLK Source clocks
-    https://git.kernel.org/khilman/linux-amlogic/c/a18c8e0b76979881f3b31e96c398e62ab30a1662
+  - [1/5] ASoC: meson: aiu: remove unused encoder structure
+    https://git.kernel.org/khilman/linux-amlogic/c/51c366e38aaa6b298ba1e6ceef0f2c3de1180b29
+  - [2/5] ASoC: meson: aiu: fix clk bulk size allocation
+    https://git.kernel.org/khilman/linux-amlogic/c/269f00171273e47eebc915cc6ee8ceececa37a3a
+  - [3/5] ASoC: meson: aiu: fix irq registration
+    https://git.kernel.org/khilman/linux-amlogic/c/6e700f0672199f773ad645c2b7e886c1d2e2046e
+  - [4/5] ASoC: meson: aiu: fix acodec dai input name init
+    https://git.kernel.org/khilman/linux-amlogic/c/74a56f2a4a9ec72ef1daceeb2dda8b41370c1419
+  - [5/5] ASoC: meson: codec-glue: fix pcm format cast warning
+    https://git.kernel.org/khilman/linux-amlogic/c/3cd23f021e2e5f3350125abcb39f12430df87d06
 
 You are awesome, thank you!
 
