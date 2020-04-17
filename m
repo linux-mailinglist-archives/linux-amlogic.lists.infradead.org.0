@@ -2,83 +2,73 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 08F8A1AE4FA
-	for <lists+linux-amlogic@lfdr.de>; Fri, 17 Apr 2020 20:42:39 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8E5F61AE548
+	for <lists+linux-amlogic@lfdr.de>; Fri, 17 Apr 2020 20:57:11 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=YxN1rPQGCfFvbvzD8Dz8evYXa7mBtscWoxVQ21GBta8=; b=HiJq2Nht5mVpYf
-	ITJGf5q6+xQtYTcRunEwYrZudIyabLYOISdKsStXn/O9aMUT+LMhXEEuGKliRLUGirhd1WK9rmDQf
-	IMJ1fsrPnU/YcP8l44rebqyVBayeG+jwfu1kqHy01dnwEBPVMsCiqq6JSsoYTGR+JVMjJC86rI58a
-	gZ0mi1POdHvTuGqplrwEsRd5QvqnacvI48X6lU6/6+tl6M4DYmjGj4BFyBP7ThSmRzQMulzQk1hLT
-	ew/btiysNVvoWs7HSPNLNf431uLL+A+v4896tAw2S1J+aL0sQmh1sRdXxAxReL/BU0EHDIS+hN4Cq
-	SXIo8lxq7YE1Dsz27ZVw==;
+	List-Owner; bh=fALoux0sEHWD3Y+XNWTgBDNp5WsKDB4lF5ooiAAR7R4=; b=o09JF+M41lTUuY
+	vAYSxqBT0LSQXJmHMK6TNKoG1mAI0WVG0GJ7IU7Km4L83uVc3HmdgiDg9E6qE7HIPDl4Zpr5Pv4kU
+	CT4gFdroqS6atUfPkkbPf/WkhBxrXdFFi16dFU+gpgY+Rimt5g/O9uyfByU95s/Xu3ZBcTwHWvNyk
+	tPd5c7wQbeJWbav25fzW5RSyCDzrzXwg2cqHpheoz4tusojwB0h91NjjUX9iRJmyPFdhXW3Q7Dg6C
+	2iRH+Puxat5gNCgWaETaZ1BbjqgTOmgfDZB6AjATYeJoji32RfNrs66ROAHnEq3NfRF8xvWr4ZeD/
+	n+E34a+8CgJ9jkF0dfZw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jPVwh-0007qU-Fg; Fri, 17 Apr 2020 18:42:35 +0000
-Received: from mail-wr1-x444.google.com ([2a00:1450:4864:20::444])
+	id 1jPWAk-0002jf-7I; Fri, 17 Apr 2020 18:57:06 +0000
+Received: from mail-ej1-x642.google.com ([2a00:1450:4864:20::642])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jPVvs-0006w0-GQ; Fri, 17 Apr 2020 18:41:46 +0000
-Received: by mail-wr1-x444.google.com with SMTP id g13so2160350wrb.8;
- Fri, 17 Apr 2020 11:41:44 -0700 (PDT)
+ id 1jPWAh-0002io-6l; Fri, 17 Apr 2020 18:57:04 +0000
+Received: by mail-ej1-x642.google.com with SMTP id re23so2334442ejb.4;
+ Fri, 17 Apr 2020 11:57:02 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=googlemail.com; s=20161025;
- h=from:to:cc:subject:date:message-id:in-reply-to:references
- :mime-version:content-transfer-encoding;
- bh=p4RArEPtRb6yXEdgtQ3ovyy6FMchkA9pg/LkRnSfJR8=;
- b=LB3xbvk8qJejz7tCjtEyfb58WU6LIalruJuOoQB1Cneg3/jqPgHlbv12NNDaHlpzmV
- o4uu9ADrf4vAphiHiJGYnZeemkZ8JE8PszXtVht45LbV0jh+JbkeLCUgh+NQv3ew0EET
- 5OiBadJ8IJ60jWXZcJ9Mh/m0VvlOUHi4cRATM4vw8O+eKPsyatKhe+icKhBA2UTl0dad
- OLrmY/o1wUQK/j6xSJ9Pka6ITAWn4HHjRddCbGUV2CsNveMOBp6rZIwhb03JPd0/FdGw
- erl8L7qmaKONyIRCGNvpUFl9zUFYxMecqk3JJryPWqoARSS8D+vPJJSMwceyE8a2smeE
- sQgQ==
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=+2CABe3J87oGmGpGl7GwWQxi2qTyg12kyqBFsNfaKsE=;
+ b=LH7a15W7hJM2SMiwrvKUtxmpOmy5YZ8zKeTytb3wlCIWmdcsBsacigCzJOC50Y3R2X
+ wZxyzg6tBnruIJvdlkxMBP24IsBy7vRnEs6tcFsI0MjiENUQpk6Hr1ufNCdeUMI4CHJ2
+ dKKH1+J1HjX/VURqfWfTUXmlvvQHgxhCXF4gjYAY4Iidu9sRZPFs1kslw/Lvfp7vsIFo
+ ZS5YQDztSa8osx/j0GI340HqZ89y5ympFULCZlVSB0azc8wUhyPAlv5KrtFI8seJ7B3f
+ UOLmDiSCTUl+9WCLuV2l6MG5WzmG8Y1AcuyX3Y40rS8PYfi+22u8GUCifnYAiGOxS6xH
+ qSSQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
- :references:mime-version:content-transfer-encoding;
- bh=p4RArEPtRb6yXEdgtQ3ovyy6FMchkA9pg/LkRnSfJR8=;
- b=F08Xhn4Mv81QPwWAQCgS9SL1Jj08Awek1PrRAPEt8EM8HQxPg69BMwcsDFsoyoIpgG
- awzIdFTk6XPWSvSxgmmHA4Jn72TBkoK4EkbOI0r9WVEulLidscLokgX76Gi9nkts6lM9
- zNpWNBOh3xv36rDsn5XWqqNrsUpDPzOgkDKU7uc03XJrb8TCNESkGu1mQ69FcoyHEidb
- cF9b8MIqiWnrRTMQJll7ElWFjHAQKK2iCWRJCPfoKdcuHHdzDDK250sGk09jjtMF9ExK
- ZuzYUm8PaTgUE4VHGp2vYQGSE7oLoVec+O7LVfLHbfrPTNM+XQN2kG5FPYp8JLJq7L1m
- qtbg==
-X-Gm-Message-State: AGi0PubrO+VVt529R1yKvgP1Jz5H3ZBCTDE/zA5gOLgjQiWaKF2Mhca+
- r6YDZdRz6tQDEfgvoFJqX/U=
-X-Google-Smtp-Source: APiQypLp5qHymcuJPKjzUtOnmkQmLSVUjfmU7kNQvo46lL7qlgyByinKLdOTrFJU3TOKc0KrRY21yw==
-X-Received: by 2002:adf:f884:: with SMTP id u4mr5203954wrp.171.1587148903269; 
- Fri, 17 Apr 2020 11:41:43 -0700 (PDT)
-Received: from localhost.localdomain
- (p200300F137142E00428D5CFFFEB99DB8.dip0.t-ipconnect.de.
- [2003:f1:3714:2e00:428d:5cff:feb9:9db8])
- by smtp.googlemail.com with ESMTPSA id c17sm33237391wrp.28.2020.04.17.11.41.42
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Fri, 17 Apr 2020 11:41:42 -0700 (PDT)
-From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-To: jbrunet@baylibre.com, linux-amlogic@lists.infradead.org,
- linux-clk@vger.kernel.org
-Subject: [PATCH v2 4/4] clk: meson: meson8b: Make the CCF use the glitch-free
- VPU mux
-Date: Fri, 17 Apr 2020 20:41:27 +0200
-Message-Id: <20200417184127.1319871-5-martin.blumenstingl@googlemail.com>
-X-Mailer: git-send-email 2.26.1
-In-Reply-To: <20200417184127.1319871-1-martin.blumenstingl@googlemail.com>
-References: <20200417184127.1319871-1-martin.blumenstingl@googlemail.com>
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=+2CABe3J87oGmGpGl7GwWQxi2qTyg12kyqBFsNfaKsE=;
+ b=dXmXIEJbvRR9cuN0Zd3ib5Gc5gQjDIOuQ4yqJbVMIuyZ45/KvBR1dwaZwsjmAqdI4o
+ nzjwyXA0VRE+Gaow5ihUJkWsm4ytbxiBZUs8BexKNwK+uKC0X2/fR5IefwPTVyQK8szn
+ 3noc3YlXbrDvS77d9oDVUYzIWQ3ZrL1dezT1emEKT+FpaAKkjMtY+Rxm1e3IZWlJ9L1v
+ euw8ORijULgLAdyBR44yKeiX7vm8hZd56mCEmGfSZ9M/3q32Z280MWPhe1Kf0Rm16zJJ
+ pdjv5O6fR0iBvvg4NC7Tz0GPpviOhCZvo08brPS5p2KP+DdfHzxpqAFXhCcYKjD9cEuZ
+ dBOg==
+X-Gm-Message-State: AGi0Puau4nrSrZ0MqmcMNWUoX4io0xKlxWGx8wlJ0KQjfgZ1jHbmVdxX
+ PuCEqHO3OxyrjeoFPTJRzkozvuhOQd/AneXrPFM=
+X-Google-Smtp-Source: APiQypKzHWfnTx/hkbe2s0PfVHV5SSdTQJcOehGIUm+PYQs+05JqmtPuZ9jbqfFYl2MaC68tKOT+e3S/nyKHvhp9R6I=
+X-Received: by 2002:a17:906:1199:: with SMTP id
+ n25mr4615915eja.30.1587149821543; 
+ Fri, 17 Apr 2020 11:57:01 -0700 (PDT)
 MIME-Version: 1.0
+References: <20200416121910.12723-1-narmstrong@baylibre.com>
+ <20200416121910.12723-2-narmstrong@baylibre.com>
+In-Reply-To: <20200416121910.12723-2-narmstrong@baylibre.com>
+From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+Date: Fri, 17 Apr 2020 20:56:50 +0200
+Message-ID: <CAFBinCDoM0d-5czQ4-FOTMPFN7r2FSSsfn9QCxF73GrEUsC7LA@mail.gmail.com>
+Subject: Re: [PATCH v3 1/8] usb: dwc3: meson-g12a: refactor usb init
+To: Neil Armstrong <narmstrong@baylibre.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200417_114144_553639_15639FC1 
-X-CRM114-Status: GOOD (  14.09  )
+X-CRM114-CacheID: sfid-20200417_115703_243102_77C4506B 
+X-CRM114-Status: UNSURE (   8.32  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:444 listed in]
- [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
  provider [martin.blumenstingl[at]googlemail.com]
@@ -101,72 +91,25 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: narmstrong@baylibre.com, sboyd@kernel.org, mturquette@baylibre.com,
- linux-kernel@vger.kernel.org,
- Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
+Cc: balbi@kernel.org, khilman@baylibre.com, linux-usb@vger.kernel.org,
+ linux-kernel@vger.kernel.org, kishon@ti.com, linux-amlogic@lists.infradead.org,
  linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-The "vpu_0" or "vpu_1" clock trees should not be updated while the
-clock is running. Enforce this by setting CLK_SET_RATE_GATE on the
-"vpu_0" and "vpu_1" gates. This makes the CCF switch to the "vpu_1"
-tree when "vpu_0" is currently active and vice versa, which is exactly
-what the vendor driver does when updating the frequency of the VPU
-clock.
-
-Signed-off-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
----
- drivers/clk/meson/meson8b.c | 14 +++++++++++---
- 1 file changed, 11 insertions(+), 3 deletions(-)
-
-diff --git a/drivers/clk/meson/meson8b.c b/drivers/clk/meson/meson8b.c
-index 6d1727e62b55..811af1c11456 100644
---- a/drivers/clk/meson/meson8b.c
-+++ b/drivers/clk/meson/meson8b.c
-@@ -2063,7 +2063,7 @@ static struct clk_regmap meson8b_vpu_0 = {
- 			&meson8b_vpu_0_div.hw
- 		},
- 		.num_parents = 1,
--		.flags = CLK_SET_RATE_PARENT,
-+		.flags = CLK_SET_RATE_GATE | CLK_SET_RATE_PARENT,
- 	},
- };
- 
-@@ -2134,10 +2134,18 @@ static struct clk_regmap meson8b_vpu_1 = {
- 			&meson8b_vpu_1_div.hw
- 		},
- 		.num_parents = 1,
--		.flags = CLK_SET_RATE_PARENT,
-+		.flags = CLK_SET_RATE_GATE | CLK_SET_RATE_PARENT,
- 	},
- };
- 
-+/*
-+ * The VPU clock has two two identical clock trees (vpu_0 and vpu_1)
-+ * muxed by a glitch-free switch on Meson8b and Meson8m2. The CCF can
-+ * actually manage this glitch-free mux because it does top-to-bottom
-+ * updates the each clock tree and switches to the "inactive" one when
-+ * CLK_SET_RATE_GATE is set.
-+ * Meson8 only has vpu_0 and no glitch-free mux.
-+ */
- static struct clk_regmap meson8b_vpu = {
- 	.data = &(struct clk_regmap_mux_data){
- 		.offset = HHI_VPU_CLK_CNTL,
-@@ -2152,7 +2160,7 @@ static struct clk_regmap meson8b_vpu = {
- 			&meson8b_vpu_1.hw,
- 		},
- 		.num_parents = 2,
--		.flags = CLK_SET_RATE_NO_REPARENT,
-+		.flags = CLK_SET_RATE_PARENT,
- 	},
- };
- 
--- 
-2.26.1
-
+On Thu, Apr 16, 2020 at 2:19 PM Neil Armstrong <narmstrong@baylibre.com> wrote:
+>
+> Refactor the USB init code patch to handle the Amlogic GXL/GXM needing
+> to initialize the OTG port as Peripheral mode for the DWC2 IP to probe
+> correctly.
+>
+> A secondary, post_init callback is added to setup the OTG PHY mode after
+> powering up the PHYs and before probing the DWC2 and DWC3 controllers.
+>
+> Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
+Reviewed-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
 
 _______________________________________________
 linux-amlogic mailing list
