@@ -2,85 +2,85 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D01AE1AE844
-	for <lists+linux-amlogic@lfdr.de>; Sat, 18 Apr 2020 00:34:49 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 013331AEB68
+	for <lists+linux-amlogic@lfdr.de>; Sat, 18 Apr 2020 11:37:03 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=hNpTwvFr6y9HtKe6zEMfmKBqrW1OW3AeIUMq/W0UoRA=; b=CS3FwkPaUpecMA
-	CyD4nJ3eeSAyfYrNDupV5d3QdH1YihJAbDHzZhPrQ6vRvk+fO9d2ElXMQRcvKfBYaB+fc1Ufkb6pH
-	DOMbcrx4qEK6qKzs0MvZZEHzLSEjArYUmqt0GmeTtVqm6HDSuhyF124CQ+ys+MUTmfP/kk2Bxu7OS
-	qaEzp13KzqQPEjEHz/kS6jNpFzQXUIbNw8rNau7cgZdNjQ9TGeVrtBF1CkHEkS+EiuXHhdWyD8xX/
-	itmQtHSgMOGYNVYKJ/pXVqaZHMREN+lht01XD0Bf7kpZNLgTJ/DR/i7S8bv8euPAXxtgYpnB5U11m
-	MDK8NN/cl3MsKZgFBvDQ==;
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
+	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=wA/yPX3hIy6AFZmf+AN7zZ8JQBRBPeO5+oJqgtsd48A=; b=HrV
+	SBIDBwoJ+d3hXobisARLSM8VS+rd4yDEAzhte4go1ataURqgVXQuT2IyGe5H9y9IGgStdBegp4LyD
+	1KrnSr7KIzFoyEIJ0RnMk3MBOxAGfdb+qCckN2Jgd1OaxFDVchtCYoh2/3wSuzIq83OrkH/50tx47
+	YmFBkQtR5AkzgnJJ8GY+wEFWiUF3LmddPcqYnpWb8xZsk7cVHtmvvuV2ilORuSfl/EnIo49zIJvBH
+	RSYMRooP5XrDrd85woeL/ctoTvA1ZR2aumyVtZkX/TgdybngUg1vJMG7vMa2yimh9xT8T9aRDB2+H
+	mTO4a+oqAl1nBehUExCDq4GHC4N8otA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jPZZM-0002uk-HF; Fri, 17 Apr 2020 22:34:44 +0000
-Received: from mail-oi1-x242.google.com ([2607:f8b0:4864:20::242])
+	id 1jPjuB-0002NZ-HE; Sat, 18 Apr 2020 09:36:55 +0000
+Received: from mail-wr1-x444.google.com ([2a00:1450:4864:20::444])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jPZZJ-0002u0-89
- for linux-amlogic@lists.infradead.org; Fri, 17 Apr 2020 22:34:42 +0000
-Received: by mail-oi1-x242.google.com with SMTP id t199so3465158oif.7
- for <linux-amlogic@lists.infradead.org>; Fri, 17 Apr 2020 15:34:39 -0700 (PDT)
+ id 1jPjty-0002Ew-0y; Sat, 18 Apr 2020 09:36:46 +0000
+Received: by mail-wr1-x444.google.com with SMTP id u13so5768438wrp.3;
+ Sat, 18 Apr 2020 02:36:41 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=qHIn6P6PIPO5fHJmJrNTN7uqm4EIFUngjpRx0WX0ReI=;
- b=ub1pGCY3C6DXtcpbBuw3krvsjfk57BvNqWSH4tJaj/a/gTjJWes8KdB3V3rhbTCl0D
- nW9DEj13uUfpPyGgdIONt8C3gfT8fnN8ToGn4Ixx3NDHVg9HSFQL7Tys+BRHaF1eZYft
- +Wlaj1CS4YXmO0KX0WXRwBsGv29lTIS+oPJyQlHayYs9K4MTqjoxfqFznainuJe0WvTL
- D43+nSOu5XSFxmvGHlJmh0Az1X8v4Ogp1AIiUr5lAxuhAY/JfP8PAB8qQfK8F1t8Guh1
- zLOa9QH992q0NUG2yK9gQGKrZs/hVyRYS84uxbtqDIZR4Zv2UuXPQcQm9yozTrWZTZRa
- sIdw==
+ h=from:to:cc:subject:date:message-id;
+ bh=wgfu39vG9R4ll9eCVwJav8n2HM7rx8PAeBSHmbcNkjA=;
+ b=Tb+VfyjCYOWDy0PsTMFPIeg6WnHIszFF59D9PjMUUN0svKLTjpF3sZyl8H3Co1dk1l
+ D1IMe2542AOhP/cWtXp06jpZhMqZJ2BJoQRz9spW1Xg1zAObvwCgMXOwepeCGJGWeNGW
+ N0P4haKVg4K0BRpas6bIX1+Bnr4FVIv8OeoorUMBA4fRnsia+1lhZ7HudEYL56Mbcwhe
+ 5qNE1ifOcKOUjKeJZossp3FYEzCrN/tzL6xjWouAJFs7pg9xpGak6nN4yMiaZeQgKYXs
+ XENhLmqeK43ZT7BrVNpnfFHYAB/vIKiHYiSVJzfWrnw+xAabKU8ccD3mra38zKJ4fY04
+ kWpQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=qHIn6P6PIPO5fHJmJrNTN7uqm4EIFUngjpRx0WX0ReI=;
- b=TyJEVt7xjUHhhi5QbygXuyoA0hSnj/c1eJmiQC/NkTRqKJCyTgCy5hTiO06xH0SaUd
- Y4i2Us2oIuoWJmti5TxG9lFnaVv2EkNGef7N+KgWEWsmZ/0DsZr84NPWIG1vfieB27fw
- 9BesLRfsiJA049Au+BPjgJeJHkVAFA/y7s6Lbknkizg9l0x2WhVdqDpTS3UCwpLHXT1n
- woKZ++iOhQMx3WDTPt/xObM5DOcl/WyUZy9X0YT2s2vi4S2p8xfPkQWDBgADMlDtTaSF
- kpSfOR8AdVOiRjbyK9fV1p8Ti/cvoABQZ4B+b6wEsPoJpZUE5CnqCVprfDoYXYPPM2mz
- HbQg==
-X-Gm-Message-State: AGi0PuYiZEWUaiuu6J60a61HETNOtziZ8oVaWhOp1PUPokUIQ7m3gInH
- Pr1eN/CN2IErcZAHzQ6BkhXnunKpeeJcP14/HaI=
-X-Google-Smtp-Source: APiQypK+U9aJFf2kn3gWd6ZM6n/825UJgkfHB50B+AT7a9t53WoL5mZyOBqQC/AV4PeSedijgqXtG6UPCDRUfXcPQ44=
-X-Received: by 2002:aca:4951:: with SMTP id w78mr3939817oia.99.1587162879288; 
- Fri, 17 Apr 2020 15:34:39 -0700 (PDT)
-MIME-Version: 1.0
-References: <CA+3zgmuFigPWmLZB9t6iPQEuhe_j0WBXbKRoKwr8LFYeBGPEhQ@mail.gmail.com>
-In-Reply-To: <CA+3zgmuFigPWmLZB9t6iPQEuhe_j0WBXbKRoKwr8LFYeBGPEhQ@mail.gmail.com>
-From: Tim <elatllat@gmail.com>
-Date: Fri, 17 Apr 2020 18:34:28 -0400
-Message-ID: <CA+3zgmv0_Am3j8-J927DC1WHeCK51Jn87aikbA_Cr2N-88yQeg@mail.gmail.com>
-Subject: Re: arm64: dts: g12b: cpu_opp_table
-To: khilman@baylibre.com
+ h=x-gm-message-state:from:to:cc:subject:date:message-id;
+ bh=wgfu39vG9R4ll9eCVwJav8n2HM7rx8PAeBSHmbcNkjA=;
+ b=dT0kU9os0VeTquRGKo/RJJvlYr1tn2nMX4LvjdRgEITeNalZRbwEkPv8icxCMtueII
+ uZbDG8Y3wBmOf9S4b/y1is3KFg1LvaamqiCVkroFz1SCWuxx2cG/x6dDDFmEJCuq9rEn
+ DqPdNQmCrk18IRecDjLwGsDWWZm0o37kbZ/grr9xfSxDNaufpM0QNSZR77NscpNav0nD
+ ZKBz0B6O7PyrChBHYS8zXEzlU9clvcOlFmGLH82/sn9xs2sp2QIUfgE898YVXhT7a0s+
+ L8LWGE1+4o3Ce4J0Stc0gk8zaLsaYNGseeCfWrLhulI2Fb+HMqc/RT1xGTqzi1IIby+Z
+ QQLQ==
+X-Gm-Message-State: AGi0PuaUBddbn3Sj8QQ0H4GftL/oAnpUheWOHobE5aj2oAYG1+sVXIZ7
+ EnELlxEZe+xt1Za+zSEDmk4=
+X-Google-Smtp-Source: APiQypIcLoxJQNQyMnGc2ZI2HXyHFpNGpG/umKJLNyhN05r5WvOL5tqpbb3JhDDJb77z7YfCVPUx1g==
+X-Received: by 2002:adf:e8c2:: with SMTP id k2mr3726868wrn.396.1587202600229; 
+ Sat, 18 Apr 2020 02:36:40 -0700 (PDT)
+Received: from felia.fritz.box ([2001:16b8:2d7a:4700:391d:588b:ee8c:e294])
+ by smtp.gmail.com with ESMTPSA id d133sm11782497wmc.27.2020.04.18.02.36.38
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Sat, 18 Apr 2020 02:36:39 -0700 (PDT)
+From: Lukas Bulwahn <lukas.bulwahn@gmail.com>
+To: Mauro Carvalho Chehab <mchehab+huawei@kernel.org>,
+ Hans Verkuil <hverkuil-cisco@xs4all.nl>
+Subject: [PATCH] MAINTAINERS: adjust entries to moving CEC platform drivers
+Date: Sat, 18 Apr 2020 11:36:30 +0200
+Message-Id: <20200418093630.6149-1-lukas.bulwahn@gmail.com>
+X-Mailer: git-send-email 2.17.1
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200417_153441_295655_03DE7B66 
-X-CRM114-Status: UNSURE (   5.96  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200418_023642_094547_8B09C882 
+X-CRM114-Status: GOOD (  10.21  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:242 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:444 listed in]
  [list.dnswl.org]
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider [elatllat[at]gmail.com]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider [lukas.bulwahn[at]gmail.com]
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -92,50 +92,117 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: linux-amlogic@lists.infradead.org, christianshewitt@gmail.com,
- Neil Armstrong <narmstrong@baylibre.com>
+Cc: Neil Armstrong <narmstrong@baylibre.com>, kernel-janitors@vger.kernel.org,
+ Ettore Chimenti <ek5.chimenti@gmail.com>,
+ Thierry Reding <thierry.reding@gmail.com>,
+ Benjamin Gaignard <benjamin.gaignard@linaro.org>,
+ Guenter Roeck <groeck@chromium.org>, linux-stm32@st-md-mailman.stormreply.com,
+ Marek Szyprowski <m.szyprowski@samsung.com>, linux-samsung-soc@vger.kernel.org,
+ Kevin Hilman <khilman@baylibre.com>, Krzysztof Kozlowski <krzk@kernel.org>,
+ Jonathan Hunter <jonathanh@nvidia.com>, Kukjin Kim <kgene@kernel.org>,
+ Lukas Bulwahn <lukas.bulwahn@gmail.com>,
+ Alexandre Torgue <alexandre.torgue@st.com>,
+ Enric Balletbo i Serra <enric.balletbo@collabora.com>,
+ linux-tegra@vger.kernel.org, linux-amlogic@lists.infradead.org,
+ Benson Leung <bleung@chromium.org>, linux-arm-kernel@lists.infradead.org,
+ linux-kernel@vger.kernel.org, Maxime Coquelin <mcoquelin.stm32@gmail.com>,
+ Joe Perches <joe@perches.com>
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Please upstream this old and stable [1] performance improvement.
+Commit 4be5e8648b0c ("media: move CEC platform drivers to a separate
+directory") moved various files into a new directory structure, but did
+not adjust the entries in MAINTAINERS.
 
-    1 https://github.com/hardkernel/linux/commit/f86cd9487c7483b2a05f448b9ebacf6bd5a2ad2f#diff-7af5a6e5d10416434bd0a5edd78f2a7f
+Since then, ./scripts/get_maintainer.pl --self-test=patterns complains:
 
-diff --git a/arch/arm64/boot/dts/amlogic/meson-g12b-s922x.dtsi
-b/arch/arm64/boot/dts/amlogic/meson-g12b-s922x.dtsi
-index 046cc332d..1e5d0ee5d 100644
---- a/arch/arm64/boot/dts/amlogic/meson-g12b-s922x.dtsi
-+++ b/arch/arm64/boot/dts/amlogic/meson-g12b-s922x.dtsi
-@@ -65,6 +65,11 @@
-                        opp-hz = /bits/ 64 <1896000000>;
-                        opp-microvolt = <981000>;
-                };
-+
-+               opp-1992000000 {
-+                       opp-hz = /bits/ 64 <1992000000>;
-+                       opp-microvolt = <1001000>;
-+               };
-        };
+  warning: no file matches F: drivers/media/platform/s5p-cec/
+  warning: no file matches F: drivers/media/platform/tegra-cec/
+  warning: no file matches F: drivers/media/platform/cec-gpio/
+  warning: no file matches F: drivers/media/platform/meson/ao-cec-g12a.c
+  warning: no file matches F: drivers/media/platform/meson/ao-cec.c
+  warning: no file matches F: drivers/media/platform/seco-cec/seco-cec.c
+  warning: no file matches F: drivers/media/platform/seco-cec/seco-cec.h
+  warning: no file matches F: drivers/media/platform/sti/cec/
 
-        cpub_opp_table_1: opp-table-1 {
-@@ -120,5 +125,15 @@
-                        opp-hz = /bits/ 64 <1704000000>;
-                        opp-microvolt = <891000>;
-                };
-+
-+               opp-1800000000 {
-+                       opp-hz = /bits/ 64 <1800000000>;
-+                       opp-microvolt = <981000>;
-+               };
-+
-+               opp-1908000000 {
-+                       opp-hz = /bits/ 64 <1908000000>;
-+                       opp-microvolt = <1022000>;
-+               };
-        };
- };
+Update the MAINTAINERS entries to the new file locations.
+
+Signed-off-by: Lukas Bulwahn <lukas.bulwahn@gmail.com>
+---
+Mauro, please pick this non-urgent minor clean-up patch on top of the
+CEC platform driver moves.
+
+applies cleanly on next-20200417
+
+ MAINTAINERS | 14 ++++++--------
+ 1 file changed, 6 insertions(+), 8 deletions(-)
+
+diff --git a/MAINTAINERS b/MAINTAINERS
+index 3083282134de..a708773e1af7 100644
+--- a/MAINTAINERS
++++ b/MAINTAINERS
+@@ -2373,7 +2373,7 @@ L:	linux-samsung-soc@vger.kernel.org (moderated for non-subscribers)
+ L:	linux-media@vger.kernel.org
+ S:	Maintained
+ F:	Documentation/devicetree/bindings/media/s5p-cec.txt
+-F:	drivers/media/platform/s5p-cec/
++F:	drivers/media/cec/platform/s5p/
+ 
+ ARM/SAMSUNG S5P SERIES JPEG CODEC SUPPORT
+ M:	Andrzej Pietrasiewicz <andrzejtp2010@gmail.com>
+@@ -2518,7 +2518,7 @@ L:	linux-tegra@vger.kernel.org
+ L:	linux-media@vger.kernel.org
+ S:	Maintained
+ F:	Documentation/devicetree/bindings/media/tegra-cec.txt
+-F:	drivers/media/platform/tegra-cec/
++F:	drivers/media/cec/platform/tegra/
+ 
+ ARM/TETON BGA MACHINE SUPPORT
+ M:	"Mark F. Brown" <mark.brown314@gmail.com>
+@@ -3932,7 +3932,7 @@ S:	Supported
+ W:	http://linuxtv.org
+ T:	git git://linuxtv.org/media_tree.git
+ F:	Documentation/devicetree/bindings/media/cec-gpio.txt
+-F:	drivers/media/platform/cec-gpio/
++F:	drivers/media/cec/platform/cec-gpio/
+ 
+ CELL BROADBAND ENGINE ARCHITECTURE
+ M:	Arnd Bergmann <arnd@arndb.de>
+@@ -11027,8 +11027,7 @@ S:	Supported
+ W:	http://linux-meson.com/
+ T:	git git://linuxtv.org/media_tree.git
+ F:	Documentation/devicetree/bindings/media/amlogic,meson-gx-ao-cec.yaml
+-F:	drivers/media/platform/meson/ao-cec-g12a.c
+-F:	drivers/media/platform/meson/ao-cec.c
++F:	drivers/media/cec/platform/meson/
+ 
+ MESON NAND CONTROLLER DRIVER FOR AMLOGIC SOCS
+ M:	Liang Yang <liang.yang@amlogic.com>
+@@ -15063,8 +15062,7 @@ F:	drivers/mmc/host/sdricoh_cs.c
+ SECO BOARDS CEC DRIVER
+ M:	Ettore Chimenti <ek5.chimenti@gmail.com>
+ S:	Maintained
+-F:	drivers/media/platform/seco-cec/seco-cec.c
+-F:	drivers/media/platform/seco-cec/seco-cec.h
++F:	drivers/media/cec/platform/seco/
+ 
+ SECURE COMPUTING
+ M:	Kees Cook <keescook@chromium.org>
+@@ -16089,7 +16087,7 @@ STI CEC DRIVER
+ M:	Benjamin Gaignard <benjamin.gaignard@linaro.org>
+ S:	Maintained
+ F:	Documentation/devicetree/bindings/media/stih-cec.txt
+-F:	drivers/media/platform/sti/cec/
++F:	drivers/media/cec/platform/sti/
+ 
+ STK1160 USB VIDEO CAPTURE DRIVER
+ M:	Ezequiel Garcia <ezequiel@vanguardiasur.com.ar>
+-- 
+2.17.1
+
 
 _______________________________________________
 linux-amlogic mailing list
