@@ -2,68 +2,73 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 89F7F1AF75B
-	for <lists+linux-amlogic@lfdr.de>; Sun, 19 Apr 2020 07:53:52 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9C33E1AF75C
+	for <lists+linux-amlogic@lfdr.de>; Sun, 19 Apr 2020 07:54:07 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
-	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
-	References:List-Owner; bh=4PALUHJmUoLIn9yZSSBUeiXVxqSn/cYxBLDH1V4hVBs=; b=S8T
-	vYTsx8RjQgWZkBNVNe6d07Zl/3HG1rHOgoKXtwh+FRzPMPa4WilxC9KEmNTmPuhlN8QU8x/YbpFvh
-	ibeSCgbGXrGCTuFxTREqm3Wa0a14BcNKnchyZNqoK0+cPkfNflqRydDfbnLeK2nIM5+KT6UFDMqnt
-	i8pg0RPiK7t9cXep3yRvbCDE3Gzu1ByGt15a5Q/Xn33FJ+L4O58FO4ZjcLH1aXo8Njr2N0Ht0R5WB
-	cCJTDqIdGl5KADOwtdUaLuRSw8xod/AzuGEpmo5FV459MsB+R6XnJOCs5LEkrp1wJ4FE+szsuvlbF
-	A88hs/xUWf+o3bO2Gn/ZGWhNq/LKS2A==;
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:References:
+	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:List-Owner;
+	bh=SjtfY2tbxrMljbbV/G0XtvnB9k8KnbQao6ZSYbE9TGs=; b=ntFbCR3COZ3hvRvPSkVhjQVNYF
+	s86g5l8xaB0RYSl/oINf+EZAoFVDDTaZVt2SwprZTPfDEm9tc2RCPLKkBM3gA0KMto46JtNSUvl7Y
+	N+vBLwnYcaqMFUNOlKGYffWWbCesH0L+XESaviaNAaW1bdOBvfExcZaFAOxSCoKtefd7OxtN3G5RK
+	46/+ktW2V8+6L9ZIqa+psXugEbnHZ7sDBMR5BKJrHk64c9p52vVbTXEZMsTa9tbb5zCRxzdMaqv3h
+	ocfPOPf/Q7CStgJvqxwkHc9HQwUb9Cs4R9lWlvpCmwG7EAbZXz3NCR5LJq1WVfLGqfuVVlKjsTHB5
+	eWcCOXUw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jQ2tk-0000lb-Uh; Sun, 19 Apr 2020 05:53:45 +0000
+	id 1jQ2u3-00015F-Nb; Sun, 19 Apr 2020 05:54:03 +0000
 Received: from mail-lf1-x142.google.com ([2a00:1450:4864:20::142])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jQ2tV-0000a0-0V; Sun, 19 Apr 2020 05:53:30 +0000
-Received: by mail-lf1-x142.google.com with SMTP id w145so5219333lff.3;
- Sat, 18 Apr 2020 22:53:28 -0700 (PDT)
+ id 1jQ2tW-0000aU-Lz; Sun, 19 Apr 2020 05:53:31 +0000
+Received: by mail-lf1-x142.google.com with SMTP id r17so5222377lff.2;
+ Sat, 18 Apr 2020 22:53:30 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=from:to:cc:subject:date:message-id;
- bh=1qrRdfAfZTNG8C2xZODPVLiP1lsHDHNtbAuMSlM5XWs=;
- b=kUNF53epSMt9B8o64l0Q9iBjt6Sdx5q1Y4jifHIiotiq9kw49rYLkGnyR7cnEF2EJM
- l1wKyyN8e93Sl3Bf9IjqsTFh6vYCDFsSZ/jVY/n5TYNxn8ccDZyQMlgxlVN6UKKM7sMZ
- tojuZIFdK3+plJitSDgcGUaB48HdnEbMEMSCv9m0CayAKVMRdYSdM77UFJq5724WYQx/
- mb2UZI5fs8jdxmYyK3e8ALtiZ8vw0JL72AmNYgeDhepigNlO/N5rHDLRFM2uqIiU/b2a
- E2fzlcSywc8eRowTkw+coLBPAPsPuwFtXzXiPEsLKcWG31fXphbg4FyEP6JwxZCXbuIi
- LHSA==
+ h=from:to:cc:subject:date:message-id:in-reply-to:references;
+ bh=Cp+YcW+uZwweqktYq1kPw5M/xoHZD09hBXWzWgZpn8o=;
+ b=mXHHU4XZ0bVgIZ8xBu5v+wSWHF77YPQuCaV2Ohf5J7nhQ+9RRUnj64tgiGpMfkHtQo
+ VSRKBf0X7fYqORWd+DiN7jwSHdexbNeClY7LsNIBBQGfFqKWNiGa0XFES5JuUdUykXzU
+ VSFBsFPFDSMKAZwOI4PujeDFObKpDL0kQdJpVcs+PVwtT4dIkl7oE0AdQJm90oiNDEai
+ 7WoK51OpKMyZeYwFEAYddCaQgWRNJDTCJ3dCAd/qMhuPPr3mSG8pZzFjm/TdwlgL/hlj
+ 4P42cFOcxrgL2xbgPGdYh+ZYlBDP5cO3DP9VcYlG1l+9/hMmpZojE5MfJ/C3H/mFxUx0
+ mTjA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id;
- bh=1qrRdfAfZTNG8C2xZODPVLiP1lsHDHNtbAuMSlM5XWs=;
- b=SuMeg3hB+kxJrKiMJK521lr2L1QJIvfclFjvu+zAQH7BijPBFKoiwFH/9b4LOXaEXC
- 24y3EvvKdoY7pyFJ5s9bWr6c81QO+Pj1CLxPWjNXf9Iz8mIcUmWNdfAhOJeXXKAAOHEi
- vm0MzYcnjWupE80thLzV0anpaU6du1fVl+D9Exfx6/afTZXTDBWJsYsdeuDw6FSuR22s
- WH0fzN8ZHnVCGZRvEtnDvVK9fTVLKYSa/Ug2a97OdYKfSr5k5akbIT56zGIZSff2zZhL
- 7/ui1r3+z+GV9ngdEvf4xEJlDBRy8dkkc36nYWJ0d/RfZKbgDRWNe1mnUWU4EtlBQpDR
- 2cAg==
-X-Gm-Message-State: AGi0PubxyIWEpCnmdKcykD5RPmPqM9/b0chQkvUdE2leXGsDZiyw7qt9
- t1gbSkkMxU98htF5OCZUPhw=
-X-Google-Smtp-Source: APiQypJC5Bac5Q6fvsZfuKKznBhjkUaBzG+YWW1BYq0fxHBBjVZMQ2V4BovjT+WZs5Ex1F2va6ByjA==
-X-Received: by 2002:ac2:5f92:: with SMTP id r18mr6916190lfe.154.1587275606868; 
- Sat, 18 Apr 2020 22:53:26 -0700 (PDT)
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
+ :references;
+ bh=Cp+YcW+uZwweqktYq1kPw5M/xoHZD09hBXWzWgZpn8o=;
+ b=U5VDKqaHw04OqHK6HSOYXFLvAUb+AVkM+hgIp3VfGHBbCaaFjRJC/UMXnHgut4hysc
+ Kp8avysfo82aaE2VSyVZLq5UC8RJ4sl3ekfY1hkqbszCUxvHXLTeRRNlCwlr8hooyki8
+ A/84IOzgJylTpU8gXwVRleIM4BKgC6JfYuqb9ktaU4YqeHogNN65q5MIHi2ZO/zuaBqj
+ UiD+wQYsKkJIBdiiUA3wE7268OCnemXnf3dFxQvu/5u3wQQ3b5CGVpyO05yoJoJXoL6y
+ eXqmIHz3AMX01S5hHNIeJ1eD0fo1UNmxlq+XzBzj6qXdH9Iy+9e1+a8WFmQuWC14Bmtt
+ W52g==
+X-Gm-Message-State: AGi0PuaEbiCVGu8KNA/L454wy0l/EjfZF/CuJ3HMXIlSas64CBP/3hSo
+ VHa1QFC4R5v0i7/Aq6/w9eA=
+X-Google-Smtp-Source: APiQypJoxv0TyES2AdqlW9umna3BrKG7kN4I69FJTVPxKmNrdHFQYkkPxXYmypsFbZTO7en3OnIJPg==
+X-Received: by 2002:a19:4841:: with SMTP id v62mr6609541lfa.66.1587275609345; 
+ Sat, 18 Apr 2020 22:53:29 -0700 (PDT)
 Received: from localhost.localdomain ([87.200.95.144])
- by smtp.gmail.com with ESMTPSA id h7sm3366247ljg.37.2020.04.18.22.53.24
+ by smtp.gmail.com with ESMTPSA id h7sm3366247ljg.37.2020.04.18.22.53.27
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Sat, 18 Apr 2020 22:53:26 -0700 (PDT)
+ Sat, 18 Apr 2020 22:53:28 -0700 (PDT)
 From: Christian Hewitt <christianshewitt@gmail.com>
 To: Rob Herring <robh+dt@kernel.org>, Mark Rutland <mark.rutland@arm.com>,
  Kevin Hilman <khilman@baylibre.com>, devicetree@vger.kernel.org,
  linux-arm-kernel@lists.infradead.org, linux-amlogic@lists.infradead.org,
  linux-kernel@vger.kernel.org
-Subject: [PATCH 0/4] arm64: dts: meson: add GT-King and GT-King Pro devices
-Date: Sun, 19 Apr 2020 05:53:18 +0000
-Message-Id: <20200419055322.16138-1-christianshewitt@gmail.com>
+Subject: [PATCH 1/4] dt-bindings: arm: amlogic: add support for the Beelink
+ GT-King
+Date: Sun, 19 Apr 2020 05:53:19 +0000
+Message-Id: <20200419055322.16138-2-christianshewitt@gmail.com>
 X-Mailer: git-send-email 2.17.1
+In-Reply-To: <20200419055322.16138-1-christianshewitt@gmail.com>
+References: <20200419055322.16138-1-christianshewitt@gmail.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200418_225329_076007_AE98A325 
-X-CRM114-Status: GOOD (  10.68  )
+X-CRM114-CacheID: sfid-20200418_225330_717578_CEA1C410 
+X-CRM114-Status: GOOD (  10.16  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -101,29 +106,26 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-This series adds support for the Beelink GT-King and GT-King Pro devices
-which are based on the Amlogic W400 reference design. The series depends
-on the common W400 and new audio dtsi created in [1]. It supersedes a
-previous attempt to upstream support [2] which was refused due to the
-duplication of dts content.
+The Shenzen AZW (Beelink) GT-King is based on the Amlogic W400 reference
+board with an S922X chip.
 
-[1] https://patchwork.kernel.org/project/linux-amlogic/list/?series=273479
-[2] https://patchwork.kernel.org/project/linux-amlogic/list/?series=249421
+Signed-off-by: Christian Hewitt <christianshewitt@gmail.com>
+---
+ Documentation/devicetree/bindings/arm/amlogic.yaml | 1 +
+ 1 file changed, 1 insertion(+)
 
-Christian Hewitt (4):
-  dt-bindings: arm: amlogic: add support for the Beelink GT-King
-  arm64: dts: meson-g12b-gtking: add initial device-tree
-  dt-bindings: arm: amlogic: add support for the Beelink GT-King Pro
-  arm64: dts: meson-g12b-gtking-pro: add initial device-tree
-
- .../devicetree/bindings/arm/amlogic.yaml      |  2 +
- arch/arm64/boot/dts/amlogic/Makefile          |  2 +
- .../dts/amlogic/meson-g12b-gtking-pro.dts     | 39 +++++++++++++++++++
- .../boot/dts/amlogic/meson-g12b-gtking.dts    | 16 ++++++++
- 4 files changed, 59 insertions(+)
- create mode 100644 arch/arm64/boot/dts/amlogic/meson-g12b-gtking-pro.dts
- create mode 100644 arch/arm64/boot/dts/amlogic/meson-g12b-gtking.dts
-
+diff --git a/Documentation/devicetree/bindings/arm/amlogic.yaml b/Documentation/devicetree/bindings/arm/amlogic.yaml
+index f74aba48cec1..6bf9bbcf4968 100644
+--- a/Documentation/devicetree/bindings/arm/amlogic.yaml
++++ b/Documentation/devicetree/bindings/arm/amlogic.yaml
+@@ -148,6 +148,7 @@ properties:
+       - description: Boards with the Amlogic Meson G12B S922X SoC
+         items:
+           - enum:
++              - azw,gtking
+               - hardkernel,odroid-n2
+               - khadas,vim3
+               - ugoos,am6
 -- 
 2.17.1
 
