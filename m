@@ -2,62 +2,63 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id AD7C31B1B2A
-	for <lists+linux-amlogic@lfdr.de>; Tue, 21 Apr 2020 03:15:45 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6F2F81B1BFF
+	for <lists+linux-amlogic@lfdr.de>; Tue, 21 Apr 2020 04:37:35 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=RPGLUIcwUEhiD0mFZnm4CU8NKZqq/MxvU0tt3AUaNf4=; b=YuJwKAQj8dTPXl
-	41Gxb0UlchABM73FEvc9yetlFC/u7QqhhU9yb7D/USgldL0+1DBvZEURwamyChdIfikWzOOSD0d9G
-	o5te9edJROLBb2PKiuEYekgbKKBF+VIeLCNhMcyoPuKeeZ1HN0yv3DhQ4MCDe8JGptEGAGZuxri1c
-	PqDt80j1qYFdRS/lfJqS/JbGKPyAts4S1OqnlEvivForwfi4BCpbLctyGmpkj0fqUEArkscXVq5s/
-	19NUGjeN2f/NWAKR63utuGMx0L/VS0nwlvigvYLSzrviaTnn7gZhbdBc2z+ud9jFLppfsD4MUCSno
-	o3Qxdoqb9VQrH60P97OA==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
+	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=rfU9UF9kBaA+gbka2+f3nLGzgxtPgq765/EgLIr9SLY=; b=Jnf+2PTZqW93o7neGW4qZhOZl
+	bwDbmXh+jKnrKCDE2ESlgtye04ejPhR8xuSzII86fwG3vtR0T+urqigC3Z41RmrWyxSNTImxAlC0u
+	TJGZl++HK7r5b4oCPsaL2larGeJ07Z//SzU12aF/kyQuBQ+Lnb9k3QrL24HqLlzHF+SbnnlTG9sww
+	fRKbhlCYR8VfNs+Vor9VrjBzPhwdAx/IHVh0WLiK+du3KBTBKRXr6ZB0IRxlC0eNdTjGUExkKcN+M
+	BtZfEf14D8oO5CJLj6TX0v9SN1yMG+nN7r5rs2OeqRs+vxJJtXutx6gTyJyFwNBNQa88f5z+KpkJf
+	hp/7XgoIA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jQhVj-0002Dk-TO; Tue, 21 Apr 2020 01:15:39 +0000
-Received: from mail-vs1-xe43.google.com ([2607:f8b0:4864:20::e43])
+	id 1jQimw-0003s0-Ed; Tue, 21 Apr 2020 02:37:30 +0000
+Received: from mail-ed1-x544.google.com ([2a00:1450:4864:20::544])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jQhVg-0002D9-OA
- for linux-amlogic@lists.infradead.org; Tue, 21 Apr 2020 01:15:38 +0000
-Received: by mail-vs1-xe43.google.com with SMTP id 184so7420399vsu.3
- for <linux-amlogic@lists.infradead.org>; Mon, 20 Apr 2020 18:15:36 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=aFRq3RluqVTW3eItiffvhrul27fygOSDx5LOp792/cY=;
- b=jGemw2P2rq8+zKge7bcDV6mMP5GeCYSBjW21Yga4LFd+SRnJNGAo1LIyCZsecJrAj+
- 3Y2nk68i50FiVZkjKg3XewJTSb85k963UHIJB4QyqWe/KfxK1rup1VWPKA6RhXdb/LbF
- ZALCrIEKJacoE0XvLyBHMyRJFtUd8Qd5IXRqI=
+ id 1jQimd-0003hr-Hd; Tue, 21 Apr 2020 02:37:13 +0000
+Received: by mail-ed1-x544.google.com with SMTP id w2so9115460edx.4;
+ Mon, 20 Apr 2020 19:37:09 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=subject:to:cc:references:from:message-id:date:user-agent
+ :mime-version:in-reply-to:content-language:content-transfer-encoding;
+ bh=wfjIAKV3CzN2ahQVF5QQ7qnHBO9rsV9xDFuglbIYlvo=;
+ b=ePqxLPQpEgCKHMylYI58HlD8/cm9VNW5FPOSETx1OcR1+SmzgCaSSbuvVi8em6SgPX
+ /vk71YJnaBWoVN2KWdJFcQdLMlp8QaPEtL3XT2g0Ha/t7jMhHlptiTsxMjJ73sv8AULl
+ TGkfouaOnEYkzihEu2Ln6B+0iQvN1VeXhWja7oz8lJ+Iy2N+UI34KCG6N4SufASF1BbH
+ QqjJm+G6nJh+nUAZ/oKJS8B7ncIwR5sim9M+/BeODFxTxk+L7Orff90XH53EmdYlYFuG
+ TsYPZLcWIp6Ycoiw9Nc8z/1Wn/rkDaOD0m6DTWWse67H2GwP3U50UsqXUqlpWW+N2Nbg
+ 0k7A==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=aFRq3RluqVTW3eItiffvhrul27fygOSDx5LOp792/cY=;
- b=gilZBNNczWtyyFl2ULaOUQh8QPaykfTBxveS0G1uLQnY5ZMlZLTVxgIP0WcApo6lJs
- CD4VJx26qV9kwWCUurGaFKmZvMAnAuqC/ywXQ3kt+iQjQOZCgCMRaiNg+sCUp85E1ZyU
- ueYQlE+m3VyHHNahGEOr8RkMc99IH0MXoBaKFSlGG6Rq/cLstdmcakxuAo6TVk0V3PPa
- K2roABdg8SY0CktFNk8UOB3VH4zNOyjZHQSFJCkaiwD1BplioSdroIu9k2Zfousehisn
- zlhAnJCFzthOmmkDZwRBE/NKNAO92Vudj7XHHsgW1qj56f/lgjNcQmxGsOrBSScS6mgt
- 7Kxw==
-X-Gm-Message-State: AGi0Pua1mTlcTAin0o12ZECqr5dpiVINkSIe8g6RTyCA8yVA91TYPYzU
- 4Gqr+l8t8fSkGXRioS+THejTkk8mN1A=
-X-Google-Smtp-Source: APiQypILr5KYL+tLCC4NdT32V1rbtSqt1SEoT0uZe1QbM0ht7hUai3oxYkzNyApT/dgFm6jb5SFVhg==
-X-Received: by 2002:a67:f81:: with SMTP id 123mr14235349vsp.50.1587431735487; 
- Mon, 20 Apr 2020 18:15:35 -0700 (PDT)
-Received: from mail-vs1-f48.google.com (mail-vs1-f48.google.com.
- [209.85.217.48])
- by smtp.gmail.com with ESMTPSA id f188sm343936vke.54.2020.04.20.18.15.35
- for <linux-amlogic@lists.infradead.org>
+ h=x-gm-message-state:subject:to:cc:references:from:message-id:date
+ :user-agent:mime-version:in-reply-to:content-language
+ :content-transfer-encoding;
+ bh=wfjIAKV3CzN2ahQVF5QQ7qnHBO9rsV9xDFuglbIYlvo=;
+ b=MUmiQFcspsxDN6pxf8Z1zv9Av2fWX3YfvAl3jL/KBovF6LSfB4hHWYQhAhDWHLTrMl
+ VYkFy+JTJJ3ky3mNRSqd8izGozaltNUThJ+3mpHpGYPc3xov+2bgKEpd7pFr5pR0dWeN
+ 0HOh7eSARuy6qVr/bbdACA8mD557ZuLWEmjrTOY/7ReS5LGRRI0Afrim3LlCS/nYeTB8
+ iacO3nj94o52cqEVqIkMS7btGcqkSJN5DkCDmiAkhaxGkwnMsEOEwucFIYwbiBsoGFCm
+ Mh92p2VGP3szU+zE1EOjyWSINDQeO2tq420NYQs7QEQeVgDJLsR3F/VpahwkbaV7Ehze
+ rQxw==
+X-Gm-Message-State: AGi0PubMrVg5W5IWHeARY1QZPCPF+T3BX9dm98ipNT7yzmCWHZQL0LVe
+ 1RtT/auaK7aD3R/n3eoQ3Pg=
+X-Google-Smtp-Source: APiQypJhXdwWOerhgYAN5dOVFSby+3Mbee+FNPtzk+Uk3eZXjRSCcip4tP0F0bwdHDDzezV9TrpUdA==
+X-Received: by 2002:a50:b263:: with SMTP id o90mr16161876edd.326.1587436628433; 
+ Mon, 20 Apr 2020 19:37:08 -0700 (PDT)
+Received: from [192.168.1.3] (ip68-111-84-250.oc.oc.cox.net. [68.111.84.250])
+ by smtp.gmail.com with ESMTPSA id
+ z18sm253309ejl.37.2020.04.20.19.37.00
  (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Mon, 20 Apr 2020 18:15:35 -0700 (PDT)
-Received: by mail-vs1-f48.google.com with SMTP id m24so4369809vsq.10
- for <linux-amlogic@lists.infradead.org>; Mon, 20 Apr 2020 18:15:35 -0700 (PDT)
-X-Received: by 2002:a67:d61c:: with SMTP id n28mr14119322vsj.70.1587431365930; 
- Mon, 20 Apr 2020 18:09:25 -0700 (PDT)
-MIME-Version: 1.0
+ Mon, 20 Apr 2020 19:37:07 -0700 (PDT)
+Subject: Re: [PATCH v2 0/2] Add a watchdog driver that uses ARM Secure Monitor
+ Calls.
+To: Evan Benn <evanbenn@chromium.org>
 References: <20200403052900.258855-1-evanbenn@chromium.org>
  <CAKz_xw0gV+w_gMkLfB4qUBdULLfFoiv1TBWp9_PHy33wP_XWyA@mail.gmail.com>
  <890948ef-7276-fdae-d270-eb30eff3eab2@amlogic.com>
@@ -67,28 +68,30 @@ References: <20200403052900.258855-1-evanbenn@chromium.org>
  <CAKz_xw0+gKBM1jp-Avnd+4j9vSxUix67RZBX-NNbStb0+ri4+Q@mail.gmail.com>
  <CAODwPW9Vt7TcWfKYDmRgLndb2-+5HoNvA6XMJJznXCudQDngqw@mail.gmail.com>
  <9d029a04-2a37-cbbe-1932-be34d34f6b69@gmail.com>
-In-Reply-To: <9d029a04-2a37-cbbe-1932-be34d34f6b69@gmail.com>
-From: Evan Benn <evanbenn@chromium.org>
-Date: Tue, 21 Apr 2020 11:08:57 +1000
-X-Gmail-Original-Message-ID: <CAKz_xw33YBChSCDHcki2JCR=LXrvfEN2pseEN471xVvqhqrUfA@mail.gmail.com>
-Message-ID: <CAKz_xw33YBChSCDHcki2JCR=LXrvfEN2pseEN471xVvqhqrUfA@mail.gmail.com>
-Subject: Re: [PATCH v2 0/2] Add a watchdog driver that uses ARM Secure Monitor
- Calls.
-To: Florian Fainelli <f.fainelli@gmail.com>
+ <CAKz_xw33YBChSCDHcki2JCR=LXrvfEN2pseEN471xVvqhqrUfA@mail.gmail.com>
+From: Florian Fainelli <f.fainelli@gmail.com>
+Message-ID: <d1fe9a51-d180-a4f4-7af4-b8edbf3c6f29@gmail.com>
+Date: Mon, 20 Apr 2020 19:36:58 -0700
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:68.0) Gecko/20100101
+ Firefox/68.0 Thunderbird/68.7.0
+MIME-Version: 1.0
+In-Reply-To: <CAKz_xw33YBChSCDHcki2JCR=LXrvfEN2pseEN471xVvqhqrUfA@mail.gmail.com>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200420_181536_810103_58885B14 
-X-CRM114-Status: UNSURE (   9.57  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200420_193711_615799_88FC5DF5 
+X-CRM114-Status: GOOD (  13.57  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:e43 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:544 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider [f.fainelli[at]gmail.com]
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
@@ -96,7 +99,6 @@ X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -134,30 +136,35 @@ Cc: Mark Rutland <mark.rutland@arm.com>,
  LKML <linux-kernel@vger.kernel.org>, Vinod Koul <vkoul@kernel.org>,
  Olof Johansson <olof@lixom.net>, Julius Werner <jwerner@chromium.org>,
  Shawn Guo <shawnguo@kernel.org>, "David S. Miller" <davem@davemloft.net>
-Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Thanks Florian,
 
-> The PSCI binding itself has provision for specifying function IDs for
-> different functions, and this seems to be followed by other subsystems
-> as well like SCMI:
->
-> https://www.spinics.net/lists/arm-kernel/msg791270.html
 
-Are you referring to this line in the devicetree linked?
+On 4/20/2020 6:08 PM, Evan Benn wrote:
+> Thanks Florian,
+> 
+>> The PSCI binding itself has provision for specifying function IDs for
+>> different functions, and this seems to be followed by other subsystems
+>> as well like SCMI:
+>>
+>> https://www.spinics.net/lists/arm-kernel/msg791270.html
+> 
+> Are you referring to this line in the devicetree linked?
+> 
+> +- arm,smc-id : SMC id required when using smc or hvc transports
+> 
+> I cannot find any prior definition of this in the devicetree yaml
+> format, so I will add that as well.
+> Did you have a link for the psci usage that you referenced?
 
-+- arm,smc-id : SMC id required when using smc or hvc transports
+Sure, line 80 and below from psci.yaml:
 
-I cannot find any prior definition of this in the devicetree yaml
-format, so I will add that as well.
-Did you have a link for the psci usage that you referenced?
-
-Thanks
-
-Evan
+https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/devicetree/bindings/arm/psci.yaml#n80
+-- 
+Florian
 
 _______________________________________________
 linux-amlogic mailing list
