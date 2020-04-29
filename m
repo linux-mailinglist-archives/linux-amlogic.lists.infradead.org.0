@@ -2,76 +2,54 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 704701BCF5A
-	for <lists+linux-amlogic@lfdr.de>; Wed, 29 Apr 2020 00:03:35 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 29CB71BD0F9
+	for <lists+linux-amlogic@lfdr.de>; Wed, 29 Apr 2020 02:21:25 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:In-Reply-To:References:Date:
+	Message-Id:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=FmK8uTLvzPuB5VWoeAVPCXH9afjtQWZZSe4IFSCkdPA=; b=TENcMkDAWnKHY8
-	1ulJUchaBgtjyR8YADrAf3QhTHhfT2NQZ21Q2qplozYyMyB77SIHXIsbM7mD8jxGi4IyauUbH4ahT
-	WaiwSTh/FWEKl9ParB+1vueCMoAsjc65cYj6uysBep4mOsw70wQ/YgAss9A+eQCcAFAN41fGn80rH
-	gAPzQ+gtuIWfzlOf3Fq/NDDAxBamp3sRDl0aGzmQ5tMt2OkftE+7yAodN9ZolGI+ZykYNbDSPbl+V
-	m1HDslj+EhVNHbO5BS8dL38ZB4IaDY4ShYH2RJluib+zVHFIl2KF2ozM+TLIikctK1cgXPcBJ4cqA
-	Uou/6srV1avi30NqLsww==;
+	List-Owner; bh=CqON7kxXqWKXlvTR3ORJrFAH99nrFg3fpMU5YsqPfEI=; b=nAC3N7m8tlXtKO
+	1Zm7EqwSMFzL9wpe4HZRfCm6O8Fwdmsxh6xDxfRbAEokn0qLqVU93IY+OU8UP0IrYgJW+FOi7rjzm
+	9ocI1cDH+XNIARqVZJ3FMfwHhhhnbZ3zMnDq/munsHnH0iNjxGwnO1TPQOofFkiwrPw0Nc/EChSm9
+	uLq7NifJON1YwBfKwqdj4hJhqAmZ5E8amhzPI2LQXnCEsSseImvqq4XZEx+Qe19U/3ZO9PWzvU6W8
+	lIHFJP3igDoT//qlJ+1bPdyBUgeHvgtye704gVmrra6zvjuU0KzSHO8tU4MBqzdM9PfupEGPlOA4I
+	PnQnebT4OfnO35E/GRCA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jTYKA-0000DQ-Qt; Tue, 28 Apr 2020 22:03:30 +0000
-Received: from mail-ed1-x541.google.com ([2a00:1450:4864:20::541])
+	id 1jTaTa-0000yy-1I; Wed, 29 Apr 2020 00:21:22 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jTYK7-0000CM-AX; Tue, 28 Apr 2020 22:03:28 +0000
-Received: by mail-ed1-x541.google.com with SMTP id l3so180535edq.13;
- Tue, 28 Apr 2020 15:03:25 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=googlemail.com; s=20161025;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=NR54EageimV01N0+P0/H4+3jaMZG7ansJYKsbb2lDA4=;
- b=a9KTwNGb6RSAuMXlCe8SZjpdmg0EZoGvUTiAaug8rze8fhPJooZKll9Wy+yb99XNBE
- oYtD3N7zekNIIPvqfSVNNBtdyQaXp2TjZA5IH1jZvFZ7U5X7cPou/ztPOkJWBV7wxaJU
- i353STD7krdCtZjCVMT03LT8In+W3uwfWm+boXgdqBg1QhIRviE8L2UQV+LmSm/dQJNY
- DMWlhZ7oPcWqcY0POIAFgOVAUAB0LtOCYjBnF4bc53GE3dQcsRnwAGmkYc9BQGVUkYJy
- UdhvNDc7fMo6h7SN3HfdxSZvecWp2gahv+jZpT0e6POyjReeBsn5geUu3KF2LO6JV57Z
- 5pVQ==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=NR54EageimV01N0+P0/H4+3jaMZG7ansJYKsbb2lDA4=;
- b=TnkgDXmsyAZXdG794jCit9w+d3XdfM0ZD60+HdTTBYiL3X6u5l1rrZ7iZI1hhX7iYp
- vKWNcozLOjKwTTJoVUL92QMTP1lC9p5pKBRGQO0903PVZaIKFA6V3e4tsE3K15PjAXXz
- wW0Lhiy0gurXQ9e9nWcjyeHXqcfSpvz6FNjMUfLoqu6Pw+mkd3rma01M5o5d5cso8NU8
- Vu1+YEylfPQcUlUfQt6uYm7sPUulgS1w6GISH/7BswiEZLTPxhvtQv6YfS8bPNVudFCc
- MEaH0E7d3bn5LjRMyVnY4opkX8BA45YXbzh2eZnn6CQYNE83sJI1UVWcg+3RcPWs7uAs
- lbBA==
-X-Gm-Message-State: AGi0PuZK9rGGk2yBEDkZ1E67Q0u61RTZpCCdeifUjBFiBRygawlBJO5q
- uiOW3fkIcbSOgpOZyijG8u9VpauRdiP35tXI1TY=
-X-Google-Smtp-Source: APiQypL8g6O+FG9TaqsUDLdp/pis/jgZ50o0duv/BKwjfN19GSyMMa1FelXnRXGRWclbKX2YlA92SMbDu23K6WRUF7Q=
-X-Received: by 2002:a50:fc06:: with SMTP id i6mr8028590edr.110.1588111404097; 
- Tue, 28 Apr 2020 15:03:24 -0700 (PDT)
+ id 1jTaTX-0000y0-KG
+ for linux-amlogic@lists.infradead.org; Wed, 29 Apr 2020 00:21:20 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1588119678;
+ bh=Nl7sNPPDjmyKSImmAYVRl5vT/shfmBSnPOzhkCRLj1U=;
+ h=Subject:From:Date:References:In-Reply-To:To:Cc:Cc:From;
+ b=uMysl0r2ezmlDqZsZ610g9vKmRvVOw+tNRZZbSPYLSwrquKra3GY5JUNcZio+igrV
+ /Wx9wVwPpJFEbsl/UsbKgu3WUUyBfr770HbdBNcCz1JKAjNO1HHSCkGUXxnCEQwi9U
+ zwYLoojsC65DPFiAlYeRITLaH6CxoMyPAQTqJL5w=
 MIME-Version: 1.0
-References: <20200428092147.13698-1-narmstrong@baylibre.com>
-In-Reply-To: <20200428092147.13698-1-narmstrong@baylibre.com>
-From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-Date: Wed, 29 Apr 2020 00:03:13 +0200
-Message-ID: <CAFBinCBb=FTH6aken5K9zoedBPYBJUCSj0eA+_Eghv+mnU_3vg@mail.gmail.com>
-Subject: Re: [PATCH v2] drm/meson: add mode selection limits against specific
- SoC revisions
-To: Neil Armstrong <narmstrong@baylibre.com>
+Subject: Re: [PATCH] net: stmmac: dwmac-meson8b: Add missing boundary to RGMII
+ TX clock array
+From: patchwork-bot+linux-amlogic@kernel.org
+Message-Id: <158811967890.27675.272179209716453555.git-patchwork-notify@kernel.org>
+Date: Wed, 29 Apr 2020 00:21:18 +0000
+References: <20200418181457.3193175-1-maz@kernel.org>
+In-Reply-To: <20200418181457.3193175-1-maz@kernel.org>
+To: Marc Zyngier <maz@kernel.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200428_150327_367624_772CA46A 
-X-CRM114-Status: GOOD (  11.07  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200428_172119_686421_589ACAEA 
+X-CRM114-Status: UNSURE (   5.03  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-5.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:541 listed in]
- [list.dnswl.org]
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider [martin.blumenstingl[at]googlemail.com]
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
@@ -81,6 +59,7 @@ X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -92,45 +71,80 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: linux-amlogic@lists.infradead.org, linux-arm-kernel@lists.infradead.org,
- dri-devel@lists.freedesktop.org, linux-kernel@vger.kernel.org
+Cc: linux-amlogic@lists.infradead.org, khilman@kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Hi Neil,
+Hello:
 
-On Tue, Apr 28, 2020 at 11:21 AM Neil Armstrong <narmstrong@baylibre.com> wrote:
->
-> The Amlogic S805X/Y uses the same die as the S905X, but with more
-> limited graphics capabilities.
->
-> This adds a soc version detection adding specific limitations on the HDMI
-> mode selections.
->
-> Here, we limit to HDMI 1.3a max HDMI PHY clock frequency.
-for my own education: 1.65GHz from the PLL will be divided down to 165MHz
-isn't this more like the limit of HDMI 1.2a?
+This patch was applied to khilman/linux-amlogic.git (refs/heads/for-next).
 
-> Changes sinces v1:
-> - Moved frequency check in the vclk code, and also checks DMT modes
->
-> Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
-Acked-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+On Sat, 18 Apr 2020 19:14:57 +0100 you wrote:
+> Running with KASAN on a VIM3L systems leads to the following splat
+> when probing the Ethernet device:
+> 
+> ==================================================================
+> BUG: KASAN: global-out-of-bounds in _get_maxdiv+0x74/0xd8
+> Read of size 4 at addr ffffa000090615f4 by task systemd-udevd/139
+> CPU: 1 PID: 139 Comm: systemd-udevd Tainted: G            E     5.7.0-rc1-00101-g8624b7577b9c #781
+> Hardware name: amlogic w400/w400, BIOS 2020.01-rc5 03/12/2020
+> Call trace:
+>  dump_backtrace+0x0/0x2a0
+>  show_stack+0x20/0x30
+>  dump_stack+0xec/0x148
+>  print_address_description.isra.12+0x70/0x35c
+>  __kasan_report+0xfc/0x1d4
+>  kasan_report+0x4c/0x68
+>  __asan_load4+0x9c/0xd8
+>  _get_maxdiv+0x74/0xd8
+>  clk_divider_bestdiv+0x74/0x5e0
+>  clk_divider_round_rate+0x80/0x1a8
+>  clk_core_determine_round_nolock.part.9+0x9c/0xd0
+>  clk_core_round_rate_nolock+0xf0/0x108
+>  clk_hw_round_rate+0xac/0xf0
+>  clk_factor_round_rate+0xb8/0xd0
+>  clk_core_determine_round_nolock.part.9+0x9c/0xd0
+>  clk_core_round_rate_nolock+0xf0/0x108
+>  clk_core_round_rate_nolock+0xbc/0x108
+>  clk_core_set_rate_nolock+0xc4/0x2e8
+>  clk_set_rate+0x58/0xe0
+>  meson8b_dwmac_probe+0x588/0x72c [dwmac_meson8b]
+>  platform_drv_probe+0x78/0xd8
+>  really_probe+0x158/0x610
+>  driver_probe_device+0x140/0x1b0
+>  device_driver_attach+0xa4/0xb0
+>  __driver_attach+0xcc/0x1c8
+>  bus_for_each_dev+0xf4/0x168
+>  driver_attach+0x3c/0x50
+>  bus_add_driver+0x238/0x2e8
+>  driver_register+0xc8/0x1e8
+>  __platform_driver_register+0x88/0x98
+>  meson8b_dwmac_driver_init+0x28/0x1000 [dwmac_meson8b]
+>  do_one_initcall+0xa8/0x328
+>  do_init_module+0xe8/0x368
+>  load_module+0x3300/0x36b0
+>  __do_sys_finit_module+0x120/0x1a8
+>  __arm64_sys_finit_module+0x4c/0x60
+>  el0_svc_common.constprop.2+0xe4/0x268
+>  do_el0_svc+0x98/0xa8
+>  el0_svc+0x24/0x68
+>  el0_sync_handler+0x12c/0x318
+>  el0_sync+0x158/0x180
+> 
+> [...]
 
-This looks good to me based on the current limitations of meson_vclk.c
-If we switch to CCF based VPU clock rate changes then we should do
-this in the clock driver by calling clk_hw_set_rate_range(hdmi_pll, 0,
-1.65GHz)
 
-The good thing is: we can re-use struct meson_drm_soc_limits even
-after switching to CCF.
-We will just need to set the max PHY freq using
-clk_round_rate(hdmi_pll, ULONG_MAX)
+Here is a summary with links:
+  - net: stmmac: dwmac-meson8b: Add missing boundary to RGMII TX clock array
+    https://git.kernel.org/khilman/linux-amlogic/c/f0212a5ebfa6cd789ab47666b9cc169e6e688732
 
+You are awesome, thank you!
 
-Martin
+-- 
+Deet-doot-dot, I am a bot.
+https://korg.wiki.kernel.org/userdoc/pwbot
 
 _______________________________________________
 linux-amlogic mailing list
