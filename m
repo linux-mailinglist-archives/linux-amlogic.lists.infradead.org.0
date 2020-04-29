@@ -2,82 +2,82 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E36A91BE874
-	for <lists+linux-amlogic@lfdr.de>; Wed, 29 Apr 2020 22:20:10 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1E5C51BE86C
+	for <lists+linux-amlogic@lfdr.de>; Wed, 29 Apr 2020 22:18:57 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=4JvhYWLFiGeTddkMLUGwfZ2tQs5+CR8w/6f+SZZsIIk=; b=dNz58b+N+VuTWO
-	aHxHRN0lYBsenh2GZeO8X7Uadb4fxm9nk73vjXl1BZ/ayKNJ3s4KANEmKAROpAYIRJ5VKGY1yud7e
-	NOmgCPgCSmwcFFZXbbwbIoedbKdrsAdz9dGHpC5DAaqdOgMRC91B9nvXzLIvvAzGNRtTVsWuNIFx0
-	Azr2dXPY9IjXXVj2LWFPDaS4dPJuPibV/f+SSWSpI+Lz5cm2HTAEJIfDxpQblQ5cuBHtBCEW2igwT
-	wsdqFg6pScjxDn8e7khs/BRKAdmyXtiqk08bjicfrzMdsYWoiH4Noz3nSx3mFi5OOCS7HE9DTe2Yp
-	ecuknN0CDyqOiV/MQnNg==;
+	List-Owner; bh=Y/hwsLkR7OTZ5tGfM2zRp9+Jw2Coh10XyPLmmhJ8IBg=; b=M4t6isApxEOSNz
+	Bs0pOc+C8WZvt4+fn3Q4z1QC8xYk0aPGSDjj44e2aIyN8YOYwPDJ016eOeLdix7R0ZtOPOronTJXc
+	lT3ov/3YODk1fV8qgDn5C/z1kpRZxWPTem/CEjaomtl6SEkxJEwnERgTbI53NBjz2b+gcmY6QGJ14
+	C6pRJRROjpL/h1GFfAJ4NxVN2YuLVPXR+rB/lb+DJcWoATmkO1v7D98AvopILr9tPfhWZS+gLTn0B
+	fYBm9Yycifxh0PIp92lS6+OXmrBIfwJee6BZW1IVKugdT5uOdgLklJ3SO/Aj5Ne5NbYEpl2/QLiXN
+	xWHZOjyn2m7RugiFipjw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jTtBg-0000zQ-E2; Wed, 29 Apr 2020 20:20:08 +0000
-Received: from mail-wm1-x342.google.com ([2a00:1450:4864:20::342])
+	id 1jTtAV-0008Iz-0d; Wed, 29 Apr 2020 20:18:55 +0000
+Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jTt92-00073k-0J; Wed, 29 Apr 2020 20:17:26 +0000
-Received: by mail-wm1-x342.google.com with SMTP id y24so3466725wma.4;
- Wed, 29 Apr 2020 13:17:23 -0700 (PDT)
+ id 1jTt8y-00070W-Te; Wed, 29 Apr 2020 20:17:22 +0000
+Received: by mail-wr1-x442.google.com with SMTP id j2so4106076wrs.9;
+ Wed, 29 Apr 2020 13:17:20 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=googlemail.com; s=20161025;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=GrVPUcTD2l9oJ0HPXx8l+PhUQ6rIzd+t7iX8qFgDDUE=;
- b=ipE94I2oDHFBOK1wvyXv2dDCEJ+N4Iszv0sQleLMdWCyHveYpujY5johVU8kihYH9g
- Q7Mvf7UdOXUqBLc+R2xZks9rvgRzyn3pL4zurFd2YBqz9lByXmau8QYKuhkD+14Fn8tp
- Y/WJAgqkwxSN3441r2bv9I99b/EBoORAg9bRHbxaE4zOx9OifBcXW3OEx+0aIMVDnTnv
- bN0KuMUidxZT4TORBaoScSFlGk40WcxUfYWruGgESQ3T+72m6rtw64WqNT6vDhx6ZWCv
- rwIWOTKtw4QElEb19488qaxyVRxaKsCI08m+4+qpQcuztJdItKanL0/Ll2+F/12ze6so
- EmjQ==
+ bh=3h1YUm9/diU16ZWjl6NvChhRtfF7E8PRZGhUvORG+lo=;
+ b=rto3GJWZQoNgPlHueUkKcCqK3IdDgA7X1HGKQOWYfa+vuMVPy1RKmcr4eaUq+riF3a
+ xlFniqSrHXGZF9y/33tP5hVCuVhcRS/vywrYUzdIzykRlTQdvDorM1o4YQ+61X9Y9Jpp
+ bakGkz05rty4xhNrYmS3PG+e6LfFh1d/3G/9FWce2aBswflbZ27TJ2Sx6LQNV0InR5MA
+ bAjqGdBDhpuyYosz+y02fxiGxrtOZO6GEnJXjUNl3holtvU1Eqs3i0wMTyKmKmjQfEGU
+ ij+AV4RQcrTVzzsyS0fQwp3D+Hky94Wq6BSgmaTX3oG7YGcNzQhAjxFix9dgPkyaXE2V
+ tE9Q==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=GrVPUcTD2l9oJ0HPXx8l+PhUQ6rIzd+t7iX8qFgDDUE=;
- b=PLJdLQN5mbhAiE4KUkf654yfjwHMoVA/s5/wLM3njeeVbEw4BtVbfgfQU2omXkNg+A
- G4R3XoZ3Fe/nktqpwDk7hVrzw++Avqmf/2vvbJ0xx58DyylltMRUyGIiX/V03LLSpzWJ
- 6vVbDTxQ/8dah2VvDLgXsnAjkp0OiD812yyIJaZANfaHECheSeAkbkQ1L+mXewn4QjbD
- 2P89BHxEBPr7Wh3XsF8DM6ZZw1V2RnZdiBYNskjCTnpPPfOxGzKjBug4igtCLUrkJAyx
- mFv8f8o1ZOmU/vE19Gl9LYZqrqfEYml65ssacgqvrZrlkwS/WWKku1g7HuiOudoMuG5O
- /MPA==
-X-Gm-Message-State: AGi0PuYNvIri4YehhkWu8NsodtBP0GGTtZ0VTHOjVTY7sOwqlGY0zZRg
- 5c6N3aaltmG81+6/H/4Atw8=
-X-Google-Smtp-Source: APiQypL4s/mUZ/ZYL0kEimx4vhbQ6WN12EIfKnlQOaoJRiTogeSbY1XH1KXmgf2OGXzZCm2fknw27w==
-X-Received: by 2002:a1c:6402:: with SMTP id y2mr5205603wmb.116.1588191438299; 
- Wed, 29 Apr 2020 13:17:18 -0700 (PDT)
+ bh=3h1YUm9/diU16ZWjl6NvChhRtfF7E8PRZGhUvORG+lo=;
+ b=JtDOMD/j+KBPJzJUVgcP59GtODlesl730vVufNMeM4TQEe81gMpVu1regsd/Zvg27U
+ D5HWUcWyO3kgkrFJDtKAqa1CCYD36qbv1T8fUdbTqbQdNsHCKuJi4lfky0i3GBG6ruH6
+ yw6dBkUNB7kv4stjqOLdLrSOk/vD0gnZLeEIOEY7STPzw16472oH7zZm7a9KwmZ4TZpB
+ PVij+waNDYQbtH4SXuAYCrMs3afflioojlcB7JNt+pkw1Nt2CbcCsYSqLxZZ/qzz9zvr
+ YnGDkkmk7TgGnqRv4C6jmwbrUFCaHZRPn7NHM2LoIA+Z1EvQJAvyD6J7AL7U7xbH3nbE
+ lazQ==
+X-Gm-Message-State: AGi0PuariDJEMfaiY+EMBLlzOICX678WW7VKmFiv2jeTpc9QP/EidtVM
+ qIjyuJPBr6N0kfb5+Eu1Qc4=
+X-Google-Smtp-Source: APiQypI/ni8XFwYIHa0cewHD1MVfQDj2saKDUC5JGqEgPQrYhLr4ehS8ZLS8+x8E0cnvoqOaFTt7Fw==
+X-Received: by 2002:a5d:42c7:: with SMTP id t7mr40611834wrr.336.1588191439216; 
+ Wed, 29 Apr 2020 13:17:19 -0700 (PDT)
 Received: from localhost.localdomain
  (p200300F137142E00428D5CFFFEB99DB8.dip0.t-ipconnect.de.
  [2003:f1:3714:2e00:428d:5cff:feb9:9db8])
- by smtp.googlemail.com with ESMTPSA id q143sm9923623wme.31.2020.04.29.13.17.17
+ by smtp.googlemail.com with ESMTPSA id q143sm9923623wme.31.2020.04.29.13.17.18
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Wed, 29 Apr 2020 13:17:17 -0700 (PDT)
+ Wed, 29 Apr 2020 13:17:18 -0700 (PDT)
 From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
 To: robh+dt@kernel.org, andrew@lunn.ch, f.fainelli@gmail.com,
  linux-amlogic@lists.infradead.org, devicetree@vger.kernel.org
-Subject: [PATCH RFC v2 05/11] net: stmmac: dwmac-meson8b: Add the
- PRG_ETH0_ADJ_* bits
-Date: Wed, 29 Apr 2020 22:16:38 +0200
-Message-Id: <20200429201644.1144546-6-martin.blumenstingl@googlemail.com>
+Subject: [PATCH RFC v2 06/11] net: stmmac: dwmac-meson8b: Fetch the
+ "timing-adjustment" clock
+Date: Wed, 29 Apr 2020 22:16:39 +0200
+Message-Id: <20200429201644.1144546-7-martin.blumenstingl@googlemail.com>
 X-Mailer: git-send-email 2.26.2
 In-Reply-To: <20200429201644.1144546-1-martin.blumenstingl@googlemail.com>
 References: <20200429201644.1144546-1-martin.blumenstingl@googlemail.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200429_131724_156968_50778F67 
-X-CRM114-Status: GOOD (  10.16  )
+X-CRM114-CacheID: sfid-20200429_131720_980639_2E5907E0 
+X-CRM114-Status: GOOD (  10.73  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:342 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:442 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -110,50 +110,43 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-The PRG_ETH0_ADJ_* are used for applying the RGMII RX delay. The public
-datasheets only have very limited description for these registers, but
-Jianxin Pan provided more detailed documentation from an (unnamed)
-Amlogic engineer. Add the PRG_ETH0_ADJ_* bits along with the improved
-description.
+The PRG_ETHERNET registers have a built-in timing adjustment circuit
+which can provide the RX delay in RGMII mode. This is driven by an
+external (to this IP, but internal to the SoC) clock input. Fetch this
+clock as optional (even though it's there on all supported SoCs) since
+we just learned about it and existing .dtbs don't specify it.
 
-Suggested-by: Jianxin Pan <jianxin.pan@amlogic.com>
 Signed-off-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
 ---
- .../ethernet/stmicro/stmmac/dwmac-meson8b.c   | 21 +++++++++++++++++++
- 1 file changed, 21 insertions(+)
+ drivers/net/ethernet/stmicro/stmmac/dwmac-meson8b.c | 8 ++++++++
+ 1 file changed, 8 insertions(+)
 
 diff --git a/drivers/net/ethernet/stmicro/stmmac/dwmac-meson8b.c b/drivers/net/ethernet/stmicro/stmmac/dwmac-meson8b.c
-index 1d7526ee09dd..70075628c58e 100644
+index 70075628c58e..41f3ef6bea66 100644
 --- a/drivers/net/ethernet/stmicro/stmmac/dwmac-meson8b.c
 +++ b/drivers/net/ethernet/stmicro/stmmac/dwmac-meson8b.c
-@@ -48,6 +48,27 @@
- #define PRG_ETH0_INVERTED_RMII_CLK	BIT(11)
- #define PRG_ETH0_TX_AND_PHY_REF_CLK	BIT(12)
+@@ -85,6 +85,7 @@ struct meson8b_dwmac {
+ 	phy_interface_t			phy_mode;
+ 	struct clk			*rgmii_tx_clk;
+ 	u32				tx_delay_ns;
++	struct clk			*timing_adj_clk;
+ };
  
-+/* Bypass (= 0, the signal from the GPIO input directly connects to the
-+ * internal sampling) or enable (= 1) the internal logic for RXEN and RXD[3:0]
-+ * timing tuning.
-+ */
-+#define PRG_ETH0_ADJ_ENABLE		BIT(13)
-+/* Controls whether the RXEN and RXD[3:0] signals should be aligned with the
-+ * input RX rising/falling edge and sent to the Ethernet internals. This sets
-+ * the automatically delay and skew automatically (internally).
-+ */
-+#define PRG_ETH0_ADJ_SETUP		BIT(14)
-+/* An internal counter based on the "timing-adjustment" clock. The counter is
-+ * cleared on both, the falling and rising edge of the RX_CLK. This selects the
-+ * delay (= the counter value) when to start sampling RXEN and RXD[3:0].
-+ */
-+#define PRG_ETH0_ADJ_DELAY		GENMASK(19, 15)
-+/* Adjusts the skew between each bit of RXEN and RXD[3:0]. If a signal has a
-+ * large input delay, the bit for that signal (RXEN = bit 0, RXD[3] = bit 1,
-+ * ...) can be configured to be 1 to compensate for a delay of about 1ns.
-+ */
-+#define PRG_ETH0_ADJ_SKEW		GENMASK(24, 20)
+ struct meson8b_dwmac_clk_configs {
+@@ -380,6 +381,13 @@ static int meson8b_dwmac_probe(struct platform_device *pdev)
+ 				 &dwmac->tx_delay_ns))
+ 		dwmac->tx_delay_ns = 2;
+ 
++	dwmac->timing_adj_clk = devm_clk_get_optional(dwmac->dev,
++						      "timing-adjustment");
++	if (IS_ERR(dwmac->timing_adj_clk)) {
++		ret = PTR_ERR(dwmac->timing_adj_clk);
++		goto err_remove_config_dt;
++	}
 +
- #define MUX_CLK_NUM_PARENTS		2
- 
- struct meson8b_dwmac;
+ 	ret = meson8b_init_rgmii_tx_clk(dwmac);
+ 	if (ret)
+ 		goto err_remove_config_dt;
 -- 
 2.26.2
 
