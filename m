@@ -2,7 +2,7 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1CB601BE789
+	by mail.lfdr.de (Postfix) with ESMTPS id 22A741BE78B
 	for <lists+linux-amlogic@lfdr.de>; Wed, 29 Apr 2020 21:41:23 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
@@ -10,37 +10,37 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	List-Archive:List-Unsubscribe:List-Id:To:In-Reply-To:References:Date:
 	Message-Id:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=11DlYmpJUQpcGWMG5xhSFx61sW5x9zmShawPm2zJjsI=; b=UTao3UqOl3oNlH
-	3L+JrHo1ByTU6m7gB1HhqCC8iwhcljsnI3fFG271K/R+gVGWDqGhIhGWTBGZPAD3vTkpmIxNuA0I6
-	21PzqijEEUyf/Me7tZ0/AlLfIMNEMtr4NgP7WSzdwFAbHK3RieqgiDef234ZeFEU8745N8XB8Xy5t
-	VKNk9Ins47H4s+EOe+vFxkk3CNyLz+Mw+rW4RHHlzhiS3OJcBHlK+ZlN57GMeayGJ63FHubpUMuvO
-	EToMzjh9vtQVj+IGykdLQfzTJen+qU7Mc7Vq2cr4uIOt+doF5RLXWpgqWngtDS/254HQyibnAtB5h
-	WdycBiNFQ9DYC3d7qtcQ==;
+	List-Owner; bh=4aBj+oKndIe9DpfnlIcYZpeIPrhSFqubAlWq6p2j/I8=; b=Sl86eA9G5ZRRQz
+	9qqoLa0kAeYCmExgYT+u6s/S3BAgMFo1b1xNOsTyfNXLDsVwGTUa90Eoi3yExf27rjQgOmaRzhvcL
+	gR0sNkEN7c4Dpx1nrLLQUOg7ns9obETYQ0mjh2YdtU7md4CH4FNVZecKDKGCQtoRP1aFFHkAXWSoW
+	czZcdu0qmDQRhA8VcR4mN5xBBkTi5xGiHww08RZjqeJzmbxVWnw+ZgCyEhj8EwsvdweEnF804dFTh
+	zWRBDLOvZeIPK36aFIVT/CFoOa5wddqdPaFo2rcbMilkTmpHBQwkBQLbrgovdOmDPkUE5YuHpnILE
+	yUjtsta3VI4d5UzW8KtA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jTsa5-0000xC-Rr; Wed, 29 Apr 2020 19:41:17 +0000
+	id 1jTsa8-0000zo-S5; Wed, 29 Apr 2020 19:41:20 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jTsa2-0000v6-1I
- for linux-amlogic@lists.infradead.org; Wed, 29 Apr 2020 19:41:15 +0000
+ id 1jTsa2-0000vL-84
+ for linux-amlogic@lists.infradead.org; Wed, 29 Apr 2020 19:41:17 +0000
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1588189273;
- bh=sOn+4CLQ2/pS8aBldf4wxjVfnt+x4zMMLX3zMEBNjGE=;
+ s=default; t=1588189274;
+ bh=M3sfyoY/FssfT84l+5u7OCm6qQ6ZDK0AomNV1h3qcA0=;
  h=Subject:From:Date:References:In-Reply-To:To:Cc:Cc:From;
- b=K8rtAOqygMqC+hyQUse2vapvQZP50LkcfDukKfuc1tb8lLNNPs8Lva9SA4sbjdG4I
- nIVzd9YR3YpO7z678e0xOhgiICyqBoMH6yv1K6sBf1oyBOMsoMqPoAPhs+P02nsrsX
- 76vfz1s8smitm+YCxu3P+Q6ORD3GcAJdsOrepkkM=
+ b=cyuR2gSXADEDVuwZ/awYPDcUuM6K+/rqaUeWP1t11wW3JUCqleMqiLn8Cd0FnJx1h
+ iFh1/Ka5Fga/oFP+pHnHPH3hVAYmFsSIerDCtgbkMuqb0JhxZG4BLhSxLxmJ4wkKeF
+ 0Rbo+libNzeb1n/h+9RGaPr5MVzsml5bUl71oHo0=
 MIME-Version: 1.0
-Subject: Re: [PATCH] arm64: dts: meson: kvim3: move hdmi to tdm a
+Subject: Re: [PATCH] arm64: dts: meson-g12: remove spurious blank line
 From: patchwork-bot+linux-amlogic@kernel.org
-Message-Id: <158818927359.21662.5631350669673239690.git-patchwork-notify@kernel.org>
+Message-Id: <158818927395.21662.3176540147299415461.git-patchwork-notify@kernel.org>
 Date: Wed, 29 Apr 2020 19:41:13 +0000
-References: <20200421141814.639480-1-jbrunet@baylibre.com>
-In-Reply-To: <20200421141814.639480-1-jbrunet@baylibre.com>
-To: Jerome Brunet <jbrunet@baylibre.com>
+References: <20200420080018.11607-1-narmstrong@baylibre.com>
+In-Reply-To: <20200420080018.11607-1-narmstrong@baylibre.com>
+To: Neil Armstrong <narmstrong@baylibre.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200429_124114_102231_E2393028 
-X-CRM114-Status: UNSURE (   7.20  )
+X-CRM114-CacheID: sfid-20200429_124114_299796_ABBE832A 
+X-CRM114-Status: UNSURE (   6.00  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
@@ -80,21 +80,21 @@ Hello:
 
 This patch was applied to khilman/linux-amlogic.git (refs/heads/for-next).
 
-On Tue, 21 Apr 2020 16:18:14 +0200 you wrote:
-> The tdmout b is physically routed to the 40 pin header and the tdmout c
-> is routed to the m2 connector. It makes these interfaces poor
-> candidates to handle the HDMI 8ch i2s link (2ch i2s * 4 lanes) as it would
-> force the same link format on the related connectors.
+On Mon, 20 Apr 2020 10:00:18 +0200 you wrote:
+> Remove spurious blank line introduced in f12a463d2f43 but was not part
+> of the original patch at [1].
 > 
-> Instead use the TDM A interface. This one is not routed to the outside
-> world on the vim3, so it can only be used for HDMI.
+> [1] http://lore.kernel.org/r/20200313090713.15147-3-narmstrong@baylibre.com
+> 
+> Fixes: f12a463d2f43 ("arm64: dts: meson-g12: add the SPIFC nodes")
+> Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
 > 
 > [...]
 
 
 Here is a summary with links:
-  - arm64: dts: meson: kvim3: move hdmi to tdm a
-    https://git.kernel.org/khilman/linux-amlogic/c/f31505089497ced2a640d3d883f0f690a1f0026c
+  - arm64: dts: meson-g12: remove spurious blank line
+    https://git.kernel.org/khilman/linux-amlogic/c/adf27a87eb4e85bb2136572121e06ad83e5f1407
 
 You are awesome, thank you!
 
