@@ -2,142 +2,142 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2BE171BE64D
-	for <lists+linux-amlogic@lfdr.de>; Wed, 29 Apr 2020 20:35:22 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 395F21BDDB2
+	for <lists+linux-amlogic@lfdr.de>; Wed, 29 Apr 2020 15:33:32 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Date:Message-ID:From:
-	Subject:To:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=B/84wZbIg8bY3l0mWyMEhnRIJes/3rcRhWSuslTz9xo=; b=o3na7kR42+pKU7
-	BMbF2bW4DS25WpC0lm7IURm0/2ZphYsEsTISCEgs5Y0hXEnL/YJ15kAeA4PJteUZIdYcHNxXjD5/u
-	H4vMlDYj0MzFxI7m5FPylVEkpAIE/HV6db0Qara8WaCdWpavRVOZjpk5g0+Min9mSX2s6zA48yi0F
-	OsMqapHZr7iAvk5SDUHSYnclSvoKJMJec/B3pMe9z80B4le7I/IUWhdFdlpMfuSobBbSNtaEGDct6
-	io0lwWAZXgwGRfWHWzGSa19D5S1E9gUXFSG2rfrTjo4Z7QYxTmBiGTkqmmBnVTj6+DHIrabZ6EZ16
-	Q47YXTQXG9HMyM6Cx1bA==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
+	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=HU4GFQn/LvPDSh0MT1tO5w7E3jyDBqr+SnmOGLvjz04=; b=YA3ow4iVKiuGH3
+	b2q9LZe8vgOEunExQTqm/uRTWX0g5rIRhjPQD95fO1FDvSoLgN25dyeJLHJ63UwNcIKdSB19r+9t5
+	gqZhYmYjLz2A76mcRQndQaRX2L9WdZ258B4Ym8owj7/BLwXfA8+U19I0qFzCbT+iie55Fh8YEAymM
+	rdf5Z+5QjQvDuprJgrSPG94tRmDY/7jb9WCWzKMt0VRNVhQXPTqzoy/IlUeausQ6PU/1pmSlYjPfk
+	lmrJmq6/0i+VLAlWlQgmNotIHnAqW5PR4kiIlyoxUM5KUPZdjgM+ZQhwIZU2I2V4g44+IAwILYI5C
+	cx71dQFSXZTuyE+w4c2w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jTrYE-0004Ga-59; Wed, 29 Apr 2020 18:35:18 +0000
-Received: from mout.web.de ([212.227.17.11])
+	id 1jTmq8-0002DK-Rn; Wed, 29 Apr 2020 13:33:28 +0000
+Received: from mail-wr1-x443.google.com ([2a00:1450:4864:20::443])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jTmnH-0001TR-Ro; Wed, 29 Apr 2020 13:30:33 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=web.de;
- s=dbaedf251592; t=1588167022;
- bh=/MTQc9gAsJAPP4H8/tzw9TM1Qf8zudFOc4Xfmf7+dYw=;
- h=X-UI-Sender-Class:To:Cc:Subject:From:Date;
- b=fsdbxE9Y9QjcpcTNcDW5A6vLho0tdp1NHLllHlKKk9jr3duMgpRDz1MwAwEyZGFbC
- Cs96J68+R+oAjGMOTeIgy9hjJM8TUQ+9ER2LltZmtxP+aEw624v7hKV6uXR3uWIHVZ
- OBA5rNeNnFXPYggFnDvAm/R+2LuRb2bES+xQU76U=
-X-UI-Sender-Class: c548c8c5-30a9-4db5-a2e7-cb6cb037b8f9
-Received: from [192.168.1.2] ([93.133.72.72]) by smtp.web.de (mrweb101
- [213.165.67.124]) with ESMTPSA (Nemesis) id 0MFL2m-1jQXf73GXE-00EJ4M; Wed, 29
- Apr 2020 15:30:21 +0200
-To: Bernard Zhao <bernard@vivo.com>, linux-amlogic@lists.infradead.org,
- linux-arm-kernel@lists.infradead.org, linux-clk@vger.kernel.org
-Subject: Re: [PATCH] clk/meson: Complete exception handling in
- meson8b_clkc_init_common()
-From: Markus Elfring <Markus.Elfring@web.de>
-Autocrypt: addr=Markus.Elfring@web.de; prefer-encrypt=mutual; keydata=
- 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 FEE=
-Message-ID: <ceba9706-0819-54cf-c3d3-9ceb93d31c5e@web.de>
-Date: Wed, 29 Apr 2020 15:30:20 +0200
+ id 1jTmq5-0002Bx-RS
+ for linux-amlogic@lists.infradead.org; Wed, 29 Apr 2020 13:33:27 +0000
+Received: by mail-wr1-x443.google.com with SMTP id x17so2552945wrt.5
+ for <linux-amlogic@lists.infradead.org>; Wed, 29 Apr 2020 06:33:25 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=baylibre-com.20150623.gappssmtp.com; s=20150623;
+ h=subject:to:cc:references:from:autocrypt:organization:message-id
+ :date:user-agent:mime-version:in-reply-to:content-language
+ :content-transfer-encoding;
+ bh=57KpVyxFiIynSOtLWM5S1qu9oG0E8FFGMRYGzL0PtQs=;
+ b=ABiQRIwnnGgnP7DXwh5VSPW3qFWj2FcDVAgkYap4Sep2VKflFx4N/3UKNVOrNvHK5f
+ XttYZI0S7MqVMonv8SzdRLVL+QgpFNksG1Ov1gH0sBsnm5ZwXkWWcglAUcDoecIgVDKv
+ TA0d/5OOhCjf3aeu0+ukRzQme0Pof1jHr0s9VmSqQOJvxLkVzvgmNqXBhnQsf82RuGh5
+ nGSfyDjdej/n9WKXpFKfkTK6vAHyrSmyZq5RjjElWNgoasSIQINoQRnst/8pUz0RBefl
+ wxUHuhRndYMqGu/IE9TR5h6FOdCU4eI/gcjp+NLfWE4HjmePW2eoEhj4KASneqM8iCPE
+ U6nQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:subject:to:cc:references:from:autocrypt
+ :organization:message-id:date:user-agent:mime-version:in-reply-to
+ :content-language:content-transfer-encoding;
+ bh=57KpVyxFiIynSOtLWM5S1qu9oG0E8FFGMRYGzL0PtQs=;
+ b=qxCjHOGtkwR6+r5bh+WNYVFgX+cdtithl8d+nq7o9zHibo3CU84jDCPEgOBujH4xEB
+ mM8Dxh5TOImLDBZEjIiE13pjQA8e6hd9kZiZ7MlnhfIGDpENW61/nQOaxeHJigc4wMCC
+ jDlt864o440pT5onW06qPvF5U/M5D0qY/eQXSCZ3U2JFN7/y/xO7zC87JEhhPmsVbz5b
+ wxYi2LBKnHjm6ued2v93RayZyLZgB4XsGPQQgV48z3/+2enpRHAqKTGkkU9C1t75qkWJ
+ /b78XOX5xUltZPcmncyETxHyzlCQiUS9TRpurGO+CaRFf0WNYlNrk38nETl8GYQH3W2z
+ JtXQ==
+X-Gm-Message-State: AGi0Pubab08WVXVioxpecHF1FgiCOEuKHvTmDELwxv/2y2GdMA1A+b12
+ O9j9sMzvV6QQfZnn1J4R5yW9Vw==
+X-Google-Smtp-Source: APiQypLeL8JXb5wg6K5NkhgJTycyIPyVnsKkihsopNfL2tb7HT1xgcWccOBeuwpneP2REnFZ67aTSw==
+X-Received: by 2002:a5d:4e02:: with SMTP id p2mr42130290wrt.302.1588167203674; 
+ Wed, 29 Apr 2020 06:33:23 -0700 (PDT)
+Received: from ?IPv6:2a01:e35:2ec0:82b0:4460:3fd3:382:4a71?
+ ([2a01:e35:2ec0:82b0:4460:3fd3:382:4a71])
+ by smtp.gmail.com with ESMTPSA id s17sm7644244wmc.48.2020.04.29.06.33.22
+ (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+ Wed, 29 Apr 2020 06:33:22 -0700 (PDT)
+Subject: Re: [PATCH v2] drm/meson: add mode selection limits against specific
+ SoC revisions
+To: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+References: <20200428092147.13698-1-narmstrong@baylibre.com>
+ <CAFBinCBb=FTH6aken5K9zoedBPYBJUCSj0eA+_Eghv+mnU_3vg@mail.gmail.com>
+From: Neil Armstrong <narmstrong@baylibre.com>
+Autocrypt: addr=narmstrong@baylibre.com; prefer-encrypt=mutual; keydata=
+ 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
+ BSwxi7g3Mu7u5kUByanqHyA=
+Organization: Baylibre
+Message-ID: <f7aadb74-4351-3c55-7d99-afabc34b0712@baylibre.com>
+Date: Wed, 29 Apr 2020 15:33:21 +0200
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101
- Thunderbird/68.7.0
+ Thunderbird/68.4.1
 MIME-Version: 1.0
-Content-Language: en-GB
-X-Provags-ID: V03:K1:VbtUozrdnS3f3mFsMO90WUGM4iLjjRhtjaQ2tdiDGbLTbeM8kps
- oeBHZw3l4M5oaDrHpnAZ/tz2cVpUMocce20jjzTJHfDqQgg3QoHS7AQLt8Wfug2chbbxkY9
- sAsH2sUA+2LKOHNghLioNcBvzcVZq9SEmjalf6ke6Elv4s4hIdn17v3OGEYXSe06mNz1bxw
- 0PhXOUbwuExEI8rxgOE4A==
-X-Spam-Flag: NO
-X-UI-Out-Filterresults: notjunk:1;V03:K0:0WnMMYIuquU=:xwc98jCk5A95enBKww7nVB
- 41Mb80XNIKMDDVGiYbtQl3csVIr1rP4fi1XSzOqV886C29z9WOeeVO8k8GfD08qeKCiUut/kH
- k9SUFuVV80TRCrUB8vSfvkxxWz3YqrA2bMEnankibACtpfy/BWvNSmHjQRxhtoyDFUHVjALsS
- IyClxlWKjMEQE05hzLGPfu2fDWx0NM97kilJvqjC5ciPm9fb7Qk/TX80mrLoBfCt4yE4xq9og
- 82d4gviF0yc365ZSaMaWAsE5GakAXNoZGSV8xR9Ay2Epz+hbqc/KbYRm6mA5rz/IXgmRSLNIh
- LEmMfrUZCHzWWobj/ZDT1J0Kor04yHtZovxZTo2YlJzOIhfZLATe/tsM6N9zBqw4yqhCXRFXf
- Wr9lCj2xgEEu8XaDs0XuaaNBVkdscac6v+4f41cEDYjwJp1ZdEq1S0O5G29/dux+4H6WC/ZYe
- BJMAFMio9GhIwGChikz1WXrbn+avS7ag93XzsijRMscO5LVUfHkc35jUqP7tQcDIBLGgHd4MM
- Wqu9tAxSPxyl6DiHSLEPIPDOkn8DjS+pr87pt443ceGTCkCBiZkIA5NQcMGOxJ7E0wTr/Udid
- pwN7zpIrIr6110Mnj6KVk1kgHSqRIL15VUJ5eC7GyFd8YVE2ggtLcSi0ZUf1zEEY8C3AlISr0
- 8m0a8Ozn3p5ksDQjbtv7Y584YOe/hUHFRWp48bSsYQm3w5M8VRDI+f6khvHQbjmhvuOhtD+F+
- FTijKRWaa7Eu1y4PcYEYKuopYWHhDYMSQjlYX4bqcrqX6xXXNjMRiXwaq1Csc8oPNsTiLP8M0
- KhDIf/BueyMp8ub1ViGAyziIUp0KU+77mM4MQRBotbHjT6HynhO/QsKO2WxWzMBtWSX4wIVQi
- jJzgF2R/pnVJOk+fZaRwXEQfENk3FGoEsnovr3oNW0vkzoKN10wYtlPWYX9hP9Kp6DgpKx6O2
- 7axOJlSmZm0YdaNyGMLEszF6KfDOdD3AkjpvGDv44REMrKIweQigIDwV2n2tToEMPyIHNHZKd
- dnX6/PCYV3ddFcmdWwBqUJxeMlS0eYqDdGOjjabNtos7a+9GfdzsyIZtZYxDXNF0EPDPWsGZJ
- eWjZwJfx2aEAXFQAmdbhj46pW0FsWHoA6r/QGkTFbo72H8C7twyc3sL5q9/FFDQcXp6J+3+r3
- MB3373nLxjh+kQBJf3MQK+08N1nn+ZeKHyhaDzwg+4AaXGGSP3TDV18E42dtnU9jpd0nkYhaF
- ihYRX8HFXjgOYD5ii
-X-Bad-Reply: 'Re:' in Subject but no References or In-Reply-To headers
+In-Reply-To: <CAFBinCBb=FTH6aken5K9zoedBPYBJUCSj0eA+_Eghv+mnU_3vg@mail.gmail.com>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200429_063032_190218_304E758F 
-X-CRM114-Status: UNSURE (   4.83  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.9 (/)
+X-CRM114-CacheID: sfid-20200429_063325_923312_D18E3545 
+X-CRM114-Status: GOOD (  15.50  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-0.9 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
- low trust [212.227.17.11 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:443 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider [markus.elfring[at]web.de]
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [212.227.17.11 listed in wl.mailspike.net]
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
-X-Mailman-Approved-At: Wed, 29 Apr 2020 11:35:17 -0700
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -149,28 +149,70 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: opensource.kernel@vivo.com, Neil Armstrong <narmstrong@baylibre.com>,
- Stephen Boyd <sboyd@kernel.org>, Kevin Hilman <khilman@baylibre.com>,
- Michael Turquette <mturquette@baylibre.com>, kernel-janitors@vger.kernel.org,
- linux-kernel@vger.kernel.org, Jerome Brunet <jbrunet@baylibre.com>
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Cc: linux-amlogic@lists.infradead.org, linux-arm-kernel@lists.infradead.org,
+ dri-devel@lists.freedesktop.org, linux-kernel@vger.kernel.org
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-PiBJbiBjb21tb24gaW5pdCBmdW5jdGlvbiwgd2hlbiBydW4gaW50byBlcnIgYnJhbmNoLCB3ZSBk
-aWRuYHQKPiB1c2Uga2ZyZWUgdG8gcmVsZWFzZSBrem1hbGxvYyBhcmVhLCB0aGlzIG1heSBicmlu
-ZyBpbiBtZW1sZWFrCgoqIEkgc3VnZ2VzdCB0byBpbXByb3ZlIGFsc28gdGhpcyBjaGFuZ2UgZGVz
-Y3JpcHRpb24uCgoqIFBsZWFzZSBtb3ZlIHRoZSByZXNvdXJjZSByZWxlYXNlIGZ1bmN0aW9ucyB0
-byBlbmQgb2YKICB0aGUgZnVuY3Rpb24g4oCcbWVzb244Yl9jbGtjX2luaXRfY29tbW9u4oCdIGhl
-cmUuCiAgaHR0cHM6Ly9naXQua2VybmVsLm9yZy9wdWIvc2NtL2xpbnV4L2tlcm5lbC9naXQvdG9y
-dmFsZHMvbGludXguZ2l0L3RyZWUvRG9jdW1lbnRhdGlvbi9wcm9jZXNzL2NvZGluZy1zdHlsZS5y
-c3Q/aWQ9OTZjOWE3ODAyYWY3ZDUwMGE1ODJkODlhOGI4NjQ1ODRmZTg3OGMxYiNuNDUwCgoqIFdp
-bGwgdGhlIHRhZyDigJxGaXhlc+KAnSBiZSByZWxldmFudCB0aGVuIGZvciB0aGUgY29tcGxldGVk
-IGV4Y2VwdGlvbiBoYW5kbGluZz8KICBodHRwczovL2dpdC5rZXJuZWwub3JnL3B1Yi9zY20vbGlu
-dXgva2VybmVsL2dpdC90b3J2YWxkcy9saW51eC5naXQvdHJlZS9Eb2N1bWVudGF0aW9uL3Byb2Nl
-c3Mvc3VibWl0dGluZy1wYXRjaGVzLnJzdD9pZD05NmM5YTc4MDJhZjdkNTAwYTU4MmQ4OWE4Yjg2
-NDU4NGZlODc4YzFiI24xODMKClJlZ2FyZHMsCk1hcmt1cwoKX19fX19fX19fX19fX19fX19fX19f
-X19fX19fX19fX19fX19fX19fX19fX19fX18KbGludXgtYW1sb2dpYyBtYWlsaW5nIGxpc3QKbGlu
-dXgtYW1sb2dpY0BsaXN0cy5pbmZyYWRlYWQub3JnCmh0dHA6Ly9saXN0cy5pbmZyYWRlYWQub3Jn
-L21haWxtYW4vbGlzdGluZm8vbGludXgtYW1sb2dpYwo=
+Hi,
+
+On 29/04/2020 00:03, Martin Blumenstingl wrote:
+> Hi Neil,
+> 
+> On Tue, Apr 28, 2020 at 11:21 AM Neil Armstrong <narmstrong@baylibre.com> wrote:
+>>
+>> The Amlogic S805X/Y uses the same die as the S905X, but with more
+>> limited graphics capabilities.
+>>
+>> This adds a soc version detection adding specific limitations on the HDMI
+>> mode selections.
+>>
+>> Here, we limit to HDMI 1.3a max HDMI PHY clock frequency.
+> for my own education: 1.65GHz from the PLL will be divided down to 165MHz
+> isn't this more like the limit of HDMI 1.2a?
+
+indeed from [1] :
+```
+HDMI 1.3 / 1.3a:
+- Higher speed: HDMI 1.3 increases its single-link bandwidth to 340 MHz (10.2 Gbps) to support the
+demands of future HD display devices, such as higher resolutions, Deep Color and high frame rates.
+In addition, built into the HDMI 1.3 specification is the technical foundations that will let future
+versions of HDMI reach significantly higher speeds.
+```
+
+So yes, it must be HDMI 1.2a, I'll fixup while applying.
+
+> 
+>> Changes sinces v1:
+>> - Moved frequency check in the vclk code, and also checks DMT modes
+>>
+>> Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
+> Acked-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+> 
+> This looks good to me based on the current limitations of meson_vclk.c
+> If we switch to CCF based VPU clock rate changes then we should do
+> this in the clock driver by calling clk_hw_set_rate_range(hdmi_pll, 0,
+> 1.65GHz)
+> 
+> The good thing is: we can re-use struct meson_drm_soc_limits even
+> after switching to CCF.
+> We will just need to set the max PHY freq using
+> clk_round_rate(hdmi_pll, ULONG_MAX)
+
+Exact !
+
+Neil
+
+> 
+> 
+> Martin
+> 
+
+[1] https://denon.custhelp.com/app/answers/detail/a_id/192/~/differences-between-hdmi-versions-1.1%2C-1.2%2C-1.3a%2C-1.4-and-2.0%3F
+
+_______________________________________________
+linux-amlogic mailing list
+linux-amlogic@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-amlogic
