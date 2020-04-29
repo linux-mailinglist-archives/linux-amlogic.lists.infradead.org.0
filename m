@@ -2,72 +2,76 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 70D6F1BE638
-	for <lists+linux-amlogic@lfdr.de>; Wed, 29 Apr 2020 20:26:04 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1C5F31BE689
+	for <lists+linux-amlogic@lfdr.de>; Wed, 29 Apr 2020 20:46:48 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	Content-Transfer-Encoding:Content-Type:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:References
-	:In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	:In-Reply-To:Subject:To:From:Reply-To:Cc:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=H2HHFXXgqvt61yYQCd4kOu26b8mgWs4SxfR8DKReLcA=; b=TM6xC5KyDB1Hg5
-	9jP37p5q3KkoZvlEDb5bXGuaQynf+KPrA4O5W8HH4DSPMb89oO7vkaUo5IXZcqaEt/WP/WdvN1JSm
-	I7h49ODA2izZVhD4b0l/xdn/zLJnU6yBjBiq0/zMv0iG0Qe245FOc2iyNlO2iixVwBRKqH8VWM7ya
-	mVUKm5A3kUpzTZu18AvaC1UCV48MzvgCCaSNzmYw7c41fUgwBW78pv69+rYHziv4Q92bdhDvHEzjm
-	UgSs6cz1xISijycyFhrqZX5GntGSgFu03/55DgNLHYLm/D1X4tjgT8XQqY2SFOh7ezKpifPmAz02F
-	htuCwTXITng5Ur8mq0hA==;
+	List-Owner; bh=lidD8j5zSLBdHrONC/0bORwU/UXzVvg2flHZZkH0zIE=; b=mwmsWEhtRqnhwE
+	pWCoFsIBWA1VI5x4S24Ve2p08nNfyOVP+fu+pIbfb1YXIWlFkmX3LjpDqdy03Jgs3acgHK5c2DOZh
+	+PExP8k+IjPNi9YOhRgK1JZhGBm2hspcoCStsze6BoE9N26qFXZNf5PbxaSKCcHelZ5UVMbFIhpF1
+	h0nJ3fDvCtzs0rQIB36jp33aemIyKIiqozwofdU4syH6gcs6m1cWIj1NOj3s1PGuU+mwJwAJ+mpVg
+	QWcV7CYNIy7QCwQnzuIRianrJTHwoy6Yfz7Au4zz2d+kao0CtBmCPUjGGRhtE5kWYr63j0dLiSPl+
+	CpNbFb94KCzDxUcHSrjg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jTrPG-000855-Ne; Wed, 29 Apr 2020 18:26:02 +0000
+	id 1jTrjI-000584-MF; Wed, 29 Apr 2020 18:46:44 +0000
 Received: from mail-wm1-x344.google.com ([2a00:1450:4864:20::344])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jTrP5-0007ub-15
- for linux-amlogic@lists.infradead.org; Wed, 29 Apr 2020 18:25:52 +0000
-Received: by mail-wm1-x344.google.com with SMTP id k12so3128087wmj.3
- for <linux-amlogic@lists.infradead.org>; Wed, 29 Apr 2020 11:25:50 -0700 (PDT)
+ id 1jTrjE-00056x-LI
+ for linux-amlogic@lists.infradead.org; Wed, 29 Apr 2020 18:46:42 +0000
+Received: by mail-wm1-x344.google.com with SMTP id u127so3193000wmg.1
+ for <linux-amlogic@lists.infradead.org>; Wed, 29 Apr 2020 11:46:40 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=from:to:cc:subject:in-reply-to:references:date:message-id
- :mime-version; bh=aylaGgHoNCdro4aj1kReOF/0XJzfw3lt+cTfiwLLy4k=;
- b=bulmF0iAYytHO8GfkiMTz2/wrjQa81ycOghM4qrGUqY/D2OA5I3QqpJenlHxHGHOGN
- 3TRI0k44FcE5kAoqkdT2qqpyYNEVFsteAbGuKJHzaBddtfXUZ92wKIX6oVcIhsjRNqAO
- tFd4Hdrq70tmRP08i3Cpp8t9YbXNTj3RRgbgqYFtGaOvXGvxH4G2Q0JS3HduP/sJwx3u
- J0NI4q/KAv+HCiS0m+IiycnPRi3/y4l6TBWHhMfdzqlEBZddW+HKVU/IE4nfdRUQPgXf
- fQX1XkJIGD5oWKQe2rqdrZ1Er/Pg9VPJFostro/Oy+FqQb6uN/hTy0CcN/QOxn25d9KV
- StEA==
+ h=from:to:subject:in-reply-to:references:date:message-id:mime-version;
+ bh=V3qZVHwLaLK/I0b0rJ63jIE3SQ22bSXyi7PMzS7GVwc=;
+ b=v8RjEYW2XwlnNxy17CGhj1lG7soRDm2FdRbHVvt07M7BPpiZupWPv5xqJsnSj6KoLA
+ dT9Cr8hP8fI35N+Q14QOEu6k1jbn4fMl82QE+K0xgmvNVRMoVc8292y7H8ByWjjFSE7a
+ PdbGY8EE7mNL29zhFBZ0bITzNJ1JSUCby2sDsYTwnaIlxN/lwf6pZgwsQvgo1zIP9RQv
+ Qq2Fh/ztGRrUxpFSqjhVDt/ey9aa8li4ufifTG+lN0dB9PU2hxbGUHi2k9DZnUBRoCFI
+ iEp12Az23yfAo4hTW1jDEaXzPTQYHVa6JTT+GTErAiK+w+i5TMEjybytvo6Bzyp1jSBX
+ zOuw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:in-reply-to:references:date
+ h=x-gm-message-state:from:to:subject:in-reply-to:references:date
  :message-id:mime-version;
- bh=aylaGgHoNCdro4aj1kReOF/0XJzfw3lt+cTfiwLLy4k=;
- b=dzx5ZCwqB9ETFwJUyQx/9dWtIPqdLQw0UTDGZHk3a4cRloRYCG5KdYB2w40AX9k5DR
- 99s2Mb6/T/tbXhztRqPyFdyEGm6Q8mW7neF7X3N8I9E16lby8m8gqfIfnuIXvBCkPNYc
- MDAnox3AzuYOH/ADGYgptrEnZXWvPSWY1c/seNDrKZV0fefZDHWQXANK6NQ6dJoEDBfP
- 9W5g9jQgad6GhJtIasKUkfiY8DPDz9tSmpId2Hith2Wwic7MqsP/02UVaih6XIb9bAEe
- hbeg2NTSvBwoOtWT12Ock1A8AFROCFWBkaees+7bw/9hV3WPKs3IR+RyOmjPJjUzzdkz
- Xy1w==
-X-Gm-Message-State: AGi0PuZ/OWksU1A9RQcGM51aIoq+9CrCiVxoiYJEyIiq1cTpx4m33Jlc
- uJIoPk5wqDHsGuHuzedxbzZtB8aG3qLRyQ==
-X-Google-Smtp-Source: APiQypKGElxZbwfebnwRtc9YXDqH2ejFiotLM25eOrvcSV/EZexT3pOur5i5ZAGDz25bVOxo6Su9eQ==
-X-Received: by 2002:a1c:bad4:: with SMTP id k203mr4587804wmf.15.1588184749038; 
- Wed, 29 Apr 2020 11:25:49 -0700 (PDT)
+ bh=V3qZVHwLaLK/I0b0rJ63jIE3SQ22bSXyi7PMzS7GVwc=;
+ b=DAN9Oj7Ys+Opt5oi16NILfmSZeNdbYY67mAD4hGREyqDrjYMlkvUlxlKoBL1RksV0E
+ hLqhlK1/t2uD+b9Fpoopcbty+aGDfjik5GJCgmYFje3e//fnI0wyPKNZEmObUFr9JsB5
+ nULPUAQ8ewZ7ENUlsIDrmftp3m54OhBOLs5kcFn5XCo7xK9PdaA/8O+20sJxJNGQX+oc
+ SSK5+mx/mvZLWdvl4gc4JJDxhzZZJqYm+j0S0mAIXn+UuTgzsAJ92aqkLhg9UBo7Qffz
+ rAMiQOPNGO3KA3uvYJV0s9BC0eqgDLadD5lKVg0btDUm6w33dWN4wbBK/2OXa3ukYi/b
+ 2bpA==
+X-Gm-Message-State: AGi0PubJd58syBmi2EnCb2e1LXZizj03AYU6F5gPRNNqgazczGgg2ov3
+ kE3mzFY0GLjL7tyBtiZVLzRXhw==
+X-Google-Smtp-Source: APiQypJdmpXOVXDmvkIQZMAsdMpd1NkWe/42oxJwKXczVw0SkYct2NGkjK3LGFf2yreraYRKmtXSIw==
+X-Received: by 2002:a1c:3dd6:: with SMTP id k205mr4774219wma.138.1588185998986; 
+ Wed, 29 Apr 2020 11:46:38 -0700 (PDT)
 Received: from localhost (c-71-197-186-152.hsd1.wa.comcast.net.
  [71.197.186.152])
- by smtp.gmail.com with ESMTPSA id g25sm8741435wmh.24.2020.04.29.11.25.47
+ by smtp.gmail.com with ESMTPSA id o6sm145378wrw.63.2020.04.29.11.46.37
  (version=TLS1_2 cipher=ECDHE-ECDSA-CHACHA20-POLY1305 bits=256/256);
- Wed, 29 Apr 2020 11:25:48 -0700 (PDT)
+ Wed, 29 Apr 2020 11:46:38 -0700 (PDT)
 From: Kevin Hilman <khilman@baylibre.com>
-To: Neil Armstrong <narmstrong@baylibre.com>, devicetree@vger.kernel.org
-Subject: Re: [PATCH 0/5] arm64: dts: meson: dtbs_checks fixups
-In-Reply-To: <20200326165958.19274-1-narmstrong@baylibre.com>
-References: <20200326165958.19274-1-narmstrong@baylibre.com>
-Date: Wed, 29 Apr 2020 11:25:45 -0700
-Message-ID: <7hk11ykv2u.fsf@baylibre.com>
+To: Christian Hewitt <christianshewitt@gmail.com>,
+ Rob Herring <robh+dt@kernel.org>, Mark Rutland <mark.rutland@arm.com>,
+ devicetree@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
+ linux-amlogic@lists.infradead.org, linux-kernel@vger.kernel.org
+Subject: Re: [PATCH] arm64: dts: meson-g12b-khadas-vim3: fix missing frddr_a
+ node
+In-Reply-To: <AA7AFC1F-AB6E-438D-8510-BC472552C554@gmail.com>
+References: <20200415095927.3780-1-christianshewitt@gmail.com>
+ <AA7AFC1F-AB6E-438D-8510-BC472552C554@gmail.com>
+Date: Wed, 29 Apr 2020 11:46:35 -0700
+Message-ID: <7hftcmku44.fsf@baylibre.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200429_112551_082154_1B7DD67C 
-X-CRM114-Status: UNSURE (   5.01  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200429_114640_696723_BF39EED3 
+X-CRM114-Status: GOOD (  11.51  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -92,25 +96,53 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: linux-amlogic@lists.infradead.org, linux-kernel@vger.kernel.org,
- linux-arm-kernel@lists.infradead.org, Neil Armstrong <narmstrong@baylibre.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Neil Armstrong <narmstrong@baylibre.com> writes:
+Christian Hewitt <christianshewitt@gmail.com> writes:
 
-> Another round of DT fixups of dtbs_checks on Amlogic DT files.
+>> On 15 Apr 2020, at 1:59 pm, chewitt <christianshewitt@gmail.com> wrote:
+>> 
+>> From: Christian Hewitt <christianshewitt@gmail.com>
+>> 
+>> The frddr_a node was accidently deleted when creating a common dtsi for the
+>> Khadas VIM3/VIM3L boards, preventing audio from working on the VIM3.
+>> 
+>> Fixes: 4f26cc1c96c9 ("arm64: dts: khadas-vim3: move common nodes into meson-khadas-vim3.dtsi")
+>> Signed-off-by: Christian Hewitt <christianshewitt@gmail.com>
+>> ---
+>> arch/arm64/boot/dts/amlogic/meson-g12b-khadas-vim3.dtsi | 4 ++++
+>> 1 file changed, 4 insertions(+)
+>> 
+>> diff --git a/arch/arm64/boot/dts/amlogic/meson-g12b-khadas-vim3.dtsi b/arch/arm64/boot/dts/amlogic/meson-g12b-khadas-vim3.dtsi
+>> index c33e85fbdaba..c6c8caed8327 100644
+>> --- a/arch/arm64/boot/dts/amlogic/meson-g12b-khadas-vim3.dtsi
+>> +++ b/arch/arm64/boot/dts/amlogic/meson-g12b-khadas-vim3.dtsi
+>> @@ -154,6 +154,10 @@
+>> 	clock-latency = <50000>;
+>> };
+>> 
+>> +&frddr_a {
+>> +	status = "okay";
+>> +};
+>> +
+>> &frddr_b {
+>> 	status = "okay";
+>> };
+>> -- 
+>> 2.17.1
 >
-> Neil Armstrong (5):
->   dt-bindings: sram: Add Amlogic SCP SRAM compatibles
->   arm64: dts: meson: fixup SCP sram nodes
->   arm64: dts: meson-g12b-ugoos-am6: fix board compatible
->   arm64: dts: meson-gxbb-kii-pro: fix board compatible
->   arm64: dts: meson: fix leds subnodes name
+> NB: I appears the same change was sent by Neil in [1] as a fix to 5.4, but
+> this appears to have been dropped/missed somewhere.
+>
+> [1] https://patchwork.kernel.org/patch/11198535/
 
-All the non-binding patches queued for v5.8,
+Hmm, not sure how I dropped that one.  I applied (again) the original
+from Neil (with updated tags from Jerome) and queued as fix for v5.7-rc.
+
+Sorry,
 
 Kevin
 
