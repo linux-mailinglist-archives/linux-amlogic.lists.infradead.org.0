@@ -2,7 +2,7 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1CF221BE78A
+	by mail.lfdr.de (Postfix) with ESMTPS id 460A41BE78C
 	for <lists+linux-amlogic@lfdr.de>; Wed, 29 Apr 2020 21:41:23 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
@@ -10,37 +10,37 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	List-Archive:List-Unsubscribe:List-Id:To:In-Reply-To:References:Date:
 	Message-Id:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=1Y7Pptg991SJqlxOphHdrJMX45+N1NR7sxibo4S/Fhc=; b=lweQEfQl0UGbEd
-	n2tNfAknpBBzFeC0OdZzMJ02kpKIykzJR/kdp2zh4A/vKo98DeCuUA0gbO0jF+RjCwnb2N+VpJtNJ
-	mep0kdlfr/YeguzJ8urO7LfNlxaOcyF2W9tdtE7q7b859ERrqNpMt7eCU3mZkSU7SN5dj/PrBuSB1
-	RtVNgLRNjNyb2kRWNBc369hCRjGYRYN9MuI54JAlIkICTRd4DJvnNXtw0CGzAAZAcSey4A+3nn7hy
-	o9nDGBGlzAPekiRPF+wP4kmLP04FGYhct+tUWLU0+hmT+/VeS4/F1Jjf54nZrD5LyoWElBcCI8uQ+
-	e0APgCN2Efn+plbPb5gQ==;
+	List-Owner; bh=N43IvEzjvcGsYaNfwVEyOk83+JzlCzTO40rgzIGG9nA=; b=TNJBLbCgf2CYtn
+	ucp8Kd5X4plzFmp0/98iyp9s1pQ9T3EfmKw3g73M/FkZYPZqRO4soJRlfZ/f9uHMHsuRV8708z+Jp
+	h5SHqAm8SJsYjtuxLi6xeY+W31DoeCSD3OPbtU+g7ptBs41Y/OT+YPy8XvCceOPJrTHQb+pPnTv5V
+	r82lzN18G+r5dDGQTWSsjS02yvHY3rHtgavL04yAc/Ikckhpvwig5dWI/56vJbYFyy3Z014NKkuI9
+	720POiatfS9yOBJRCmuC8OslV7CWSg9Uvfy261Ktc0DsmrBKXiMlg0axA3SJ/EgIGk2lGudPSmqhL
+	m9vvqxRl/K1tUhcLXelA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jTsa4-0000wH-UZ; Wed, 29 Apr 2020 19:41:16 +0000
+	id 1jTsa9-000114-RN; Wed, 29 Apr 2020 19:41:21 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jTsa2-0000v9-2L
- for linux-amlogic@lists.infradead.org; Wed, 29 Apr 2020 19:41:15 +0000
+ id 1jTsa2-0000vb-EZ
+ for linux-amlogic@lists.infradead.org; Wed, 29 Apr 2020 19:41:16 +0000
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1588189273;
- bh=sUONZZMzu7JzWbXDGlQyY+/6j91ED+HUV+eeSfmlBZE=;
+ s=default; t=1588189274;
+ bh=0y11qPOCHGuADmZn633do1TuNLMr0F36qj4Qv8/VvlY=;
  h=Subject:From:Date:References:In-Reply-To:To:Cc:Cc:From;
- b=lyfLfTW41gMKXleYyAkXu19Yc2OMUeCBSJ6X+bnvGo/W8W2JMfW44re09JgxnDvsp
- TyW8sfLNiRFNB9nj80zjI5jUicG6zRRxrvcLGsry/WfhBCuTDW0qTtjA5ESNOBEQPW
- mKbwI9A6NbxlDZu6FF4/nXSMrBNUAoqquhNM8Y8o=
+ b=qzpVCQ8GgnCTtP/F5Do6GLMH81ad+GEaTAu93sXuFEDHB1UKUvH/aumKp5Oj2DePx
+ jVP6dsvDozJZHndSUP/CyN0ylLSBgEJeQhDN1cFlBOi6b4q9aKDXWWZDarO28zlGEZ
+ ca45pCz/YBozhYPYTXIet0hNd4xvRw+ToAsm/tek=
 MIME-Version: 1.0
-Subject: Re: [PATCH 0/2] arm64: dts: meson-g12: usb DT fixes
+Subject: Re: [PATCH v4] arm64: dts: meson: S922X: extend cpu opp-points
 From: patchwork-bot+linux-amlogic@kernel.org
-Message-Id: <158818927377.21662.5051807284597249165.git-patchwork-notify@kernel.org>
-Date: Wed, 29 Apr 2020 19:41:13 +0000
-References: <20200326160857.11929-1-narmstrong@baylibre.com>
-In-Reply-To: <20200326160857.11929-1-narmstrong@baylibre.com>
-To: Neil Armstrong <narmstrong@baylibre.com>
+Message-Id: <158818927414.21662.6715542854655996978.git-patchwork-notify@kernel.org>
+Date: Wed, 29 Apr 2020 19:41:14 +0000
+References: <20200426162119.GA23268@imac>
+In-Reply-To: <20200426162119.GA23268@imac>
+To: Tim Lewis <elatllat@gmail.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200429_124114_128545_8CC02485 
-X-CRM114-Status: UNSURE (   5.17  )
+X-CRM114-CacheID: sfid-20200429_124114_501968_E031DFE3 
+X-CRM114-Status: UNSURE (   6.17  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
@@ -78,25 +78,25 @@ Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
 Hello:
 
-This series was applied to khilman/linux-amlogic.git (refs/heads/for-next).
+This patch was applied to khilman/linux-amlogic.git (refs/heads/for-next).
 
-On Thu, 26 Mar 2020 17:08:55 +0100 you wrote:
-> Misc USB DT fixes for G12A.
+On Sun, 26 Apr 2020 12:21:19 -0400 you wrote:
+> Add extra cpu pop points to allow mild overclock on S922X. The opp
+> points are found in Hardkernel N2 sources [1] and testing shows no
+> obvious issues on other S922X devices. Thermal throttling should
+> keep things in-check if needed.
 > 
-> Neil Armstrong (2):
->   arm64: dts: meson-g12b-ugoos-am6: fix usb vbus-supply
->   arm64: dts: meson-g12-common: fix dwc2 clock names
+> [1] https://github.com/hardkernel/linux/commit/f86cd9487c7483b2a05f448b9ebacf6bd5a2ad2f
+> Tested-by: Christian Hewitt <christianshewitt@gmail.com>
+> Reviewed-by: Neil Armstrong <narmstrong@baylibre.com>
+> Signed-off-by: Tim Lewis <elatllat@gmail.com>
 > 
->  arch/arm64/boot/dts/amlogic/meson-g12-common.dtsi    | 2 +-
->  arch/arm64/boot/dts/amlogic/meson-g12b-ugoos-am6.dts | 2 +-
->  2 files changed, 2 insertions(+), 2 deletions(-)
+> [...]
 
 
 Here is a summary with links:
-  - [1/2] arm64: dts: meson-g12b-ugoos-am6: fix usb vbus-supply
-    https://git.kernel.org/khilman/linux-amlogic/c/4e025fd91ba32a16ed8131158aa63cd37d141cbb
-  - [2/2] arm64: dts: meson-g12-common: fix dwc2 clock names
-    https://git.kernel.org/khilman/linux-amlogic/c/e4f634d812634067b0c661af2e3cecfd629c89b8
+  - [v4] arm64: dts: meson: S922X: extend cpu opp-points
+    https://git.kernel.org/khilman/linux-amlogic/c/75800d701782e89eecaf712fa141082b6e36f956
 
 You are awesome, thank you!
 
