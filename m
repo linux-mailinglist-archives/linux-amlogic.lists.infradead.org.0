@@ -2,86 +2,86 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id CB4171BF82D
-	for <lists+linux-amlogic@lfdr.de>; Thu, 30 Apr 2020 14:24:52 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 983201BFD28
+	for <lists+linux-amlogic@lfdr.de>; Thu, 30 Apr 2020 16:11:00 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=EEeN4+066NnpO08/kfPqIwXUgNHixk/pGsIfHqvXQyQ=; b=g1Nm+80LG66C7Y
-	04nQMp2H0+IlujCyX9Onij9VLsVxzefXn616xizE9p+NZHAyefvT2dCOOf3WppZSXagbtwuolUmsL
-	gSk/PTBXJzTxfmrCQR5yLy17BVsSn7K/ePKp/LFP1zJzATxd8PJzZPpUcuU24kcpEIhwGNovs6sV4
-	XApl2cJMrwYYsG7/z6nIU1K5w/7I0ur6tchXCS/GMvj5Wx+0dPrDd19vZEpNTSYFqHlZlXF1oMrkv
-	S4G7dEZDH9Y3TvtBuwoRWSY+nayZR7YExu77vW3O4wDiMRAz1rOUstQGCCNe5MHnzxlYr+RCt+/BE
-	p2ewKtMIhYq5DG7Dnh5g==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=SlQ/LMKdJJhLpmpRgQxbUpA5yosdWVeY0CBPmVCvL3A=; b=kCqpg3KRyuCDpJ
+	mXLG1dc6PX7n214GDbTd308Um30OAzuE9h8vPdXg4SL4tjhbDcKIcIKQ2BSPQjqmNSdvzY0FfUNc8
+	0nrPT/rWaS8NyZIJXPpS/B8SKwcHsqZafA0XHYdbSZbw+c7GUMH/BAmjsu5C0h8cKjWwve4pbd1hN
+	loQqgdwpNPEATQTQyNFyyRvEKc7HqTpMz+25/v7000pJXuVHiE86dhl1F2scgOdYLJVqViYc8WEzp
+	FlrBDVdjR2ygSJ018rp/M+njXEf8daJo2oo10LOoo0TgVS0Odl1e6WBWn1Zp7uYj/QSdYM7WgRTfn
+	1U1jvxQDtGYwdhtHX9sg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jU8FE-0000gs-SD; Thu, 30 Apr 2020 12:24:48 +0000
-Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
+	id 1jU9tx-0004hb-7B; Thu, 30 Apr 2020 14:10:57 +0000
+Received: from mail-oi1-f194.google.com ([209.85.167.194])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jU8FB-0000fx-BF
- for linux-amlogic@lists.infradead.org; Thu, 30 Apr 2020 12:24:47 +0000
-Received: by mail-wr1-x442.google.com with SMTP id x18so6658176wrq.2
- for <linux-amlogic@lists.infradead.org>; Thu, 30 Apr 2020 05:24:43 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=user-agent:from:to:cc:subject:date:message-id:mime-version;
- bh=0SsmCVXRnkXXPF3iwxgzfLk25Cg8yBecJWm6wm0A4gk=;
- b=xd8BJWpEAmPWknlFQI1p20/J4G6PE8GikQxXOWevEiuthufqNhA3cFrOo8YgIj2iJ2
- qF37zkSLPXCHKVtOIJr8D1csGe9h4K6aS56hvzBBoD5cElmh64URHRrJr64sBKtVW8/u
- jqZozKJR67XNrH5P8D4JUPrEsjBGvI/qbMNjxxjux+W+urdy/FSPpl8EChcqxbmyfi7V
- 31a/X1bA8gH5Akql+mAQx0IBXql9YUBsNrGXwXf9Vru3c5O8pWD9eHHucsEGOqkN8KwV
- kzADn2HNkLXSlmkZDlmaOZs1hGfGKV9I8K1ydamIMlMo1ioXvVWKfkTKMX4tjWarVGWF
- yItw==
+ id 1jU9tc-0004T7-2z; Thu, 30 Apr 2020 14:10:38 +0000
+Received: by mail-oi1-f194.google.com with SMTP id t199so5319612oif.7;
+ Thu, 30 Apr 2020 07:10:36 -0700 (PDT)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:user-agent:from:to:cc:subject:date:message-id
- :mime-version;
- bh=0SsmCVXRnkXXPF3iwxgzfLk25Cg8yBecJWm6wm0A4gk=;
- b=KTtqTJ7sL/K1Cb0TZvnSHFu+EVjogsRZEIOUceh9KQMUdH27cfsG4Y87UgamuP+Nlk
- OILVSso1s8lCuutimJnpGTcHrsFTwn4aMbjTjXsEbQj+sJjri7doBT7N7L67o0/IrWfY
- MZxpbZb8OGomwzQDPCPraQ0HOWAbgho47A19uBV7D7fyLB1zspNZZVPi7WBLb6+kbHSz
- W+Zr98nGWBfHMEBDBmWgV7+W7pf24Z9ZDnLiSCZcnIDj5pJMhPJbmb+D7NeyenFTOYLM
- +NQ3yrEip8+5CtehfFje1NA9JdzfUg0NJpbzB4yUgbS4Kv4dC1zeziDo/EszrZJzMGQP
- PdZg==
-X-Gm-Message-State: AGi0PuY3Je3+cceBWkSB9V/PQYpdO50Jk1jWyVEbl63cLBlbuhVd/OC5
- opI+Bzp5QQHk+WmwaR5YqvU3lA==
-X-Google-Smtp-Source: APiQypJ5tpe4MZNXWxAc97GLCd8uPMJ/9ymBE2FrP7SAVu2s8iWKNUQSodKMKtfL4llzvGmNRkzVWw==
-X-Received: by 2002:adf:fe87:: with SMTP id l7mr3863095wrr.360.1588249482859; 
- Thu, 30 Apr 2020 05:24:42 -0700 (PDT)
-Received: from localhost (cag06-3-82-243-161-21.fbx.proxad.net.
- [82.243.161.21])
- by smtp.gmail.com with ESMTPSA id k6sm12640874wma.19.2020.04.30.05.24.42
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:in-reply-to:user-agent;
+ bh=UgTzeSieOrk7bgrXOEEKGS4vqDfJdjTM5De/Mq9VpvA=;
+ b=aGZR5mcut/baWDjEh6S/x4WJD23SJDT83E2bP4iv/kJ50XsO7PoAJ14MZOv3zgo5xG
+ KtBg2G+GDE6QRJoEIbhOr9iHjLd7kI9M1A6fZ+DdOqOrEKsGXvDk08Sy78/l6/zs4HQP
+ iAKSCRHPfKu84HBLPG2P7HyS86ZnQIrlXXzaazpt8z0+/1+Ay6j4mR7lse6++UmCuM4Y
+ /ZCZswVHH/sSzfhpOEhb6zG1GHVZBxngY2aV9/q/bZLilDV8ngvj6VGmstYyl2ON05aL
+ gKClUiwQSnEbSE7RB3uh88Si1e/3nA3PSFmVBpb53avXLg7M8J/lMibUIZThKvqsNXSO
+ oG+Q==
+X-Gm-Message-State: AGi0PuZKgSabpOmgWuWwOlzSGq2yM+kaKkZStxdUOIVDvSYeGsMMG6zw
+ 4TXCrnZi8xorqrFvkQyRIw==
+X-Google-Smtp-Source: APiQypLd3ij132amZqmzb1pb6Pu49V28sjYMfyg7bc6xj1bapelOBMaB7UdhZBZ0xlBAKCAGhjm7Iw==
+X-Received: by 2002:aca:6546:: with SMTP id j6mr29159oiw.155.1588255835409;
+ Thu, 30 Apr 2020 07:10:35 -0700 (PDT)
+Received: from rob-hp-laptop (24-155-109-49.dyn.grandenetworks.net.
+ [24.155.109.49])
+ by smtp.gmail.com with ESMTPSA id w24sm1346250oor.47.2020.04.30.07.10.33
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Thu, 30 Apr 2020 05:24:42 -0700 (PDT)
-User-agent: mu4e 1.3.3; emacs 26.3
-From: Jerome Brunet <jbrunet@baylibre.com>
-To: Stephen Boyd <sboyd@kernel.org>,
- Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
- ulf.hansson@linaro.org
-Subject: clk: clk_register is deprecated
-Date: Thu, 30 Apr 2020 14:24:41 +0200
-Message-ID: <1jftcli2k6.fsf@starbuckisacylon.baylibre.com>
+ Thu, 30 Apr 2020 07:10:34 -0700 (PDT)
+Received: (nullmailer pid 5452 invoked by uid 1000);
+ Thu, 30 Apr 2020 14:10:33 -0000
+Date: Thu, 30 Apr 2020 09:10:33 -0500
+From: Rob Herring <robh@kernel.org>
+To: Christian Hewitt <christianshewitt@gmail.com>
+Subject: Re: [PATCH 3/4] dt-bindings: arm: amlogic: add support for the
+ Beelink GT-King Pro
+Message-ID: <20200430141033.GA5382@bogus>
+References: <20200419055322.16138-1-christianshewitt@gmail.com>
+ <20200419055322.16138-4-christianshewitt@gmail.com>
 MIME-Version: 1.0
+Content-Disposition: inline
+In-Reply-To: <20200419055322.16138-4-christianshewitt@gmail.com>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200430_052445_387460_5A7A77C6 
-X-CRM114-Status: UNSURE (   6.49  )
+X-CRM114-CacheID: sfid-20200430_071036_125664_556591B3 
+X-CRM114-Status: UNSURE (   8.98  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.0 (/)
+X-Spam-Score: 0.8 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (0.8 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:442 listed in]
- [list.dnswl.org]
+ no trust [209.85.167.194 listed in list.dnswl.org]
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit [robherring2[at]gmail.com]
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider [robherring2[at]gmail.com]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [209.85.167.194 listed in wl.mailspike.net]
+ 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -93,39 +93,26 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: linux-amlogic@lists.infradead.org, linux-clk@vger.kernel.org
+Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ Kevin Hilman <khilman@baylibre.com>,
+ Christian Hewitt <christianshewitt@gmail.com>, linux-kernel@vger.kernel.org,
+ linux-amlogic@lists.infradead.org, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Hi Stephen,
+On Sun, 19 Apr 2020 05:53:21 +0000, Christian Hewitt wrote:
+> The Shenzen AZW (Beelink) GT-King Pro is based on the Amlogic W400 reference
+> board with an S922X chip.
+> 
+> Signed-off-by: Christian Hewitt <christianshewitt@gmail.com>
+> ---
+>  Documentation/devicetree/bindings/arm/amlogic.yaml | 1 +
+>  1 file changed, 1 insertion(+)
+> 
 
-We have a question regarding drivers which register clocks in CCF and
-later need to use these clocks.
-
-So far, these drivers had been using clk_register() to get a 'struct
-clk*' they could later use with the linux/clk.h API.
-
-Now that this clk_register() is deprecated in favor of
-clk_hw_register(), how are these driver supposed to get the per-user
-"struct clk*" they need ?
-
-In this mmc thread [0] Martin proposed to go through a provider. I think
-it is overkill, especially for a device which will not provide its clocks
-to any other device.
-
-They other way available is "hw->clk". I suspect it is not recommended
-to do so, is it ?
-
-If not, what would be the recommended way to get the "struct clk*" from
-a newly registered "struct clk_hw *" ? Should we add something new to
-clk-provider.h API ?
-
-Cheers
-Jerome
-
-[0]: https://lore.kernel.org/linux-amlogic/20200428210229.703309-3-martin.blumenstingl@googlemail.com
+Acked-by: Rob Herring <robh@kernel.org>
 
 _______________________________________________
 linux-amlogic mailing list
