@@ -2,85 +2,61 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6B2521C24ED
-	for <lists+linux-amlogic@lfdr.de>; Sat,  2 May 2020 13:50:12 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 47F091C25EC
+	for <lists+linux-amlogic@lfdr.de>; Sat,  2 May 2020 15:47:32 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=LW3qE7aQNay06Bm5tAR6yHt25VJ9aNdfyE63O8gGJF8=; b=kBMci698NBcrCK
-	naUtTlaZhlK5RHzWdBxqgf7XuxlsEZLKuZT3e3xG58nYMWw3A48Wk5WmKatt7VWikwQKX1X4kd3fp
-	BCNcuZNaqjrdoBBDn11w/9EQb9KBaUegFLqkYI+4ZpdEQh0bJ1H0lB8pYapZZgsHd2mxns3aZH//m
-	3bcUM6Vt0Nk2VD+W51MXoOp5Xy0io6TKrHfNtr+z57P9xqi98ImxM7Mg2iCwq8VicRcUFgM8xPF6Q
-	J00EIhA1o54I9Vdk2zkdS4KH2aF8WO5LMZv+b1hInSt54g8U3gQ4vvjgBwyOkFgjGGDQXNiSLOzs2
-	xcrnOT4+HN7t+OHUyNog==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:Message-ID:
+	Subject:To:From:Date:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=dme+aTIt8nawgviJm/25GyMSh9HNroe4l1GIdTh9/Wk=; b=bLuTpR+5sUQd/yR08D3PwdA3n
+	pFKKBadYM8e+yMfusCO6Oc2+veTE/uglXBQgsktUcn9BYrI2WcKFn7OxXiVM6PuKOZV0DgVfKUhGY
+	5YGqh3jmovQWfj3uYVbQbpRFqDVwlD2qR2w6W3nYinhNBwK/IoUu8sxqZTvhSKvgGBKP0p8VtnNJz
+	8XaCLJVC25d2hDzaXs616JC7S4vYmQ8Qq+iaeceJjV90H8j4RpHiGJY3UJXRea8OWzyerITYXpebh
+	mqqLbLhveU6HRqXdqmcT604HU5oFeIsCwcWAte41qy8HUnfFDWrJmW7+Yxi/vJp5ltEG596u0TUAt
+	8cWnmaNMg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jUqeo-0001Dx-Jb; Sat, 02 May 2020 11:50:10 +0000
-Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
+	id 1jUsUJ-0008Re-JH; Sat, 02 May 2020 13:47:27 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jUqdH-0007gD-6I; Sat, 02 May 2020 11:48:36 +0000
-Received: by mail-wr1-x442.google.com with SMTP id k1so14985637wrx.4;
- Sat, 02 May 2020 04:48:34 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=googlemail.com; s=20161025;
- h=from:to:cc:subject:date:message-id:in-reply-to:references
- :mime-version:content-transfer-encoding;
- bh=n8Y8vyWaKjvq+2hEsWpjb9Kq65ykf9NzPsAFh4Ba51Q=;
- b=Qg8zpCQ1u60k5Adv5X4albNsxBd5cOJphyEaRw668QCuIQAcUO80mitHI84Wf+ezHu
- DCSUe4xWXO32INPx76D/UA3aaZXV+ZirOTfKbTwEuXsrVLwcaogx1MVqZCzOQTNuoGXm
- UJcGDkbipMc5NqcrzYpoJvCGS+c4HAOL6UhNNlq/jfpwMr10ukz+mVBfs5LsW83clJw7
- ZWocN0itCyqLfmUwCTZpHIJ79A80gIXZC/89GUaEHC//JvImGNYmlpI+UpgPvb9yvnzP
- 8yO6fn9Tn06ISbl9VtWDLMx+yUK5ea3u5g9DuY1+BcnbLiyuGp4mc0QjNlOb1d2Ehza9
- fbsg==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
- :references:mime-version:content-transfer-encoding;
- bh=n8Y8vyWaKjvq+2hEsWpjb9Kq65ykf9NzPsAFh4Ba51Q=;
- b=jJqnJvgDW5RNyY4p/aO/DiSo/lc1gqPMOBR7G4Gdm3s3WNQ85C1FIhVKV16yO37Uq0
- SwgQ6TRinRDkGScCE//v6IwWFfkwXgWk+ejFTdRZNprFIzeo/c1kMEh61cV4mzzPEEt1
- Cyh+8A7fwlhCmqo2yhICaBhRi/dK8jGJT2586AvOaYQW/P4Bmt3FjRFvROu90RJVfA2o
- NHt3mYDuhfBbgkhoFq7pv0otmjEyLWp1jLERjd0czqKoHkJy5fWlOAKsxBSrXnTj9Tes
- o9zYMMxwix5jtciWcZI8oR+MsWn5yEuMwpJOhRm+8H8NNJxGyfJvmdcsNiqlrL5Tjntp
- kyJA==
-X-Gm-Message-State: AGi0PuYObNCmles2px2SY7PRGD59en8S1d8nToGiZznZWCfAs0meFtFa
- IceQTgUqheXSlDObc820FYo=
-X-Google-Smtp-Source: APiQypJEGjjn2WBJ7BnD+n22PPH7FqjwGuI1I7UOjHzYKUERFtnsyH7o9OB5m4xWhzPPveuM14uX1g==
-X-Received: by 2002:adf:e8c4:: with SMTP id k4mr8656076wrn.209.1588420113272; 
- Sat, 02 May 2020 04:48:33 -0700 (PDT)
-Received: from localhost.localdomain
- (p200300F137142E00428D5CFFFEB99DB8.dip0.t-ipconnect.de.
- [2003:f1:3714:2e00:428d:5cff:feb9:9db8])
- by smtp.googlemail.com with ESMTPSA id s17sm3801599wmc.48.2020.05.02.04.48.32
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Sat, 02 May 2020 04:48:32 -0700 (PDT)
-From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-To: kishon@ti.com, robh+dt@kernel.org, vkoul@kernel.org,
- devicetree@vger.kernel.org, linux-amlogic@lists.infradead.org
-Subject: [PATCH 6/6] phy: amlogic: meson8b-usb2: Add a compatible string for
- Meson8m2
-Date: Sat,  2 May 2020 13:47:52 +0200
-Message-Id: <20200502114752.1048500-7-martin.blumenstingl@googlemail.com>
-X-Mailer: git-send-email 2.26.2
-In-Reply-To: <20200502114752.1048500-1-martin.blumenstingl@googlemail.com>
-References: <20200502114752.1048500-1-martin.blumenstingl@googlemail.com>
+ id 1jUsUG-0008Qn-0V; Sat, 02 May 2020 13:47:25 +0000
+Received: from localhost (c-73-47-72-35.hsd1.nh.comcast.net [73.47.72.35])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id A95112071E;
+ Sat,  2 May 2020 13:47:22 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1588427242;
+ bh=73TIjw9O6dK2fAlfdODYkB/VFm8uvKuFeW5svJp5uFA=;
+ h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
+ b=MC4T9yrNMAJ94kM2+SXcWdp6i2eKFYOzXDawiBEHaYHb2biJ9zHC2GbFujl40NAYf
+ 5pVS6ClrEJRxbfN+WfsKaVEAKrj99uQ/bXcD/zBYaQ+LgxWhVQXqpH/5w2f9MxyKOB
+ EhdNt8MV9yshaw+3oRvYnAyj42Wi+lS4OFNVH0EU=
+Date: Sat, 2 May 2020 09:47:21 -0400
+From: Sasha Levin <sashal@kernel.org>
+To: Mark Brown <broonie@kernel.org>
+Subject: Re: stable-rc/linux-5.4.y bisection: baseline.dmesg.alert on
+ meson-g12a-x96-max
+Message-ID: <20200502134721.GH13035@sasha-vm>
+References: <5eabecbf.1c69fb81.2c617.628f@mx.google.com>
+ <cc10812b-19bd-6bd1-75da-32082241640a@collabora.com>
+ <20200501122536.GA38314@sirena.org.uk>
 MIME-Version: 1.0
+Content-Disposition: inline
+In-Reply-To: <20200501122536.GA38314@sirena.org.uk>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200502_044835_250657_DB00859F 
-X-CRM114-Status: GOOD (  12.17  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200502_064724_073232_8DE26B37 
+X-CRM114-Status: GOOD (  10.56  )
+X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-5.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:442 listed in]
- [list.dnswl.org]
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider [martin.blumenstingl[at]googlemail.com]
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
@@ -90,6 +66,7 @@ X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -101,63 +78,46 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
- hexdump0815@googlemail.com, linux-kernel@vger.kernel.org,
- linux-arm-kernel@lists.infradead.org, narmstrong@baylibre.com
-Content-Type: text/plain; charset="us-ascii"
+Cc: alsa-devel@alsa-project.org, linux-kernel@vger.kernel.org,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ Guillaume Tucker <guillaume.tucker@collabora.com>,
+ Takashi Iwai <tiwai@suse.com>, Liam Girdwood <lgirdwood@gmail.com>,
+ stable@vger.kernel.org, kernelci@groups.io,
+ Kevin Hilman <khilman@baylibre.com>, linux-amlogic@lists.infradead.org,
+ Jaroslav Kysela <perex@perex.cz>, linux-arm-kernel@lists.infradead.org,
+ Jerome Brunet <jbrunet@baylibre.com>
 Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-The 3.10 vendor kernel sets the ACA_ENABLE bit on Meson8b, Meson8m2 and
-GXBB, but not on Meson8. Add a compatible string for Meson8m2 which also
-sets that bit.
-While here, also update the Kconfig text and MODULE_DESCRIPTION.
+On Fri, May 01, 2020 at 01:25:36PM +0100, Mark Brown wrote:
+>On Fri, May 01, 2020 at 12:57:27PM +0100, Guillaume Tucker wrote:
+>
+>> The call stack is not the same as in the commit message found by
+>> the bisection, so maybe it only fixed part of the problem:
+>
+>No, it is a backport which was fixing an issue that wasn't present in
+>v5.4.
+>
+>> >   Result:     09f4294793bd3 ASoC: meson: axg-card: fix codec-to-codec link setup
+>
+>As I said in reply to the AUTOSEL mail:
+>
+>| > Since the addition of commit 9b5db059366a ("ASoC: soc-pcm: dpcm: Only allow
+>| > playback/capture if supported"), meson-axg cards which have codec-to-codec
+>| > links fail to init and Oops:
+>
+>| This clearly describes the issue as only being present after the above
+>| commit which is not in v5.6.
+>
+>Probably best that this not be backported.
 
-Signed-off-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
----
- drivers/phy/amlogic/Kconfig            | 2 +-
- drivers/phy/amlogic/phy-meson8b-usb2.c | 6 +++++-
- 2 files changed, 6 insertions(+), 2 deletions(-)
+Hrm... But I never queued that commit... I wonder what's up.
 
-diff --git a/drivers/phy/amlogic/Kconfig b/drivers/phy/amlogic/Kconfig
-index 3495b23af797..5ec53874d1ea 100644
---- a/drivers/phy/amlogic/Kconfig
-+++ b/drivers/phy/amlogic/Kconfig
-@@ -3,7 +3,7 @@
- # Phy drivers for Amlogic platforms
- #
- config PHY_MESON8B_USB2
--	tristate "Meson8, Meson8b and GXBB USB2 PHY driver"
-+	tristate "Meson8, Meson8b, Meson8m2 and GXBB USB2 PHY driver"
- 	default ARCH_MESON
- 	depends on OF && (ARCH_MESON || COMPILE_TEST)
- 	depends on USB_SUPPORT
-diff --git a/drivers/phy/amlogic/phy-meson8b-usb2.c b/drivers/phy/amlogic/phy-meson8b-usb2.c
-index 436dfa1a8a04..03c061dd5f0d 100644
---- a/drivers/phy/amlogic/phy-meson8b-usb2.c
-+++ b/drivers/phy/amlogic/phy-meson8b-usb2.c
-@@ -302,6 +302,10 @@ static const struct of_device_id phy_meson8b_usb2_of_match[] = {
- 		.compatible = "amlogic,meson8b-usb2-phy",
- 		.data = &phy_meson8b_usb2_match_data
- 	},
-+	{
-+		.compatible = "amlogic,meson8m2-usb2-phy",
-+		.data = &phy_meson8b_usb2_match_data
-+	},
- 	{
- 		.compatible = "amlogic,meson-gxbb-usb2-phy",
- 		.data = &phy_meson8b_usb2_match_data
-@@ -320,5 +324,5 @@ static struct platform_driver phy_meson8b_usb2_driver = {
- module_platform_driver(phy_meson8b_usb2_driver);
- 
- MODULE_AUTHOR("Martin Blumenstingl <martin.blumenstingl@googlemail.com>");
--MODULE_DESCRIPTION("Meson8, Meson8b and GXBB USB2 PHY driver");
-+MODULE_DESCRIPTION("Meson8, Meson8b, Meson8m2 and GXBB USB2 PHY driver");
- MODULE_LICENSE("GPL");
 -- 
-2.26.2
-
+Thanks,
+Sasha
 
 _______________________________________________
 linux-amlogic mailing list
