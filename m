@@ -2,70 +2,71 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 619271C4214
-	for <lists+linux-amlogic@lfdr.de>; Mon,  4 May 2020 19:16:09 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B34BA1C42D3
+	for <lists+linux-amlogic@lfdr.de>; Mon,  4 May 2020 19:32:03 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:Message-ID:Date:To:From:Subject:
-	References:In-Reply-To:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=9u0TTWEdhnxSfempJWA6Ma1fL1knf/R+fQavsmreAHc=; b=As+hqF5VFZra31
-	IAC12y72n+7HXtipReiewLZ5UHDqgkrH//T14epfoX3jke5l9/+KNnhKjMfM950U1H50uXHnXDwUk
-	M1Tdue6vcJ+chzwBmW1yXJglkjyRAPfOm3UnMPvzHow5kH5RqNnoB+v8eVZ1uGKIoXvkdzx9l3l7h
-	39NfgyPze3TY+9/AfWfO2NRSfu9DymmR1k+5ffm+uqj5WHOQau6QomXHv+En4Mi+Nl91s7OAv+Ur7
-	ljryxM0Xegggn/g+ReaTaEOVJXGN4m/Rn50ByKkKUV1D2iYVug55BbJBc4Iu+trsdmnzhtC3fHJK1
-	snKVbyOdDzPQoWkRPJLw==;
+	List-Owner; bh=TTnBydwbWMY6dYhS5y8YaocbK4zNTorFvZazy3rHHA4=; b=adjioxFUzb5K05
+	q1Ru4Iky3Qy2tWjlbtU6lgUQejo8itrBT9CPJcf91WIlBdK25s3TQx3WaxKQ3w1Ci/H7XU4Nv3GT9
+	WWq4oscvIzzan61FWRntPT0CjA06wWGOrmVFSwBFQ/A4bVO83N4JiQ/v40pNwUK7f8VGBRlX3Kut8
+	MBx+iLEteJO4WnRN7O5YO3dk3v3Dfiv1N8ru/rOOoUhr49eMZaQlAxwbcFsbpaImvw0Cnfn3D1tYZ
+	vpVew/dVfy4XaTV3TQH+vqMILjRt0/i4Ahbln5AiSEwe5X0u17iCjC+OwEoS2t8J9ph8OKObKnSyv
+	XykeOKezUk0FUv/yxNaw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jVehK-0002b4-0g; Mon, 04 May 2020 17:16:06 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1jVewj-0007Oa-3h; Mon, 04 May 2020 17:32:01 +0000
+Received: from smtprelay0130.hostedemail.com ([216.40.44.130]
+ helo=smtprelay.hostedemail.com)
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jVehG-0002ZP-8D
- for linux-amlogic@lists.infradead.org; Mon, 04 May 2020 17:16:03 +0000
-Received: from kernel.org (unknown [104.132.0.74])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
- (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 762A92068E;
- Mon,  4 May 2020 17:16:01 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1588612561;
- bh=X8/exrxj3Gqx4JdqxgxXSfZQsvDJFYhF/UG016D+yOg=;
- h=In-Reply-To:References:Subject:From:Cc:To:Date:From;
- b=hpcvnGe/vSN58KkV+cUjPNIH3kJP+iacB/XpkCgAGj45KXO7GqaAN7ZyRoErq2fmK
- gFv6mz1JdzsaE8jlTI6YFtIgUCrxJ7kaGU6z8sFLm7ALmZUjLuxeR5wZBr4aSFvBHB
- +iUGKMV6PEB1Q3dhcSXJ6wckNbS5axuIFjdMTuVE=
+ id 1jVewg-0007Ng-IV; Mon, 04 May 2020 17:31:59 +0000
+Received: from filter.hostedemail.com (clb03-v110.bra.tucows.net
+ [216.40.38.60])
+ by smtprelay04.hostedemail.com (Postfix) with ESMTP id 9EFCC180A55F0;
+ Mon,  4 May 2020 17:31:56 +0000 (UTC)
+X-Session-Marker: 6A6F6540706572636865732E636F6D
+X-Spam-Summary: 2, 0, 0, , d41d8cd98f00b204, joe@perches.com, ,
+ RULES_HIT:41:355:379:599:800:960:973:988:989:1260:1277:1311:1313:1314:1345:1359:1437:1515:1516:1518:1534:1540:1593:1594:1711:1730:1747:1777:1792:2393:2553:2559:2562:2828:3138:3139:3140:3141:3142:3352:3622:3865:3867:3868:3870:3871:3873:3874:4250:4321:5007:6117:6119:10004:10400:10848:11232:11658:11914:12043:12109:12297:12740:12760:12895:13069:13163:13229:13311:13357:13439:14096:14097:14181:14659:14721:21080:21433:21451:21627:30029:30054:30069:30090:30091,
+ 0, RBL:none, CacheIP:none, Bayesian:0.5, 0.5, 0.5, Netcheck:none,
+ DomainCache:0, MSF:not bulk, SPF:, MSBL:0, DNSBL:none, Custom_rules:0:0:0,
+ LFtime:1, LUA_SUMMARY:none
+X-HE-Tag: twig62_4aee47edd0d24
+X-Filterd-Recvd-Size: 1976
+Received: from XPS-9350.home (unknown [47.151.136.130])
+ (Authenticated sender: joe@perches.com)
+ by omf07.hostedemail.com (Postfix) with ESMTPA;
+ Mon,  4 May 2020 17:31:54 +0000 (UTC)
+Message-ID: <28790ee42242ecc0b0050943a27f569dd1aeec16.camel@perches.com>
+Subject: Re: [PATCH 1/6] dt-bindings: phy: meson8b-usb2: Convert to json-schema
+From: Joe Perches <joe@perches.com>
+To: hex dump <hexdump0815@gmail.com>, Martin Blumenstingl
+ <martin.blumenstingl@googlemail.com>
+Date: Mon, 04 May 2020 10:31:53 -0700
+In-Reply-To: <CAKTihDVy6oSuQe4eP87hWO17tBu3=XZ-PM41YOqLVOtXJ8+YeQ@mail.gmail.com>
+References: <20200502114752.1048500-1-martin.blumenstingl@googlemail.com>
+ <20200502114752.1048500-2-martin.blumenstingl@googlemail.com>
+ <CAKTihDVy6oSuQe4eP87hWO17tBu3=XZ-PM41YOqLVOtXJ8+YeQ@mail.gmail.com>
+User-Agent: Evolution 3.36.1-2 
 MIME-Version: 1.0
-In-Reply-To: <1jftcli2k6.fsf@starbuckisacylon.baylibre.com>
-References: <1jftcli2k6.fsf@starbuckisacylon.baylibre.com>
-Subject: Re: clk: clk_register is deprecated
-From: Stephen Boyd <sboyd@kernel.org>
-To: Jerome Brunet <jbrunet@baylibre.com>,
- Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
- ulf.hansson@linaro.org
-Date: Mon, 04 May 2020 10:16:00 -0700
-Message-ID: <158861256065.11125.3262677295691476922@swboyd.mtv.corp.google.com>
-User-Agent: alot/0.9
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200504_101602_317806_18C8F5B7 
-X-CRM114-Status: GOOD (  13.02  )
-X-Spam-Score: -5.2 (-----)
+X-CRM114-CacheID: sfid-20200504_103158_669264_144C903B 
+X-CRM114-Status: UNSURE (   9.61  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.40.44.130 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+ [216.40.44.130 listed in wl.mailspike.net]
+ 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -77,44 +78,36 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: linux-amlogic@lists.infradead.org, linux-clk@vger.kernel.org
+Cc: devicetree@vger.kernel.org, narmstrong@baylibre.com,
+ linux-kernel@vger.kernel.org, kishon@ti.com, vkoul@kernel.org,
+ robh+dt@kernel.org, linux-amlogic@lists.infradead.org,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Quoting Jerome Brunet (2020-04-30 05:24:41)
-> Hi Stephen,
+On Mon, 2020-05-04 at 12:55 +0200, hex dump wrote:
+> On Sat, May 2, 2020 at 1:48 PM Martin Blumenstingl
+> <martin.blumenstingl@googlemail.com> wrote:
+> > Now that we have the DT validation in place, let's convert the device
+> > tree bindings for the Amlogic Meson8, Meson8b, Meson8m2 and GXBB USB2
+> > PHY over to a YAML schema.
+> > 
+> > While here, also add the fallback compatible string
+> > "amlogic,meson-gxbb-usb2-phy" which is already used in
+> > arch/arm/boot/dts/meson{,8,8b}.dtsi.
+> > 
+> > Signed-off-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
 > 
-> We have a question regarding drivers which register clocks in CCF and
-> later need to use these clocks.
-> 
-> So far, these drivers had been using clk_register() to get a 'struct
-> clk*' they could later use with the linux/clk.h API.
-> 
-> Now that this clk_register() is deprecated in favor of
-> clk_hw_register(), how are these driver supposed to get the per-user
-> "struct clk*" they need ?
-> 
-> In this mmc thread [0] Martin proposed to go through a provider. I think
-> it is overkill, especially for a device which will not provide its clocks
-> to any other device.
-> 
-> They other way available is "hw->clk". I suspect it is not recommended
-> to do so, is it ?
-> 
-> If not, what would be the recommended way to get the "struct clk*" from
-> a newly registered "struct clk_hw *" ? Should we add something new to
-> clk-provider.h API ?
-> 
+> Tested-by: hexdump <hexdump0815@googlemail.com>
 
-Yes we should add a clk_hw_get_clk() API that takes a device pointer and
-a string name, mirroring the clk_get() API but cutting out the part
-where we have to go through the provider to find it.
+Is the kernel now accepting "Tested-by" lines from robots?
 
-This is so that one day in "the future" we can remove hw->clk and make
-that an internal detail that struct clk_hw can't see because we go
-through the clk_hw::clk_core pointer instead.
+If hexdump0815@googlemail.com is not a robot, can you please use
+your full legal name instead?
+
+
 
 _______________________________________________
 linux-amlogic mailing list
