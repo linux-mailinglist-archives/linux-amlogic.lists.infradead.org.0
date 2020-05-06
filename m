@@ -2,74 +2,74 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6EA381C7D19
-	for <lists+linux-amlogic@lfdr.de>; Thu,  7 May 2020 00:17:18 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id EFB341C7D1A
+	for <lists+linux-amlogic@lfdr.de>; Thu,  7 May 2020 00:17:19 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Z47bQbO3+zt3gJ+/39PEXfNw/y5Hq6cfkGOmb6t9/hU=; b=iYDaLEdgPq8r+2
-	uU7UdpGFNcdmlKs6ab3Og+tpBUE0KEEtE+oCKGVYpJMa5dFu/UFYyDHs8eu9/4N+E3S+RyjfT1noY
-	xLRjCNb+60z52ApeXVqmasXy3O+7VcmLo0peqecaL41mWwLFFvvaeCs6TokHKKizIL9tYapaJlPCp
-	iO16Pol6vw4A1Ofign4epnX7TEqYEY4g8hoP1Oi9TBn+9G13ZaQsmwGP9sYzPROG8Rw6vQVYp+MpJ
-	146LR5UgzdV0IsDoH1QECBNAp7p3tXn79Rv3lRrhyCzYBp67/14lFzNFrkjPW3PF2Grr/xcUAoNu4
-	IXLt3PAeYNoPWGAtD+Ag==;
+	List-Owner; bh=I5ZzN7qySjcQziPjmRfkCeYgHES82a1Ex3IXYnf50qo=; b=OwU0oLuSp5le3m
+	yw8lbzDCXvQNzDyZmfMMfmHrolwTHq1fpaB8i9K4b+NTliXhMGUcmh4Liou+d0FAbW5xINMUJ/Ov1
+	A6Iexh425UMqjiRX2VKcRKlOTVyzYsfmtF2juqvq1UVGcYTVzHzKa4yZNUw3kguuYIrTZNmf7RKyM
+	uIxfa5O05g/wh4c1+29v2gj+3pErpITZWR1l5Lx6FsW2rt72YtVIfBA05tKixUk8A8WnVsnNoBd94
+	CEDiU5K6e0m0vqsRGZ/AQEWSE0tfRFfQ8pSCS9uIfpgy9h8uQGwNMbOtsLUGi4K3bZpc1Q5l+tsKg
+	NfPtmXtTf8ZUzY88UkFw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jWSLs-0004Hk-Pb; Wed, 06 May 2020 22:17:16 +0000
+	id 1jWSLu-0004Kb-GA; Wed, 06 May 2020 22:17:18 +0000
 Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jWSLm-00049T-LA
- for linux-amlogic@lists.infradead.org; Wed, 06 May 2020 22:17:12 +0000
-Received: by mail-wr1-x442.google.com with SMTP id h9so4028216wrt.0
- for <linux-amlogic@lists.infradead.org>; Wed, 06 May 2020 15:17:10 -0700 (PDT)
+ id 1jWSLo-0004C9-65
+ for linux-amlogic@lists.infradead.org; Wed, 06 May 2020 22:17:13 +0000
+Received: by mail-wr1-x442.google.com with SMTP id e16so4004147wra.7
+ for <linux-amlogic@lists.infradead.org>; Wed, 06 May 2020 15:17:11 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=baylibre-com.20150623.gappssmtp.com; s=20150623;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=XTiLbnU+bbYcNina6WdSi4nhXwiJzisYjraHaG7nzCI=;
- b=G0NdJSCyn+58VpBj4IgiHTWg9VW/e1APCHxcqDdBgExXPBA5t00NZsCa5PwhQlsSR6
- 32SaRv7bI9+tDwOKdFpJMKnk2342nKJASZWaiendmZxg/FmZ1e9plF4lYtddv89InDSe
- L4ZG9d53G15j2gNCSHFjxNDsKk190EmA7Cmy30mgJjVKuMktYBWUrZNHJ3bT6lHSF0DC
- p5LpbPVPUMHTuHuQRgG8HfoKi8ZBeX1c1KM4UR4T1WJA+8F1Az0FX3V39VY4Z+h+qXSU
- FjoZfdxOZQJNOQ9fvlVzMz4Q8DLGBz9xUvCO2mqAq5oV6pYUsKqvEOhSjOK9JELqCLj8
- RbmQ==
+ bh=yN0HCUrRjQ5k4nIyeYJ90SMpOcbw0Xs0uvSCaOCg9cY=;
+ b=g1GtLVMo3JG+hMTJIYH7JtCwyL8aI+OBkx8gezaZeT+5RwkRCBpJjWLsts3xv1MvCt
+ YsuA9Rh2vrNc0RSzFGYnCnVF9HM/ZWvMO/xO/1aVV41l7+kAVqAaXqKcwL3t6c0Mkv1G
+ 10d+pHeAcs2BBzUQO28s+eB0HyIj+B8mZgmf8mSyVoJKhONA8XEBeN28YQVHxaii00t0
+ ZDpcq0+FSAUo7+kkfM0TC8lihNBdlYrF326cILDZwvdNy6VjPtDerwC6YCWITiP0p2vr
+ f/Fba1HRUctpQgx0Nn3np43yNY3pQHDpT0Z5mGhkTimFJfwImjTQ2zBr1BxamYhFri43
+ zeKw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=XTiLbnU+bbYcNina6WdSi4nhXwiJzisYjraHaG7nzCI=;
- b=l23OldpqNfB65qJkQe0mbRBuVfxQFmBg2dXCurbuvcBtx0ZsvFb7a8D8sC4znLdBjy
- p57Ndlp9jCevCAYU5C3CPVO0NKdHNqXHq/UNcJofNLNA/iypl5D0gITunz4BF5ZZ+td9
- bp8NPC8srnhDzaWa1X3LxNRZzY6hPWvjYTXlqgS8GOWDxTZ/4HRwyfcbj5Kv3EuqvOAf
- 1n5q4sRIwZ4DSk2juihaVesksWatzWLIQ1Gkbjy1jphEwifWRdJyqDL2+teGtVx2kQjZ
- qki8Z/7do6m/VwGzEFBpMqRNB+A1wnRm5Hx7Yn1JY82rTEY6VpOamU2FIYff/yCDO8Dk
- +diQ==
-X-Gm-Message-State: AGi0PuaTKbToDX9+DCyxnMcuGrnQ0hGiN69oypynEZTJTnvdUFLaA3BU
- MePtxfdiayZ4BN3V7E4xWK0rxQ==
-X-Google-Smtp-Source: APiQypLxQ4m4rLedaNsN99CEE6SO6iXRQQK2EGYB3T20jnsH6wn7Fc1IP+aEJEkAKpF15Cw5zD3HgA==
-X-Received: by 2002:a5d:6ac1:: with SMTP id u1mr11618638wrw.319.1588803429114; 
- Wed, 06 May 2020 15:17:09 -0700 (PDT)
+ bh=yN0HCUrRjQ5k4nIyeYJ90SMpOcbw0Xs0uvSCaOCg9cY=;
+ b=Cl6yNVkloDQNZCWGvVV1JLiAk3o4Y30jXjQGpW2JFCxI0dmI8JO2N2hmE3Bm7dVRtJ
+ p3TBkyIHZIT25nWLbj9DxaU7V/8R+AJRfZkUd/Ioh0YfwKJLqc6XxoSxV5EW+GKKP0Pi
+ byeRKy+uwY2qLTJrGEJXLuu54Q7pNcM0Ye3tz22sYioFPAMEPCU8UQdLILafNeGpPoVt
+ nyFdHV+Jf5w4p/CPATNEMQZlWis7saLXo/lxfz64nWrSLAs6xXaAzFTtwy5bVfE1XNYl
+ jYeXRVGgDUuWIGrEEleQaNI3QRj6rKX71ype2oUSikeG1RZN1Z54V+rk98aEQNcMHH8x
+ Wl4w==
+X-Gm-Message-State: AGi0PuaVZk/9pGhgpmtNZTSxgzvsQ8d81+nCqEmXWly52+Td5HuJzzsU
+ SvgMoN5pD8/ZDSD1m3nrxUdWyg==
+X-Google-Smtp-Source: APiQypKmKkIATkCvRuA6L8tzWAVJ4EhdRo2Hu+9i0pkUQ8voHESzNMdPvDDbS2uufpAwDrHl0iKpoQ==
+X-Received: by 2002:a5d:6acc:: with SMTP id u12mr12845202wrw.198.1588803430684; 
+ Wed, 06 May 2020 15:17:10 -0700 (PDT)
 Received: from starbuck.lan (cag06-3-82-243-161-21.fbx.proxad.net.
  [82.243.161.21])
- by smtp.googlemail.com with ESMTPSA id f5sm4760671wrp.70.2020.05.06.15.17.07
+ by smtp.googlemail.com with ESMTPSA id f5sm4760671wrp.70.2020.05.06.15.17.09
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Wed, 06 May 2020 15:17:08 -0700 (PDT)
+ Wed, 06 May 2020 15:17:09 -0700 (PDT)
 From: Jerome Brunet <jbrunet@baylibre.com>
 To: Kevin Hilman <khilman@baylibre.com>
-Subject: [PATCH 5/7] arm64: dts: meson: libretech-pc: add internal DAC support
-Date: Thu,  7 May 2020 00:16:54 +0200
-Message-Id: <20200506221656.477379-6-jbrunet@baylibre.com>
+Subject: [PATCH 6/7] arm64: dts: meson: g12: add internal DAC
+Date: Thu,  7 May 2020 00:16:55 +0200
+Message-Id: <20200506221656.477379-7-jbrunet@baylibre.com>
 X-Mailer: git-send-email 2.25.4
 In-Reply-To: <20200506221656.477379-1-jbrunet@baylibre.com>
 References: <20200506221656.477379-1-jbrunet@baylibre.com>
 MIME-Version: 1.0
 X-Patchwork-Bot: notify
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200506_151710_704071_1C7B3471 
-X-CRM114-Status: UNSURE (   9.07  )
+X-CRM114-CacheID: sfid-20200506_151712_234936_E33FE017 
+X-CRM114-Status: UNSURE (   8.91  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
@@ -102,80 +102,35 @@ Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Add the internal DAC support on the libretech CC. The output of this
-DAC is provided on the 9J4 connector.
+add internal audio DAC support on the g12 and sm1 SoC family
 
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
 ---
- .../dts/amlogic/meson-gx-libretech-pc.dtsi    | 31 +++++++++++++++++++
- 1 file changed, 31 insertions(+)
+ arch/arm64/boot/dts/amlogic/meson-g12-common.dtsi | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
 
-diff --git a/arch/arm64/boot/dts/amlogic/meson-gx-libretech-pc.dtsi b/arch/arm64/boot/dts/amlogic/meson-gx-libretech-pc.dtsi
-index 514fed57a5ce..c2480bab8d33 100644
---- a/arch/arm64/boot/dts/amlogic/meson-gx-libretech-pc.dtsi
-+++ b/arch/arm64/boot/dts/amlogic/meson-gx-libretech-pc.dtsi
-@@ -30,6 +30,13 @@ aliases {
- 		spi0 = &spifc;
- 	};
- 
-+	dio2133: analog-amplifier {
-+		compatible = "simple-audio-amplifier";
-+		sound-name-prefix = "AU2";
-+		VCC-supply = <&vcc5v>;
-+		enable-gpios = <&gpio GPIOH_5 GPIO_ACTIVE_HIGH>;
-+	};
-+
- 	chosen {
- 		stdout-path = "serial0:115200n8";
- 	};
-@@ -180,6 +187,13 @@ vddio_card: regulator-vddio-card {
- 	sound {
- 		compatible = "amlogic,gx-sound-card";
- 		model = "GXL-LIBRETECH-S9XX-PC";
-+		audio-aux-devs = <&dio2133>;
-+		audio-widgets = "Speaker", "7J4-14 LEFT",
-+				"Speaker", "7J4-11 RIGHT";
-+		audio-routing = "AU2 INL", "ACODEC LOLN",
-+				"AU2 INR", "ACODEC LORN",
-+				"7J4-14 LEFT", "AU2 OUTL",
-+				"7J4-11 RIGHT", "AU2 OUTR";
- 		assigned-clocks = <&clkc CLKID_MPLL0>,
- 				  <&clkc CLKID_MPLL1>,
- 				  <&clkc CLKID_MPLL2>;
-@@ -201,6 +215,10 @@ dai-link-1 {
- 			codec-0 {
- 				sound-dai = <&aiu AIU_HDMI CTRL_I2S>;
+diff --git a/arch/arm64/boot/dts/amlogic/meson-g12-common.dtsi b/arch/arm64/boot/dts/amlogic/meson-g12-common.dtsi
+index c0aef7d69117..593a006f4b7b 100644
+--- a/arch/arm64/boot/dts/amlogic/meson-g12-common.dtsi
++++ b/arch/arm64/boot/dts/amlogic/meson-g12-common.dtsi
+@@ -250,6 +250,17 @@ hwrng: rng@218 {
+ 				};
  			};
-+
-+			codec-1 {
-+				sound-dai = <&aiu AIU_ACODEC CTRL_I2S>;
-+			};
- 		};
  
- 		dai-link-2 {
-@@ -210,9 +228,22 @@ codec-0 {
- 				sound-dai = <&hdmi_tx>;
- 			};
- 		};
-+
-+		dai-link-3 {
-+			sound-dai = <&aiu AIU_ACODEC CTRL_OUT>;
-+
-+			codec-0 {
-+				sound-dai = <&acodec>;
++			acodec: audio-controller@32000 {
++				compatible = "amlogic,t9015";
++				reg = <0x0 0x32000 0x0 0x14>;
++				#sound-dai-cells = <0>;
++				sound-name-prefix = "ACODEC";
++				clocks = <&clkc CLKID_AUDIO_CODEC>;
++				clock-names = "pclk";
++				resets = <&reset RESET_AUDIO_CODEC>;
++				status = "disabled";
 +			};
-+		};
- 	};
- };
- 
-+&acodec {
-+	AVDD-supply = <&vddio_ao18>;
-+	status = "okay";
-+};
 +
- &aiu {
- 	status = "okay";
- };
+ 			periphs: bus@34400 {
+ 				compatible = "simple-bus";
+ 				reg = <0x0 0x34400 0x0 0x400>;
 -- 
 2.25.4
 
