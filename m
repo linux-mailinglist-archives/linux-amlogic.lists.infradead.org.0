@@ -2,94 +2,85 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 21D381D0148
-	for <lists+linux-amlogic@lfdr.de>; Tue, 12 May 2020 23:52:15 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2FD581D0181
+	for <lists+linux-amlogic@lfdr.de>; Wed, 13 May 2020 00:03:24 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ZLGeByjfkZDHC27+bAULyJoOjTmbxImatkzY8F3423o=; b=qgmyZPygrvCb0P
-	C2TfLT1lE1F3VVlNvW76YYzGmaRziIlNJyKoVvrEKifz0QlhQP54jlW9/Zbg20BJPOqnWZmvJZHzm
-	aK8+iNqu9DuI+Yapw9vsNZzwWiZqNqS/NmAYNBrLxxJATF9l/XcgU5FlwZeJhGcTWJl8CMbZt+4jT
-	MJX97T795cDC3cf/gJktdk3TaFKTypbAecMUvZUuWRe1CA2PhOkKs9wJyLNXf5AU6MG9vBXA01wgW
-	VCTac7ETbVw9udv7vxoQsh33N63a/IuAg/6bIcPpYmZdDgXAy7XbYdCPT2lhd4y5dMFeP4vjL12i6
-	0mrxdPVTpxf/dRs/iuDA==;
+	List-Owner; bh=rUbxtbB/m03RznwPHIWSpAZIxHdHBsfbXae4ivje1Us=; b=T1py920KljfaJC
+	u8RGgoQhFa/NamcyAYFBwHUt4J2b7WjMrqj1fA4mSy9hpqzL7lkIED6LyKtAZxzFvy8VGY5IvZJga
+	urIn88WCbf3CdByx3YgD2j6NL90cgGgTEWzwzp4RVwy/8coay/u68D259UQvnXwYCNLGIB16Z9vly
+	j0AZ0eauIQskCm7PKgyGYrJolV3KR6/4y/GAVCzmx5NyVIaNFLvmrjh6mNMKgoPv8ly4aJ1i6KtK9
+	M5/qFhfj4IV2pG8RbOdMmUtnZ+AtW5cACHxGPyOZBRUvY+bCCGJ/s+xj36W1dclACOlXkMe+YaY+L
+	fGDboGw08MD3AsNMfZpQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jYcov-0007ZI-8K; Tue, 12 May 2020 21:52:13 +0000
-Received: from mail-wm1-x341.google.com ([2a00:1450:4864:20::341])
+	id 1jYczh-0006Wq-FG; Tue, 12 May 2020 22:03:21 +0000
+Received: from mail-ot1-f65.google.com ([209.85.210.65])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jYcoh-0007Nt-Ke; Tue, 12 May 2020 21:52:01 +0000
-Received: by mail-wm1-x341.google.com with SMTP id g12so25714278wmh.3;
- Tue, 12 May 2020 14:51:59 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=googlemail.com; s=20161025;
- h=from:to:cc:subject:date:message-id:in-reply-to:references
- :mime-version:content-transfer-encoding;
- bh=0knvu8zyqVx4y2NkIr8lOmrEgshGQH0lpKJi3cjk2SI=;
- b=bwgSPVs5laGpM0d83i3csmznJ1/yWKtFq1xT96YbPjSKVZY3DA/KjehTuB5plFcy6z
- EY3hNdTNGMRO+CSZGMVlJ5g4ACqDMocZYlhOnzK3a5BPn61uwB0dn0LYty6Bxov73Vlw
- 1R/Z8XAkTT7HEiHdHVbawuL4MFXn4A6zZa7dk6icq3xN/ilfVGa0UFWWOYODfL+OjLvB
- Zf6N/dMiWhEvQnvKJW/nkzO1/nhdFy4KygJVbKSZpLK/We8me5P197koIyOBNKSVvcgB
- gnrQc1RKBtfdHlw+bmGtYur+Kgv1E0KbZxcW1d49ddhOy1nmAA+YoslbKMUEhIWyYt9a
- +meQ==
+ id 1jYczd-0006Ux-Al; Tue, 12 May 2020 22:03:20 +0000
+Received: by mail-ot1-f65.google.com with SMTP id j4so11821290otr.11;
+ Tue, 12 May 2020 15:03:17 -0700 (PDT)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
- :references:mime-version:content-transfer-encoding;
- bh=0knvu8zyqVx4y2NkIr8lOmrEgshGQH0lpKJi3cjk2SI=;
- b=JMJAusfd+PPHRELOm/XCrU4k6vnrl8tMEjEKYX8iPYBon0CmpDNeMf61XybYEixA+P
- LX2EN2pQtZ8H8QnJPCPrkZeU2rc7UtHYlr6juuPXYtx950glzvU2RQ9Hy1wN8xvzYKmQ
- LW2wwUgIFiGW15w8LLBsQIKKk8Wt0DEwKJo0dyY7vQDYKcpqEG358ZHMLsT5mqje5zfh
- KTM9IcoAQwaePHdPbJFcdwRMLXmWiWjOOc1UTUvjqTXjbJZZjQ6ZMLTmftkBWhv4T2oV
- tdlJEQ8UIXLRU7gzgeY7fZ1V1pppY3SpAZ75qNCTniYp0fHbgOw2sY4h8yJ04BD2QPa6
- MOzw==
-X-Gm-Message-State: AGi0PubRX0En/N/AjyXYMTdmM10E9r1PptIfyvDf4gGrvBGfMrwItMxU
- z1emulYsqPKZcmg6yv3QmMy/P6LQ
-X-Google-Smtp-Source: APiQypJ8uUi4vGNBLtT0TFTdWAmJqfDA59+C/Ue8RoCtXdE4ee4Rp809GhvNT7tn2LEUhTnMGBwK+A==
-X-Received: by 2002:a1c:4d17:: with SMTP id o23mr7874381wmh.87.1589320318046; 
- Tue, 12 May 2020 14:51:58 -0700 (PDT)
-Received: from localhost.localdomain
- (p200300F137132E00428D5CFFFEB99DB8.dip0.t-ipconnect.de.
- [2003:f1:3713:2e00:428d:5cff:feb9:9db8])
- by smtp.googlemail.com with ESMTPSA id d9sm9154234wmd.10.2020.05.12.14.51.57
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:in-reply-to:user-agent;
+ bh=MUwPbwoCw7AWkOjfbYkkLEEsldhhBednze2KVALn6gg=;
+ b=UmfEoYC7qdydmeVho7sx829ojFAsk6iS16zv6qe32JrHvgaEQVVmxpq2nqCGqODi9i
+ icbCaKLPI8aiGT2fglvNq5PNNlOn4P3gHwXria92iOPgjaePTWHjQxDrjbDwBN2SeASV
+ 5PhqbXia6roNbPJ/Drx882lNIUIpZZp5Lv+ZLSYXk4sgct0NzZ4zYQXFDGU3cLkdZTlc
+ FGGQyYsSbSsealKv145REkD0iCRkH8nHkXoe5vrrmE1Te++tLGXB9jvogjbtHFtP8MFb
+ KFaiurUW06ZKXXgnqpraT33iS3hqho5dpqOmYigcxq6G9oo2AgrGqZol2gMnQXaXNt5J
+ mbYg==
+X-Gm-Message-State: AGi0Pua07+1+dxjTa+TpAmVWZHFUk0Q6Zf6v+1PpnyTierHFHbqnGFOM
+ 1zJqPrjmqltgmuhahRHB2A==
+X-Google-Smtp-Source: APiQypJgSZbfY16yL5q4Va7ckktZ2np41KwS/08QmNxY59XKZdbVclDoACFX2ieFTq/+LTS07P9ekg==
+X-Received: by 2002:a9d:6847:: with SMTP id c7mr17918699oto.159.1589320996371; 
+ Tue, 12 May 2020 15:03:16 -0700 (PDT)
+Received: from rob-hp-laptop (24-155-109-49.dyn.grandenetworks.net.
+ [24.155.109.49])
+ by smtp.gmail.com with ESMTPSA id j47sm2689110oof.11.2020.05.12.15.03.15
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Tue, 12 May 2020 14:51:57 -0700 (PDT)
-From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-To: linux-amlogic@lists.infradead.org,
-	khilman@baylibre.com
-Subject: [PATCH 2/2] ARM: dts: meson: Switch existing boards with RGMII PHY to
- "rgmii-id"
-Date: Tue, 12 May 2020 23:51:48 +0200
-Message-Id: <20200512215148.540322-3-martin.blumenstingl@googlemail.com>
-X-Mailer: git-send-email 2.26.2
-In-Reply-To: <20200512215148.540322-1-martin.blumenstingl@googlemail.com>
-References: <20200512215148.540322-1-martin.blumenstingl@googlemail.com>
+ Tue, 12 May 2020 15:03:15 -0700 (PDT)
+Received: (nullmailer pid 13443 invoked by uid 1000);
+ Tue, 12 May 2020 22:03:14 -0000
+Date: Tue, 12 May 2020 17:03:14 -0500
+From: Rob Herring <robh@kernel.org>
+To: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+Subject: Re: [PATCH 1/6] dt-bindings: phy: meson8b-usb2: Convert to json-schema
+Message-ID: <20200512220314.GA28996@bogus>
+References: <20200502114752.1048500-1-martin.blumenstingl@googlemail.com>
+ <20200502114752.1048500-2-martin.blumenstingl@googlemail.com>
 MIME-Version: 1.0
+Content-Disposition: inline
+In-Reply-To: <20200502114752.1048500-2-martin.blumenstingl@googlemail.com>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200512_145159_676959_E144367A 
-X-CRM114-Status: GOOD (  14.64  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200512_150317_366454_6B79CED5 
+X-CRM114-Status: GOOD (  16.38  )
+X-Spam-Score: 0.8 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.8 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:341 listed in]
- [list.dnswl.org]
+ no trust [209.85.210.65 listed in list.dnswl.org]
+ 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+ [209.85.210.65 listed in wl.mailspike.net]
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit [robherring2[at]gmail.com]
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider [martin.blumenstingl[at]googlemail.com]
+ provider [robherring2[at]gmail.com]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+ 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -101,73 +92,110 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: Martin Blumenstingl <martin.blumenstingl@googlemail.com>, andrew@lunn.ch,
- linux-kernel@vger.kernel.org, linux-arm-kernel@lists.infradead.org
+Cc: devicetree@vger.kernel.org, narmstrong@baylibre.com,
+ hexdump0815@googlemail.com, linux-kernel@vger.kernel.org, kishon@ti.com,
+ vkoul@kernel.org, linux-amlogic@lists.infradead.org,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Let the PHY generate the RX and TX delay on the Odroid-C1 and MXIII
-Plus.
+On Sat, May 02, 2020 at 01:47:47PM +0200, Martin Blumenstingl wrote:
+> Now that we have the DT validation in place, let's convert the device
+> tree bindings for the Amlogic Meson8, Meson8b, Meson8m2 and GXBB USB2
+> PHY over to a YAML schema.
+> 
+> While here, also add the fallback compatible string
+> "amlogic,meson-gxbb-usb2-phy" which is already used in
+> arch/arm/boot/dts/meson{,8,8b}.dtsi.
+> 
+> Signed-off-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+> ---
+>  .../phy/amlogic,meson8b-usb2-phy.yaml         | 61 +++++++++++++++++++
+>  .../bindings/phy/meson8b-usb2-phy.txt         | 28 ---------
+>  2 files changed, 61 insertions(+), 28 deletions(-)
+>  create mode 100644 Documentation/devicetree/bindings/phy/amlogic,meson8b-usb2-phy.yaml
+>  delete mode 100644 Documentation/devicetree/bindings/phy/meson8b-usb2-phy.txt
+> 
+> diff --git a/Documentation/devicetree/bindings/phy/amlogic,meson8b-usb2-phy.yaml b/Documentation/devicetree/bindings/phy/amlogic,meson8b-usb2-phy.yaml
+> new file mode 100644
+> index 000000000000..c2fe8c08d99e
+> --- /dev/null
+> +++ b/Documentation/devicetree/bindings/phy/amlogic,meson8b-usb2-phy.yaml
+> @@ -0,0 +1,61 @@
+> +# SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)
+> +%YAML 1.2
+> +---
+> +$id: "http://devicetree.org/schemas/phy/amlogic,meson8b-usb2-phy.yaml#"
+> +$schema: "http://devicetree.org/meta-schemas/core.yaml#"
+> +
+> +title: Amlogic Meson8, Meson8b, Meson8m2 and GXBB USB2 PHY
+> +
+> +maintainers:
+> +  - Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+> +
+> +properties:
+> +  compatible:
+> +    oneOf:
+> +      - items:
+> +          - enum:
+> +            - amlogic,meson8-usb2-phy
+> +            - amlogic,meson8b-usb2-phy
 
-Previously we did not know that these boards used an RX delay. We
-assumed that setting the TX delay on the MAC side It turns out that
-these boards also require an RX delay of 2ns (verified on Odroid-C1,
-but the u-boot code uses the same setup on both boards). Ethernet only
-worked because u-boot added this RX delay on the MAC side.
+Needs 2 more spaces indent.
 
-The 4ns TX delay was also wrong and the result of using an unsupported
-RGMII TX clock divider setting. This has been fixed in the driver with
-commit bd6f48546b9cb7 ("net: stmmac: dwmac-meson8b: Fix the RGMII TX
-delay on Meson8b/8m2 SoCs").
+> +          - const: amlogic,meson-mx-usb2-phy
+> +      - const: amlogic,meson-gxbb-usb2-phy
+> +
+> +  reg:
+> +    maxItems: 1
+> +
+> +  clocks:
+> +    minItems: 2
+> +
+> +  clock-names:
+> +    items:
+> +      - const: usb_general
+> +      - const: usb
+> +
+> +  resets:
+> +    minItems: 1
+> +
+> +  "#phy-cells":
+> +    const: 0
+> +
+> +  phy-supply:
+> +     description:
 
-Switch to phy-mode "rgmii-id" to let the PHY side handle all the delays,
-(as recommended by the Ethernet maintainers anyways) to correctly
-describe the need for a 2ns RX as well as 2ns TX delay on these boards.
-This fixes the Ethernet performance on Odroid-C1 where there was a huge
-amount of packet loss when transmitting data due to the incorrect TX
-delay.
+Wrong indentation.
 
-Signed-off-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
----
- arch/arm/boot/dts/meson8b-odroidc1.dts    | 3 +--
- arch/arm/boot/dts/meson8m2-mxiii-plus.dts | 4 +---
- 2 files changed, 2 insertions(+), 5 deletions(-)
+> +       Phandle to a regulator that provides power to the PHY. This
+> +       regulator will be managed during the PHY power on/off sequence.
+> +
+> +required:
+> +  - compatible
+> +  - reg
+> +  - clocks
+> +  - clock-names
+> +  - "#phy-cells"
 
-diff --git a/arch/arm/boot/dts/meson8b-odroidc1.dts b/arch/arm/boot/dts/meson8b-odroidc1.dts
-index a2a47804fc4a..cb21ac9f517c 100644
---- a/arch/arm/boot/dts/meson8b-odroidc1.dts
-+++ b/arch/arm/boot/dts/meson8b-odroidc1.dts
-@@ -202,9 +202,8 @@ &ethmac {
- 	pinctrl-0 = <&eth_rgmii_pins>;
- 	pinctrl-names = "default";
- 
--	phy-mode = "rgmii";
- 	phy-handle = <&eth_phy>;
--	amlogic,tx-delay-ns = <4>;
-+	phy-mode = "rgmii-id";
- 
- 	nvmem-cells = <&ethernet_mac_address>;
- 	nvmem-cell-names = "mac-address";
-diff --git a/arch/arm/boot/dts/meson8m2-mxiii-plus.dts b/arch/arm/boot/dts/meson8m2-mxiii-plus.dts
-index d54477b1001c..cc498191ddd1 100644
---- a/arch/arm/boot/dts/meson8m2-mxiii-plus.dts
-+++ b/arch/arm/boot/dts/meson8m2-mxiii-plus.dts
-@@ -69,9 +69,7 @@ &ethmac {
- 	pinctrl-names = "default";
- 
- 	phy-handle = <&eth_phy0>;
--	phy-mode = "rgmii";
--
--	amlogic,tx-delay-ns = <4>;
-+	phy-mode = "rgmii-id";
- 
- 	mdio {
- 		compatible = "snps,dwmac-mdio";
--- 
-2.26.2
+Add:
 
+additionalProperties: false
+
+> +
+> +examples:
+> +  - |
+> +    usb-phy@c0000000 {
+> +      compatible = "amlogic,meson-gxbb-usb2-phy";
+> +      reg = <0xc0000000 0x20>;
+> +      resets = <&reset_usb_phy>;
+> +      clocks = <&clk_usb_general>, <&reset_usb>;
+> +      clock-names = "usb_general", "usb";
+> +      phy-supply = <&usb_vbus>;
+> +      #phy-cells = <0>;
+> +    };
 
 _______________________________________________
 linux-amlogic mailing list
