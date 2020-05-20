@@ -2,63 +2,91 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6C5CE1DA5F7
-	for <lists+linux-amlogic@lfdr.de>; Wed, 20 May 2020 02:01:43 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 731971DA62A
+	for <lists+linux-amlogic@lfdr.de>; Wed, 20 May 2020 02:08:59 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:In-Reply-To:References:Date:
-	Message-Id:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description:
+	Content-Transfer-Encoding:Content-Type:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-Id:Date:Subject:To:From:Reply-To:Cc:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=n+2sfmY/bd5xdNWZemptNckqOmnbQ+yMLdyn3P0b2hU=; b=rd8q5Tam3OZ95M
-	rWqDoQc8Ptg9czCiKgZ0ltJodJ4qPaAs/gKEFSb3JxOCgKgGpdSJQF5LnfptP7z/UxPe7BAmWrxYC
-	i+DcLJJyGAA4Ms0a9jAckoLsCb+Fg3rCaKbAjvUJtBZV294akjNNpe3tQ5vWsrB8+cJXWBVjeZNYr
-	ykRtFMkCX/yglKuXZuqPNkGlQ54cGwYgx2b45lF+UtOSZSTcUIC9HU+i/HBme+mqPT8svY4EO+Jy9
-	isfgYiXEiYVYht8KIAPkoIihr8oA0QqtfNdHa47J8qOsEoCc6C3pku3WpvcODkGy9TJcYlZTHXUCf
-	66DfVIAhrLjbbfj650tA==;
+	List-Owner; bh=yCldh7bDZI5yrsJuOrZs9HKaYPMU3GzjRtZXDLG6il8=; b=llspt8lo8ZLVF0
+	qHPQgk0noSicUk3fApCJvKccKZIzufuLqr2leZCNs1u77JksuVL917oqkYdIFxe1lvISQ99oh6gwB
+	PzImUcZJEa0HBnIAxdN+G4HDeDJKL6TWKpL8GyJtfQWAKM8TQzl3oAhhPvol9kWuZ20axsoTJdtJz
+	KvhYGJ4q0CJPDTpc+Ae0uig8vOKS8vzeuUzefpcTaIA83gNuXkNgm+mB5OpTrxel12TAAnldegh6+
+	LPZNpSbPYiAukDcGhgqPH4jLL5yHV5ReHbcSD0M4nQHxWUbwFZ5ykNWaiZmHgYRxeNuCp5MtU4foN
+	RgFUe1qy/SGheU+LV/Jw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jbCB4-0005co-3x; Wed, 20 May 2020 00:01:42 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1jbCI3-0001VE-Tr; Wed, 20 May 2020 00:08:55 +0000
+Received: from mail-pl1-x642.google.com ([2607:f8b0:4864:20::642])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jbCAt-0005SF-Mf
- for linux-amlogic@lists.infradead.org; Wed, 20 May 2020 00:01:33 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1589932890;
- bh=kYu4/iz/3N3FZRCch5utGPOBLZ0KdGlza00NZtn0aD4=;
- h=Subject:From:Date:References:In-Reply-To:To:Cc:Cc:From;
- b=bTc45IyX4W5P9wd8LrHGDa0bI3HtqpclmWAXJAwnzECB/556VI61QS6fZ7FKJ+/to
- 9w2PDibnHl3Y7UptxUXS1APWmg1wyBxrT1Ala7Zr+enhaOQJ39Ls+wkjgJ+WHHOlsH
- s76CvUdNlAzkwTzoDezjYja7hK4iwj3Z+ls0aJJc=
-MIME-Version: 1.0
+ id 1jbCH1-0000Um-AD
+ for linux-amlogic@lists.infradead.org; Wed, 20 May 2020 00:07:54 +0000
+Received: by mail-pl1-x642.google.com with SMTP id u22so575140plq.12
+ for <linux-amlogic@lists.infradead.org>; Tue, 19 May 2020 17:07:50 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=baylibre-com.20150623.gappssmtp.com; s=20150623;
+ h=from:to:subject:date:message-id:in-reply-to:references:mime-version
+ :content-transfer-encoding;
+ bh=B1c0jUXz486+RagbFwDxd+sCq0lsYsmvP2f98G6U3js=;
+ b=blOTHPmlZx4GfKOEV01mwt1fb2y8BBOOyMdVTyMjtZX92rrDcpb80U2b7a2VVbC7fk
+ 3h9M1dtqhrTXK3/nedw7/rkc/XiMNe0BCyBwr2xa2ohQ4Ke0D7JYYdEu/WN4Qhf6TXS4
+ jV6rk/VqZJCTP8sxaPzJZrWS4mUGgwBCXhuhaFARh9vVb6ORLbtqYI+p7C6vxxSolo7z
+ F6s6XDCfwfwNI7ZD24RYmSZYGggfpEVV2UEQ8wLidhB7yWOCnh9Gn5TRrTV4xjv3NBc/
+ K2JtUu5z5vj30NuPBBijpYQCnGhQgnW5OZD9OpQCLhE5dMR9gek9vc/p5aC0CVtCe5AE
+ 8EZg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:from:to:subject:date:message-id:in-reply-to
+ :references:mime-version:content-transfer-encoding;
+ bh=B1c0jUXz486+RagbFwDxd+sCq0lsYsmvP2f98G6U3js=;
+ b=huPbPAnvUJf0CuSDHpgPmBNY5SHY2dbUvE0NIm82ExcYmoHbcqqgRxXiYSK5VB6LQs
+ OrnJBtpB0R1lP7/2kddUoynyNAJ4/SkmkjhlsLdZ68fcyCEc86yzbMgycSRMnZNzI3Go
+ wOf+M48NWtyUPVNZjhaXUE2wEY9VSZLGQslaM8VizIfqQWriM1m0l8Ak99ZBNs2oYZG0
+ f+AxQGfkU+zimB+il/skzg8aZjUWCSQcjQPsu9QvZWPFUfYwFx4GnFcNuO0xsUc05VzX
+ NVhgu/QG15EGR19ki7ao0S2nzQyTcQjkSJvIs7K6TpKIKw3Y5goCoAqtiPIxtjtEWz+m
+ JEiw==
+X-Gm-Message-State: AOAM532MWqDDvtt68gjO05lVbL+CDniNM36Tkd3SKIs24Ve8+85v2tAU
+ tv6Fe0VxVqKMKhEK2d+HwfCmkXIGD2bdLQ==
+X-Google-Smtp-Source: ABdhPJwRg3C6e5l8lZIpfVpBtp8Q15l/WvuHFOKB6j8KRjl0PT2Y5zYN0N3CqoydGjhxrt37hyXpGw==
+X-Received: by 2002:a17:90b:3118:: with SMTP id
+ gc24mr2074289pjb.41.1589933269389; 
+ Tue, 19 May 2020 17:07:49 -0700 (PDT)
+Received: from localhost (c-71-197-186-152.hsd1.wa.comcast.net.
+ [71.197.186.152])
+ by smtp.gmail.com with ESMTPSA id z13sm517136pjz.42.2020.05.19.17.07.48
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Tue, 19 May 2020 17:07:48 -0700 (PDT)
+From: Kevin Hilman <khilman@baylibre.com>
+To: linux-amlogic@lists.infradead.org, linux-kernel@vger.kernel.org,
+ Rob Herring <robh+dt@kernel.org>, linux-arm-kernel@lists.infradead.org,
+ Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
+ Christian Hewitt <christianshewitt@gmail.com>
 Subject: Re: [PATCH] arm64: dts: meson: add ethernet interrupt to wetek dtsi
-From: patchwork-bot+linux-amlogic@kernel.org
-Message-Id: <158993289027.29142.12254982476025567545.git-patchwork-notify@kernel.org>
-Date: Wed, 20 May 2020 00:01:30 +0000
-References: <20200518025451.16401-1-christianshewitt@gmail.com>
+Date: Tue, 19 May 2020 17:07:43 -0700
+Message-Id: <158993320300.34448.14097191629208785856.b4-ty@baylibre.com>
+X-Mailer: git-send-email 2.20.1
 In-Reply-To: <20200518025451.16401-1-christianshewitt@gmail.com>
-To: Christian Hewitt <christianshewitt@gmail.com>
+References: <20200518025451.16401-1-christianshewitt@gmail.com>
+MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200519_170131_790556_88E2E73E 
-X-CRM114-Status: UNSURE (   5.42  )
+X-CRM114-CacheID: sfid-20200519_170751_713714_03333D0E 
+X-CRM114-Status: UNSURE (   6.58  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -5.2 (-----)
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:642 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -70,35 +98,23 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: linux-amlogic@lists.infradead.org, khilman@kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Hello:
-
-This patch was applied to khilman/linux-amlogic.git (refs/heads/for-next).
-
-On Mon, 18 May 2020 02:54:51 +0000 you wrote:
+On Mon, 18 May 2020 02:54:51 +0000, Christian Hewitt wrote:
 > Add Ethernet interrupt details to the WeTek Hub/Play2 dtsi to resolve
 > an issue with Ethernet probing in mainline u-boot.
-> 
-> Signed-off-by: Christian Hewitt <christianshewitt@gmail.com>
-> ---
->  arch/arm64/boot/dts/amlogic/meson-gxbb-wetek.dtsi | 4 ++++
->  1 file changed, 4 insertions(+)
 
+Applied, thanks!
 
-Here is a summary with links:
-  - arm64: dts: meson: add ethernet interrupt to wetek dtsi
-    https://git.kernel.org/khilman/linux-amlogic/c/647e1643d61312ce08172e466fa1c8d8a5c8fbc8
+[1/1] arm64: dts: meson: add ethernet interrupt to wetek dtsi
+      commit: 647e1643d61312ce08172e466fa1c8d8a5c8fbc8
 
-You are awesome, thank you!
-
+Best regards,
 -- 
-Deet-doot-dot, I am a bot.
-https://korg.wiki.kernel.org/userdoc/pwbot
+Kevin Hilman <khilman@baylibre.com>
 
 _______________________________________________
 linux-amlogic mailing list
