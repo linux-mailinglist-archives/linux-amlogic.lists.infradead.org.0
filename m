@@ -2,45 +2,46 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0612F1DA5F8
-	for <lists+linux-amlogic@lfdr.de>; Wed, 20 May 2020 02:01:46 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 856E21DA5F3
+	for <lists+linux-amlogic@lfdr.de>; Wed, 20 May 2020 02:01:35 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:In-Reply-To:References:Date:
 	Message-Id:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=S+xgSe+rtzFgRBNlK8kMQlgubohLsAS/YKxnfvfNohE=; b=aqhOEgfQyVLd0L
-	fNI9hwBoudKG92X6BtUqsFg8lxqRKYH5230MMtgQhCxM7P/EjZuOTezO71zRGpgogtdTzdwnDTEjn
-	FOoL3miWBJgVHMCvAtmmfJvA7hp6rFaK22svsfWANUusl5Bk7hfrCTFvL6DDckCyclYIFNbqtFnX+
-	76ARYohdT2/IV7PWQsT/2ytxCACU2W0rZFxledqHSgjsYZfUDDYFX91vIioLp/GLPtoeDehOjZSrJ
-	8R286AIPZfvWI0+DpKBxGJOaQFJ6ArF6nJ1vEsmQfXZpacv9l2wrGVPwhJP6PRxjEczAizW0oHjIG
-	ttUMJYM6a1n8pMsjQmmg==;
+	List-Owner; bh=NTZrznXY8J6AXLPtgydbWZNthj/i9uBlgqmuhEUpScI=; b=gHCC52SGZSw5Hb
+	9Zk2yLTBRH+cLD2JZv63UHFiu8JDCFS/7+nlPSxCStms/GSbJITQwmjh/JzpKo6WvpY1XuoKA76Gk
+	rLQ+Zc0Q5sZAqYPgFubPScb7WITTjP/M/wBOH8jClPrdF3yAudjMXvQP0CNHa3NAwRiabPMeLgV2C
+	L/up/02OqfVXM5wn6/g6HL78rVfelrTcJsa1hXipnyteuIGPDkETvFy+/rg2xrXft3np7dEKhJwX5
+	gu7/04eUI8bKehphUIxqOwQbjii3Am4zTWW1K0f1FRdYCtW2s4y651Y9kNS1dRccyfsyP2sAObGxy
+	BgZduPKrujoXtmaJrRew==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jbCB6-0005fM-53; Wed, 20 May 2020 00:01:44 +0000
+	id 1jbCAw-0005Ud-8A; Wed, 20 May 2020 00:01:34 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jbCAs-0005RA-92
- for linux-amlogic@lists.infradead.org; Wed, 20 May 2020 00:01:33 +0000
+ id 1jbCAs-0005RC-6x
+ for linux-amlogic@lists.infradead.org; Wed, 20 May 2020 00:01:31 +0000
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
  s=default; t=1589932889;
- bh=WUz4NX++G8100LJE9ZDYZIu4wZIx6EY2ArvQzm5Vvng=;
+ bh=IrqJ9McbJp8oyjqziKP2x4IgVR52g9lj4xKOieVzgmE=;
  h=Subject:From:Date:References:In-Reply-To:To:Cc:Cc:From;
- b=KiSEq1RC0rGNyqb84Iqjt8F0w2bKVMeZ00aU7XJjYOdjxOAo5QEoNg4sNyPAXmewJ
- X590xMFEishIQKz0JDyTGSqOtIcQRGAcWy06PnnP0/YHw5d7Rt2cMtaz5B015Ac74T
- JNG5y9udjkpx89YU9VFdO0Ls8jjJhOwp0PeFHJW8=
+ b=vsA+B45dxeRNWS0hwxxKjkmTFsrCCdNm5ulZ5n2sjbB4cZoKaiqRmUT6goxCGfkPG
+ hX3vtMpBJXAze8B88sId6A0UCoZflWa3zTCbzsPl7kvxi1xww2s8cXYh2F4/U9C7ON
+ Js2jo2xrUdSewwyoDVJBuY8x4DwPjZ+/YJuhhOwQ=
 MIME-Version: 1.0
-Subject: Re: [PATCH v4 0/4] meson-ee-pwrc: support for Meson8/8b/8m2 and GX
+Subject: Re: [PATCH v8 0/3] arm64: dts: meson: add dts/bindings for SmartLabs
+ SML-5442TW
 From: patchwork-bot+linux-amlogic@kernel.org
-Message-Id: <158993288974.29142.8296648625232990415.git-patchwork-notify@kernel.org>
+Message-Id: <158993288991.29142.7736902852766247459.git-patchwork-notify@kernel.org>
 Date: Wed, 20 May 2020 00:01:29 +0000
-References: <20200515204709.1505498-1-martin.blumenstingl@googlemail.com>
-In-Reply-To: <20200515204709.1505498-1-martin.blumenstingl@googlemail.com>
-To: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+References: <20200510124129.31575-1-christianshewitt@gmail.com>
+In-Reply-To: <20200510124129.31575-1-christianshewitt@gmail.com>
+To: Christian Hewitt <christianshewitt@gmail.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200519_170130_345035_FD1AD309 
-X-CRM114-Status: UNSURE (   8.53  )
+X-CRM114-CacheID: sfid-20200519_170130_270976_8143635C 
+X-CRM114-Status: UNSURE (   6.34  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
@@ -80,29 +81,24 @@ Hello:
 
 This series was applied to khilman/linux-amlogic.git (refs/heads/for-next).
 
-On Fri, 15 May 2020 22:47:05 +0200 you wrote:
-> This series adds support for all "older" SoCs to the meson-ee-pwrc
-> driver. I wanted to compare as much as I could between my Meson8b EC-100
-> (Endless Mini) and the Le Potato board so I added support for GXBB, GXL
-> and GXM as well as for the SoCs that I'm actually working on. I will
-> send the ARM64 dts patches once all of this is reviewed and merged.
+On Sun, 10 May 2020 12:41:26 +0000 you wrote:
+> This series adds new bindings and a device-tree file for the Smartlabs
+> SML-5442TW set-top box which is based on the P231 reference design.
 > 
-> I successfully tested the Meson8b part on EC-100 where u-boot does not
-> initialize the VPU controller. So this the board where I have been
-> struggling most.
+> As requested, I have reworked the device-tree on the p23x-q20x dtsi. I
+> have also re-added the BT device with new bindings that have now  been
+> merged in bluetooth-next for inclusion in Linux 5.8. See [1].
 > 
 > [...]
 
 
 Here is a summary with links:
-  - [v4,1/4] dt-bindings: power: meson-ee-pwrc: add support for Meson8/8b/8m2
-    https://git.kernel.org/khilman/linux-amlogic/c/18dfc0bf8167fb0dc729da4a6a816e34d754318b
-  - [v4,2/4] dt-bindings: power: meson-ee-pwrc: add support for the Meson GX SoCs
-    https://git.kernel.org/khilman/linux-amlogic/c/cc9ca02a40e549402eebdf151a8f0ca5027e0f7c
-  - [v4,3/4] soc: amlogic: meson-ee-pwrc: add support for Meson8/Meson8b/Meson8m2
-    https://git.kernel.org/khilman/linux-amlogic/c/34217df28db7cddb52120da57fd1d469e896af3d
-  - [v4,4/4] soc: amlogic: meson-ee-pwrc: add support for the Meson GX SoCs
-    https://git.kernel.org/khilman/linux-amlogic/c/53773f2dfd9c847304b184d5617e36aeafdf5d87
+  - [v8,1/3] dt-bindings: add vendor prefix for Smartlabs LLC
+    https://git.kernel.org/khilman/linux-amlogic/c/bc15895e142396fed5ebf1f60139d9ca9a56a4e4
+  - [v8,2/3] dt-bindings: arm: amlogic: add support for the Smartlabs SML-5442TW
+    https://git.kernel.org/khilman/linux-amlogic/c/341e85047bdbc0196c91ccb4612ffab87bae9cfe
+  - [v8,3/3] arm64: dts: meson: add support for the Smartlabs SML-5442TW
+    https://git.kernel.org/khilman/linux-amlogic/c/1d6ece87b750cf26fed4eb794ea0b2fc7ff2be10
 
 You are awesome, thank you!
 
