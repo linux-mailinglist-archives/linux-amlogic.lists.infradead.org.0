@@ -2,46 +2,45 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id ED3631DA5FB
-	for <lists+linux-amlogic@lfdr.de>; Wed, 20 May 2020 02:01:48 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id F37B01DA5F6
+	for <lists+linux-amlogic@lfdr.de>; Wed, 20 May 2020 02:01:41 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:In-Reply-To:References:Date:
 	Message-Id:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=BxNITYTX5YcD62NE6xBPYZsnu1DaJEqq9gvq3bRwwRk=; b=ayN3ANqIDsXswW
-	wMZD0goxlP7q7CGiSmgBWSql75+ELfZye5AxfHufFBV7Ck/sfqEUv3fDXCa/WNPD4MeM2L1yw0fn/
-	IWsoGhBzrw6pL8FuWnS3Ii1Qpmq0JwH0mr5J4KCKCEXuK+vKaGCq/d4W7yWlFJY1NNXpDWjEDFXyB
-	tDoE4RhRHys8cbS0DMJU5gbGKnw5thz0pqRuKnla9y1Ja44faJOq/hgSpPIQSEe70B+ciQiSyUnP3
-	AlLgykStTZjb9/x2iegdCJcbjGT9ioJIbKj9cseeEoBlCj3bSPbSkx2Gsju5Tt/3s+tR/rZDSsi/m
-	nGlCuzAjC1UKu7Df5iAg==;
+	List-Owner; bh=63Q8a2qgNoz3qAiMPBg2zDA9RZ6VqZv6a6St9ULLFWc=; b=rOrC3/PTgS+OXL
+	9sCzGg+Btj38T1uj8wF23l6gQiNe9OC11HnUiDFdZuDdieAEEDcofX/sjjGMFHxhaQyFCM7edSDvl
+	p9baweEvSOx11Ol+hrlXVWQWnTtspjlMQ3H7WyQ0P9xKJZ40iLCz/E8UA2GNLCCqQ1dpMUCqLqBE+
+	FHe80HYnWFJY8m6Emi74IWuYPZb4n8S2s39BMGbqAYvWJcBdUElUbDw59J8ezGAp934XO7l8k0wQ1
+	O+/XKHFu2IiffxPrhlLKrR7oe0PS3nAI0jcTzOOgAl2rkniz/AFo38HxH2H+McO+M41g/dp9+GXGI
+	IXwPHy3aQF5QOHibbjAg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jbCB9-0005ka-Gf; Wed, 20 May 2020 00:01:47 +0000
+	id 1jbCB2-0005ah-FD; Wed, 20 May 2020 00:01:40 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jbCAt-0005SM-QV
- for linux-amlogic@lists.infradead.org; Wed, 20 May 2020 00:01:34 +0000
+ id 1jbCAs-0005RR-E0
+ for linux-amlogic@lists.infradead.org; Wed, 20 May 2020 00:01:33 +0000
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
  s=default; t=1589932890;
- bh=CHsSQ3zx63FAR3O0IkQ6ru6xhe+WSVJxCYJek2ggW/0=;
+ bh=t0G+gxGQxZNHKnASuwESBj0aBemGLX69ZuoQQIH+klE=;
  h=Subject:From:Date:References:In-Reply-To:To:Cc:Cc:From;
- b=O8rxNNtjDglz2rb37lkUMBm4LhkUFhnKJ8390EPKyNuOeFjOLN0LgltTAPnu1yxO+
- qbA90Vuy8H5vlccgxtMwJvOV0aYuYaDkUGUiZTGknLUZ+nl5ywRKZe6actJKvpX2dU
- MlpGiMsQfySsByRn6xFjgzs1KdOsnRQycVKCBktw=
+ b=xSw+LOY/TnsaAEByqFqV4d8EkgxEK+iOIWH4lr3nEU0kNgzLsdoWzJlj6zFXLYb7h
+ si4JqHFAEEOTo2b1U9urgDTS6VtxatSEIFi73I4P7WqfrQ7xA3IyXmQWsHz/3si6I1
+ xMMlioRrFiyJqQJq2PBosOl2v9C24Yua6VWABpRY=
 MIME-Version: 1.0
-Subject: Re: [PATCH v2 0/2] arm64: meson-sm1: add support for Hardkernel
- ODROID-C4
+Subject: Re: [PATCH 0/7] arm64: dts: meson: add internal audio DAC support
 From: patchwork-bot+linux-amlogic@kernel.org
-Message-Id: <158993289086.29142.17190880440460553475.git-patchwork-notify@kernel.org>
+Message-Id: <158993289010.29142.17512269596780364398.git-patchwork-notify@kernel.org>
 Date: Wed, 20 May 2020 00:01:30 +0000
-References: <20200506080702.6645-1-narmstrong@baylibre.com>
-In-Reply-To: <20200506080702.6645-1-narmstrong@baylibre.com>
-To: Neil Armstrong <narmstrong@baylibre.com>
+References: <20200506221656.477379-1-jbrunet@baylibre.com>
+In-Reply-To: <20200506221656.477379-1-jbrunet@baylibre.com>
+To: Jerome Brunet <jbrunet@baylibre.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200519_170131_897383_4D98A2EB 
-X-CRM114-Status: UNSURE (   6.05  )
+X-CRM114-CacheID: sfid-20200519_170130_489068_AD658B9C 
+X-CRM114-Status: UNSURE (   6.86  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
@@ -81,32 +80,34 @@ Hello:
 
 This series was applied to khilman/linux-amlogic.git (refs/heads/for-next).
 
-On Wed,  6 May 2020 10:07:00 +0200 you wrote:
-> This serie adds support for the Hardkernel Odroid-C4 single board computer.
+On Thu,  7 May 2020 00:16:49 +0200 you wrote:
+> This patchset adds support for the internal audio DAC found on the gxl,
+> g12 and sm1 SoC family.
 > 
-> The Odroid-C4 is the Odroid-C2 successor with same form factor, but using
-> a modern Amlogic S905X3 (SM1) SoC and 4x USB3 ports.
+> It was mainly tested on the gxl libretech-cc and g12a u200.
 > 
-> Fully functionnal:
-> - USB2+USB3
-> - USB2 OTG
-> - eMMC
-> - SDCard
-> - HDMI
-> - DVFS
-> - Gigabit Ethernet with RTL8211F PHY
-> - ADC
-> - Debug UART
-> - Infrared Receiver
+> /!\
+> This series (patches 1 in particular) depends on this reset binding [0].
+> Philipp has provided an immutable with it here [1]
 > 
 > [...]
 
 
 Here is a summary with links:
-  - [v2,1/2] dt-bindings: arm: amlogic: add odroid-c4 bindings
-    https://git.kernel.org/khilman/linux-amlogic/c/838f0905aaeefce443eca124b27e6474e6862aa3
-  - [v2,2/2] arm64: dts: meson-sm1: add support for Hardkernel ODROID-C4
-    https://git.kernel.org/khilman/linux-amlogic/c/326e57518b0dc8789d78e59563afbb3f4107e6e1
+  - [1/7] arm64: dts: meson: gxl: add acodec support
+    https://git.kernel.org/khilman/linux-amlogic/c/a66d4ae3144a18476626dd8de8b8dff5f523daee
+  - [2/7] arm64: dts: meson: p230-q200: add internal DAC support
+    https://git.kernel.org/khilman/linux-amlogic/c/f3c35382259f67c2ae878de2142fb58b94df0525
+  - [3/7] arm64: dts: meson: libretech-cc: add internal DAC support
+    https://git.kernel.org/khilman/linux-amlogic/c/249ce3777c25b383702e91a6547ffc676dc004a5
+  - [4/7] arm64: dts: meson: libretech-ac: add internal DAC support
+    https://git.kernel.org/khilman/linux-amlogic/c/451323f8bc9e9b701b87b4598ec1cac8eff82d15
+  - [5/7] arm64: dts: meson: libretech-pc: add internal DAC support
+    https://git.kernel.org/khilman/linux-amlogic/c/2989a2d6c7f36da2bddffdb293bdf123e735d5f7
+  - [6/7] arm64: dts: meson: g12: add internal DAC
+    https://git.kernel.org/khilman/linux-amlogic/c/457fa78771a23ecedf3bcd9ce9946a5183472ff6
+  - [7/7] arm64: dts: meson: g12: add internal DAC glue
+    https://git.kernel.org/khilman/linux-amlogic/c/dbffd7f9bdb463437d3c3f7c3e1bd4379a785fe4
 
 You are awesome, thank you!
 
