@@ -2,82 +2,85 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D80471DD99D
-	for <lists+linux-amlogic@lfdr.de>; Thu, 21 May 2020 23:41:33 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id AD88D1DE2D9
+	for <lists+linux-amlogic@lfdr.de>; Fri, 22 May 2020 11:22:33 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Subject:To:From:
-	Date:Message-ID:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
-	References:List-Owner; bh=DP8/uj8BicqFKNe8N/n2U9l7hcy3LFEFkVEvFy/cAag=; b=qrq
-	NFu6VhGFs9su/1dVr2+KQAGCAhz67r16KKtntidKA7/68c9CqB03z0DPb0hSe4FMhgwNDRoBM1i6v
-	UgD2l0D6Z8gK54880VYljQnEbLOhihvnKXtqSBJ0ysoVALyqoPXWGO7+RpEo1K1GjBDvsTwq7wg1+
-	vF8gc2R55EXUva9QHGyBHuODctk6iUeZvu86pVqfeR8eJjZfCeJLW6dtjrIs9tELXwo1juXgIwa2x
-	8hm3/LOKMlhFAehLOhzLi9f5aKgrp0A89cV1ndTSu03PIiDRka15zqxP9/gJ1VwfNiLd3lKJCWptl
-	U/+u82snhZgCWoMIWw7uj/rksEOyfog==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=yEx6v+hTuDGHSa1q0ZESncBe/JBaGzW9MYDB8Y1K+pc=; b=pl3tethJadbke/
+	s5jdwqOggwUboTLYpp5j9ZN9lln2vd4oL1W/1VLHTH6S6KVk8spcWMzSoQFaeFI9MvvYGTzherxjL
+	ud1JIEEzHeo/f4TzD/T4yWjebR8YDgmgtUqUR1mffqOQQdKXxPOLpFhmHEET4yTFbVcBR3fJ5q4Wx
+	kTpN3emiieDNVMe+tW+gLCZctlMqOHhb7fXo8OqP/q5Z1k3qEU0Ku7SiAaXfO5CtYoJA2FQnZgwAT
+	SzFGmEJc4qmK6jGOnPFV8/F+uhbJ8Tfg4Eq0Vw0VEunJ+8ZCEWrEIfwsCVBQVMW31d5kGoDXZm7yA
+	cKxrvV2vL/6BLYxFImgA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jbswW-0000wt-7l; Thu, 21 May 2020 21:41:32 +0000
-Received: from mail-pl1-x642.google.com ([2607:f8b0:4864:20::642])
+	id 1jc3ss-00037V-Qq; Fri, 22 May 2020 09:22:30 +0000
+Received: from mx0a-00128a01.pphosted.com ([148.163.135.77])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jbsw6-0000Yu-28
- for linux-amlogic@lists.infradead.org; Thu, 21 May 2020 21:41:07 +0000
-Received: by mail-pl1-x642.google.com with SMTP id f15so3503037plr.3
- for <linux-amlogic@lists.infradead.org>; Thu, 21 May 2020 14:41:05 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=message-id:date:from:to:cc:subject;
- bh=wOxdbqXiaXBd2oUXdT6DezR8UoCyJMduXlbTu9FfJAo=;
- b=YsTGUaAiPOFTplFldDoy3qXs7axwoNClcY8jBgJ1fRlo3pwumGdJPdZurxWpiuH02e
- BW3E9fQXXoukKiS26LV766/C8RRSBG4vUXiHkwDtpBNb5OqdlkAQHGfFwwC0H9IQq+7J
- bhiRwasuFGNTNy6XOLrTyRT/1uzlv8vruOHeFfWHQuSweAozaqnR/S/fqACBMqZOntqA
- bT7wlO6wuYO1DH8rOjqCtMw2NtCl24xQpJMSh84N7hT4LV+Lk2xXEu1eMWxy7LYsRQlJ
- FKwRpQmWdOXPFr81rfSvmQ5m8LSh66GEWzTK+BiXIhuQDIYfDipwIohYczjYwTEg1qv0
- 6y3g==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:message-id:date:from:to:cc:subject;
- bh=wOxdbqXiaXBd2oUXdT6DezR8UoCyJMduXlbTu9FfJAo=;
- b=OEUguUvRLxL2NAr9RNBC7aA3BqQPqKjeOSnqsF4CxZbGGdPBxg4yPjdgUonaT1LfNe
- rby6avQTu7jpgl5AOZJ5hzkIOhanAf02IIQarRIHhQBoDxenlcaCEvwxEOXConzlccGM
- w/YYIXOPtER26gBM5uls1VE1R7/8dmxKkRq41tOG8y1Fs9XCycJtqJ79T1SHdDv2OSD7
- S+XMkbajELnESTB+0Ftm9DBhMROdaw34fmwoqeZDShES4Z3qQ6dbrgSjb4415wwFCg/H
- 5LM/6N90/uyrXY5ebgvhRzbCInSOcc6acyhB8xScxJQ/vnXmZuCFkD+d3f04kWe5LymS
- 5DPA==
-X-Gm-Message-State: AOAM532GFGGXYfdxnSZ5fKdYWoDLiG0dTrHJ2+M8lcjOmBssII9HlNoA
- UoGeW4qtRimzV+a8Wg4/dWEkRg==
-X-Google-Smtp-Source: ABdhPJxfUbpzlSMaijpVUwP6mvp00/JtS3ccdv7HJNWQCQzKgde3F0tI9DSd/M/28OcLKj6aCPK9Kg==
-X-Received: by 2002:a17:90a:f0cd:: with SMTP id
- fa13mr574467pjb.95.1590097264983; 
- Thu, 21 May 2020 14:41:04 -0700 (PDT)
-Received: from localhost (c-71-197-186-152.hsd1.wa.comcast.net.
- [71.197.186.152])
- by smtp.gmail.com with ESMTPSA id y5sm4800044pge.50.2020.05.21.14.41.04
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Thu, 21 May 2020 14:41:04 -0700 (PDT)
-Message-ID: <5ec6f570.1c69fb81.a3753.711b@mx.google.com>
-Date: Thu, 21 May 2020 14:41:03 -0700
-From: Kevin Hilman <khilman@baylibre.com>
-To: soc@kernel.org, arm@kernel.org
-Subject: [GIT PULL 4/4] soc: amlogic: driver updates for v5.8
+ id 1jc3sn-00035B-Kj; Fri, 22 May 2020 09:22:27 +0000
+Received: from pps.filterd (m0167089.ppops.net [127.0.0.1])
+ by mx0a-00128a01.pphosted.com (8.16.0.42/8.16.0.42) with SMTP id
+ 04M8XRHS016327; Fri, 22 May 2020 04:36:00 -0400
+Received: from nwd2mta3.analog.com ([137.71.173.56])
+ by mx0a-00128a01.pphosted.com with ESMTP id 312d3655mx-1
+ (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT);
+ Fri, 22 May 2020 04:36:00 -0400
+Received: from SCSQMBX11.ad.analog.com (scsqmbx11.ad.analog.com [10.77.17.10])
+ by nwd2mta3.analog.com (8.14.7/8.14.7) with ESMTP id 04M8ZvJQ040182
+ (version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128
+ verify=FAIL); Fri, 22 May 2020 04:35:57 -0400
+Received: from SCSQMBX10.ad.analog.com (10.77.17.5) by SCSQMBX11.ad.analog.com
+ (10.77.17.10) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256) id 15.1.1779.2; Fri, 22 May
+ 2020 01:35:55 -0700
+Received: from zeus.spd.analog.com (10.64.82.11) by SCSQMBX10.ad.analog.com
+ (10.77.17.5) with Microsoft SMTP Server id 15.1.1779.2 via Frontend
+ Transport; Fri, 22 May 2020 01:35:55 -0700
+Received: from saturn.ad.analog.com ([10.48.65.112])
+ by zeus.spd.analog.com (8.15.1/8.15.1) with ESMTP id 04M8ZhUO005306;
+ Fri, 22 May 2020 04:35:43 -0400
+From: Alexandru Ardelean <alexandru.ardelean@analog.com>
+To: <bcm-kernel-feedback-list@broadcom.com>, <linux-iio@vger.kernel.org>,
+ <linux-kernel@vger.kernel.org>, <linux-stm32@st-md-mailman.stormreply.com>,
+ <linux-arm-kernel@lists.infradead.org>, <linux-input@vger.kernel.org>,
+ <linux-aspeed@lists.ozlabs.org>, <linux-samsung-soc@vger.kernel.org>,
+ <linux-amlogic@lists.infradead.org>,
+ <linux-mediatek@lists.infradead.org>, <linux-arm-msm@vger.kernel.org>,
+ <linux-rockchip@lists.infradead.org>, <linux-pm@vger.kernel.org>,
+ <platform-driver-x86@vger.kernel.org>, <devel@driverdev.osuosl.org>
+Subject: [PATCH 1/5] iio: core: pass parent device as parameter during
+ allocation
+Date: Fri, 22 May 2020 11:22:04 +0300
+Message-ID: <20200522082208.383631-1-alexandru.ardelean@analog.com>
+X-Mailer: git-send-email 2.25.1
+MIME-Version: 1.0
+X-ADIRoutedOnPrem: True
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10434:6.0.216, 18.0.676
+ definitions=2020-05-22_05:2020-05-21,
+ 2020-05-22 signatures=0
+X-Proofpoint-Spam-Details: rule=outbound_notspam policy=outbound score=0
+ mlxlogscore=999
+ suspectscore=2 bulkscore=0 mlxscore=0 phishscore=0 cotscore=-2147483648
+ impostorscore=0 priorityscore=1501 lowpriorityscore=0 spamscore=0
+ clxscore=1011 adultscore=0 malwarescore=0 classifier=spam adjust=0
+ reason=mlx scancount=1 engine=8.12.0-2004280000
+ definitions=main-2005220070
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200521_144106_186119_797A51E6 
-X-CRM114-Status: UNSURE (   8.02  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20200522_022225_688399_93BC3045 
+X-CRM114-Status: GOOD (  14.81  )
+X-Spam-Score: -0.7 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:642 listed in]
- [list.dnswl.org]
+ -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
+ low trust [148.163.135.77 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -89,43 +92,207 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: linux-amlogic@lists.infradead.org, linux-arm-kernel@lists.infradead.org
-MIME-Version: 1.0
+Cc: milo.kim@ti.com, tomislav.denis@avl.com, dan@dlrobertson.com,
+ heiko@sntech.de, linus.walleij@linaro.org, eajames@linux.ibm.com,
+ bjorn.andersson@linaro.org, paul@crapouillou.net, lorenzo.bianconi83@gmail.com,
+ srinivas.pandruvada@linux.intel.com, khilman@baylibre.com, krzk@kernel.org,
+ wens@csie.org, kgene@kernel.org, slemieux.tyco@gmail.com, orsonzhai@gmail.com,
+ Alexandru Ardelean <alexandru.ardelean@analog.com>, alexandre.torgue@st.com,
+ tduszyns@gmail.com, rjui@broadcom.com, s.hauer@pengutronix.de,
+ jikos@kernel.org, vilhelm.gray@gmail.com, mripard@kernel.org, vz@mleia.com,
+ hdegoede@redhat.com, ak@it-klinger.de, matthias.bgg@gmail.com,
+ fabrice.gasnier@st.com, sbranden@broadcom.com, rmfrfs@gmail.com,
+ syednwaris@gmail.com, dmitry.torokhov@gmail.com, coproscefalo@gmail.com,
+ agross@kernel.org, songqiang1304521@gmail.com, mcoquelin.stm32@gmail.com,
+ zhang.lyra@gmail.com, baolin.wang7@gmail.com, ktsai@capellamicro.com,
+ shawnguo@kernel.org, peda@axentia.se, jic23@kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-The following changes since commit 8f3d9f354286745c751374f5f1fcafee6b3f3136:
+The change passes the parent device to the iio_device_alloc() call. This
+also updates the devm_iio_device_alloc() call to consider the device object
+as the parent device by default.
 
-  Linux 5.7-rc1 (2020-04-12 12:35:55 -0700)
+Having it passed like this, should ensure that any IIO device object
+already has a device object as parent, allowing for neater control, like
+passing the 'indio_dev' object for other stuff [like buffers/triggers/etc],
+and potentially creating iiom_xxx(indio_dev) functions.
 
-are available in the Git repository at:
+With this patch, only the 'drivers/platform/x86/toshiba_acpi.c' needs an
+update to pass the parent object as a parameter.
 
-  https://git.kernel.org/pub/scm/linux/kernel/git/khilman/linux-amlogic.git tags/amlogic-drivers
+In the next patch all devm_iio_device_alloc() calls will be handled.
 
-for you to fetch changes up to 53773f2dfd9c847304b184d5617e36aeafdf5d87:
+Signed-off-by: Alexandru Ardelean <alexandru.ardelean@analog.com>
+---
+ drivers/iio/dummy/iio_simple_dummy.c         | 14 ++++++++------
+ drivers/iio/industrialio-core.c              | 11 ++++++-----
+ drivers/platform/x86/toshiba_acpi.c          |  3 +--
+ drivers/staging/iio/Documentation/device.txt |  4 +---
+ include/linux/iio/iio.h                      |  4 ++--
+ 5 files changed, 18 insertions(+), 18 deletions(-)
 
-  soc: amlogic: meson-ee-pwrc: add support for the Meson GX SoCs (2020-05-19 16:02:14 -0700)
+diff --git a/drivers/iio/dummy/iio_simple_dummy.c b/drivers/iio/dummy/iio_simple_dummy.c
+index 6cb02299a215..b35ae7c039f7 100644
+--- a/drivers/iio/dummy/iio_simple_dummy.c
++++ b/drivers/iio/dummy/iio_simple_dummy.c
+@@ -566,6 +566,13 @@ static struct iio_sw_device *iio_dummy_probe(const char *name)
+ 	struct iio_dev *indio_dev;
+ 	struct iio_dummy_state *st;
+ 	struct iio_sw_device *swd;
++	struct device *parent = NULL;
++
++	/*
++	 * With hardware: Set the parent device.
++	 * parent = &spi->dev;
++	 * parent = &client->dev;
++	 */
+ 
+ 	swd = kzalloc(sizeof(*swd), GFP_KERNEL);
+ 	if (!swd) {
+@@ -580,7 +587,7 @@ static struct iio_sw_device *iio_dummy_probe(const char *name)
+ 	 * It also has a region (accessed by iio_priv()
+ 	 * for chip specific state information.
+ 	 */
+-	indio_dev = iio_device_alloc(sizeof(*st));
++	indio_dev = iio_device_alloc(parent, sizeof(*st));
+ 	if (!indio_dev) {
+ 		ret = -ENOMEM;
+ 		goto error_ret;
+@@ -590,11 +597,6 @@ static struct iio_sw_device *iio_dummy_probe(const char *name)
+ 	mutex_init(&st->lock);
+ 
+ 	iio_dummy_init_device(indio_dev);
+-	/*
+-	 * With hardware: Set the parent device.
+-	 * indio_dev->dev.parent = &spi->dev;
+-	 * indio_dev->dev.parent = &client->dev;
+-	 */
+ 
+ 	 /*
+ 	 * Make the iio_dev struct available to remove function.
+diff --git a/drivers/iio/industrialio-core.c b/drivers/iio/industrialio-core.c
+index 1527f01a44f1..75661661aaba 100644
+--- a/drivers/iio/industrialio-core.c
++++ b/drivers/iio/industrialio-core.c
+@@ -1493,7 +1493,7 @@ struct device_type iio_device_type = {
+  * iio_device_alloc() - allocate an iio_dev from a driver
+  * @sizeof_priv:	Space to allocate for private structure.
+  **/
+-struct iio_dev *iio_device_alloc(int sizeof_priv)
++struct iio_dev *iio_device_alloc(struct device *parent, int sizeof_priv)
+ {
+ 	struct iio_dev *dev;
+ 	size_t alloc_size;
+@@ -1510,6 +1510,7 @@ struct iio_dev *iio_device_alloc(int sizeof_priv)
+ 	if (!dev)
+ 		return NULL;
+ 
++	dev->dev.parent = parent;
+ 	dev->dev.groups = dev->groups;
+ 	dev->dev.type = &iio_device_type;
+ 	dev->dev.bus = &iio_bus_type;
+@@ -1551,7 +1552,7 @@ static void devm_iio_device_release(struct device *dev, void *res)
+ 
+ /**
+  * devm_iio_device_alloc - Resource-managed iio_device_alloc()
+- * @dev:		Device to allocate iio_dev for
++ * @parent:		Device to allocate iio_dev for, and parent for this IIO device
+  * @sizeof_priv:	Space to allocate for private structure.
+  *
+  * Managed iio_device_alloc. iio_dev allocated with this function is
+@@ -1560,7 +1561,7 @@ static void devm_iio_device_release(struct device *dev, void *res)
+  * RETURNS:
+  * Pointer to allocated iio_dev on success, NULL on failure.
+  */
+-struct iio_dev *devm_iio_device_alloc(struct device *dev, int sizeof_priv)
++struct iio_dev *devm_iio_device_alloc(struct device *parent, int sizeof_priv)
+ {
+ 	struct iio_dev **ptr, *iio_dev;
+ 
+@@ -1569,10 +1570,10 @@ struct iio_dev *devm_iio_device_alloc(struct device *dev, int sizeof_priv)
+ 	if (!ptr)
+ 		return NULL;
+ 
+-	iio_dev = iio_device_alloc(sizeof_priv);
++	iio_dev = iio_device_alloc(parent, sizeof_priv);
+ 	if (iio_dev) {
+ 		*ptr = iio_dev;
+-		devres_add(dev, ptr);
++		devres_add(parent, ptr);
+ 	} else {
+ 		devres_free(ptr);
+ 	}
+diff --git a/drivers/platform/x86/toshiba_acpi.c b/drivers/platform/x86/toshiba_acpi.c
+index 808944546739..4a4d09c352dd 100644
+--- a/drivers/platform/x86/toshiba_acpi.c
++++ b/drivers/platform/x86/toshiba_acpi.c
+@@ -3128,7 +3128,7 @@ static int toshiba_acpi_add(struct acpi_device *acpi_dev)
+ 
+ 	toshiba_accelerometer_available(dev);
+ 	if (dev->accelerometer_supported) {
+-		dev->indio_dev = iio_device_alloc(sizeof(*dev));
++		dev->indio_dev = iio_device_alloc(&acpi_dev->dev, sizeof(*dev));
+ 		if (!dev->indio_dev) {
+ 			pr_err("Unable to allocate iio device\n");
+ 			goto iio_error;
+@@ -3138,7 +3138,6 @@ static int toshiba_acpi_add(struct acpi_device *acpi_dev)
+ 
+ 		dev->indio_dev->info = &toshiba_iio_accel_info;
+ 		dev->indio_dev->name = "Toshiba accelerometer";
+-		dev->indio_dev->dev.parent = &acpi_dev->dev;
+ 		dev->indio_dev->modes = INDIO_DIRECT_MODE;
+ 		dev->indio_dev->channels = toshiba_iio_accel_channels;
+ 		dev->indio_dev->num_channels =
+diff --git a/drivers/staging/iio/Documentation/device.txt b/drivers/staging/iio/Documentation/device.txt
+index ec42544a46aa..0d1275b1eb3f 100644
+--- a/drivers/staging/iio/Documentation/device.txt
++++ b/drivers/staging/iio/Documentation/device.txt
+@@ -8,7 +8,7 @@ The crucial structure for device drivers in iio is iio_dev.
+ 
+ First allocate one using:
+ 
+-struct iio_dev *indio_dev = iio_device_alloc(sizeof(struct chip_state));
++struct iio_dev *indio_dev = iio_device_alloc(parent, sizeof(struct chip_state));
+ where chip_state is a structure of local state data for this instance of
+ the chip.
+ 
+@@ -16,8 +16,6 @@ That data can be accessed using iio_priv(struct iio_dev *).
+ 
+ Then fill in the following:
+ 
+-- indio_dev->dev.parent
+-	Struct device associated with the underlying hardware.
+ - indio_dev->name
+ 	Name of the device being driven - made available as the name
+ 	attribute in sysfs.
+diff --git a/include/linux/iio/iio.h b/include/linux/iio/iio.h
+index a1be82e74c93..91a69f4751aa 100644
+--- a/include/linux/iio/iio.h
++++ b/include/linux/iio/iio.h
+@@ -676,7 +676,7 @@ static inline void *iio_device_get_drvdata(struct iio_dev *indio_dev)
+ 
+ /* Can we make this smaller? */
+ #define IIO_ALIGN L1_CACHE_BYTES
+-struct iio_dev *iio_device_alloc(int sizeof_priv);
++struct iio_dev *iio_device_alloc(struct device *parent, int sizeof_priv);
+ 
+ static inline void *iio_priv(const struct iio_dev *indio_dev)
+ {
+@@ -690,7 +690,7 @@ static inline struct iio_dev *iio_priv_to_dev(void *priv)
+ }
+ 
+ void iio_device_free(struct iio_dev *indio_dev);
+-struct iio_dev *devm_iio_device_alloc(struct device *dev, int sizeof_priv);
++struct iio_dev *devm_iio_device_alloc(struct device *parent, int sizeof_priv);
+ struct iio_trigger *devm_iio_trigger_alloc(struct device *dev,
+ 						const char *fmt, ...);
+ /**
+-- 
+2.25.1
 
-----------------------------------------------------------------
-soc: amlogic: driver updates for v5.8
-- support GX SoCs in the EE power-controller driver
-
-----------------------------------------------------------------
-Martin Blumenstingl (4):
-      dt-bindings: power: meson-ee-pwrc: add support for Meson8/8b/8m2
-      dt-bindings: power: meson-ee-pwrc: add support for the Meson GX SoCs
-      soc: amlogic: meson-ee-pwrc: add support for Meson8/Meson8b/Meson8m2
-      soc: amlogic: meson-ee-pwrc: add support for the Meson GX SoCs
-
- Documentation/devicetree/bindings/power/amlogic,meson-ee-pwrc.yaml | 102 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-----------
- drivers/soc/amlogic/meson-ee-pwrc.c                                | 112 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--------
- include/dt-bindings/power/meson-gxbb-power.h                       |  13 +++++++++
- include/dt-bindings/power/meson8-power.h                           |  13 +++++++++
- 4 files changed, 214 insertions(+), 26 deletions(-)
- create mode 100644 include/dt-bindings/power/meson-gxbb-power.h
- create mode 100644 include/dt-bindings/power/meson8-power.h
 
 _______________________________________________
 linux-amlogic mailing list
