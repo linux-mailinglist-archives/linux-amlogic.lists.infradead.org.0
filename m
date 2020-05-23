@@ -2,45 +2,46 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id EADEC1DF91C
-	for <lists+linux-amlogic@lfdr.de>; Sat, 23 May 2020 19:23:13 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E6A501DF92A
+	for <lists+linux-amlogic@lfdr.de>; Sat, 23 May 2020 19:23:48 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=HBOal0IzErdrKvg9hii/9Je1240oJC6OzlaTLT331FY=; b=CFwFBEgvH8X3kT
-	zYlvDgpcyI5pIZJba4ZpZxmfPU4a87a/anw7Xda2NIEntZb07Ebkar5uxoeaOVn91tpH4n48ZqnTN
-	CHr+9I5Mvn5yB+7sUXCR4atuDNuWktjm9CX5wM6znDTSYOs8VLaJlejndUDv+ZJNAQoM+ESuSInzI
-	9SGgiZHw7BLZNPxi99bLpIWncgqU+xfnjnHIw6i56T8ituefHLXsD8PLiZ3uKPNyK1iAEYYVg8NkY
-	nREIbkQ6cpklCrjw6TcIqlUlVBCNv2ie9Yi4BGMZ/GuvC9G9WS5Fq8gAQrIziZmAKFZPQ0aKYdE8l
-	hzzRivdqDOC2i25orkGw==;
+	List-Owner; bh=580VV709L9C6kNgdiBVcpsx62IMSf2UyQZ3Ra/NqdtE=; b=paDsJ5l9b2ixow
+	nMqk3qj893r+ZCC7aGIVwmIldvmd6P545bW86YwdNNnbXfj/Mksi2WhFmN2q4KkaADLivRlFs5Eiu
+	dC5+tlG03vG84yOn/qkFJocVT/Sw77MpKVbSCIkAetJXmcXtgPdNslVBjgel73dZhRM1DnwylBNBj
+	QGbGSl0vVlANXiRvyJr8ngYZn03Wv+YtJOohpnERHt2MHLTiPyDMFKDCUsFoqC6XW/SHCklxtVMP0
+	zFUlNYEBeP43fSmv+dnWfb8T/YbGo242Osa8IbwtWIIY+9f7J8JGoPXk8W4JihLvMTR5Y1QQGcwEP
+	elJiw4Mirj7ogf8PZGXg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jcXrc-0004jI-7I; Sat, 23 May 2020 17:23:12 +0000
+	id 1jcXsA-0005CV-OS; Sat, 23 May 2020 17:23:46 +0000
 Received: from metis.ext.pengutronix.de ([2001:67c:670:201:290:27ff:fe1d:cc33])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jcXqu-00041r-8O
- for linux-amlogic@lists.infradead.org; Sat, 23 May 2020 17:22:29 +0000
+ id 1jcXr7-0004G9-EV
+ for linux-amlogic@lists.infradead.org; Sat, 23 May 2020 17:22:43 +0000
 Received: from pty.hi.pengutronix.de ([2001:67c:670:100:1d::c5])
  by metis.ext.pengutronix.de with esmtps
  (TLS1.2:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.92)
  (envelope-from <ukl@pengutronix.de>)
- id 1jcXqb-0001ku-4A; Sat, 23 May 2020 19:22:09 +0200
+ id 1jcXqr-0001pY-Oc; Sat, 23 May 2020 19:22:25 +0200
 Received: from ukl by pty.hi.pengutronix.de with local (Exim 4.89)
  (envelope-from <ukl@pengutronix.de>)
- id 1jcXqa-00057K-9j; Sat, 23 May 2020 19:22:08 +0200
-Date: Sat, 23 May 2020 19:22:08 +0200
+ id 1jcXqr-00057S-5L; Sat, 23 May 2020 19:22:25 +0200
+Date: Sat, 23 May 2020 19:22:25 +0200
 From: Uwe =?iso-8859-1?Q?Kleine-K=F6nig?= <u.kleine-koenig@pengutronix.de>
 To: Yangtao Li <tiny.windzz@gmail.com>
-Subject: Re: [PATCH 20/32] pwm: imx: convert to devm_platform_ioremap_resource
-Message-ID: <20200523172208.3ob7pdxsjmxnebva@pengutronix.de>
+Subject: Re: [PATCH 18/32] pwm: tiehrpwm: convert to
+ devm_platform_ioremap_resource
+Message-ID: <20200523172225.6e6zzssw7ne7mlv7@pengutronix.de>
 References: <20191229080610.7597-1-tiny.windzz@gmail.com>
- <20191229080610.7597-20-tiny.windzz@gmail.com>
+ <20191229080610.7597-18-tiny.windzz@gmail.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <20191229080610.7597-20-tiny.windzz@gmail.com>
+In-Reply-To: <20191229080610.7597-18-tiny.windzz@gmail.com>
 User-Agent: NeoMutt/20170113 (1.7.2)
 X-SA-Exim-Connect-IP: 2001:67c:670:100:1d::c5
 X-SA-Exim-Mail-From: ukl@pengutronix.de
@@ -48,7 +49,7 @@ X-SA-Exim-Scanned: No (on metis.ext.pengutronix.de);
  SAEximRunCond expanded to false
 X-PTX-Original-Recipient: linux-amlogic@lists.infradead.org
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200523_102228_303568_C091BCF0 
+X-CRM114-CacheID: sfid-20200523_102241_492689_96F57761 
 X-CRM114-Status: UNSURE (   5.45  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
@@ -90,7 +91,7 @@ Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
 Hello,
 
-On Sun, Dec 29, 2019 at 08:05:58AM +0000, Yangtao Li wrote:
+On Sun, Dec 29, 2019 at 08:05:56AM +0000, Yangtao Li wrote:
 > Use devm_platform_ioremap_resource() to simplify code.
 > =
 
