@@ -2,51 +2,53 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 58B941E18E1
-	for <lists+linux-amlogic@lfdr.de>; Tue, 26 May 2020 03:15:56 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E36C81E18E4
+	for <lists+linux-amlogic@lfdr.de>; Tue, 26 May 2020 03:15:58 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=hPl/8vYXIGE0wVHtjPPhfvE4hgT5xPUb0mQiw0c4KOs=; b=irYFe9OVf5WwWM
-	ySVtw1tUXYeQAzA2BLDjmazedNMa+IUFGGzdjVXycUFfe/J+4EIKKpPql5uNvtA/JVvA2pwgd1KjM
-	n4NLb+ErGtPAtxYCW+lOR0mz+XpS/wo0v7L4yLfOCO+hdsx/rMfjrg9uuaQ1zb/1jDbrK6NaaFK+p
-	Y7IK+70BcMvhf0+igOOOKqSy04TyVKKTO44vbwyZpEGSyAM8xhfvB4X6H6tatAbW7UaXXO+03zsj4
-	WT5hvWRCvN0/xh4rvyKsS8Jpl9IMt7LTgPKSSbGMylAgN9XTKBWp5uPQL4kgyfEzbKXIoyfXnEuWl
-	RdsAaEvzWuAb3Iywfdbg==;
+	List-Owner; bh=aRRvSAdv6YAanCBsadXn4JvABjn086yaFOdRbT3K7Vs=; b=lyXve8/wkk5NPZ
+	gonpSpx4IfI9oFRuxFNpOulM/GOfXCmG/2q3LGizaprQMTSIqL3yFM4q4qGGCMh4MFImpLZbL+H2M
+	14TNB5lQ8FOEkH0aK8GeelxZnoTxngKMahzMJ2yjXHrFq+Pz3JGCsvKS//G1u6WcymRQDTZmAGfNM
+	cNyiULwGFsZakX6+OwG8GA10vai9zNFpM8uABnJR+8y7TbAllf7YJq6N8aLx14X8QkG+jZHSn0uGL
+	4gVM7FZubqu3kPHbi3GplC9POjpDyh7/91jjMDa4/CCWFqLkAEBoO8n+XL08WGJ0FOexU59z1TRzz
+	dYM18rbhsQJvvYxVjp5w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jdOCA-0007wV-KC; Tue, 26 May 2020 01:15:54 +0000
-Received: from perceval.ideasonboard.com ([213.167.242.64])
+	id 1jdOCD-0007yh-4M; Tue, 26 May 2020 01:15:57 +0000
+Received: from perceval.ideasonboard.com
+ ([2001:4b98:dc2:55:216:3eff:fef7:d647])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jdOC3-0007sZ-T9
- for linux-amlogic@lists.infradead.org; Tue, 26 May 2020 01:15:49 +0000
+ id 1jdOC4-0007t9-SN
+ for linux-amlogic@lists.infradead.org; Tue, 26 May 2020 01:15:50 +0000
 Received: from pendragon.bb.dnainternet.fi (81-175-216-236.bb.dnainternet.fi
  [81.175.216.236])
- by perceval.ideasonboard.com (Postfix) with ESMTPSA id 17285DC3;
- Tue, 26 May 2020 03:15:40 +0200 (CEST)
+ by perceval.ideasonboard.com (Postfix) with ESMTPSA id 4874CE28;
+ Tue, 26 May 2020 03:15:42 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=ideasonboard.com;
- s=mail; t=1590455742;
- bh=OPcNevIzGVBERxc4SlPiLT/vm7s14OgcBHJEElRMWZs=;
+ s=mail; t=1590455743;
+ bh=Onc2Aey+F57jx6Zo7KZGar40NeL9Xogccx5D+2gUZV4=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=p0LZGK/3nrFfRzLVrpVHvnp3vWu4ZpWAcChX4aQ5rC5l/IraPs1BYPlcokTQ59ad9
- rQc47c5eZQLeHm5sps1hcsOtxDQZBqn6IKQbicrnLhPqZh4nPT5kGocvUd5tNuwpTu
- jacgzKxfu9r5MoJn+gwg8Tv+Bst6O1AIOQvsTl2o=
+ b=pkNOGtHzgrbqla4CYKmxH2RHAGf57zaKp+031f5qvVErC6JJd28LHH0D8kXZC4ts0
+ rxS322WcAh2zuAtW9DVviD/d4UXjp8ljqcx9SmzXfoHsnSFxOxEyx+tKQedd1LwFJ6
+ KeVcflfhaDEPa7l7IE+AyWHhH/knBSDX9hRiwhWA=
 From: Laurent Pinchart <laurent.pinchart+renesas@ideasonboard.com>
 To: dri-devel@lists.freedesktop.org
-Subject: [PATCH 15/27] drm: bridge: dw-hdmi: Pass drm_display_info to
- .mode_valid()
-Date: Tue, 26 May 2020 04:14:53 +0300
-Message-Id: <20200526011505.31884-16-laurent.pinchart+renesas@ideasonboard.com>
+Subject: [PATCH 16/27] drm: bridge: dw-hdmi: Constify mode argument to
+ dw_hdmi_phy_ops .init()
+Date: Tue, 26 May 2020 04:14:54 +0300
+Message-Id: <20200526011505.31884-17-laurent.pinchart+renesas@ideasonboard.com>
 X-Mailer: git-send-email 2.26.2
 In-Reply-To: <20200526011505.31884-1-laurent.pinchart+renesas@ideasonboard.com>
 References: <20200526011505.31884-1-laurent.pinchart+renesas@ideasonboard.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200525_181548_129031_0E3F31EA 
-X-CRM114-Status: GOOD (  12.84  )
+X-CRM114-CacheID: sfid-20200525_181549_062179_BD720E0D 
+X-CRM114-Status: UNSURE (   9.12  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -78,217 +80,99 @@ Cc: Jernej Skrabec <jernej.skrabec@siol.net>,
  Kieran Bingham <kieran.bingham@ideasonboard.com>,
  Maxime Ripard <mripard@kernel.org>, Sandy Huang <hjc@rock-chips.com>,
  linux-renesas-soc@vger.kernel.org, Andrzej Hajda <a.hajda@samsung.com>,
- Chen-Yu Tsai <wens@csie.org>, Philipp Zabel <p.zabel@pengutronix.de>,
- linux-amlogic@lists.infradead.org, Sam Ravnborg <sam@ravnborg.org>
+ Chen-Yu Tsai <wens@csie.org>, linux-amlogic@lists.infradead.org,
+ Sam Ravnborg <sam@ravnborg.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Replace the drm_connector pointer passed to the .mode_valid() function
-with a const drm_display_info pointer, as that's all the function should
-need. Use the display info passed to the bridge .mode_valid() operation
-instead of retrieving it from the connector, to prepare for make
-connector creation optional.
+The PHY .init() must not modify the mode it receives. Make the pointer
+const to enfore that.
 
 Signed-off-by: Laurent Pinchart <laurent.pinchart+renesas@ideasonboard.com>
 ---
- drivers/gpu/drm/bridge/synopsys/dw-hdmi.c   |  5 ++---
- drivers/gpu/drm/imx/dw_hdmi-imx.c           |  4 ++--
- drivers/gpu/drm/meson/meson_dw_hdmi.c       | 20 ++++++++++----------
- drivers/gpu/drm/rcar-du/rcar_dw_hdmi.c      |  2 +-
- drivers/gpu/drm/rockchip/dw_hdmi-rockchip.c |  2 +-
- drivers/gpu/drm/sun4i/sun8i_dw_hdmi.c       |  4 ++--
- drivers/gpu/drm/sun4i/sun8i_dw_hdmi.h       |  2 +-
- include/drm/bridge/dw_hdmi.h                |  4 ++--
- 8 files changed, 21 insertions(+), 22 deletions(-)
+ drivers/gpu/drm/bridge/synopsys/dw-hdmi.c   | 2 +-
+ drivers/gpu/drm/meson/meson_dw_hdmi.c       | 4 ++--
+ drivers/gpu/drm/rockchip/dw_hdmi-rockchip.c | 2 +-
+ drivers/gpu/drm/sun4i/sun8i_hdmi_phy.c      | 2 +-
+ include/drm/bridge/dw_hdmi.h                | 2 +-
+ 5 files changed, 6 insertions(+), 6 deletions(-)
 
 diff --git a/drivers/gpu/drm/bridge/synopsys/dw-hdmi.c b/drivers/gpu/drm/bridge/synopsys/dw-hdmi.c
-index adc5a95a06e9..23650e69604c 100644
+index 23650e69604c..6e6a3d95e68e 100644
 --- a/drivers/gpu/drm/bridge/synopsys/dw-hdmi.c
 +++ b/drivers/gpu/drm/bridge/synopsys/dw-hdmi.c
-@@ -2769,7 +2769,6 @@ dw_hdmi_bridge_mode_valid(struct drm_bridge *bridge,
- {
- 	struct dw_hdmi *hdmi = bridge->driver_private;
- 	const struct dw_hdmi_plat_data *pdata = hdmi->plat_data;
--	struct drm_connector *connector = &hdmi->connector;
- 	enum drm_mode_status mode_status = MODE_OK;
- 
- 	/* We don't support double-clocked modes */
-@@ -2777,8 +2776,8 @@ dw_hdmi_bridge_mode_valid(struct drm_bridge *bridge,
- 		return MODE_BAD;
- 
- 	if (pdata->mode_valid)
--		mode_status = pdata->mode_valid(hdmi, pdata->priv_data,
--						connector, mode);
-+		mode_status = pdata->mode_valid(hdmi, pdata->priv_data, info,
-+						mode);
- 
- 	return mode_status;
+@@ -1531,7 +1531,7 @@ static int hdmi_phy_configure(struct dw_hdmi *hdmi)
  }
-diff --git a/drivers/gpu/drm/imx/dw_hdmi-imx.c b/drivers/gpu/drm/imx/dw_hdmi-imx.c
-index 95aed4666c95..2dc93fa6ecb6 100644
---- a/drivers/gpu/drm/imx/dw_hdmi-imx.c
-+++ b/drivers/gpu/drm/imx/dw_hdmi-imx.c
-@@ -146,7 +146,7 @@ static const struct drm_encoder_helper_funcs dw_hdmi_imx_encoder_helper_funcs =
  
- static enum drm_mode_status
- imx6q_hdmi_mode_valid(struct dw_hdmi *hdmi, void *data,
--		      struct drm_connector *con,
-+		      const struct drm_display_info *info,
- 		      const struct drm_display_mode *mode)
+ static int dw_hdmi_phy_init(struct dw_hdmi *hdmi, void *data,
+-			    struct drm_display_mode *mode)
++			    const struct drm_display_mode *mode)
  {
- 	if (mode->clock < 13500)
-@@ -160,7 +160,7 @@ imx6q_hdmi_mode_valid(struct dw_hdmi *hdmi, void *data,
+ 	int i, ret;
  
- static enum drm_mode_status
- imx6dl_hdmi_mode_valid(struct dw_hdmi *hdmi, void *data,
--		       struct drm_connector *con,
-+		       const struct drm_display_info *info,
- 		       const struct drm_display_mode *mode)
- {
- 	if (mode->clock < 13500)
 diff --git a/drivers/gpu/drm/meson/meson_dw_hdmi.c b/drivers/gpu/drm/meson/meson_dw_hdmi.c
-index 34ba94922605..71d599970ec7 100644
+index 71d599970ec7..757c17fbb29f 100644
 --- a/drivers/gpu/drm/meson/meson_dw_hdmi.c
 +++ b/drivers/gpu/drm/meson/meson_dw_hdmi.c
-@@ -631,12 +631,12 @@ static irqreturn_t dw_hdmi_top_thread_irq(int irq, void *dev_id)
+@@ -297,7 +297,7 @@ static inline void dw_hdmi_dwc_write_bits(struct meson_dw_hdmi *dw_hdmi,
  
- static enum drm_mode_status
- dw_hdmi_mode_valid(struct dw_hdmi *hdmi, void *data,
--		   struct drm_connector *connector,
-+		   const struct drm_display_info *display_info,
- 		   const struct drm_display_mode *mode)
+ /* Setup PHY bandwidth modes */
+ static void meson_hdmi_phy_setup_mode(struct meson_dw_hdmi *dw_hdmi,
+-				      struct drm_display_mode *mode)
++				      const struct drm_display_mode *mode)
  {
- 	struct meson_dw_hdmi *dw_hdmi = data;
  	struct meson_drm *priv = dw_hdmi->priv;
--	bool is_hdmi2_sink = connector->display_info.hdmi.scdc.supported;
-+	bool is_hdmi2_sink = display_info->hdmi.scdc.supported;
- 	unsigned int phy_freq;
- 	unsigned int vclk_freq;
- 	unsigned int venc_freq;
-@@ -647,10 +647,10 @@ dw_hdmi_mode_valid(struct dw_hdmi *hdmi, void *data,
- 	DRM_DEBUG_DRIVER("Modeline " DRM_MODE_FMT "\n", DRM_MODE_ARG(mode));
+ 	unsigned int pixel_clock = mode->clock;
+@@ -427,7 +427,7 @@ static void dw_hdmi_set_vclk(struct meson_dw_hdmi *dw_hdmi,
+ }
  
- 	/* If sink does not support 540MHz, reject the non-420 HDMI2 modes */
--	if (connector->display_info.max_tmds_clock &&
--	    mode->clock > connector->display_info.max_tmds_clock &&
--	    !drm_mode_is_420_only(&connector->display_info, mode) &&
--	    !drm_mode_is_420_also(&connector->display_info, mode))
-+	if (display_info->max_tmds_clock &&
-+	    mode->clock > display_info->max_tmds_clock &&
-+	    !drm_mode_is_420_only(display_info, mode) &&
-+	    !drm_mode_is_420_also(display_info, mode))
- 		return MODE_BAD;
- 
- 	/* Check against non-VIC supported modes */
-@@ -667,9 +667,9 @@ dw_hdmi_mode_valid(struct dw_hdmi *hdmi, void *data,
- 	vclk_freq = mode->clock;
- 
- 	/* For 420, pixel clock is half unlike venc clock */
--	if (drm_mode_is_420_only(&connector->display_info, mode) ||
-+	if (drm_mode_is_420_only(display_info, mode) ||
- 	    (!is_hdmi2_sink &&
--	     drm_mode_is_420_also(&connector->display_info, mode)))
-+	     drm_mode_is_420_also(display_info, mode)))
- 		vclk_freq /= 2;
- 
- 	/* TMDS clock is pixel_clock * 10 */
-@@ -684,9 +684,9 @@ dw_hdmi_mode_valid(struct dw_hdmi *hdmi, void *data,
- 
- 	/* VENC double pixels for 1080i, 720p and YUV420 modes */
- 	if (meson_venc_hdmi_venc_repeat(vic) ||
--	    drm_mode_is_420_only(&connector->display_info, mode) ||
-+	    drm_mode_is_420_only(display_info, mode) ||
- 	    (!is_hdmi2_sink &&
--	     drm_mode_is_420_also(&connector->display_info, mode)))
-+	     drm_mode_is_420_also(display_info, mode)))
- 		venc_freq *= 2;
- 
- 	vclk_freq = max(venc_freq, hdmi_freq);
-diff --git a/drivers/gpu/drm/rcar-du/rcar_dw_hdmi.c b/drivers/gpu/drm/rcar-du/rcar_dw_hdmi.c
-index d0dffe55a7cb..7b8ec8310699 100644
---- a/drivers/gpu/drm/rcar-du/rcar_dw_hdmi.c
-+++ b/drivers/gpu/drm/rcar-du/rcar_dw_hdmi.c
-@@ -39,7 +39,7 @@ static const struct rcar_hdmi_phy_params rcar_hdmi_phy_params[] = {
- 
- static enum drm_mode_status
- rcar_hdmi_mode_valid(struct dw_hdmi *hdmi, void *data,
--		     struct drm_connector *connector,
-+		     const struct drm_display_info *info,
- 		     const struct drm_display_mode *mode)
+ static int dw_hdmi_phy_init(struct dw_hdmi *hdmi, void *data,
+-			    struct drm_display_mode *mode)
++			    const struct drm_display_mode *mode)
  {
- 	/*
+ 	struct meson_dw_hdmi *dw_hdmi = (struct meson_dw_hdmi *)data;
+ 	struct meson_drm *priv = dw_hdmi->priv;
 diff --git a/drivers/gpu/drm/rockchip/dw_hdmi-rockchip.c b/drivers/gpu/drm/rockchip/dw_hdmi-rockchip.c
-index d08f86783a28..d286751bb333 100644
+index d286751bb333..10e210f6455d 100644
 --- a/drivers/gpu/drm/rockchip/dw_hdmi-rockchip.c
 +++ b/drivers/gpu/drm/rockchip/dw_hdmi-rockchip.c
-@@ -221,7 +221,7 @@ static int rockchip_hdmi_parse_dt(struct rockchip_hdmi *hdmi)
+@@ -312,7 +312,7 @@ static const struct drm_encoder_helper_funcs dw_hdmi_rockchip_encoder_helper_fun
+ };
  
- static enum drm_mode_status
- dw_hdmi_rockchip_mode_valid(struct dw_hdmi *hdmi, void *data,
--			    struct drm_connector *connector,
-+			    const struct drm_display_info *info,
- 			    const struct drm_display_mode *mode)
+ static int dw_hdmi_rockchip_genphy_init(struct dw_hdmi *dw_hdmi, void *data,
+-			     struct drm_display_mode *mode)
++					const struct drm_display_mode *mode)
  {
- 	const struct dw_hdmi_mpll_config *mpll_cfg = rockchip_mpll_cfg;
-diff --git a/drivers/gpu/drm/sun4i/sun8i_dw_hdmi.c b/drivers/gpu/drm/sun4i/sun8i_dw_hdmi.c
-index 0a3637442ba6..d4c08043dd81 100644
---- a/drivers/gpu/drm/sun4i/sun8i_dw_hdmi.c
-+++ b/drivers/gpu/drm/sun4i/sun8i_dw_hdmi.c
-@@ -32,7 +32,7 @@ sun8i_dw_hdmi_encoder_helper_funcs = {
+ 	struct rockchip_hdmi *hdmi = (struct rockchip_hdmi *)data;
  
- static enum drm_mode_status
- sun8i_dw_hdmi_mode_valid_a83t(struct dw_hdmi *hdmi, void *data,
--			      struct drm_connector *connector,
-+			      const struct drm_display_info *info,
- 			      const struct drm_display_mode *mode)
+diff --git a/drivers/gpu/drm/sun4i/sun8i_hdmi_phy.c b/drivers/gpu/drm/sun4i/sun8i_hdmi_phy.c
+index 43643ad31730..8e078cacf063 100644
+--- a/drivers/gpu/drm/sun4i/sun8i_hdmi_phy.c
++++ b/drivers/gpu/drm/sun4i/sun8i_hdmi_phy.c
+@@ -341,7 +341,7 @@ static int sun8i_hdmi_phy_config_h3(struct dw_hdmi *hdmi,
+ }
+ 
+ static int sun8i_hdmi_phy_config(struct dw_hdmi *hdmi, void *data,
+-				 struct drm_display_mode *mode)
++				 const struct drm_display_mode *mode)
  {
- 	if (mode->clock > 297000)
-@@ -43,7 +43,7 @@ sun8i_dw_hdmi_mode_valid_a83t(struct dw_hdmi *hdmi, void *data,
- 
- static enum drm_mode_status
- sun8i_dw_hdmi_mode_valid_h6(struct dw_hdmi *hdmi, void *data,
--			    struct drm_connector *connector,
-+			    const struct drm_display_info *info,
- 			    const struct drm_display_mode *mode)
- {
- 	/*
-diff --git a/drivers/gpu/drm/sun4i/sun8i_dw_hdmi.h b/drivers/gpu/drm/sun4i/sun8i_dw_hdmi.h
-index 8587b8d2590e..d983746fa194 100644
---- a/drivers/gpu/drm/sun4i/sun8i_dw_hdmi.h
-+++ b/drivers/gpu/drm/sun4i/sun8i_dw_hdmi.h
-@@ -177,7 +177,7 @@ struct sun8i_hdmi_phy {
- 
- struct sun8i_dw_hdmi_quirks {
- 	enum drm_mode_status (*mode_valid)(struct dw_hdmi *hdmi, void *data,
--					   struct drm_connector *connector,
-+					   const struct drm_display_info *info,
- 					   const struct drm_display_mode *mode);
- 	unsigned int set_rate : 1;
- 	unsigned int use_drm_infoframe : 1;
+ 	struct sun8i_hdmi_phy *phy = (struct sun8i_hdmi_phy *)data;
+ 	u32 val = 0;
 diff --git a/include/drm/bridge/dw_hdmi.h b/include/drm/bridge/dw_hdmi.h
-index 5dfa9d83e2d3..fec293b21c2e 100644
+index fec293b21c2e..f930d218cc6b 100644
 --- a/include/drm/bridge/dw_hdmi.h
 +++ b/include/drm/bridge/dw_hdmi.h
-@@ -8,7 +8,7 @@
+@@ -114,7 +114,7 @@ struct dw_hdmi_phy_config {
  
- #include <sound/hdmi-codec.h>
- 
--struct drm_connector;
-+struct drm_display_info;
- struct drm_display_mode;
- struct drm_encoder;
- struct dw_hdmi;
-@@ -137,7 +137,7 @@ struct dw_hdmi_plat_data {
- 
- 	/* Platform-specific mode validation (optional). */
- 	enum drm_mode_status (*mode_valid)(struct dw_hdmi *hdmi, void *data,
--					   struct drm_connector *connector,
-+					   const struct drm_display_info *info,
- 					   const struct drm_display_mode *mode);
- 
- 	/* Vendor PHY support */
+ struct dw_hdmi_phy_ops {
+ 	int (*init)(struct dw_hdmi *hdmi, void *data,
+-		    struct drm_display_mode *mode);
++		    const struct drm_display_mode *mode);
+ 	void (*disable)(struct dw_hdmi *hdmi, void *data);
+ 	enum drm_connector_status (*read_hpd)(struct dw_hdmi *hdmi, void *data);
+ 	void (*update_hpd)(struct dw_hdmi *hdmi, void *data,
 -- 
 Regards,
 
