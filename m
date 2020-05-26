@@ -2,143 +2,92 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C63561E21EC
-	for <lists+linux-amlogic@lfdr.de>; Tue, 26 May 2020 14:32:52 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 0E2491E3000
+	for <lists+linux-amlogic@lfdr.de>; Tue, 26 May 2020 22:30:22 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=HmRUhn+PM323YCDwbjm0iAKXn/8jXA/yXgoumbd7q0A=; b=nvDFKFl6ZRg9Iq
-	lxj8i73PFY7kgSBpQe9WWdsaMFTz9rul6JoroFGZMknQjezBdtmDkwBejOSI5UCaRMpimnNffdsjQ
-	oIUgsvGIrk46OPWKDAYZbkdzulHSDyyABUzXA+/a5/BFBsfKOAyRidorTjHNSCSCzDdYANZSdnP29
-	QUcarU+xuXU0ce6PuRK6SrQAqNhAYmo/CiuMuv656oAMwkW82FduXwq7HwwFQZmSfSUwisdh9moyC
-	takUv8v5IyDzK8ME9Cj6bsxVrVRscONwkiMQFS9SOpJRfGzQtOcFD496S+/9N0lmKKDxVqT6VA3/7
-	ELitIF2ru8bw0L2Uwp4w==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=P7fhZj5P0td1TfIg4gLKKywjShbBA4Yq5jSDAEVDwP4=; b=KhmH98T/NW72OH
+	i6SGNsJw96uhBeMDC3R8+8vKCWF75kwNv1EfPB0Y0AqTUiATEud1gnUBk/gSlGBAikDClNTpPN0GX
+	1wFmL1A4RO0VPvuA6wnX/n+lwFeyKFHNP933nyOaqnCehw/WGAUePRWvbxO+1HfPo0COf/qcDT3Sl
+	h4piYSLQ15Euad3fNfGS7/3Tzj7uF9BhENZYQ8cpgvEwfekYd0ZS0hxcMJf/m9/oWLfX4L39ilETA
+	tWfW7IKX7+0gt8PpFpSpcpAFyrFMBsepWNkEG4jNFks8cOjo5m0tG2eYBUDxiG6sgjU5yA9DAOXPN
+	RQQUwAkk6YTECNpROM8Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jdYlF-0002ZQ-HC; Tue, 26 May 2020 12:32:49 +0000
-Received: from mail-wm1-x344.google.com ([2a00:1450:4864:20::344])
+	id 1jdgDK-0007V0-EZ; Tue, 26 May 2020 20:30:18 +0000
+Received: from mail-ej1-x643.google.com ([2a00:1450:4864:20::643])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jdYlB-0002Yv-1s
- for linux-amlogic@lists.infradead.org; Tue, 26 May 2020 12:32:47 +0000
-Received: by mail-wm1-x344.google.com with SMTP id u12so3032786wmd.3
- for <linux-amlogic@lists.infradead.org>; Tue, 26 May 2020 05:32:41 -0700 (PDT)
+ id 1jdgDE-0006TJ-UR; Tue, 26 May 2020 20:30:14 +0000
+Received: by mail-ej1-x643.google.com with SMTP id h21so25267730ejq.5;
+ Tue, 26 May 2020 13:30:08 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=baylibre-com.20150623.gappssmtp.com; s=20150623;
- h=subject:to:cc:references:from:autocrypt:organization:message-id
- :date:user-agent:mime-version:in-reply-to:content-language
+ d=googlemail.com; s=20161025;
+ h=from:to:cc:subject:date:message-id:mime-version
  :content-transfer-encoding;
- bh=LbsXZlSJ6mM5YuG/Buamk1h7fSSiXTc8VSuG+rzaVVM=;
- b=NeWFwHZARMp6IWl1uL16S4jUhaLeXaJEr+BttgJXRl4aqbWWz1UuWiMj9kwRvwC9eV
- dyFNFEG9CJ9G1a8TpwwvV3RnzxMOB8YBRExNstaqtxXA2rEyiI+A3pp8B3ElUYPoMCEs
- 2R1O4i/p2UEMI/i2iCjUTvJQbYh1yhxB99omUzzhQhfNk/PCQZpEEgK5sJgYFEFrs5SC
- GyTy0iZcP7C9H2dE/hVbOpxVazVlnbMiUtAzF1/rZFtLS+8IO8VK8Q/H1VlCVSTM3Hw+
- q1gvASeK6HOPdEvJ8fWuqGRlUQjzWfwSps+9ipSmiS/bUgN8SMsIr/lXONHHHwj88klt
- Kdhw==
+ bh=BS3gmgrNZrm2hux2kw4Gbzw+57Hl3YkxBqJ2R++uXCI=;
+ b=r4XgU/IHeIoBI5OZ3olD5EbIcyRjAdqgO/+YRdPtOaCBv4j6Gxd2LwK5NJDWEcB9K6
+ vRJ9Eupq+UblOGSrPMH9XyH60cEtJegWSpZE0bcGRFfIU4sIWX/aIW7ZilHW+aahd81Q
+ N7C7FGEp7o8RzXe01Lj372FSwt6O7bpBFkItV1AB/o7VN5NHQMfKDId1oKpnxNLO5Qbd
+ whV5DLqWTuhIbjDiN9HkKYDqxghk3V4w+q6G2r9Oz6exuMv5njdsDraYR6EilKiL7m1G
+ /lN49juqSg8mij/VsmISVxlaHeonpyhTUGc9LLFuKUplPBC+WVsGVbzXXdbZA2d+cpba
+ j9FA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:subject:to:cc:references:from:autocrypt
- :organization:message-id:date:user-agent:mime-version:in-reply-to
- :content-language:content-transfer-encoding;
- bh=LbsXZlSJ6mM5YuG/Buamk1h7fSSiXTc8VSuG+rzaVVM=;
- b=c1wq7jFog2U1pnFMM2qhL1JjNDmBufZb4LTIqA8EiJk2mM/tK7lttpIosVsXAfyzs1
- TWA3p+EmhM8qfi2WUYXD+cxm45zAn2yUY6/kU2XET8SEJrn6drs6BwCF7yQUqKEhFRPs
- 5Iwr+hS6pWeR6J1CNVfNAHpfox0in4LbhkoffiOuYQu+xM/OnLl2YeK75sI58hFI+ExB
- m5uMS1vUfu3qeK7L7aMjavVkYYoKNQ0VYWIGfXorN5ADU9vmFnm3XLZ3l+zCQ0qWVGT6
- hktaKLzzbQV4CQE9NxrZrILD+mzmC6LC+2/q3bjos+dMjBsgFyd3FbkPl+hLxKfbWaM4
- M9gw==
-X-Gm-Message-State: AOAM530/8g5tYAIZLu5YLDv07bey3dInNfeguKwTj+n9Pkz301E+S4Wt
- A4h5w+x6AFx9SrmCY+vMQEbcF111ibTkQQ==
-X-Google-Smtp-Source: ABdhPJzczdS2K1qtXO9fpwHdLXNiwkWPJbooUA5vQn+T2ijPeHFHzDWnBUiNbg0hCDFbD8sk3CcWpA==
-X-Received: by 2002:a1c:6042:: with SMTP id u63mr1178660wmb.65.1590496359644; 
- Tue, 26 May 2020 05:32:39 -0700 (PDT)
-Received: from ?IPv6:2a01:e35:2ec0:82b0:acf8:18a8:b3a5:a17b?
- ([2a01:e35:2ec0:82b0:acf8:18a8:b3a5:a17b])
- by smtp.gmail.com with ESMTPSA id 94sm22284340wrf.74.2020.05.26.05.32.38
- (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Tue, 26 May 2020 05:32:39 -0700 (PDT)
-Subject: Re: [PATCH 14/27] drm: meson: dw-hdmi: Use dw_hdmi context to replace
- hack
-To: Laurent Pinchart <laurent.pinchart+renesas@ideasonboard.com>,
- dri-devel@lists.freedesktop.org
-References: <20200526011505.31884-1-laurent.pinchart+renesas@ideasonboard.com>
- <20200526011505.31884-15-laurent.pinchart+renesas@ideasonboard.com>
-From: Neil Armstrong <narmstrong@baylibre.com>
-Autocrypt: addr=narmstrong@baylibre.com; prefer-encrypt=mutual; keydata=
- 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
- BSwxi7g3Mu7u5kUByanqHyA=
-Organization: Baylibre
-Message-ID: <16f998ea-6666-c2ca-56f9-dfde14bb8769@baylibre.com>
-Date: Tue, 26 May 2020 14:32:37 +0200
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101
- Thunderbird/68.7.0
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=BS3gmgrNZrm2hux2kw4Gbzw+57Hl3YkxBqJ2R++uXCI=;
+ b=D8LgVDMdhMthpDBrte1+JRN5ShjtGwPD2powEFBAsaq5fg3GbmSFDoJisqXJoc4nzI
+ +V22zSGgwe8G53GfuNQPB1KT/0hX/xfzdhBdjf/EDi8CCTZ5DpRn+5lqA9UpBbwTW9PN
+ l03t07t8rN6FwPp5vDEBfUdCOq1b9A5BIQS07jYTsXsvUX0nxcCWEfs7hndDt8gKQiHs
+ 8w3UQGXgDjVtm2Mo4GlQtiJLYNNnxJEhnn9iHiZsRWskdQOCI8RYjYb9uLK4uqPZTsIZ
+ U0MNEhETogjCvzngVlDExlK3DqEJ/pnJ20HaVR/qzPLxjJrA+bnwE/g5smYzEM1FRW1d
+ 40vA==
+X-Gm-Message-State: AOAM532gpHlQYqrcbnMU7tTH2tLGS3XWFGfPrDidpjrtW+Je3T9HMSf4
+ U9tULveQasQQkf4FPi7KfOM=
+X-Google-Smtp-Source: ABdhPJwesYpdqbXffVEfuArKTeB8fbq82Mn88IJ+AIOM3WfF0QObdfPu/3ksWvttav2D8RnkKlaSfQ==
+X-Received: by 2002:a17:906:1f09:: with SMTP id
+ w9mr2655211ejj.486.1590525007118; 
+ Tue, 26 May 2020 13:30:07 -0700 (PDT)
+Received: from localhost.localdomain
+ (p200300f137189200428d5cfffeb99db8.dip0.t-ipconnect.de.
+ [2003:f1:3718:9200:428d:5cff:feb9:9db8])
+ by smtp.googlemail.com with ESMTPSA id ce16sm735517ejb.76.2020.05.26.13.30.05
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Tue, 26 May 2020 13:30:06 -0700 (PDT)
+From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+To: balbi@kernel.org, gregkh@linuxfoundation.org, linux-usb@vger.kernel.org,
+ linux-amlogic@lists.infradead.org, narmstrong@baylibre.com
+Subject: [PATCH for-5.8 0/2] dwc3: meson-g12a: two fixes for v5.8
+Date: Tue, 26 May 2020 22:29:41 +0200
+Message-Id: <20200526202943.715220-1-martin.blumenstingl@googlemail.com>
+X-Mailer: git-send-email 2.26.2
 MIME-Version: 1.0
-In-Reply-To: <20200526011505.31884-15-laurent.pinchart+renesas@ideasonboard.com>
-Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200526_053245_147434_59A5F145 
-X-CRM114-Status: GOOD (  17.35  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20200526_133013_001049_0D0AF628 
+X-CRM114-Status: GOOD (  10.32  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:344 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:643 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider [martin.blumenstingl[at]googlemail.com]
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -150,60 +99,40 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: Jernej Skrabec <jernej.skrabec@siol.net>, Jonas Karlman <jonas@kwiboo.se>,
- Kieran Bingham <kieran.bingham@ideasonboard.com>,
- linux-renesas-soc@vger.kernel.org, Andrzej Hajda <a.hajda@samsung.com>,
- linux-amlogic@lists.infradead.org, Sam Ravnborg <sam@ravnborg.org>
+Cc: Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
+ hanjie.lin@amlogic.com, linux-kernel@vger.kernel.org,
+ linux-arm-kernel@lists.infradead.org, yue.wang@amlogic.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On 26/05/2020 03:14, Laurent Pinchart wrote:
-> The meson-dw-hdmi driver needs to access its own context from the
-> .mode_valid() operation. It currently gets it from the dev_private field
-> of the drm_device retrieved from the connector, which is a hack. Use the
-> private data passed to the .mode_valid() operation instead.
-> 
-> Signed-off-by: Laurent Pinchart <laurent.pinchart+renesas@ideasonboard.com>
-> ---
->  drivers/gpu/drm/meson/meson_dw_hdmi.c | 6 ++++--
->  1 file changed, 4 insertions(+), 2 deletions(-)
-> 
-> diff --git a/drivers/gpu/drm/meson/meson_dw_hdmi.c b/drivers/gpu/drm/meson/meson_dw_hdmi.c
-> index 5cc311c1b8e0..34ba94922605 100644
-> --- a/drivers/gpu/drm/meson/meson_dw_hdmi.c
-> +++ b/drivers/gpu/drm/meson/meson_dw_hdmi.c
-> @@ -634,7 +634,8 @@ dw_hdmi_mode_valid(struct dw_hdmi *hdmi, void *data,
->  		   struct drm_connector *connector,
->  		   const struct drm_display_mode *mode)
->  {
-> -	struct meson_drm *priv = connector->dev->dev_private;
-> +	struct meson_dw_hdmi *dw_hdmi = data;
-> +	struct meson_drm *priv = dw_hdmi->priv;
->  	bool is_hdmi2_sink = connector->display_info.hdmi.scdc.supported;
->  	unsigned int phy_freq;
->  	unsigned int vclk_freq;
-> @@ -693,7 +694,7 @@ dw_hdmi_mode_valid(struct dw_hdmi *hdmi, void *data,
->  	if (mode->flags & DRM_MODE_FLAG_DBLCLK)
->  		venc_freq /= 2;
->  
-> -	dev_dbg(connector->dev->dev, "%s: vclk:%d phy=%d venc=%d hdmi=%d\n",
-> +	dev_dbg(dw_hdmi->dev, "%s: vclk:%d phy=%d venc=%d hdmi=%d\n",
->  		__func__, phy_freq, vclk_freq, venc_freq, hdmi_freq);
->  
->  	return meson_vclk_vic_supported_freq(priv, phy_freq, vclk_freq);
-> @@ -1068,6 +1069,7 @@ static int meson_dw_hdmi_bind(struct device *dev, struct device *master,
->  
->  	/* Bridge / Connector */
->  
-> +	dw_plat_data->priv_data = meson_dw_hdmi;
->  	dw_plat_data->mode_valid = dw_hdmi_mode_valid;
->  	dw_plat_data->phy_ops = &meson_dw_hdmi_phy_ops;
->  	dw_plat_data->phy_name = "meson_dw_hdmi_phy";
-> 
+I discovered the problem addressed by the first patch while I was
+investigating a Kernel CI regression: [0]
+It is unrelated to that regression but should still be fixed.
 
-Reviewed-by: Neil Armstrong <narmstrong@baylibre.com>
+The second patch adresses the actual regression. Testing was focussed
+on GXL and GXM for the previous patches. Unfortunately one of them
+regresses USB on G12A, G12B, SM1 and A1 SoCs.
+
+Please queue these for v5.8 so we don't end up with broken USB on
+some boards.
+
+
+[0] https://lore.kernel.org/linux-usb/ffe2c64c-62ed-9b59-3754-7ede0f0203be@collabora.com/T/#u
+
+
+Martin Blumenstingl (2):
+  usb: dwc3: meson-g12a: fix error path when fetching the reset line
+    fails
+  usb: dwc3: meson-g12a: fix USB2 PHY initialization on G12A and A1 SoCs
+
+ drivers/usb/dwc3/dwc3-meson-g12a.c | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+-- 
+2.26.2
+
 
 _______________________________________________
 linux-amlogic mailing list
