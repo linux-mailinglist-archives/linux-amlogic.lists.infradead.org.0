@@ -2,54 +2,54 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D16A81F2670
-	for <lists+linux-amlogic@lfdr.de>; Tue,  9 Jun 2020 01:41:16 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 82CCC1F27AF
+	for <lists+linux-amlogic@lfdr.de>; Tue,  9 Jun 2020 01:48:50 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=KB+UZfPuga1cGbRrQRG8tw2djFwMclWwWd6XBHjKyLs=; b=K8OAtrIvkEAEvL
-	AYwfADvKsKIc0I59Qq19BsN85oHUBicGaxy4b98yDhcbF/XP7NF0zP3QetMZ/q3wUAR/x9WupAr6g
-	pj5rwslaCeo+2dKsnwIgtjTMkQQb2lsbNOB7LYbCa121evER92aX1SAtJe+2psegGgohEpMm5Ep1C
-	xiCUzpojdWcrtwyfzM8YqnA9NQjx21QcC7eQGAMHpkil1cLOXetRP+F3V8g/svhkNdtIHLFqimlOC
-	lO6e4fJjwCUZNmWWNLUhQu6ykUtoeBChprUD5TAxEkAa1kGzG5NEZPILy1rAHwN0iEXffJyTZYsyD
-	LDK7F5aJzVDEWRPdNtiA==;
+	List-Owner; bh=cdDE6BKv94umK7kOy1QT5ShMm0JGaGxObo7d7GoCYmU=; b=sytqX1HhaKZdp2
+	8n/cm7jeH//7QDy3CzCySpTYsVZ9gj/AV6ioU3eEADI65KNsnbOuFj70pP7lVYApJuTKx7afZgWWe
+	8dNo66NwCY2WW/3nI4htEuKF12OJy3WeCHDi2lKvbS5czFRDGI/VXWm+dBvKapwKRB/hwkJPJlk4g
+	/TbPDqtcFWOsO0BWuEiwfP8Js7KYYKgiQBJUZtW2GJ1SJcdXRzBGwLyZ2t8iFtHvXqdY1a0f2sXdm
+	e2FpDrsdzjqLm+Xb8Y1lZrSa2Ib32DXZ3mbtJXUE8oy2VzRDk58gSCuY35votMlGMyvcN3uyXHlj2
+	wg1boeWNdJ7jRhDm8roA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jiRO4-00036m-5f; Mon, 08 Jun 2020 23:41:04 +0000
+	id 1jiRVM-0003sX-Uo; Mon, 08 Jun 2020 23:48:36 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jiR3e-0006Hm-MD; Mon, 08 Jun 2020 23:20:02 +0000
+ id 1jiR6n-0002Y5-Ug; Mon, 08 Jun 2020 23:23:16 +0000
 Received: from sasha-vm.mshome.net (c-73-47-72-35.hsd1.nh.comcast.net
  [73.47.72.35])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 4FE3120870;
- Mon,  8 Jun 2020 23:19:57 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id 011672086A;
+ Mon,  8 Jun 2020 23:23:11 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1591658398;
- bh=7vHlbNH5y8voS2cDM4bKwMfkLZfQfTj4TTeCBy55ia8=;
+ s=default; t=1591658592;
+ bh=jYmhetrVkNgZTNo37SbeiWGjdac6A+k42aQczdxV2LA=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=E3XvqYrlHzxxgFx7bhYxb56zfsaI9UPrlC3C+ypYIrGorp6jKSq7vI5HvbmESI2cv
- SObygjJHSlDYP8dMmag5rL1E8ehUNnZu/Bshd/VQSn5SdFYU9uJex2BiwTwOxf6P4+
- KSk3A47XdSwo1UGWmhqBBNzQakgO/N1RGwfWpp0o=
+ b=0uVi0YoBaICQEV3bJq6ljwtnIoJJJBQNH9ElzS7exHaM+6izANrsQQdPZuAYcavKW
+ ceF48tZnlvA7G14p2td8m7+zoMNnXTnijBlOmcuYY2d/Sjg30fF/tEVkCXsmwAnQqQ
+ QHQFKYw6Sae7BEkSXgqyH0mmNZ7uvQ1VHnMgUA7c=
 From: Sasha Levin <sashal@kernel.org>
 To: linux-kernel@vger.kernel.org,
 	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 5.4 054/175] mmc: meson-mx-sdio: trigger a soft reset
+Subject: [PATCH AUTOSEL 4.19 026/106] mmc: meson-mx-sdio: trigger a soft reset
  after a timeout or CRC error
-Date: Mon,  8 Jun 2020 19:16:47 -0400
-Message-Id: <20200608231848.3366970-54-sashal@kernel.org>
+Date: Mon,  8 Jun 2020 19:21:18 -0400
+Message-Id: <20200608232238.3368589-26-sashal@kernel.org>
 X-Mailer: git-send-email 2.25.1
-In-Reply-To: <20200608231848.3366970-1-sashal@kernel.org>
-References: <20200608231848.3366970-1-sashal@kernel.org>
+In-Reply-To: <20200608232238.3368589-1-sashal@kernel.org>
+References: <20200608232238.3368589-1-sashal@kernel.org>
 MIME-Version: 1.0
 X-stable: review
 X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200608_161959_421575_38FB1138 
+X-CRM114-CacheID: sfid-20200608_162314_048861_24BD5372 
 X-CRM114-Status: GOOD (  13.17  )
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
@@ -147,10 +147,10 @@ Signed-off-by: Sasha Levin <sashal@kernel.org>
  1 file changed, 3 insertions(+)
 
 diff --git a/drivers/mmc/host/meson-mx-sdio.c b/drivers/mmc/host/meson-mx-sdio.c
-index 999214e8cf2b..360d523132bd 100644
+index 1c062473b1c2..27837a794e7b 100644
 --- a/drivers/mmc/host/meson-mx-sdio.c
 +++ b/drivers/mmc/host/meson-mx-sdio.c
-@@ -246,6 +246,9 @@ static void meson_mx_mmc_request_done(struct meson_mx_mmc_host *host)
+@@ -249,6 +249,9 @@ static void meson_mx_mmc_request_done(struct meson_mx_mmc_host *host)
  
  	mrq = host->mrq;
  
