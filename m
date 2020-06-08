@@ -2,52 +2,52 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D4E8E1F17F9
-	for <lists+linux-amlogic@lfdr.de>; Mon,  8 Jun 2020 13:41:07 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 12D371F1854
+	for <lists+linux-amlogic@lfdr.de>; Mon,  8 Jun 2020 13:57:46 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:Cc:
 	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
 	In-Reply-To:MIME-Version:References:Message-ID:Subject:To:From:Date:Reply-To:
 	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
 	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=YPyOE4g6+ibaZl1PWz5hNkgRTdwkHabBTstvHijq13M=; b=sQjldu1aUWuXhxUzF9+2dh6Oi
-	rtMLRwae8q/cdVT+HTMOfzFeRUFTJrORrc3tid5Zpyy+AshqvXZ7SPGUKHS4mK/P0vDkUMh4zs7uj
-	nSNZZi0WcwPUtbotg0yWtWd0ba1upIMRniVhGxS9TUqGrASZg5exh7mWLVsk++y+qkzyxNeW+ie5C
-	FzQLO2j3SPFr9MySGkxjy9g/5AszFrVZXoVb7YmBK8OaPhEfFLpPCG/i0m607ZRvoC5udksDaEc8w
-	cdKdAwlh2PSwo8MtDAmM5eM3EG1R/LfZJ8p1TWIH8pyjIF2Fm+6PQ/xBsX2GnfB0rmXnIGXXE8uEp
-	2bsKXtJ0A==;
+	 bh=KrFCRityz8meoS3ixVZuthXFMT3TwfPVaomLoA/fuHg=; b=e1o56ERKc4RWcsNT630vZ+NPh
+	7IaSp6y71Qs3IotJANKCwMZviACFjJ3dUiXV1PlEpnr47uqFNAaL7V6ux/pFyyjtNE6OruwCogYA4
+	/0cnRJ1S7KKUs4WOV+PI7x9+fh7obW3fSl6+q1yRvFT/ZZsrz1fEitSQcAIwccAXT4CMuZWZ31K2L
+	O5goIZatENjDtiQ1gaYzHoWyRytqlTYRrT1u2DvlTlPmyGy2m5bwt+4r9mcwNqyhcWRBAw/nYYQ3Y
+	Py50qG9Vbe6rl9NyYngpO5DahDj63TOjLzSsgjkANwbVz89wTEKXOKivFFiuyRhYUsrRVwXMfqChJ
+	Estxlw+4Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jiG9A-0005UN-4c; Mon, 08 Jun 2020 11:40:56 +0000
+	id 1jiGPF-0006gP-Pf; Mon, 08 Jun 2020 11:57:33 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jiG97-0005Tw-4y
- for linux-amlogic@lists.infradead.org; Mon, 08 Jun 2020 11:40:54 +0000
+ id 1jiGPD-0006g1-22
+ for linux-amlogic@lists.infradead.org; Mon, 08 Jun 2020 11:57:32 +0000
 Received: from localhost (fw-tnat.cambridge.arm.com [217.140.96.140])
  (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 57A152074B;
- Mon,  8 Jun 2020 11:40:52 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id 2E2632072F;
+ Mon,  8 Jun 2020 11:57:30 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1591616452;
- bh=x4taCFMl1JSd2Q5eNsTgPag9K1UCnAlZgI2Ug8F0LTc=;
+ s=default; t=1591617450;
+ bh=nAtsiXTcR+OAIznew/hWTw3IpqmB5O6uM3hw6iSU2Fo=;
  h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
- b=rIRuyu7HoF2N+aUEjIce4hAevgRqJwI+BsLOC3XtBOVLmgs9MWQKZAT5QGmDr5GKf
- fu7pg5IOce3RteJB6v7iXvzw0IRjCT8RWz4XrueqXh2wC5nzznCETcsHW8GeosgrBS
- MxsLKGoQ6TbwarH19XC95Pu9353pbL+po/cfNqx0=
-Date: Mon, 8 Jun 2020 12:40:50 +0100
+ b=TsEbl3mitixyjIOjM1w4hUKYXomkdL5t+OU2sRkL262ye+9PR8XJjj0hkwTzmqgn+
+ Vr54CwuaIDyBn0Dpkgi88bsn/Wuo22C1848vdbbCcvzqaf4q4xDP/eAarZWeOnzyZ9
+ L8VOzwy/UDGDFapO3M6kRTPBLJDvOphztk1rlTZ0=
+Date: Mon, 8 Jun 2020 12:57:28 +0100
 From: Mark Brown <broonie@kernel.org>
 To: Pavel Machek <pavel@ucw.cz>
 Subject: Re: [PATCH] soc/meson: add missing free_irq() in error path
-Message-ID: <20200608114050.GD4593@sirena.org.uk>
+Message-ID: <20200608115728.GF4593@sirena.org.uk>
 References: <20200606153103.GA17905@amd>
 MIME-Version: 1.0
 In-Reply-To: <20200606153103.GA17905@amd>
 X-Cookie: I'm rated PG-34!!
 User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200608_044053_213460_25A303DE 
-X-CRM114-Status: UNSURE (   8.17  )
+X-CRM114-CacheID: sfid-20200608_045731_116702_CC818ECD 
+X-CRM114-Status: UNSURE (   8.01  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
@@ -81,49 +81,52 @@ Cc: alsa-devel@alsa-project.org, trivial@kernel.org, lgirdwood@gmail.com,
  khilman@baylibre.com, tiwai@suse.com, perex@perex.cz,
  linux-amlogic@lists.infradead.org, linux-kernel@vger.kernel.org,
  jbrunet@baylibre.com
-Content-Type: multipart/mixed; boundary="===============3183550986303555235=="
+Content-Type: multipart/mixed; boundary="===============5348624445011427304=="
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
 
---===============3183550986303555235==
+--===============5348624445011427304==
 Content-Type: multipart/signed; micalg=pgp-sha512;
-	protocol="application/pgp-signature"; boundary="g7w8+K/95kPelPD2"
+	protocol="application/pgp-signature"; boundary="TeJTyD9hb8KJN2Jy"
 Content-Disposition: inline
 
 
---g7w8+K/95kPelPD2
+--TeJTyD9hb8KJN2Jy
 Content-Type: text/plain; charset=us-ascii
 Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
 
 On Sat, Jun 06, 2020 at 05:31:03PM +0200, Pavel Machek wrote:
 > free_irq() is missing in case of error, fix that.
+>=20
+> Signed-off-by: Pavel Machek (CIP) <pavel@denx.de>
+>=20
+> diff --git a/sound/soc/meson/axg-fifo.c b/sound/soc/meson/axg-fifo.c
 
-Please submit patches using subject lines reflecting the style for the
-subsystem, this makes it easier for people to identify relevant patches.
-Look at what existing commits in the area you're changing are doing and
-make sure your subject lines visually resemble what they're doing.
-There's no need to resubmit to fix this alone.
+In addition to the subject line issue your Signed-off-by does not match
+the From: in the e-mail and there's no From: in the body, please
+resubmit with these issues fixed.
 
---g7w8+K/95kPelPD2
+--TeJTyD9hb8KJN2Jy
 Content-Type: application/pgp-signature; name="signature.asc"
 
 -----BEGIN PGP SIGNATURE-----
 
-iQEzBAABCgAdFiEEreZoqmdXGLWf4p/qJNaLcl1Uh9AFAl7eI8EACgkQJNaLcl1U
-h9D2oAf+L+75A6sm74wpOyUZsv7DPH8rJApbMWamWaaL7Zq0ZrwKsFecGUq4jP37
-FvyBa8xpKWuEbPQuvtG8XwFUMjy/VBn0FgKhjbetB7+sUrQg+erx4XzY81Nq5VcG
-Ov+61cWUPIKpY8Ysnj+xH1W+b5nY5EOsBfFvjNNsE3g1JadihgZrcAGdOBK3cy/7
-aS/RStZcQedRmxpIIQvKhwr4j0Am1X8D2lPjFqs7hVl+g9I3t1bvKYdW/Y679FBz
-HgwoXfEOkrODZtQsuMLGAqYRbyGjYKzAesmp892xPWqM07MchsB5JaMl4I81bwkO
-WndnmsoTH4bOw+HPhgwcIRVT/FOqtQ==
-=yNKv
+iQEzBAABCgAdFiEEreZoqmdXGLWf4p/qJNaLcl1Uh9AFAl7eJ6cACgkQJNaLcl1U
+h9D/cQf+L7dper1ZvO7kYwre40pI8oRGB48niTj/ZkjOhATMnrDe60Nd5z4m792w
+YoAXr9IELC+RF9XqtLINNvFb90CrXIkpG947Gmz7HRAG/6RHgomLQDhpx0nvu3b3
+9CNRkiAx/cFTyI06laUaxVbUMVfqTZ1t6TQl5/Zj6ZBGqTkpRfF/D+z837DdhcAU
+DR3pZxR+d3K79tFmzhMbp1LoCCXnTYHW8jUMxZNe6X2sumd/WkinCAZZV/JyS+k1
+WTwS8Zumd/FdDu6p2ukRbQmo9jPw1t/vBCUm3l2il9Rlm0NgqkPigCZi3xNWUEBc
+rdhd4zkQxoQqUzquhAnsdDcXwm3zwA==
+=TJnD
 -----END PGP SIGNATURE-----
 
---g7w8+K/95kPelPD2--
+--TeJTyD9hb8KJN2Jy--
 
 
---===============3183550986303555235==
+--===============5348624445011427304==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -134,5 +137,5 @@ linux-amlogic mailing list
 linux-amlogic@lists.infradead.org
 http://lists.infradead.org/mailman/listinfo/linux-amlogic
 
---===============3183550986303555235==--
+--===============5348624445011427304==--
 
