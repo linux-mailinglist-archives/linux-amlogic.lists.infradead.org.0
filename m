@@ -2,76 +2,59 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4F9531FA5F3
-	for <lists+linux-amlogic@lfdr.de>; Tue, 16 Jun 2020 03:58:36 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 01F431FA6FB
+	for <lists+linux-amlogic@lfdr.de>; Tue, 16 Jun 2020 05:30:44 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:References:
-	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
-	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
-	:Resent-Message-ID:List-Owner;
-	bh=UOG7GDbT+O3GKThmXig8Xe3BhCoMqDCPBOileJ+qi/w=; b=BoS51HpPhRK/P0SfCE++8em0yw
-	q9vnjjaKC/jcaeBmRjx7JIv8KDvvprFAVYXtdhh0qA2gymueMprGgmqmpCTweGvtyhmhJeaRFT2Ua
-	5+FN61TRx7dhWV1Ee5ylH7DaSpjqP3+l2jc4+Z2nVpLXiFW4AuTtxAa1n8vpF75eb+TDUho+n3X00
-	KfJ2P8LIMDRVWH+d0AAwfALVXs4f0cztOIdH2/vrn5r1T0kktN4VYv5KiDL19YHQmOWwV7WsLdoTb
-	vGu78ZdLjJCg6npAktj1qlU2e83VGrJqVlSe/nWuCjeypGpPfM6jF54ecl1UhP3asNZ4BUjFddGq2
-	Zn1+QahQ==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=OdI6bl8V62mpROIVdnGwzqm3Hv/PC2juWvyOqWb8+Fg=; b=Ef2bf815Ej+pMB
+	uYJkEYGsGILqn9yi3ZnXebnquFAr0mpVkbukCq4WVXSeRlvq9VbkpZ78CvBhTD5xvRwnKE4jhB3EN
+	9VOWWTjjLNrt/7ivVifJ7vcNw2srlFD95Mehwg8iuqq3On4V0N5nO9vsOF2ihbSILm10zfqJRDddz
+	c0lBQgr0M7Z4L9JIe2V4+pIuJupFDtMC/Q53DEHe9ByAa9P7ekP2g6JUmGx9ipidUSxFR6Tv1ft03
+	AlBYIURRbCaS38+naE2WfqQFzFXO6m2XIiAG5p9nTb+AJqqdFfIzUgEZ7AL2Kamb6n1OsgNMyJRja
+	h86Z9gOnUVqvsq2LaZdw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jl0ry-00040Y-QH; Tue, 16 Jun 2020 01:58:34 +0000
-Received: from us-smtp-delivery-1.mimecast.com ([207.211.31.120]
- helo=us-smtp-1.mimecast.com)
+	id 1jl2J7-0000Jy-7y; Tue, 16 Jun 2020 03:30:41 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jl0ru-0003wY-LW
- for linux-amlogic@lists.infradead.org; Tue, 16 Jun 2020 01:58:32 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
- s=mimecast20190719; t=1592272709;
- h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
- to:to:cc:cc:in-reply-to:in-reply-to:references:references;
- bh=zNT9QNZqNhCOtvB39Ne/de/mYb4LuwliJqmp3BjLDNM=;
- b=R5yH8ndeuvLHimZDFy/GhWGQd6Et33PqzKecC9HwJEj0ryd6hfl6X2wrLaLh318P47OOY4
- rvIsFRDjS3c4g8rT/YMf48/EK26an0EhKNxsfaiWN2inJN1mfP9VpR7WXRDk0WDSZUf7hs
- VscLeiezUSddIALBSKdBYslo7FlnRj4=
-Received: from mimecast-mx01.redhat.com (mimecast-mx01.redhat.com
- [209.132.183.4]) (Using TLS) by relay.mimecast.com with ESMTP id
- us-mta-275-En0zXgVSO2KfRECG05UTtA-1; Mon, 15 Jun 2020 21:58:20 -0400
-X-MC-Unique: En0zXgVSO2KfRECG05UTtA-1
-Received: from smtp.corp.redhat.com (int-mx05.intmail.prod.int.phx2.redhat.com
- [10.5.11.15])
- (using TLSv1.2 with cipher AECDH-AES256-SHA (256/256 bits))
+ id 1jl2J4-0000JR-Q8; Tue, 16 Jun 2020 03:30:40 +0000
+Received: from sol.localdomain (c-107-3-166-239.hsd1.ca.comcast.net
+ [107.3.166.239])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested)
- by mimecast-mx01.redhat.com (Postfix) with ESMTPS id 55EBE8035CF;
- Tue, 16 Jun 2020 01:58:15 +0000 (UTC)
-Received: from llong.com (ovpn-117-41.rdu2.redhat.com [10.10.117.41])
- by smtp.corp.redhat.com (Postfix) with ESMTP id B4E4F6ED96;
- Tue, 16 Jun 2020 01:58:10 +0000 (UTC)
-From: Waiman Long <longman@redhat.com>
-To: Andrew Morton <akpm@linux-foundation.org>,
- David Howells <dhowells@redhat.com>,
- Jarkko Sakkinen <jarkko.sakkinen@linux.intel.com>,
- James Morris <jmorris@namei.org>, "Serge E. Hallyn" <serge@hallyn.com>,
- Linus Torvalds <torvalds@linux-foundation.org>,
- Joe Perches <joe@perches.com>, Matthew Wilcox <willy@infradead.org>,
- David Rientjes <rientjes@google.com>
-Subject: [PATCH v4 3/3] btrfs: Use kfree() in btrfs_ioctl_get_subvol_info()
-Date: Mon, 15 Jun 2020 21:57:18 -0400
-Message-Id: <20200616015718.7812-4-longman@redhat.com>
-In-Reply-To: <20200616015718.7812-1-longman@redhat.com>
+ by mail.kernel.org (Postfix) with ESMTPSA id 9B3B8206D7;
+ Tue, 16 Jun 2020 03:30:36 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1592278237;
+ bh=cbCBV+GA89Kxk07F75+TVwUbSIVVlsmXitOPPgujt0g=;
+ h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
+ b=CI14aWxQPw24ENjaHXJfOipbxs59iBOy6w+TeEVniGvJYBqy6D1cwSzDbSE5kI4lU
+ lIYg5jNgJLjG7j91Xm1X3e+BxtmR8FfP4CJnhYPkHwCMU6wjZ6YBjNC+nYJMCpp2N5
+ Vlpy20o3OcJdDug0iUS5K1iWjVtuIX+008M01eB4=
+Date: Mon, 15 Jun 2020 20:30:35 -0700
+From: Eric Biggers <ebiggers@kernel.org>
+To: Waiman Long <longman@redhat.com>
+Subject: Re: [PATCH v4 1/3] mm/slab: Use memzero_explicit() in kzfree()
+Message-ID: <20200616033035.GB902@sol.localdomain>
 References: <20200616015718.7812-1-longman@redhat.com>
-X-Scanned-By: MIMEDefang 2.79 on 10.5.11.15
+ <20200616015718.7812-2-longman@redhat.com>
+MIME-Version: 1.0
+Content-Disposition: inline
+In-Reply-To: <20200616015718.7812-2-longman@redhat.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200615_185830_783845_98AC8B1C 
-X-CRM114-Status: GOOD (  11.14  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200615_203038_888126_29D5E211 
+X-CRM114-Status: GOOD (  17.40  )
+X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-5.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [207.211.31.120 listed in list.dnswl.org]
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [207.211.31.120 listed in wl.mailspike.net]
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
@@ -81,7 +64,6 @@ X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
  -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
@@ -95,56 +77,74 @@ List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
 Cc: "Jason A . Donenfeld" <Jason@zx2c4.com>, Michal Hocko <mhocko@suse.com>,
- linux-btrfs@vger.kernel.org, linux-kernel@vger.kernel.org, linux-mm@kvack.org,
- linux-sctp@vger.kernel.org, target-devel@vger.kernel.org,
- linux-stm32@st-md-mailman.stormreply.com, devel@driverdev.osuosl.org,
- linux-cifs@vger.kernel.org, linux-scsi@vger.kernel.org,
- kasan-dev@googlegroups.com, linux-wpan@vger.kernel.org,
- Waiman Long <longman@redhat.com>, Dan Carpenter <dan.carpenter@oracle.com>,
- linux-pm@vger.kernel.org, ecryptfs@vger.kernel.org,
- linux-fscrypt@vger.kernel.org, linux-mediatek@lists.infradead.org,
- linux-amlogic@lists.infradead.org, virtualization@lists.linux-foundation.org,
- linux-nfs@vger.kernel.org, netdev@vger.kernel.org,
- linux-wireless@vger.kernel.org, David Sterba <dsterba@suse.cz>,
- linux-bluetooth@vger.kernel.org, linux-security-module@vger.kernel.org,
- keyrings@vger.kernel.org, tipc-discussion@lists.sourceforge.net,
- linux-crypto@vger.kernel.org, Johannes Weiner <hannes@cmpxchg.org>,
- linux-integrity@vger.kernel.org, linuxppc-dev@lists.ozlabs.org,
+ linux-btrfs@vger.kernel.org, Jarkko Sakkinen <jarkko.sakkinen@linux.intel.com>,
+ David Sterba <dsterba@suse.cz>, David Howells <dhowells@redhat.com>,
+ linux-mm@kvack.org, linux-sctp@vger.kernel.org, keyrings@vger.kernel.org,
+ kasan-dev@googlegroups.com, linux-stm32@st-md-mailman.stormreply.com,
+ devel@driverdev.osuosl.org, linux-cifs@vger.kernel.org,
+ linux-scsi@vger.kernel.org, James Morris <jmorris@namei.org>,
+ Matthew Wilcox <willy@infradead.org>, linux-wpan@vger.kernel.org,
+ David Rientjes <rientjes@google.com>, Dan Carpenter <dan.carpenter@oracle.com>,
+ "Serge E. Hallyn" <serge@hallyn.com>, linux-pm@vger.kernel.org,
+ ecryptfs@vger.kernel.org, linux-fscrypt@vger.kernel.org,
+ linux-mediatek@lists.infradead.org, linux-amlogic@lists.infradead.org,
+ virtualization@lists.linux-foundation.org, linux-integrity@vger.kernel.org,
+ linux-nfs@vger.kernel.org, linuxppc-dev@lists.ozlabs.org,
+ linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
+ stable@vger.kernel.org, linux-bluetooth@vger.kernel.org,
+ linux-security-module@vger.kernel.org, target-devel@vger.kernel.org,
+ tipc-discussion@lists.sourceforge.net, linux-crypto@vger.kernel.org,
+ Johannes Weiner <hannes@cmpxchg.org>, Joe Perches <joe@perches.com>,
+ Andrew Morton <akpm@linux-foundation.org>,
+ Linus Torvalds <torvalds@linux-foundation.org>, netdev@vger.kernel.org,
  wireguard@lists.zx2c4.com, linux-ppp@vger.kernel.org
-MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-In btrfs_ioctl_get_subvol_info(), there is a classic case where kzalloc()
-was incorrectly paired with kzfree(). According to David Sterba, there
-isn't any sensitive information in the subvol_info that needs to be
-cleared before freeing. So kfree_sensitive() isn't really needed,
-use kfree() instead.
+On Mon, Jun 15, 2020 at 09:57:16PM -0400, Waiman Long wrote:
+> The kzfree() function is normally used to clear some sensitive
+> information, like encryption keys, in the buffer before freeing it back
+> to the pool. Memset() is currently used for the buffer clearing. However,
+> it is entirely possible that the compiler may choose to optimize away the
+> memory clearing especially if LTO is being used. To make sure that this
+> optimization will not happen, memzero_explicit(), which is introduced
+> in v3.18, is now used in kzfree() to do the clearing.
+> 
+> Fixes: 3ef0e5ba4673 ("slab: introduce kzfree()")
+> Cc: stable@vger.kernel.org
+> Signed-off-by: Waiman Long <longman@redhat.com>
+> ---
+>  mm/slab_common.c | 2 +-
+>  1 file changed, 1 insertion(+), 1 deletion(-)
+> 
+> diff --git a/mm/slab_common.c b/mm/slab_common.c
+> index 9e72ba224175..37d48a56431d 100644
+> --- a/mm/slab_common.c
+> +++ b/mm/slab_common.c
+> @@ -1726,7 +1726,7 @@ void kzfree(const void *p)
+>  	if (unlikely(ZERO_OR_NULL_PTR(mem)))
+>  		return;
+>  	ks = ksize(mem);
+> -	memset(mem, 0, ks);
+> +	memzero_explicit(mem, ks);
+>  	kfree(mem);
+>  }
+>  EXPORT_SYMBOL(kzfree);
 
-Reported-by: David Sterba <dsterba@suse.cz>
-Signed-off-by: Waiman Long <longman@redhat.com>
----
- fs/btrfs/ioctl.c | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+This is a good change, but the commit message isn't really accurate.  AFAIK, no
+one has found any case where this memset() gets optimized out.  And even with
+LTO, it would be virtually impossible due to all the synchronization and global
+data structures that kfree() uses.  (Remember that this isn't the C standard
+function "free()", so the compiler can't assign it any special meaning.)
+Not to mention that LTO support isn't actually upstream yet.
 
-diff --git a/fs/btrfs/ioctl.c b/fs/btrfs/ioctl.c
-index f1dd9e4271e9..e8f7c5f00894 100644
---- a/fs/btrfs/ioctl.c
-+++ b/fs/btrfs/ioctl.c
-@@ -2692,7 +2692,7 @@ static int btrfs_ioctl_get_subvol_info(struct file *file, void __user *argp)
- 	btrfs_put_root(root);
- out_free:
- 	btrfs_free_path(path);
--	kfree_sensitive(subvol_info);
-+	kfree(subvol_info);
- 	return ret;
- }
- 
--- 
-2.18.1
+I still agree with the change, but it might be helpful if the commit message
+were honest that this is really a hardening measure and about properly conveying
+the intent.  As-is this sounds like a critical fix, which might confuse people.
 
+- Eric
 
 _______________________________________________
 linux-amlogic mailing list
