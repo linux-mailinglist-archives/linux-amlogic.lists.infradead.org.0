@@ -2,69 +2,80 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 01F431FA6FB
-	for <lists+linux-amlogic@lfdr.de>; Tue, 16 Jun 2020 05:30:44 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 932251FA8F0
+	for <lists+linux-amlogic@lfdr.de>; Tue, 16 Jun 2020 08:42:20 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=OdI6bl8V62mpROIVdnGwzqm3Hv/PC2juWvyOqWb8+Fg=; b=Ef2bf815Ej+pMB
-	uYJkEYGsGILqn9yi3ZnXebnquFAr0mpVkbukCq4WVXSeRlvq9VbkpZ78CvBhTD5xvRwnKE4jhB3EN
-	9VOWWTjjLNrt/7ivVifJ7vcNw2srlFD95Mehwg8iuqq3On4V0N5nO9vsOF2ihbSILm10zfqJRDddz
-	c0lBQgr0M7Z4L9JIe2V4+pIuJupFDtMC/Q53DEHe9ByAa9P7ekP2g6JUmGx9ipidUSxFR6Tv1ft03
-	AlBYIURRbCaS38+naE2WfqQFzFXO6m2XIiAG5p9nTb+AJqqdFfIzUgEZ7AL2Kamb6n1OsgNMyJRja
-	h86Z9gOnUVqvsq2LaZdw==;
+	List-Owner; bh=R0TlmoDHhDwIw+HI2LcwFk44L8W3JTc4xJW6WMfEqfU=; b=BX5SrZlSo5gh18
+	mZx1UjgbfHv/um5+XCCjCPaFRlpS7SG3rKNNM2hZUIt91KZSKCMS5Ln+9NtAUCncKDGM+qK8MtaHS
+	poItcTu0rGBR7iGWHQRHzKSHJ5XUktYvhYE3nLCGDjfF3w/ZkA8X03ZtaNBP0ycjcioF1TUtzBgVW
+	b1y91WQ0QilXjWsNMTD4wQjYBV+uxDd2JBy0UbVT/FE/RFUkWwNUlZWZq+DesoIJ9JYeIcHX6DwBx
+	602edpd0tK7pGgTGeHWtmP+MSs079r2vOA8Bm2MsYhmNhxGnSlKMuzqXbp72F1b9of9HRkPYuj9Ly
+	q9Zc6p5zNgwE59G3scaw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jl2J7-0000Jy-7y; Tue, 16 Jun 2020 03:30:41 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1jl5IX-0003z4-9R; Tue, 16 Jun 2020 06:42:17 +0000
+Received: from mail-ej1-f65.google.com ([209.85.218.65])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jl2J4-0000JR-Q8; Tue, 16 Jun 2020 03:30:40 +0000
-Received: from sol.localdomain (c-107-3-166-239.hsd1.ca.comcast.net
- [107.3.166.239])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
- (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 9B3B8206D7;
- Tue, 16 Jun 2020 03:30:36 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1592278237;
- bh=cbCBV+GA89Kxk07F75+TVwUbSIVVlsmXitOPPgujt0g=;
- h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
- b=CI14aWxQPw24ENjaHXJfOipbxs59iBOy6w+TeEVniGvJYBqy6D1cwSzDbSE5kI4lU
- lIYg5jNgJLjG7j91Xm1X3e+BxtmR8FfP4CJnhYPkHwCMU6wjZ6YBjNC+nYJMCpp2N5
- Vlpy20o3OcJdDug0iUS5K1iWjVtuIX+008M01eB4=
-Date: Mon, 15 Jun 2020 20:30:35 -0700
-From: Eric Biggers <ebiggers@kernel.org>
+ id 1jl5IT-0003yB-Iv; Tue, 16 Jun 2020 06:42:14 +0000
+Received: by mail-ej1-f65.google.com with SMTP id f7so20254472ejq.6;
+ Mon, 15 Jun 2020 23:42:12 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:in-reply-to;
+ bh=8yT+7Ta/B3BUGUR35Fz/0p22bghMwTUAxgTnwepounI=;
+ b=ptFnoC0dl0BfDG8//MnEfV6rrCK6A6o9gVL7ZcXf+pS3z9Mk2p3HvUMqTvLepdK4GO
+ Mwq/KLeMBbW5BfV20R9GX5LZ9vkEClY1vSUsZyVo8qq3OkaviSoWTbbtAhIkEASUPT65
+ EQ+0MSaF918nbq1PcMBolF18g59wQZktMfHYQGtq97RqGQlrDOyJsiDovF986s4xwRfF
+ XtGS9w8TYYAoPGV57dzohgCbJnyylGMNuPaia9lPwd9slqwFXc9zVid0h0BrrkCbD7J2
+ zDj0V0cEcdFVQpBJliGrZxFP2B+hIMrr14nduLGTQf/G6TjdTdD0QeInTXZr4szHmWi0
+ bqGA==
+X-Gm-Message-State: AOAM53028Ch/Q4RhMmAaSCX56DoPOzTfU2omoeFUjIczTyY/ToffomMN
+ EnqARwc1g3N6vPjt/vMoER0=
+X-Google-Smtp-Source: ABdhPJwG7kr4DUIGgc4iCDEeodlEq5kx0AY8+Z/EURP92P+0Zf4E0UWpXqDGfffbUz9uBG+pBru51g==
+X-Received: by 2002:a17:906:ce2f:: with SMTP id
+ sd15mr1306745ejb.445.1592289731375; 
+ Mon, 15 Jun 2020 23:42:11 -0700 (PDT)
+Received: from localhost (ip-37-188-174-201.eurotel.cz. [37.188.174.201])
+ by smtp.gmail.com with ESMTPSA id j10sm9734428edf.97.2020.06.15.23.42.09
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Mon, 15 Jun 2020 23:42:10 -0700 (PDT)
+Date: Tue, 16 Jun 2020 08:42:08 +0200
+From: Michal Hocko <mhocko@kernel.org>
 To: Waiman Long <longman@redhat.com>
 Subject: Re: [PATCH v4 1/3] mm/slab: Use memzero_explicit() in kzfree()
-Message-ID: <20200616033035.GB902@sol.localdomain>
+Message-ID: <20200616064208.GA9499@dhcp22.suse.cz>
 References: <20200616015718.7812-1-longman@redhat.com>
  <20200616015718.7812-2-longman@redhat.com>
 MIME-Version: 1.0
 Content-Disposition: inline
 In-Reply-To: <20200616015718.7812-2-longman@redhat.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200615_203038_888126_29D5E211 
-X-CRM114-Status: GOOD (  17.40  )
-X-Spam-Score: -5.2 (-----)
+X-CRM114-CacheID: sfid-20200615_234213_624838_6AE93E9D 
+X-CRM114-Status: GOOD (  14.71  )
+X-Spam-Score: 0.5 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+ Content analysis details:   (0.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [209.85.218.65 listed in list.dnswl.org]
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider [mstsxfx[at]gmail.com]
+ 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+ [209.85.218.65 listed in wl.mailspike.net]
+ 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+ 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -76,8 +87,8 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: "Jason A . Donenfeld" <Jason@zx2c4.com>, Michal Hocko <mhocko@suse.com>,
- linux-btrfs@vger.kernel.org, Jarkko Sakkinen <jarkko.sakkinen@linux.intel.com>,
+Cc: "Jason A . Donenfeld" <Jason@zx2c4.com>, linux-btrfs@vger.kernel.org,
+ Jarkko Sakkinen <jarkko.sakkinen@linux.intel.com>,
  David Sterba <dsterba@suse.cz>, David Howells <dhowells@redhat.com>,
  linux-mm@kvack.org, linux-sctp@vger.kernel.org, keyrings@vger.kernel.org,
  kasan-dev@googlegroups.com, linux-stm32@st-md-mailman.stormreply.com,
@@ -89,21 +100,20 @@ Cc: "Jason A . Donenfeld" <Jason@zx2c4.com>, Michal Hocko <mhocko@suse.com>,
  ecryptfs@vger.kernel.org, linux-fscrypt@vger.kernel.org,
  linux-mediatek@lists.infradead.org, linux-amlogic@lists.infradead.org,
  virtualization@lists.linux-foundation.org, linux-integrity@vger.kernel.org,
- linux-nfs@vger.kernel.org, linuxppc-dev@lists.ozlabs.org,
+ linux-nfs@vger.kernel.org, Linus Torvalds <torvalds@linux-foundation.org>,
  linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
  stable@vger.kernel.org, linux-bluetooth@vger.kernel.org,
  linux-security-module@vger.kernel.org, target-devel@vger.kernel.org,
  tipc-discussion@lists.sourceforge.net, linux-crypto@vger.kernel.org,
  Johannes Weiner <hannes@cmpxchg.org>, Joe Perches <joe@perches.com>,
- Andrew Morton <akpm@linux-foundation.org>,
- Linus Torvalds <torvalds@linux-foundation.org>, netdev@vger.kernel.org,
- wireguard@lists.zx2c4.com, linux-ppp@vger.kernel.org
+ Andrew Morton <akpm@linux-foundation.org>, linuxppc-dev@lists.ozlabs.org,
+ netdev@vger.kernel.org, wireguard@lists.zx2c4.com, linux-ppp@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On Mon, Jun 15, 2020 at 09:57:16PM -0400, Waiman Long wrote:
+On Mon 15-06-20 21:57:16, Waiman Long wrote:
 > The kzfree() function is normally used to clear some sensitive
 > information, like encryption keys, in the buffer before freeing it back
 > to the pool. Memset() is currently used for the buffer clearing. However,
@@ -115,6 +125,12 @@ On Mon, Jun 15, 2020 at 09:57:16PM -0400, Waiman Long wrote:
 > Fixes: 3ef0e5ba4673 ("slab: introduce kzfree()")
 > Cc: stable@vger.kernel.org
 > Signed-off-by: Waiman Long <longman@redhat.com>
+
+Acked-by: Michal Hocko <mhocko@suse.com>
+
+Although I am not really sure this is a stable material. Is there any
+known instance where the memset was optimized out from kzfree?
+
 > ---
 >  mm/slab_common.c | 2 +-
 >  1 file changed, 1 insertion(+), 1 deletion(-)
@@ -132,19 +148,13 @@ On Mon, Jun 15, 2020 at 09:57:16PM -0400, Waiman Long wrote:
 >  	kfree(mem);
 >  }
 >  EXPORT_SYMBOL(kzfree);
+> -- 
+> 2.18.1
+> 
 
-This is a good change, but the commit message isn't really accurate.  AFAIK, no
-one has found any case where this memset() gets optimized out.  And even with
-LTO, it would be virtually impossible due to all the synchronization and global
-data structures that kfree() uses.  (Remember that this isn't the C standard
-function "free()", so the compiler can't assign it any special meaning.)
-Not to mention that LTO support isn't actually upstream yet.
-
-I still agree with the change, but it might be helpful if the commit message
-were honest that this is really a hardening measure and about properly conveying
-the intent.  As-is this sounds like a critical fix, which might confuse people.
-
-- Eric
+-- 
+Michal Hocko
+SUSE Labs
 
 _______________________________________________
 linux-amlogic mailing list
