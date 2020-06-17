@@ -2,48 +2,35 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 161D51FC201
-	for <lists+linux-amlogic@lfdr.de>; Wed, 17 Jun 2020 01:01:55 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3EFAE1FC2CD
+	for <lists+linux-amlogic@lfdr.de>; Wed, 17 Jun 2020 02:37:17 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:Reply-To:List-Subscribe:List-Help:
-	List-Post:List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:
-	References:Message-ID:Subject:To:From:Date:Content-ID:Content-Description:
+	Content-Transfer-Encoding:Content-Type:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Cc:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=0RV2/ot/Y70pGqdqzt/AVCEUu5YgvyU9jDRwEnrNadg=; b=fVoKuznj9oiFpy
-	XKIfylrVhAumJNRe7kPdJzaY7rTnGrA0IqvZi8EFNAa7GKRdTdEinnOli712ifW190BEC4RSJZel1
-	15TsRJVRrDTta+hZiNCdYP9/8m6wjeAXjhD+rF6s4csVxOmFZjArRJw62XUapjVKFjQIkSrhM1Dv3
-	G4UFEZ1ZgZUlpbL9Bf4fzFhvJ+z9kNKkgUA7is0KZp1s+r3t+tqzM94BJWbjZnFuqCq3bwnKlVV0S
-	JZlSD6j8wXYOlHqIrDqpUYfLjqdZnhrT7zWQT6auvpB+LOTBfyrojX1B09UFQRMkjBIIykGr9CFPD
-	f0toGiV6JLHHj9dY5nCg==;
+	List-Owner; bh=vPRnGwqT8cEioDp7RwbxoJ93XMDp3Vwza711mX8EqhQ=; b=aBoDopkUfAlO8E
+	jP/24HW+HDKKp6ah9v1DcvACwpzPPoZg4NJpVYDf2AyLMSj6OAjilsz2hhbIKFhenidL9SQBPGWgJ
+	NBpLnJJ83MooRbwnyQklJNCweXQ0fomlYFQZ6ygiVQOKqIqObKUEYizbpPjkSpXxsYZGCEve6EJ9M
+	ZDzWG/RnxBqjZK4IDlMfme6q9JmKi42iMs4EWJeOI+w6/GwB6Tyi++zzonWVwY0zCO+38GR4k5gZO
+	sFik2855eZwKyGNl9OiS+bI5vrn1d/lqGmmbKftTfJFc/MhocsRsXclzy2ANz8+P7Xq1r5xY/dPkg
+	iMb4ABaGOXDSEqTswzRA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jlKaW-0002K3-Le; Tue, 16 Jun 2020 23:01:52 +0000
-Received: from mx2.suse.de ([195.135.220.15])
- by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jlKaS-0002JL-T2; Tue, 16 Jun 2020 23:01:50 +0000
-X-Virus-Scanned: by amavisd-new at test-mx.suse.de
-Received: from relay2.suse.de (unknown [195.135.220.254])
- by mx2.suse.de (Postfix) with ESMTP id 6CB7AADA8;
- Tue, 16 Jun 2020 23:01:45 +0000 (UTC)
-Received: by ds.suse.cz (Postfix, from userid 10065)
- id 1AC8EDA7C3; Wed, 17 Jun 2020 01:01:30 +0200 (CEST)
-Date: Wed, 17 Jun 2020 01:01:30 +0200
-From: David Sterba <dsterba@suse.cz>
-To: Joe Perches <joe@perches.com>
-Subject: Re: [PATCH v4 0/3] mm, treewide: Rename kzfree() to kfree_sensitive()
-Message-ID: <20200616230130.GJ27795@twin.jikos.cz>
-Mail-Followup-To: dsterba@suse.cz, Joe Perches <joe@perches.com>,
+	id 1jlM4o-0006Aa-F2; Wed, 17 Jun 2020 00:37:14 +0000
+Received: from willy by bombadil.infradead.org with local (Exim 4.92.3 #3 (Red
+ Hat Linux)) id 1jlM4l-0006AH-5o; Wed, 17 Jun 2020 00:37:11 +0000
+Date: Tue, 16 Jun 2020 17:37:11 -0700
+From: Matthew Wilcox <willy@infradead.org>
+To: dsterba@suse.cz, Joe Perches <joe@perches.com>,
  Waiman Long <longman@redhat.com>,
  Andrew Morton <akpm@linux-foundation.org>,
  David Howells <dhowells@redhat.com>,
  Jarkko Sakkinen <jarkko.sakkinen@linux.intel.com>,
- James Morris <jmorris@namei.org>,
- "Serge E. Hallyn" <serge@hallyn.com>,
+ James Morris <jmorris@namei.org>, "Serge E. Hallyn" <serge@hallyn.com>,
  Linus Torvalds <torvalds@linux-foundation.org>,
- Matthew Wilcox <willy@infradead.org>,
- David Rientjes <rientjes@google.com>,
- Michal Hocko <mhocko@suse.com>,
+ David Rientjes <rientjes@google.com>, Michal Hocko <mhocko@suse.com>,
  Johannes Weiner <hannes@cmpxchg.org>,
  Dan Carpenter <dan.carpenter@oracle.com>,
  "Jason A . Donenfeld" <Jason@zx2c4.com>, linux-mm@kvack.org,
@@ -61,29 +48,15 @@ Mail-Followup-To: dsterba@suse.cz, Joe Perches <joe@perches.com>,
  kasan-dev@googlegroups.com, linux-bluetooth@vger.kernel.org,
  linux-wpan@vger.kernel.org, linux-sctp@vger.kernel.org,
  linux-nfs@vger.kernel.org, tipc-discussion@lists.sourceforge.net,
- linux-security-module@vger.kernel.org,
- linux-integrity@vger.kernel.org
+ linux-security-module@vger.kernel.org, linux-integrity@vger.kernel.org
+Subject: Re: [PATCH v4 0/3] mm, treewide: Rename kzfree() to kfree_sensitive()
+Message-ID: <20200617003711.GD8681@bombadil.infradead.org>
 References: <20200616015718.7812-1-longman@redhat.com>
  <fe3b9a437be4aeab3bac68f04193cb6daaa5bee4.camel@perches.com>
+ <20200616230130.GJ27795@twin.jikos.cz>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <fe3b9a437be4aeab3bac68f04193cb6daaa5bee4.camel@perches.com>
-User-Agent: Mutt/1.5.23.1-rc1 (2014-03-12)
-X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200616_160149_224803_6DC41BD4 
-X-CRM114-Status: GOOD (  13.50  )
-X-Spam-Score: -2.3 (--)
-X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-2.3 points)
- pts rule name              description
- ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [195.135.220.15 listed in list.dnswl.org]
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [195.135.220.15 listed in wl.mailspike.net]
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+In-Reply-To: <20200616230130.GJ27795@twin.jikos.cz>
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -95,53 +68,36 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Reply-To: dsterba@suse.cz
-Cc: "Jason A . Donenfeld" <Jason@zx2c4.com>, Michal Hocko <mhocko@suse.com>,
- linux-btrfs@vger.kernel.org, Jarkko Sakkinen <jarkko.sakkinen@linux.intel.com>,
- David Sterba <dsterba@suse.cz>, David Howells <dhowells@redhat.com>,
- linux-mm@kvack.org, linux-sctp@vger.kernel.org, keyrings@vger.kernel.org,
- kasan-dev@googlegroups.com, linux-stm32@st-md-mailman.stormreply.com,
- devel@driverdev.osuosl.org, linux-cifs@vger.kernel.org,
- linux-scsi@vger.kernel.org, James Morris <jmorris@namei.org>,
- Matthew Wilcox <willy@infradead.org>, linux-wpan@vger.kernel.org,
- David Rientjes <rientjes@google.com>, Waiman Long <longman@redhat.com>,
- Dan Carpenter <dan.carpenter@oracle.com>, "Serge E. Hallyn" <serge@hallyn.com>,
- linux-pm@vger.kernel.org, ecryptfs@vger.kernel.org,
- linux-fscrypt@vger.kernel.org, linux-mediatek@lists.infradead.org,
- linux-amlogic@lists.infradead.org, virtualization@lists.linux-foundation.org,
- linux-integrity@vger.kernel.org, linux-nfs@vger.kernel.org,
- linuxppc-dev@lists.ozlabs.org, linux-wireless@vger.kernel.org,
- linux-kernel@vger.kernel.org, linux-bluetooth@vger.kernel.org,
- linux-security-module@vger.kernel.org, target-devel@vger.kernel.org,
- tipc-discussion@lists.sourceforge.net, linux-crypto@vger.kernel.org,
- Johannes Weiner <hannes@cmpxchg.org>,
- Andrew Morton <akpm@linux-foundation.org>,
- Linus Torvalds <torvalds@linux-foundation.org>, netdev@vger.kernel.org,
- wireguard@lists.zx2c4.com, linux-ppp@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On Tue, Jun 16, 2020 at 11:53:50AM -0700, Joe Perches wrote:
-> On Mon, 2020-06-15 at 21:57 -0400, Waiman Long wrote:
-> >  v4:
-> >   - Break out the memzero_explicit() change as suggested by Dan Carpenter
-> >     so that it can be backported to stable.
-> >   - Drop the "crypto: Remove unnecessary memzero_explicit()" patch for
-> >     now as there can be a bit more discussion on what is best. It will be
-> >     introduced as a separate patch later on after this one is merged.
+On Wed, Jun 17, 2020 at 01:01:30AM +0200, David Sterba wrote:
+> On Tue, Jun 16, 2020 at 11:53:50AM -0700, Joe Perches wrote:
+> > On Mon, 2020-06-15 at 21:57 -0400, Waiman Long wrote:
+> > >  v4:
+> > >   - Break out the memzero_explicit() change as suggested by Dan Carpenter
+> > >     so that it can be backported to stable.
+> > >   - Drop the "crypto: Remove unnecessary memzero_explicit()" patch for
+> > >     now as there can be a bit more discussion on what is best. It will be
+> > >     introduced as a separate patch later on after this one is merged.
+> > 
+> > To this larger audience and last week without reply:
+> > https://lore.kernel.org/lkml/573b3fbd5927c643920e1364230c296b23e7584d.camel@perches.com/
+> > 
+> > Are there _any_ fastpath uses of kfree or vfree?
 > 
-> To this larger audience and last week without reply:
-> https://lore.kernel.org/lkml/573b3fbd5927c643920e1364230c296b23e7584d.camel@perches.com/
-> 
-> Are there _any_ fastpath uses of kfree or vfree?
+> I'd consider kfree performance critical for cases where it is called
+> under locks. If possible the kfree is moved outside of the critical
+> section, but we have rbtrees or lists that get deleted under locks and
+> restructuring the code to do eg. splice and free it outside of the lock
+> is not always possible.
 
-I'd consider kfree performance critical for cases where it is called
-under locks. If possible the kfree is moved outside of the critical
-section, but we have rbtrees or lists that get deleted under locks and
-restructuring the code to do eg. splice and free it outside of the lock
-is not always possible.
+Not just performance critical, but correctness critical.  Since kvfree()
+may allocate from the vmalloc allocator, I really think that kvfree()
+should assert that it's !in_atomic().  Otherwise we can get into trouble
+if we end up calling vfree() and have to take the mutex.
 
 _______________________________________________
 linux-amlogic mailing list
