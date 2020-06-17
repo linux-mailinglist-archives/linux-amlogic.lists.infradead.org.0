@@ -2,84 +2,74 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 235651FD895
-	for <lists+linux-amlogic@lfdr.de>; Thu, 18 Jun 2020 00:18:51 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 44CAF1FD965
+	for <lists+linux-amlogic@lfdr.de>; Thu, 18 Jun 2020 01:12:29 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=k5pcwfAi0VRe4RNcex6Ux17hg2Tp3GLaH0m7YCLVx8c=; b=SbGShV0QKNvy1G
-	Zx2pbKWw0oN62cZvxOuv8UhW3tWqz9GYKa/CAQmsSEhJRp18Q5zj55D7CLoNtCfobAzqYDugRWvhw
-	2iPxLeHRNjMoeRtttS0pzGY5Q1Pzc0aQSpyc49lJSIxaLR+9XGyDCE0U7cmWIimByvnkxCDUVQInr
-	gANYBfNMiliP4BdpdsI5qksmA2WjQ3oR7OyIKsoVMpDKtxUbL6zkDVa2FrYKGZxURUWKMWBbK3lKU
-	mERZvwDElRMay6G2J0ONwCaoO/HYqcYznDufhIOy37YnEZl26phgaWRZBPZLZdnR2mNHAP6GKgMv9
-	IJB/1u+6EyOeBJsEuXQg==;
+	List-Owner; bh=XAveF6CmvOaTOe3loDHaaNIk/ETJyV4b6/dw5A/v150=; b=eHo7bXfix7qkI3
+	oXyLq/sHwtqiag5oSYMKNmQzQjfll7MZBH+Jrdo4KNbRdgHvTtIAyEZISDAjFOveDXmoSmX0ssjFH
+	83RK5reW4kMdZxvqezv8j5AFcy6qONHxWTYf5NdbxcqwOLEsXnO3TG3lYn6T9WGmRKAJZxlVNJVRm
+	F+l0uAc8qZ6++N6PZPv8INbiMpMFE+CoXy9i3rvsQ/V/T9F4cHlolQpy1Q2aYQ/hFWU9f3486nE+w
+	0VgGGVwEqB/zpGy3Ha0X7j63zBIEO/Z3rirrrpyp0I6MwgJv0KLj0ljMdlcHc4uBuBhruCw47tmtv
+	5VhGU/79s3LEGD4MUB4w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jlgOO-00050f-H7; Wed, 17 Jun 2020 22:18:48 +0000
-Received: from mail-il1-f196.google.com ([209.85.166.196])
+	id 1jlhEH-0005Qh-Tf; Wed, 17 Jun 2020 23:12:25 +0000
+Received: from smtprelay0057.hostedemail.com ([216.40.44.57]
+ helo=smtprelay.hostedemail.com)
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jlgNv-0004Zg-CT; Wed, 17 Jun 2020 22:18:21 +0000
-Received: by mail-il1-f196.google.com with SMTP id i1so3860485ils.11;
- Wed, 17 Jun 2020 15:18:19 -0700 (PDT)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to;
- bh=Uz7g0bB18ztxeQgM+/H4yxv4w/AtkVlw+WDwFr6g8Ao=;
- b=cLAn3Uy2JGBY4VCicjcrIKA77BQn3VluMHTTHDrkTdGafcEEOci4r8iID25LTq7+nz
- QakZ7nQaDBGu4f1uHu37WGmN1+9CeYDqwL/ELHsqFlHbP7DZkj11AARW4x5VXD1N2xEj
- hVfws41xhtx1oUExAXDbMadNvSnKxV3PlZ7yfoFnOEXFMtFqfybVowe1JqUV5q+XWKoT
- vvTbxFaC+ih8qss+Yge88gVsFxDXt9RXJWk2x8AbBlPJcL+aHYNjjECTH60BWlXlubdh
- 2Iy79dc1lHEey/hg7M/7jz4kkoWBAlwFkxbVE4JhQ+GMlpAKwPNExl6ArA67N5V1SymF
- VS0w==
-X-Gm-Message-State: AOAM532KhCxiQmkh3Xuodwadqn5W4sJVlRh73gQ5C8CzKoVnHZBqc5Ck
- 9pUeBNfEl3TPpLSQd+V2rw==
-X-Google-Smtp-Source: ABdhPJwldBKKgVwMhWTp6+BTPDjZ5+GjxiMRxxsH5coqpGLhBPEg/c67Ti4jXWHLFczF1LllOIWBwg==
-X-Received: by 2002:a92:cb03:: with SMTP id s3mr1132707ilo.161.1592432298592; 
- Wed, 17 Jun 2020 15:18:18 -0700 (PDT)
-Received: from xps15 ([64.188.179.253])
- by smtp.gmail.com with ESMTPSA id t72sm552531ilk.23.2020.06.17.15.18.17
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Wed, 17 Jun 2020 15:18:18 -0700 (PDT)
-Received: (nullmailer pid 2934152 invoked by uid 1000);
- Wed, 17 Jun 2020 22:18:17 -0000
-Date: Wed, 17 Jun 2020 16:18:17 -0600
-From: Rob Herring <robh@kernel.org>
-To: Neil Armstrong <narmstrong@baylibre.com>
-Subject: Re: [PATCH 1/2] dt-bindings: clk: g12a-clkc: Add NNA CLK Source
- clock IDs
-Message-ID: <20200617221817.GA2934098@bogus>
-References: <20200610083012.5024-1-narmstrong@baylibre.com>
- <20200610083012.5024-2-narmstrong@baylibre.com>
+ id 1jlhED-0005Pq-SH; Wed, 17 Jun 2020 23:12:23 +0000
+Received: from filter.hostedemail.com (clb03-v110.bra.tucows.net
+ [216.40.38.60])
+ by smtprelay07.hostedemail.com (Postfix) with ESMTP id C6BF8181D330D;
+ Wed, 17 Jun 2020 23:12:13 +0000 (UTC)
+X-Session-Marker: 6A6F6540706572636865732E636F6D
+X-Spam-Summary: 50, 0, 0, , d41d8cd98f00b204, joe@perches.com, ,
+ RULES_HIT:41:355:379:599:800:965:966:967:968:973:982:988:989:1260:1277:1311:1313:1314:1345:1359:1437:1515:1516:1518:1534:1541:1593:1594:1711:1730:1747:1777:1792:2194:2196:2198:2199:2200:2201:2393:2525:2561:2564:2682:2685:2693:2828:2859:2933:2937:2939:2942:2945:2947:2951:2954:3022:3138:3139:3140:3141:3142:3353:3622:3865:3866:3867:3868:3870:3871:3872:3874:3934:3936:3938:3941:3944:3947:3950:3953:3956:3959:4321:4385:4390:4395:5007:6248:6691:6742:6743:7875:7903:9025:9108:10004:10400:10848:11232:11658:11914:12043:12048:12050:12297:12438:12555:12740:12760:12895:13069:13095:13311:13357:13439:14096:14097:14180:14181:14659:14721:14777:14915:21080:21433:21451:21627:21788:21811:30054:30070:30091,
+ 0, RBL:none, CacheIP:none, Bayesian:0.5, 0.5, 0.5, Netcheck:none,
+ DomainCache:0, MSF:not bulk, SPF:, MSBL:0, DNSBL:none, Custom_rules:0:0:0,
+ LFtime:3, LUA_SUMMARY:none
+X-HE-Tag: anger66_3706ec726e0b
+X-Filterd-Recvd-Size: 3931
+Received: from XPS-9350.home (unknown [47.151.133.149])
+ (Authenticated sender: joe@perches.com)
+ by omf11.hostedemail.com (Postfix) with ESMTPA;
+ Wed, 17 Jun 2020 23:12:07 +0000 (UTC)
+Message-ID: <38c5745d14cff75fe264a3bc61d19fd837baf7ad.camel@perches.com>
+Subject: Re: [PATCH v4 0/3] mm, treewide: Rename kzfree() to kfree_sensitive()
+From: Joe Perches <joe@perches.com>
+To: Denis Efremov <efremov@ispras.ru>, Waiman Long <longman@redhat.com>, 
+ Andrew Morton <akpm@linux-foundation.org>, David Howells
+ <dhowells@redhat.com>, Jarkko Sakkinen <jarkko.sakkinen@linux.intel.com>,
+ James Morris <jmorris@namei.org>, "Serge E. Hallyn" <serge@hallyn.com>,
+ Linus Torvalds <torvalds@linux-foundation.org>, Matthew Wilcox
+ <willy@infradead.org>, David Rientjes <rientjes@google.com>
+Date: Wed, 17 Jun 2020 16:12:06 -0700
+In-Reply-To: <17e4fede-bab0-d93c-6964-69decc889d7d@ispras.ru>
+References: <20200616015718.7812-1-longman@redhat.com>
+ <fe3b9a437be4aeab3bac68f04193cb6daaa5bee4.camel@perches.com>
+ <17e4fede-bab0-d93c-6964-69decc889d7d@ispras.ru>
+User-Agent: Evolution 3.36.2-0ubuntu1 
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20200610083012.5024-2-narmstrong@baylibre.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200617_151819_435853_D9B1D454 
-X-CRM114-Status: UNSURE (   7.92  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.7 (/)
+X-CRM114-CacheID: sfid-20200617_161221_978464_44755C9C 
+X-CRM114-Status: GOOD (  14.39  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (0.7 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.166.196 listed in list.dnswl.org]
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider [robherring2[at]gmail.com]
+ no trust [216.40.44.57 listed in list.dnswl.org]
+ 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+ [216.40.44.57 listed in wl.mailspike.net]
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit [robherring2[at]gmail.com]
- -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.166.196 listed in wl.mailspike.net]
- 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
+ 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
 X-BeenThere: linux-amlogic@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -91,28 +81,66 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, Dmitry Shmidt <dimitrysh@google.com>,
- linux-kernel@vger.kernel.org, linux-amlogic@lists.infradead.org,
- linux-clk@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
- jbrunet@baylibre.com
+Cc: "Jason A . Donenfeld" <Jason@zx2c4.com>, Michal Hocko <mhocko@suse.com>,
+ linux-btrfs@vger.kernel.org, linux-kernel@vger.kernel.org, linux-mm@kvack.org,
+ linux-sctp@vger.kernel.org, target-devel@vger.kernel.org,
+ linux-stm32@st-md-mailman.stormreply.com, devel@driverdev.osuosl.org,
+ linux-cifs@vger.kernel.org, linux-scsi@vger.kernel.org,
+ kasan-dev@googlegroups.com, linux-wpan@vger.kernel.org,
+ Dan Carpenter <dan.carpenter@oracle.com>, linux-pm@vger.kernel.org,
+ ecryptfs@vger.kernel.org, linux-fscrypt@vger.kernel.org,
+ linux-mediatek@lists.infradead.org, linux-amlogic@lists.infradead.org,
+ virtualization@lists.linux-foundation.org, linux-nfs@vger.kernel.org,
+ netdev@vger.kernel.org, linux-wireless@vger.kernel.org,
+ David Sterba <dsterba@suse.cz>, linux-bluetooth@vger.kernel.org,
+ linux-security-module@vger.kernel.org, keyrings@vger.kernel.org,
+ tipc-discussion@lists.sourceforge.net, linux-crypto@vger.kernel.org,
+ Johannes Weiner <hannes@cmpxchg.org>, linux-integrity@vger.kernel.org,
+ linuxppc-dev@lists.ozlabs.org, wireguard@lists.zx2c4.com,
+ linux-ppp@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-On Wed, 10 Jun 2020 10:30:11 +0200, Neil Armstrong wrote:
-> From: Dmitry Shmidt <dimitrysh@google.com>
+On Thu, 2020-06-18 at 00:31 +0300, Denis Efremov wrote:
 > 
-> This adds the Neural Network Accelerator IP source clocks.
+> On 6/16/20 9:53 PM, Joe Perches wrote:
+> > On Mon, 2020-06-15 at 21:57 -0400, Waiman Long wrote:
+> > >  v4:
+> > >   - Break out the memzero_explicit() change as suggested by Dan Carpenter
+> > >     so that it can be backported to stable.
+> > >   - Drop the "crypto: Remove unnecessary memzero_explicit()" patch for
+> > >     now as there can be a bit more discussion on what is best. It will be
+> > >     introduced as a separate patch later on after this one is merged.
+> > 
+> > To this larger audience and last week without reply:
+> > https://lore.kernel.org/lkml/573b3fbd5927c643920e1364230c296b23e7584d.camel@perches.com/
+> > 
+> > Are there _any_ fastpath uses of kfree or vfree?
+> > 
+> > Many patches have been posted recently to fix mispairings
+> > of specific types of alloc and free functions.
 > 
-> Signed-off-by: Dmitry Shmidt <dimitrysh@google.com>
-> Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
-> ---
->  include/dt-bindings/clock/g12a-clkc.h | 2 ++
->  1 file changed, 2 insertions(+)
+> I've prepared a coccinelle script to highlight these mispairings in a function
+> a couple of days ago: https://lkml.org/lkml/2020/6/5/953
+> I've listed all the fixes in the commit message. 
 > 
+> Not so many mispairings actually, and most of them are harmless like:
+> kmalloc(E) -> kvfree(E)
+> 
+> However, coccinelle script can't detect cross-functions mispairings, i.e.
+> allocation in one function, free in another funtion.
 
-Acked-by: Rob Herring <robh@kernel.org>
+Hey Denis, thanks for those patches.
+
+If possible, it's probably better to not require these pairings
+and use a single standard kfree/free function.
+
+Given the existing ifs in kfree in slab/slob/slub, it seems
+likely that adding a few more wouldn't have much impact.
+
+
 
 _______________________________________________
 linux-amlogic mailing list
