@@ -2,46 +2,46 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 65C761FDCCD
-	for <lists+linux-amlogic@lfdr.de>; Thu, 18 Jun 2020 03:22:19 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6CAF01FDDA0
+	for <lists+linux-amlogic@lfdr.de>; Thu, 18 Jun 2020 03:27:32 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=8M8CIIrCVh69fGySXyyWxA3NMoNAjUGgIpIiTIeZ2Gw=; b=dchduY52oH7gEj
-	3wrA8w9BsJspdi75tsX9cHQ+boMK5W94lV/sycdn0nHFa4Sy6IdZjRJj4qBCvzp1dgy6696OZ3vzu
-	u7oyUx2fQSmpJYcWJVRies0HFnii43k2jQQqyWq4C1XsKnWI2rlFsSvWJCM90TW4mBFKSgmKqyLL9
-	lOzsOnUe7yE2l184UYPQCUTrIzRdN5mFRJj9l5tWrkUJOUVAvvfEZ+OiP+qJFCKsWNXPJSO2N41UZ
-	dPyyGou6YMUpro8GhYLIOzAqlmys3+d26cjQwg2SlzezdYJF0cy5e+hmpK91pLe5aNiSZKjJx50Gl
-	Hf2b2AD12FM1AHXe/xew==;
+	List-Owner; bh=PxJ878l2I5SrooHe2F9CdVi3Fx1JNxBsqyHAVfYMJtA=; b=N3KCwAQFqf7Qjl
+	TJCrQ5ZfiITrSLVjMcug8rjj3zYI7YDIYzevI+76mBRR8lpiUvJ2NEmMDys7cmaofr8WY2PDguXWu
+	hplJpmlk3zTsyV+22zS+12YxVDx+G1dQIvqNKzVTmiP3pbL+9HmZ1uFqZlVtouvAMCkmBX4fSmqsD
+	5kX98j/jU3fNs2CbwRaOq8UZHtzwZQ1JjR5psfNk4Z5JfXGei5Dd74w+qwfBs+ifmjrYjZfyY4wnm
+	1/g56qh5t1ofQbVqQBH0iR8umqWl364PWG4Ka4ExkuenxNk3SimTlMYkUPmsQgRQV/OGub94a4+e/
+	8Km/8aCxiXK23fmIdhwg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jljFw-0005hs-36; Thu, 18 Jun 2020 01:22:16 +0000
+	id 1jljL0-0004OM-Cv; Thu, 18 Jun 2020 01:27:30 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jlj5n-0001Ue-Vz; Thu, 18 Jun 2020 01:11:54 +0000
+ id 1jlj7G-0002ko-SO; Thu, 18 Jun 2020 01:13:20 +0000
 Received: from sasha-vm.mshome.net (c-73-47-72-35.hsd1.nh.comcast.net
  [73.47.72.35])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 73BAA21D90;
- Thu, 18 Jun 2020 01:11:46 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id 5479C21974;
+ Thu, 18 Jun 2020 01:13:17 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1592442707;
- bh=b81sBAbK71A81s+WrFLaLjIoRHBsG4x73nqY5oFinc4=;
+ s=default; t=1592442798;
+ bh=o7jQeRpPUwhbbMSmXYLCbTuET0qoCT5C8qjj9tJ+f9g=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=rylOHO3IypF9HJHgRFmxOUWNjhoSL9PE+QrN1xiJzrf+28O+esFi2Bwd0NYucxa3R
- WMP+p7OgKn6c4HpllCl5RCPKr8c+wsMVyCxU8LiE2c0ThWOYepAmRAxtRwP2XGN6gh
- hFhCvJGXebvhc9u7jSEU4bnvOugM78GQRS+oMygw=
+ b=sDI9CgYH/MZrcBK7yWFVhgpLodROJmMfrWux7187D+dye1yZxHtwl2wpSgpDPH4hE
+ Byiu6skEslryl71TTGAm3S6ADHmry3lZzf33sIb67tdPit4mylqUM5eVLzJEzFNpDU
+ LkJeNuiCxVuchWgGqN3eTeybNA/SH06aNpdjO0w0=
 From: Sasha Levin <sashal@kernel.org>
 To: linux-kernel@vger.kernel.org,
 	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 5.7 168/388] usb: dwc3: meson-g12a: check return of
- dwc3_meson_g12a_usb_init
-Date: Wed, 17 Jun 2020 21:04:25 -0400
-Message-Id: <20200618010805.600873-168-sashal@kernel.org>
+Subject: [PATCH AUTOSEL 5.7 239/388] ARM: dts: meson: Switch existing boards
+ with RGMII PHY to "rgmii-id"
+Date: Wed, 17 Jun 2020 21:05:36 -0400
+Message-Id: <20200618010805.600873-239-sashal@kernel.org>
 X-Mailer: git-send-email 2.25.1
 In-Reply-To: <20200618010805.600873-1-sashal@kernel.org>
 References: <20200618010805.600873-1-sashal@kernel.org>
@@ -49,9 +49,8 @@ MIME-Version: 1.0
 X-stable: review
 X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200617_181148_163789_A571B0D3 
-X-CRM114-Status: UNSURE (   9.55  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200617_181319_080146_72599E6A 
+X-CRM114-Status: GOOD (  12.65  )
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-5.2 points)
@@ -80,46 +79,79 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: Sasha Levin <sashal@kernel.org>, Felipe Balbi <balbi@kernel.org>,
- Neil Armstrong <narmstrong@baylibre.com>,
+Cc: Sasha Levin <sashal@kernel.org>, devicetree@vger.kernel.org,
  Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
- linux-usb@vger.kernel.org, linux-amlogic@lists.infradead.org,
+ Kevin Hilman <khilman@baylibre.com>, linux-amlogic@lists.infradead.org,
  linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-From: Neil Armstrong <narmstrong@baylibre.com>
+From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
 
-[ Upstream commit 8f5bc1ec770c2bdc8c604ba4119a77d81d8f3529 ]
+[ Upstream commit 005231128e9e97461e81fa32421957a7664317ca ]
 
-The dwc3_meson_g12a_usb_init function can return an error, check it.
+Let the PHY generate the RX and TX delay on the Odroid-C1 and MXIII
+Plus.
 
-Fixes: c99993376f72ca ("usb: dwc3: Add Amlogic G12A DWC3 glue")
-Reviewed-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
-Signed-off-by: Felipe Balbi <balbi@kernel.org>
+Previously we did not know that these boards used an RX delay. We
+assumed that setting the TX delay on the MAC side It turns out that
+these boards also require an RX delay of 2ns (verified on Odroid-C1,
+but the u-boot code uses the same setup on both boards). Ethernet only
+worked because u-boot added this RX delay on the MAC side.
+
+The 4ns TX delay was also wrong and the result of using an unsupported
+RGMII TX clock divider setting. This has been fixed in the driver with
+commit bd6f48546b9cb7 ("net: stmmac: dwmac-meson8b: Fix the RGMII TX
+delay on Meson8b/8m2 SoCs").
+
+Switch to phy-mode "rgmii-id" to let the PHY side handle all the delays,
+(as recommended by the Ethernet maintainers anyways) to correctly
+describe the need for a 2ns RX as well as 2ns TX delay on these boards.
+This fixes the Ethernet performance on Odroid-C1 where there was a huge
+amount of packet loss when transmitting data due to the incorrect TX
+delay.
+
+Signed-off-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+Signed-off-by: Kevin Hilman <khilman@baylibre.com>
+Link: https://lore.kernel.org/r/20200512215148.540322-3-martin.blumenstingl@googlemail.com
 Signed-off-by: Sasha Levin <sashal@kernel.org>
 ---
- drivers/usb/dwc3/dwc3-meson-g12a.c | 4 +++-
- 1 file changed, 3 insertions(+), 1 deletion(-)
+ arch/arm/boot/dts/meson8b-odroidc1.dts    | 3 +--
+ arch/arm/boot/dts/meson8m2-mxiii-plus.dts | 4 +---
+ 2 files changed, 2 insertions(+), 5 deletions(-)
 
-diff --git a/drivers/usb/dwc3/dwc3-meson-g12a.c b/drivers/usb/dwc3/dwc3-meson-g12a.c
-index b81d085bc534..2d257bdfe848 100644
---- a/drivers/usb/dwc3/dwc3-meson-g12a.c
-+++ b/drivers/usb/dwc3/dwc3-meson-g12a.c
-@@ -525,7 +525,9 @@ static int dwc3_meson_g12a_probe(struct platform_device *pdev)
- 	/* Get dr_mode */
- 	priv->otg_mode = usb_get_dr_mode(dev);
+diff --git a/arch/arm/boot/dts/meson8b-odroidc1.dts b/arch/arm/boot/dts/meson8b-odroidc1.dts
+index a2a47804fc4a..cb21ac9f517c 100644
+--- a/arch/arm/boot/dts/meson8b-odroidc1.dts
++++ b/arch/arm/boot/dts/meson8b-odroidc1.dts
+@@ -202,9 +202,8 @@ &ethmac {
+ 	pinctrl-0 = <&eth_rgmii_pins>;
+ 	pinctrl-names = "default";
  
--	dwc3_meson_g12a_usb_init(priv);
-+	ret = dwc3_meson_g12a_usb_init(priv);
-+	if (ret)
-+		goto err_disable_clks;
+-	phy-mode = "rgmii";
+ 	phy-handle = <&eth_phy>;
+-	amlogic,tx-delay-ns = <4>;
++	phy-mode = "rgmii-id";
  
- 	/* Init PHYs */
- 	for (i = 0 ; i < PHY_COUNT ; ++i) {
+ 	nvmem-cells = <&ethernet_mac_address>;
+ 	nvmem-cell-names = "mac-address";
+diff --git a/arch/arm/boot/dts/meson8m2-mxiii-plus.dts b/arch/arm/boot/dts/meson8m2-mxiii-plus.dts
+index d54477b1001c..cc498191ddd1 100644
+--- a/arch/arm/boot/dts/meson8m2-mxiii-plus.dts
++++ b/arch/arm/boot/dts/meson8m2-mxiii-plus.dts
+@@ -69,9 +69,7 @@ &ethmac {
+ 	pinctrl-names = "default";
+ 
+ 	phy-handle = <&eth_phy0>;
+-	phy-mode = "rgmii";
+-
+-	amlogic,tx-delay-ns = <4>;
++	phy-mode = "rgmii-id";
+ 
+ 	mdio {
+ 		compatible = "snps,dwmac-mdio";
 -- 
 2.25.1
 
