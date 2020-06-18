@@ -2,45 +2,46 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id EEB4F1FDC8E
-	for <lists+linux-amlogic@lfdr.de>; Thu, 18 Jun 2020 03:20:24 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8A77A1FDCA1
+	for <lists+linux-amlogic@lfdr.de>; Thu, 18 Jun 2020 03:21:18 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ibbK0hp8HCA1cgNwOP985Dou4iGUAdgfakJ8U3nDh0s=; b=i0nRmIsFBiujng
-	vBQ3pz1rFG8tR5JCcLsmlPmg2DOZARRD7bCqzH+KE/aDiSfn3pRpgFadKdsCgwGwGhh6yGxcdlKY4
-	lGr6/BrVkHPbMIeaQiigFrrGQQIq/lY6qiJPrg8j8WmUg9dJ5w1YDcTgMFSQ0vXrFJgdMVQLjFqOD
-	9i4rSq3IMO+IDX1FRXbcB/Q5oRKoGvm8NAAakgxglQiDsLlvHGW0BQCFxHM+2z5Krq6H99kUeQ/k4
-	N8MM05o5kb4GfBFoXTkP64Uy+aAL0IU7bz4z3pFkX2eLBzbR58yjUqY/Zykec081hxWA6f5at6k+d
-	YUaM7blVdb+Agve3TY+g==;
+	List-Owner; bh=urjK4UMzAxINED/F/DlF2hNTq/qZGIjyyn8tNd/7kzw=; b=IGx31HoRYVh99M
+	XztQtcWIGPqh7VsfhyorzwmGsCPzv5WF1Gp4BQPxkcsWYoIC/8onv4tGbkiQZT77n2C3YwbSdGqpW
+	quGiagpECijM7jv/+CMX1g/GcsBt3S4qOTgNIyQCv1QchNEN6jgKnPgNik7tm9cxArrq3YZTT7b04
+	hR83ui4+QYzvN56X+wlCBqp6uICyZTkgF0k1xRV09hWzGKbReDGmdS8WFiYRfkqSMWFJm/FFIc7Sf
+	yFR+WYwUZmnE5k9iR5dRCHk274/j+kVBlkBGP+s/wq2al/O32s2tN33UyZnlp3wY5tJRuRLDoFgSf
+	LatLNtHeCPsox1NqQT8Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jljE7-0003nK-15; Thu, 18 Jun 2020 01:20:23 +0000
+	id 1jljEy-0004uf-7q; Thu, 18 Jun 2020 01:21:16 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jlj5c-0001LN-N7; Thu, 18 Jun 2020 01:11:40 +0000
+ id 1jlj5e-0001O4-QB; Thu, 18 Jun 2020 01:11:49 +0000
 Received: from sasha-vm.mshome.net (c-73-47-72-35.hsd1.nh.comcast.net
  [73.47.72.35])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 6FE6F214DB;
- Thu, 18 Jun 2020 01:11:34 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id 3CA2E21974;
+ Thu, 18 Jun 2020 01:11:37 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1592442695;
- bh=MYYcJRFJPTB06V+ucjirZVyjIZQZP5RMckIncZ00mjo=;
+ s=default; t=1592442698;
+ bh=nZiTh/x0+BJwJJK5EHwTZcOVVxfwS36S2zGYTDgC4ZU=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=xYKmRgzQDA1Su8UNz95DfumaK2EjDgvbNUWZcpXBdU4tPywoj4za++4v4copBvfA3
- j+jQb76dc8d24fg76iMvKRutg7H6ri+IVBR3WUikv8z8hl02QQkhObdoNydbppKOHM
- vMOaankdj1YxIabGUxfUpmxux/fyZozzSED+dGuw=
+ b=pkBgkTForBTTz7VuKwDRtFnFgF0uth22pPe8HWvv/eR2EzEDHNtctM1s6peFUozzm
+ clqDAKZtJ5n6L9YsFkPmFdNHX38nE29A5PpwkvyXCBmzR80W3vy5xhDbUQIci1OCLc
+ eQ3gC0GlSm2sLmtGXDorDHNbco7jNGy41ajTCpu0=
 From: Sasha Levin <sashal@kernel.org>
 To: linux-kernel@vger.kernel.org,
 	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 5.7 159/388] arm64: dts: meson: fix leds subnodes name
-Date: Wed, 17 Jun 2020 21:04:16 -0400
-Message-Id: <20200618010805.600873-159-sashal@kernel.org>
+Subject: [PATCH AUTOSEL 5.7 161/388] clk: meson: meson8b: Don't rely on u-boot
+ to init all GP_PLL registers
+Date: Wed, 17 Jun 2020 21:04:18 -0400
+Message-Id: <20200618010805.600873-161-sashal@kernel.org>
 X-Mailer: git-send-email 2.25.1
 In-Reply-To: <20200618010805.600873-1-sashal@kernel.org>
 References: <20200618010805.600873-1-sashal@kernel.org>
@@ -48,9 +49,8 @@ MIME-Version: 1.0
 X-stable: review
 X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200617_181136_843874_32715821 
-X-CRM114-Status: UNSURE (   9.84  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200617_181139_466552_A0C16AAD 
+X-CRM114-Status: GOOD (  11.08  )
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-5.2 points)
@@ -79,237 +79,90 @@ List-Post: <mailto:linux-amlogic@lists.infradead.org>
 List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
-Cc: Sasha Levin <sashal@kernel.org>, devicetree@vger.kernel.org,
- Neil Armstrong <narmstrong@baylibre.com>, Kevin Hilman <khilman@baylibre.com>,
- linux-amlogic@lists.infradead.org, linux-arm-kernel@lists.infradead.org
+Cc: Sasha Levin <sashal@kernel.org>,
+ Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
+ linux-amlogic@lists.infradead.org, linux-clk@vger.kernel.org,
+ linux-arm-kernel@lists.infradead.org, Jerome Brunet <jbrunet@baylibre.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-From: Neil Armstrong <narmstrong@baylibre.com>
+From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
 
-[ Upstream commit 08dc0e5dd9aabd52cff9e94febe6b282d29deca4 ]
+[ Upstream commit a29ae8600d50ece1856b062a39ed296b8b952259 ]
 
-Fix the leds subnode names to match (^led-[0-9a-f]$|led)
+Not all u-boot versions initialize the HHI_GP_PLL_CNTL[2-5] registers.
+In that case all HHI_GPLL_PLL_CNTL[1-5] registers are 0x0 and when
+booting Linux the PLL fails to lock.
+The initialization sequence from u-boot is:
+- put the PLL into reset
+- write 0x59C88000 to HHI_GP_PLL_CNTL2
+- write 0xCA463823 to HHI_GP_PLL_CNTL3
+- write 0x0286A027 to HHI_GP_PLL_CNTL4
+- write 0x00003000 to HHI_GP_PLL_CNTL5
+- set M, N, OD and the enable bit
+- take the PLL out of reset
+- check if it has locked
+- disable the PLL
 
-It fixes:
-meson-g12b-a311d-khadas-vim3.dt.yaml: leds: 'red', 'white' do not match any of the regexes: '(^led-[0-9a-f]$|led)', 'pinctrl-[0-9]+'
-meson-g12b-s922x-khadas-vim3.dt.yaml: leds: 'red', 'white' do not match any of the regexes: '(^led-[0-9a-f]$|led)', 'pinctrl-[0-9]+'
-meson-g12b-odroid-n2.dt.yaml: leds: 'blue' does not match any of the regexes: '(^led-[0-9a-f]$|led)', 'pinctrl-[0-9]+'
-meson-gxbb-nanopi-k2.dt.yaml: leds: 'stat' does not match any of the regexes: '(^led-[0-9a-f]$|led)', 'pinctrl-[0-9]+'
-meson-gxbb-nexbox-a95x.dt.yaml: leds: 'blue' does not match any of the regexes: '(^led-[0-9a-f]$|led)', 'pinctrl-[0-9]+'
-meson-gxbb-odroidc2.dt.yaml: leds: 'blue' does not match any of the regexes: '(^led-[0-9a-f]$|led)', 'pinctrl-[0-9]+'
-meson-gxbb-vega-s95-pro.dt.yaml: leds: 'blue' does not match any of the regexes: '(^led-[0-9a-f]$|led)', 'pinctrl-[0-9]+'
-meson-gxbb-vega-s95-meta.dt.yaml: leds: 'blue' does not match any of the regexes: '(^led-[0-9a-f]$|led)', 'pinctrl-[0-9]+'
-meson-gxbb-vega-s95-telos.dt.yaml: leds: 'blue' does not match any of the regexes: '(^led-[0-9a-f]$|led)', 'pinctrl-[0-9]+'
-meson-gxbb-wetek-hub.dt.yaml: leds: 'system' does not match any of the regexes: '(^led-[0-9a-f]$|led)', 'pinctrl-[0-9]+'
-meson-gxbb-wetek-play2.dt.yaml: leds: 'ethernet', 'system', 'wifi' do not match any of the regexes: '(^led-[0-9a-f]$|led)', 'pinctrl-[0-9]+'
-meson-gxl-s905x-libretech-cc.dt.yaml: leds: 'blue', 'system' do not match any of the regexes: '(^led-[0-9a-f]$|led)', 'pinctrl-[0-9]+'
-meson-gxl-s905d-libretech-pc.dt.yaml: leds: 'blue', 'green' do not match any of the regexes: '(^led-[0-9a-f]$|led)', 'pinctrl-[0-9]+'
-meson-gxm-rbox-pro.dt.yaml: leds: 'blue', 'red' do not match any of the regexes: '(^led-[0-9a-f]$|led)', 'pinctrl-[0-9]+'
-meson-gxm-s912-libretech-pc.dt.yaml: leds: 'blue', 'green' do not match any of the regexes: '(^led-[0-9a-f]$|led)', 'pinctrl-[0-9]+'
-meson-sm1-sei610.dt.yaml: leds: 'bluetooth' does not match any of the regexes: '(^led-[0-9a-f]$|led)', 'pinctrl-[0-9]+'
-meson-sm1-khadas-vim3l.dt.yaml: leds: 'red', 'white' do not match any of the regexes: '(^led-[0-9a-f]$|led)', 'pinctrl-[0-9]+'
+In Linux we already initialize M, N, OD, the enable and the reset bits.
+Also the HHI_GP_PLL_CNTL[2-5] registers with these magic values (the
+exact meaning is unknown) so the PLL can lock when the vendor u-boot did
+not initialize these registers yet.
 
-Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
-Signed-off-by: Kevin Hilman <khilman@baylibre.com>
-Link: https://lore.kernel.org/r/20200326165958.19274-6-narmstrong@baylibre.com
+Fixes: b882964b376f21 ("clk: meson: meson8b: add support for the GP_PLL clock on Meson8m2")
+Signed-off-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
+Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
+Link: https://lore.kernel.org/r/20200501215717.735393-1-martin.blumenstingl@googlemail.com
 Signed-off-by: Sasha Levin <sashal@kernel.org>
 ---
- arch/arm64/boot/dts/amlogic/meson-gx-libretech-pc.dtsi       | 4 ++--
- arch/arm64/boot/dts/amlogic/meson-gxbb-nanopi-k2.dts         | 2 +-
- arch/arm64/boot/dts/amlogic/meson-gxbb-nexbox-a95x.dts       | 2 +-
- arch/arm64/boot/dts/amlogic/meson-gxbb-odroidc2.dts          | 2 +-
- arch/arm64/boot/dts/amlogic/meson-gxbb-vega-s95.dtsi         | 2 +-
- arch/arm64/boot/dts/amlogic/meson-gxbb-wetek-play2.dts       | 4 ++--
- arch/arm64/boot/dts/amlogic/meson-gxbb-wetek.dtsi            | 2 +-
- arch/arm64/boot/dts/amlogic/meson-gxl-s905x-libretech-cc.dts | 4 ++--
- arch/arm64/boot/dts/amlogic/meson-gxm-rbox-pro.dts           | 4 ++--
- arch/arm64/boot/dts/amlogic/meson-khadas-vim3.dtsi           | 4 ++--
- arch/arm64/boot/dts/amlogic/meson-sm1-sei610.dts             | 2 +-
- 11 files changed, 16 insertions(+), 16 deletions(-)
+ drivers/clk/meson/meson8b.c | 9 +++++++++
+ drivers/clk/meson/meson8b.h | 4 ++++
+ 2 files changed, 13 insertions(+)
 
-diff --git a/arch/arm64/boot/dts/amlogic/meson-gx-libretech-pc.dtsi b/arch/arm64/boot/dts/amlogic/meson-gx-libretech-pc.dtsi
-index 248b018c83d5..b1da36fdeac6 100644
---- a/arch/arm64/boot/dts/amlogic/meson-gx-libretech-pc.dtsi
-+++ b/arch/arm64/boot/dts/amlogic/meson-gx-libretech-pc.dtsi
-@@ -96,14 +96,14 @@ dc_in: regulator-dc_in {
- 	leds {
- 		compatible = "gpio-leds";
+diff --git a/drivers/clk/meson/meson8b.c b/drivers/clk/meson/meson8b.c
+index 5f375799ce46..11f6b868cf2b 100644
+--- a/drivers/clk/meson/meson8b.c
++++ b/drivers/clk/meson/meson8b.c
+@@ -1918,6 +1918,13 @@ static struct clk_regmap meson8b_mali = {
+ 	},
+ };
  
--		green {
-+		led-green {
- 			color = <LED_COLOR_ID_GREEN>;
- 			function = LED_FUNCTION_DISK_ACTIVITY;
- 			gpios = <&gpio_ao GPIOAO_9 GPIO_ACTIVE_HIGH>;
- 			linux,default-trigger = "disk-activity";
- 		};
- 
--		blue {
-+		led-blue {
- 			color = <LED_COLOR_ID_BLUE>;
- 			function = LED_FUNCTION_STATUS;
- 			gpios = <&gpio GPIODV_28 GPIO_ACTIVE_HIGH>;
-diff --git a/arch/arm64/boot/dts/amlogic/meson-gxbb-nanopi-k2.dts b/arch/arm64/boot/dts/amlogic/meson-gxbb-nanopi-k2.dts
-index d6ca684e0e61..7be3e354093b 100644
---- a/arch/arm64/boot/dts/amlogic/meson-gxbb-nanopi-k2.dts
-+++ b/arch/arm64/boot/dts/amlogic/meson-gxbb-nanopi-k2.dts
-@@ -29,7 +29,7 @@ memory@0 {
- 	leds {
- 		compatible = "gpio-leds";
- 
--		stat {
-+		led-stat {
- 			label = "nanopi-k2:blue:stat";
- 			gpios = <&gpio_ao GPIOAO_13 GPIO_ACTIVE_HIGH>;
- 			default-state = "on";
-diff --git a/arch/arm64/boot/dts/amlogic/meson-gxbb-nexbox-a95x.dts b/arch/arm64/boot/dts/amlogic/meson-gxbb-nexbox-a95x.dts
-index 65ec7dea828c..67d901ed2fa3 100644
---- a/arch/arm64/boot/dts/amlogic/meson-gxbb-nexbox-a95x.dts
-+++ b/arch/arm64/boot/dts/amlogic/meson-gxbb-nexbox-a95x.dts
-@@ -31,7 +31,7 @@ memory@0 {
- 
- 	leds {
- 		compatible = "gpio-leds";
--		blue {
-+		led-blue {
- 			label = "a95x:system-status";
- 			gpios = <&gpio_ao GPIOAO_13 GPIO_ACTIVE_LOW>;
- 			linux,default-trigger = "heartbeat";
-diff --git a/arch/arm64/boot/dts/amlogic/meson-gxbb-odroidc2.dts b/arch/arm64/boot/dts/amlogic/meson-gxbb-odroidc2.dts
-index b46ef985bb44..70fcfb7b0683 100644
---- a/arch/arm64/boot/dts/amlogic/meson-gxbb-odroidc2.dts
-+++ b/arch/arm64/boot/dts/amlogic/meson-gxbb-odroidc2.dts
-@@ -49,7 +49,7 @@ usb_otg_pwr: regulator-usb-pwrs {
- 
- 	leds {
- 		compatible = "gpio-leds";
--		blue {
-+		led-blue {
- 			label = "c2:blue:alive";
- 			gpios = <&gpio_ao GPIOAO_13 GPIO_ACTIVE_LOW>;
- 			linux,default-trigger = "heartbeat";
-diff --git a/arch/arm64/boot/dts/amlogic/meson-gxbb-vega-s95.dtsi b/arch/arm64/boot/dts/amlogic/meson-gxbb-vega-s95.dtsi
-index 45cb83625951..222ee8069cfa 100644
---- a/arch/arm64/boot/dts/amlogic/meson-gxbb-vega-s95.dtsi
-+++ b/arch/arm64/boot/dts/amlogic/meson-gxbb-vega-s95.dtsi
-@@ -20,7 +20,7 @@ chosen {
- 	leds {
- 		compatible = "gpio-leds";
- 
--		blue {
-+		led-blue {
- 			label = "vega-s95:blue:on";
- 			gpios = <&gpio_ao GPIOAO_13 GPIO_ACTIVE_HIGH>;
- 			default-state = "on";
-diff --git a/arch/arm64/boot/dts/amlogic/meson-gxbb-wetek-play2.dts b/arch/arm64/boot/dts/amlogic/meson-gxbb-wetek-play2.dts
-index 1d32d1f6d032..2ab8a3d10079 100644
---- a/arch/arm64/boot/dts/amlogic/meson-gxbb-wetek-play2.dts
-+++ b/arch/arm64/boot/dts/amlogic/meson-gxbb-wetek-play2.dts
-@@ -14,13 +14,13 @@ / {
- 	model = "WeTek Play 2";
- 
- 	leds {
--		wifi {
-+		led-wifi {
- 			label = "wetek-play:wifi-status";
- 			gpios = <&gpio GPIODV_26 GPIO_ACTIVE_HIGH>;
- 			default-state = "off";
- 		};
- 
--		ethernet {
-+		led-ethernet {
- 			label = "wetek-play:ethernet-status";
- 			gpios = <&gpio GPIODV_27 GPIO_ACTIVE_HIGH>;
- 			default-state = "off";
-diff --git a/arch/arm64/boot/dts/amlogic/meson-gxbb-wetek.dtsi b/arch/arm64/boot/dts/amlogic/meson-gxbb-wetek.dtsi
-index dee51cf95223..d6133af09d64 100644
---- a/arch/arm64/boot/dts/amlogic/meson-gxbb-wetek.dtsi
-+++ b/arch/arm64/boot/dts/amlogic/meson-gxbb-wetek.dtsi
-@@ -25,7 +25,7 @@ memory@0 {
- 	leds {
- 		compatible = "gpio-leds";
- 
--		system {
-+		led-system {
- 			label = "wetek-play:system-status";
- 			gpios = <&gpio_ao GPIOAO_13 GPIO_ACTIVE_HIGH>;
- 			default-state = "on";
-diff --git a/arch/arm64/boot/dts/amlogic/meson-gxl-s905x-libretech-cc.dts b/arch/arm64/boot/dts/amlogic/meson-gxl-s905x-libretech-cc.dts
-index e8348b2728db..a4a71c13891b 100644
---- a/arch/arm64/boot/dts/amlogic/meson-gxl-s905x-libretech-cc.dts
-+++ b/arch/arm64/boot/dts/amlogic/meson-gxl-s905x-libretech-cc.dts
-@@ -54,14 +54,14 @@ hdmi_connector_in: endpoint {
- 	leds {
- 		compatible = "gpio-leds";
- 
--		system {
-+		led-system {
- 			label = "librecomputer:system-status";
- 			gpios = <&gpio GPIODV_24 GPIO_ACTIVE_HIGH>;
- 			default-state = "on";
- 			panic-indicator;
- 		};
- 
--		blue {
-+		led-blue {
- 			label = "librecomputer:blue";
- 			gpios = <&gpio_ao GPIOAO_2 GPIO_ACTIVE_HIGH>;
- 			linux,default-trigger = "heartbeat";
-diff --git a/arch/arm64/boot/dts/amlogic/meson-gxm-rbox-pro.dts b/arch/arm64/boot/dts/amlogic/meson-gxm-rbox-pro.dts
-index 420a88e9a195..c89c9f846fb1 100644
---- a/arch/arm64/boot/dts/amlogic/meson-gxm-rbox-pro.dts
-+++ b/arch/arm64/boot/dts/amlogic/meson-gxm-rbox-pro.dts
-@@ -36,13 +36,13 @@ memory@0 {
- 	leds {
- 		compatible = "gpio-leds";
- 
--		blue {
-+		led-blue {
- 			label = "rbox-pro:blue:on";
- 			gpios = <&gpio_ao GPIOAO_9 GPIO_ACTIVE_HIGH>;
- 			default-state = "on";
- 		};
- 
--		red {
-+		led-red {
- 			label = "rbox-pro:red:standby";
- 			gpios = <&gpio GPIODV_28 GPIO_ACTIVE_HIGH>;
- 			default-state = "off";
-diff --git a/arch/arm64/boot/dts/amlogic/meson-khadas-vim3.dtsi b/arch/arm64/boot/dts/amlogic/meson-khadas-vim3.dtsi
-index 094ecf2222bb..1ef1e3672b96 100644
---- a/arch/arm64/boot/dts/amlogic/meson-khadas-vim3.dtsi
-+++ b/arch/arm64/boot/dts/amlogic/meson-khadas-vim3.dtsi
-@@ -39,13 +39,13 @@ button-function {
- 	leds {
- 		compatible = "gpio-leds";
- 
--		white {
-+		led-white {
- 			label = "vim3:white:sys";
- 			gpios = <&gpio_ao GPIOAO_4 GPIO_ACTIVE_LOW>;
- 			linux,default-trigger = "heartbeat";
- 		};
- 
--		red {
-+		led-red {
- 			label = "vim3:red";
- 			gpios = <&gpio_expander 5 GPIO_ACTIVE_LOW>;
- 		};
-diff --git a/arch/arm64/boot/dts/amlogic/meson-sm1-sei610.dts b/arch/arm64/boot/dts/amlogic/meson-sm1-sei610.dts
-index dfb2438851c0..5ab139a34c01 100644
---- a/arch/arm64/boot/dts/amlogic/meson-sm1-sei610.dts
-+++ b/arch/arm64/boot/dts/amlogic/meson-sm1-sei610.dts
-@@ -104,7 +104,7 @@ hdmi_connector_in: endpoint {
- 	leds {
- 		compatible = "gpio-leds";
- 
--		bluetooth {
-+		led-bluetooth {
- 			label = "sei610:blue:bt";
- 			gpios = <&gpio GPIOC_7 (GPIO_ACTIVE_LOW | GPIO_OPEN_DRAIN)>;
- 			default-state = "off";
++static const struct reg_sequence meson8m2_gp_pll_init_regs[] = {
++	{ .reg = HHI_GP_PLL_CNTL2,	.def = 0x59c88000 },
++	{ .reg = HHI_GP_PLL_CNTL3,	.def = 0xca463823 },
++	{ .reg = HHI_GP_PLL_CNTL4,	.def = 0x0286a027 },
++	{ .reg = HHI_GP_PLL_CNTL5,	.def = 0x00003000 },
++};
++
+ static const struct pll_params_table meson8m2_gp_pll_params_table[] = {
+ 	PLL_PARAMS(182, 3),
+ 	{ /* sentinel */ },
+@@ -1951,6 +1958,8 @@ static struct clk_regmap meson8m2_gp_pll_dco = {
+ 			.width   = 1,
+ 		},
+ 		.table = meson8m2_gp_pll_params_table,
++		.init_regs = meson8m2_gp_pll_init_regs,
++		.init_count = ARRAY_SIZE(meson8m2_gp_pll_init_regs),
+ 	},
+ 	.hw.init = &(struct clk_init_data){
+ 		.name = "gp_pll_dco",
+diff --git a/drivers/clk/meson/meson8b.h b/drivers/clk/meson/meson8b.h
+index c889fbeec30f..c91fb07fcb65 100644
+--- a/drivers/clk/meson/meson8b.h
++++ b/drivers/clk/meson/meson8b.h
+@@ -20,6 +20,10 @@
+  * [0] http://dn.odroid.com/S805/Datasheet/S805_Datasheet%20V0.8%2020150126.pdf
+  */
+ #define HHI_GP_PLL_CNTL			0x40  /* 0x10 offset in data sheet */
++#define HHI_GP_PLL_CNTL2		0x44  /* 0x11 offset in data sheet */
++#define HHI_GP_PLL_CNTL3		0x48  /* 0x12 offset in data sheet */
++#define HHI_GP_PLL_CNTL4		0x4C  /* 0x13 offset in data sheet */
++#define HHI_GP_PLL_CNTL5		0x50  /* 0x14 offset in data sheet */
+ #define HHI_VIID_CLK_DIV		0x128 /* 0x4a offset in data sheet */
+ #define HHI_VIID_CLK_CNTL		0x12c /* 0x4b offset in data sheet */
+ #define HHI_GCLK_MPEG0			0x140 /* 0x50 offset in data sheet */
 -- 
 2.25.1
 
