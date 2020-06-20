@@ -2,81 +2,82 @@ Return-Path: <linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.
 X-Original-To: lists+linux-amlogic@lfdr.de
 Delivered-To: lists+linux-amlogic@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 64FD020255E
-	for <lists+linux-amlogic@lfdr.de>; Sat, 20 Jun 2020 18:38:05 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 968DE202625
+	for <lists+linux-amlogic@lfdr.de>; Sat, 20 Jun 2020 21:27:45 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=CKYI9XyDxs5IA0SaKcB0DtBi6+C5T+IoYvdZw3YR4KA=; b=b50VWvtAr0ox/c
-	5e4ICl32SMTwJtqx5zsDE6ds4HCXlAavCU+eS+/88SvA/dHscRfSuZ41iI3QBEbDQkfNaVTQDrq84
-	ggCHI7sDvnvBO6I55oFF5dB8BLI3dU4C5KN9uoPKuBvv6JKR5Lse1HirBVy++6LIfr/iD5U7sDxAO
-	VoN9l6pg04J01IngxUzjnigWBWHuEuEbb+wQ0T3jwWlOYK8Ke9MD6oIHNFa36eXfUEvy+qdGfL7y5
-	v2v8F71OUyuj7dliMHVqg4IFM84RctuEIGD3gFbF1jU97onaSTzYo6e+UVLI32mmsPaQX25KU9LeQ
-	ArqrwenEES61n7m+2kBg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=Bpyosypj6W1O3M7/nev3gTFT5SsXpWk65rdoHq51oHk=; b=uRzU8+znLqIvx1
+	zGjm0nlIaS2QdW+ga5LCZtPx8z1xKl2J6oUVwjd6ybzglYF5GurVnm3FNUOdDw8dLaZTvCJkyC/JB
+	pQiuDMwVIqShJuIGcFtBJ7krJvVbsdlKFLaMKgrKkk9PbCJpUbHxd3xSCSOcxGUamh7fsQjYhgNAT
+	YRgCwy0f8xJ/ykFrPycU6wXgdW9J1HbU86gJEl81k6b7TKhzSFl3gRV5Bq5NyXAqCNKT1lPM6li77
+	JgeoOs2sIgqOdZfhSxs5El3wbPN0Bo7CMweC7LIQqrLvjoSNku1O/7T6SAxxaA3NR71pRzdATS7tF
+	oh03rH30uBVeaN1p0Yww==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jmgVH-0000St-Jf; Sat, 20 Jun 2020 16:38:03 +0000
-Received: from mail-ed1-x543.google.com ([2a00:1450:4864:20::543])
+	id 1jmj9B-0002Lj-L9; Sat, 20 Jun 2020 19:27:25 +0000
+Received: from mail-ej1-x643.google.com ([2a00:1450:4864:20::643])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jmgUN-00085e-Az; Sat, 20 Jun 2020 16:37:08 +0000
-Received: by mail-ed1-x543.google.com with SMTP id t21so10167171edr.12;
- Sat, 20 Jun 2020 09:37:06 -0700 (PDT)
+ id 1jmj8q-00029a-Q4; Sat, 20 Jun 2020 19:27:06 +0000
+Received: by mail-ej1-x643.google.com with SMTP id y13so13939511eju.2;
+ Sat, 20 Jun 2020 12:27:03 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=googlemail.com; s=20161025;
- h=from:to:cc:subject:date:message-id:in-reply-to:references
- :mime-version:content-transfer-encoding;
- bh=qI+KLgcHGZ3cTHvlkPTGBhsaWBLAUPc1zpeWREZblPA=;
- b=O6qDxq2yMHLFGGJbsYzsI+rIDfnFsX3XKNtroD0+uW16yAEWFPWutM0w0yHux3Z9+X
- gKXzwScCGY59HeJd2oHMZTXKA6wp+QjMoOSgRxTf2cw1kK00PaPWvfFFYNIBBL4foahL
- ONlv1VY4rjsO/CrAvP3wKYiT2wx6eRIUZoWleXBIGq/hj8D2TqKzq+Nl085RCT1XMeSs
- ZHe1Luhyewh50YyAL8aa/L/nOxFesF54Ae78aW7Fn3H0TPAq0M0AfphVYlUM5K+dkHKa
- T3U9zZvBu5shDX3wNAiDNzcuohhlbr/reutpA3aNpvS9hzxrcqZ70NG1dZvEd8PX1Ng+
- dXuQ==
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=mUJH12LGeW9ylYQEdpmnE0J88t7sUIOSezt8ZphdlhI=;
+ b=ntaLZQiFRDVbnTDcEeJmaep8QFe8P5X4WgGS4Eo3LTzE/WmPZLunUnKGx46AH2zK5v
+ ljBWj3sCov2YBpl0GnI7foLID/zGz/NiFdcS/W3KvxVJSmO/1TqTGbQpRM1lVsF0JpAi
+ CnMM/jb2mhg3TXUsHxoW8imEGoD0xVO1fZh9xtK+HuJr5FC1PXq2EajvcF+ovM7A/ASg
+ twTNA4hK18kdYBmfi2ObV98lVtx2An7RnTQQWRZu6HtCLAKnTQDTctWVJu6CpedJEsYK
+ 8taXz8a8LHiKYo39atZe9D1gs2G0c9IuW3FpftVSEmpiT9GfuMAbf+WPXNTbqeAKzQ9+
+ l+Dg==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
- :references:mime-version:content-transfer-encoding;
- bh=qI+KLgcHGZ3cTHvlkPTGBhsaWBLAUPc1zpeWREZblPA=;
- b=aHwY1IXHaMCh54SMiHZt1+yqVo9ItQ8V7Pc5efP0rImmDnLd1FJUvGiVfA1ASDlQIr
- WaV9Ync0GC4tFw3zwJOQBRUIp74lvUIsu1JkGfxOcrBYkNYzIpznbzFyXyVLsmTyO49G
- jpJTIP0WRnivcAIAyEEo8W3GQe+hmCP8lanevj+qY+u8sUwiA9DprHcvohiCuAxdD4cx
- vYWQvQx7m9CWJEjA0QIB2nZGbto2vc2LIEF5PZQ1j0yATzXTFcAJBjmiOodFF42Bxdcu
- CkpBT1wnRyoF8vT5fNx3KkTwYmfKtvKiZs5c0rnsMkMwLVoPosggmsX8AEmZhLeuhInv
- yayg==
-X-Gm-Message-State: AOAM530GcJMssyMKrwSjqBM+LQjm2Jz0q00LFIXWbi0WmHBH1amSyl1Z
- MjUGruyobDyWv4Gx/NkBzpc4uVey
-X-Google-Smtp-Source: ABdhPJyg/dkss/6p4dO79EJEEhEXYP+thVEqeGX7aTivWvxH3c9atiLcDkD1IPNAWMc27jcB5oB3Wg==
-X-Received: by 2002:a50:9eaf:: with SMTP id a44mr8884095edf.121.1592671025708; 
- Sat, 20 Jun 2020 09:37:05 -0700 (PDT)
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=mUJH12LGeW9ylYQEdpmnE0J88t7sUIOSezt8ZphdlhI=;
+ b=t2a8CkSlw1uXfBxjdYASnvY1rqAs5sO8CH5rM4nxsfYGdL6QlcBxENR5Bv6HK/G3+J
+ sb0cpY3b3OrGcwloGz05mf5ke/L+bie/Ky3j6xS+TlNWLLBmyDa7hFxvmMyCdVNIDG7s
+ 8kPztWocadkMSrjNfrnhT4P8AJd9L9PyW/WNMuGPi8WXtg4UuDLun9dYBxkyW7ABM8Lq
+ LXYFPRfb1ZoougjsqAAR1B2pUCJwrNm4RmPi705eVS7s5wSrlft1d4Oak8uCkW1SPyJq
+ Y1xU3UHXtmdvQfmYZBA+0VGEoWVYhdKq2/t4GjK9ZhCzLNggzrEtbRcXb1xJ/xhT8lAP
+ 5+sA==
+X-Gm-Message-State: AOAM5301MWlJDasqAavT5rpVcT5xIlpQhhWE2FaAi/CM7eteDAl43kG+
+ hT9A0vHFeAdmCvLDjjIcgmQ=
+X-Google-Smtp-Source: ABdhPJxsrLJ6aA6NVzk/zX8t11cs2ETNgzWKiUMxMnSjlqyiheQL1voAGp96yx9pCHlNR3b39ESu8Q==
+X-Received: by 2002:a17:906:7a19:: with SMTP id
+ d25mr9321045ejo.333.1592681221933; 
+ Sat, 20 Jun 2020 12:27:01 -0700 (PDT)
 Received: from localhost.localdomain
  (p200300f1371df700428d5cfffeb99db8.dip0.t-ipconnect.de.
  [2003:f1:371d:f700:428d:5cff:feb9:9db8])
- by smtp.googlemail.com with ESMTPSA id o90sm7839442edb.60.2020.06.20.09.37.04
+ by smtp.googlemail.com with ESMTPSA id
+ gv18sm8034044ejb.113.2020.06.20.12.27.00
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Sat, 20 Jun 2020 09:37:05 -0700 (PDT)
+ Sat, 20 Jun 2020 12:27:01 -0700 (PDT)
 From: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
-To: linux-amlogic@lists.infradead.org,
-	khilman@baylibre.com
-Subject: [PATCH 3/3] ARM: dts: meson8b: odroidc1: enable the SDHC controller
-Date: Sat, 20 Jun 2020 18:36:54 +0200
-Message-Id: <20200620163654.37207-4-martin.blumenstingl@googlemail.com>
+To: davem@davemloft.net, netdev@vger.kernel.org,
+ linux-amlogic@lists.infradead.org, robh+dt@kernel.org
+Subject: [PATCH 0/2] prepare dwmac-meson8b for G12A specific initialization
+Date: Sat, 20 Jun 2020 21:26:39 +0200
+Message-Id: <20200620192641.175754-1-martin.blumenstingl@googlemail.com>
 X-Mailer: git-send-email 2.27.0
-In-Reply-To: <20200620163654.37207-1-martin.blumenstingl@googlemail.com>
-References: <20200620163654.37207-1-martin.blumenstingl@googlemail.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200620_093707_405709_528667DF 
-X-CRM114-Status: GOOD (  10.48  )
+X-CRM114-CacheID: sfid-20200620_122704_842616_AF30D745 
+X-CRM114-Status: UNSURE (   7.33  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:543 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:643 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
@@ -101,74 +102,30 @@ List-Help: <mailto:linux-amlogic-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-amlogic>,
  <mailto:linux-amlogic-request@lists.infradead.org?subject=subscribe>
 Cc: Martin Blumenstingl <martin.blumenstingl@googlemail.com>,
- linux-kernel@vger.kernel.org, linux-arm-kernel@lists.infradead.org
+ devicetree@vger.kernel.org, linux-kernel@vger.kernel.org,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "linux-amlogic" <linux-amlogic-bounces@lists.infradead.org>
 Errors-To: linux-amlogic-bounces+lists+linux-amlogic=lfdr.de@lists.infradead.org
 
-Odroid-C1 has an eMMC connector where users can optionally install an
-eMMC module. The eMMC modules run off a 1.8V VQMMC supply which means
-that HS-200 mode can be used (this is the highest mode that the SDHC
-controller supports). Enable the SDHC controller so eMMC modules can be
-accessed.
+Some users are reporting that RGMII (and sometimes also RMII) Ethernet
+is not working for them on G12A/G12B/SM1 boards. Upon closer inspection
+of the vendor code for these SoCs new register bits are found.
 
-Signed-off-by: Martin Blumenstingl <martin.blumenstingl@googlemail.com>
----
- arch/arm/boot/dts/meson8b-odroidc1.dts | 26 ++++++++++++++++++++++++++
- 1 file changed, 26 insertions(+)
+It's not clear yet how these registers work. Add a new compatible string
+as the first preparation step to improve Ethernet support on these SoCs.
 
-diff --git a/arch/arm/boot/dts/meson8b-odroidc1.dts b/arch/arm/boot/dts/meson8b-odroidc1.dts
-index cb21ac9f517c..0c26467de4d0 100644
---- a/arch/arm/boot/dts/meson8b-odroidc1.dts
-+++ b/arch/arm/boot/dts/meson8b-odroidc1.dts
-@@ -15,6 +15,7 @@ / {
- 	aliases {
- 		serial0 = &uart_AO;
- 		mmc0 = &sd_card_slot;
-+		mmc1 = &sdhc;
- 	};
- 
- 	chosen {
-@@ -26,6 +27,11 @@ memory {
- 		reg = <0x40000000 0x40000000>;
- 	};
- 
-+	emmc_pwrseq: emmc-pwrseq {
-+		compatible = "mmc-pwrseq-emmc";
-+		reset-gpios = <&gpio BOOT_9 GPIO_ACTIVE_LOW>;
-+	};
-+
- 	leds {
- 		compatible = "gpio-leds";
- 		blue {
-@@ -310,6 +316,26 @@ &saradc {
- 	vref-supply = <&vcc_1v8>;
- };
- 
-+&sdhc {
-+	status = "okay";
-+
-+	pinctrl-0 = <&sdxc_c_pins>;
-+	pinctrl-names = "default";
-+
-+	bus-width = <8>;
-+	max-frequency = <100000000>;
-+
-+	disable-wp;
-+	cap-mmc-highspeed;
-+	mmc-hs200-1_8v;
-+	no-sdio;
-+
-+	mmc-pwrseq = <&emmc_pwrseq>;
-+
-+	vmmc-supply = <&vcc_3v3>;
-+	vqmmc-supply = <&vcc_1v8>;
-+};
-+
- &sdio {
- 	status = "okay";
- 
+
+Martin Blumenstingl (2):
+  dt-bindings: net: dwmac-meson: Add a compatible string for G12A
+    onwards
+  net: stmmac: dwmac-meson8b: add a compatible string for G12A SoCs
+
+ .../devicetree/bindings/net/amlogic,meson-dwmac.yaml          | 3 +++
+ drivers/net/ethernet/stmicro/stmmac/dwmac-meson8b.c           | 4 ++++
+ 2 files changed, 7 insertions(+)
+
 -- 
 2.27.0
 
